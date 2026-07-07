@@ -1,1 +1,1 @@
-docs(runbook): update settings milestone state
+docs(runbook): update settings milestone state (#8)
