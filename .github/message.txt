@@ -1,1 +1,1 @@
-docs(runbook): add core execution roadmap
+feat(profile): add device profile schema types
