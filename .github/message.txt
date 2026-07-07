@@ -1,1 +1,1 @@
-feat(profile): add device profile schema types
+docs(runbook): forbid reserved pr naming
