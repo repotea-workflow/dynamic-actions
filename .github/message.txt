@@ -1,1 +1,1 @@
-docs(runbook): forbid reserved pr naming (#3)
+feat(profile): validate profile capabilities and defaults
