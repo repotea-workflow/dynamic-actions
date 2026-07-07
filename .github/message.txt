@@ -1,1 +1,1 @@
-feat(render): add prepared document model
+fix(render): enforce prepared trace metadata
