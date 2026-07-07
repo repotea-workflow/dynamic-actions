@@ -1,1 +1,1 @@
-ci(actions): use repotea workflow dynamic actions
+docs(runbook): add core execution roadmap
