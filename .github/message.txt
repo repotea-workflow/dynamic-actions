@@ -1,1 +1,5 @@
-docs(settings): document settings hash canonicalization
+feat(settings): add resolved settings model (#6)
+
+* feat(settings): add resolved settings model
+
+* docs(settings): document settings hash canonicalization
