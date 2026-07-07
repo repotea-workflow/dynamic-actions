@@ -1,1 +1,1 @@
-docs(runbook): update render milestone state (#10)
+feat(render): prepare raster document operations
