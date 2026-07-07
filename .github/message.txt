@@ -1,1 +1,1 @@
-feat(command): add provider contract
+fix(command): tighten provider contract validation
