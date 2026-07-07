@@ -1,5 +1,1 @@
-feat(render): prepare raster document operations (#11)
-
-* feat(render): prepare raster document operations
-
-* fix(render): validate raster prepare context
+feat(render): prepare narrow object operations
