@@ -1,1 +1,1 @@
-docs(runbook): update command milestone state (#15)
+feat(command): register first built-in provider
