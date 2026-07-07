@@ -1,1 +1,1 @@
-feat(profile): validate profile capabilities and defaults (#4)
+docs(runbook): update profile milestone state
