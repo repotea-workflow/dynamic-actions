@@ -1,1 +1,1 @@
-fix(command): enforce provider contract preflight
+fix(command): tighten provider diagnostics contract
