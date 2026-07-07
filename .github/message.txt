@@ -1,1 +1,5 @@
-fix(render): convert object rect endpoints
+feat(render): prepare narrow object operations (#12)
+
+* feat(render): prepare narrow object operations
+
+* fix(render): convert object rect endpoints
