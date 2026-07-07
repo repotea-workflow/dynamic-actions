@@ -1,1 +1,1 @@
-feat(profile): add device profile schema types
+fix(profile): require profile identities and constraints
