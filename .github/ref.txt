@@ -1,1 +1,1 @@
-agent/pr-governance-naming
+main

@@ -1,1 +1,1 @@
-docs(runbook): forbid reserved pr naming
+docs(runbook): forbid reserved pr naming (#3)
