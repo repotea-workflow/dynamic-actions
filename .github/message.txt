@@ -1,1 +1,11 @@
-fix(command): reject host-leaky diagnostics
+feat(command): add provider contract (#14)
+
+* feat(command): add provider contract
+
+* fix(command): tighten provider contract validation
+
+* fix(command): enforce provider contract preflight
+
+* fix(command): tighten provider diagnostics contract
+
+* fix(command): reject host-leaky diagnostics
