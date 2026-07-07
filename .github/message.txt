@@ -1,1 +1,1 @@
-ci(deploy): add centralis container release
+ci(deploy): publish latest image from main

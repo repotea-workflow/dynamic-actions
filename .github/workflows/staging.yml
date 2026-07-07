@@ -72,8 +72,10 @@ jobs:
         run: |
           echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/centralis:sha-${{ env.SHA }}" >> $GITHUB_OUTPUT
           echo "ghcr_staging=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/centralis:staging" >> $GITHUB_OUTPUT
+          echo "ghcr_latest=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/centralis:latest" >> $GITHUB_OUTPUT
           echo "ali_sha=${{ env.DOCKER_REGISTRY_ALI }}/xoohub/${{ env.REPO_NAME }}_centralis:sha-${{ env.SHA }}" >> $GITHUB_OUTPUT
           echo "ali_staging=${{ env.DOCKER_REGISTRY_ALI }}/xoohub/${{ env.REPO_NAME }}_centralis:staging" >> $GITHUB_OUTPUT
+          echo "ali_latest=${{ env.DOCKER_REGISTRY_ALI }}/xoohub/${{ env.REPO_NAME }}_centralis:latest" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -91,6 +93,7 @@ jobs:
           tags: |
             ${{ steps.tags.outputs.ghcr_sha }}
             ${{ steps.tags.outputs.ghcr_staging }}
+            ${{ steps.tags.outputs.ghcr_latest }}
 
       - name: Push to Aliyun ACR (with retry)
         uses: nick-fields/retry@v3
@@ -102,5 +105,7 @@ jobs:
             docker pull ${{ steps.tags.outputs.ghcr_sha }}
             docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.ali_sha }}
             docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.ali_staging }}
+            docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.ali_latest }}
             docker push ${{ steps.tags.outputs.ali_sha }}
             docker push ${{ steps.tags.outputs.ali_staging }}
+            docker push ${{ steps.tags.outputs.ali_latest }}
