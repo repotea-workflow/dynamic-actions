@@ -1,5 +1,1 @@
-feat(render): add prepared document model (#9)
-
-* feat(render): add prepared document model
-
-* fix(render): enforce prepared trace metadata
+docs(runbook): update render milestone state
