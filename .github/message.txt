@@ -1,1 +1,5 @@
-fix(settings): reject unsupported declarative constraints
+feat(settings): enforce profile constraints (#7)
+
+* feat(settings): enforce profile constraints
+
+* fix(settings): reject unsupported declarative constraints
