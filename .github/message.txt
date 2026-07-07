@@ -1,1 +1,1 @@
-docs(runbook): update profile milestone state (#5)
+feat(settings): add resolved settings model
