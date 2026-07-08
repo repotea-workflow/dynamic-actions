@@ -1,1 +1,1 @@
-agent/core-golden-pipeline
+main
