@@ -1,1 +1,1 @@
-refactor(command): use command set identity
+test(fixtures): migrate selectable core metadata
