@@ -1,1 +1,1 @@
-docs(runbook): record v1 acceptance procedure updates
+fix(cli): compare golden artifacts before dry run write
