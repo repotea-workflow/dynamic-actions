@@ -1,1 +1,1 @@
-feat(cli): expose resolved core selections
+chore(core): audit selection readiness
