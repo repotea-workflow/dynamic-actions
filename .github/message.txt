@@ -1,1 +1,1 @@
-fix(platform): reject unsafe PPD profile strings
+fix(platform): harden macOS replay fixtures
