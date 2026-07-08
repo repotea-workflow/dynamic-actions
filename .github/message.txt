@@ -1,1 +1,1 @@
-feat(image): add pxlab adapter contract
+fix(profile): validate default command selection identity
