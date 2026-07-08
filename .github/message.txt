@@ -1,1 +1,1 @@
-test(lints): satisfy strict clippy warnings
+chore(tooling): add acceptance command entrypoints
