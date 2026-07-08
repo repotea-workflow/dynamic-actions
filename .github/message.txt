@@ -1,1 +1,1 @@
-docs(platform): add platform implementation runbook
+docs(platform): align windows usb transport hints
