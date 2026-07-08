@@ -1,1 +1,1 @@
-chore(tooling): silence just shell startup noise
+docs(runbook): sync pre-platform readiness status
