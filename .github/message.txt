@@ -1,1 +1,1 @@
-feat(catalog): add profile registry matching
+feat(cli): add profile match inspection
