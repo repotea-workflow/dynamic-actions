@@ -1,1 +1,1 @@
-feat(cli): add explicit golden update command
+test(core): complete reachable failure matrix
