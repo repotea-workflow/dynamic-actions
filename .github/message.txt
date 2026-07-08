@@ -1,1 +1,1 @@
-docs(core): define selectable command and image processing
+fix(image): reject compressed noop input
