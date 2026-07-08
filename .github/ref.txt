@@ -1,1 +1,1 @@
-agent/golden-compare-before-write
+agent/strict-clippy-tests

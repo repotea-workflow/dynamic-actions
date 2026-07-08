@@ -1,1 +1,1 @@
-fix(cli): compare golden artifacts before dry run write
+test(lints): satisfy strict clippy warnings
