@@ -1,5 +1,1 @@
-test(workspace): enforce pre-platform dependency boundaries
-
-* test(workspace): enforce pre-platform dependency boundaries
-
-* test(workspace): include boundary script tests
+feat(cli): add evidence validation command
