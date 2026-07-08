@@ -1,1 +1,5 @@
-test(workspace): include boundary script tests
+test(workspace): enforce pre-platform dependency boundaries
+
+* test(workspace): enforce pre-platform dependency boundaries
+
+* test(workspace): include boundary script tests
