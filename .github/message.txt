@@ -1,1 +1,5 @@
-fix(cli): tighten dry-run validation coverage
+feat(cli): validate dry-run artifacts
+
+* feat(cli): validate dry-run artifacts
+
+* fix(cli): tighten dry-run validation coverage
