@@ -1,1 +1,1 @@
-test(extension): cover provider declaration conflicts
+feat(catalog): add curated extension seed
