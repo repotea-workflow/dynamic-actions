@@ -1,1 +1,1 @@
-ci(deploy): publish latest image from main
+fix(docs): expand active sidebar section
