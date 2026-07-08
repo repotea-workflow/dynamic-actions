@@ -1,5 +1,1 @@
-feat(extension): load local extension manifests (#18)
-
-* feat(extension): load local extension manifests
-
-* fix(extension): load provider declarations from files
+feat(test-fixtures): add first golden fixture layout
