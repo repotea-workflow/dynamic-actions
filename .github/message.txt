@@ -1,1 +1,1 @@
-fix(profile): validate default command selection identity
+feat(profile): declare selectable command and image options
