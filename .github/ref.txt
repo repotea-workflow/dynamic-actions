@@ -1,1 +1,1 @@
-command-set-identity
+main
