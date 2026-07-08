@@ -1,1 +1,1 @@
-catalog-scalar-normalizers
+main
