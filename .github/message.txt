@@ -1,1 +1,1 @@
-feat(settings): resolve command and image selections
+feat(render): route raster preparation through image backend
