@@ -1,1 +1,5 @@
-fix(cli): keep golden fixture resolution explicit
+test(cli): compare golden bytes and diagnostics
+
+* test(cli): compare golden bytes and diagnostics
+
+* fix(cli): keep golden fixture resolution explicit

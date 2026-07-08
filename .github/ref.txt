@@ -1,1 +1,1 @@
-agent/cli-golden-compare
+main
