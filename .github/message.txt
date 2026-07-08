@@ -1,1 +1,1 @@
-docs(runbook): sync pre-platform readiness status
+feat(cli): add fixture resource inspection commands

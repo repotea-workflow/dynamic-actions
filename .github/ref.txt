@@ -1,1 +1,1 @@
-main
+agent/cli-inspect
