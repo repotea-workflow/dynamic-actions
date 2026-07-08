@@ -1,1 +1,1 @@
-feat(catalog): add reference importer fixture
+feat(catalog): add curated extension seed

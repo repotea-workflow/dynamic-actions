@@ -1,1 +1,1 @@
-main
+catalog-curated-seed-readiness
