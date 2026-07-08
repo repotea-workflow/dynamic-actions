@@ -1,5 +1,1 @@
-feat(cli): add evidence validation gate
-
-* feat(cli): add evidence validation command
-
-* fix(cli): validate evidence artifact existence
+docs(runbook): clarify raster-first readiness
