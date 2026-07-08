@@ -1,5 +1,1 @@
-feat(command): register first built-in provider (#16)
-
-* feat(command): register first built-in provider
-
-* fix(command): reject unsupported TSPL preflight cases
+feat(command): encode golden raster fixture
