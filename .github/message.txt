@@ -1,7 +1,1 @@
-feat(core): orchestrate v1 golden pipeline
-
-* feat(core): orchestrate v1 golden pipeline
-
-* fix(core): validate golden fixture paths
-
-* chore(fixtures): scope raster attributes
+test(core): cover structured failure propagation
