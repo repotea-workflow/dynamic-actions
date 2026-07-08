@@ -1,1 +1,1 @@
-docs(runbook): finalize selection readiness checklist
+fix(core): harden selection validation boundaries
