@@ -1,1 +1,5 @@
-docs(runbook): separate hardware run gates
+docs(runbook): clarify raster-first readiness
+
+* docs(runbook): clarify raster-first readiness
+
+* docs(runbook): separate hardware run gates
