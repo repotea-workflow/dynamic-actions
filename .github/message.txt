@@ -1,1 +1,1 @@
-fix(platform): harden direct service policy checks
+fix(platform): wire CUPS raster replay and validate stride
