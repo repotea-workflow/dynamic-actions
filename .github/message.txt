@@ -1,1 +1,1 @@
-feat(cli): add golden run command
+test(cli): cover golden dry-run artifacts
