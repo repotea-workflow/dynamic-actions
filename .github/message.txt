@@ -1,1 +1,1 @@
-feat(platform): add real direct transports
+fix(platform): harden direct transport targets
