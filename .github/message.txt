@@ -1,1 +1,1 @@
-test(fixtures): migrate selectable core metadata
+feat(cli): expose resolved core selections
