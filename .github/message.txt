@@ -1,1 +1,1 @@
-fix(image): reject compressed noop input
+feat(image): add pxlab adapter contract
