@@ -1,1 +1,1 @@
-feature-extension-local-manifest
+main
