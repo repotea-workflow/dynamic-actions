@@ -1,1 +1,5 @@
-fix(cli): validate evidence artifact existence
+feat(cli): add evidence validation gate
+
+* feat(cli): add evidence validation command
+
+* fix(cli): validate evidence artifact existence
