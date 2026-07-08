@@ -1,1 +1,1 @@
-feat(render): route raster preparation through image backend
+refactor(command): use command set identity
