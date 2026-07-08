@@ -1,9 +1,1 @@
-feat(platform): add registration smoke harnesses
-
-* feat(platform): add registration smoke harnesses
-
-* fix(platform): harden registration smoke cleanup
-
-* fix(platform): verify cups smoke cleanup
-
-* fix(platform): report stale cups cleanup failures
+feat(platform): add real direct transports
