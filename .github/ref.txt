@@ -1,1 +1,1 @@
-cups-raster-converter
+system-registration-smoke
