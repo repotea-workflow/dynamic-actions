@@ -1,1 +1,1 @@
-main
+f1-platform-cli-skeleton
