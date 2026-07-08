@@ -1,1 +1,1 @@
-system-registration-smoke
+direct-service-mock-api
