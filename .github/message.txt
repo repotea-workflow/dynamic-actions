@@ -1,1 +1,1 @@
-feat(command): encode golden raster fixture (#17)
+feat(extension): load local extension manifests
