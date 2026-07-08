@@ -1,1 +1,1 @@
-linux-dry-run-adapters
+macos-dry-run-adapters
