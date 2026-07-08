@@ -1,5 +1,1 @@
-feat(platform): add CUPS raster conversion
-
-* feat(platform): add CUPS raster conversion
-
-* fix(platform): wire CUPS raster replay and validate stride
+fix(platform): reject missing direct service token
