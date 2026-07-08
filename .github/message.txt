@@ -1,1 +1,5 @@
-fix(platform): harden macOS replay fixtures
+feat(platform): add macOS dry-run adapters
+
+* feat(platform): add macOS dry-run adapters
+
+* fix(platform): harden macOS replay fixtures
