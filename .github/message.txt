@@ -1,1 +1,1 @@
-feat(test-fixtures): add first golden fixture layout
+fix(test-fixtures): align fixture paths with id
