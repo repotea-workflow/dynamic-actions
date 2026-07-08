@@ -1,1 +1,1 @@
-feat(platform): add hardware smoke evidence harness
+docs(platform): refresh workspace status
