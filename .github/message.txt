@@ -1,1 +1,1 @@
-feat(core): orchestrate v1 golden pipeline
+fix(core): validate golden fixture paths
