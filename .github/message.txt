@@ -1,3 +1,1 @@
-feat(platform): add platform CLI skeleton
-
-Add the platform-neutral crate and CLI skeleton for the F1 platform implementation bundle.
+feat(platform): add generated artifact framework
