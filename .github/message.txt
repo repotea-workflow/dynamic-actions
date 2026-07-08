@@ -1,1 +1,1 @@
-chore(tooling): add acceptance command entrypoints
+chore(tooling): silence just shell startup noise
