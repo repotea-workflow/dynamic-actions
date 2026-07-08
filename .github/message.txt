@@ -1,1 +1,1 @@
-feat(platform): add real direct transports
+feat(platform): add hardware smoke evidence harness
