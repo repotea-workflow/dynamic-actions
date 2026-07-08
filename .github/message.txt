@@ -1,1 +1,1 @@
-test(core): complete reachable failure matrix
+test(workspace): enforce pre-platform dependency boundaries
