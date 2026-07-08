@@ -1,1 +1,1 @@
-fix(platform): verify cups smoke cleanup
+fix(platform): reject missing direct service token
