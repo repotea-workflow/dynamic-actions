@@ -1,1 +1,1 @@
-feat(cli): add fixture validation command
+fix(cli): enforce fixture validation in acceptance
