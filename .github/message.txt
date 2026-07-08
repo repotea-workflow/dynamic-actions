@@ -1,1 +1,1 @@
-docs(platform): align windows usb transport hints
+docs(platform): use shared transport hints field
