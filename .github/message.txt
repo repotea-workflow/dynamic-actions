@@ -1,1 +1,7 @@
-fix(test-fixtures): mark renamed fixture command binary
+feat(test-fixtures): add first golden fixture layout
+
+* feat(test-fixtures): add first golden fixture layout
+
+* fix(test-fixtures): align fixture paths with id
+
+* fix(test-fixtures): mark renamed fixture command binary
