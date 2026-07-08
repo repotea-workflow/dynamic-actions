@@ -1,1 +1,1 @@
-fix(platform): enforce hardware smoke evidence truthfulness
+feat(platform): add hardware smoke evidence harness
