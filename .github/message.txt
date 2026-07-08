@@ -1,1 +1,1 @@
-fix(platform): wire CUPS raster replay and validate stride
+fix(platform): verify cups smoke cleanup
