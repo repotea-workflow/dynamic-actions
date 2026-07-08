@@ -1,1 +1,3 @@
-docs(platform): align windows usb ownership field
+docs(platform): add implementation runbook
+
+Add the platform development runbook baseline and long-running PR execution contract.
