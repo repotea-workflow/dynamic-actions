@@ -1,1 +1,1 @@
-agent/cli-golden-run
+main
