@@ -1,1 +1,1 @@
-docs(runbook): record v1 acceptance procedure updates
+test(core): add v1 acceptance coverage
