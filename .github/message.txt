@@ -1,1 +1,1 @@
-feat(platform): add direct service mock API
+feat(platform): add CUPS raster conversion
