@@ -1,5 +1,1 @@
-feat(platform): add generated artifact framework (#58)
-
-* feat(platform): add generated artifact framework
-
-* fix(platform): harden generated artifact validation
+feat(platform): add Windows dry-run adapters
