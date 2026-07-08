@@ -1,1 +1,7 @@
-fix(platform): report stale cups cleanup failures
+feat(platform): add direct service mock API
+
+* feat(platform): add direct service mock API
+
+* fix(platform): harden direct service policy checks
+
+* fix(platform): reject missing direct service token
