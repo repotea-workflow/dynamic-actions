@@ -1,5 +1,1 @@
-feat(cli): add fixture resource inspection commands
-
-* feat(cli): add fixture resource inspection commands
-
-* fix(cli): avoid duplicate dialect prefix in provider list
+feat(cli): add fixture validation command
