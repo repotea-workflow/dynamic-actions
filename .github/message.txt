@@ -1,1 +1,1 @@
-feat(catalog): add projection schema diagnostics
+feat(catalog): add scalar normalizers
