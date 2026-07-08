@@ -1,1 +1,1 @@
-chore(core): audit selection readiness
+docs(runbook): finalize selection readiness checklist
