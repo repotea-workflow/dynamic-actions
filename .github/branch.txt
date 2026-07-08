@@ -1,1 +1,1 @@
-main
+catalog-projection-schema
