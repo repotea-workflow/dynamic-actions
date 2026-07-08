@@ -1,1 +1,1 @@
-macos-dry-run-adapters
+main
