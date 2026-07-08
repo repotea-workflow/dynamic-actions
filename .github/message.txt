@@ -1,1 +1,1 @@
-feat(cli): validate dry-run artifacts
+fix(cli): tighten dry-run validation coverage
