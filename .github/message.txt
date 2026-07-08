@@ -1,1 +1,1 @@
-feat(catalog): add scalar normalizers
+feat(catalog): add reference importer fixture
