@@ -1,5 +1,1 @@
-feat(cli): add golden run command
-
-* feat(cli): add golden run command
-
-* test(cli): cover golden dry-run artifacts
+test(cli): compare golden bytes and diagnostics
