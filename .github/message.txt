@@ -1,1 +1,1 @@
-feat(platform): add Windows dry-run adapters (#59)
+feat(platform): add Linux dry-run adapters
