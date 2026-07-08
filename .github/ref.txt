@@ -1,1 +1,1 @@
-main
+system-registration-smoke
