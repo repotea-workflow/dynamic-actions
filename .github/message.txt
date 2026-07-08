@@ -1,1 +1,1 @@
-test(core): cover structured failure propagation
+feat(cli): add golden run command
