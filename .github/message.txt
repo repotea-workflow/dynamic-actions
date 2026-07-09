@@ -1,1 +1,1 @@
-fix(platform): align route smoke contracts
+docs(platform): clarify discovery handoff wording
