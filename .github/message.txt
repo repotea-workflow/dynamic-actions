@@ -1,1 +1,1 @@
-fix(platform): harden windows discovery handoff
+fix(platform): correlate linux CUPS USB ownership
