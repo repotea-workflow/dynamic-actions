@@ -1,1 +1,1 @@
-fix(linux): harden ipp-usb capture redaction
+fix(linux): gate printer application registration smoke
