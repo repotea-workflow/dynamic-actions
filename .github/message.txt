@@ -1,1 +1,5 @@
-fix(platform): narrow common ipp public surface
+refactor(platform): add common ipp package (#75)
+
+* refactor(platform): add common ipp package
+
+* fix(platform): narrow common ipp public surface
