@@ -1,1 +1,7 @@
-fix(platform): reject ieee 1284 sn serials
+feat(platform): add host discovery handoff contract (#69)
+
+* feat(platform): add host discovery handoff contract
+
+* fix(platform): reject unsafe discovery handoff fields
+
+* fix(platform): reject ieee 1284 sn serials

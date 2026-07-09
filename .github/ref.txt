@@ -1,1 +1,1 @@
-platform-host-discovery-contract
+main
