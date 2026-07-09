@@ -1,1 +1,1 @@
-linux-host-discovery
+windows-host-discovery
