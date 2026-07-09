@@ -1,7 +1,1 @@
-feat(platform): add macos host discovery collector (#72)
-
-* feat(platform): add macos host discovery collector
-
-* fix(macos): harden host discovery redaction
-
-* fix(macos): harden host discovery handoff
+refactor(platform): make platform implementations rust packages
