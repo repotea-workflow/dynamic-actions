@@ -1,1 +1,1 @@
-feat(linux): complete ipp-usb adaptation
+fix(linux): address direct access review feedback

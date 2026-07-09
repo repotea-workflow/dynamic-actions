@@ -1,1 +1,1 @@
-linux-ipp-usb-driver-complete
+linux-direct-driver-complete
