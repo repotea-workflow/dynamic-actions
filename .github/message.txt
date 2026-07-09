@@ -1,1 +1,1 @@
-feat(platform): add direct route facades
+fix(platform): stabilize direct route status facts
