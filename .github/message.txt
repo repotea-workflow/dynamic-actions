@@ -1,1 +1,7 @@
-docs(platform): clarify discovery handoff wording
+refactor(platform): make platform implementations rust packages (#73)
+
+* refactor(platform): make platform implementations rust packages
+
+* fix(platform): align route smoke contracts
+
+* docs(platform): clarify discovery handoff wording
