@@ -1,1 +1,1 @@
-fix(platform): redact smoke validation errors
+docs(linux): clarify CUPS registration smoke plan
