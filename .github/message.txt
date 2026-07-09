@@ -1,5 +1,1 @@
-feat(linux): complete direct access adaptation
-
-* feat(linux): complete direct access adaptation
-
-* fix(linux): address direct access review feedback
+fix(linux): harden ipp-usb capture redaction
