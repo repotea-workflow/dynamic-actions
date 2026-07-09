@@ -1,1 +1,1 @@
-fix(linux): harden CUPS dry-run evidence
+fix(platform): redact smoke validation errors
