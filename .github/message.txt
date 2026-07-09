@@ -1,1 +1,7 @@
-docs(linux): clarify CUPS registration smoke plan
+feat(linux): complete Printer Application adaptation
+
+* feat(linux): complete printer application adaptation
+
+* fix(linux): gate printer application registration smoke
+
+* fix(platform): redact smoke validation errors
