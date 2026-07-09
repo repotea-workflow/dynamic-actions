@@ -1,1 +1,1 @@
-feat(platform): add linux cups route facade
+feat(platform): add package registry map
