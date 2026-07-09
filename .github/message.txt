@@ -1,1 +1,1 @@
-chore(platform): merge windows discovery main
+fix(macos): harden host discovery handoff
