@@ -1,7 +1,1 @@
-feat(platform): add windows host discovery collector (#70)
-
-* feat(platform): add windows host discovery collector
-
-* fix(platform): harden windows discovery handoff
-
-* test(windows): use synthetic redaction sentinels
+chore(platform): merge linux discovery main
