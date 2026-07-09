@@ -1,1 +1,1 @@
-linux-direct-driver-complete
+linux-cups-driver-complete
