@@ -1,1 +1,1 @@
-feat(platform): add linux cups route facade (#80)
+refactor(cli): move platform packages command module
