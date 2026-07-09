@@ -1,1 +1,1 @@
-docs(platform): refresh workspace status
+refactor(platform): rename platform core crate
