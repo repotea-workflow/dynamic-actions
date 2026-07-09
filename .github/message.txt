@@ -1,1 +1,1 @@
-feat(macos): add CUPS route facade
+feat(platform): add linux cups route facade
