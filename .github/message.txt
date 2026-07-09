@@ -1,1 +1,1 @@
-feat(platform): add package registry map
+test(cli): cover macos cups usage forms
