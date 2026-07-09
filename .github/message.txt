@@ -1,5 +1,1 @@
-feat(platform): add linux host discovery collector (#71)
-
-* feat(platform): add linux host discovery collector
-
-* fix(platform): correlate linux CUPS USB ownership
+chore(platform): merge linux discovery main
