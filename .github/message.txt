@@ -1,1 +1,5 @@
-test(cli): cover macos cups usage forms
+feat(macos): add CUPS route facade (#79)
+
+* feat(macos): add CUPS route facade
+
+* test(cli): cover macos cups usage forms
