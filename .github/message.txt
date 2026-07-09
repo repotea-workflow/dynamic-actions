@@ -1,1 +1,5 @@
-test(windows): use synthetic redaction sentinels
+feat(platform): add linux host discovery collector (#71)
+
+* feat(platform): add linux host discovery collector
+
+* fix(platform): correlate linux CUPS USB ownership
