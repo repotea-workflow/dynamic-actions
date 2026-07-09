@@ -1,1 +1,1 @@
-refactor(cli): move platform packages command module
+test(cli): cover macos cups usage forms
