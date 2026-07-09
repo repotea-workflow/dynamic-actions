@@ -1,1 +1,1 @@
-rename-platform-core
+main

@@ -1,1 +1,1 @@
-refactor(platform): rename platform core crate
+refactor(platform): rename platform core crate (#68)
