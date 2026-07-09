@@ -1,1 +1,1 @@
-feat(platform): add linux host discovery collector
+feat(platform): add macos host discovery collector
