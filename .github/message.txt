@@ -1,1 +1,5 @@
-refactor(cli): move platform packages command module
+feat(platform): add package registry map (#78)
+
+* feat(platform): add package registry map
+
+* refactor(cli): move platform packages command module
