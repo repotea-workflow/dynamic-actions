@@ -1,1 +1,1 @@
-windows-host-discovery
+macos-host-discovery

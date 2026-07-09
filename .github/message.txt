@@ -1,1 +1,1 @@
-chore(platform): merge linux discovery main
+fix(macos): harden host discovery redaction
