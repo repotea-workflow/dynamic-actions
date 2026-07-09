@@ -1,1 +1,1 @@
-refactor(platform): add common cups package (#74)
+refactor(platform): add common ipp package
