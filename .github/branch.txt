@@ -1,1 +1,1 @@
-linux-printer-application-driver-complete
+linux-ipp-usb-driver-complete
