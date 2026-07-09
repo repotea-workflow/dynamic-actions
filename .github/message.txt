@@ -1,1 +1,1 @@
-refactor(platform): rename platform core crate (#68)
+feat(platform): add host discovery handoff contract
