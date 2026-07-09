@@ -1,1 +1,5 @@
-fix(linux): gate printer application registration smoke
+feat(linux): complete ipp-usb adaptation
+
+* feat(linux): complete ipp-usb adaptation
+
+* fix(linux): harden ipp-usb capture redaction
