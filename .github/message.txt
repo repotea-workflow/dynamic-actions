@@ -1,1 +1,7 @@
-fix(platform): derive IPP package IDs from registry
+feat(platform): add IPP route facades
+
+* feat(platform): add IPP route facades
+
+* fix(platform): stabilize IPP route status schema
+
+* fix(platform): derive IPP package IDs from registry
