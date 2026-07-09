@@ -1,1 +1,5 @@
-feat(linux): complete CUPS driver adaptation
+feat(linux): complete direct access adaptation
+
+* feat(linux): complete direct access adaptation
+
+* fix(linux): address direct access review feedback
