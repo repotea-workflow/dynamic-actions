@@ -1,1 +1,7 @@
-docs(linux): clarify CUPS registration smoke plan
+feat(linux): complete CUPS driver adaptation
+
+* feat(linux): complete CUPS driver adaptation
+
+* fix(linux): harden CUPS dry-run evidence
+
+* docs(linux): clarify CUPS registration smoke plan
