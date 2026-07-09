@@ -1,1 +1,1 @@
-linux-direct-driver-complete
+linux-printer-application-driver-complete

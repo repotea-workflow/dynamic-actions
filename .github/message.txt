@@ -1,1 +1,1 @@
-feat(linux): complete direct access adaptation
+feat(linux): complete printer application adaptation
