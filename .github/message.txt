@@ -1,1 +1,1 @@
-fix(platform): stabilize IPP route status schema
+fix(platform): derive IPP package IDs from registry
