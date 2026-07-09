@@ -1,1 +1,1 @@
-chore(platform): merge linux discovery main
+chore(platform): merge windows discovery main
