@@ -1,1 +1,1 @@
-refactor(platform): make platform implementations rust packages
+fix(platform): align route smoke contracts
