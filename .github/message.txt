@@ -1,1 +1,1 @@
-feat(linux): complete host API runner evidence
+fix(linux): harden host API evidence gates
