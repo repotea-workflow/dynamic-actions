@@ -1,1 +1,1 @@
-feat(linux-cups): expose gated host lifecycle
+feat(linux-cups): execute owned host lifecycle
