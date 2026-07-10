@@ -1,1 +1,1 @@
-docs(linux): add platform api research
+docs(linux): add platform API research
