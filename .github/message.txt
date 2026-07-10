@@ -1,3 +1,1 @@
-Merge pull request #94 from boxliy/linux-cups-host-lifecycle
-
-feat(linux-cups): execute owned host lifecycle
+feat(linux-direct): gate transport writes on discovery facts
