@@ -1,3 +1,1 @@
-Merge pull request #96 from boxliy/linux-ipp-usb-real-host
-
-feat(linux): complete ipp-usb real host execution
+fix(linux-direct): implement host inventory backend
