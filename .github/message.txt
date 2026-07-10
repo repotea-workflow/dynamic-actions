@@ -1,1 +1,3 @@
-fix(linux): gate printer application jobs through shim
+Merge pull request #92 from boxliy/feat/linux-ipp-usb-execution
+
+feat(linux): complete ipp-usb host execution
