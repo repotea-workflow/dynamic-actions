@@ -1,3 +1,1 @@
-Merge pull request #91 from boxliy/linux-printer-application-execution
-
-feat(linux): add native printer application IPP service
+feat(linux-cups): expose gated host lifecycle
