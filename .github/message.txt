@@ -1,1 +1,1 @@
-docs(linux): add platform API research
+feat(linux): implement direct and ipp-usb host APIs
