@@ -1,1 +1,3 @@
+Merge pull request #90 from boxliy/linux-cups-host-execution
+
 feat(linux): execute CUPS host smoke lifecycle
