@@ -1,1 +1,1 @@
-feat(linux-direct): gate transport writes on discovery facts
+feat(linux): complete ipp-usb real host execution
