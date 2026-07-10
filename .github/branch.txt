@@ -1,1 +1,1 @@
-linux-direct-ipp-host-api
+linux-cups-printer-host-api
