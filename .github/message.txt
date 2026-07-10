@@ -1,1 +1,1 @@
-fix(linux): require printer application transport acceptance
+test(linux): cover timed out printer transport child
