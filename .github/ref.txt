@@ -1,1 +1,1 @@
-linux-printer-application-execution
+linux-cups-host-execution
