@@ -1,1 +1,3 @@
-feat(linux-direct): enable usblp device-node writes
+Merge pull request #93 from boxliy/linux-direct-real-transport
+
+feat(linux-direct): add real direct transports
