@@ -1,1 +1,1 @@
-fix(linux-direct): implement host inventory backend
+fix(linux-direct): harden discovered device authorization
