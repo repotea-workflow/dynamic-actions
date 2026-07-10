@@ -1,1 +1,9 @@
-fix(linux): harden host API evidence gates
+feat(linux): implement direct and ipp-usb host APIs
+
+* feat(linux): implement direct and ipp-usb host APIs
+
+* fix(linux): gate host API writes and redact ipp-usb evidence
+
+* feat(linux): complete direct and ipp-usb host surfaces
+
+* fix(linux): harden ipp-usb evidence and usb smoke status
