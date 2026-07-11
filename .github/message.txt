@@ -1,1 +1,1 @@
-feat(linux): add direct permission planning evidence (#106)
+feat(linux): add printer application readiness report
