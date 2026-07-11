@@ -1,7 +1,1 @@
-feat(windows): add raw spooler host submission (#146)
-
-* feat(windows): add raw spooler host submission
-
-* fix(windows): isolate raw spooler host FFI
-
-* fix(windows): require validated raw submit path
+feat(windows): add winusb host readiness gates
