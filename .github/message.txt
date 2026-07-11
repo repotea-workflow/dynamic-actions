@@ -1,3 +1,1 @@
-Merge pull request #99 from boxliy/linux-printer-application-core-handoff
-
-feat(linux): hand off printer application dry run to core
+chore(linux-cups): merge latest main
