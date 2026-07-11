@@ -1,1 +1,5 @@
-fix(linux-printer-application): harden physical evidence validation
+feat(linux-printer-application): complete production boundary evidence
+
+* feat(linux-printer-application): stage package registration evidence
+
+* fix(linux-printer-application): harden physical evidence validation
