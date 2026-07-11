@@ -1,1 +1,1 @@
-feat(linux): add ipp-usb inspection handoff
+fix(linux): harden ipp-usb inspection evidence
