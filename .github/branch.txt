@@ -1,1 +1,1 @@
-linux-cups-virtual-driver
+linux-ipp-usb-inspection

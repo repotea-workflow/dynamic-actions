@@ -1,1 +1,1 @@
-fix(linux-cups): close cleanup descriptor race
+feat(linux): add ipp-usb inspection handoff
