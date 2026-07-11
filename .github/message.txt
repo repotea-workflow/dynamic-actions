@@ -1,1 +1,5 @@
-fix(windows): avoid readonly readiness overclaims
+feat(windows): capture readonly print host evidence (#145)
+
+* feat(windows): capture readonly print host evidence
+
+* fix(windows): avoid readonly readiness overclaims
