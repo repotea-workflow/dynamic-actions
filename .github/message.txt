@@ -1,3 +1,1 @@
-Merge pull request #132 from boxliy/linux-hardware-evidence-suite
-
-Add Linux hardware evidence suite validation
+fix(linux-direct): add host smoke evidence schema
