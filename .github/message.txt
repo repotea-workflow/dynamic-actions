@@ -1,3 +1,1 @@
-Merge pull request #102 from boxliy/linux-trusted-host-bridge
-
-Bridge Linux trusted host smoke paths
+feat(linux): bridge registration lifecycle smoke paths
