@@ -1,1 +1,1 @@
-fix(linux-cups): integrate state store baseline
+fix(linux-printer-application): clean host lifecycle state on failures
