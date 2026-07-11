@@ -1,1 +1,1 @@
-feat(linux): assemble observed hardware evidence
+feat(linux-cups): add physical queue smoke boundary
