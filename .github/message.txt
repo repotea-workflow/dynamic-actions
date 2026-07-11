@@ -1,3 +1,1 @@
-Merge pull request #130 from boxliy/linux-status-evidence-boundaries
-
-Align Linux status evidence boundaries
+feat(platform): complete linux cups host boundary status
