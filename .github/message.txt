@@ -1,1 +1,1 @@
-docs(linux-direct): align host-write guidance
+docs(linux): add hardware evidence runbook
