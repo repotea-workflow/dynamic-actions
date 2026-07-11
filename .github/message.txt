@@ -1,3 +1,1 @@
-Merge pull request #131 from boxliy/linux-cups-host-integration-status
-
-Complete Linux CUPS host integration boundary
+feat(linux): add hardware evidence suite validation
