@@ -1,1 +1,3 @@
-feat(linux-direct): enable usb and serial host smoke
+Merge pull request #101 from boxliy/linux-direct-usb-serial-host-smoke
+
+Enable Linux Direct USB and Serial host smoke
