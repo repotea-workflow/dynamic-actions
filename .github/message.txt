@@ -1,5 +1,1 @@
-feat(windows): add readonly win32 discovery boundary (#144)
-
-* feat(windows): add readonly win32 discovery boundary
-
-* fix(windows): align winspool enum buffer
+feat(windows): capture readonly print host evidence
