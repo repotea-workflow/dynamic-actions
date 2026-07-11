@@ -1,1 +1,1 @@
-feat(windows): add platform evidence commands (#143)
+feat(windows): add readonly win32 discovery boundary
