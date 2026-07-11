@@ -1,1 +1,1 @@
-feat(linux): align smoke evidence catalog (#104)
+feat(linux): expose cups staged install lifecycle
