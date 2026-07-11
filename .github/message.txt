@@ -1,1 +1,1 @@
-feat(linux): add ipp-usb readiness bundle
+feat(linux): add ipp-usb readiness bundle (#109)
