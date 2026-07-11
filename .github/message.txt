@@ -1,1 +1,3 @@
-fix(linux-direct): scope ipp-usb potential ownership
+Merge pull request #95 from boxliy/linux-direct-host-discovery
+
+feat(linux-direct): gate transport writes on discovery facts
