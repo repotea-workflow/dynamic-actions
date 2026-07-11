@@ -1,1 +1,1 @@
-feat(linux-printer-application): ready process boundary route (#115)
+feat(linux-direct): mark direct driver routes implemented
