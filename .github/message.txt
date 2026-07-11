@@ -1,1 +1,1 @@
-feat(linux-direct): complete host driver evidence path
+feat(linux): add hardware evidence preflight
