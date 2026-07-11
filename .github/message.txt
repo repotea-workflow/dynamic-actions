@@ -1,1 +1,1 @@
-feat(linux-printer-application): stage package registration evidence
+feat(linux-printer-application): stage package registration evidence (#110)
