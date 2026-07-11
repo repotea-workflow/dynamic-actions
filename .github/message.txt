@@ -1,1 +1,3 @@
-fix(cli): document direct host smoke output dir
+Merge pull request #133 from boxliy/linux-direct-evidence-contract
+
+Complete Linux Direct evidence contract
