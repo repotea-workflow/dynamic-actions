@@ -1,1 +1,3 @@
-feat(linux): add printer application production evidence validation
+Merge pull request #134 from boxliy/linux-printer-application-production-evidence
+
+Add Linux Printer Application production evidence validation
