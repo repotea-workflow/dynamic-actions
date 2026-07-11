@@ -1,1 +1,1 @@
-docs(linux): add hardware evidence runbook
+fix(linux): close platform policy consistency gaps
