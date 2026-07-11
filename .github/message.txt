@@ -1,1 +1,1 @@
-feat(windows): add host discovery foundation
+feat(windows): add host discovery foundation (#139)
