@@ -1,1 +1,1 @@
-feat(linux): add hardware evidence preflight
+fix(linux): bound hardware preflight systemctl
