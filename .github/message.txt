@@ -1,1 +1,1 @@
-feat(windows): add setupapi usb discovery
+fix(windows): keep compatible ids out of strong matching
