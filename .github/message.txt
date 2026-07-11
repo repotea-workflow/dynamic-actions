@@ -1,3 +1,1 @@
-Merge pull request #134 from boxliy/linux-printer-application-production-evidence
-
-Add Linux Printer Application production evidence validation
+feat(platform): add linux simulation manager
