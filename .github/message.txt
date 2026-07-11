@@ -1,1 +1,1 @@
-feat(platform): complete linux cups host boundary status
+fix(cli): bound linux cups inventory timeout
