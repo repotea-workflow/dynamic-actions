@@ -1,1 +1,1 @@
-main
+linux-smoke-catalog-alignment
