@@ -1,1 +1,3 @@
-fix(cli): bound linux cups inventory timeout
+Merge pull request #131 from boxliy/linux-cups-host-integration-status
+
+Complete Linux CUPS host integration boundary
