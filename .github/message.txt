@@ -1,1 +1,3 @@
-fix(linux-cups): require trusted state staging
+Merge pull request #99 from boxliy/linux-printer-application-core-handoff
+
+feat(linux): hand off printer application dry run to core
