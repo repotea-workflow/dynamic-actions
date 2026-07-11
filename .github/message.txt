@@ -1,1 +1,5 @@
-fix(linux-cups): accept package version tokens
+feat(linux-cups): validate production install receipts (#128)
+
+* feat(linux-cups): validate production install receipts
+
+* fix(linux-cups): accept package version tokens
