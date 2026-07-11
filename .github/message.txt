@@ -1,1 +1,1 @@
-feat(linux): add printer application readiness report (#107)
+feat(linux-direct): add deployment readiness report
