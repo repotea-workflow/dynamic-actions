@@ -1,5 +1,1 @@
-Implement WinUSB direct route (#151)
-
-* feat(windows): implement winusb direct route
-
-* fix(windows): address winusb direct review blockers
+fix(windows): add missing WinUSB target refs to system tests
