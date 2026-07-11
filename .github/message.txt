@@ -1,1 +1,3 @@
-fix(linux): harden ipp-usb ss ownership parsing
+Merge pull request #98 from boxliy/linux-ipp-usb-inspection
+
+feat(linux): add ipp-usb inspection handoff
