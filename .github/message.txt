@@ -1,1 +1,1 @@
-feat(linux): expose cups staged install lifecycle (#105)
+feat(linux): add direct permission planning evidence
