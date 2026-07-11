@@ -1,1 +1,1 @@
-feat(linux-cups): add host smoke status evidence (#111)
+feat(linux-direct): resolve host smoke targets
