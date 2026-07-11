@@ -1,1 +1,1 @@
-fix(linux-cups): harden filter packaging and smoke
+fix(linux-cups): stage filter runtime config
