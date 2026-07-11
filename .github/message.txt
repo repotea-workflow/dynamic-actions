@@ -1,1 +1,1 @@
-feat(windows): add host discovery foundation (#139)
+feat(windows): add spooler host api boundary
