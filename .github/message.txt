@@ -1,1 +1,3 @@
-fix(linux): align suite route summary acceptance
+Merge pull request #132 from boxliy/linux-hardware-evidence-suite
+
+Add Linux hardware evidence suite validation
