@@ -1,1 +1,3 @@
-docs(linux): align status evidence boundaries
+Merge pull request #130 from boxliy/linux-status-evidence-boundaries
+
+Align Linux status evidence boundaries
