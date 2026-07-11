@@ -1,1 +1,1 @@
-feat(linux): hand off printer application dry run to core
+fix(linux): harden printer application handoff
