@@ -1,3 +1,1 @@
-Merge pull request #98 from boxliy/linux-ipp-usb-inspection
-
-feat(linux): add ipp-usb inspection handoff
+feat(linux): hand off printer application dry run to core
