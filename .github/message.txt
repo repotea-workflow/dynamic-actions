@@ -1,1 +1,1 @@
-feat(windows): add raw spooler host submission
+fix(windows): isolate raw spooler host FFI
