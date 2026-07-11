@@ -1,1 +1,1 @@
-fix(linux-direct): add host smoke evidence schema
+feat(linux): add printer application production evidence validation
