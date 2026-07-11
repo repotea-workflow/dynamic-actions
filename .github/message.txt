@@ -1,4 +1,1 @@
-Merge remote-tracking branch 'origin/main' into linux-direct-completion-bundle
-
-# Conflicts:
-#	apps/cli/src/main.rs
+feat(linux-direct): add deployment readiness report (#108)
