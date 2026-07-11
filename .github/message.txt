@@ -1,1 +1,3 @@
 feat(platform): add linux simulation manager
+
+Add a local Linux platform simulation manager with AppSocket and PTY-backed serial endpoints, expose just recipes for start/status/smoke/stop, and document that simulation artifacts are pre-hardware only.
