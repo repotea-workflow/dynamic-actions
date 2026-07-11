@@ -1,3 +1,1 @@
-feat(linux): require ipp-usb print smoke schema
-
-Require stable ipp-usb print-smoke evidence schema across host evidence, CLI tests, Linux hardware package validation, platform-core observed assembly, and docs.
+feat(windows): add platform readiness foundation
