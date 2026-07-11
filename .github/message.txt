@@ -1,3 +1,1 @@
-Merge pull request #95 from boxliy/linux-direct-host-discovery
-
-feat(linux-direct): gate transport writes on discovery facts
+feat(linux-cups): implement virtual driver filter route
