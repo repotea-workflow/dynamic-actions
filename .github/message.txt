@@ -1,3 +1,1 @@
-Merge pull request #97 from boxliy/linux-cups-virtual-driver
-
-feat(linux-cups): implement virtual driver filter route
+feat(linux-direct): enable usb and serial host smoke
