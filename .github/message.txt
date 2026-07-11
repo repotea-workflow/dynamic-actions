@@ -1,1 +1,1 @@
-feat(linux-cups): add host smoke status evidence
+feat(linux-printer-application): stage package registration evidence
