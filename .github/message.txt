@@ -1,1 +1,1 @@
-feat(windows): add system evidence gates
+feat(windows): add winusb host readiness gates
