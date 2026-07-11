@@ -1,1 +1,1 @@
-feat(linux-direct): mark direct driver routes implemented
+fix(linux-direct): require lease-prefixed host writes
