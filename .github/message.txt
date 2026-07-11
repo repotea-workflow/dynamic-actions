@@ -1,5 +1,1 @@
-Add Windows Unidrv package route artifacts (#150)
-
-* feat(windows): add unidrv package route artifacts
-
-* fix(windows): tighten unidrv evidence validation
+fix(windows): address winusb direct review blockers
