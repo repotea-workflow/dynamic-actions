@@ -1,1 +1,1 @@
-fix(linux-cups): stage filter runtime config
+fix(linux-cups): harden staged artifact contracts
