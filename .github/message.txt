@@ -1,1 +1,1 @@
-feat(linux): add printer application production evidence validation
+fix(cli): document direct host smoke output dir
