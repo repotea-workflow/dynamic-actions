@@ -1,1 +1,1 @@
-feat(linux-ipp-usb): mark host smoke route ready (#114)
+feat(linux-printer-application): ready process boundary route
