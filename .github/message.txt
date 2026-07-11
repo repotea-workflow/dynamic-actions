@@ -1,1 +1,1 @@
-fix(linux): harden printer application handoff
+fix(linux): prevent native IPP marker symlink following
