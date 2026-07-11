@@ -1,1 +1,1 @@
-feat(linux-cups): implement virtual driver filter route
+fix(linux-cups): harden filter packaging and smoke
