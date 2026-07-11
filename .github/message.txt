@@ -1,1 +1,1 @@
-feat(linux-direct): add deployment readiness report
+feat(linux): add ipp-usb readiness bundle
