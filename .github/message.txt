@@ -1,1 +1,5 @@
-fix(windows): address winusb direct review blockers
+Implement WinUSB direct route (#151)
+
+* feat(windows): implement winusb direct route
+
+* fix(windows): address winusb direct review blockers
