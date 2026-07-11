@@ -1,1 +1,1 @@
-docs(linux-direct): align host-write guidance
+fix(linux): clean up platform validation failures
