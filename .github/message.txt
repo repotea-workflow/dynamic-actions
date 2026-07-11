@@ -1,1 +1,1 @@
-fix(linux): classify preflight service status correctly
+feat(linux): validate hardware evidence packages
