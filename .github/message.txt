@@ -1,1 +1,1 @@
-feat(windows): add platform readiness foundation (#138)
+feat(windows): add host discovery foundation
