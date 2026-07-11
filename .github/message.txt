@@ -1,1 +1,1 @@
-feat(linux): add hardware evidence suite validation
+fix(linux): align suite route summary acceptance
