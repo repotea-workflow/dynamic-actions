@@ -1,1 +1,1 @@
-main
+linux-ipp-usb-print-smoke-schema
