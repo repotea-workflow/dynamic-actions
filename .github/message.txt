@@ -1,5 +1,1 @@
-feat(linux): add hardware evidence preflight
-
-* feat(linux): add hardware evidence preflight
-
-* fix(linux): bound hardware preflight systemctl
+fix(linux): classify preflight service status correctly
