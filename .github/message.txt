@@ -1,5 +1,1 @@
-Add Linux ipp-usb production receipt validation (#129)
-
-* feat(linux-ipp-usb): validate production receipts
-
-* fix(linux-ipp-usb): harden receipt review gaps
+docs(linux): align status evidence boundaries
