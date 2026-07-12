@@ -1,1 +1,1 @@
-feat(platform): expose windows route management evidence (#178)
+feat(platform): deepen macos management route evidence
