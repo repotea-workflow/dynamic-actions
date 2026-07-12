@@ -1,1 +1,3 @@
-fix(macos): clean up after cups queue create attempts
+Add gated macOS host smoke execution surfaces
+
+Add gated macOS CUPS, package, AppSocket, and AirPrint host-smoke execution surfaces with hash-matching gates, cleanup evidence, and Linux-CI-safe tests.
