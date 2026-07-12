@@ -1,5 +1,1 @@
-Add macOS gated host runners (#159)
-
-* feat(macos): add gated host runners
-
-* fix(macos): bound host runner timeouts
+feat(linux): add hardware evidence suite pack
