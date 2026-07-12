@@ -1,1 +1,1 @@
-fix(windows): add missing WinUSB target refs to system tests (#152)
+feat(macos): complete host-safe driver surfaces
