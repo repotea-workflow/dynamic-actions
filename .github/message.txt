@@ -1,1 +1,1 @@
-feat(desktop): harden first management release
+fix(desktop): address release readiness review
