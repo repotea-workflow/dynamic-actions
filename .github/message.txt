@@ -1,5 +1,1 @@
-Deepen desktop management API contracts (#163)
-
-* feat(desktop): deepen management APIs
-
-* fix(desktop): harden management startup boundaries
+feat(desktop): add management diagnostics and planning
