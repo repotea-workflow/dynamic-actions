@@ -1,1 +1,1 @@
-feat(macos-package): add management receipt backend (#174)
+feat(platform-management): add windows receipt validation
