@@ -1,1 +1,1 @@
-feat(desktop): add read-only management view
+fix(desktop): address D0 management review issues
