@@ -1,9 +1,1 @@
-Add aggregate platform evidence suite gates (#162)
-
-* feat(platform): add aggregate evidence suite gates
-
-* fix(platform): enforce hardware suite evidence contract
-
-* fix(platform): harden evidence package validators
-
-* fix(platform): reject malformed route diagnostics
+feat(desktop): deepen management APIs
