@@ -1,1 +1,1 @@
-feat(linux-cups): add readiness and smoke evidence bundles (#169)
+feat(desktop): add D5 operation evidence panel
