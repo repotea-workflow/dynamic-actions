@@ -1,1 +1,1 @@
-feat(platform): deepen macos management route evidence
+fix(platform): sanitize macos management route notes
