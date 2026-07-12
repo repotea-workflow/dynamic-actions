@@ -1,1 +1,1 @@
-feat(platform): share route lifecycle dispatch
+feat(platform): share route lifecycle dispatch (#168)
