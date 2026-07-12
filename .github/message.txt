@@ -1,1 +1,1 @@
-feat(management): validate linux cups receipts
+feat(management): validate linux cups receipts (#176)
