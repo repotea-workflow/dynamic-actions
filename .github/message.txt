@@ -1,1 +1,5 @@
-fix(cli): emit ipp-usb print smoke route artifacts
+feat(linux-ipp-usb): harden evidence packaging (#171)
+
+* feat(linux-ipp-usb): harden evidence packaging
+
+* fix(cli): emit ipp-usb print smoke route artifacts
