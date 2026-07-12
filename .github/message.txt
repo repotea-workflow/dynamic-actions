@@ -1,1 +1,1 @@
-feat(platform): harden lifecycle management readiness
+fix(desktop): align fallback package lifecycle gates
