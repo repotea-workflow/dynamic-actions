@@ -1,1 +1,1 @@
-feat(platform-management): add windows receipt validation (#175)
+feat(management): validate linux cups receipts
