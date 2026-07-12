@@ -1,1 +1,1 @@
-main
+desktop-management-parity

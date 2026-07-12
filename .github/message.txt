@@ -1,1 +1,1 @@
-feat(linux-printer-application): add production lifecycle receipts (#172)
+feat(desktop): align management backend parity
