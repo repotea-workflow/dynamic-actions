@@ -1,5 +1,1 @@
-feat(desktop): harden first management release (#181)
-
-* feat(desktop): harden first management release
-
-* fix(desktop): address release readiness review
+feat(linux): close driver route evidence gates
