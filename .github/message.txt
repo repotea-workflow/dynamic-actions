@@ -1,1 +1,1 @@
-feat(desktop): add D5 operation evidence panel (#170)
+feat(linux-ipp-usb): harden evidence packaging
