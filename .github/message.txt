@@ -1,1 +1,1 @@
-feat(desktop): add gated lifecycle operations shell
+fix(desktop): compact lifecycle operation summaries
