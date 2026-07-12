@@ -1,5 +1,1 @@
-feat(platform): harden lifecycle management readiness (#185)
-
-* feat(platform): harden lifecycle management readiness
-
-* fix(desktop): align fallback package lifecycle gates
+chore(platform): add cross-platform validation tooling
