@@ -1,1 +1,1 @@
-feat(desktop): align management backend parity (#173)
+feat(macos-package): add management receipt backend
