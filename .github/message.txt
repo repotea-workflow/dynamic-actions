@@ -1,1 +1,1 @@
-fix(desktop): generate tauri icon during build (#157)
+fix(windows): consolidate host evidence gates
