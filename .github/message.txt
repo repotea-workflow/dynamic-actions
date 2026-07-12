@@ -1,1 +1,1 @@
-feat(linux-direct): add simulated host-smoke transport evidence (#167)
+feat(platform): share route lifecycle dispatch
