@@ -1,5 +1,1 @@
-feat(platform): deepen macos management route evidence (#179)
-
-* feat(platform): deepen macos management route evidence
-
-* fix(platform): sanitize macos management route notes
+feat(platform): deepen linux management route evidence
