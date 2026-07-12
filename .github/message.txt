@@ -1,1 +1,1 @@
-feat(platform): deepen linux management route evidence (#180)
+feat(desktop): harden first management release
