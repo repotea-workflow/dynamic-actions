@@ -1,5 +1,1 @@
-feat(linux): close driver route evidence gates (#182)
-
-* feat(linux): close driver route evidence gates
-
-* fix(linux): accept direct appsocket evidence bundles
+feat(windows): close driver route evidence gates
