@@ -1,1 +1,1 @@
-feat(macos-package): add management receipt backend
+feat(macos-package): add management receipt backend (#174)
