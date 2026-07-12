@@ -1,1 +1,1 @@
-fix(desktop): align management snapshot contract (#161)
+fix(platform): enforce hardware suite evidence contract
