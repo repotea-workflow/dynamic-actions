@@ -1,1 +1,1 @@
-feat(macos): add gated host smoke execution surfaces
+fix(macos): harden host smoke gates
