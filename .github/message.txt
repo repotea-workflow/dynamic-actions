@@ -1,1 +1,1 @@
-feat(desktop): deepen management surfaces (#177)
+feat(platform): expose windows route management evidence
