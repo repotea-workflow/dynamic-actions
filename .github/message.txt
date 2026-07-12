@@ -1,1 +1,1 @@
-fix(desktop): align management snapshot contract
+feat(platform): add aggregate evidence suite gates
