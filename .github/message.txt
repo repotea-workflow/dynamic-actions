@@ -1,1 +1,5 @@
-fix(windows): require concrete host evidence refs
+Consolidate Windows host evidence gates (#158)
+
+* fix(windows): consolidate host evidence gates
+
+* fix(windows): require concrete host evidence refs
