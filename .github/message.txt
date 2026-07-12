@@ -1,1 +1,5 @@
-fix(linux): validate route artifact payload content
+Add Linux hardware evidence pack (#160)
+
+* feat(linux): add hardware evidence suite pack
+
+* fix(linux): validate route artifact payload content
