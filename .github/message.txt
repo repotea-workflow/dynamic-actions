@@ -1,1 +1,1 @@
-feat(linux-printer-application): add production lifecycle receipts
+feat(linux-printer-application): add production lifecycle receipts (#172)
