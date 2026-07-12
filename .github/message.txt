@@ -1,1 +1,5 @@
-fix(desktop): address D0 management review issues
+Add desktop management view (#156)
+
+* feat(desktop): add read-only management view
+
+* fix(desktop): address D0 management review issues

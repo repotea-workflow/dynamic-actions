@@ -1,1 +1,1 @@
-desktop-d0-management-view
+main
