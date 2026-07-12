@@ -1,1 +1,1 @@
-feat(desktop): align management backend parity
+feat(desktop): align management backend parity (#173)
