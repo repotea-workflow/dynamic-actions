@@ -1,5 +1,1 @@
-feat(desktop): add management diagnostics and planning (#164)
-
-* feat(desktop): add management diagnostics and planning
-
-* fix(desktop): validate management smoke refs
+feat(desktop): add gated lifecycle operations shell
