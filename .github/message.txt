@@ -1,1 +1,1 @@
-feat(linux): add hardware evidence suite pack
+fix(linux): validate route artifact payload content
