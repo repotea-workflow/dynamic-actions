@@ -1,1 +1,1 @@
-feat(desktop): deepen management surfaces
+feat(desktop): deepen management surfaces (#177)
