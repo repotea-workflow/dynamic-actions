@@ -1,1 +1,1 @@
-desktop-remove-binary-icon
+main
