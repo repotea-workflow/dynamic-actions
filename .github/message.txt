@@ -1,1 +1,5 @@
-fix(macos): harden host-safe evidence validation
+Complete host-safe macOS driver surfaces
+
+* feat(macos): complete host-safe driver surfaces
+
+* fix(macos): harden host-safe evidence validation
