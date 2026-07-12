@@ -1,5 +1,1 @@
-feat(desktop): add gated lifecycle operations shell (#165)
-
-* feat(desktop): add gated lifecycle operations shell
-
-* fix(desktop): compact lifecycle operation summaries
+feat(platform): validate ipp-usb receipts through management shell
