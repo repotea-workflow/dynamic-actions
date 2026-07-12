@@ -1,1 +1,1 @@
-feat(macos): add gated host runners
+fix(macos): bound host runner timeouts
