@@ -1,5 +1,1 @@
-Add platform management desktop contract (#155)
-
-* feat(platform): add management snapshot contract
-
-* fix(platform): expose desktop management capability states
+feat(desktop): add read-only management view
