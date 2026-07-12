@@ -1,1 +1,1 @@
-feat(platform): add management snapshot contract
+fix(platform): expose desktop management capability states
