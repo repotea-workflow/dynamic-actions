@@ -1,1 +1,1 @@
-Improve desktop management UX and macOS route support
+fix(macos): accept lifecycle contract operation ids
