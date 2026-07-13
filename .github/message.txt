@@ -1,5 +1,1 @@
-Refactor line limit modules (#187)
-
-* refactor: split oversized modules by feature
-
-* test: keep source modules free of test code
+chore: tighten acceptance lint gates
