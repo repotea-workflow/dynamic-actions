@@ -1,1 +1,1 @@
-refactor: split oversized modules by feature
+test: keep source modules free of test code
