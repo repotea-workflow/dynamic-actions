@@ -1,18 +1,1 @@
-Merge branch 'refactor-line-limit-modules'
-
-# Conflicts:
-#	apps/cli/src/cli/platform_linux_services.rs
-#	apps/cli/src/cli/runtime.rs
-#	apps/cli/tests/platform_management/hardware_evidence.rs
-#	apps/desktop/src-tauri/build.rs
-#	crates/platform-core/src/management/inventory_settings.rs
-#	crates/platform-core/src/management/route_boundaries.rs
-#	crates/platform-core/tests/management_lifecycle/execution.rs
-#	crates/platform-core/tests/management_lifecycle/snapshot.rs
-#	crates/platform-management-service/tests/route_lifecycle_dispatch.rs
-#	crates/platform-management-service/tests/route_lifecycle_dispatch/linux.rs
-#	crates/platform-management-service/tests/route_lifecycle_dispatch/windows.rs
-#	platform/linux/cups/tests/host_api/lifecycle.rs
-#	platform/macos/cups/tests/host_safe.rs
-#	platform/macos/package/tests/plan.rs
-#	platform/windows/winusb/tests/host.rs
+test: use safe temp roots for cli smoke tests
