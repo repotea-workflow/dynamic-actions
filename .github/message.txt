@@ -1,1 +1,1 @@
-Refine desktop lifecycle and route UI
+Refine developer management UI
