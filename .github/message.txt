@@ -1,1 +1,1 @@
-test: use safe temp roots for cli smoke tests
+Improve desktop management UX and macOS route support
