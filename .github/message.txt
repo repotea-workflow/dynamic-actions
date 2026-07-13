@@ -1,3 +1,1 @@
-feat(platform): implement installation binding lifecycle
-
-Implements platform driver installation and binding lifecycle contract, route payloads, CLI/Desktop management surfaces, and validation coverage across Linux, Windows, and macOS.
+Refine desktop management interface
