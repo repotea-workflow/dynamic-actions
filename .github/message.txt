@@ -1,3 +1,1 @@
-fix(platform): reject unsupported receipt validation
-
-Reject unsupported receipt-validation routes as not-applicable and keep route-owned validation behind typed receipt bundles.
+Refine desktop lifecycle and route UI
