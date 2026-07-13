@@ -1,1 +1,1 @@
-Refine developer management UI
+Simplify developer page layouts
