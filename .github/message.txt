@@ -1,1 +1,1 @@
-Refine desktop management interface
+fix(platform): reject unsupported receipt validation
