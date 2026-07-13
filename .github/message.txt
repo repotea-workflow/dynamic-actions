@@ -1,1 +1,1 @@
-chore: tighten acceptance lint gates
+fix: clear strict clippy debt
