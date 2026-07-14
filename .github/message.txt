@@ -1,1 +1,1 @@
-Fix header preference icon controls
+Add evidence diagnostics empty state
