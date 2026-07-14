@@ -1,1 +1,1 @@
-Simplify developer page layouts
+Fix header preference icon controls
