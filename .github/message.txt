@@ -1,1 +1,1 @@
-Add evidence diagnostics empty state
+test(desktop): satisfy strict clippy
