@@ -1,1 +1,1 @@
-Stream desktop printer discovery progress
+fix(platform-management): bound virtual printer state
