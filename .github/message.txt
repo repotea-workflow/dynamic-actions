@@ -1,1 +1,1 @@
-Add macOS Bluetooth printer discovery
+Stream desktop printer discovery progress
