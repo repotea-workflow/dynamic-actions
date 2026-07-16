@@ -1,1 +1,1 @@
-Implement macOS printer discovery provisioning flow
+Improve desktop printer discovery UI
