@@ -1,1 +1,1 @@
-fix(omsk-web): redirect direct roman login to cusco
+fix(omsk-web): keep legacy entry in app URLs
