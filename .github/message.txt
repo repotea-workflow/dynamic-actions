@@ -1,1 +1,1 @@
-ci(ztoms): add omsk v3 deployment workflow
+feat(omsk): stabilize rust backend and vue3 compatibility
