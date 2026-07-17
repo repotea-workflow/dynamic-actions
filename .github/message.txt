@@ -1,1 +1,1 @@
-fix(ci): fail uhub retry on partial push
+fix(omsk-web): redirect direct roman login to cusco
