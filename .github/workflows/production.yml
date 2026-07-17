@@ -69,6 +69,7 @@ jobs:
           max_attempts: 5
           retry_wait_seconds: 30
           command: |
+            set -euo pipefail
             echo "${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}" | docker login ${{ env.DOCKER_REGISTRY_UHUB }} -u "${{ secrets.CR_UHUB_USERNAME_ZTOKR }}" --password-stdin
             docker pull ${{ steps.tags.outputs.ghcr_sha }}
             docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_sha }}
@@ -130,6 +131,7 @@ jobs:
           max_attempts: 5
           retry_wait_seconds: 30
           command: |
+            set -euo pipefail
             echo "${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}" | docker login ${{ env.DOCKER_REGISTRY_UHUB }} -u "${{ secrets.CR_UHUB_USERNAME_ZTOKR }}" --password-stdin
             docker pull ${{ steps.tags.outputs.ghcr_sha }}
             docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_sha }}
