@@ -1,1 +1,1 @@
-test(platform): satisfy core strict clippy
+fix(platform): clarify Bluetooth fallback selection
