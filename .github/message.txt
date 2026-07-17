@@ -1,1 +1,3 @@
-docs(framework): narrow virtual route matrix
+feat(virtual-printer): add current-host system lifecycle
+
+Implement current-host virtual printer lifecycle across platform executors, management, CLI, Tauri, Desktop, tests, and documentation.
