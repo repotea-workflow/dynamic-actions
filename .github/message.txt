@@ -1,1 +1,1 @@
-fix(platform): gate bluetooth auto selection by executable route
+style(platform): format Rust workspace
