@@ -1,1 +1,1 @@
-fix(ci): harden ztoms production image build
+fix(ci): defer uhub login until image sync
