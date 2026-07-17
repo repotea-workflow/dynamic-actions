@@ -1,1 +1,1 @@
-test(direct): satisfy strict clippy
+fix(platform): remove needless Bluetooth binding borrow
