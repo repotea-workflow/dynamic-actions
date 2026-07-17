@@ -1,0 +1,1 @@
+ci(ztoms): add omsk v3 deployment workflow
