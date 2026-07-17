@@ -1,1 +1,1 @@
-style(platform): format Rust workspace
+fix(platform): require physical Bluetooth targets
