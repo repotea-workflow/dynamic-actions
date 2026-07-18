@@ -1,1 +1,1 @@
-fix(macos): persist CUPS driver output history
+fix(macos): record CUPS artifacts before delivery
