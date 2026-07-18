@@ -1,1 +1,7 @@
-fix(virtual-printer): import workspace client type
+refactor(modules): split virtual printer boundaries (#203)
+
+* refactor(modules): split virtual printer boundaries
+
+* fix(virtual-printer): restore split test helpers
+
+* fix(virtual-printer): import workspace client type
