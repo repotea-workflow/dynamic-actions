@@ -1,1 +1,1 @@
-fix(macos): harden virtual printer output routes
+fix(linux-cups): add receipt-owned loopback ipp sink
