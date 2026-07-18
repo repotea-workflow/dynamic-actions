@@ -1,1 +1,1 @@
-Keep virtual printers manageable after reload
+docs: assess virtual printer driver output
