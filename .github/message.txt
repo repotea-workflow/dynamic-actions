@@ -1,1 +1,1 @@
-fix(linux-cups): query native job metadata from queue
+fix(linux-cups): recover stale artifact history state
