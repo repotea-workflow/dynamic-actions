@@ -1,1 +1,1 @@
-fix(linux-cups): clean staged smoke input after filter
+fix(macos-cups): isolate filter worker storage
