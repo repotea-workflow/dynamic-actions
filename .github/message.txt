@@ -1,9 +1,1 @@
-feat(virtual-printer): add bounded TSPL PNG preview (#198)
-
-* feat(virtual-printer): add bounded TSPL PNG preview
-
-* fix(virtual-printer-preview): harden TSPL PNG parsing
-
-* fix(virtual-printer-preview): parse TSPL SIZE as dots
-
-* fix(virtual-printer-preview): terminate TSPL PNG at PRINT
+fix(virtual-printer): harden durable job recovery
