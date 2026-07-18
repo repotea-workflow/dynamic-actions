@@ -1,1 +1,1 @@
-feat(linux): persist virtual driver output routes
+fix(linux): forward virtual filter output
