@@ -1,1 +1,1 @@
-feat(core): add shared driver execution service
+feat(macos): deliver virtual jobs through native receivers
