@@ -1,1 +1,1 @@
-docs(virtual-printer): define driver output plan (#196)
+feat(virtual-printer): add durable driver output sink
