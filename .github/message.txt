@@ -1,1 +1,1 @@
-fix(windows): persist virtual raw artifacts
+fix(macos): accept native virtual printer output
