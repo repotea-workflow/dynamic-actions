@@ -1,1 +1,1 @@
-Improve virtual printer host registration
+Avoid capture wait during virtual printer install
