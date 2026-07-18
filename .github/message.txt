@@ -1,1 +1,1 @@
-refactor(linux-cups): isolate final command framing
+fix(macos-cups): secure worker runtime traversal
