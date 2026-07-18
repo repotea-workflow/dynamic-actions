@@ -1,1 +1,1 @@
-fix(linux-cups): bind virtual queues to filter
+fix(macos): harden virtual printer output routes
