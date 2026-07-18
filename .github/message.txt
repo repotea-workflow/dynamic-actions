@@ -1,1 +1,1 @@
-feat(macos): persist CUPS route host with launchd
+test(macos): cover launchd route host recovery
