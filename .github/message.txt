@@ -1,1 +1,1 @@
-feat(macos): manage AirPrint receiver output host
+fix(linux): complete virtual driver output delivery
