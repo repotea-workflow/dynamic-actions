@@ -1,1 +1,1 @@
-test(windows): avoid panics in output root test
+feat(macos): persist CUPS route host with launchd
