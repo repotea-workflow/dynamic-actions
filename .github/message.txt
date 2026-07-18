@@ -1,1 +1,1 @@
-fix(macos-cups): keep public history reads read-only
+fix(macos-cups): secure public artifact projection
