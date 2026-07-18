@@ -1,1 +1,1 @@
-fix(virtual-printer): harden durable job recovery
+fix(virtual-printer): project safe manifest fields
