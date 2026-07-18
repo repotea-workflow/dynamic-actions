@@ -1,1 +1,1 @@
-fix(linux-cups): recover uninitialized history locks
+fix(linux-cups): serialize history lock recovery
