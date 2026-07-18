@@ -1,1 +1,1 @@
-refactor(modules): split virtual printer boundaries
+fix(virtual-printer): restore split test helpers
