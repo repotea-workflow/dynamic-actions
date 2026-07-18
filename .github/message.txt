@@ -1,1 +1,1 @@
-fix(windows): secure virtual driver artifacts
+fix(windows): retain virtual raw service until cleanup
