@@ -1,1 +1,1 @@
-fix(windows): route virtual raw test prints through spooler
+fix(macos): recover CUPS job history routes
