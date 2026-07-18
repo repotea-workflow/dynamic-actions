@@ -1,1 +1,1 @@
-fix(macos): persist virtual driver output failures
+feat(core): add shared driver execution service
