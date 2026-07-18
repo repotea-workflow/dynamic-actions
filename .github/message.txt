@@ -1,1 +1,1 @@
-chore(deps): update nib Rust SDK
+chore(deps): update nib Rust SDK (#195)
