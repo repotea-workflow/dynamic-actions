@@ -1,1 +1,1 @@
-fix(virtual-printer-preview): harden TSPL PNG parsing
+fix(virtual-printer-preview): parse TSPL SIZE as dots
