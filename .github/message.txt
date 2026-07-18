@@ -1,5 +1,1 @@
-feat(core): add shared driver execution service (#200)
-
-* feat(core): add shared driver execution service
-
-* fix(core): finalize driver output jobs
+fix(macos): preserve shared job finalization
