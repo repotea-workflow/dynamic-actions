@@ -1,1 +1,1 @@
-fix(platform): preserve virtual printer route unavailable errors
+fix(platform): classify virtual printer route pairs
