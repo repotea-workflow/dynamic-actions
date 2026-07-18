@@ -1,1 +1,1 @@
-fix(windows): bound virtual raw host and secure child creation
+fix(windows): authorize native virtual raw intake
