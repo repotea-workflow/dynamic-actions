@@ -1,1 +1,1 @@
-fix(virtual-printer): harden driver output persistence
+fix(virtual-printer-preview): harden TSPL PNG parsing
