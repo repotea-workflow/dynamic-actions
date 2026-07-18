@@ -1,1 +1,1 @@
-feat(windows): secure virtual raw output artifacts
+feat(macos): manage AirPrint receiver output host
