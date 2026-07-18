@@ -1,1 +1,1 @@
-feat(windows): add persistent virtual raw service host
+fix(windows): remove owned virtual host configs
