@@ -1,1 +1,1 @@
-feat(virtual-printer): add bounded TSPL PNG preview
+fix(virtual-printer): harden driver output persistence
