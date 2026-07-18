@@ -1,1 +1,1 @@
-fix(macos-cups): isolate filter worker storage
+fix(linux-cups): persist final virtual printer outputs
