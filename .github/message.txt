@@ -1,17 +1,1 @@
-fix(platform): gate Bluetooth auto selection by executable route (#194)
-
-* fix(platform): gate bluetooth auto selection by executable route
-
-* style(platform): format Rust workspace
-
-* fix(platform): require physical Bluetooth targets
-
-* refactor(platform): split Bluetooth provisioning helpers
-
-* test(direct): satisfy strict clippy
-
-* fix(platform): remove needless Bluetooth binding borrow
-
-* test(platform): satisfy core strict clippy
-
-* fix(platform): clarify Bluetooth fallback selection
+Improve virtual printer host registration
