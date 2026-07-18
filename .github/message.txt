@@ -1,1 +1,1 @@
-feat(linux): dispatch printer application virtual routes
+fix(windows): bind virtual driver artifacts to service identity
