@@ -1,1 +1,1 @@
-fix(virtual-printer): close driver output review gaps
+fix(virtual-printer-preview): terminate TSPL PNG at PRINT
