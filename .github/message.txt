@@ -1,1 +1,1 @@
-style(macos-cups): format driver output test
+feat(linux-cups): accept PDF through CUPS raster chain
