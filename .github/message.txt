@@ -1,1 +1,1 @@
-fix(linux): harden virtual driver output routes
+feat(macos): dispatch AirPrint virtual printers
