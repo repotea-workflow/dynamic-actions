@@ -1,1 +1,1 @@
-docs(virtual-printer): define driver output plan
+docs(virtual-printer): define driver output plan (#196)
