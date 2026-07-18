@@ -1,1 +1,1 @@
-fix(linux): forward virtual filter output
+feat(windows): secure virtual raw output artifacts
