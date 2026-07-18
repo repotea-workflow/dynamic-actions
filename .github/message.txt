@@ -1,1 +1,1 @@
-Avoid capture wait during virtual printer install
+chore(deps): update nib Rust SDK
