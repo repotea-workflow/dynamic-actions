@@ -1,1 +1,1 @@
-feat(macos): deliver virtual jobs through native receivers
+fix(core): finalize driver output jobs
