@@ -1,1 +1,1 @@
-fix(macos-cups): recover stale artifact registry locks
+fix(macos-cups): claim stale registry locks
