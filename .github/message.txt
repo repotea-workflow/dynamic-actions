@@ -1,1 +1,1 @@
-feat(linux): add persistent ipp host contract
+fix(linux-cups): use receipt-owned ipp host
