@@ -1,1 +1,7 @@
-fix(platform): check selected virtual printer backend
+fix(platform): preserve virtual printer route unavailable errors (#204)
+
+* fix(platform): preserve virtual printer route unavailable errors
+
+* fix(platform): classify virtual printer route pairs
+
+* fix(platform): check selected virtual printer backend
