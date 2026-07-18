@@ -1,1 +1,13 @@
-fix(virtual-printer): recover staged manifests safely
+Add durable virtual driver output sink (#197)
+
+* feat(virtual-printer): add durable driver output sink
+
+* fix(virtual-printer): harden driver output persistence
+
+* fix(virtual-printer): close driver output review gaps
+
+* fix(virtual-printer): harden durable job recovery
+
+* fix(virtual-printer): project safe manifest fields
+
+* fix(virtual-printer): recover staged manifests safely
