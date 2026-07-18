@@ -1,1 +1,1 @@
-fix(linux): complete virtual driver output delivery
+feat(windows): add persistent virtual raw service host
