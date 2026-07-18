@@ -1,1 +1,1 @@
-feat(macos): dispatch AirPrint virtual printers
+fix(linux-cups): retain failed worker artifacts
