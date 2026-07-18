@@ -1,1 +1,1 @@
-feat(macos): route virtual jobs through driver output
+fix(macos): persist virtual driver output failures
