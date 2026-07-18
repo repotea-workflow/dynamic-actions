@@ -1,1 +1,1 @@
-fix(linux-cups): persist native virtual job identity
+fix(macos-cups): recover stale artifact registry locks
