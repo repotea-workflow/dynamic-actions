@@ -1,1 +1,1 @@
-fix(linux-cups): persist final virtual printer outputs
+refactor(linux-cups): isolate final command framing
