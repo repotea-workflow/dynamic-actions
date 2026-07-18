@@ -1,1 +1,1 @@
-fix(linux-ipp): persist final delivery per CUPS job
+fix(macos-cups): project worker history for management
