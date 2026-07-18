@@ -1,1 +1,1 @@
-fix(linux-cups): use receipt-owned ipp host
+fix(linux-printer-application): restore pappl unit boundary
