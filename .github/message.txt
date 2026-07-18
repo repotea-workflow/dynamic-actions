@@ -1,1 +1,1 @@
-fix(macos): reconcile managed AirPrint receiver
+fix(windows): harden virtual raw host lifecycle
