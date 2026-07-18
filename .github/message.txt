@@ -1,1 +1,1 @@
-fix(macos): persist AirPrint DNS-SD ownership
+fix(macos): reconcile managed AirPrint receiver
