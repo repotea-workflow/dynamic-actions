@@ -1,1 +1,1 @@
-fix(macos-cups): project worker history for management
+fix(macos-cups): harden public history projection
