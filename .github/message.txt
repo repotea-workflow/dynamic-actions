@@ -1,1 +1,1 @@
-Keep stale virtual printers manageable
+Keep virtual printers manageable after reload
