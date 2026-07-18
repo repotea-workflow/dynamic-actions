@@ -1,1 +1,1 @@
-feat(virtual-printer): add durable driver output sink
+feat(virtual-printer): add bounded TSPL PNG preview
