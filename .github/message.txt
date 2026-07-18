@@ -1,1 +1,1 @@
-fix(linux-printer-application): restore pappl unit boundary
+fix(macos-cups): harden route output delivery
