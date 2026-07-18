@@ -1,1 +1,1 @@
-fix(macos): surface durable AirPrint job history
+feat(linux): dispatch printer application virtual routes
