@@ -1,1 +1,1 @@
-chore(deps): update nib Rust SDK (#195)
+Keep stale virtual printers manageable
