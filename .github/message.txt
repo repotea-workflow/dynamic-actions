@@ -1,1 +1,1 @@
-fix(virtual-printer): restore split test helpers
+fix(virtual-printer): import workspace client type
