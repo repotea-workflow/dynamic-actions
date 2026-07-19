@@ -1,1 +1,1 @@
-ci(pxlab): delegate validation to dynamic actions (#5)
+chore(just): add compile checks
