@@ -10,8 +10,18 @@ permissions:
 
 jobs:
   check-linux:
-    name: Check Linux
+    name: Check Linux (${{ matrix.name }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Dart
+            command: check-dart
+          - name: Java
+            command: check-java
+          - name: TypeScript
+            command: check-ts
     steps:
       - uses: actions/checkout@v6
       - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
@@ -19,24 +29,33 @@ jobs:
           repository: boxliy/pxlab
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
-      - uses: actions/setup-java@v5
+      - if: matrix.name == 'Dart'
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - if: matrix.name == 'Java'
+        uses: actions/setup-java@v5
         with:
           distribution: temurin
           java-version: "17"
-      - uses: actions/setup-node@v5
+      - if: matrix.name == 'TypeScript'
+        uses: actions/setup-node@v5
         with:
           node-version: "22"
-      - uses: dart-lang/setup-dart@v1
-        with:
-          sdk: stable
       - uses: extractions/setup-just@v4
-      - run: just check-dart
-      - run: just check-java
-      - run: just check-ts
+      - run: just ${{ matrix.command }}
 
   check-macos:
-    name: Check macOS
+    name: Check macOS (${{ matrix.name }})
     runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: Swift
+            command: check-swift
+          - name: Objective-C
+            command: check-objc
     steps:
       - uses: actions/checkout@v6
       - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
@@ -45,5 +64,4 @@ jobs:
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
       - uses: extractions/setup-just@v4
-      - run: just check-swift
-      - run: just check-objc
+      - run: just ${{ matrix.command }}

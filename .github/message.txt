@@ -1,1 +1,1 @@
-ci: upgrade setup-just action
+ci: run language checks in parallel
