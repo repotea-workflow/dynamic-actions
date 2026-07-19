@@ -1,1 +1,1 @@
-ci: install just on dynamic runners
+fix(swift): compile image pipeline on macos
