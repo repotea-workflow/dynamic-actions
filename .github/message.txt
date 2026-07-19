@@ -1,1 +1,8 @@
+test(rust): expand printer bitmap parity fixtures (#14)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-107
+  pr: https://github.com/boxliy/pxlab/pull/14
+  merge_method: squash
+  carrier: github:boxliy/pxlab#14
