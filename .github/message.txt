@@ -1,1 +1,1 @@
-ci: consolidate dynamic checks
+ci: install just on dynamic runners
