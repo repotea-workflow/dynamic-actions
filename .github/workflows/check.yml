@@ -20,6 +20,8 @@ jobs:
             command: check-dart
           - name: Java
             command: check-java
+          - name: Rust
+            command: check-rust
           - name: TypeScript
             command: check-ts
     steps:
@@ -38,6 +40,10 @@ jobs:
         with:
           distribution: temurin
           java-version: "17"
+      - if: matrix.name == 'Rust'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.88.0"
       - if: matrix.name == 'TypeScript'
         uses: actions/setup-node@v5
         with:
