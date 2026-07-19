@@ -1,0 +1,14 @@
+name: "[pxlab] Production"
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    uses: ./.github/workflows/staging.yml
+    secrets: inherit

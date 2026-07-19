@@ -1,0 +1,78 @@
+name: "[pxlab] Staging"
+
+on:
+  push:
+    branches:
+      - "**"
+  workflow_call:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    name: Validate pxlab
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/pxlab
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - name: Dart
+        working-directory: dart/pxlab_image
+        run: dart pub get && dart analyze . && dart test
+      - name: Java
+        working-directory: java
+        run: mvn clean verify
+      - name: TypeScript
+        working-directory: ts
+        run: corepack enable pnpm && pnpm install && pnpm run build && pnpm run test
+      - name: Swift
+        run: >-
+          docker run --rm -v "$PWD":/workspace -w /workspace/swift swift:6.0
+          bash -lc 'apt-get update -qq && apt-get install -y -qq libjpeg-dev >/dev/null
+          && swift run --scratch-path /tmp/pxlab-swift PxlabImageTest'
+
+  check-objc:
+    name: Check pxlab-objc
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/pxlab
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+      - name: Build and run Objective-C tests on iOS Simulator
+        working-directory: objc/pxlab-image
+        run: |
+          sdk="$(xcrun --sdk iphonesimulator --show-sdk-path)"
+          app="/tmp/PxlabObjcTest.app"
+          rm -rf "$app"
+          mkdir -p "$app"
+          plutil -create xml1 "$app/Info.plist"
+          plutil -insert CFBundleIdentifier -string com.boxliy.pxlab.objc-test "$app/Info.plist"
+          plutil -insert CFBundleExecutable -string PxlabObjcTest "$app/Info.plist"
+          plutil -insert CFBundlePackageType -string APPL "$app/Info.plist"
+          xcrun --sdk iphonesimulator clang -fobjc-arc \
+          -target arm64-apple-ios17.0-simulator -isysroot "$sdk" \
+          -framework Foundation -framework UIKit -framework CoreGraphics -framework ImageIO -lz \
+          PXPreparedBitmap.m PXPrinterBitmaps.m PXImagePipeline.m test/PXPrinterBitmapsTest.m \
+          -o "$app/PxlabObjcTest"
+          device="$(xcrun simctl list devices available | awk -F '[()]' '/iPhone/{print $2; exit}')"
+          xcrun simctl boot "$device" || true
+          xcrun simctl bootstatus "$device" -b
+          xcrun simctl install "$device" "$app"
+          xcrun simctl launch --console "$device" com.boxliy.pxlab.objc-test
