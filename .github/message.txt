@@ -1,1 +1,8 @@
+test(rust): expand dithering parity fixtures (#12)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-105
+  pr: https://github.com/boxliy/pxlab/pull/12
+  merge_method: squash
+  carrier: github:boxliy/pxlab#12
