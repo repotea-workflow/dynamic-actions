@@ -29,7 +29,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
         with:
           sdk: stable
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - run: just check-dart
       - run: just check-java
       - run: just check-ts
@@ -44,6 +44,6 @@ jobs:
           repository: boxliy/pxlab
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
-      - uses: extractions/setup-just@v3
+      - uses: extractions/setup-just@v4
       - run: just check-swift
       - run: just check-objc

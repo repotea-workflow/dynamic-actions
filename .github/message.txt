@@ -1,1 +1,1 @@
-test(swift): use canonical zlib fixture
+ci: upgrade setup-just action
