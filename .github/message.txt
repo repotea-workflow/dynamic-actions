@@ -1,8 +1,1 @@
-feat(rust): scaffold image crate and CI gate (#7)
 
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-100
-  pr: https://github.com/boxliy/pxlab/pull/7
-  merge_method: squash
-  carrier: github:boxliy/pxlab#7
