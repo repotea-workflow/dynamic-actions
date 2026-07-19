@@ -1,1 +1,1 @@
-chore(just): add compile checks
+ci: consolidate dynamic checks

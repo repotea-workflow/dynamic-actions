@@ -1,0 +1,47 @@
+name: "[pxlab] Check"
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  check-linux:
+    name: Check Linux
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/pxlab
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+      - uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+      - uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+      - run: just check-dart
+      - run: just check-java
+      - run: just check-ts
+
+  check-macos:
+    name: Check macOS
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/pxlab
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+      - run: just check-swift
+      - run: just check-objc
