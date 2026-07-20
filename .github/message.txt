@@ -1,1 +1,8 @@
+chore(rust): synchronize binary resize repair (#13)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-104
+  pr: https://github.com/boxliy/pxlab/pull/13
+  merge_method: squash
+  carrier: github:boxliy/pxlab#13
