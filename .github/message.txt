@@ -1,8 +1,1 @@
-fix(rust): enforce random dithering range invariant (#17)
 
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-110
-  pr: https://github.com/boxliy/pxlab/pull/17
-  merge_method: squash
-  carrier: github:boxliy/pxlab#17
