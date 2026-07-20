@@ -1,1 +1,1 @@
-feat(virtual-printer): discover finalized job artifacts
+feat(linux-cups): project finalized job artifacts
