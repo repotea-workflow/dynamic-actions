@@ -1,1 +1,1 @@
-feat(virtual-printer): extract TSPL bitmap previews
+feat(virtual-printer): discover finalized job artifacts
