@@ -1,1 +1,1 @@
-feat(omsk-web): add legacy fallback actions
+docs(omsk): record v3 frontend cutover
