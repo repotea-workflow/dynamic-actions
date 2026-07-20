@@ -1,8 +1,1 @@
-fix(rust): widen watermark placement arithmetic (#1)
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-114
-  pr: https://github.com/boxliy/pxlab/pull/1
-  merge_method: squash
-  carrier: github:boxliy/pxlab#1
+feat(rust): implement accelerated resize modes

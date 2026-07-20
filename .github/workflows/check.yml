@@ -65,7 +65,9 @@ jobs:
       - uses: EmbarkStudios/cargo-deny-action@v2
         with:
           command: check
-          arguments: licenses --manifest-path rust/pxlab-image/Cargo.toml
+          arguments: --all-features
+          command-arguments: licenses
+          manifest-path: rust/pxlab-image/Cargo.toml
 
   check-macos:
     name: Check macOS (${{ matrix.name }})
