@@ -1,1 +1,1 @@
-docs(omsk): record v3 switch readiness
+docs(omsk): plan v3 frontend legacy fallback
