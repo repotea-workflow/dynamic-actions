@@ -1,1 +1,8 @@
+chore(rust): sync DAM-115 repair with main (#26)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-115
+  pr: https://github.com/boxliy/pxlab/pull/26
+  merge_method: squash
+  carrier: github:boxliy/pxlab#26
