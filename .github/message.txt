@@ -1,1 +1,1 @@
-docs(omsk): plan v3 frontend legacy fallback
+feat(omsk-web): add legacy fallback actions
