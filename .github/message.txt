@@ -1,1 +1,8 @@
+fix(rust): enforce safe resize output budgets (#18)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-111
+  pr: https://github.com/boxliy/pxlab/pull/18
+  merge_method: squash
+  carrier: github:boxliy/pxlab#18
