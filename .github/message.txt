@@ -1,8 +1,1 @@
-fix(rust): make binary resize transform fallible (#19)
 
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-112
-  pr: https://github.com/boxliy/pxlab/pull/19
-  merge_method: squash
-  carrier: github:boxliy/pxlab#19
