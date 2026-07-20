@@ -1,1 +1,1 @@
-add virtual printer artifact contract
+feat(virtual-printer): extract TSPL bitmap previews
