@@ -1,1 +1,1 @@
-test(omsk): satisfy boolean assertion lint
+docs(omsk): record v3 switch readiness
