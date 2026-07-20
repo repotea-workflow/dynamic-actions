@@ -1,8 +1,1 @@
-merge(rust): sync DAM-119 repair with main (#22)
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-119
-  pr: https://github.com/boxliy/pxlab/pull/22
-  merge_method: squash
-  carrier: github:boxliy/pxlab#22
+Initial commit
