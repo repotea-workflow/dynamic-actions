@@ -1,1 +1,1 @@
-fix(omsk-web): keep legacy overlays above tables
+fix(omsk-web): revalidate legacy entrypoints
