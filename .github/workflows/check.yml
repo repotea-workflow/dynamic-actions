@@ -22,6 +22,8 @@ jobs:
             command: check-java
           - name: Rust
             command: check-rust
+          - name: Rust release gate
+            command: check-rust-release
           - name: TypeScript
             command: check-ts
     steps:
@@ -31,7 +33,7 @@ jobs:
           repository: boxliy/pxlab
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
-      - if: matrix.name == 'Dart'
+      - if: matrix.name == 'Dart' || matrix.name == 'Rust release gate'
         uses: dart-lang/setup-dart@v1
         with:
           sdk: stable
@@ -44,12 +46,26 @@ jobs:
         uses: dtolnay/rust-toolchain@stable
         with:
           toolchain: "1.88.0"
+      - if: matrix.name == 'Rust release gate'
+        uses: dtolnay/rust-toolchain@stable
+        with:
+          toolchain: "1.88.0"
       - if: matrix.name == 'TypeScript'
         uses: actions/setup-node@v5
         with:
           node-version: "22"
       - uses: extractions/setup-just@v4
       - run: just ${{ matrix.command }}
+
+  rust-license-audit:
+    name: Rust license audit
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: EmbarkStudios/cargo-deny-action@v2
+        with:
+          command: check
+          arguments: licenses --manifest-path rust/pxlab-image/Cargo.toml
 
   check-macos:
     name: Check macOS (${{ matrix.name }})
