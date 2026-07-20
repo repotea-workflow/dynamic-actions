@@ -1,1 +1,8 @@
+fix(rust): account for recipe resize copies (#25)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-118
+  pr: https://github.com/boxliy/pxlab/pull/25
+  merge_method: squash
+  carrier: github:boxliy/pxlab#25
