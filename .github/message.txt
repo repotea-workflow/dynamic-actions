@@ -1,1 +1,8 @@
+fix(rust): preserve recipe resize defaults (#15)
 
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-108
+  pr: https://github.com/boxliy/pxlab/pull/15
+  merge_method: squash
+  carrier: github:boxliy/pxlab#15
