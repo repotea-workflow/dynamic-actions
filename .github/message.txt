@@ -1,1 +1,1 @@
-Initial commit
+add virtual printer artifact contract
