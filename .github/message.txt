@@ -1,1 +1,1 @@
-fix(omsk-web): render public product rows
+fix(omsk-web): normalize imported address details
