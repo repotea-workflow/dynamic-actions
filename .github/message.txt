@@ -1,1 +1,1 @@
-feat(platform): authorize exact virtual artifacts
+feat(platform): expose virtual artifact v2 APIs
