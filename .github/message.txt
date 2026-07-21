@@ -1,1 +1,1 @@
-fix(omsk-api): align HTTP shell with Java
+docs(omsk): record initial API parity checkpoints
