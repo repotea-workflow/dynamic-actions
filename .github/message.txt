@@ -1,1 +1,12 @@
-feat: CodeWork change
+feat: Publish CodeWork change (#208)
+
+codeon:
+  version: codeon/commit/v1
+  issue: default__ztoms:f39201ab-e0f6-4c1a-a5b9-6bb6ac45b5f8
+  pr: https://github.com/repotea-workspace/ztoms/pull/208
+  description: |
+    Redesigned ZTOMS outlet management as a responsive hierarchy-and-detail workspace while
+    preserving existing API contracts and form behavior. Added reliable browser regression
+    coverage for search, d...
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#208
