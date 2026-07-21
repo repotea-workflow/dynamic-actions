@@ -1,1 +1,1 @@
-test(omsk): enforce API parity progress tracking
+fix(omsk-api): align HTTP shell with Java
