@@ -1,1 +1,1 @@
-feat(macos): publish AirPrint virtual artifacts
+feat(windows): harden virtual artifact storage
