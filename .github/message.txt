@@ -1,1 +1,1 @@
-feat(macos-cups): project finalized job artifacts
+feat(macos): publish AirPrint virtual artifacts
