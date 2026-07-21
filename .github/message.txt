@@ -1,1 +1,1 @@
-feat(windows): add sealed artifact package transactions
+feat(windows): register finalized artifact packages
