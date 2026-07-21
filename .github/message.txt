@@ -1,1 +1,1 @@
-test(omsk): add Java Rust differential oracle harness
+test(omsk): enforce API parity progress tracking
