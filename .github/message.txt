@@ -1,1 +1,1 @@
-feat(linux-cups): project finalized job artifacts
+feat(macos-cups): project finalized job artifacts
