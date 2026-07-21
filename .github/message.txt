@@ -1,1 +1,1 @@
-feat(windows): expose virtual artifact history
+feat(platform): authorize exact virtual artifacts
