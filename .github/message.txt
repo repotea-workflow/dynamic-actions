@@ -1,1 +1,1 @@
-fix(omsk-worker): match active Java task behavior
+docs(omsk): add Java Rust API parity audit
