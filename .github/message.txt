@@ -1,1 +1,1 @@
-feat(windows): harden virtual artifact storage
+feat(windows): add sealed artifact package transactions
