@@ -1,1 +1,1 @@
-fix(omsk-web): paint live import progress
+test(omsk-web): cover streamed import lifecycle
