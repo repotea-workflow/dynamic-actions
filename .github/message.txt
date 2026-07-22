@@ -1,1 +1,1 @@
-fix(omsk): align immediate id generation
+test(omsk): model missing pagination contracts
