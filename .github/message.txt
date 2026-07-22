@@ -1,1 +1,1 @@
-feat(ipp): bound native request concurrency
+fix(command): align protocol contracts and goldens
