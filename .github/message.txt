@@ -1,1 +1,1 @@
-docs(omsk): claim Product validation oracle
+test(omsk): add Product validation oracle
