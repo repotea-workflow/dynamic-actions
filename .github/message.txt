@@ -1,1 +1,1 @@
-test(omsk): add framework differential oracle
+docs(omsk): make API parity completion exhaustive
