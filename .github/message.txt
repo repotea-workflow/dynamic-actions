@@ -1,1 +1,1 @@
-fix(airprint): harden IPP job acceptance
+fix(linux): recover sequence initialization
