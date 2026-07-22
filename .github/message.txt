@@ -1,1 +1,1 @@
-test(omsk): add live pagination differential
+docs(omsk): authorize id test support
