@@ -1,1 +1,1 @@
-codex/airprint-ipp-codec
+codex/cli-artifact-output
