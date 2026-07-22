@@ -1,1 +1,1 @@
-fix(omsk-api): align PrintTpl query binding
+docs(omsk): record clean framework parity pass
