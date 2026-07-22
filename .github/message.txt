@@ -1,1 +1,1 @@
-feat(command): add builtin CPCL and ESC-POS providers
+feat(cups): decode bounded raster v2 pages
