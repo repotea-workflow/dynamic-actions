@@ -1,1 +1,1 @@
-docs(omsk): correct id rollout scope
+docs(omsk): authorize id rollout support
