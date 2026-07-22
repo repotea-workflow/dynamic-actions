@@ -1,1 +1,1 @@
-docs(omsk): expand warehouse transaction evidence
+test(omsk): classify pagination oracle failures
