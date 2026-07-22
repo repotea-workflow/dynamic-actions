@@ -1,1 +1,1 @@
-fix(virtual-printer): enforce preview protocol gates
+fix(ipp): align evidence with TSPL wire contract

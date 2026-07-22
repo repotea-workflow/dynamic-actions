@@ -1,1 +1,1 @@
-codex/protocol-preview
+codex/authorized-integration
