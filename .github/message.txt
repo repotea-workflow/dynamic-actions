@@ -1,1 +1,3 @@
-feat(platform): expose virtual artifact v2 APIs
+feat(platform): harden virtual printer retirement
+
+Add authenticated retirement proofs and durable reconciliation across the shared facade, CLI, and desktop surfaces. Persist and recover Linux and macOS route authority, artifact projection, and bounded retirement sweeps, with shared Windows SID/DACL prerequisites.
