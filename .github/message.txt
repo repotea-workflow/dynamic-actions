@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/codex/windows-registry-determinism' into codex/authorized-integration
+Merge remote-tracking branch 'origin/codex/cli-artifact-output' into codex/authorized-integration
