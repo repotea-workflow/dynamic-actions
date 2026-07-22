@@ -1,1 +1,1 @@
-codex/authorized-integration
+codex/artifact-pagination-contract

@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/codex/cli-artifact-output' into codex/authorized-integration
+feat(platform): define authenticated artifact pagination
