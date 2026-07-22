@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/codex/management-artifact-pagination-v3' into codex/authorized-integration
+feat(desktop): paginate artifact history snapshots
