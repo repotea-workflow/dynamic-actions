@@ -1,1 +1,1 @@
-feat(platform): define authenticated artifact pagination
+feat(linux): paginate virtual printer artifacts
