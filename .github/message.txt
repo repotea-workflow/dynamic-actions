@@ -1,1 +1,1 @@
-fix(windows): require explicit runtime profile choice
+Merge remote-tracking branch 'origin/codex/management-artifact-pagination-v3' into codex/authorized-integration

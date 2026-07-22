@@ -1,1 +1,1 @@
-codex/windows-runtime-profile-selection
+codex/authorized-integration
