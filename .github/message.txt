@@ -1,1 +1,1 @@
-docs(omsk): claim parity foundation batches
+docs(omsk): hand off oracle corpus to B05C
