@@ -1,1 +1,1 @@
-feat(desktop): preview virtual printer image artifacts
+fix(ipp): preserve extended value tags
