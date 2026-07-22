@@ -1,1 +1,1 @@
-Preserve artifact snapshots and cursor errors
+fix(windows): require explicit runtime profile choice
