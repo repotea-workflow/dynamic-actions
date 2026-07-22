@@ -1,1 +1,1 @@
-Fix merged runtime profile fixtures
+fix(desktop): bound artifact pagination lifecycle
