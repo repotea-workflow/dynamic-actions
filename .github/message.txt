@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/codex/linux-pa-artifact-pagination-v3' into codex/authorized-integration
+feat(profile): add runtime builtin catalog
