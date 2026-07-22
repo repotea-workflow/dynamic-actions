@@ -1,1 +1,1 @@
-fix(airprint): close final IPP rollback gaps
+Merge remote-tracking branch 'origin/codex/macos-cups-artifact-pagination-v3' into codex/authorized-integration
