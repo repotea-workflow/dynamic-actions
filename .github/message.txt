@@ -1,1 +1,1 @@
-feat(ipp): add bounded request wire codec
+feat(desktop): preview virtual printer image artifacts
