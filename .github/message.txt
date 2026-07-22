@@ -1,1 +1,1 @@
-docs(omsk): make API parity completion exhaustive
+fix(omsk-auth): align Java session and JWT behavior
