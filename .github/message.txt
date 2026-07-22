@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'refs/remotes/origin/codex/desktop-artifact-autopagination-v3' into codex/authorized-integration
+fix(windows): bind IPP spike evidence to receiver run
