@@ -1,1 +1,1 @@
-docs(omsk): claim body limit oracle
+test(omsk): add HTTP shell differential oracle
