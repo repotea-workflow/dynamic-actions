@@ -1,1 +1,1 @@
-codex/windows-registry-determinism
+codex/airprint-ipp-codec
