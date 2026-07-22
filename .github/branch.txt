@@ -1,1 +1,1 @@
-codex/cups-raster-limits
+codex/macos-registry-determinism
