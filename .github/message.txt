@@ -1,3 +1,1 @@
-feat(platform): harden virtual printer retirement
-
-Add authenticated retirement proofs and durable reconciliation across the shared facade, CLI, and desktop surfaces. Persist and recover Linux and macOS route authority, artifact projection, and bounded retirement sweeps, with shared Windows SID/DACL prerequisites.
+feat(command): add builtin CPCL and ESC-POS providers
