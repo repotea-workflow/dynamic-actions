@@ -1,1 +1,1 @@
-feat(windows): complete virtual printer lifecycle
+feat(ipp): bound native request concurrency
