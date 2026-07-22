@@ -1,1 +1,1 @@
-docs(omsk): expand pagination parity ownership
+docs(omsk): authorize pagination differential evidence
