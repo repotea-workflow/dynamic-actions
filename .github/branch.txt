@@ -1,1 +1,1 @@
-codex/macos-registry-determinism
+codex/airprint-ipp-codec
