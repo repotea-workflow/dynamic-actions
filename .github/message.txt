@@ -1,1 +1,1 @@
-test(omsk): add Node database differential pilot
+docs(omsk): expand pagination parity ownership
