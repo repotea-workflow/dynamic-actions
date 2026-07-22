@@ -1,1 +1,1 @@
-docs(omsk): record framework convergence evidence
+test(omsk): normalize dynamic PrintTpl traces
