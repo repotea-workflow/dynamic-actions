@@ -1,1 +1,1 @@
-feat(platform): define virtual printer profile binding identity
+fix(platform): keep profile binding wire unactivated
