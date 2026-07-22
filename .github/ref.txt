@@ -1,1 +1,1 @@
-codex/cli-artifact-output
+codex/authorized-integration
