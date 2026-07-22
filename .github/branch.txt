@@ -1,1 +1,1 @@
-codex/management-artifact-pagination-v3
+codex/authorized-integration
