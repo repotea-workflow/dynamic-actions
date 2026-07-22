@@ -1,1 +1,1 @@
-fix(airprint): harden IPP persistence and shutdown
+fix(macos): recover artifact sequence transactions

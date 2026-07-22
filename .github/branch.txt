@@ -1,1 +1,1 @@
-codex/airprint-ipp-endpoint-v1
+codex/macos-cups-artifact-pagination-v3
