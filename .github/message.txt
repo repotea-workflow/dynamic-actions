@@ -1,1 +1,1 @@
-test(omsk): normalize dynamic PrintTpl traces
+fix(omsk-api): align Spring HTML error responses
