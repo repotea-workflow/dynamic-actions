@@ -1,1 +1,1 @@
-fix(ipp): align evidence with TSPL wire contract
+feat(platform): define virtual printer profile binding identity
