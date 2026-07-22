@@ -1,1 +1,1 @@
-fix(desktop): reload artifacts after test print
+test(windows): serialize forked lock fixtures

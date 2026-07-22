@@ -1,1 +1,1 @@
-codex/desktop-v2-image-artifacts
+codex/windows-registry-determinism
