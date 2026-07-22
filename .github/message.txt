@@ -1,1 +1,1 @@
-fix(linux): parse printer application CUPS raster
+fix(platform): make legacy profile claims removal only
