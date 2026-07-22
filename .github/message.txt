@@ -1,1 +1,1 @@
-feat(linux): paginate virtual printer artifacts
+feat(airprint): implement bounded IPP endpoint

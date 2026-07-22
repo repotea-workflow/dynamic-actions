@@ -1,1 +1,1 @@
-codex/linux-pa-artifact-pagination-v3
+codex/airprint-ipp-endpoint-v1
