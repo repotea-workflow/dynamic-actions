@@ -1,1 +1,1 @@
-feat(cups): decode bounded raster v2 pages
+feat(virtual-printer): preview CPCL and ESC bitmaps
