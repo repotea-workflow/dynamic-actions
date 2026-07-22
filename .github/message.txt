@@ -1,1 +1,1 @@
-feat(desktop): paginate artifact history snapshots
+feat(windows): add bounded IPP host capture spike
