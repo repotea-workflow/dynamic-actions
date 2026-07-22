@@ -1,1 +1,1 @@
-fix(macos): recover artifact sequence transactions
+Merge remote-tracking branch 'origin/codex/runtime-builtin-profile-catalog' into codex/authorized-integration
