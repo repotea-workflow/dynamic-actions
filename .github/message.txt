@@ -1,1 +1,1 @@
-docs(omsk): record initial API parity checkpoints
+test(omsk): add framework differential oracle
