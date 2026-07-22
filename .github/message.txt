@@ -1,1 +1,1 @@
-feat(linux): paginate CUPS artifacts durably
+feat(macos): paginate AirPrint artifacts

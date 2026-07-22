@@ -1,1 +1,1 @@
-codex/linux-cups-artifact-pagination-v3
+codex/macos-airprint-artifact-pagination-v3
