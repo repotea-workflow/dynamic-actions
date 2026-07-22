@@ -1,1 +1,1 @@
-test(omsk): add Product validation oracle
+docs(omsk): claim body limit oracle
