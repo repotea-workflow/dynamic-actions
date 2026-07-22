@@ -1,1 +1,1 @@
-feat(macos): paginate CUPS artifacts
+fix(profile): close runtime catalog semantics
