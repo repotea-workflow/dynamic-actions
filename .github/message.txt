@@ -1,1 +1,1 @@
-docs(omsk): claim warehouse parity slices
+test(omsk): classify pagination log framing
