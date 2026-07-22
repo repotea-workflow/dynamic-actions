@@ -1,1 +1,1 @@
-codex/authorized-integration
+codex/airprint-ipp-endpoint-v1
