@@ -1,1 +1,1 @@
-feat(profile): add runtime builtin catalog
+fix(airprint): complete IPP review hardening
