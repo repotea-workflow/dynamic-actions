@@ -1,1 +1,1 @@
-test(omsk): preserve pagination failure evidence
+docs(omsk): claim warehouse parity slices
