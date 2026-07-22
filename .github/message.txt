@@ -1,1 +1,1 @@
-docs(omsk): hand off oracle corpus to B05C
+fix(compat): implement Java legacy ID generators
