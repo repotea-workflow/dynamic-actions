@@ -1,1 +1,1 @@
-test(omsk): model missing pagination contracts
+test(omsk): preserve pagination failure evidence
