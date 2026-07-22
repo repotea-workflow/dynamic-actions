@@ -1,1 +1,1 @@
-fix(command): align protocol contracts and goldens
+fix(virtual-printer): enforce preview protocol gates
