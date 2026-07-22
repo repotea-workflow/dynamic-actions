@@ -1,1 +1,1 @@
-fix(windows): require real GDI IPP spike evidence
+Add Linux PA runtime profile authority
