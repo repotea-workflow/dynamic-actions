@@ -1,1 +1,1 @@
-test(omsk): add Jackson binding oracle
+docs(omsk): expand warehouse transaction evidence
