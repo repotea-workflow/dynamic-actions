@@ -1,1 +1,1 @@
-Add AirPrint DNS-SD typed helper coverage
+Cover CUPS route delete authorization retry
