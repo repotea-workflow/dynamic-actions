@@ -1,5 +1,5 @@
-fix(omsk): align legacy ID families and call sites
+docs(omsk): finish canceled WeChat scope alignment
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-143
+  authority: DAM-145
