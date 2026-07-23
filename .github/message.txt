@@ -1,5 +1,1 @@
-docs(omsk): close framework oracle recovery evidence
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-137
+fix(omsk-web): resolve reported legacy workflow regressions
