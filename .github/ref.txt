@@ -1,1 +1,1 @@
-codex/linux-pa-package-lifecycle
+codex/authorized-integration
