@@ -1,1 +1,1 @@
-codex/linux-pa-runtime-profiles
+codex/linux-pa-profile-management-gate

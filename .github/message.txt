@@ -1,1 +1,1 @@
-Bind Linux PA startup to lease authority
+Gate Linux printer application runtime profiles
