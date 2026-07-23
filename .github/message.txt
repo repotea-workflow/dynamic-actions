@@ -1,1 +1,1 @@
-fix(macos-cups): require canonical route host config
+fix(airprint): close host transaction races
