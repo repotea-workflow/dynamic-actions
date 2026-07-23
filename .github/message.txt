@@ -1,1 +1,1 @@
-fix(macos): narrow code signing unsafe boundary
+feat(linux-pa): make dpkg own package lifecycle
