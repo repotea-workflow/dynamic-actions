@@ -1,1 +1,1 @@
-fix(macos-cups): make capture recovery replay-safe
+Secure macOS AirPrint host mutations
