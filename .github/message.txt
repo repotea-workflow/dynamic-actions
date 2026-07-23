@@ -1,1 +1,1 @@
-test(omsk): add body limit discovery oracle
+test(omsk): classify pagination connection probes
