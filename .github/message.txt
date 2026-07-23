@@ -1,1 +1,1 @@
-Harden macOS route recovery journals
+fix(macos-cups): harden capture publication recovery
