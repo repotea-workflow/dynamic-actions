@@ -1,1 +1,1 @@
-test(airprint): cover durable namespace recovery
+fix(macos-cups): bind captures to submitted jobs
