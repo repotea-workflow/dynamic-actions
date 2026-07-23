@@ -1,1 +1,1 @@
-Harden macOS CUPS launchd ownership gates
+fix(macos): close AirPrint host races
