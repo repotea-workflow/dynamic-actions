@@ -1,1 +1,1 @@
-fix(management): restore exact runtime authority
+fix(macos): make AirPrint launchctl host sendable
