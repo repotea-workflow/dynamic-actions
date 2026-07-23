@@ -1,1 +1,1 @@
-feat(rust): implement accelerated resize modes
+fix(rust): validate compressed bitmap previews
