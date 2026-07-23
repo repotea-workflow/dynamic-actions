@@ -1,1 +1,1 @@
-Add receipt-bound Linux CUPS runtime profiles
+fix(macos): deactivate legacy AirPrint routes
