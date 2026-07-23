@@ -1,1 +1,1 @@
-fix(airprint): require immutable executable authority
+fix(airprint): serialize host artifact transactions
