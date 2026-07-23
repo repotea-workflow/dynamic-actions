@@ -1,5 +1,5 @@
-fix(omsk): remove unauthorized public route aliases
+fix(omsk): clarify sanitized key evidence
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-154
+  authority: DAM-159
