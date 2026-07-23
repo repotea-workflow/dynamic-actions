@@ -1,3 +1,1 @@
-Merge pull request #1 from boxliy/codex/authorized-integration
-
-Integrate approved virtual printer pipeline
+fix(management): restore exact runtime authority
