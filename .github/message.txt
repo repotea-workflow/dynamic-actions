@@ -1,1 +1,1 @@
-Harden Linux CUPS runtime profile authority
+Fix macOS CUPS legacy uninstall recovery
