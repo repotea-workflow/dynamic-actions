@@ -1,1 +1,1 @@
-fix(omsk-web): resolve reported legacy workflow regressions (#213)
+fix(validation): stabilize parallel repository gates
