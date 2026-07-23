@@ -1,1 +1,1 @@
-Secure macOS AirPrint host mutations
+fix(macos-cups): commit capture identity before consumption
