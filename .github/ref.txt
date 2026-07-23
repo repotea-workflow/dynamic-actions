@@ -1,1 +1,1 @@
-codex/linux-pa-profile-management-gate
+codex/authorized-integration
