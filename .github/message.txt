@@ -1,1 +1,1 @@
-Prepare macOS CUPS typed helper route commands
+Add macOS CUPS typed helper execution adapter
