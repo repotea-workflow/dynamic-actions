@@ -1,1 +1,1 @@
-Require exact desktop runtime profiles
+fix(macos): pin AirPrint removal authority
