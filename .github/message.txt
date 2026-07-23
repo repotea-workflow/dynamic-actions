@@ -1,1 +1,1 @@
-Route macOS CUPS host install through typed helper
+Add typed helper removal for macOS CUPS host
