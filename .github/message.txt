@@ -1,1 +1,1 @@
-Require AirPrint receiver identity for health checks
+Record macOS package receipt owned paths
