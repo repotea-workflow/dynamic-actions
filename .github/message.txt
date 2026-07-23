@@ -1,1 +1,1 @@
-fix(macos): deactivate legacy AirPrint routes
+fix(macos): fail closed before AirPrint removal
