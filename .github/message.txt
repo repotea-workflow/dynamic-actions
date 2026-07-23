@@ -1,1 +1,1 @@
-Add typed CUPS route host helper command
+Pass CUPS route host config through helper
