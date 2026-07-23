@@ -1,1 +1,1 @@
-fix(management): harden runtime profile restore gates
+Harden macOS CUPS launchd ownership gates
