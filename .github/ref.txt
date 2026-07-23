@@ -1,1 +1,1 @@
-codex/linux-pa-real-host-e2e
+codex/macos-cups-runtime-profiles

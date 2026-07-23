@@ -1,1 +1,1 @@
-test(linux-pa): cover real-host raster artifact flow
+fix(macos-cups): require canonical route host config
