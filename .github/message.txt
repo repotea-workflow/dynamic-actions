@@ -1,1 +1,1 @@
-Merge commit '875d21618aad719d89b628573c39d72e6bf3ec9a' into codex/authorized-integration
+feat(macos): bind AirPrint runtime profiles
