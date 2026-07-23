@@ -1,8 +1,5 @@
-docs(omsk): finish canceled WeChat scope alignment (#215)
+fix(omsk): sync DAM-137 parity ledger with main
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-145
-  pr: https://github.com/repotea-workspace/ztoms/pull/215
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#215
+  authority: DAM-137
