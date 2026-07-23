@@ -1,1 +1,1 @@
-Pin macOS helper filesystem authority
+Recover partial Windows SCM service provisioning
