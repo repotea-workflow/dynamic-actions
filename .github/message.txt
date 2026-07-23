@@ -1,1 +1,1 @@
-Recover partial Windows SCM service provisioning
+Reject Windows TCP port continuity gaps during reconcile
