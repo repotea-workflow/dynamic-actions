@@ -1,1 +1,1 @@
-Reject Windows TCP port continuity gaps during reconcile
+Revalidate macOS route grants and locks
