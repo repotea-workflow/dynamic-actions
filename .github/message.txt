@@ -1,1 +1,1 @@
-Fail closed on Windows TCP port continuity gaps
+Pin macOS helper filesystem authority
