@@ -1,1 +1,1 @@
-fix(command): align protocol contracts and goldens
+Merge macOS privileged route security authority

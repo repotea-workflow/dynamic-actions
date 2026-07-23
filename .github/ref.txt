@@ -1,1 +1,1 @@
-codex/preview-integration
+codex/authorized-integration
