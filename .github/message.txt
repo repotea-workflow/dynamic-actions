@@ -1,1 +1,1 @@
-fix(macos-cups): journal capture publication
+Merge commit 'be7698d03754cd7d047ad555f68b9f942531ccc9' into codex/authorized-integration
