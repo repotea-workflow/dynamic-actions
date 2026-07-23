@@ -1,1 +1,1 @@
-codex/windows-main-dirty-checkpoint
+codex/authorized-integration
