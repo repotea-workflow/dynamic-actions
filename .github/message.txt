@@ -1,1 +1,1 @@
-Route AirPrint through generic macOS helper
+test(linux-cups): harden artifact and cleanup oracles

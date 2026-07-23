@@ -1,1 +1,1 @@
-codex/macos-airprint-runtime-profiles
+codex/linux-cups-runtime-profiles
