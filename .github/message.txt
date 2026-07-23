@@ -1,1 +1,1 @@
-fix(macos-cups): recover capture lifecycle after restart
+fix(macos-cups): pin route host artifact authority
