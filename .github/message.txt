@@ -1,1 +1,1 @@
-test(macos-cups): add independent artifact oracles
+Harden macOS route recovery journals
