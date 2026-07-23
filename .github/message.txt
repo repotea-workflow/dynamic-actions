@@ -1,1 +1,1 @@
-Record macOS package receipt owned paths
+Add typed CUPS route host helper command
