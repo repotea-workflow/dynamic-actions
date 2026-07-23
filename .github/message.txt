@@ -1,1 +1,1 @@
-Fix macOS CUPS PPD facade baseline
+Require AirPrint receiver identity for health checks
