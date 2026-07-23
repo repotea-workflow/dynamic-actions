@@ -1,5 +1,8 @@
-fix(omsk): sync DAM-137 parity ledger with main
+fix(omsk): sync DAM-137 parity ledger with main (#212)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-137
+  pr: https://github.com/repotea-workspace/ztoms/pull/212
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#212
