@@ -1,1 +1,1 @@
-feat(linux): produce printer application deb package
+Harden privileged helper socket publication
