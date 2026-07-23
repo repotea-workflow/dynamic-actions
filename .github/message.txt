@@ -1,1 +1,1 @@
-fix(macos-cups): pin route host artifact authority
+test(linux-pa): cover real-host raster artifact flow
