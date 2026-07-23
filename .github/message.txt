@@ -1,1 +1,1 @@
-Add typed helper removal for macOS CUPS host
+Route macOS CUPS unpublish through typed helper
