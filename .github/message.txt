@@ -1,1 +1,1 @@
-feat(linux-pa): make dpkg own package lifecycle
+wip: defer macos payload digest reads until admission
