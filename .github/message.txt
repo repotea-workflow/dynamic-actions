@@ -1,1 +1,1 @@
-fix(macos-cups): retain fd-bound deletion debt
+Harden privileged route writer boundary
