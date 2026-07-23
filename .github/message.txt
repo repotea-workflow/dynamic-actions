@@ -1,4 +1,4 @@
-merge(omsk): retain HTTP shell closure ancestry
+fix(omsk): harden framework oracle closure
 
 decodex:
   schema: decodex/commit/1
