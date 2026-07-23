@@ -1,1 +1,1 @@
-codex/macos-cups-runtime-profiles
+codex/management-runtime-profile-exact-gates

@@ -1,1 +1,1 @@
-Harden macOS CUPS launchd recovery
+fix(management): bind exact runtime authority
