@@ -1,1 +1,1 @@
-Bind macOS route admission to root grants
+Harden macOS helper connection admission
