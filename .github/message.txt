@@ -1,1 +1,1 @@
-test(linux-pa): harden real-host output oracles
+fix(macos-cups): publish one capture generation identity
