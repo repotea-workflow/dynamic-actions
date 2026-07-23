@@ -1,1 +1,1 @@
-fix(macos-cups): commit capture identity before consumption
+test(linux-pa): harden real-host output oracles
