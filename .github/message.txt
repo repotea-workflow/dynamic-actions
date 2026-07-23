@@ -1,1 +1,1 @@
-Revalidate macOS route grants and locks
+Test macOS post-lock authority transitions
