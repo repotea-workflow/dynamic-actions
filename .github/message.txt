@@ -1,1 +1,1 @@
-fix(macos-cups): close route host recovery gaps
+fix(macos-cups): make capture recovery replay-safe
