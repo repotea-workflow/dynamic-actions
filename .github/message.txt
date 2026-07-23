@@ -1,1 +1,1 @@
-Harden privileged route writer boundary
+feat(linux): add printer application package lifecycle
