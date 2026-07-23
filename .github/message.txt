@@ -1,1 +1,1 @@
-Bind macOS CUPS queues to runtime profiles
+Add receipt-bound Linux CUPS runtime profiles
