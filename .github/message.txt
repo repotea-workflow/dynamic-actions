@@ -1,5 +1,5 @@
-docs(omsk): finish canceled WeChat scope alignment
+docs(omsk): close DAM-143 parity evidence
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-145
+  authority: DAM-143
