@@ -1,1 +1,1 @@
-feat(management): enforce exact runtime profile routes
+Require exact desktop runtime profiles

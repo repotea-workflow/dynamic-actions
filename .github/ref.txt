@@ -1,1 +1,1 @@
-codex/management-runtime-profile-exact-gates
+codex/desktop-runtime-profile-exact-selector
