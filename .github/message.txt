@@ -1,5 +1,5 @@
-test(omsk): align prerequisite adversarial fixtures
+merge(omsk): retain HTTP shell closure ancestry
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-154
+  authority: DAM-137
