@@ -1,1 +1,3 @@
-Merge approved Linux PA package lifecycle
+Merge pull request #1 from boxliy/codex/authorized-integration
+
+Integrate approved virtual printer pipeline
