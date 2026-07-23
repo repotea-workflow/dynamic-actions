@@ -1,1 +1,1 @@
-Harden Windows virtual RAW lifecycle ownership
+Verify Windows virtual host ACL before SCM mutation
