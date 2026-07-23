@@ -1,1 +1,1 @@
-Harden macOS helper connection admission
+Harden Windows virtual RAW lifecycle ownership
