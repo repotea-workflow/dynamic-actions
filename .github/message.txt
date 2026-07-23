@@ -1,1 +1,1 @@
-Align macOS CUPS route host labels with typed helper
+Add macOS CUPS route host grant provisioning
