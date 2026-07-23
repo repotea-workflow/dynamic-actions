@@ -1,1 +1,1 @@
-Add generic macOS privileged route helper
+fix(macos-cups): revalidate recovered capture identity
