@@ -1,1 +1,1 @@
-wip: defer macos payload digest reads until admission
+fix(command): align protocol contracts and goldens
