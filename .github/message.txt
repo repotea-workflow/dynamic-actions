@@ -1,1 +1,1 @@
-fix(airprint): pin transaction generations
+fix(macos-cups): recover capture lifecycle after restart
