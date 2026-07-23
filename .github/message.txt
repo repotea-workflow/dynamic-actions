@@ -1,5 +1,5 @@
-fix(omsk-web): preserve Roman login handoff
+fix(omsk): align nullable JSON and exception responses
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-138
+  authority: DAM-139
