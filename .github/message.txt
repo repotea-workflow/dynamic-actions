@@ -1,1 +1,1 @@
-Test macOS post-lock authority transitions
+Anchor macOS route mutations to directory fds
