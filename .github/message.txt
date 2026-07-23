@@ -1,1 +1,1 @@
-Route macOS CUPS unpublish through typed helper
+Add AirPrint DNS-SD typed helper coverage
