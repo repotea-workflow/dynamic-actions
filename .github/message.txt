@@ -1,1 +1,3 @@
-fix(desktop): require exact runtime profiles
+Require exact runtime profiles in Desktop (#4)
+
+Bind Desktop virtual-printer selection and restoration to exact durable runtime profiles, with localized guidance and regression coverage.
