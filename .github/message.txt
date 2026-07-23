@@ -1,4 +1,4 @@
-test(oracle): prove auth and provider closure
+docs(omsk): close framework oracle recovery evidence
 
 decodex:
   schema: decodex/commit/1
