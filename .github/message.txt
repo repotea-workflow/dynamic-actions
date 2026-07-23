@@ -1,1 +1,1 @@
-feat(macos): bind AirPrint runtime profiles
+Bind macOS CUPS queues to runtime profiles
