@@ -1,1 +1,1 @@
-fix(airprint): preflight publish transactions
+fix(macos-cups): secure endpoint lifecycle transaction
