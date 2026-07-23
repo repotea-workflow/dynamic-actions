@@ -1,1 +1,1 @@
-fix(macos-cups): serialize cleanup completion
+test(linux-cups): assert exact worker artifacts
