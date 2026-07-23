@@ -1,4 +1,4 @@
-fix(omsk): harden framework oracle closure
+test(oracle): prove auth and provider closure
 
 decodex:
   schema: decodex/commit/1
