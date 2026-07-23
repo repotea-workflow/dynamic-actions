@@ -1,1 +1,1 @@
-Anchor macOS route mutations to directory fds
+Serialize and stage Windows SCM provisioning
