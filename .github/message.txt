@@ -1,3 +1,1 @@
-Restore exact virtual printer runtime authority (#3)
-
-Validate exact durable runtime authority across Management persistence, dispatch, artifact history, and all platform route executors.
+fix(desktop): require exact runtime profiles
