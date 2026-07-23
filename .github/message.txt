@@ -1,1 +1,1 @@
-Add typed CUPS route host start command
+Prepare macOS CUPS typed helper route commands
