@@ -1,1 +1,1 @@
-feat(linux): add printer application package lifecycle
+feat(linux): produce printer application deb package
