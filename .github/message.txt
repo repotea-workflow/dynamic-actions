@@ -1,1 +1,3 @@
-fix(management): restore exact runtime authority
+Restore exact virtual printer runtime authority (#3)
+
+Validate exact durable runtime authority across Management persistence, dispatch, artifact history, and all platform route executors.
