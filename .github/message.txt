@@ -1,1 +1,1 @@
-Harden macOS CUPS grant publication
+Route macOS CUPS host install through typed helper
