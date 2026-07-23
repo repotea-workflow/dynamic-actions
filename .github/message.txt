@@ -1,1 +1,1 @@
-fix(macos-cups): publish one capture generation identity
+Add generic macOS privileged route helper
