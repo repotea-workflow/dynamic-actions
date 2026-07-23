@@ -1,1 +1,1 @@
-fix(linux-pa): remove production fixture runtime
+fix(macos): bind helper to signed running image
