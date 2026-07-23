@@ -1,1 +1,1 @@
-Verify Windows virtual host ACL before SCM mutation
+Fail closed on Windows TCP port continuity gaps
