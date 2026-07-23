@@ -1,1 +1,1 @@
-Merge macOS privileged route security authority
+fix(linux-pa): validate dpkg package lifecycle
