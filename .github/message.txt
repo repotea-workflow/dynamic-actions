@@ -1,1 +1,1 @@
-fix(macos-cups): bind capture artifacts to job generation
+Verify Windows SCM DACL semantics
