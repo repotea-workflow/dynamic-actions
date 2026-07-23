@@ -1,5 +1,5 @@
-fix(omsk): clarify sanitized key evidence
+test(omsk): align prerequisite adversarial fixtures
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-159
+  authority: DAM-154
