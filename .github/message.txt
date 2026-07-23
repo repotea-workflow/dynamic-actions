@@ -1,3 +1,1 @@
-Fix macOS AirPrint launchctl sendability (#2)
-
-Require the macOS launchctl host abstraction and its concrete implementation to satisfy the approved Send contract.
+fix(management): restore exact runtime authority
