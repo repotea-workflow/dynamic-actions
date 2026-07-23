@@ -1,1 +1,1 @@
-feat(windows): add artifact pagination v3
+fix(windows): harden GDI IPP spike cleanup
