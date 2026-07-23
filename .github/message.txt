@@ -1,4 +1,5 @@
-Merge remote-tracking branch 'origin/main' into 0xfe10/ztoms-dam-137
+fix(omsk): align legacy ID families and call sites
 
-# Conflicts:
-#	backend/crates/omsk/domain/src/services/aviaor_modify.rs
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-143
