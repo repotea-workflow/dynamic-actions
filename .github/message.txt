@@ -1,1 +1,1 @@
-fix(airprint): close host transaction races
+test(linux-pa): harden real-host artifact oracle
