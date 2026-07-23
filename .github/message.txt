@@ -1,5 +1,8 @@
-docs(omsk): close DAM-143 parity evidence
+docs(omsk): finish canceled WeChat scope alignment (#215)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-143
+  authority: DAM-145
+  pr: https://github.com/repotea-workspace/ztoms/pull/215
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#215
