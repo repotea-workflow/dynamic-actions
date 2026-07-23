@@ -1,3 +1,1 @@
-Require exact runtime profiles in Desktop (#4)
-
-Bind Desktop virtual-printer selection and restoration to exact durable runtime profiles, with localized guidance and regression coverage.
+Merge commit '0583ffd1a5eee7c94d97d5ad119a24a0278a216a' into codex/macos-remaining-integration
