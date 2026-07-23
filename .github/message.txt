@@ -1,1 +1,1 @@
-Make macOS launchd cleanup restartable
+Harden Linux CUPS runtime profile authority
