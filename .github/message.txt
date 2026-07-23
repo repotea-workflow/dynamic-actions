@@ -1,1 +1,1 @@
-Add macOS CUPS typed helper execution adapter
+Align macOS CUPS route host labels with typed helper
