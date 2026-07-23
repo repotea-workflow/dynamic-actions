@@ -1,1 +1,1 @@
-Harden macOS CUPS runtime profile recovery
+Make macOS launchd cleanup restartable
