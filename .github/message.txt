@@ -1,1 +1,1 @@
-fix(management): bind exact runtime authority
+fix(macos-cups): keep legacy routes cleanup-only
