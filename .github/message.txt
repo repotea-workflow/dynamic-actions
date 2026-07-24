@@ -1,5 +1,5 @@
-docs(omsk): align DAM-150 oracle scope authority
+test(omsk): update OSS parity evidence for filename repair
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-150
+  authority: DAM-153
