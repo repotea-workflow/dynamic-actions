@@ -1,1 +1,1 @@
-Guard Linux CUPS E2E cleanup
+Advance E2E failure isolation

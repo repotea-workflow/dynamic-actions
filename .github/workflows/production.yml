@@ -41,15 +41,10 @@ jobs:
         run: just ci-fmt
 
   protocol-check:
-    name: Protocol ${{ matrix.protocol }} / ${{ matrix.os }}
-    runs-on: ${{ matrix.os }}
-    strategy:
-      fail-fast: false
-      matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
-        protocol: [tspl, cpcl, escpos]
+    name: Protocol check / temporarily disabled
+    runs-on: ubuntu-latest
     steps:
-      # TODO: Re-enable the protocol check after the E2E failures are fixed.
+      # TODO: Re-enable the protocol matrix after the E2E failures are fixed.
       - name: Temporarily fast-pass protocol check
         run: echo "Protocol check temporarily disabled to unblock E2E debugging."
 
