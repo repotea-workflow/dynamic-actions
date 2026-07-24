@@ -1,4 +1,4 @@
-test(omsk): refresh ident code parity evidence
+docs(omsk): mark ident code evidence pushed
 
 decodex:
   schema: decodex/commit/1
