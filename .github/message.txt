@@ -1,5 +1,8 @@
-test(omsk): add DAM-142 pagination validation plan
+test(omsk): align warehouse weighing oracle base (#222)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-142
+  authority: DAM-144
+  pr: https://github.com/repotea-workspace/ztoms/pull/222
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#222
