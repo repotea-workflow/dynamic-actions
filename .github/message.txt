@@ -1,1 +1,1 @@
-Provision macOS privileged route CI authority
+Stabilize host E2E authority setup
