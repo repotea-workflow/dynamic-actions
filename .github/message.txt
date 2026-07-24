@@ -1,1 +1,1 @@
-Fix macOS route-owned apply observation race
+Add macOS route-owned receipt failure diagnostics
