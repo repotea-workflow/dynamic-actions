@@ -1,5 +1,5 @@
-fix(omsk): align nullable JSON and exception responses
+fix(auth): merge main parity ledger
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-139
+  authority: DAM-138
