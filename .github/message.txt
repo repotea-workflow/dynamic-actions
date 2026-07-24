@@ -1,1 +1,1 @@
-Wait for host E2E authority readiness
+Stabilize host E2E privileged anchors
