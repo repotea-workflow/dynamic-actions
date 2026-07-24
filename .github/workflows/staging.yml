@@ -45,8 +45,12 @@ jobs:
         run: just ci-fmt
 
   protocol-check:
-    name: Protocol check / temporarily fast-passed
+    name: Protocol check / ${{ matrix.protocol }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        protocol: [tspl, cpcl, escpos]
     steps:
       - uses: actions/checkout@v6
 
@@ -69,11 +73,9 @@ jobs:
       - name: Install just
         uses: taiki-e/install-action@just
 
-      - name: Temporarily fast-pass protocol check
+      - name: Run protocol check
         shell: bash
-        run: |
-          echo "Protocol checks are temporarily fast-passed while host E2E is being stabilized."
-          echo "Restore just ci-protocol tspl/cpcl/escpos after the E2E lane is green."
+        run: just ci-protocol "${{ matrix.protocol }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}

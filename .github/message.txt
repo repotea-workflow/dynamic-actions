@@ -1,1 +1,1 @@
-Let E2E run without waiting for platform checks
+Restore protocol checks after E2E stabilization
