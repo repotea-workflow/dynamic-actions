@@ -1,8 +1,5 @@
-chore(omsk): merge main into DAM-143 repair (#216)
+fix(omsk): make taxctl recharge transactional
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-143
-  pr: https://github.com/repotea-workspace/ztoms/pull/216
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#216
+  authority: DAM-151
