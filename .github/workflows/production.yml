@@ -136,6 +136,7 @@ jobs:
   e2e-linux-cups:
     name: E2E Linux CUPS virtual route
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     needs: [fmt, protocol-check, platform-check]
     steps:
       - uses: actions/checkout@v6
@@ -172,6 +173,7 @@ jobs:
   e2e-windows-spooler:
     name: E2E Windows Spooler virtual RAW (authority gated)
     runs-on: windows-latest
+    timeout-minutes: 20
     needs: [fmt, protocol-check, platform-check]
     steps:
       - uses: actions/checkout@v6
@@ -212,6 +214,7 @@ jobs:
   e2e-macos-cups:
     name: E2E macOS CUPS route-owned host (authority gated)
     runs-on: macos-latest
+    timeout-minutes: 20
     needs: [fmt, protocol-check, platform-check]
     steps:
       - uses: actions/checkout@v6

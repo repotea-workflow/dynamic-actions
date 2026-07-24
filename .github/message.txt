@@ -1,1 +1,1 @@
-Persist macOS route launchd authority artifacts
+Expose route host E2E failure diagnostics
