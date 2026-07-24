@@ -1,1 +1,2 @@
-Advance host E2E authority diagnostics
+Fix Windows startup diagnostic export
+
