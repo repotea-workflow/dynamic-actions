@@ -1,1 +1,1 @@
-Allow macOS CUPS projection tests without root
+Allow test-managed macOS CUPS public locks
