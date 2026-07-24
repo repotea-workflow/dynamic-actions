@@ -1,5 +1,5 @@
-fix(omsk): repair DAM-139 retained branch sync
+test(omsk): reconcile parity merge validation
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-139
+  authority: DAM-138
