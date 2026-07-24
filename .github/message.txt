@@ -1,1 +1,1 @@
-Add macOS route-owned receipt failure diagnostics
+Avoid private apply result in macOS receipt diagnostics
