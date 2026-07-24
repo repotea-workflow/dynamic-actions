@@ -1,1 +1,1 @@
-Expose Windows owned package inventory mismatch details
+Expose cross-platform E2E cleanup diagnostics
