@@ -1,5 +1,8 @@
-fix(omsk): make taxctl recharge transactional
+fix(omsk): make taxctl recharge transactional (#219)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-151
+  pr: https://github.com/repotea-workspace/ztoms/pull/219
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#219
