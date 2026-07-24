@@ -1,5 +1,5 @@
-chore(omsk): merge main into DAM-149 repair
+fix(omsk): align partner create retry side effects
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-149
+  authority: DAM-147
