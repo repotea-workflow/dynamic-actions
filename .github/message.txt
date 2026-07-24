@@ -1,1 +1,1 @@
-Serialize dynamic E2E workflows
+Unblock Windows and macOS E2E diagnostics
