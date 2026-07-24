@@ -1,5 +1,8 @@
-docs(omsk): align DAM-150 event references
+docs(omsk): align DAM-150 event references (#229)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-150
+  pr: https://github.com/repotea-workspace/ztoms/pull/229
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#229
