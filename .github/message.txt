@@ -1,1 +1,1 @@
-Improve host E2E authority diagnostics
+Advance host E2E authority diagnostics
