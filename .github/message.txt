@@ -1,5 +1,8 @@
-docs(omsk): mark ident code evidence pushed
+docs(omsk): mark ident code evidence pushed (#221)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-149
+  pr: https://github.com/repotea-workspace/ztoms/pull/221
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#221
