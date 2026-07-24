@@ -1,1 +1,1 @@
-Restart Windows artifact directory scans
+Expose Windows package conflict phases
