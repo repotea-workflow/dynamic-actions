@@ -1,4 +1,4 @@
-docs(omsk): add DAM-157 route differential evidence
+fix(parity): sync DAM-157 evidence with main
 
 decodex:
   schema: decodex/commit/1
