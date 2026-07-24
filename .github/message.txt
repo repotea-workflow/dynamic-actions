@@ -1,5 +1,8 @@
-test(omsk): verify DAM-158 route differentials
+test(omsk): verify DAM-158 route differentials (#233)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-158
+  pr: https://github.com/repotea-workspace/ztoms/pull/233
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#233
