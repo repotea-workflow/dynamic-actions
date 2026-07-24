@@ -196,6 +196,8 @@ jobs:
 
       - name: Run Windows Spooler host E2E
         shell: bash
+        env:
+          SPOOLIX_WINDOWS_SPOOLER_E2E_REQUIRED: "1"
         run: just ci-e2e-windows-spooler
 
   e2e-macos-cups:

@@ -1,1 +1,1 @@
-Honor macOS public projection management owner
+Harden Windows Spooler host E2E gate
