@@ -1,8 +1,5 @@
-fix(omsk): align partner create retry side effects (#232)
+test(omsk): verify DAM-158 route differentials
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-147
-  pr: https://github.com/repotea-workspace/ztoms/pull/232
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#232
+  authority: DAM-158
