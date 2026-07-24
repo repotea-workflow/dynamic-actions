@@ -1,1 +1,1 @@
-Allow test-managed macOS CUPS worker runtime
+Canonicalize macOS CUPS test runtime paths
