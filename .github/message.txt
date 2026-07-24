@@ -1,8 +1,8 @@
-test(omsk): add DAM-142 pagination validation plan (#223)
+fix(product): align validation first-error ordering (#224)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-142
-  pr: https://github.com/repotea-workspace/ztoms/pull/223
+  authority: DAM-146
+  pr: https://github.com/repotea-workspace/ztoms/pull/224
   merge_method: squash
-  carrier: github:repotea-workspace/ztoms#223
+  carrier: github:repotea-workspace/ztoms#224
