@@ -1,1 +1,1 @@
-Temporarily bypass platform checks for E2E debugging
+Improve host E2E authority diagnostics
