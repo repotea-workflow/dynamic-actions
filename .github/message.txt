@@ -1,5 +1,8 @@
-chore(omsk): merge main into DAM-143
+test(omsk): reconcile parity merge validation (#217)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-143
+  authority: DAM-138
+  pr: https://github.com/repotea-workspace/ztoms/pull/217
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#217
