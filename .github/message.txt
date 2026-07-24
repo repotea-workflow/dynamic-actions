@@ -1,1 +1,1 @@
-Restore real CI quality gates
+Temporarily fast-pass protocol checks for E2E focus
