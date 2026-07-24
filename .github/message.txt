@@ -1,1 +1,1 @@
-Stabilize host E2E socket readiness
+Harden host E2E diagnostics
