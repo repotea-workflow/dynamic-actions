@@ -1,1 +1,1 @@
-Use validated macOS launchd plist paths
+Diagnose Windows RAW queue proof mismatches
