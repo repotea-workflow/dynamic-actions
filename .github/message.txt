@@ -1,1 +1,1 @@
-Stabilize cross-platform E2E diagnostics
+Kickstart macOS route host during install
