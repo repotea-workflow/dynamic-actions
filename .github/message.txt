@@ -1,8 +1,8 @@
-fix(omsk): repair DAM-139 retained branch sync (#218)
+chore(omsk): merge main into DAM-143 repair (#216)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-139
-  pr: https://github.com/repotea-workspace/ztoms/pull/218
+  authority: DAM-143
+  pr: https://github.com/repotea-workspace/ztoms/pull/216
   merge_method: squash
-  carrier: github:repotea-workspace/ztoms#218
+  carrier: github:repotea-workspace/ztoms#216
