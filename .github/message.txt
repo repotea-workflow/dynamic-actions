@@ -1,1 +1,1 @@
-Authorize private Git dependencies in CI
+Update Nib dependency pin
