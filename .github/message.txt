@@ -1,1 +1,1 @@
-Restore platform and protocol CI gates
+Cover Windows package conflict diagnostics
