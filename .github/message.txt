@@ -1,1 +1,1 @@
-Require macOS CUPS host E2E in CI
+Retry transient Windows E2E anchor sharing
