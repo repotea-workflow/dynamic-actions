@@ -1,1 +1,1 @@
-Avoid private apply result in macOS receipt diagnostics
+Scope macOS route host identity to receipt
