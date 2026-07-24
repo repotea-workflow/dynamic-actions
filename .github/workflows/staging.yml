@@ -160,6 +160,10 @@ jobs:
           if ($LASTEXITCODE -ne 0) {
             throw "Windows Spooler E2E requires an elevated administrator token"
           }
+          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) {
+            Add-PrinterDriver -Name "Generic / Text Only"
+          }
+          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
 
       - name: Run Windows Spooler host E2E
         shell: bash
