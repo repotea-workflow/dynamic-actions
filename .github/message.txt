@@ -1,5 +1,5 @@
-fix(product): align validation first-error ordering
+chore(omsk): merge main into DAM-149 repair
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-146
+  authority: DAM-149
