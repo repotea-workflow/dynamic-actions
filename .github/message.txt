@@ -1,1 +1,1 @@
-Harden host E2E waits
+Read Windows E2E artifacts from v3 history
