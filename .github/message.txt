@@ -1,5 +1,5 @@
-test(omsk): align warehouse weighing oracle base
+test(omsk): add DAM-142 pagination validation plan
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-144
+  authority: DAM-142
