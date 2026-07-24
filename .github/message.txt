@@ -1,1 +1,1 @@
-Align Windows host authority smoke test
+Restore Nib Windows platform checks
