@@ -1,1 +1,1 @@
-Harden Windows Spooler host E2E gate
+Require macOS CUPS host E2E in CI

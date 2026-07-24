@@ -232,4 +232,6 @@ jobs:
           lpstat -r
 
       - name: Run macOS CUPS host E2E
+        env:
+          SPOOLIX_MACOS_CUPS_E2E_REQUIRED: "1"
         run: just ci-e2e-macos-cups
