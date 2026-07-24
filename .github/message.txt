@@ -1,1 +1,5 @@
-fix(omsk-control): preserve page scroll after scrollbar drag
+docs(omsk): add DAM-157 route differential evidence
+
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-157
