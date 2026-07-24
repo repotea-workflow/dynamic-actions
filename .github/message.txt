@@ -1,1 +1,1 @@
-Temporarily fast-pass staging protocol check
+Fix Windows TCP port config lookup
