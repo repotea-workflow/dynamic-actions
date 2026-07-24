@@ -1,1 +1,1 @@
-Scope macOS route host identity to receipt
+Temporarily fast-pass staging protocol check
