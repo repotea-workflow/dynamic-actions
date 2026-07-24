@@ -1,1 +1,1 @@
-Add platform protocol CI matrix
+Authorize private Git dependencies in CI
