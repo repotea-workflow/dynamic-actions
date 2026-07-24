@@ -1,1 +1,1 @@
-Cover Windows package conflict diagnostics
+Temporarily fast-pass non-E2E CI gates
