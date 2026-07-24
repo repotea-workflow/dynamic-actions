@@ -158,3 +158,76 @@ jobs:
 
       - name: Run Linux CUPS host E2E
         run: just ci-e2e-linux-cups
+
+  e2e-windows-spooler:
+    name: E2E Windows Spooler virtual RAW
+    runs-on: windows-latest
+    needs: [fmt, protocol-check, platform-check]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Prepare Windows Spoolix host anchor
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows Spooler E2E requires an elevated administrator token"
+          }
+          New-Item -ItemType Directory -Path (Join-Path $env:ProgramData "Spoolix") -Force | Out-Null
+
+      - name: Run Windows Spooler host E2E
+        shell: bash
+        run: just ci-e2e-windows-spooler
+
+  e2e-macos-cups:
+    name: E2E macOS CUPS route-owned host
+    runs-on: macos-latest
+    needs: [fmt, protocol-check, platform-check]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Ensure macOS CUPS is running
+        run: |
+          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
+          lpstat -r
+
+      - name: Run macOS CUPS host E2E
+        run: just ci-e2e-macos-cups

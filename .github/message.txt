@@ -1,1 +1,1 @@
-Restore Nib Windows platform checks
+Add Windows and macOS host E2E CI
