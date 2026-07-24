@@ -1,1 +1,1 @@
-Expose Windows package conflict phases
+Release Windows package child handles before rename
