@@ -1,8 +1,5 @@
-test(omsk): add DAM-156 route differential evidence (#234)
+fix(omsk): align HTTP shell oracle with active parity scope
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-156
-  pr: https://github.com/repotea-workspace/ztoms/pull/234
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#234
+  authority: DAM-160
