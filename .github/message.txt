@@ -1,5 +1,8 @@
-docs(omsk): align DAM-140 body scope denominator
+docs(omsk): align DAM-140 body scope denominator (#220)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-140
+  pr: https://github.com/repotea-workspace/ztoms/pull/220
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#220
