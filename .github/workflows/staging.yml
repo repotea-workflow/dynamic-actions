@@ -19,7 +19,7 @@ jobs:
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
           ref_file: .github/ref.txt
 
       - name: Install Rust
