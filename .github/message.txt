@@ -1,5 +1,8 @@
-chore(omsk): merge main into DAM-159 repair
+chore(omsk): merge main into DAM-159 repair (#210)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-159
+  pr: https://github.com/repotea-workspace/ztoms/pull/210
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#210
