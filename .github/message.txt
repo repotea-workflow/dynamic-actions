@@ -1,1 +1,1 @@
-Wait for macOS route host health
+Stabilize host E2E readiness
