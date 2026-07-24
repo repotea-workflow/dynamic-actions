@@ -1,1 +1,1 @@
-Harden host E2E cleanup diagnostics
+Expose Windows owned package inventory mismatch details
