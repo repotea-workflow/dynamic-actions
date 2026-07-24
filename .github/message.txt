@@ -1,1 +1,1 @@
-Expose route host E2E failure diagnostics
+Bound platform check runtime

@@ -87,6 +87,7 @@ jobs:
   platform-check:
     name: Platform check / ${{ matrix.platform }}
     runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
