@@ -1,5 +1,8 @@
-fix(omsk): align Taipei statistics wave and transport semantics
+fix(omsk): align Taipei statistics wave and transport semantics (#225)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-148
+  pr: https://github.com/repotea-workspace/ztoms/pull/225
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#225
