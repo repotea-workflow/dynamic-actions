@@ -1,4 +1,4 @@
-test(omsk): trim parity progress contract size
+docs(omsk): align DAM-150 event references
 
 decodex:
   schema: decodex/commit/1
