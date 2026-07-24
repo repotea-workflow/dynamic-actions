@@ -1,1 +1,1 @@
-Fix host E2E signing and rename primitives
+Bind host E2E runtime authority
