@@ -1,1 +1,1 @@
-Update Nib dependency pin
+Stabilize platform CI checks
