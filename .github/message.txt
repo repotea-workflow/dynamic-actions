@@ -1,8 +1,5 @@
-fix(omsk): align trace and declaration oracle contracts (#226)
+docs(omsk): align DAM-141 route ledger scope
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-152
-  pr: https://github.com/repotea-workspace/ztoms/pull/226
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#226
+  authority: DAM-141
