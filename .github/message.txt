@@ -1,1 +1,1 @@
-Cover repeated Windows artifact directory scans
+Restore platform and protocol CI gates

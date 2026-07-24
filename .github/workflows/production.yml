@@ -45,18 +45,16 @@ jobs:
         run: just ci-fmt
 
   protocol-check:
-    name: Protocol check / temporarily disabled
+    name: Protocol check / ${{ matrix.protocol }}
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        protocol: [tspl, cpcl, escpos]
     steps:
-      # TODO: Re-enable the protocol matrix after the E2E failures are fixed.
-      - name: Temporarily fast-pass protocol check
-        run: echo "Protocol check temporarily disabled to unblock E2E debugging."
-
       - uses: actions/checkout@v6
-        if: ${{ false }}
 
       - name: Checkout
-        if: ${{ false }}
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/spoolix
@@ -64,34 +62,63 @@ jobs:
           ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
-        if: ${{ false }}
         shell: bash
         env:
           GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
         run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
 
       - name: Install Rust
-        if: ${{ false }}
         uses: dtolnay/rust-toolchain@stable
 
       - name: Install just
-        if: ${{ false }}
         uses: taiki-e/install-action@just
 
       - name: Run protocol check
-        if: ${{ false }}
         shell: bash
         run: just ci-protocol "${{ matrix.protocol }}"
 
   platform-check:
-    name: Platform check / temporarily disabled
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    name: Platform check / ${{ matrix.platform }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            os: ubuntu-latest
+            command: ci-check-linux
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+          - platform: macos
+            os: macos-latest
+            command: ci-check-macos
     steps:
-      # TODO: Re-enable platform checks after the E2E failures are fixed.
-      - name: Skip platform check temporarily
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
         shell: bash
-        run: echo "Platform check temporarily disabled to unblock E2E debugging."
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Run platform check
+        shell: bash
+        run: just "${{ matrix.command }}"
 
   e2e-linux-cups:
     name: E2E Linux CUPS virtual route
