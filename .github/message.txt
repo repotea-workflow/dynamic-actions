@@ -1,5 +1,8 @@
-docs(omsk): align DAM-141 route ledger scope
+docs(omsk): align DAM-141 route ledger scope (#227)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-141
+  pr: https://github.com/repotea-workspace/ztoms/pull/227
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#227
