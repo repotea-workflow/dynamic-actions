@@ -1,5 +1,5 @@
-test(omsk): reconcile parity merge validation
+chore(omsk): merge main into DAM-143
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-138
+  authority: DAM-143
