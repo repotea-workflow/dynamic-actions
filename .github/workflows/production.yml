@@ -117,6 +117,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y libdbus-1-dev pkg-config
+          just ci-setup-linux-cups-state
 
       - name: Run platform check
         shell: bash
@@ -152,6 +153,7 @@ jobs:
         run: |
           sudo apt-get update
           sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils
+          just ci-setup-linux-cups-state
           sudo systemctl start cups || sudo service cups start
 
       - name: Run Linux CUPS host E2E

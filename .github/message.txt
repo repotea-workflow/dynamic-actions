@@ -1,1 +1,1 @@
-Stabilize platform CI checks
+Stabilize host CI matrix
