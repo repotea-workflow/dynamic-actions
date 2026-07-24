@@ -1,8 +1,5 @@
-test(omsk): align warehouse weighing oracle base (#222)
+fix(product): align validation first-error ordering
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-144
-  pr: https://github.com/repotea-workspace/ztoms/pull/222
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#222
+  authority: DAM-146
