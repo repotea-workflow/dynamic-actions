@@ -1,1 +1,1 @@
-Temporarily fast-pass protocol checks for E2E focus
+Let E2E run without waiting for platform checks
