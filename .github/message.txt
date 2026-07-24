@@ -1,1 +1,1 @@
-Kickstart macOS route host during install
+Bind macOS route host to install principal
