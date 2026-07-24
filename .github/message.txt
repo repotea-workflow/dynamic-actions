@@ -1,1 +1,1 @@
-Diagnose macOS launchd E2E health
+Stabilize host E2E socket readiness
