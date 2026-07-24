@@ -1,1 +1,1 @@
-Stabilize host E2E cleanup
+Stabilize recovered host E2E artifacts
