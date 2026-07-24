@@ -1,5 +1,1 @@
-test(omsk): guard DAM-155 route evidence batch
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-155
+fix(cusco): stabilize ordered address recognition
