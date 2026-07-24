@@ -1,1 +1,1 @@
-Gate host E2E on runner authority
+Harden macOS CUPS receipt maintenance tests
