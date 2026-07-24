@@ -1,1 +1,1 @@
-Return Windows test print driver job directly
+Cover repeated Windows artifact directory scans
