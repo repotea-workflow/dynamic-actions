@@ -1,1 +1,1 @@
-Add Windows and macOS host E2E CI
+Gate host E2E on runner authority

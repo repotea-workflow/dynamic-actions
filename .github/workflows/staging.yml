@@ -160,7 +160,7 @@ jobs:
         run: just ci-e2e-linux-cups
 
   e2e-windows-spooler:
-    name: E2E Windows Spooler virtual RAW
+    name: E2E Windows Spooler virtual RAW (authority gated)
     runs-on: windows-latest
     needs: [fmt, protocol-check, platform-check]
     steps:
@@ -199,7 +199,7 @@ jobs:
         run: just ci-e2e-windows-spooler
 
   e2e-macos-cups:
-    name: E2E macOS CUPS route-owned host
+    name: E2E macOS CUPS route-owned host (authority gated)
     runs-on: macos-latest
     needs: [fmt, protocol-check, platform-check]
     steps:
