@@ -1,1 +1,1 @@
-Bind macOS route host to install principal
+Expose macOS route host launchd logs
