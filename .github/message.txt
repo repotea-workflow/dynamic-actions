@@ -1,1 +1,1 @@
-Harden host E2E diagnostics
+Stabilize host artifact readiness
