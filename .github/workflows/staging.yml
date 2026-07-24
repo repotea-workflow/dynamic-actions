@@ -9,8 +9,8 @@ permissions:
   contents: read
 
 jobs:
-  validate:
-    name: Validate
+  fmt:
+    name: Rust fmt
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -28,5 +28,98 @@ jobs:
       - name: Install just
         uses: taiki-e/install-action@just
 
-      - name: Run validation
-        run: just ci
+      - name: Run fmt checks
+        run: just ci-fmt
+
+  protocol-check:
+    name: Protocol ${{ matrix.protocol }} / ${{ matrix.os }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        protocol: [tspl, cpcl, escpos]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Run protocol check
+        shell: bash
+        run: just ci-protocol "${{ matrix.protocol }}"
+
+  platform-check:
+    name: Platform check / ${{ matrix.platform }}
+    runs-on: ${{ matrix.os }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - platform: linux
+            os: ubuntu-latest
+            task: ci-check-linux
+          - platform: windows
+            os: windows-latest
+            task: ci-check-windows
+          - platform: macos
+            os: macos-latest
+            task: ci-check-macos
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Run platform check
+        shell: bash
+        run: just "${{ matrix.task }}"
+
+  e2e-linux-cups:
+    name: E2E Linux CUPS virtual route
+    runs-on: ubuntu-latest
+    needs: [fmt, protocol-check, platform-check]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Install Linux CUPS dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils
+          sudo systemctl start cups || sudo service cups start
+
+      - name: Run Linux CUPS host E2E
+        run: just ci-e2e-linux-cups
