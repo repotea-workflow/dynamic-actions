@@ -1,1 +1,1 @@
-Expose cross-platform E2E cleanup diagnostics
+Stabilize recovered host E2E cleanup
