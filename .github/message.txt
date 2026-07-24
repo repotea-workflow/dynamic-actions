@@ -1,8 +1,5 @@
-fix(product): align validation first-error ordering (#224)
+fix(omsk): align Taipei statistics wave and transport semantics
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-146
-  pr: https://github.com/repotea-workspace/ztoms/pull/224
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#224
+  authority: DAM-148
