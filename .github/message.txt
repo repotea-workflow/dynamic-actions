@@ -1,5 +1,8 @@
-fix(parity): sync DAM-157 evidence with main
+fix(parity): sync DAM-157 evidence with main (#231)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-157
+  pr: https://github.com/repotea-workspace/ztoms/pull/231
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#231
