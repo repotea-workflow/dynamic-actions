@@ -1,1 +1,1 @@
-Harden macOS CUPS receipt maintenance tests
+Allow macOS CUPS projection tests without root
