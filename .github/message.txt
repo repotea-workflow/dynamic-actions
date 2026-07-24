@@ -1,8 +1,5 @@
-fix(parity): sync DAM-157 evidence with main (#231)
+chore(omsk): merge main into DAM-149 repair
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-157
-  pr: https://github.com/repotea-workspace/ztoms/pull/231
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#231
+  authority: DAM-149
