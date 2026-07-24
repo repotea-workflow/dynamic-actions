@@ -1,1 +1,1 @@
-Repair host E2E preparation gates
+Temporarily bypass platform checks for E2E debugging
