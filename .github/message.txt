@@ -1,1 +1,1 @@
-Bind host E2E runtime authority
+Shorten macOS helper socket staging path
