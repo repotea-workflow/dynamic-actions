@@ -1,4 +1,4 @@
-chore(omsk): sync DAM-150 with latest main
+test(omsk): trim parity progress contract size
 
 decodex:
   schema: decodex/commit/1
