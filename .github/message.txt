@@ -1,1 +1,1 @@
-Format Windows virtual RAW imports
+Stabilize host E2E entrypoints
