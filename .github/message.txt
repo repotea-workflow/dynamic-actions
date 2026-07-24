@@ -1,1 +1,1 @@
-Stabilize host CI matrix
+Separate host-only Linux CUPS checks
