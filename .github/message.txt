@@ -1,1 +1,1 @@
-Restore Windows E2E v3 artifact wait
+Fix host E2E readiness probes
