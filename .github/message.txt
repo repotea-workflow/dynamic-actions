@@ -1,5 +1,5 @@
-test(omsk): narrow ident code quota evidence
+chore(omsk): sync DAM-154 retained branch
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-149
+  authority: DAM-154
