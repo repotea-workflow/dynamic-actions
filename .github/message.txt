@@ -1,1 +1,1 @@
-Canonicalize macOS CUPS test runtime paths
+Honor macOS public projection management owner
