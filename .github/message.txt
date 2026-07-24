@@ -1,1 +1,1 @@
-Update macOS route host command tests
+Prepare Windows host binary for E2E
