@@ -1,1 +1,1 @@
-Support alternate Windows RAW inbox drivers
+Use validated macOS launchd plist paths
