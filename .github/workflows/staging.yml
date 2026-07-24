@@ -192,7 +192,6 @@ jobs:
           if ($LASTEXITCODE -ne 0) {
             throw "Windows Spooler E2E requires an elevated administrator token"
           }
-          New-Item -ItemType Directory -Path (Join-Path $env:ProgramData "Spoolix") -Force | Out-Null
 
       - name: Run Windows Spooler host E2E
         shell: bash
@@ -230,6 +229,9 @@ jobs:
         run: |
           lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
           lpstat -r
+
+      - name: Prepare macOS privileged route authority
+        run: just ci-setup-macos-privileged-route-authority
 
       - name: Run macOS CUPS host E2E
         env:

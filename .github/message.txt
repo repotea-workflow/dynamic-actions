@@ -1,1 +1,1 @@
-Retry transient Windows E2E anchor sharing
+Provision macOS privileged route CI authority
