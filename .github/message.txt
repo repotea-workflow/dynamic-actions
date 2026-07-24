@@ -1,1 +1,1 @@
-Temporarily fast-pass non-E2E CI gates
+Restore real CI quality gates
