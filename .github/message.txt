@@ -1,1 +1,1 @@
-Provision AirPrint route test artifact root
+Stabilize macOS AirPrint route artifact fixtures
