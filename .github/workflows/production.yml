@@ -44,13 +44,35 @@ jobs:
       - name: Run fmt checks
         run: just ci-fmt
 
-  protocol-check:
-    name: Protocol check / ${{ matrix.protocol }}
-    runs-on: ubuntu-latest
+  driver-route-check:
+    name: Driver route / ${{ matrix.route }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    needs: [fmt]
     strategy:
       fail-fast: false
       matrix:
-        protocol: [tspl, cpcl, escpos]
+        include:
+          - route: linux.cups
+            os: ubuntu-latest
+          - route: linux.printer-application
+            os: ubuntu-latest
+          - route: linux.ipp-usb
+            os: ubuntu-latest
+          - route: macos.cups
+            os: macos-latest
+          - route: macos.ipp-airprint
+            os: macos-latest
+          - route: windows.spooler
+            os: windows-latest
+          - route: windows.unidrv
+            os: windows-latest
+          - route: windows.ipp
+            os: windows-latest
+          - route: windows.winusb
+            os: windows-latest
+          - route: windows.print-support-app
+            os: windows-latest
     steps:
       - uses: actions/checkout@v6
 
@@ -73,9 +95,60 @@ jobs:
       - name: Install just
         uses: taiki-e/install-action@just
 
-      - name: Run protocol check
+      - name: Install Linux CUPS dependencies
+        if: ${{ matrix.route == 'linux.cups' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils
+          just ci-setup-linux-cups-state
+          sudo systemctl start cups || sudo service cups start
+
+      - name: Install Linux Printer Application dependencies
+        if: ${{ matrix.route == 'linux.printer-application' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cups-ipp-utils
+          just ci-setup-linux-printer-application-host
+
+      - name: Install Linux ipp-usb dependencies
+        if: ${{ matrix.route == 'linux.ipp-usb' }}
         shell: bash
-        run: just ci-protocol "${{ matrix.protocol }}"
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev pkg-config
+
+      - name: Ensure macOS CUPS is running
+        if: ${{ matrix.route == 'macos.cups' }}
+        run: |
+          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
+          lpstat -r
+
+      - name: Prepare macOS privileged route authority
+        if: ${{ matrix.route == 'macos.cups' }}
+        run: just ci-setup-macos-privileged-route-authority
+
+      - name: Prepare Windows Spoolix host anchor
+        if: ${{ matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows Spooler E2E requires an elevated administrator token"
+          }
+          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) {
+            Add-PrinterDriver -Name "Generic / Text Only"
+          }
+          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
+
+      - name: Run driver route check
+        shell: bash
+        run: |
+          case "${{ matrix.route }}" in
+            windows.spooler) export SPOOLIX_WINDOWS_SPOOLER_E2E_REQUIRED=1 ;;
+            macos.cups) export SPOOLIX_MACOS_CUPS_E2E_REQUIRED=1 ;;
+            linux.printer-application) export SPOOLIX_LINUX_PA_E2E_REQUIRED=1 ;;
+          esac
+          just ci-driver-route "${{ matrix.route }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}
@@ -126,125 +199,3 @@ jobs:
       - name: Run platform check
         shell: bash
         run: just "${{ matrix.command }}"
-
-  e2e-linux-cups:
-    name: E2E Linux CUPS virtual route
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    needs: [fmt, protocol-check]
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
-
-      - name: Authorize private Git dependencies
-        shell: bash
-        env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
-        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install just
-        uses: taiki-e/install-action@just
-
-      - name: Install Linux CUPS dependencies
-        run: |
-          sudo apt-get update
-          sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils
-          just ci-setup-linux-cups-state
-          sudo systemctl start cups || sudo service cups start
-
-      - name: Run Linux CUPS host E2E
-        run: just ci-e2e-linux-cups
-
-  e2e-windows-spooler:
-    name: E2E Windows Spooler virtual RAW (authority gated)
-    runs-on: windows-latest
-    timeout-minutes: 20
-    needs: [fmt, protocol-check]
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
-
-      - name: Authorize private Git dependencies
-        shell: bash
-        env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
-        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install just
-        uses: taiki-e/install-action@just
-
-      - name: Prepare Windows Spoolix host anchor
-        shell: pwsh
-        run: |
-          net session *> $null
-          if ($LASTEXITCODE -ne 0) {
-            throw "Windows Spooler E2E requires an elevated administrator token"
-          }
-          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) {
-            Add-PrinterDriver -Name "Generic / Text Only"
-          }
-          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
-
-      - name: Run Windows Spooler host E2E
-        shell: bash
-        env:
-          SPOOLIX_WINDOWS_SPOOLER_E2E_REQUIRED: "1"
-        run: just ci-e2e-windows-spooler
-
-  e2e-macos-cups:
-    name: E2E macOS CUPS route-owned host (authority gated)
-    runs-on: macos-latest
-    timeout-minutes: 20
-    needs: [fmt, protocol-check]
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
-
-      - name: Authorize private Git dependencies
-        shell: bash
-        env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
-        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install just
-        uses: taiki-e/install-action@just
-
-      - name: Ensure macOS CUPS is running
-        run: |
-          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
-          lpstat -r
-
-      - name: Prepare macOS privileged route authority
-        run: just ci-setup-macos-privileged-route-authority
-
-      - name: Run macOS CUPS host E2E
-        env:
-          SPOOLIX_MACOS_CUPS_E2E_REQUIRED: "1"
-        run: just ci-e2e-macos-cups
