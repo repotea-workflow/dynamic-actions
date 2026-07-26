@@ -1,1 +1,3 @@
-Clarify virtual printer product semantics
+Clarify desktop virtual printer routes
+
+Clarify the desktop virtual printer route model, command protocol selection, driver output artifacts, and product semantics.
