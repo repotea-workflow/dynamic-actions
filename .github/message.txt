@@ -1,8 +1,5 @@
-fix(omsk): enforce identity auth before cache (#239)
+fix(omsk): align identity auth parse errors
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-204
-  pr: https://github.com/repotea-workspace/ztoms/pull/239
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#239
+  authority: DAM-205
