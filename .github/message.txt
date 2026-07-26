@@ -1,8 +1,5 @@
-fix(omsk): unify V3 Snowflake ID generation (#244)
+ci: fetch parity evidence base for acceptance
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-218
-  pr: https://github.com/repotea-workspace/ztoms/pull/244
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#244
+  authority: DAM-207
