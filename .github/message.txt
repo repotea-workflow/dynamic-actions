@@ -1,1 +1,1 @@
-Fix unified output cross-platform delivery
+Fix Unix mode types on macOS
