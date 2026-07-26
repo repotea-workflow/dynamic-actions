@@ -1,8 +1,5 @@
-fix(omsk): make ident validation cache claims atomic (#243)
+fix(test): align DAM-207 acceptance after main merge
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-217
-  pr: https://github.com/repotea-workspace/ztoms/pull/243
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#243
+  authority: DAM-207
