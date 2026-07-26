@@ -1,1 +1,1 @@
-Fix desktop startup with current nib
+Refine virtual printer workspace layout
