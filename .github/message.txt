@@ -1,5 +1,5 @@
-ci: stabilize DAM-207 acceptance workflow
+fix(omsk): make ident validation cache claims atomic
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-207
+  authority: DAM-217
