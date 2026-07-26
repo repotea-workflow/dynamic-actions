@@ -1,4 +1,4 @@
-fix(test): align DAM-207 acceptance after main merge
+ci: fetch ident acceptance parity base
 
 decodex:
   schema: decodex/commit/1
