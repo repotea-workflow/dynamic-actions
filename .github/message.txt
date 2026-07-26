@@ -1,5 +1,1 @@
-Close unified virtual printer output projection lifecycle
-
-Replace the single registry with per-job manifests, harden ownership and
-filesystem publish, keep projection running via Desktop tray/worker plus a
-per-user agent, and cover every enabled driver route with unified-output E2E.
+Fix unified output cross-platform delivery
