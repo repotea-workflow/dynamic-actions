@@ -1,5 +1,8 @@
-ci: fetch parity evidence commits for acceptance
+fix(omsk): make ident validation cache claims atomic (#243)
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-207
+  authority: DAM-217
+  pr: https://github.com/repotea-workspace/ztoms/pull/243
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#243
