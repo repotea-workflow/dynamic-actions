@@ -1,8 +1,5 @@
-test(omsk-domain): isolate ident code postgres tests (#237)
+fix(omsk): prevent duplicate IdentCode cache miss debits
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-208
-  pr: https://github.com/repotea-workspace/ztoms/pull/237
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#237
+  authority: DAM-203
