@@ -1,4 +1,4 @@
-test(omsk-domain): cover ident transaction begin failure
+ci: fetch B11A parity evidence for acceptance
 
 decodex:
   schema: decodex/commit/1
