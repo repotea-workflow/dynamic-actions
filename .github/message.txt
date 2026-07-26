@@ -1,4 +1,4 @@
-ci: fetch oss parity evidence in acceptance
+ci: fetch framework parity evidence in acceptance
 
 decodex:
   schema: decodex/commit/1
