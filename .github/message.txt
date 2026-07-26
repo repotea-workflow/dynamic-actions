@@ -1,4 +1,4 @@
-ci: fetch full history for acceptance
+test(omsk-domain): cover ident acceptance postgres gaps
 
 decodex:
   schema: decodex/commit/1
