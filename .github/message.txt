@@ -1,5 +1,5 @@
-ci: fetch ident acceptance parity base
+fix(omsk): unify V3 Snowflake ID generation
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-207
+  authority: DAM-218
