@@ -1,4 +1,4 @@
-ci: fetch parity evidence base for acceptance
+ci: fetch ident parity evidence in acceptance
 
 decodex:
   schema: decodex/commit/1
