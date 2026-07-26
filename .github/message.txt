@@ -1,8 +1,5 @@
-test(omsk): keep ident validation tests under file limit (#236)
+test(omsk-domain): isolate ident code postgres tests
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-201
-  pr: https://github.com/repotea-workspace/ztoms/pull/236
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#236
+  authority: DAM-208
