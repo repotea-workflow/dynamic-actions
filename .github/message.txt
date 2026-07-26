@@ -1,5 +1,8 @@
-test(omsk-domain): isolate ident code postgres tests
+test(omsk-domain): isolate ident code postgres tests (#237)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-208
+  pr: https://github.com/repotea-workspace/ztoms/pull/237
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#237
