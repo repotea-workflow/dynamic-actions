@@ -1,1 +1,1 @@
-Fix Windows platform checks and artifact contention
+Gate platform-specific management tests and CLI bundles
