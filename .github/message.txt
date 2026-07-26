@@ -1,1 +1,1 @@
-Fix Windows owner-only output locking
+Make owner-only lock guard thread safe
