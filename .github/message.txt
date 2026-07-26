@@ -1,8 +1,5 @@
-Add unified virtual printer output directory
+Close unified virtual printer output projection lifecycle
 
-Project route-private driver artifacts into a single per-user Spoolix
-output root with a durable registry, keeping route-private artifacts as
-the recovery and validation authority. Add platform-core contract, a
-reusable idempotent projector in platform-management-service, Tauri
-output-directory commands, and desktop UI that hides sink_kind and shows
-the unified output folder.
+Replace the single registry with per-job manifests, harden ownership and
+filesystem publish, keep projection running via Desktop tray/worker plus a
+per-user agent, and cover every enabled driver route with unified-output E2E.
