@@ -1,1 +1,1 @@
-Make owner-only lock guard thread safe
+Make persistence fault tests cross-platform
