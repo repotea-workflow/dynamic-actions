@@ -1,5 +1,5 @@
-fix(omsk): make ident validation cache claims atomic
+ci: fetch parity evidence commits for acceptance
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-217
+  authority: DAM-207
