@@ -45,7 +45,7 @@ jobs:
         run: just ci-fmt
 
   driver-route-check:
-    name: Driver route / ${{ matrix.route }}
+    name: Driver E2E / ${{ matrix.route }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     needs: [fmt]
@@ -140,7 +140,7 @@ jobs:
           }
           Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
 
-      - name: Run driver route check
+      - name: Run driver E2E
         shell: bash
         run: |
           case "${{ matrix.route }}" in
