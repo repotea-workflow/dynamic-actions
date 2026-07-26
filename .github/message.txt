@@ -1,3 +1,1 @@
-Clarify desktop virtual printer routes
-
-Clarify the desktop virtual printer route model, command protocol selection, driver output artifacts, and product semantics.
+Fix desktop startup with current nib
