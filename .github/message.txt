@@ -1,3 +1,1 @@
-Complete Spoolix driver E2E integration
-
-Squash merge PR #5 after dynamic driver E2E CI passed for Linux, macOS, and Windows routes.
+Clarify desktop virtual printer routes
