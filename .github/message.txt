@@ -1,1 +1,1 @@
-Show selected virtual printer details
+Fix desktop virtual printer lifecycle
