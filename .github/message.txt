@@ -1,1 +1,1 @@
-Update product context record
+Clarify virtual printer product semantics
