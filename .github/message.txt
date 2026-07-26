@@ -1,4 +1,4 @@
-ci: fetch required parity evidence for acceptance
+test(omsk-domain): cover ident transaction begin failure
 
 decodex:
   schema: decodex/commit/1
