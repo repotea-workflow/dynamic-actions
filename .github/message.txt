@@ -1,4 +1,4 @@
-test(ci): run ident code postgres acceptance
+ci: fetch full history for acceptance
 
 decodex:
   schema: decodex/commit/1
