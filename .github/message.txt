@@ -1,5 +1,8 @@
-fix(omsk): prevent duplicate IdentCode cache miss debits
+fix(omsk): prevent duplicate IdentCode cache miss debits (#238)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-203
+  pr: https://github.com/repotea-workspace/ztoms/pull/238
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#238
