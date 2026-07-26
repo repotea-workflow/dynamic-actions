@@ -1,5 +1,8 @@
-fix(omsk): debit selected ident financial row
+fix(omsk): debit selected ident financial row (#241)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-206
+  pr: https://github.com/repotea-workspace/ztoms/pull/241
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#241
