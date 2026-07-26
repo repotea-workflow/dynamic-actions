@@ -1,1 +1,1 @@
-Fix Unix mode types on macOS
+Fix Windows platform checks and artifact contention
