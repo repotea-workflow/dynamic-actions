@@ -1,4 +1,4 @@
-ci: use backend acceptance gate for DAM-207
+ci: fetch current parity evidence commits
 
 decodex:
   schema: decodex/commit/1
