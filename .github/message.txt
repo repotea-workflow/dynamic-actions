@@ -1,8 +1,5 @@
-fix(omsk): debit selected ident financial row (#241)
+test(ci): run ident code postgres acceptance
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-206
-  pr: https://github.com/repotea-workspace/ztoms/pull/241
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#241
+  authority: DAM-207
