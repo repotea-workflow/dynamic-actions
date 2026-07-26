@@ -1,1 +1,8 @@
-Fix desktop virtual printer lifecycle
+Add unified virtual printer output directory
+
+Project route-private driver artifacts into a single per-user Spoolix
+output root with a durable registry, keeping route-private artifacts as
+the recovery and validation authority. Add platform-core contract, a
+reusable idempotent projector in platform-management-service, Tauri
+output-directory commands, and desktop UI that hides sink_kind and shows
+the unified output folder.
