@@ -1,1 +1,1 @@
-Gate platform-specific management tests and CLI bundles
+Fix clean cross-platform CI setup
