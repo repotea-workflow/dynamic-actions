@@ -1,4 +1,4 @@
-test(omsk-domain): cover ident acceptance postgres gaps
+ci: stabilize DAM-207 acceptance workflow
 
 decodex:
   schema: decodex/commit/1
