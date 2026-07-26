@@ -1,8 +1,5 @@
-fix(omsk): align HTTP shell oracle with active parity scope (#235)
+test(omsk): keep ident validation tests under file limit
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-160
-  pr: https://github.com/repotea-workspace/ztoms/pull/235
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#235
+  authority: DAM-201
