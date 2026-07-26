@@ -1,4 +1,4 @@
-ci: fetch all parity evidence for acceptance
+ci: fetch node oracle parity evidence for acceptance
 
 decodex:
   schema: decodex/commit/1
