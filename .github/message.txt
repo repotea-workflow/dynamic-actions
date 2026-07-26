@@ -1,1 +1,1 @@
-Fix clean cross-platform CI setup
+Fix Windows owner-only output locking
