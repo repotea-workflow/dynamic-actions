@@ -1,1 +1,1 @@
-Refine virtual printer workspace layout
+Show selected virtual printer details
