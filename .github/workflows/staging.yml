@@ -138,10 +138,6 @@ jobs:
           lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
           lpstat -r
 
-      - name: Prepare macOS privileged route authority
-        if: ${{ matrix.route == 'macos.cups' }}
-        run: just ci-setup-macos-privileged-route-authority
-
       - name: Prepare Windows Spoolix host anchor
         if: ${{ matrix.route == 'windows.spooler' }}
         shell: pwsh
@@ -160,7 +156,6 @@ jobs:
         run: |
           case "${{ matrix.route }}" in
             windows.spooler) export SPOOLIX_WINDOWS_SPOOLER_E2E_REQUIRED=1 ;;
-            macos.cups) export SPOOLIX_MACOS_CUPS_E2E_REQUIRED=1 ;;
             linux.printer-application) export SPOOLIX_LINUX_PA_E2E_REQUIRED=1 ;;
           esac
           just ci-driver-route "${{ matrix.route }}"
