@@ -1,1 +1,1 @@
-Fix cross-platform oracle CI prerequisites
+Fix strict platform CI lints
