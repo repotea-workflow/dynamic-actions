@@ -1,13 +1,1 @@
-fix(omsk): enforce V3 Snowflake switch readiness (#245)
-
-* fix(omsk): enforce V3 Snowflake switch readiness
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-219
-
-* fix(ci): tag images with ztoms source SHA
-
-decodex:
-  schema: decodex/commit/1
-  authority: DAM-219
+fix(omsk): archive all GitOps verifier inputs
