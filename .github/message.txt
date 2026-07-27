@@ -1,1 +1,6 @@
-Make persistence fault tests cross-platform
+Honor named durable locks and strengthen Windows CI evidence
+
+Use the caller-supplied lock file name (projection.lock vs
+virtual-printers.lock), keep a legacy companion during upgrades, add
+cross-process lock coverage, run win32-security tests in Windows CI, and
+document Node/npm prerequisites for just test/check/clippy.
