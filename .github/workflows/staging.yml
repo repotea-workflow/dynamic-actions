@@ -193,6 +193,11 @@ jobs:
       - name: Install just
         uses: taiki-e/install-action@just
 
+      - name: Install Desktop system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libayatana-appindicator3-dev libdbus-1-dev libgtk-3-dev librsvg2-dev libwebkit2gtk-4.1-dev pkg-config
+
       - name: Install Node dependencies
         shell: bash
         run: npm ci
@@ -282,6 +287,12 @@ jobs:
 
       - name: Install just
         uses: taiki-e/install-action@just
+
+      - name: Install Linux oracle build dependencies
+        if: ${{ runner.os == 'Linux' }}
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev pkg-config
 
       - name: Run route oracle scaffolding
         shell: bash

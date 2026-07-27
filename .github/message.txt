@@ -1,1 +1,1 @@
-Fix Linux host oracle execution and formatting
+Fix cross-platform oracle CI prerequisites
