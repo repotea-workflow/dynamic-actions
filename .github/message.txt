@@ -1,1 +1,1 @@
-Add production Linux CUPS route oracle
+Run Linux CUPS oracle candidates in CI
