@@ -4,10 +4,23 @@ on:
   push:
     tags:
       - "v*-ztoms"
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Manual production workflow mode"
+        required: true
+        default: "build-only"
+        type: choice
+        options:
+          - "build-only"
 
 env:
   DOCKER_REGISTRY: ghcr.io
   DOCKER_REGISTRY_UHUB: uhub.service.ucloud.cn
+
+concurrency:
+  group: ztoms-production-release
+  cancel-in-progress: false
 
 permissions:
   actions: write
@@ -15,9 +28,45 @@ permissions:
   packages: write
 
 jobs:
+  acceptance:
+    name: Acceptance
+    runs-on: ubuntu-latest
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+
+      - name: Fetch parity evidence commits
+        run: git fetch origin f50dc9589eb65b966e8c5f59718bf8ddca3c470d 3f5337d588c35976d4a719700ace1b683c7c1a8a 547760d200d26356d7ebf1a167e43d31e15c713a dac3e7ef4bfd0f2160059c7c83b001b8b79eeeb9 f4b96317d98136d31ec5f778ae28a39784316797 fc88764d82b837e557438b5403255dcb636c8d3e 4aecb971c04971a38525639af8fd7fc7ad642530 ebc23fb9f13705aaa457aff1e3ba748d95d81db4 a442ecebd3920cd03839f877d0cedf15a0b006b1 91867a13ff9f94d4378443f2171be99f07d472c1 478c83182121dfb770a3c913284d82dae4c59aa2 0e2a01f43695013d8706fa32e4030fa0b776e47a 8b7f93e72244d149248504cd5a28617669e33ecf d52273282c6e76a9ff7caffe03fb505ffb064532 f2560e1fd3cdfdb9dbc5747addde91e56686087a 6168ed2c83999f2a269f239a2994e247fde12e2a facc3c940bc797dfbfc367c88c3a93acf4caba6f 0c5dd7ffea419343b73e14e26b3ece827a37da00 3f12f96cb4226806862ef0a2a9111292ae83ade6 4e97d317c00f0cff5244baf6351cbf35eefaaa38
+
+      - name: Set source SHA
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+      - name: Install just
+        run: cargo install just --locked
+
+      - name: Run acceptance
+        run: just acceptance
+
   build-backend:
     name: Build backend
     runs-on: ubuntu-latest
+    needs:
+      - acceptance
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
@@ -29,7 +78,9 @@ jobs:
           ref_file: .github/ref.txt
 
       - name: Set source SHA
-        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ needs.acceptance.outputs.source_sha }}"
+          echo "SOURCE_SHA=${{ needs.acceptance.outputs.source_sha }}" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
@@ -38,13 +89,18 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
       - name: Set image tags
         id: tags
         run: |
           echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-backend:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "ghcr_latest=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-backend:latest" >> $GITHUB_OUTPUT
           echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "uhub_latest=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend:latest" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -53,34 +109,34 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsk-pompeii.Dockerfile
           platforms: linux/amd64
+          provenance: true
           tags: |
             ${{ steps.tags.outputs.ghcr_sha }}
-            ${{ steps.tags.outputs.ghcr_latest }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            set -euo pipefail
-            echo "${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}" | docker login ${{ env.DOCKER_REGISTRY_UHUB }} -u "${{ secrets.CR_UHUB_USERNAME_ZTOKR }}" --password-stdin
-            docker pull ${{ steps.tags.outputs.ghcr_sha }}
-            docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_sha }}
-            docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_latest }}
-            docker push ${{ steps.tags.outputs.uhub_sha }}
-            docker push ${{ steps.tags.outputs.uhub_latest }}
+      - name: Verify backend registry manifests
+        run: |
+          python3 scripts/omsk_gitops_switch_readiness.py \
+            --registry-image "${{ steps.tags.outputs.ghcr_sha }}" \
+            --registry-image "${{ steps.tags.outputs.uhub_sha }}" \
+            --require-registry-provenance
 
   build-web:
     name: Build web
     runs-on: ubuntu-latest
+    needs:
+      - acceptance
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
@@ -92,7 +148,9 @@ jobs:
           ref_file: .github/ref.txt
 
       - name: Set source SHA
-        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ needs.acceptance.outputs.source_sha }}"
+          echo "SOURCE_SHA=${{ needs.acceptance.outputs.source_sha }}" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
@@ -101,13 +159,18 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
       - name: Set image tags
         id: tags
         run: |
           echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-web:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "ghcr_latest=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-web:latest" >> $GITHUB_OUTPUT
           echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "uhub_latest=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web:latest" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -116,35 +179,31 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsk-control-web.Dockerfile
           platforms: linux/amd64
+          provenance: true
           tags: |
             ${{ steps.tags.outputs.ghcr_sha }}
-            ${{ steps.tags.outputs.ghcr_latest }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            set -euo pipefail
-            echo "${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}" | docker login ${{ env.DOCKER_REGISTRY_UHUB }} -u "${{ secrets.CR_UHUB_USERNAME_ZTOKR }}" --password-stdin
-            docker pull ${{ steps.tags.outputs.ghcr_sha }}
-            docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_sha }}
-            docker tag ${{ steps.tags.outputs.ghcr_sha }} ${{ steps.tags.outputs.uhub_latest }}
-            docker push ${{ steps.tags.outputs.uhub_sha }}
-            docker push ${{ steps.tags.outputs.uhub_latest }}
+      - name: Verify web registry manifests
+        run: |
+          python3 scripts/omsk_gitops_switch_readiness.py \
+            --registry-image "${{ steps.tags.outputs.ghcr_sha }}" \
+            --registry-image "${{ steps.tags.outputs.uhub_sha }}" \
+            --require-registry-provenance
 
   deploy-app:
     name: Deploy App
     runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     needs:
+      - acceptance
       - build-backend
       - build-web
     steps:
@@ -158,7 +217,9 @@ jobs:
           ref_file: .github/ref.txt
 
       - name: Set source SHA
-        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ needs.acceptance.outputs.source_sha }}"
+          echo "SOURCE_SHA=${{ needs.acceptance.outputs.source_sha }}" >> "$GITHUB_ENV"
 
       - name: Deploy
         uses: repotea-workspace/kangumi/github-actions/gitops-deploy@main
@@ -171,7 +232,45 @@ jobs:
           changes: |
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
-                "ztomsV3.images.backend": "${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend:sha-${{ env.SOURCE_SHA }}",
-                "ztomsV3.images.web": "${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web:sha-${{ env.SOURCE_SHA }}"
+                "ztomsV3.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
+                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}"
               }
             }
+
+      - name: Resolve deployed GitOps revision
+        run: echo "EXPECTED_GITOPS_REVISION=$(git -C gitops-repo rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Wait for Argo Synced Healthy
+        run: |
+          server="${{ secrets.ARGOCD_FES_SERVER }}"
+          if [[ "$server" != http://* && "$server" != https://* ]]; then
+            server="https://${server}"
+          fi
+          deadline=$((SECONDS + 600))
+          while (( SECONDS < deadline )); do
+            status="$(
+              curl --fail --show-error --silent \
+                --header "Authorization: Bearer ${{ secrets.ARGOCD_FES_API_TOKEN }}" \
+                "${server}/api/v1/applications/work-production-ztoms-ula"
+            )"
+            sync="$(jq -r '.status.sync.status // ""' <<< "$status")"
+            health="$(jq -r '.status.health.status // ""' <<< "$status")"
+            revision="$(jq -r '.status.sync.revision // ""' <<< "$status")"
+            images="$(jq -r '.status.summary.images[]? // empty' <<< "$status")"
+            backend_seen="$(grep -Fxc "${{ needs.build-backend.outputs.uhub_image }}" <<< "$images" || true)"
+            web_seen="$(grep -Fxc "${{ needs.build-web.outputs.uhub_image }}" <<< "$images" || true)"
+            if [[ "$sync" == "Synced" && "$health" == "Healthy" && "$revision" == "$EXPECTED_GITOPS_REVISION" && "$backend_seen" == "1" && "$web_seen" == "1" ]]; then
+              echo "Argo application Synced Healthy at revision ${revision}"
+              exit 0
+            fi
+            echo "Waiting for Argo application: sync=${sync:-unknown} health=${health:-unknown} revision=${revision:-unknown}"
+            sleep 10
+          done
+          echo "Timed out waiting for Argo application Synced Healthy" >&2
+          exit 1
+
+      - name: Production smoke
+        run: |
+          curl --fail --show-error --silent --max-time 20 https://omsk-cusco.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsk-roman.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsk-api.ztokr.com/ >/dev/null

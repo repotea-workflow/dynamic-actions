@@ -1,1 +1,5 @@
-fix(omsk): archive all GitOps verifier inputs (#246)
+fix(ci): close release evidence review gaps
+
+decodex:
+  schema: decodex/commit/1
+  authority: DAM-220
