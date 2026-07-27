@@ -1,5 +1,4 @@
-Harden unified virtual-printer output projection and CI honesty.
+Add shared GitHub Actions host E2E oracle harness.
 
-Receipt-aware layout, durable projection journals, typed secure-fs errors,
-fail-closed Desktop capabilities, and route coverage/oracle scaffolding so
-same-day reinstalls and durability retries no longer corrupt history.
+Introduce spoolix-route-host-oracle for real OS print-path adapters that
+terminate into loopback/capture sinks, without requiring physical printers.
