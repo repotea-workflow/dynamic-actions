@@ -165,6 +165,11 @@ jobs:
           esac
           just ci-driver-route "${{ matrix.route }}"
 
+      - name: Teardown macOS CI harness
+        if: ${{ always() && matrix.route == 'macos.cups' }}
+        shell: bash
+        run: bash .github/scripts/teardown-macos-ci-harness.sh
+
   # P2-10: Desktop typecheck + Vitest once on Ubuntu (do not matrix across OS).
   desktop-check:
     name: Desktop check
@@ -298,6 +303,56 @@ jobs:
           # Claimed routes must execute; pending routes retain the honest skip path.
           SPOOLIX_ROUTE_ORACLE_REQUIRED: ${{ (matrix.route == 'linux.cups' || matrix.route == 'linux.printer-application') && '1' || '0' }}
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
+
+  # Candidate proof runs independently of two_page_oracle=false. Promotion is
+  # allowed only after all three fresh profile jobs are green.
+  macos-cups-candidate-oracle:
+    name: macOS CUPS candidate / ${{ matrix.profile }}
+    runs-on: macos-latest
+    timeout-minutes: 30
+    needs: [fmt]
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [tspl, cpcl, escpos]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Ensure macOS CUPS is running
+        shell: bash
+        run: |
+          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
+          lpstat -r
+
+      - name: Run production-facade candidate oracle
+        shell: bash
+        env:
+          SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
+        run: just ci-macos-cups-oracle "${{ matrix.profile }}"
+
+      - name: Teardown macOS CI harness
+        if: ${{ always() }}
+        shell: bash
+        run: bash .github/scripts/teardown-macos-ci-harness.sh
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}
