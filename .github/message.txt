@@ -1,1 +1,1 @@
-Fix virtual printer output validation gates
+Scope macOS receipt validation dependencies
