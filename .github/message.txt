@@ -1,1 +1,1 @@
-Run Linux CUPS oracle candidates in CI
+Fix fresh-host cross-platform CI checks
