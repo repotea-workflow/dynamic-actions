@@ -1,3 +1,1 @@
-Keep dual projection locks held and close review CI gaps.
-
-Hold both projection.lock and virtual-printers.lock for the upgrade window without unlinking the legacy path, add Windows cross-process lock coverage, and align facade/docs expectations so workspace tests match the Just CI contract.
+Fix Windows lock CI coverage
