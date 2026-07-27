@@ -1,1 +1,1 @@
-Bind macOS CI signing authority
+Speed up AirPrint capacity test
