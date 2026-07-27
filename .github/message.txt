@@ -1,5 +1,8 @@
-fix(ci): close release evidence review gaps
+fix(ci): close release evidence review gaps (#247)
 
 decodex:
   schema: decodex/commit/1
   authority: DAM-220
+  pr: https://github.com/repotea-workspace/ztoms/pull/247
+  merge_method: squash
+  carrier: github:repotea-workspace/ztoms#247
