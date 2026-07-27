@@ -1,1 +1,5 @@
-Scope macOS receipt validation dependencies
+Harden unified virtual-printer output projection and CI honesty.
+
+Receipt-aware layout, durable projection journals, typed secure-fs errors,
+fail-closed Desktop capabilities, and route coverage/oracle scaffolding so
+same-day reinstalls and durability retries no longer corrupt history.

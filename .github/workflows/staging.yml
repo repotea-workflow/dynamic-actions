@@ -44,8 +44,13 @@ jobs:
       - name: Run fmt checks
         run: just ci-fmt
 
+  # Virtual-printer / host-queue route smoke (P1-08: ci-virtual-printer-route-e2e).
+  # Direct transports (linux.ipp-usb, windows.winusb) are routed through
+  # ci-direct-transport-smoke via the shared ci-driver-route alias.
+  # This job is NOT the two-page oracle (see ci-linux-cups-oracle /
+  # ci-windows-spooler-oracle scaffolding).
   driver-route-check:
-    name: Driver E2E / ${{ matrix.route }}
+    name: Route smoke / ${{ matrix.route }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
     needs: [fmt]
@@ -140,7 +145,7 @@ jobs:
           }
           Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
 
-      - name: Run driver E2E
+      - name: Run route smoke
         shell: bash
         run: |
           case "${{ matrix.route }}" in
@@ -149,6 +154,108 @@ jobs:
             linux.printer-application) export SPOOLIX_LINUX_PA_E2E_REQUIRED=1 ;;
           esac
           just ci-driver-route "${{ matrix.route }}"
+
+  # P2-10: Desktop typecheck + Vitest once on Ubuntu (do not matrix across OS).
+  desktop-check:
+    name: Desktop check
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [fmt]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Install Node dependencies
+        shell: bash
+        run: npm ci
+
+      - name: Run desktop check
+        shell: bash
+        run: just desktop-check
+
+  # P1-06: Route × profile oracle matrix scaffolding.
+  # Does NOT set SPOOLIX_ROUTE_ORACLE_REQUIRED=1 — stays green while two_page_oracle
+  # remains false in the coverage manifest (skip path). Flip REQUIRED only after
+  # real host oracles claim proof.
+  route-oracle-matrix:
+    name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
+    runs-on: ${{ matrix.os }}
+    timeout-minutes: 20
+    needs: [fmt]
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - route: linux.cups
+            profile: tspl
+            os: ubuntu-latest
+          - route: linux.cups
+            profile: cpcl
+            os: ubuntu-latest
+          - route: linux.cups
+            profile: escpos
+            os: ubuntu-latest
+          - route: windows.spooler
+            profile: tspl
+            os: windows-latest
+          - route: windows.spooler
+            profile: cpcl
+            os: windows-latest
+          - route: windows.spooler
+            profile: escpos
+            os: windows-latest
+          - route: macos.cups
+            profile: tspl
+            os: macos-latest
+          - route: macos.cups
+            profile: cpcl
+            os: macos-latest
+          - route: macos.cups
+            profile: escpos
+            os: macos-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Run route oracle scaffolding
+        shell: bash
+        run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}
