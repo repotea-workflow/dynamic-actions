@@ -206,12 +206,9 @@ jobs:
         shell: bash
         run: just desktop-check
 
-  # P1-06 / T11: Route × profile oracle matrix scaffolding.
-  # Does NOT set SPOOLIX_ROUTE_ORACLE_REQUIRED=1 — stays green while two_page_oracle
-  # remains false in the coverage manifest (skip path → exit 0).
-  # Optional expected-blocked mode: export SPOOLIX_ROUTE_ORACLE_REQUIRED=1 to make
-  # the same matrix fail closed with exit 101 until two_page_oracle is claimed.
-  # Flip REQUIRED only after real host oracles claim proof.
+  # P1-06 / T11: Route × profile oracle matrix.
+  # Claimed routes run with SPOOLIX_ROUTE_ORACLE_REQUIRED=1; pending routes keep
+  # the explicit two_page_oracle=false skip until their host proof is promoted.
   route-oracle-matrix:
     name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
     runs-on: ${{ matrix.os }}
@@ -292,57 +289,15 @@ jobs:
         if: ${{ runner.os == 'Linux' }}
         run: |
           sudo apt-get update
-          sudo apt-get install -y libdbus-1-dev pkg-config
-
-      - name: Run route oracle scaffolding
-        shell: bash
-        # Leave SPOOLIX_ROUTE_ORACLE_REQUIRED unset (green skip). For an
-        # expected-blocked check, set =1 and expect exit 101 while
-        # two_page_oracle remains false.
-        run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
-
-  # Runs the complete production-facade proof before linux.cups is promoted in
-  # the coverage manifest. Candidate success is evidence for promotion, not a
-  # claimed route while two_page_oracle remains false.
-  linux-cups-oracle-candidate:
-    name: Route oracle candidate / linux.cups / ${{ matrix.profile }}
-    runs-on: ubuntu-latest
-    timeout-minutes: 20
-    needs: [fmt]
-    strategy:
-      fail-fast: false
-      matrix:
-        profile: [tspl, cpcl, escpos]
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
-
-      - name: Authorize private Git dependencies
-        shell: bash
-        env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
-        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install just
-        uses: taiki-e/install-action@just
-
-      - name: Install Linux CUPS oracle dependencies
-        run: |
-          sudo apt-get update
           sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils libdbus-1-dev pkg-config
           sudo systemctl start cups || sudo service cups start
 
-      - name: Run production-facade route oracle candidate
-        run: just ci-linux-cups-oracle "${{ matrix.profile }}"
+      - name: Run route oracle
+        shell: bash
+        env:
+          # Claimed routes must execute; pending routes retain the honest skip path.
+          SPOOLIX_ROUTE_ORACLE_REQUIRED: ${{ matrix.route == 'linux.cups' && '1' || '0' }}
+        run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}

@@ -1,1 +1,1 @@
-Fix zero-queue CUPS availability checks
+Promote Linux CUPS route oracle coverage
