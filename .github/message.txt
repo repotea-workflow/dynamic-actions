@@ -1,1 +1,1 @@
-Fix strict platform CI lints
+Fix cross-platform CI target checks
