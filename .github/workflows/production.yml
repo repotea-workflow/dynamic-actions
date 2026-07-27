@@ -299,6 +299,47 @@ jobs:
           SPOOLIX_ROUTE_ORACLE_REQUIRED: ${{ matrix.route == 'linux.cups' && '1' || '0' }}
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
+  # Candidate proof for the production management facade. Coverage remains
+  # false until all three profiles pass here on fresh Ubuntu hosts.
+  linux-pa-oracle-candidate:
+    name: Route oracle candidate / linux.printer-application / ${{ matrix.profile }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [fmt]
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [tspl, cpcl, escpos]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Install Linux PA oracle dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y cups-ipp-utils libdbus-1-dev pkg-config
+
+      - name: Run production-facade PA oracle candidate
+        run: just ci-linux-pa-oracle "${{ matrix.profile }}"
+
   platform-check:
     name: Platform check / ${{ matrix.platform }}
     runs-on: ${{ matrix.os }}
