@@ -1,8 +1,5 @@
-ci: fetch framework parity evidence in acceptance (#242)
+fix(ci): tag images with ztoms source SHA
 
 decodex:
   schema: decodex/commit/1
-  authority: DAM-207
-  pr: https://github.com/repotea-workspace/ztoms/pull/242
-  merge_method: squash
-  carrier: github:repotea-workspace/ztoms#242
+  authority: DAM-219
