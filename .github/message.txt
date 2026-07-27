@@ -1,5 +1,1 @@
-Wire host E2E oracles across Linux, macOS, and Windows routes.
-
-Add Linux CUPS/PA two-page×3-profile adapters on the shared GHA harness,
-expand CI oracle matrix and coverage host_e2e fields, and land fail-closed
-Windows Unidrv/IPP/PSA stubs without claiming product create.
+Fix Linux host oracle execution and formatting
