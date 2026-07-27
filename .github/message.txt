@@ -1,6 +1,3 @@
-Honor named durable locks and strengthen Windows CI evidence
+Keep dual projection locks held and close review CI gaps.
 
-Use the caller-supplied lock file name (projection.lock vs
-virtual-printers.lock), keep a legacy companion during upgrades, add
-cross-process lock coverage, run win32-security tests in Windows CI, and
-document Node/npm prerequisites for just test/check/clippy.
+Hold both projection.lock and virtual-printers.lock for the upgrade window without unlinking the legacy path, add Windows cross-process lock coverage, and align facade/docs expectations so workspace tests match the Just CI contract.
