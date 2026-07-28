@@ -1,1 +1,9 @@
-feat(support): add default shell import export menu
+feat(support): add Plate SDK entry contract (#7)
+
+* feat(support): add Plate SDK entry contract
+
+* fix(support): keep Plate session stable across config updates
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
