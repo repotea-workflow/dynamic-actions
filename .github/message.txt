@@ -1,1 +1,1 @@
-Test macOS CUPS removal evidence bindings
+Handle CUPS IPP continue handshakes
