@@ -1,1 +1,1 @@
-Harden host candidate CI coverage
+Harden cross-platform host CI batch

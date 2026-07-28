@@ -52,8 +52,7 @@ jobs:
   driver-route-check:
     name: Route smoke / ${{ matrix.category }} / ${{ matrix.route }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
-    needs: [fmt]
+    timeout-minutes: ${{ matrix.timeout }}
     strategy:
       fail-fast: false
       matrix:
@@ -61,30 +60,43 @@ jobs:
           - route: linux.cups
             category: virtual_printer
             os: ubuntu-latest
+            timeout: 20
           - route: linux.printer-application
             category: virtual_printer
             os: ubuntu-latest
+            timeout: 20
           - route: linux.ipp-usb
             category: direct_transport
             os: ubuntu-latest
+            timeout: 20
           - route: macos.ipp-airprint
             category: virtual_printer
             os: macos-latest
+            timeout: 20
+          - route: macos.cups
+            category: virtual_printer
+            os: macos-latest
+            timeout: 20
           - route: windows.spooler
             category: virtual_printer
             os: windows-latest
+            timeout: 40
           - route: windows.unidrv
             category: virtual_printer
             os: windows-latest
+            timeout: 40
           - route: windows.ipp
             category: virtual_printer
             os: windows-latest
+            timeout: 40
           - route: windows.winusb
             category: direct_transport
             os: windows-latest
+            timeout: 40
           - route: windows.print-support-app
             category: virtual_printer
             os: windows-latest
+            timeout: 40
     steps:
       - uses: actions/checkout@v6
 
@@ -156,7 +168,6 @@ jobs:
     name: Desktop check
     runs-on: ubuntu-latest
     timeout-minutes: 20
-    needs: [fmt]
     steps:
       - uses: actions/checkout@v6
 
@@ -200,7 +211,6 @@ jobs:
     name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: 20
-    needs: [fmt]
     strategy:
       fail-fast: false
       matrix:
@@ -265,7 +275,6 @@ jobs:
     name: macOS CUPS candidate / ${{ matrix.profile }}
     runs-on: macos-latest
     timeout-minutes: 30
-    needs: [fmt]
     strategy:
       fail-fast: false
       matrix:
@@ -318,8 +327,7 @@ jobs:
   windows-spooler-raw-product-candidate:
     name: Windows Spooler RAW product candidate / ${{ matrix.profile }}
     runs-on: windows-latest
-    timeout-minutes: 20
-    needs: [fmt]
+    timeout-minutes: 40
     strategy:
       fail-fast: false
       matrix:
@@ -373,8 +381,7 @@ jobs:
   windows-ipp-host-spike-candidate:
     name: Windows IPP real-host candidate spike
     runs-on: windows-latest
-    timeout-minutes: 20
-    needs: [fmt]
+    timeout-minutes: 40
     steps:
       - uses: actions/checkout@v6
 
@@ -416,7 +423,7 @@ jobs:
   platform-check:
     name: Platform check / ${{ matrix.platform }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: ${{ matrix.timeout }}
     strategy:
       fail-fast: false
       matrix:
@@ -424,12 +431,15 @@ jobs:
           - platform: linux
             os: ubuntu-latest
             command: ci-check-linux
+            timeout: 20
           - platform: windows
             os: windows-latest
             command: ci-check-windows
+            timeout: 60
           - platform: macos
             os: macos-latest
             command: ci-check-macos
+            timeout: 20
     steps:
       - uses: actions/checkout@v6
 
