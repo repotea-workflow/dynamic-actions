@@ -1,1 +1,1 @@
-feat(support): own export file downloads
+fix(support): honor shell platform services config
