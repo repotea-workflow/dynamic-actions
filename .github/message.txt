@@ -1,1 +1,1 @@
-Expand host E2E candidate coverage
+Fix host E2E candidate failures
