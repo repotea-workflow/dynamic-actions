@@ -1,1 +1,1 @@
-Separate driver output generation from delivery
+Harden virtual printer artifact recovery
