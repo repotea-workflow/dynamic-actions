@@ -1,1 +1,1 @@
-fix(editor): harden document replacement lifecycle
+Add Plate editor host bridge
