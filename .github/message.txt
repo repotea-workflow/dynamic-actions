@@ -1,1 +1,1 @@
-Handle transient platform errors in CLI
+Expose macOS CUPS constructor failures
