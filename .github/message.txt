@@ -1,17 +1,5 @@
-feat(support): register image bytes without live data urls (#9)
+Merge remote-tracking branch 'origin/main' into gt/sdk-configured-plate-phase-4
 
-* feat(support): add Plate SDK entry contract
-
-* fix(support): keep Plate session stable across config updates
-
-* feat(editor): replace documents without swapping controller
-
-* feat(support): register image bytes without live data urls
-
-* fix(editor): harden document replacement lifecycle
-
-* feat(support): resolve local image bytes through runtime assets
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+# Conflicts:
+#	packages/plate_editor_support/lib/src/plate.dart
+#	packages/plate_editor_support/test/plate_boundary_support_test.dart
