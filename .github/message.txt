@@ -1,10 +1,1 @@
-Merge remote-tracking branch 'origin/main' into gt/sdk-template-io-phase-7
-
-# Conflicts:
-#	apps/plate_web_example/test/web_example_smoke_test.dart
-#	apps/plate_web_example/test/widget_boundary_guard_test.dart
-#	packages/plate_editor_support/lib/plate_editor_support.dart
-#	packages/plate_editor_support/lib/src/plate_config.dart
-#	packages/plate_editor_support/lib/src/plate_default_editor_shell.dart
-#	packages/plate_editor_support/lib/src/plate_platform_services.dart
-#	packages/plate_editor_support/test/plate_boundary_support_test.dart
+fix(support): align rust export guidance
