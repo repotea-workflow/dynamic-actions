@@ -1,1 +1,1 @@
-Revalidate macOS CUPS finalized retries
+Fix cross-platform IPP CI diagnostics
