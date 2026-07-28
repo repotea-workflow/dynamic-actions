@@ -1,1 +1,3 @@
-ci: move check workflow to dyn actions
+Merge pull request #2 from boxliy/gt/default-editor-runtime
+
+Add managed default editor runtime
