@@ -1,1 +1,1 @@
-Use macOS CUPS profile defaults in validation
+Complete macOS CUPS IPP job lifecycle
