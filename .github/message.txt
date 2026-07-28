@@ -1,1 +1,1 @@
-Use the macOS CUPS scheduler socket
+Bind the macOS CUPS filter to its queue
