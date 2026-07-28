@@ -1,1 +1,1 @@
-main
+gt/sdk-thin-example-phase-8
