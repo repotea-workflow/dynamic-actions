@@ -1,1 +1,1 @@
-fix(support): keep Plate session stable across config updates
+feat(editor): replace documents without swapping controller
