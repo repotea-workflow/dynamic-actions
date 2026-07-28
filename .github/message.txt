@@ -1,1 +1,1 @@
-Allow management to load private macOS runtime authority
+Bind macOS CUPS projection to management principal
