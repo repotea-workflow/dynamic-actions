@@ -1,1 +1,1 @@
-Refine macOS CUPS helper diagnostics
+Format macOS CUPS diagnostics test
