@@ -1,1 +1,1 @@
-feat(support): register image bytes without live data urls
+fix(editor): harden document replacement lifecycle
