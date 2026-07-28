@@ -1,1 +1,1 @@
-Add media options to macOS CUPS PPDs
+Serve macOS CUPS IPP control requests
