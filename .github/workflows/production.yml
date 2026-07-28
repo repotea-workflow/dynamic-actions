@@ -467,3 +467,8 @@ jobs:
       - name: Run platform check
         shell: bash
         run: just "${{ matrix.command }}"
+
+      - name: Run root-owned macOS package authority tests
+        if: ${{ matrix.platform == 'macos' }}
+        shell: bash
+        run: just ci-macos-package-root-authority-tests

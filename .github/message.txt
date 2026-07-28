@@ -1,1 +1,1 @@
-Harden macOS and Windows host candidates
+Fix macOS grants and Windows IPP mapping
