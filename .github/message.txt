@@ -1,1 +1,1 @@
-feat(support): own default inspector panel shell
+feat(support): own default image inspector controls
