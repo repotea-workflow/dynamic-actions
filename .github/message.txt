@@ -1,1 +1,1 @@
-Gracefully close rejected Windows IPP requests
+Allow management to load private macOS runtime authority
