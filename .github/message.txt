@@ -1,1 +1,1 @@
-feat(editor): replace documents without swapping controller
+feat(support): register image bytes without live data urls
