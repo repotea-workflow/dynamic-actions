@@ -1,1 +1,1 @@
-gt/sdk-managed-example
+main
