@@ -1,1 +1,1 @@
-Complete macOS CUPS IPP job lifecycle
+Revalidate macOS CUPS finalized retries
