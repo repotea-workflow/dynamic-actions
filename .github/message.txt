@@ -1,3 +1,1 @@
-Phase 8: reduce web example to SDK entry
-
-Squash merge Phase 8 web example contraction.
+test(support): align png builder platform contract
