@@ -1,3 +1,1 @@
-Add SDK default inspector support
-
-Move default inspector behavior into plate_editor_support and slim the web example property panel.
+feat(editor): move example runtime into support session

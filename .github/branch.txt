@@ -1,1 +1,1 @@
-main
+gt/sdk-runtime-example-thin
