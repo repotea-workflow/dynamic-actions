@@ -1,1 +1,1 @@
-gt/sdk-default-insert-phase-5
+gt/sdk-default-shell-phase-6

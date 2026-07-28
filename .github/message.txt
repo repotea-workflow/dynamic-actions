@@ -1,1 +1,1 @@
-refactor(example): remove legacy inspector sections
+feat(support): own default editor shell
