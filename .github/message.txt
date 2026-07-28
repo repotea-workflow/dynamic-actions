@@ -1,1 +1,1 @@
-feat(support): route shell image pickers
+feat(support): expose shell image pickers through config
