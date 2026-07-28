@@ -1,1 +1,3 @@
-feat(editor): add default canvas status overlay
+Merge pull request #3 from boxliy/gt/sdk-default-overlay-controls
+
+[codex] add default canvas status overlay
