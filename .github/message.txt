@@ -1,41 +1,10 @@
-Phase 6: move default editor shell into support (#13)
+Merge remote-tracking branch 'origin/main' into gt/sdk-template-io-phase-7
 
-* feat(support): add Plate SDK entry contract
-
-* fix(support): keep Plate session stable across config updates
-
-* feat(editor): replace documents without swapping controller
-
-* feat(support): register image bytes without live data urls
-
-* fix(editor): harden document replacement lifecycle
-
-* feat(support): resolve local image bytes through runtime assets
-
-* feat(support): configure managed editor from PlateConfig
-
-* feat(support): own default insert feature bar
-
-* feat(support): own default inspector panel shell
-
-* feat(support): own default image inspector controls
-
-* refactor(example): remove legacy inspector sections
-
-* feat(support): own default editor shell
-
-* feat(support): add default shell toolbar
-
-* feat(support): own default view settings
-
-* feat(support): route shell image pickers
-
-* feat(support): expose shell image pickers through config
-
-* feat(support): own default image source dialog
-
-* fix(support): honor shell platform services config
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+# Conflicts:
+#	apps/plate_web_example/test/web_example_smoke_test.dart
+#	apps/plate_web_example/test/widget_boundary_guard_test.dart
+#	packages/plate_editor_support/lib/plate_editor_support.dart
+#	packages/plate_editor_support/lib/src/plate_config.dart
+#	packages/plate_editor_support/lib/src/plate_default_editor_shell.dart
+#	packages/plate_editor_support/lib/src/plate_platform_services.dart
+#	packages/plate_editor_support/test/plate_boundary_support_test.dart
