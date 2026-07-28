@@ -1,1 +1,1 @@
-Test macOS CUPS projection without root
+Authorize macOS CUPS typed route hosts
