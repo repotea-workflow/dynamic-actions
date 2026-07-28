@@ -1,1 +1,1 @@
-feat(support): configure managed editor from PlateConfig
+feat(support): own default insert feature bar
