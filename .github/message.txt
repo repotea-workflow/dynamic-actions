@@ -1,1 +1,1 @@
-Handle native macOS CUPS filter inputs
+Separate driver output generation from delivery
