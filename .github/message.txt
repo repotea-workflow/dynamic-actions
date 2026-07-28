@@ -1,3 +1,1 @@
-Add Plate editor host bridge (#10)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Merge branch 'gt/sdk-controller-session-phase-2' into gt/sdk-image-runtime-phase-3
