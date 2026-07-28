@@ -1,0 +1,1 @@
+ci: move check workflow to dyn actions
