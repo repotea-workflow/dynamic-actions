@@ -1,1 +1,1 @@
-Handle CUPS IPP continue handshakes
+Use the macOS CUPS scheduler socket
