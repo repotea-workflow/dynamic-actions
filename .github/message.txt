@@ -1,3 +1,1 @@
-Merge pull request #3 from boxliy/gt/sdk-default-overlay-controls
-
-[codex] add default canvas status overlay
+Add SDK default inspector support
