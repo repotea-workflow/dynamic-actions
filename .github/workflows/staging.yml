@@ -193,8 +193,9 @@ jobs:
         run: just desktop-check
 
   # P1-06 / T11: Route × profile oracle matrix.
-  # Claimed routes run with SPOOLIX_ROUTE_ORACLE_REQUIRED=1; pending routes keep
-  # the explicit two_page_oracle=false skip until their host proof is promoted.
+  # Only claimed routes belong in this formal matrix, and every entry runs with
+  # SPOOLIX_ROUTE_ORACLE_REQUIRED=1. Pending proofs use explicitly named
+  # candidate jobs instead of green skip entries.
   route-oracle-matrix:
     name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
     runs-on: ${{ matrix.os }}
@@ -222,24 +223,6 @@ jobs:
           - route: linux.printer-application
             profile: escpos
             os: ubuntu-latest
-          - route: windows.spooler
-            profile: tspl
-            os: windows-latest
-          - route: windows.spooler
-            profile: cpcl
-            os: windows-latest
-          - route: windows.spooler
-            profile: escpos
-            os: windows-latest
-          - route: macos.ipp-airprint
-            profile: tspl
-            os: macos-latest
-          - route: macos.ipp-airprint
-            profile: cpcl
-            os: macos-latest
-          - route: macos.ipp-airprint
-            profile: escpos
-            os: macos-latest
     steps:
       - uses: actions/checkout@v6
 
@@ -272,8 +255,8 @@ jobs:
       - name: Run route oracle
         shell: bash
         env:
-          # Claimed routes must execute; pending routes retain the honest skip path.
-          SPOOLIX_ROUTE_ORACLE_REQUIRED: ${{ (matrix.route == 'linux.cups' || matrix.route == 'linux.printer-application') && '1' || '0' }}
+          # Every entry in the formal oracle matrix is a claimed route and must execute.
+          SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
   # Candidate proof runs independently of two_page_oracle=false. Promotion is
@@ -327,6 +310,108 @@ jobs:
         run: |
           bash .github/scripts/teardown-macos-ci-harness.sh
           bash .github/scripts/teardown-macos-ci-harness.sh
+
+  # Product-route candidate only: runs the profile-specific Windows Spooler RAW
+  # host test on a disposable elevated runner before coverage promotion. A
+  # failing profile remains visible and does not cancel its peers. These jobs do
+  # not claim arbitrary-application E2E or production management unified output.
+  windows-spooler-raw-product-candidate:
+    name: Windows Spooler RAW product candidate / ${{ matrix.profile }}
+    runs-on: windows-latest
+    timeout-minutes: 20
+    needs: [fmt]
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [tspl, cpcl, escpos]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Confirm disposable elevated Windows runner
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows Spooler RAW product candidate requires an elevated administrator token"
+          }
+          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) {
+            Add-PrinterDriver -Name "Generic / Text Only"
+          }
+          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
+
+      - name: Run profile-specific product candidate
+        shell: bash
+        env:
+          SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
+          SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
+        run: just ci-windows-spooler-raw-product-candidate "${{ matrix.profile }}"
+
+  # Diagnostic candidate only: this proves that a disposable Windows runner can
+  # create an IPP queue and submit a real two-page GDI job into the loopback
+  # receiver. It does not claim driver dispatch, parsed pages, or route oracle
+  # coverage; the test itself requires and verifies that production remains
+  # fail-closed.
+  windows-ipp-host-spike-candidate:
+    name: Windows IPP real-host candidate spike
+    runs-on: windows-latest
+    timeout-minutes: 20
+    needs: [fmt]
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/spoolix
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Authorize private Git dependencies
+        shell: bash
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Confirm disposable elevated Windows runner
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows IPP host spike requires an elevated administrator token"
+          }
+
+      - name: Run real-host diagnostic spike
+        shell: bash
+        env:
+          SPOOLIX_WINDOWS_IPP_SPIKE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
+          SPOOLIX_WINDOWS_IPP_SPIKE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
+          SPOOLIX_WINDOWS_IPP_SPIKE_LEASE_ID: lease:github-actions-windows-ipp-spike
+        run: just ci-windows-ipp-host-spike-candidate
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}

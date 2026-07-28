@@ -1,1 +1,1 @@
-Bind macOS CUPS jobs to installed authority
+Expand host E2E candidate coverage
