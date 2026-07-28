@@ -1,1 +1,1 @@
-gt/sdk-default-shell-phase-6
+gt/sdk-template-io-phase-7-refresh
