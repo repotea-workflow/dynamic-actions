@@ -1,1 +1,1 @@
-feat(support): own default insert feature bar
+feat(support): own default inspector panel shell
