@@ -1,1 +1,1 @@
-Make macOS CUPS install authority restartable
+Test macOS CUPS projection without root
