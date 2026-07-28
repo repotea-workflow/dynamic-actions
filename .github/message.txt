@@ -1,1 +1,3 @@
-fix(support): align rust export guidance
+Phase 7: move template I/O platform services into support
+
+Squash merge Phase 7 template/import/export support ownership into SDK support.
