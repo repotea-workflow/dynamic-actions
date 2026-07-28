@@ -1,1 +1,1 @@
-Serve macOS CUPS IPP control requests
+Use macOS CUPS profile defaults in validation
