@@ -1,1 +1,1 @@
-Fix AirPrint fragmented request handling
+Gracefully close rejected Windows IPP requests
