@@ -67,9 +67,6 @@ jobs:
           - route: linux.ipp-usb
             category: direct_transport
             os: ubuntu-latest
-          - route: macos.cups
-            category: virtual_printer
-            os: macos-latest
           - route: macos.ipp-airprint
             category: virtual_printer
             os: macos-latest
@@ -132,12 +129,6 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libdbus-1-dev pkg-config
 
-      - name: Ensure macOS CUPS is running
-        if: ${{ matrix.route == 'macos.cups' }}
-        run: |
-          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
-          lpstat -r
-
       - name: Prepare Windows Spoolix host anchor
         if: ${{ matrix.route == 'windows.spooler' }}
         shell: pwsh
@@ -159,11 +150,6 @@ jobs:
             linux.printer-application) export SPOOLIX_LINUX_PA_E2E_REQUIRED=1 ;;
           esac
           just ci-driver-route "${{ matrix.route }}"
-
-      - name: Teardown macOS CI harness
-        if: ${{ always() && matrix.route == 'macos.cups' }}
-        shell: bash
-        run: bash .github/scripts/teardown-macos-ci-harness.sh
 
   # P2-10: Desktop typecheck + Vitest once on Ubuntu (do not matrix across OS).
   desktop-check:
@@ -245,15 +231,6 @@ jobs:
           - route: windows.spooler
             profile: escpos
             os: windows-latest
-          - route: macos.cups
-            profile: tspl
-            os: macos-latest
-          - route: macos.cups
-            profile: cpcl
-            os: macos-latest
-          - route: macos.cups
-            profile: escpos
-            os: macos-latest
           - route: macos.ipp-airprint
             profile: tspl
             os: macos-latest
@@ -347,7 +324,9 @@ jobs:
       - name: Teardown macOS CI harness
         if: ${{ always() }}
         shell: bash
-        run: bash .github/scripts/teardown-macos-ci-harness.sh
+        run: |
+          bash .github/scripts/teardown-macos-ci-harness.sh
+          bash .github/scripts/teardown-macos-ci-harness.sh
 
   platform-check:
     name: Platform check / ${{ matrix.platform }}

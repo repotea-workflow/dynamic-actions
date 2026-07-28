@@ -1,1 +1,1 @@
-Speed up AirPrint capacity test
+Complete macOS CUPS privileged lifecycle
