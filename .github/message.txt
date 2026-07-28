@@ -1,1 +1,1 @@
-feat(support): own default view settings
+feat(support): route shell image pickers
