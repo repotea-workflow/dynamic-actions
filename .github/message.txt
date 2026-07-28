@@ -1,1 +1,1 @@
-Merge branch 'gt/sdk-controller-session-phase-2' into gt/sdk-image-runtime-phase-3
+feat(support): configure managed editor from PlateConfig
