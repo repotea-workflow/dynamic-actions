@@ -1,1 +1,1 @@
-Fix AirPrint transaction lock creation race
+Handle streamed macOS CUPS print jobs
