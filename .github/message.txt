@@ -1,1 +1,1 @@
-feat(support): own default image inspector controls
+refactor(example): remove legacy inspector sections
