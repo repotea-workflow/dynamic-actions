@@ -1,1 +1,1 @@
-Bind the macOS CUPS filter to its queue
+Handle native macOS CUPS filter inputs
