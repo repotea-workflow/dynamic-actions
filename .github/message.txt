@@ -1,1 +1,1 @@
-Fix macOS grants and Windows IPP mapping
+Complete host candidate job identity flows
