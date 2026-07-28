@@ -1,1 +1,1 @@
-Serialize AirPrint artifact transactions
+Make macOS CUPS install authority restartable
