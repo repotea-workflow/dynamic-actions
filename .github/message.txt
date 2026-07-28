@@ -1,1 +1,1 @@
-Complete macOS CUPS privileged lifecycle
+Handle transient platform errors in CLI
