@@ -1,1 +1,1 @@
-Refine macOS CUPS admission diagnostics
+Bind macOS CUPS jobs to installed authority
