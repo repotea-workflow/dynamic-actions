@@ -1,4 +1,4 @@
-feat(editor): replace documents without swapping controller (#8)
+feat(support): register image bytes without live data urls (#9)
 
 * feat(support): add Plate SDK entry contract
 
@@ -6,7 +6,11 @@ feat(editor): replace documents without swapping controller (#8)
 
 * feat(editor): replace documents without swapping controller
 
+* feat(support): register image bytes without live data urls
+
 * fix(editor): harden document replacement lifecycle
+
+* feat(support): resolve local image bytes through runtime assets
 
 ---------
 
