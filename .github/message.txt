@@ -1,1 +1,1 @@
-Fix virtual printer roots across platforms
+Refine macOS CUPS helper diagnostics
