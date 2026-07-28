@@ -1,1 +1,1 @@
-Authorize macOS CUPS typed route hosts
+Validate macOS CUPS terminal evidence
