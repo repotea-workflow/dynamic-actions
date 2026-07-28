@@ -1,1 +1,3 @@
-test(support): align png builder platform contract
+Phase 9: stabilize SDK example boundary
+
+Squash merge Phase 9 stabilization.
