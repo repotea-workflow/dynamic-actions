@@ -1,1 +1,1 @@
-gt/plugin-default-inspector-section-renderers
+main
