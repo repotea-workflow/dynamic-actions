@@ -1,1 +1,3 @@
 fix(editor): reset viewport on document replace
+
+Reset dynamic viewport state when replacing documents in place while preserving caller-configured zoom limits. Also removes web formula script loader JS interop runtime checks so the web build wasm dry run succeeds.
