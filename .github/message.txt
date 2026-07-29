@@ -1,1 +1,1 @@
-fix(support): hide internal Plate runtime config
+fix(support): complete Plate config public type exports
