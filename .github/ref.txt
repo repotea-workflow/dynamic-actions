@@ -1,1 +1,1 @@
-main
+gt/sdk-text-resize-autoheight-guard
