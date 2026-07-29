@@ -1,1 +1,3 @@
 refactor(apps): keep hosts on unified Plate entry
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
