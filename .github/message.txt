@@ -1,1 +1,1 @@
-fix(support): tighten Plate host API boundary
+Merge remote-tracking branch 'origin/main' into gt/unified-plate-public-api
