@@ -1,1 +1,1 @@
-test: establish editor behavior baseline before plugin migration
+feat(flutter): add plugin runtime registry
