@@ -1,1 +1,9 @@
-fix(support): stabilize plugin element rendering
+feat(support): render element capabilities from plugins (#83)
+
+* feat(support): render element capabilities from plugins
+
+* fix(support): stabilize plugin element rendering
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
