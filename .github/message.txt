@@ -1,5 +1,1 @@
-test: establish editor behavior baseline before plugin migration
-
-Freeze document roundtrip, element lifecycle, undo/redo, SVG/Rust export,
-template interpolation, bridge protocol, and UI goldens without changing
-product behavior, so later plugin PRs can detect regressions safely.
+test: tighten plugin baseline scope
