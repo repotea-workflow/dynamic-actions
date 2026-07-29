@@ -1,1 +1,1 @@
-gt/plugin-ui-contributions
+main
