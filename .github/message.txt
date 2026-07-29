@@ -1,1 +1,1 @@
-fix(omsk-web): speed up address import parsing
+fix(omsk-control): allow trace time selection
