@@ -1,3 +1,1 @@
-feat(support): route shape tool through UI contribution (#66)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): route serial tool through UI contribution
