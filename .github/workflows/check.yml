@@ -6,8 +6,8 @@ on:
       - "**"
 
 jobs:
-  acceptance:
-    name: Acceptance
+  backend-rust:
+    name: Backend Rust
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -27,5 +27,10 @@ jobs:
       - name: Install just
         run: cargo install just --locked
 
-      - name: Run acceptance
-        run: just acceptance
+      - name: Run backend Rust checks
+        run: |
+          just backend-fmt-check
+          just backend-check
+          just backend-test
+          just backend-clippy
+          just lint-file-size
