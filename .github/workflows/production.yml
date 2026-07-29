@@ -404,7 +404,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        profile: [current-control, pwg-only, pwg-pdl-fixed, pwg-conformant-core]
+        profile: [current-control, pwg-only, pwg-pdl-fixed, pwg-conformant-core, defaults-only, srgb-only, black1-only, defaults-srgb, defaults-black1]
     steps:
       - uses: actions/checkout@v6
 

@@ -1,1 +1,1 @@
-Fix host oracle CI batch blockers
+Expand Windows IPP host diagnostics matrix
