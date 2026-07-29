@@ -1,1 +1,1 @@
-gt/plate-host-empty-initial
+main
