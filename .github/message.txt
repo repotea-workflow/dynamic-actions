@@ -1,1 +1,3 @@
-test(web): keep bridge guards off low-level editor API
+Keep web bridge guards off low-level editor API
+
+Move the bridge sample JSON validation to plate_schema_dart and make app-level boundary guards scan cleanly without low-level editor imports.
