@@ -141,7 +141,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y libdbus-1-dev pkg-config
 
-      - name: Prepare Windows Spoolix host anchor
+      - name: Prepare isolated Windows CI service-artifact anchor
         if: ${{ matrix.route == 'windows.spooler' }}
         shell: pwsh
         run: |
@@ -153,6 +153,13 @@ jobs:
             Add-PrinterDriver -Name "Generic / Text Only"
           }
           Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-route-smoke-windows-spooler"
+          $anchor = just ci-prepare-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0 -or -not $anchor) {
+            throw "failed to provision the Windows service-artifact test anchor"
+          }
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_ANCHOR=$anchor" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_COMPONENT=$component" >> $env:GITHUB_ENV
 
       - name: Run route smoke
         shell: bash
@@ -162,6 +169,18 @@ jobs:
             linux.printer-application) export SPOOLIX_LINUX_PA_E2E_REQUIRED=1 ;;
           esac
           just ci-driver-route "${{ matrix.route }}"
+
+      - name: Teardown Windows service-artifact test anchor
+        if: ${{ always() && matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-route-smoke-windows-spooler"
+          just ci-teardown-windows-test-artifact-anchor $component
+          $teardownExit = $LASTEXITCODE
+          if ($teardownExit -ne 0) {
+            [Console]::Error.WriteLine("Windows CI run-anchor teardown failed closed; the independent authority root was retained (exit $teardownExit)")
+            exit $teardownExit
+          }
 
   # P2-10: Desktop typecheck + Vitest once on Ubuntu (do not matrix across OS).
   desktop-check:
@@ -474,9 +493,37 @@ jobs:
         shell: bash
         run: npm ci
 
+      - name: Prepare Windows service-artifact test anchor
+        if: ${{ matrix.platform == 'windows' }}
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) {
+            throw "Windows platform checks require an elevated administrator token"
+          }
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows"
+          $anchor = just ci-prepare-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0 -or -not $anchor) {
+            throw "failed to provision the Windows service-artifact test anchor"
+          }
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_ANCHOR=$anchor" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_COMPONENT=$component" >> $env:GITHUB_ENV
+
       - name: Run platform check
         shell: bash
         run: just "${{ matrix.command }}"
+
+      - name: Teardown Windows service-artifact test anchor
+        if: ${{ always() && matrix.platform == 'windows' }}
+        shell: pwsh
+        run: |
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows"
+          just ci-teardown-windows-test-artifact-anchor $component
+          $teardownExit = $LASTEXITCODE
+          if ($teardownExit -ne 0) {
+            [Console]::Error.WriteLine("Windows CI run-anchor teardown failed closed; the independent authority root was retained (exit $teardownExit)")
+            exit $teardownExit
+          }
 
       - name: Run root-owned macOS package authority tests
         if: ${{ matrix.platform == 'macos' }}
