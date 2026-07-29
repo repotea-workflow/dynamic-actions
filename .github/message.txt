@@ -1,1 +1,1 @@
-Stabilize macOS and Windows host CI sockets
+Complete macOS CUPS authority CI validation
