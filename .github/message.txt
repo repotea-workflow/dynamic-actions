@@ -1,1 +1,1 @@
-Add Windows IPP control-lane oracles
+Bound Windows IPP host controls
