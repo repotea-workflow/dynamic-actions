@@ -1,1 +1,1 @@
-Harden macOS cleanup and Windows IPP oracles
+Close cross-platform host oracle failures
