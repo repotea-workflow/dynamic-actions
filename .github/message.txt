@@ -1,1 +1,1 @@
-Harden cross-platform CI lifecycle oracles
+Close macOS cleanup and Windows IPP CI gaps
