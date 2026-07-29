@@ -1,1 +1,1 @@
-test(flutter): guard drag foreground chrome
+test(support): guard Plate image runtime cleanup
