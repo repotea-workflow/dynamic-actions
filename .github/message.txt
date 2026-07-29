@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main' into gt/unified-plate-public-api
+fix(support): hide internal Plate runtime config
