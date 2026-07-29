@@ -1,1 +1,1 @@
-Fix bridge example request ids on http origins
+Keep bridge example empty by default
