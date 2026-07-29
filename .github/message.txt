@@ -1,3 +1,1 @@
-feat(flutter): add plugin UI contributions
-
-Add generic plugin UI contribution contracts, support-owned default shell slots, and lifecycle-gated rendering for plugin-provided toolbar, feature bar, inspector, and overlay widgets.
+feat(support): expose feature bar tool contributions
