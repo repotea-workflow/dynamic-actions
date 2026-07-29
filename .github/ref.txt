@@ -1,1 +1,1 @@
-gt/sdk-session-asset-reset
+main
