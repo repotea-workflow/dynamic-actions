@@ -1,1 +1,3 @@
 test(apps): guard all hosts from low-level editor APIs
+
+Extend the app boundary guard so every checked-in app depends on plate_editor_support and cannot import low-level editor APIs or support internals.
