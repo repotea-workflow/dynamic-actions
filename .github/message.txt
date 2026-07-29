@@ -1,9 +1,1 @@
-feat(support): add element insertion capabilities (#82)
-
-* feat(support): add element insertion capabilities
-
-* fix(support): route insert capabilities through plugins
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): render element capabilities from plugins

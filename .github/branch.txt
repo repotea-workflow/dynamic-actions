@@ -1,1 +1,1 @@
-main
+gt/plugin-element-render-capability
