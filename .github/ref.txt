@@ -1,1 +1,1 @@
-gt/plugin-capability-registry
+main
