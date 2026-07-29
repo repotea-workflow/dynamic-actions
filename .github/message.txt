@@ -1,1 +1,1 @@
-refactor(support): enforce unified Plate public API
+fix(support): tighten Plate host API boundary
