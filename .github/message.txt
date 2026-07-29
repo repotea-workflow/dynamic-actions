@@ -1,1 +1,1 @@
-fix(omsk): sync base product tax rate from taxprod
+fix(ci): restore production trigger contract
