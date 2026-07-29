@@ -1,1 +1,1 @@
-test(support): guard text resize auto height
+ci(apps): build bridge host for subpath embedding
