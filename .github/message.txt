@@ -1,3 +1,1 @@
-feat(support): add inspector visibility config (#59)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): route formula tool through UI contribution
