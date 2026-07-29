@@ -1,1 +1,1 @@
-gt/plugin-command-lifecycle
+main
