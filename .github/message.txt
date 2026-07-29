@@ -1,1 +1,1 @@
-test(ci): lock native workflows to dispatchers
+ci: run acceptance from dynamic workflow
