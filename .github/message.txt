@@ -1,1 +1,1 @@
-test(support): keep internal test barrel out of public lib
+test(apps): block internal support test imports
