@@ -1,3 +1,1 @@
-test(support): guard Plate image runtime cleanup (#50)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+test(apps): guard host override boundary
