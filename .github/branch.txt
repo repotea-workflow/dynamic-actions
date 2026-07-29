@@ -1,1 +1,1 @@
-gt/plugin-inspector-panel-companions
+main
