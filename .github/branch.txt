@@ -1,1 +1,1 @@
-gt/unified-plate-public-api
+gt/plate-host-example-valid-json
