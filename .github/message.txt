@@ -1,1 +1,1 @@
-Keep bridge example empty by default
+fix(editor): reset viewport on document replace

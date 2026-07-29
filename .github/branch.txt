@@ -1,1 +1,1 @@
-main
+gt/sdk-session-viewport-reset
