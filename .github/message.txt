@@ -1,1 +1,3 @@
-fix(host): adapt web bridge to Plate session
+Adapt web bridge to Plate session
+
+Squash merge web bridge Plate session adapter.

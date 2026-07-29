@@ -1,1 +1,1 @@
-gt/web-bridge-plate-adapter
+main
