@@ -1,1 +1,1 @@
-gt/plugin-default-image-tool
+main
