@@ -1,1 +1,1 @@
-Complete macOS CUPS authority CI validation
+Fix macOS CUPS privileged host inspection
