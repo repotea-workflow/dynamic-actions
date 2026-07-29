@@ -1,1 +1,1 @@
-main
+gt/sdk-plate-image-runtime-guard

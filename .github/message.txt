@@ -1,1 +1,1 @@
-fix(support): reset session assets on document replace
+test(support): guard Plate local image runtime path
