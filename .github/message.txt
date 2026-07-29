@@ -1,3 +1,1 @@
-feat(support): route host png exports through platform config (#39)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+refactor(support): hide low-level interaction symbols
