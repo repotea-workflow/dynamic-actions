@@ -1,1 +1,1 @@
-gt/plugin-default-serial-tool
+main
