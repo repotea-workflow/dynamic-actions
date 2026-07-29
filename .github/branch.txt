@@ -1,1 +1,1 @@
-gt/plugin-default-toolbar-shell-actions
+main
