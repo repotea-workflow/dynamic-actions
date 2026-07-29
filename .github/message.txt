@@ -1,1 +1,1 @@
-test(support): guard text resize auto height
+test(support): wait for local image replacement
