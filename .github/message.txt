@@ -1,1 +1,1 @@
-fix(ci): keep native workflows trigger-only
+test(ci): lock native workflows to dispatchers
