@@ -1,3 +1,3 @@
-Use valid Plate JSON in bridge example (#23)
+Enforce unified Plate public API
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Constrain plate_editor_support runtime exports to the unified Plate entry, adapt the web bridge to PlateHostController, hide internal runtime config, and add public boundary tests.
