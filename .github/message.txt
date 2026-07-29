@@ -1,1 +1,3 @@
 test(apps): guard unified Plate entrypoint
+
+Extend app boundary tests so plate_web_example and plate-editor-host cannot regain direct low-level editor dependencies, support test-barrel imports, support src imports, managed editor/session usage, or bare PlateEditor construction.
