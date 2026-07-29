@@ -1,3 +1,1 @@
-feat(support): import host template payloads (#36)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+test(support): remove stale example widget paths
