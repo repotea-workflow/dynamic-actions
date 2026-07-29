@@ -1,3 +1,1 @@
-feat(support): build host export file payloads (#38)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): route host png exports through platform config
