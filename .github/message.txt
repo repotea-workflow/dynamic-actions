@@ -1,3 +1,1 @@
-Adapt web bridge to Plate session
-
-Squash merge web bridge Plate session adapter.
+Start Plate host with empty document
