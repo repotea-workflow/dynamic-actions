@@ -1,1 +1,1 @@
-fix(flutter): bind plugin commands to lifecycle
+feat(flutter): add plugin UI contributions
