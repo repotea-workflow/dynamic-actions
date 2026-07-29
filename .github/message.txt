@@ -1,1 +1,1 @@
-refactor(apps): route devhost through Plate entry
+refactor(apps): enforce unified Plate entry
