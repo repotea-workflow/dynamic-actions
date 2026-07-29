@@ -1,1 +1,1 @@
-gt/plugin-emoji-companion-panel
+main
