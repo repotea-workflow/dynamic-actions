@@ -1,1 +1,1 @@
-gt/plugin-inspector-contributions
+main
