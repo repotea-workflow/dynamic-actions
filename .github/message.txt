@@ -1,1 +1,1 @@
-fix(flutter): harden plugin runtime lifecycle
+feat(flutter): add plugin runtime registry
