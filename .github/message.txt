@@ -1,1 +1,1 @@
-Fix macOS and Windows CI host semantics
+Stabilize macOS and Windows host CI sockets
