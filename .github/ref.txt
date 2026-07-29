@@ -1,1 +1,1 @@
-gt/plugin-default-toolbar-controls
+main
