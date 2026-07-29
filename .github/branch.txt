@@ -1,1 +1,1 @@
-gt/plugin-default-qr-tool
+main

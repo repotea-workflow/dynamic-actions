@@ -1,1 +1,3 @@
-feat(support): route QR tool through UI contribution
+feat(support): route QR tool through UI contribution (#68)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
