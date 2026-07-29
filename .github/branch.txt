@@ -1,1 +1,1 @@
-gt/plate-host-example-valid-json
+main
