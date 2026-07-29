@@ -1,1 +1,1 @@
-refactor(apps): enforce unified Plate entry
+fix(support): reset session assets on document replace
