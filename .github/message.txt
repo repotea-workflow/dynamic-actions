@@ -1,1 +1,1 @@
-ci(apps): build bridge host for subpath embedding
+test(flutter): guard drag foreground chrome
