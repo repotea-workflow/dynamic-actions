@@ -1,1 +1,1 @@
-Harden cross-platform host oracle evidence
+Expand cross-platform host oracle validation

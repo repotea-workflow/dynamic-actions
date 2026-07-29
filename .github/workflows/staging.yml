@@ -398,9 +398,13 @@ jobs:
   # This does not claim driver dispatch, parsed pages, or route oracle coverage;
   # the test itself requires and verifies that production remains fail-closed.
   windows-ipp-host-spike-candidate:
-    name: Windows IPP real-host candidate spike
+    name: Windows IPP real-host candidate spike / ${{ matrix.profile }}
     runs-on: windows-latest
     timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [current-control, pwg-only, pwg-pdl-fixed, pwg-conformant-core]
     steps:
       - uses: actions/checkout@v6
 
@@ -431,13 +435,23 @@ jobs:
             throw "Windows IPP host spike requires an elevated administrator token"
           }
 
+      - name: Prepare PrintService operational diagnostics
+        id: printservice_prepare
+        shell: pwsh
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.profile }}.json" -Profile "${{ matrix.profile }}"
+
       - name: Run real-host diagnostic spike
         shell: bash
         env:
           SPOOLIX_WINDOWS_IPP_SPIKE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
           SPOOLIX_WINDOWS_IPP_SPIKE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
           SPOOLIX_WINDOWS_IPP_SPIKE_LEASE_ID: lease:github-actions-windows-ipp-spike
-        run: just ci-windows-ipp-host-spike-candidate
+        run: just ci-windows-ipp-host-spike-candidate "${{ matrix.profile }}"
+
+      - name: Restore PrintService operational diagnostics
+        if: ${{ always() && steps.printservice_prepare.outcome != 'skipped' }}
+        shell: pwsh
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.profile }}.json" -Profile "${{ matrix.profile }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }} / ${{ matrix.group }}
