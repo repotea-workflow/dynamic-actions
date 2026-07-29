@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main' into 0xfe10/ztoms-restore-trigger
+fix(ci): keep native workflows trigger-only
