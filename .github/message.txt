@@ -1,1 +1,1 @@
-Bound Windows IPP host controls
+Harden macOS cleanup and Windows IPP oracles
