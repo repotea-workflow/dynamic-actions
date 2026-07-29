@@ -392,19 +392,25 @@ jobs:
           SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
         run: just ci-windows-spooler-raw-product-candidate "${{ matrix.profile }}"
 
-  # Diagnostic candidate only: this runs the host-mutating oracle directly.
-  # Portable host-spike regressions already run in the Windows route check, so
-  # repeating them here would only delay or mask the unique real-host evidence.
-  # This does not claim driver dispatch, parsed pages, or route oracle coverage;
-  # the test itself requires and verifies that production remains fail-closed.
+  # Orthogonal Windows controls: GDI renderer, Microsoft IPP Class Driver against
+  # a reference endpoint, direct PWG submission, and one Spoolix GDI diagnostic.
+  # These controls remain outside product route-oracle coverage.
   windows-ipp-host-spike-candidate:
-    name: Windows IPP real-host candidate spike / ${{ matrix.profile }}
+    name: Windows IPP control / ${{ matrix.lane }}
     runs-on: windows-latest
     timeout-minutes: 40
     strategy:
       fail-fast: false
       matrix:
-        profile: [current-control, pwg-only, pwg-pdl-fixed, pwg-conformant-core, defaults-only, srgb-only, black1-only, defaults-srgb, defaults-black1]
+        include:
+          - lane: gdi-render-baseline
+            needs_printservice: false
+          - lane: ipp-reference-baseline
+            needs_printservice: false
+          - lane: spoolix-direct-pwg
+            needs_printservice: false
+          - lane: spoolix-gdi-diagnostic
+            needs_printservice: true
     steps:
       - uses: actions/checkout@v6
 
@@ -437,21 +443,22 @@ jobs:
 
       - name: Prepare PrintService operational diagnostics
         id: printservice_prepare
+        if: ${{ matrix.needs_printservice }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.profile }}.json" -Profile "${{ matrix.profile }}"
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.lane }}.json" -Lane "${{ matrix.lane }}"
 
-      - name: Run real-host diagnostic spike
+      - name: Run selected Windows IPP control
         shell: bash
         env:
           SPOOLIX_WINDOWS_IPP_SPIKE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
           SPOOLIX_WINDOWS_IPP_SPIKE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
           SPOOLIX_WINDOWS_IPP_SPIKE_LEASE_ID: lease:github-actions-windows-ipp-spike
-        run: just ci-windows-ipp-host-spike-candidate "${{ matrix.profile }}"
+        run: just ci-windows-ipp-host-spike-candidate "${{ matrix.lane }}"
 
       - name: Restore PrintService operational diagnostics
-        if: ${{ always() && steps.printservice_prepare.outcome != 'skipped' }}
+        if: ${{ always() && matrix.needs_printservice && steps.printservice_prepare.outcome != 'skipped' }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.profile }}.json" -Profile "${{ matrix.profile }}"
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.lane }}.json" -Lane "${{ matrix.lane }}"
 
   platform-check:
     name: Platform check / ${{ matrix.platform }} / ${{ matrix.group }}

@@ -1,1 +1,1 @@
-Expand Windows IPP host diagnostics matrix
+Add Windows IPP control-lane oracles
