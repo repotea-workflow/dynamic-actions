@@ -1,3 +1,1 @@
-test(support): guard runtime editor symbol exports
-
-Guard the support runtime barrel's plate_editor_flutter re-export list so unified Plate usage keeps PlateEditorController available while low-level PlateEditor stays out of the app-facing support API.
+refactor(editor): hide low-level editor barrel export
