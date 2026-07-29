@@ -1,1 +1,3 @@
-feat(support): route view settings drawer through UI contributions
+feat(support): route view settings drawer through UI contributions (#78)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
