@@ -1,1 +1,1 @@
-Close macOS cleanup and Windows IPP CI gaps
+Fix macOS and Windows CI host semantics
