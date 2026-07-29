@@ -1,3 +1,5 @@
-test(apps): guard host override boundary (#51)
+test: establish editor behavior baseline before plugin migration
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Freeze document roundtrip, element lifecycle, undo/redo, SVG/Rust export,
+template interpolation, bridge protocol, and UI goldens without changing
+product behavior, so later plugin PRs can detect regressions safely.
