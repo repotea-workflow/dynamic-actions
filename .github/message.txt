@@ -1,3 +1,1 @@
-Enforce unified Plate public API
-
-Constrain plate_editor_support runtime exports to the unified Plate entry, adapt the web bridge to PlateHostController, hide internal runtime config, and add public boundary tests.
+test(web): keep bridge guards off low-level editor API

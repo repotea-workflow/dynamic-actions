@@ -1,1 +1,1 @@
-main
+gt/web-bridge-schema-boundary
