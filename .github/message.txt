@@ -1,1 +1,1 @@
-Harden macOS cleanup and IPP diagnostics
+Harden cross-platform host oracle evidence

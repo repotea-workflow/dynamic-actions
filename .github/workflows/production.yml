@@ -392,11 +392,11 @@ jobs:
           SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
         run: just ci-windows-spooler-raw-product-candidate "${{ matrix.profile }}"
 
-  # Diagnostic candidate only: this proves that a disposable Windows runner can
-  # create an IPP queue and submit a real two-page GDI job into the loopback
-  # receiver. It does not claim driver dispatch, parsed pages, or route oracle
-  # coverage; the test itself requires and verifies that production remains
-  # fail-closed.
+  # Diagnostic candidate only: this runs the host-mutating oracle directly.
+  # Portable host-spike regressions already run in the Windows route check, so
+  # repeating them here would only delay or mask the unique real-host evidence.
+  # This does not claim driver dispatch, parsed pages, or route oracle coverage;
+  # the test itself requires and verifies that production remains fail-closed.
   windows-ipp-host-spike-candidate:
     name: Windows IPP real-host candidate spike
     runs-on: windows-latest
