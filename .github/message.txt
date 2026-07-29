@@ -1,1 +1,1 @@
-refactor(support): hide low-level interaction symbols
+refactor(apps): route devhost through Plate entry
