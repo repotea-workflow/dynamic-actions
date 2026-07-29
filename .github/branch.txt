@@ -1,1 +1,1 @@
-main
+gt/plugin-canvas-status-overlay
