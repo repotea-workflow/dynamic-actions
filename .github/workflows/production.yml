@@ -4,15 +4,7 @@ on:
   push:
     tags:
       - "v*-ztoms"
-  workflow_dispatch:
-    inputs:
-      mode:
-        description: "Manual production workflow mode"
-        required: true
-        default: "build-only"
-        type: choice
-        options:
-          - "build-only"
+      - "candidate-*-ztoms"
 
 env:
   DOCKER_REGISTRY: ghcr.io
@@ -198,14 +190,15 @@ jobs:
             --registry-image "${{ steps.tags.outputs.uhub_sha }}" \
             --require-registry-provenance
 
-  deploy-app:
-    name: Deploy App
+  release-readiness:
+    name: Release readiness
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
     needs:
       - acceptance
       - build-backend
       - build-web
+    outputs:
+      gitops_revision: ${{ steps.gitops.outputs.revision }}
     steps:
       - uses: actions/checkout@v6
 
@@ -220,6 +213,61 @@ jobs:
         run: |
           test "$(git rev-parse HEAD)" = "${{ needs.acceptance.outputs.source_sha }}"
           echo "SOURCE_SHA=${{ needs.acceptance.outputs.source_sha }}" >> "$GITHUB_ENV"
+
+      - name: Checkout production GitOps
+        uses: actions/checkout@v6
+        with:
+          repository: repotea-workflow/gitops-fes
+          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          path: target/production-gitops
+          fetch-depth: 0
+
+      - name: Verify immutable production tuple
+        id: gitops
+        run: |
+          gitops_revision="$(git -C target/production-gitops rev-parse HEAD)"
+          python3 scripts/omsk_gitops_switch_readiness.py \
+            --gitops-repo target/production-gitops \
+            --gitops-revision "$gitops_revision" \
+            --backend-image "${{ needs.build-backend.outputs.uhub_image }}"
+          echo "revision=$gitops_revision" >> "$GITHUB_OUTPUT"
+
+  deploy-app:
+    name: Deploy App
+    runs-on: ubuntu-latest
+    if: startsWith(github.ref, 'refs/tags/v') && endsWith(github.ref, '-ztoms')
+    needs:
+      - acceptance
+      - build-backend
+      - build-web
+      - release-readiness
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          ref_file: .github/ref.txt
+
+      - name: Set source SHA
+        run: |
+          test "$(git rev-parse HEAD)" = "${{ needs.acceptance.outputs.source_sha }}"
+          echo "SOURCE_SHA=${{ needs.acceptance.outputs.source_sha }}" >> "$GITHUB_ENV"
+
+      - name: Checkout verified production GitOps revision
+        uses: actions/checkout@v6
+        with:
+          repository: repotea-workflow/gitops-fes
+          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          path: gitops-repo
+          fetch-depth: 0
+
+      - name: Confirm verified production GitOps revision
+        run: >-
+          test "$(git -C gitops-repo rev-parse HEAD)" =
+          "${{ needs.release-readiness.outputs.gitops_revision }}"
 
       - name: Deploy
         uses: repotea-workspace/kangumi/github-actions/gitops-deploy@main
@@ -241,33 +289,13 @@ jobs:
         run: echo "EXPECTED_GITOPS_REVISION=$(git -C gitops-repo rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Wait for Argo Synced Healthy
-        run: |
-          server="${{ secrets.ARGOCD_FES_SERVER }}"
-          if [[ "$server" != http://* && "$server" != https://* ]]; then
-            server="https://${server}"
-          fi
-          deadline=$((SECONDS + 600))
-          while (( SECONDS < deadline )); do
-            status="$(
-              curl --fail --show-error --silent \
-                --header "Authorization: Bearer ${{ secrets.ARGOCD_FES_API_TOKEN }}" \
-                "${server}/api/v1/applications/work-production-ztoms-ula"
-            )"
-            sync="$(jq -r '.status.sync.status // ""' <<< "$status")"
-            health="$(jq -r '.status.health.status // ""' <<< "$status")"
-            revision="$(jq -r '.status.sync.revision // ""' <<< "$status")"
-            images="$(jq -r '.status.summary.images[]? // empty' <<< "$status")"
-            backend_seen="$(grep -Fxc "${{ needs.build-backend.outputs.uhub_image }}" <<< "$images" || true)"
-            web_seen="$(grep -Fxc "${{ needs.build-web.outputs.uhub_image }}" <<< "$images" || true)"
-            if [[ "$sync" == "Synced" && "$health" == "Healthy" && "$revision" == "$EXPECTED_GITOPS_REVISION" && "$backend_seen" == "1" && "$web_seen" == "1" ]]; then
-              echo "Argo application Synced Healthy at revision ${revision}"
-              exit 0
-            fi
-            echo "Waiting for Argo application: sync=${sync:-unknown} health=${health:-unknown} revision=${revision:-unknown}"
-            sleep 10
-          done
-          echo "Timed out waiting for Argo application Synced Healthy" >&2
-          exit 1
+        run: >-
+          scripts/wait_for_argocd_application.sh
+          "${{ secrets.ARGOCD_FES_SERVER }}"
+          "${{ secrets.ARGOCD_FES_API_TOKEN }}"
+          work-production-ztoms-ula
+          "$EXPECTED_GITOPS_REVISION"
+          "${{ needs.build-web.outputs.uhub_image }}"
 
       - name: Production smoke
         run: |
