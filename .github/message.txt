@@ -1,1 +1,1 @@
-test: tighten plugin baseline scope
+test: establish editor behavior baseline before plugin migration
