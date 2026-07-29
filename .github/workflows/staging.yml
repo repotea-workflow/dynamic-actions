@@ -527,6 +527,20 @@ jobs:
           - platform: windows
             os: windows-latest
             command: ci-check-windows
+            group: target-toolchains
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: ipp-stability
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
             group: security-portable
             needs_anchor: false
             needs_npm: false

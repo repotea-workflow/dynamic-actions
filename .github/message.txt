@@ -1,1 +1,1 @@
-Stabilize final host oracle cleanup
+Harden cross-platform CI lifecycle oracles
