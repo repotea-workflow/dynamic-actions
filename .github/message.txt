@@ -1,1 +1,1 @@
-Close cross-platform host CI failures
+Harden macOS cleanup and IPP diagnostics
