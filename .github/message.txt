@@ -1,1 +1,1 @@
-feat(flutter): route editor commands through registry
+fix(flutter): bind plugin commands to lifecycle
