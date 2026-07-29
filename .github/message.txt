@@ -1,3 +1,1 @@
-Forbid low-level app embedding APIs in SDK boundary
-
-Update the SDK boundary spec and public boundary test so app-facing integration remains Plate(controller, config) rather than low-level editor embedding.
+Fix bridge example request ids on http origins
