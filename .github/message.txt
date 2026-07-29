@@ -1,1 +1,1 @@
-fix(omsk): satisfy base product clippy lint
+fix(omsk): satisfy base product clippy lint (#250)
