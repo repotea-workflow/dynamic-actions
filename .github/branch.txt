@@ -1,1 +1,1 @@
-gt/plugin-default-line-tool
+main
