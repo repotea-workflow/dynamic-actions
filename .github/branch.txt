@@ -1,1 +1,1 @@
-gt/support-test-barrel-internal-clean
+main

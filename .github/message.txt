@@ -1,1 +1,3 @@
-test(apps): block internal support test imports
+test(support): keep internal test barrel out of public lib
+
+Move the support package internal test barrel from lib into test/support, update package tests to use the relative helper, and extend app guards so neither apps nor host bridges can import the internal helper or support src paths as low-level entrypoint bypasses.
