@@ -1,3 +1,1 @@
-refactor(editor): hide low-level editor barrel export
-
-Hide the low-level PlateEditor widget from the plate_editor_flutter public barrel while keeping stable config value types available, and move the devhost app onto the unified Plate entrypoint.
+test(apps): guard all hosts from low-level editor APIs
