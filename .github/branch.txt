@@ -1,1 +1,1 @@
-main
+gt/plugin-default-text-tool
