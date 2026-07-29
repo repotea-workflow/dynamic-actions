@@ -1,1 +1,1 @@
-Close Windows host CI failure batch
+Harden host checks and parallelize Windows CI

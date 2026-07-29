@@ -440,7 +440,7 @@ jobs:
         run: just ci-windows-ipp-host-spike-candidate
 
   platform-check:
-    name: Platform check / ${{ matrix.platform }}
+    name: Platform check / ${{ matrix.platform }} / ${{ matrix.group }}
     runs-on: ${{ matrix.os }}
     timeout-minutes: ${{ matrix.timeout }}
     strategy:
@@ -450,15 +450,80 @@ jobs:
           - platform: linux
             os: ubuntu-latest
             command: ci-check-linux
+            group: all
+            needs_anchor: false
+            needs_npm: false
+            timeout: 20
+          - platform: macos
+            os: macos-latest
+            command: ci-check-macos
+            group: all
+            needs_anchor: false
+            needs_npm: true
             timeout: 20
           - platform: windows
             os: windows-latest
             command: ci-check-windows
-            timeout: 60
-          - platform: macos
-            os: macos-latest
-            command: ci-check-macos
+            group: virtual-printer
+            needs_anchor: true
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: management-command
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: unified-coverage
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: desktop
+            needs_anchor: false
+            needs_npm: true
             timeout: 20
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: cli
+            needs_anchor: false
+            needs_npm: false
+            timeout: 20
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: windows-routes
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: security-portable
+            needs_anchor: false
+            needs_npm: false
+            timeout: 20
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: security-authority
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
+          - platform: windows
+            os: windows-latest
+            command: ci-check-windows
+            group: security-races
+            needs_anchor: false
+            needs_npm: false
+            timeout: 30
     steps:
       - uses: actions/checkout@v6
 
@@ -489,19 +554,19 @@ jobs:
           sudo apt-get install -y libdbus-1-dev pkg-config
 
       - name: Install Desktop dependencies
-        if: ${{ matrix.platform != 'linux' }}
+        if: ${{ matrix.needs_npm }}
         shell: bash
         run: npm ci
 
       - name: Prepare Windows service-artifact test anchor
-        if: ${{ matrix.platform == 'windows' }}
+        if: ${{ matrix.needs_anchor }}
         shell: pwsh
         run: |
           net session *> $null
           if ($LASTEXITCODE -ne 0) {
             throw "Windows platform checks require an elevated administrator token"
           }
-          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows"
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows-${{ matrix.group }}"
           $anchor = just ci-prepare-windows-test-artifact-anchor $component
           if ($LASTEXITCODE -ne 0 -or -not $anchor) {
             throw "failed to provision the Windows service-artifact test anchor"
@@ -511,13 +576,18 @@ jobs:
 
       - name: Run platform check
         shell: bash
-        run: just "${{ matrix.command }}"
+        run: |
+          if [[ "${{ matrix.platform }}" == windows ]]; then
+            just "${{ matrix.command }}" "${{ matrix.group }}"
+          else
+            just "${{ matrix.command }}"
+          fi
 
       - name: Teardown Windows service-artifact test anchor
-        if: ${{ always() && matrix.platform == 'windows' }}
+        if: ${{ always() && matrix.needs_anchor }}
         shell: pwsh
         run: |
-          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows"
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-platform-check-windows-${{ matrix.group }}"
           just ci-teardown-windows-test-artifact-anchor $component
           $teardownExit = $LASTEXITCODE
           if ($teardownExit -ne 0) {
