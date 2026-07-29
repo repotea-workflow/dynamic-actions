@@ -1,3 +1,1 @@
-feat(support): add inspector plugin slots
-
-Add support-owned inspector plugin slots and PlateInspectorContext so plugins can render custom property UI inside the default inspector without changing built-in inspector behavior.
+feat(support): add inspector visibility config
