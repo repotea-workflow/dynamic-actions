@@ -1,1 +1,1 @@
-Harden host checks and parallelize Windows CI
+Close cross-platform host CI failures
