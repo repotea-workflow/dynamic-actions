@@ -1,1 +1,1 @@
-gt/support-runtime-symbol-guard
+main
