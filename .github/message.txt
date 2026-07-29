@@ -1,3 +1,1 @@
-feat(support): route emoji picker panel through UI contributions (#77)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): route view settings drawer through UI contributions
