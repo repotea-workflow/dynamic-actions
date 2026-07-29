@@ -1,3 +1,1 @@
-Phase 9: stabilize SDK example boundary
-
-Squash merge Phase 9 stabilization.
+fix(host): adapt web bridge to Plate session
