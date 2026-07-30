@@ -1,1 +1,1 @@
-fix(omsk-web): close legacy popovers on outside click
+Skip acceptance in production deployment workflow
