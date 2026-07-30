@@ -1,1 +1,1 @@
-feat(support): add inspector actions capability
+refactor(support): centralize element capability id resolution
