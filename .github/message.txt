@@ -1,3 +1,1 @@
-refactor(support): catalog default toolbar controls (#106)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(support): register SDK defaults through plugin registry
