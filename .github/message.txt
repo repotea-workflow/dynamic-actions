@@ -1,1 +1,3 @@
-feat(support): let plugin UI replace default contributions
+feat(support): let plugin UI replace default contributions (#105)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
