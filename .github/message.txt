@@ -1,3 +1,1 @@
-feat(support): add inline edit element capability
-
-Route inline edit handling through element capabilities with async-safe fallback and table activation support.
+feat(support): route selection frame outsets through capabilities
