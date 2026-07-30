@@ -1,3 +1,1 @@
-Add Rust-owned database migrations
-
-Add golang-migrate support for Rust-owned database migrations, local smoke coverage, and deployment readiness wiring.
+fix(omsk): accept string numeric payloads
