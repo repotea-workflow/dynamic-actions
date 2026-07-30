@@ -1,1 +1,1 @@
-gt/plugin-feature-bar-lookup
+main
