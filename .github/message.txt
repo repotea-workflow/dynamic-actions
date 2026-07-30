@@ -1,1 +1,1 @@
-fix(ztoms): simplify production workflow
+fix(omsk-web): keep datetime picker open during time selection
