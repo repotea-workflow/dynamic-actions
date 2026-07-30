@@ -1,1 +1,1 @@
-fix(omsk-web): keep datetime picker open during time selection
+configurable risk rules
