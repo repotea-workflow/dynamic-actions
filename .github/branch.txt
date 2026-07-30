@@ -1,1 +1,1 @@
-main
+gt/plugin-insert-capability-lookup
