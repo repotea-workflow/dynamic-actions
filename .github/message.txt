@@ -1,3 +1,1 @@
-feat(support): render custom element capability tools
-
-Render plugin-defined element capability tools in the feature bar and expose capability insertion/order metadata.
+feat(support): support custom inspector sections
