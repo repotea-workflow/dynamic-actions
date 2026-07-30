@@ -1,1 +1,1 @@
-Stabilize cross-platform route validation
+Complete cross-platform product route E2E candidates

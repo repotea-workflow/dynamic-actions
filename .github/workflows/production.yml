@@ -40,7 +40,6 @@ jobs:
 
       - name: Install just
         uses: taiki-e/install-action@just
-
       - name: Run fmt checks
         run: just ci-fmt
 
@@ -77,24 +76,8 @@ jobs:
             category: virtual_printer
             os: macos-latest
             timeout: 20
-          - route: windows.spooler
-            category: virtual_printer
-            os: windows-latest
-            timeout: 40
-          - route: windows.unidrv
-            category: virtual_printer
-            os: windows-latest
-            timeout: 40
-          - route: windows.ipp
-            category: virtual_printer
-            os: windows-latest
-            timeout: 40
           - route: windows.winusb
             category: direct_transport
-            os: windows-latest
-            timeout: 40
-          - route: windows.print-support-app
-            category: virtual_printer
             os: windows-latest
             timeout: 40
     steps:
@@ -229,7 +212,7 @@ jobs:
   route-oracle-matrix:
     name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
     runs-on: ${{ matrix.os }}
-    timeout-minutes: 20
+    timeout-minutes: ${{ matrix.timeout }}
     strategy:
       fail-fast: false
       matrix:
@@ -237,21 +220,39 @@ jobs:
           - route: linux.cups
             profile: tspl
             os: ubuntu-latest
+            timeout: 20
           - route: linux.cups
             profile: cpcl
             os: ubuntu-latest
+            timeout: 20
           - route: linux.cups
             profile: escpos
             os: ubuntu-latest
+            timeout: 20
           - route: linux.printer-application
             profile: tspl
             os: ubuntu-latest
+            timeout: 20
           - route: linux.printer-application
             profile: cpcl
             os: ubuntu-latest
+            timeout: 20
           - route: linux.printer-application
             profile: escpos
             os: ubuntu-latest
+            timeout: 20
+          - route: macos.cups
+            profile: tspl
+            os: macos-latest
+            timeout: 30
+          - route: macos.cups
+            profile: cpcl
+            os: macos-latest
+            timeout: 30
+          - route: macos.cups
+            profile: escpos
+            os: macos-latest
+            timeout: 30
     steps:
       - uses: actions/checkout@v6
 
@@ -281,6 +282,13 @@ jobs:
           sudo apt-get install -y cups cups-client cups-filters cups-ipp-utils libdbus-1-dev pkg-config
           sudo systemctl start cups || sudo service cups start
 
+      - name: Ensure macOS CUPS is running
+        if: ${{ matrix.route == 'macos.cups' }}
+        shell: bash
+        run: |
+          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
+          lpstat -r
+
       - name: Run route oracle
         shell: bash
         env:
@@ -288,12 +296,17 @@ jobs:
           SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
-  # Candidate proof runs independently of two_page_oracle=false. Promotion is
-  # allowed only after all three fresh profile jobs are green.
-  macos-cups-candidate-oracle:
-    name: macOS CUPS candidate / ${{ matrix.profile }}
+      - name: Teardown macOS CI harness
+        if: ${{ always() && matrix.route == 'macos.cups' }}
+        shell: bash
+        run: |
+          bash .github/scripts/teardown-macos-ci-harness.sh
+          bash .github/scripts/teardown-macos-ci-harness.sh
+
+  macos-airprint-candidate-oracle:
+    name: macOS AirPrint candidate / ${{ matrix.profile }}
     runs-on: macos-latest
-    timeout-minutes: 30
+    timeout-minutes: 40
     strategy:
       fail-fast: false
       matrix:
@@ -326,11 +339,15 @@ jobs:
           lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
           lpstat -r
 
-      - name: Run production-facade candidate oracle
+      - name: Select macOS AirPrint bind address
         shell: bash
-        env:
-          SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
-        run: just ci-macos-cups-oracle "${{ matrix.profile }}"
+        run: |
+          bind_address="$(bash .github/scripts/select-macos-airprint-bind-address.sh)"
+          echo "SPOOLIX_AIRPRINT_BIND_ADDRESS=$bind_address" >> "$GITHUB_ENV"
+
+      - name: Run macOS AirPrint candidate oracle
+        shell: bash
+        run: just ci-macos-airprint-oracle "${{ matrix.profile }}"
 
       - name: Teardown macOS CI harness
         if: ${{ always() }}
@@ -339,126 +356,237 @@ jobs:
           bash .github/scripts/teardown-macos-ci-harness.sh
           bash .github/scripts/teardown-macos-ci-harness.sh
 
-  # Product-route candidate only: runs the profile-specific Windows Spooler RAW
-  # host test on a disposable elevated runner before coverage promotion. A
-  # failing profile remains visible and does not cancel its peers. These jobs do
-  # not claim arbitrary-application E2E or production management unified output.
-  windows-spooler-raw-product-candidate:
-    name: Windows Spooler RAW product candidate / ${{ matrix.profile }}
+  windows-product-infrastructure:
+    name: Windows product infrastructure
     runs-on: windows-latest
-    timeout-minutes: 40
-    strategy:
-      fail-fast: false
-      matrix:
-        profile: [tspl, cpcl, escpos]
+    timeout-minutes: 60
+    env:
+      SPOOLIX_WINDOWS_IPP_SPIKE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
+      SPOOLIX_WINDOWS_IPP_SPIKE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
+      SPOOLIX_WINDOWS_IPP_SPIKE_LEASE_ID: lease:github-actions-windows-ipp-controls
     steps:
       - uses: actions/checkout@v6
-
       - name: Checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
           ref_file: .github/ref.txt
-
       - name: Authorize private Git dependencies
         shell: bash
         env:
           GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
         run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
-
       - name: Install just
         uses: taiki-e/install-action@just
-
-      - name: Confirm disposable elevated Windows runner
-        shell: pwsh
-        run: |
-          net session *> $null
-          if ($LASTEXITCODE -ne 0) {
-            throw "Windows Spooler RAW product candidate requires an elevated administrator token"
-          }
-          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) {
-            Add-PrinterDriver -Name "Generic / Text Only"
-          }
-          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
-
-      - name: Run profile-specific product candidate
+      - name: Run Windows product infrastructure checks
         shell: bash
-        env:
-          SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
-          SPOOLIX_WINDOWS_SPOOLER_RAW_CANDIDATE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
-        run: just ci-windows-spooler-raw-product-candidate "${{ matrix.profile }}"
+        run: just ci-windows-product-infrastructure
+      - name: Run Windows IPP GDI renderer control
+        if: ${{ always() }}
+        shell: bash
+        run: just ci-windows-ipp-control gdi-render-baseline
+      - name: Run Windows IPP reference endpoint control
+        if: ${{ always() }}
+        shell: bash
+        run: just ci-windows-ipp-control ipp-reference-baseline
+      - name: Run Windows IPP direct PWG control
+        if: ${{ always() }}
+        shell: bash
+        run: just ci-windows-ipp-control spoolix-direct-pwg
+      - name: Prepare PrintService operational diagnostics
+        id: printservice_prepare
+        if: ${{ always() }}
+        shell: pwsh
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-controls.json" -Lane "spoolix-gdi-diagnostic"
+      - name: Run Windows IPP Spoolix GDI diagnostic
+        if: ${{ always() && steps.printservice_prepare.outcome == 'success' }}
+        shell: bash
+        run: just ci-windows-ipp-control spoolix-gdi-diagnostic
+      - name: Restore PrintService operational diagnostics
+        if: ${{ always() && steps.printservice_prepare.outcome != 'skipped' }}
+        shell: pwsh
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-controls.json" -Lane "spoolix-gdi-diagnostic"
 
-  # Orthogonal Windows controls: GDI renderer, Microsoft IPP Class Driver against
-  # a reference endpoint, direct PWG submission, and one Spoolix GDI diagnostic.
-  # These controls remain outside product route-oracle coverage.
-  windows-ipp-host-spike-candidate:
-    name: Windows IPP control / ${{ matrix.lane }}
+  # One expensive job per product route; all three profiles run sequentially
+  # inside that job so one Windows allocation returns the complete result set.
+  windows-product-route-oracle:
+    name: Windows product oracle / ${{ matrix.route }} / all profiles
     runs-on: windows-latest
-    timeout-minutes: 40
+    timeout-minutes: ${{ matrix.timeout }}
     strategy:
       fail-fast: false
       matrix:
         include:
-          - lane: gdi-render-baseline
-            needs_printservice: false
-          - lane: ipp-reference-baseline
-            needs_printservice: false
-          - lane: spoolix-direct-pwg
-            needs_printservice: false
-          - lane: spoolix-gdi-diagnostic
-            needs_printservice: true
+          - route: windows.spooler
+            timeout: 75
+          - route: windows.ipp
+            timeout: 90
+          - route: windows.unidrv
+            timeout: 120
+          - route: windows.print-support-app
+            timeout: 120
     steps:
       - uses: actions/checkout@v6
-
       - name: Checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
           ref_file: .github/ref.txt
-
       - name: Authorize private Git dependencies
         shell: bash
         env:
           GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
         run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
-
       - name: Install just
         uses: taiki-e/install-action@just
-
+      - name: Initialize signed route evidence
+        shell: pwsh
+        run: |
+          $bytes = [byte[]]::new(32)
+          [Security.Cryptography.RandomNumberGenerator]::Fill($bytes)
+          $key = [Convert]::ToHexString($bytes).ToLowerInvariant()
+          Write-Output "::add-mask::$key"
+          "SPOOLIX_WINDOWS_ROUTE_EVIDENCE_KEY=$key" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_ROUTE_EVIDENCE_PATH=$env:RUNNER_TEMP\spoolix-${{ matrix.route }}-route-evidence.json" >> $env:GITHUB_ENV
       - name: Confirm disposable elevated Windows runner
         shell: pwsh
         run: |
           net session *> $null
-          if ($LASTEXITCODE -ne 0) {
-            throw "Windows IPP host spike requires an elevated administrator token"
+          if ($LASTEXITCODE -ne 0) { throw "Windows product oracle requires elevation" }
+      - name: Prepare Spooler RAW driver and service-artifact anchor
+        if: ${{ matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) { Add-PrinterDriver -Name "Generic / Text Only" }
+          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-oracle-windows-spooler"
+          $anchor = just ci-prepare-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0 -or -not $anchor) { throw "failed to prepare Spooler artifact anchor" }
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_ANCHOR=$anchor" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_COMPONENT=$component" >> $env:GITHUB_ENV
+      - name: Install Windows Driver Kit tools
+        if: ${{ matrix.route == 'windows.unidrv' }}
+        shell: pwsh
+        run: |
+          $evidence = Join-Path $env:RUNNER_TEMP 'spoolix-wdk-evidence.json'
+          $lines = & platform/windows/unidrv/package/prepare-wdk-tools.ps1 -EvidencePath $evidence
+          foreach ($line in $lines) {
+            if ($line -match '^SPOOLIX_WINDOWS_WDK_(TOOL_ROOT|EVIDENCE)=') { $line >> $env:GITHUB_ENV }
           }
-
-      - name: Prepare PrintService operational diagnostics
-        id: printservice_prepare
-        if: ${{ matrix.needs_printservice }}
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_WDK_TOOL_ROOT=')) { throw 'WDK tool root output is missing' }
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_WDK_EVIDENCE=')) { throw 'WDK evidence output is missing' }
+      - name: Build and seal Unidrv package once
+        if: ${{ matrix.route == 'windows.unidrv' }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.lane }}.json" -Lane "${{ matrix.lane }}"
-
-      - name: Run selected Windows IPP control
+        run: |
+          cargo build -p spoolix-platform-windows-unidrv --release --locked
+          if ($LASTEXITCODE -ne 0) { throw "Unidrv monitor build failed" }
+          $monitor = Join-Path $PWD 'target\release\spoolix_platform_windows_unidrv.dll'
+          $output = Join-Path $env:RUNNER_TEMP "spoolix-unidrv-package-${{ github.run_id }}-${{ github.run_attempt }}"
+          "SPOOLIX_WINDOWS_UNIDRV_PACKAGE_ROOT=$output" >> $env:GITHUB_ENV
+          $lines = & platform/windows/unidrv/package/prepare-host-oracle.ps1 -OutputRoot $output -MonitorDll $monitor
+          if ($LASTEXITCODE -ne 0) { throw "Unidrv package preparation failed" }
+          foreach ($line in $lines) {
+            if ($line -match '^SPOOLIX_WINDOWS_UNIDRV_(PACKAGE_AUTHORITY|CERT_THUMBPRINT)=') { $line >> $env:GITHUB_ENV }
+          }
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_UNIDRV_PACKAGE_AUTHORITY=')) { throw "Unidrv authority output is missing" }
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_UNIDRV_CERT_THUMBPRINT=')) { throw "Unidrv certificate output is missing" }
+      - name: Install canonical Unidrv product package
+        if: ${{ matrix.route == 'windows.unidrv' }}
+        shell: pwsh
+        run: |
+          $receipt = cargo run -p spoolix-platform-windows-unidrv --example manage_product_package --locked -- install $env:SPOOLIX_WINDOWS_UNIDRV_PACKAGE_ROOT
+          if ($LASTEXITCODE -ne 0 -or -not $receipt) { throw 'Unidrv product package install failed' }
+          $receiptPath = Join-Path $env:RUNNER_TEMP 'spoolix-unidrv-product-package-receipt.json'
+          $receipt | Set-Content -LiteralPath $receiptPath -Encoding utf8NoBOM
+          "SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT=$receiptPath" >> $env:GITHUB_ENV
+      - name: Prepare Print Support NuGet lock evidence
+        id: psa_lock
+        if: ${{ matrix.route == 'windows.print-support-app' }}
+        shell: pwsh
+        run: |
+          $lock = 'platform/windows/print-support/package/packages.lock.json'
+          $evidence = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-lock-evidence.json'
+          if (Test-Path -LiteralPath $lock -PathType Leaf) {
+            $json = & platform/windows/print-support/package/generate-packages-lock.ps1 -Mode Verify
+            "SPOOLIX_WINDOWS_ROUTE_PREFLIGHT_STATUS=0" >> $env:GITHUB_ENV
+          } else {
+            $json = & platform/windows/print-support/package/generate-packages-lock.ps1 -Mode Generate
+            "SPOOLIX_WINDOWS_ROUTE_PREFLIGHT_STATUS=101" >> $env:GITHUB_ENV
+          }
+          $json | Set-Content -LiteralPath $evidence -Encoding utf8NoBOM
+      - name: Build signed Print Support package
+        if: ${{ matrix.route == 'windows.print-support-app' && steps.psa_lock.outcome == 'success' }}
+        shell: pwsh
+        run: |
+          $output = Join-Path $env:RUNNER_TEMP "spoolix-psa-package-${{ github.run_id }}-${{ github.run_attempt }}"
+          $receipt = platform/windows/print-support/package/build-test-package.ps1 -OutputDirectory $output
+          if ($LASTEXITCODE -ne 0 -or -not $receipt) { throw "Print Support package build failed" }
+          $receiptPath = Join-Path $env:RUNNER_TEMP 'spoolix-psa-package-receipt.json'
+          $receipt | Set-Content -LiteralPath $receiptPath -Encoding utf8NoBOM
+          "SPOOLIX_WINDOWS_PRINT_SUPPORT_PACKAGE_RECEIPT=$receiptPath" >> $env:GITHUB_ENV
+      - name: Run all three route candidates
+        if: ${{ always() }}
         shell: bash
-        env:
-          SPOOLIX_WINDOWS_IPP_SPIKE_OPT_IN: I_UNDERSTAND_HOST_MUTATION
-          SPOOLIX_WINDOWS_IPP_SPIKE_DISPOSABLE_HOST: I_CONFIRM_DISPOSABLE_HOST
-          SPOOLIX_WINDOWS_IPP_SPIKE_LEASE_ID: lease:github-actions-windows-ipp-spike
-        run: just ci-windows-ipp-host-spike-candidate "${{ matrix.lane }}"
-
-      - name: Restore PrintService operational diagnostics
-        if: ${{ always() && matrix.needs_printservice && steps.printservice_prepare.outcome != 'skipped' }}
+        run: just ci-windows-product-route-candidate-batch "${{ matrix.route }}" "$SPOOLIX_WINDOWS_ROUTE_EVIDENCE_PATH"
+      - name: Enforce formal coverage gate
+        if: ${{ always() }}
+        shell: bash
+        run: just ci-windows-product-route-required-gate "${{ matrix.route }}" "$SPOOLIX_WINDOWS_ROUTE_EVIDENCE_PATH"
+      - name: Upload signed route evidence
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-route-evidence-${{ matrix.route }}-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: error
+          path: ${{ env.SPOOLIX_WINDOWS_ROUTE_EVIDENCE_PATH }}
+      - name: Upload Unidrv package and WDK evidence
+        if: ${{ always() && matrix.route == 'windows.unidrv' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-unidrv-package-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: error
+          path: |
+            ${{ env.SPOOLIX_WINDOWS_WDK_EVIDENCE }}
+            ${{ env.SPOOLIX_WINDOWS_UNIDRV_PACKAGE_ROOT }}
+            ${{ env.SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT }}
+      - name: Upload generated Print Support lock and package evidence
+        if: ${{ always() && matrix.route == 'windows.print-support-app' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-print-support-lock-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: error
+          path: |
+            platform/windows/print-support/package/packages.lock.json
+            ${{ runner.temp }}/spoolix-psa-nuget-lock-evidence.json
+            ${{ runner.temp }}/spoolix-psa-package-receipt.json
+      - name: Teardown canonical Unidrv product package
+        if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT != '' }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-${{ matrix.lane }}.json" -Lane "${{ matrix.lane }}"
+        run: cargo run -p spoolix-platform-windows-unidrv --example manage_product_package --locked -- teardown $env:SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT
+      - name: Remove run-scoped Unidrv certificate
+        if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_CERT_THUMBPRINT != '' }}
+        shell: pwsh
+        run: platform/windows/unidrv/package/remove-host-oracle-certificate.ps1 -Thumbprint $env:SPOOLIX_WINDOWS_UNIDRV_CERT_THUMBPRINT
+      - name: Teardown Spooler service-artifact anchor
+        if: ${{ always() && matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-oracle-windows-spooler"
+          just ci-teardown-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0) { throw "Spooler artifact anchor teardown failed closed" }
+      - name: Verify route terminal inventory
+        if: ${{ always() }}
+        shell: pwsh
+        run: |
+          $prefix = "Spoolix gha-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.route }}"
+          .github/scripts/verify-windows-product-route-terminal.ps1 -Route '${{ matrix.route }}' -DisplayPrefix $prefix
 
   platform-check:
     name: Platform check / ${{ matrix.platform }} / ${{ matrix.group }}
