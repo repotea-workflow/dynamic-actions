@@ -1,1 +1,1 @@
-fix(omsk): accept string numeric payloads
+fix(omsk): accept string order detail prices
