@@ -1,3 +1,1 @@
-feat(support): support custom inspector sections
-
-Add custom inspector section ids, plugin-provided section models, and renderer context exposure.
+feat(devhost): showcase plugin customization
