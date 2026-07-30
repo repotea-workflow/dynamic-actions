@@ -1,1 +1,1 @@
-feat(support): route selection frame outsets through capabilities
+feat(support): add insert tool presentation capability
