@@ -1,1 +1,1 @@
-gt/plugin-capability-inspector-layout
+main
