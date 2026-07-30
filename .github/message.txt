@@ -1,3 +1,1 @@
-feat(support): expose file action context
-
-Expose file action context for toolbar/file plugins.
+feat(support): expose default shell actions
