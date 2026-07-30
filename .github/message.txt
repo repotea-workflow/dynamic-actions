@@ -1,1 +1,3 @@
 feat(support): expose default shell actions
+
+Expose default shell actions for plugin UI slots.
