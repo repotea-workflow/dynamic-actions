@@ -1,1 +1,1 @@
-gt/plugin-featurebar-tools-section
+main
