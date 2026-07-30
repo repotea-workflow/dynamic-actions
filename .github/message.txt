@@ -1,3 +1,1 @@
-feat(support): make default plugin composable
-
-Allow callers to opt out of SDK default support registration while preserving default behavior and exposing the default support plugin for explicit composition.
+feat(support): allow caller template sources
