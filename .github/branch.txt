@@ -1,1 +1,1 @@
-main
+gt/plugin-toolbar-brand
