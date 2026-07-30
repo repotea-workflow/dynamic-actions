@@ -1,1 +1,3 @@
 feat(host): allow custom bridge message handlers
+
+Allow callers to extend bridge message dispatch from the host entrypoint.
