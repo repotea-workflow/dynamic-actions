@@ -1,1 +1,1 @@
-fix(omsk): accept string order detail prices
+Fix backend file-size acceptance gate
