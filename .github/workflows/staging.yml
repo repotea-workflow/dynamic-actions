@@ -400,7 +400,7 @@ jobs:
         id: printservice_prepare
         if: ${{ always() }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-controls.json" -Lane "spoolix-gdi-diagnostic"
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Enable -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-spoolix-gdi-diagnostic.json" -Lane "spoolix-gdi-diagnostic"
       - name: Run Windows IPP Spoolix GDI diagnostic
         if: ${{ always() && steps.printservice_prepare.outcome == 'success' }}
         shell: bash
@@ -408,7 +408,7 @@ jobs:
       - name: Restore PrintService operational diagnostics
         if: ${{ always() && steps.printservice_prepare.outcome != 'skipped' }}
         shell: pwsh
-        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-controls.json" -Lane "spoolix-gdi-diagnostic"
+        run: .github/scripts/windows-printservice-operational.ps1 -Mode Restore -StatePath "$env:RUNNER_TEMP\spoolix-printservice-operational-spoolix-gdi-diagnostic.json" -Lane "spoolix-gdi-diagnostic"
 
   # One expensive job per product route; all three profiles run sequentially
   # inside that job so one Windows allocation returns the complete result set.
