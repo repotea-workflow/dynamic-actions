@@ -1,1 +1,1 @@
-gt/plugin-composition
+main
