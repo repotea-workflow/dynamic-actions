@@ -1,11 +1,1 @@
-fix(ci): restore dynamic workflow contract (#249)
-
-* fix(ci): restore production trigger contract
-
-* fix(ci): keep native workflows trigger-only
-
-* test(ci): lock native workflows to dispatchers
-
-* ci: run acceptance from dynamic workflow
-
-* ci: limit dynamic check to rust backend
+fix(omsk): accept string trace weights
