@@ -1,3 +1,1 @@
-fix(host): keep bridge handler boundary high level
-
-Keep custom bridge handler context on the host-level API.
+Enhance plate web example gallery
