@@ -1,1 +1,1 @@
-fix(ztoms): allow backend v1 production readiness
+fix(ztoms): sync multi-source production app

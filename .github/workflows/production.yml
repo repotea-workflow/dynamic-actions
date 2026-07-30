@@ -263,7 +263,10 @@ jobs:
         run: >-
           argocd --server=${{ secrets.ARGOCD_FES_SERVER }}
           app sync work-production-ztoms-ula
-          --revision "$EXPECTED_GITOPS_REVISION"
+          --revisions "$EXPECTED_GITOPS_REVISION"
+          --source-position 1
+          --revisions "$EXPECTED_GITOPS_REVISION"
+          --source-position 2
           --async
 
       - name: Wait for Argo Synced Healthy
