@@ -1,1 +1,1 @@
-Skip acceptance in production deployment workflow (#253)
+Accept migration driver env in readiness check
