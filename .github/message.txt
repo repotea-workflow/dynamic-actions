@@ -1,1 +1,3 @@
 docs: align workflow guidance with dyn-workflows
+
+Remove stale runbook guidance that told future work to add GitHub workflow files.

@@ -1,1 +1,1 @@
-gt/plugin-workflow-doc-hygiene
+main
