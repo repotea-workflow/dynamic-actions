@@ -1,1 +1,1 @@
-gt/plugin-default-support-plugin
+main
