@@ -1,1 +1,1 @@
-feat(support): add insert tool presentation capability
+feat(support): add inspector actions capability
