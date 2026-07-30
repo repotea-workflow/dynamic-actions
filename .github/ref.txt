@@ -1,1 +1,1 @@
-main
+gt/plugin-capability-fallbacks
