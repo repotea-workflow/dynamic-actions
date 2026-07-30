@@ -237,7 +237,8 @@ jobs:
           python3 scripts/omsk_gitops_switch_readiness.py \
             --gitops-repo target/production-gitops \
             --gitops-revision "$gitops_revision" \
-            --backend-image "${{ needs.build-backend.outputs.uhub_image }}"
+            --backend-image "${{ needs.build-backend.outputs.uhub_image }}" \
+            --web-image "${{ needs.build-web.outputs.uhub_image }}"
           echo "revision=$gitops_revision" >> "$GITHUB_OUTPUT"
 
   deploy-app:
@@ -289,7 +290,11 @@ jobs:
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
                 "ztomsV3.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
-                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}"
+                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}",
+                "ztomsV3.migration.enabled": true,
+                "ztomsV3.migration.image": "${{ needs.build-backend.outputs.uhub_image }}",
+                "ztomsV3.migration.databaseUrlSecretRef.name": "secret-ztoms-v3-env",
+                "ztomsV3.migration.databaseUrlSecretRef.key": "DATABASE_URL"
               }
             }
 
@@ -297,13 +302,17 @@ jobs:
         run: echo "EXPECTED_GITOPS_REVISION=$(git -C gitops-repo rev-parse HEAD)" >> "$GITHUB_ENV"
 
       - name: Wait for Argo Synced Healthy
+        env:
+          ARGOCD_API_TOKEN: ${{ secrets.ARGOCD_FES_API_TOKEN }}
         run: >-
           scripts/wait_for_argocd_application.sh
           "${{ secrets.ARGOCD_FES_SERVER }}"
-          "${{ secrets.ARGOCD_FES_API_TOKEN }}"
           work-production-ztoms-ula
           "$EXPECTED_GITOPS_REVISION"
+          "${{ needs.build-backend.outputs.uhub_image }}"
           "${{ needs.build-web.outputs.uhub_image }}"
+          production
+          ztoms-ztoms-helm-v3-migration
 
       - name: Production smoke
         run: |

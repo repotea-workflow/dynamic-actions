@@ -34,3 +34,4 @@ jobs:
           just backend-test
           just backend-clippy
           just lint-file-size
+          just rust-migrate-smoke
