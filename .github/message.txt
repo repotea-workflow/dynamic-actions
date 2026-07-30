@@ -1,3 +1,1 @@
-feat(support): allow caller template sources
-
-Allow Plate callers to provide custom or empty template sources through PlateTemplateConfig while preserving default sample templates.
+feat(support): expose file action context
