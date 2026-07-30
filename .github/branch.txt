@@ -1,1 +1,1 @@
-main
+gt/plugin-inspector-properties-panel
