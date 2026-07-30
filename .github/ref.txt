@@ -1,1 +1,1 @@
-gt/plugin-shell-renderer-closure
+main
