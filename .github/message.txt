@@ -1,3 +1,1 @@
-feat(host): add custom bridge plugin entry
-
-Add a buildable custom bridge host entrypoint and fix feature-bar fallback double rendering when plugin tool contributions are active.
+feat(support): make default plugin composable
