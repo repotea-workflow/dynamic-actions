@@ -1,1 +1,1 @@
-gt/plugin-insert-tool-presentation-capability
+main
