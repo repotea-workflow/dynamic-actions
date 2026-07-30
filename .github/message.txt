@@ -1,1 +1,1 @@
-configurable risk rules
+fix configurable risk rules review findings
