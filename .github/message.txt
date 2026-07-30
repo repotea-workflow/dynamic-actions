@@ -1,1 +1,9 @@
-fix(support): keep toolbar file menu context internal
+feat(support): route toolbar file menu through plugin UI (#93)
+
+* feat(support): route toolbar file menu through plugin UI
+
+* fix(support): keep toolbar file menu context internal
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>

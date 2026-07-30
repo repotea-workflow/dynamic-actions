@@ -1,1 +1,1 @@
-gt/plugin-toolbar-default-config
+main
