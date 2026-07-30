@@ -239,48 +239,16 @@ jobs:
         with:
           repository: repotea-workflow/gitops-fes
           deploy_key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
+          argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
+          app_name: work-production-ztoms-ula
           changes: |
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
                 "ztomsV3.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
-                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}",
-                "ztomsV3.migration.enabled": true,
-                "ztomsV3.migration.image": "${{ needs.build-backend.outputs.uhub_image }}",
-                "ztomsV3.migration.databaseUrlSecretRef.name": "secret-ztoms-v3-env",
-                "ztomsV3.migration.databaseUrlSecretRef.key": "DATABASE_URL"
+                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}"
               }
             }
-
-      - name: Resolve deployed GitOps revision
-        run: echo "EXPECTED_GITOPS_REVISION=$(git -C gitops-repo rev-parse HEAD)" >> "$GITHUB_ENV"
-
-      - name: Setup ArgoCD CLI
-        uses: imajeetyadav/argocd-cli@0ae59c231f4b6d4415dbffc2d2a9da515d014d64
-
-      - name: Request Argo Sync
-        env:
-          ARGOCD_AUTH_TOKEN: ${{ secrets.ARGOCD_FES_API_TOKEN }}
-        run: >-
-          argocd --server=${{ secrets.ARGOCD_FES_SERVER }}
-          app sync work-production-ztoms-ula
-          --revisions "$EXPECTED_GITOPS_REVISION"
-          --source-position 1
-          --revisions "$EXPECTED_GITOPS_REVISION"
-          --source-position 2
-          --async
-
-      - name: Wait for Argo Synced Healthy
-        env:
-          ARGOCD_API_TOKEN: ${{ secrets.ARGOCD_FES_API_TOKEN }}
-        run: >-
-          scripts/wait_for_argocd_application.sh
-          "${{ secrets.ARGOCD_FES_SERVER }}"
-          work-production-ztoms-ula
-          "$EXPECTED_GITOPS_REVISION"
-          "${{ needs.build-backend.outputs.uhub_image }}"
-          "${{ needs.build-web.outputs.uhub_image }}"
-          production
-          ztoms-ztoms-helm-v3-migration
 
       - name: Production smoke
         run: |
