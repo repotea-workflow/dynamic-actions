@@ -239,9 +239,6 @@ jobs:
         with:
           repository: repotea-workflow/gitops-fes
           deploy_key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
-          argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
-          argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
-          app_name: work-production-ztoms-ula
           changes: |
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
@@ -256,6 +253,18 @@ jobs:
 
       - name: Resolve deployed GitOps revision
         run: echo "EXPECTED_GITOPS_REVISION=$(git -C gitops-repo rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Setup ArgoCD CLI
+        uses: imajeetyadav/argocd-cli@0ae59c231f4b6d4415dbffc2d2a9da515d014d64
+
+      - name: Request Argo Sync
+        env:
+          ARGOCD_AUTH_TOKEN: ${{ secrets.ARGOCD_FES_API_TOKEN }}
+        run: >-
+          argocd --server=${{ secrets.ARGOCD_FES_SERVER }}
+          app sync work-production-ztoms-ula
+          --revision "$EXPECTED_GITOPS_REVISION"
+          --async
 
       - name: Wait for Argo Synced Healthy
         env:

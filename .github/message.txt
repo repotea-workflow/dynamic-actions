@@ -1,5 +1,1 @@
-Accept migration driver env in readiness check (#254)
-
-* Skip acceptance in production deployment workflow
-
-* Accept migration driver env in readiness check
+Run production Argo sync asynchronously
