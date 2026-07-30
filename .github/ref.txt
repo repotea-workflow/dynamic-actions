@@ -1,1 +1,1 @@
-gt/skip-production-acceptance
+main
