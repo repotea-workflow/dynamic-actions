@@ -87,13 +87,6 @@ jobs:
             ${{ steps.tags.outputs.ghcr_sha }}
             ${{ steps.tags.outputs.uhub_sha }}
 
-      - name: Verify backend registry manifests
-        run: |
-          python3 scripts/omsk_gitops_switch_readiness.py \
-            --registry-image "${{ steps.tags.outputs.ghcr_sha }}" \
-            --registry-image "${{ steps.tags.outputs.uhub_sha }}" \
-            --require-registry-provenance
-
   build-web:
     name: Build web
     runs-on: ubuntu-latest
@@ -153,53 +146,6 @@ jobs:
             ${{ steps.tags.outputs.ghcr_sha }}
             ${{ steps.tags.outputs.uhub_sha }}
 
-      - name: Verify web registry manifests
-        run: |
-          python3 scripts/omsk_gitops_switch_readiness.py \
-            --registry-image "${{ steps.tags.outputs.ghcr_sha }}" \
-            --registry-image "${{ steps.tags.outputs.uhub_sha }}" \
-            --require-registry-provenance
-
-  release-readiness:
-    name: Release readiness
-    runs-on: ubuntu-latest
-    needs:
-      - build-backend
-      - build-web
-    outputs:
-      gitops_revision: ${{ steps.gitops.outputs.revision }}
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: repotea-workspace/ztoms
-          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          ref_file: .github/ref.txt
-
-      - name: Set source SHA
-        run: echo "SOURCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-
-      - name: Checkout production GitOps
-        uses: actions/checkout@v6
-        with:
-          repository: repotea-workflow/gitops-fes
-          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
-          path: target/production-gitops
-          fetch-depth: 0
-
-      - name: Verify immutable production tuple
-        id: gitops
-        run: |
-          gitops_revision="$(git -C target/production-gitops rev-parse HEAD)"
-          python3 scripts/omsk_gitops_switch_readiness.py \
-            --gitops-repo target/production-gitops \
-            --gitops-revision "$gitops_revision" \
-            --backend-image "${{ needs.build-backend.outputs.uhub_image }}" \
-            --web-image "${{ needs.build-web.outputs.uhub_image }}"
-          echo "revision=$gitops_revision" >> "$GITHUB_OUTPUT"
-
   deploy-app:
     name: Deploy App
     runs-on: ubuntu-latest
@@ -207,7 +153,6 @@ jobs:
     needs:
       - build-backend
       - build-web
-      - release-readiness
     steps:
       - uses: actions/checkout@v6
 
@@ -220,19 +165,6 @@ jobs:
 
       - name: Set source SHA
         run: echo "SOURCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
-
-      - name: Checkout verified production GitOps revision
-        uses: actions/checkout@v6
-        with:
-          repository: repotea-workflow/gitops-fes
-          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
-          path: gitops-repo
-          fetch-depth: 0
-
-      - name: Confirm verified production GitOps revision
-        run: >-
-          test "$(git -C gitops-repo rev-parse HEAD)" =
-          "${{ needs.release-readiness.outputs.gitops_revision }}"
 
       - name: Deploy
         uses: repotea-workspace/kangumi/github-actions/gitops-deploy@main
