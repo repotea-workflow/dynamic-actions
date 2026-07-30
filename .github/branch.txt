@@ -1,1 +1,1 @@
-gt/plugin-bridge-config-closure
+main
