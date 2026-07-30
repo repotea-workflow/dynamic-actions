@@ -1,1 +1,1 @@
-main
+gt/plugin-default-tool-catalog
