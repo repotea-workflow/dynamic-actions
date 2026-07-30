@@ -1,3 +1,1 @@
-feat(support): add shell renderer plugin slot
-
-Add root shell renderer plugin slot, public shell context, and singleton default UI replacement semantics.
+feat(support): render custom element capability tools
