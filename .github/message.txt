@@ -1,1 +1,1 @@
-refactor(support): centralize element capability id resolution
+feat(support): add element inspector section layouts
