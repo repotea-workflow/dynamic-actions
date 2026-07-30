@@ -1,1 +1,3 @@
-refactor(support): centralize element capability lookup
+refactor(support): centralize element capability lookup (#99)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
