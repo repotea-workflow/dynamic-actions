@@ -1,1 +1,10 @@
-fix(rust): validate compressed bitmap previews
+feat(pxlab_image): grayscale-first b/w & dither recipes, add rec709, honor Atkinson threshold
+
+- Black-white and dither recipes now apply a grayscale pass before
+  thresholding/dithering (dither previously ran on the raw R channel of
+  color images, producing broken output). Add PxGrayMode.rec709
+  (0.2125/0.7154/0.0721) to match MetaPrint's LuminanceThresholdShader.
+- PxAtkinsonDither now honors its threshold field instead of a hardcoded
+  128, matching MetaPrint's Atkinson(threshold: 125).
+- Synced the same changes into the Rust pxlab-image crate and regenerated
+  the Dart->Rust parity fixtures.
