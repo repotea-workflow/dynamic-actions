@@ -1,1 +1,1 @@
-Allow Windows IPP route-owned terminal stores
+Fix macOS AirPrint activated fd adoption
