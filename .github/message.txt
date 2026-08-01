@@ -1,1 +1,1 @@
-feat(support): render unsupported element fallback
+refactor(support): add typed inspector section outlet
