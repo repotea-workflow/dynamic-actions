@@ -1,1 +1,1 @@
-Avoid UWP workload in locked PSA preflight
+Stabilize Windows Git Bash route gate fixture
