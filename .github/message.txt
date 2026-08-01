@@ -1,1 +1,1 @@
-test(support): cover missing feature bar emoji panel
+feat(support): split text element plugins
