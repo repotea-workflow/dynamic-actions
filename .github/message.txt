@@ -1,1 +1,1 @@
-Harden macOS partial cleanup validation
+Fix Windows artifact guard and rename access
