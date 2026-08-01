@@ -1,1 +1,1 @@
-feat(support): introduce default shell layout config
+feat(support): project default shell contributions
