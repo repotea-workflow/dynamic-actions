@@ -1,1 +1,1 @@
-refactor(support): narrow default support ownership
+feat(support): add default plugin composition config
