@@ -1,1 +1,1 @@
-refactor(plugin): make composition transitions atomic
+refactor(support): add typed inspector multi-selection outlet
