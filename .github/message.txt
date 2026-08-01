@@ -1,1 +1,1 @@
-feat(support): split feature bar container plugin
+test(support): cover missing feature bar emoji panel
