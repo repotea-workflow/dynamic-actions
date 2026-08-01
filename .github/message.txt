@@ -1,1 +1,1 @@
-refactor(support): render toolbar controls through typed outlet
+refactor(plugin): make composition transitions atomic
