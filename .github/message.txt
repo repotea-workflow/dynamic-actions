@@ -1,1 +1,1 @@
-Wait for macOS launchd kickstart readiness
+Keep launchd readiness polling macOS-only
