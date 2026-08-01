@@ -1,1 +1,1 @@
-refactor(support): render canvas status overlay through typed outlet
+refactor(support): render toolbar controls through typed outlet
