@@ -1,1 +1,1 @@
-feat(plugin): add scoped UI outlets
+feat(plugin): stage plugin commands locally
