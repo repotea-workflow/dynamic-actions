@@ -1,1 +1,1 @@
-gt/configurable-risk-rules
+gt/toolkit-staged-paste
