@@ -1,1 +1,1 @@
-Allow retained Windows spooler output history
+Keep AirPrint GUI bootout out of system plist cleanup
