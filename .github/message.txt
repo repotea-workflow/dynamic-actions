@@ -1,1 +1,1 @@
-Fix macOS AirPrint activated fd adoption
+Retry AirPrint health probe after launchd activation
