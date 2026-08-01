@@ -1,1 +1,1 @@
-Complete durable cross-platform route cleanup
+Harden cross-platform route CI gates
