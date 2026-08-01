@@ -1,1 +1,1 @@
-refactor(support): preserve registry on composition reuse
+refactor(support): render feature bar panels through typed outlets
