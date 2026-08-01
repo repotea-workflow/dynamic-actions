@@ -1,1 +1,1 @@
-Exercise macOS AirPrint cleanup matrix in CI
+Pin Windows Print Support NuGet restore
