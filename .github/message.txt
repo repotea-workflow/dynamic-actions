@@ -1,7 +1,5 @@
-feat(support): unify PNG export via exportDocumentPayload resolution (#126)
+chore: add FVM config pinning Flutter 3.41.4
 
-Give hosts one PNG contract with dpi/scale/pixels sizing (optional
-pxPerMm on dpi), reserve png.rust for later, and drop dual Dart/Rust
-export menu paths so product export stays on a single native pipeline.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+- Add .fvmrc so the workspace always runs via fvm with Flutter 3.41.4
+- Point melos at the FVM-managed SDK via sdkPath: .fvm/flutter_sdk
+- Ignore .fvm/ cache and the local example build symlink
