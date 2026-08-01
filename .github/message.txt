@@ -1,1 +1,1 @@
-Preserve Windows IPP store failure diagnostics
+Name Windows IPP store record boundaries
