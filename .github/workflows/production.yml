@@ -551,6 +551,7 @@ jobs:
         shell: pwsh
         run: |
           $output = Join-Path $env:RUNNER_TEMP "spoolix-psa-package-${{ github.run_id }}-${{ github.run_attempt }}"
+          "SPOOLIX_WINDOWS_PSA_PACKAGE_ROOT=$output" >> $env:GITHUB_ENV
           $receipt = platform/windows/print-support/package/build-test-package.ps1 -OutputDirectory $output
           if ($LASTEXITCODE -ne 0 -or -not $receipt) { throw "Print Support package build failed" }
           $receiptPath = Join-Path $env:RUNNER_TEMP 'spoolix-psa-package-receipt.json'
@@ -592,6 +593,7 @@ jobs:
             ${{ runner.temp }}/spoolix-psa-nuget-lock-evidence.json
             ${{ runner.temp }}/spoolix-psa-build-tools-evidence.json
             ${{ runner.temp }}/spoolix-psa-package-receipt.json
+            ${{ env.SPOOLIX_WINDOWS_PSA_PACKAGE_ROOT }}
       - name: Teardown canonical Unidrv product package
         if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT != '' }}
         shell: pwsh
