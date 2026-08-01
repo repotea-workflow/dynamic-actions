@@ -1,1 +1,1 @@
-feat(support): split remaining insert plugins
+refactor(support): narrow default support ownership
