@@ -504,6 +504,9 @@ jobs:
           "SPOOLIX_WINDOWS_UNIDRV_PACKAGE_ROOT=$output" >> $env:GITHUB_ENV
           $lines = & platform/windows/unidrv/package/prepare-host-oracle.ps1 -OutputRoot $output -MonitorDll $monitor
           if ($LASTEXITCODE -ne 0) { throw "Unidrv package preparation failed" }
+          $authorityPath = Join-Path $output 'host-oracle-authority.json'
+          if (-not (Test-Path -LiteralPath $authorityPath -PathType Leaf)) { throw "Unidrv authority file is missing: $authorityPath" }
+          "SPOOLIX_WINDOWS_UNIDRV_PACKAGE_AUTHORITY=$authorityPath" >> $env:GITHUB_ENV
           foreach ($line in $lines) {
             if ($line -match '^SPOOLIX_WINDOWS_UNIDRV_(PACKAGE_AUTHORITY|CERT_THUMBPRINT)=') { $line >> $env:GITHUB_ENV }
           }

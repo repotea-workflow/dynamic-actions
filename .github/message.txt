@@ -1,1 +1,1 @@
-Expose macOS launchd label rejection context
+Revoke unified output access after printer removal
