@@ -1,1 +1,1 @@
-feat(support): project default shell contributions
+feat(support): split default toolbar tool plugins
