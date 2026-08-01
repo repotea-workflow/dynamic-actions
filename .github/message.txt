@@ -1,1 +1,1 @@
-Persist AirPrint startup lease before bootstrap
+Fix AirPrint socket-activated launchd readiness
