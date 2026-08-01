@@ -1,1 +1,1 @@
-Keep launchd readiness polling macOS-only
+Adjust Windows namespace guard and rename access
