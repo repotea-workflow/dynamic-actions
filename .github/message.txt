@@ -1,1 +1,1 @@
-perf(omsk-web): stage toolkit address paste
+fix production migration image sync

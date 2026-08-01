@@ -178,7 +178,8 @@ jobs:
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
                 "ztomsV3.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
-                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}"
+                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}",
+                "ztomsV3.migration.image": "${{ needs.build-backend.outputs.uhub_image }}"
               }
             }
 
