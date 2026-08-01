@@ -533,8 +533,21 @@ jobs:
             "SPOOLIX_WINDOWS_ROUTE_PREFLIGHT_STATUS=101" >> $env:GITHUB_ENV
           }
           $json | Set-Content -LiteralPath $evidence -Encoding utf8NoBOM
-      - name: Build signed Print Support package
+      - name: Prepare Print Support MSBuild tooling
+        id: psa_tools
         if: ${{ matrix.route == 'windows.print-support-app' && steps.psa_lock.outcome == 'success' }}
+        shell: pwsh
+        run: |
+          $evidence = Join-Path $env:RUNNER_TEMP 'spoolix-psa-build-tools-evidence.json'
+          $lines = & platform/windows/print-support/package/prepare-build-tools.ps1 -EvidencePath $evidence -InstallIfMissing
+          if ($LASTEXITCODE -ne 0) { throw 'Print Support build-tool preparation failed' }
+          foreach ($line in $lines) {
+            if ($line -match '^SPOOLIX_WINDOWS_PSA_(MSBUILD|BUILD_TOOLS_EVIDENCE)=') { $line >> $env:GITHUB_ENV }
+          }
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_PSA_MSBUILD=')) { throw 'Print Support MSBuild path output is missing' }
+          if (-not ($lines -match '^SPOOLIX_WINDOWS_PSA_BUILD_TOOLS_EVIDENCE=')) { throw 'Print Support build-tools evidence output is missing' }
+      - name: Build signed Print Support package
+        if: ${{ matrix.route == 'windows.print-support-app' && steps.psa_lock.outcome == 'success' && steps.psa_tools.outcome == 'success' }}
         shell: pwsh
         run: |
           $output = Join-Path $env:RUNNER_TEMP "spoolix-psa-package-${{ github.run_id }}-${{ github.run_attempt }}"
@@ -577,6 +590,7 @@ jobs:
           path: |
             platform/windows/print-support/package/packages.lock.json
             ${{ runner.temp }}/spoolix-psa-nuget-lock-evidence.json
+            ${{ runner.temp }}/spoolix-psa-build-tools-evidence.json
             ${{ runner.temp }}/spoolix-psa-package-receipt.json
       - name: Teardown canonical Unidrv product package
         if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_PRODUCT_PACKAGE_RECEIPT != '' }}
