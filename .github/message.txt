@@ -1,1 +1,1 @@
-Pin Windows Print Support NuGet restore
+Add host-gated Windows product route adapter contract
