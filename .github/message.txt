@@ -1,1 +1,1 @@
-refactor(support): let plugin composition filter default tools
+fix(support): keep emoji panel tied to plugin composition
