@@ -1,1 +1,1 @@
-Close Windows spooler terminal inventory
+Accept existing Windows Unidrv monitor registration
