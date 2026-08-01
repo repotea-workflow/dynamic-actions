@@ -1,1 +1,1 @@
-Harden macOS AirPrint partial-state cleanup
+Harden macOS partial cleanup validation
