@@ -1,1 +1,1 @@
-feat(support): add default plugin composition config
+docs(example): show plugin composition in web example
