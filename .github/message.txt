@@ -1,1 +1,1 @@
-refactor(plugin): type inspector panel contributions
+refactor(support): type feature tool contributions
