@@ -1,1 +1,1 @@
-Keep AirPrint GUI bootout out of system plist cleanup
+Close Windows spooler terminal inventory
