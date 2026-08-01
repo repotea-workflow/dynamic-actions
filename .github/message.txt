@@ -1,1 +1,1 @@
-Add host-gated Windows product route adapter contract
+Avoid GUI stat of privileged AirPrint artifacts
