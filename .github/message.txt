@@ -1,1 +1,1 @@
-fix(flutter): roll back registry state on initialize failure
+refactor(support): preserve registry on composition reuse
