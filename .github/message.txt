@@ -1,1 +1,1 @@
-refactor(support): route default shell visibility through layout
+refactor(support): let plugin composition filter default tools
