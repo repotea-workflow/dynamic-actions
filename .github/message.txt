@@ -1,1 +1,1 @@
-Fix Windows service artifact rename access
+Allow compatible Windows artifact directory sharing
