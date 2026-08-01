@@ -1,1 +1,1 @@
-Use Authenticode policy for Unidrv CI package
+Fix Windows directory namespace pinning and rename authority
