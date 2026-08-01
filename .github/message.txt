@@ -1,1 +1,1 @@
-refactor(support): add typed inspector section outlet
+refactor(plugin): type inspector panel contributions
