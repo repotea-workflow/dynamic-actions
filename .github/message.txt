@@ -1,1 +1,1 @@
-refactor(support): render feature bar panels through typed outlets
+refactor(support): render toolbar brand through typed outlet
