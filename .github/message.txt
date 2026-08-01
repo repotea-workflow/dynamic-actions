@@ -1,1 +1,1 @@
-fix(support): keep emoji panel tied to plugin composition
+fix(flutter): roll back registry state on initialize failure
