@@ -1,1 +1,1 @@
-docs(example): show plugin composition in web example
+docs(example): prefer plugin composition for toolbar controls
