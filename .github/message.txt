@@ -1,1 +1,1 @@
-refactor(support): add typed inspector multi-selection outlet
+fix(plugin): register default typed UI before overrides
