@@ -1,1 +1,1 @@
-Allow compatible Windows artifact directory sharing
+Exercise macOS AirPrint cleanup matrix in CI

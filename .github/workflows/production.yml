@@ -349,6 +349,18 @@ jobs:
         shell: bash
         run: just ci-macos-airprint-oracle "${{ matrix.profile }}"
 
+      - name: Teardown macOS AirPrint success harness
+        if: ${{ always() }}
+        shell: bash
+        run: |
+          bash .github/scripts/teardown-macos-ci-harness.sh
+          bash .github/scripts/teardown-macos-ci-harness.sh
+
+      - name: Run macOS AirPrint cleanup failure matrix
+        if: ${{ success() }}
+        shell: bash
+        run: just ci-macos-airprint-cleanup-oracle "${{ matrix.profile }}"
+
       - name: Teardown macOS CI harness
         if: ${{ always() }}
         shell: bash
