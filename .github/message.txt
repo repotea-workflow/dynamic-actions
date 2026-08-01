@@ -1,1 +1,1 @@
-Fix Windows IPP output ACL boundary and evidence shims
+Fix Windows host grant dependency
