@@ -1,1 +1,1 @@
-fix configurable risk rules review findings
+fix(omsk-web): keep address parsing off page lifecycle
