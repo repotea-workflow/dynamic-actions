@@ -1,1 +1,1 @@
-Avoid GUI stat of privileged AirPrint artifacts
+Make Windows CLI route test host-independent
