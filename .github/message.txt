@@ -1,1 +1,3 @@
 fix(omsk): satisfy risk rule clippy
+
+Keep risk-rule validation behavior while satisfying the -D warnings acceptance gate.
