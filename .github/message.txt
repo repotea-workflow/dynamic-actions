@@ -1,1 +1,1 @@
-Make Windows CLI route test host-independent
+Make Windows route gate test Git Bash compatible
