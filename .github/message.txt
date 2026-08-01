@@ -1,1 +1,5 @@
-Enhance plate web example gallery
+feat(support): unify PNG export via exportDocumentPayload resolution
+
+Give hosts one PNG contract with dpi/scale/pixels sizing (optional
+pxPerMm on dpi), reserve png.rust for later, and drop dual Dart/Rust
+export menu paths so product export stays on a single native pipeline.
