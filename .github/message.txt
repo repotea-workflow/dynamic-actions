@@ -1,1 +1,1 @@
-Harden cross-platform route CI gates
+Harden cross-platform route host E2E lifecycle
