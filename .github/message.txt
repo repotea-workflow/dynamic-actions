@@ -1,1 +1,7 @@
-perf(omsk-web): add lightweight toolkit editor
+[codex] configurable risk rules (#256)
+
+* configurable risk rules
+
+* fix configurable risk rules review findings
+
+* fix production migration image sync
