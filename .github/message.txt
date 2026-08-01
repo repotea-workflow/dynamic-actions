@@ -1,1 +1,1 @@
-feat(plugin): make registry transitions transactional
+feat(support): introduce default shell layout config
