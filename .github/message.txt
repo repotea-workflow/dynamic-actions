@@ -1,1 +1,7 @@
 fix(omsk-web): restore toolkit and expose risk settings
+
+* perf(omsk-web): stage toolkit address paste
+
+* perf(omsk-web): add lightweight toolkit editor
+
+* fix(omsk-web): restore toolkit and expose risk settings
