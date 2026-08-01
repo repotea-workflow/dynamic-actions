@@ -1,1 +1,1 @@
-docs: define plugin composition migration contract
+feat(plugin): add typed UI anchors
