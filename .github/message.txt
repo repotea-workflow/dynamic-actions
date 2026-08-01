@@ -1,1 +1,1 @@
-feat(plugin): stage plugin commands locally
+feat(plugin): make registry transitions transactional
