@@ -1,1 +1,1 @@
-Repair pinned Windows SDK before Unidrv oracle
+Avoid UWP workload in locked PSA preflight
