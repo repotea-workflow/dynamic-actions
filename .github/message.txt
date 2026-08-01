@@ -1,1 +1,1 @@
-refactor(support): render view settings drawer through typed outlet
+refactor(support): render canvas status overlay through typed outlet
