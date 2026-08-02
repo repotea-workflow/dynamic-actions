@@ -1,1 +1,1 @@
-Allow owned PSA authority roots
+Isolate PSA NuGet restore cache
