@@ -1,30 +1,33 @@
-PR03: composable default layout regions
+PR04: headless inspector state and bindings
 
-Add PlateLayoutRegions, an immutable bundle of already-bound default
-presentation regions (canvas, toolbar, feature tools, inspector, canvas
-status) plus the PlateRegionWidgetBuilder typedef, exported through the
-public support barrel. Custom PlateLayout hosts can place, omit, or
-reorder these regions and mix them with raw plugin outlets.
+Add the typed headless inspector surface to plate_editor_support:
+PlateInspectorState snapshot types, PlateInspectorBinding<T> field
+mutations that delegate through PlatePresentationCommands, the
+lifecycle-owned PlateLayoutContext.inspector controller bound to the
+committed composition, and a hosted inspector controller wired through
+the default shell into the default inspector.
 
-- PlateLayoutContext gains an optional regions parameter; the canvas
-  compatibility alias remains for legacy custom layouts.
-- PlateLayoutRegionHost is a package-internal mutable binding: stable
-  composition references (controller, session, coordinator, registry)
-  plus shell-viewable slots, owned by one committed composition
-  generation under a lease. Successful generation replacement, controller
-  replacement, and unmount retire the old host so retained builders throw
-  StateError('Plate layout regions are retired.') and never render a
-  retired registry.
-- The default shell renders the same region builders as custom layouts;
-  buildPlateDefaultLayoutRegions is the single shared factory. Region
-  markers diagnose rendering the same single-logical-region twice per
-  composition with a FlutterError, scoped to one live render (registration
-  released on deactivate) and deferred to a post-frame callback so the
-  check never aborts a build that already mounted focusable siblings.
-- Specs document movable default regions and the Web Bridge build-time
-  composition boundary.
+- plate_inspector_state.dart: immutable state/binding/section-state
+  types, package-internal host controller + resolver sharing the
+  default inspector's model resolution, capability layout, visible
+  section filtering, and merge rules, plus a standalone command facade.
+- plate_presentation_commands.dart: inspector mutation methods
+  (geometry, text, shape, line, image, barcode, time, serial, formula,
+  emoji, boolean, table) delegating to the existing command controller.
+- plate.dart / plate_layout.dart / plate_layout_regions.dart /
+  plate_default_editor_shell.dart: hosted inspector binding lifecycle,
+  layout-context plumbing, and shell-to-panel wiring.
+- plate_default_inspector.dart / plate_default_inspector_panel.dart:
+  default inspector renders resolved headless state through the hosted
+  binding; binding notifications during the build phase are deferred to
+  a post-frame callback to avoid markNeedsBuild-during-build.
+- Tests: state (7), binding commands (8), controller lifecycle (5 + 1
+  composition-commit regression), model/state parity (8), facade
+  delegation (15), default inspector, public boundary, layout legacy
+  context.
+- Specs: plugin-composition Headless Inspector Boundary; example
+  custom-inspector guidance in sdk-example-boundary.
 
-Tests: new plate_layout_regions_test.dart (7 tests) plus layout and
-public-boundary updates; shared test-support transition plugin.
-Validation: focused 6-file suite 80/80, dart analyze EXIT=0,
-just test-baseline and just test-flutter pass.
+Validation: 102/102 focused tests, dart analyze 0 errors/0 warnings,
+just test-flutter and just test-baseline green (SCRATCH
+pr-04-focused.log / pr-04-analyze.log / pr-04-full-suites.log).
