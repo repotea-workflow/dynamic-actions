@@ -1,1 +1,1 @@
-Preserve Windows artifact discovery diagnostics
+Make macOS route removal idempotent after partial cleanup
