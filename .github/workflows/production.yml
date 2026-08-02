@@ -567,6 +567,8 @@ jobs:
           $env:NUGET_PACKAGES = $nugetPackages
           $env:NUGET_HTTP_CACHE_PATH = $nugetHttpCache
           $env:NUGET_PLUGINS_CACHE_PATH = $nugetPluginsCache
+          $env:NUGET_FALLBACK_PACKAGES = ''
+          $env:NuGetFallbackFolder = ''
           & $dotnet nuget locals all --clear
           if ($LASTEXITCODE -ne 0) { throw 'run-scoped NuGet cache cleanup failed' }
           $pathEvidence = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-path-evidence.json'
@@ -582,6 +584,8 @@ jobs:
           "NUGET_PACKAGES=$nugetPackages" >> $env:GITHUB_ENV
           "NUGET_HTTP_CACHE_PATH=$nugetHttpCache" >> $env:GITHUB_ENV
           "NUGET_PLUGINS_CACHE_PATH=$nugetPluginsCache" >> $env:GITHUB_ENV
+          "NUGET_FALLBACK_PACKAGES=" >> $env:GITHUB_ENV
+          "NuGetFallbackFolder=" >> $env:GITHUB_ENV
           "SPOOLIX_WINDOWS_PSA_NUGET_PATH_EVIDENCE=$pathEvidence" >> $env:GITHUB_ENV
       - name: Prepare Print Support NuGet lock evidence
         id: psa_lock

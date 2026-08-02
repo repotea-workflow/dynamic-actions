@@ -1,1 +1,1 @@
-Isolate PSA NuGet caches per workflow run
+Disable SDK NuGet fallback folders for PSA restore
