@@ -1,24 +1,27 @@
-PR01: Contract and parity baseline
+PR02: Headless presentation state and commands
 
-Establish the presentation-contract boundary and parity oracle before
-any headless presentation refactor:
+Add a typed, immutable, listenable presentation state and a typed command
+facade for Flutter presentation code, backed by a UI-state coordinator that
+owns the default shell's presentation state.
 
-- docs/spec/plugin-composition.md: add Presentation Composition Boundary
-  (typed immutable state/commands/builders/style/geometry in; session,
-  managed editor, renderer bridge, asset stores, schema adapters,
-  service locators, Map<String,Object?> out; reserved names preserved)
-- docs/spec/sdk-example-boundary.md: precise custom presentation
-  boundary (Flutter build-time widget injection vs Web Bridge runtime;
-  host may orchestrate presentation but not duplicate SDK behavior)
-- test-only parity oracle capturing document JSON, selection, undo/redo,
-  viewport zoom, plugin ids, visible widget keys
-- presentation contract test: default regions, custom layout outlets,
-  barrel hygiene (no session types via public barrel)
-- interaction parity test: nudge/undo/redo deltas, zoom resets viewport
-  only, selection does not dirty export JSON
-- transition regression: failed/superseded candidates and retired
-  registries never expose partial presentation
-- boundary test: runtime barrel exposes no Map<String,Object?> models
-
-Verification: test-baseline (4 suites) and test-flutter (melos exec,
-all packages) pass.
+- plate_presentation_state.dart: PlateEditorPresentationState snapshot and
+  PlatePresentationController (ValueListenable) binding, published from the
+  committed session/controller/coordinator only on actual state change.
+- plate_presentation_commands.dart: 25-method typed facade delegating to the
+  existing controller/session/support owners; controller-backed commands throw
+  StateError after Plate disposal, UI-context commands report disabled.
+- plate_presentation_ui_coordinator.dart: shell UI state owner (inspector
+  visibility/enablement, drawers, multi-select, file actions) with delegate
+  attach/detach; shell detaches in deactivate so composition transitions keep
+  the mounted shell's delegate.
+- plate.dart/plate_layout.dart/plate_default_editor_shell.dart: wire the
+  coordinator and presentation binding through Plate and the default shell;
+  PlateLayoutContext gains an optional presentation controller.
+- barrel: re-export the frozen curated PlateElement family (27 names) plus
+  PlateEditorPresentationState, PlatePresentationCommands,
+  PlatePresentationController.
+- Specs: element models are data contracts; callers may inspect/construct/
+  pattern-match/patch them; JSON/codec/schema-adapter imports stay forbidden.
+- Tests: state publish semantics, command delegation/undo/redo/viewport/
+  template/export, shell delegate attach, element public API, boundary guards,
+  layout presentation observations.
