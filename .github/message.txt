@@ -1,27 +1,30 @@
-PR02: Headless presentation state and commands
+PR03: composable default layout regions
 
-Add a typed, immutable, listenable presentation state and a typed command
-facade for Flutter presentation code, backed by a UI-state coordinator that
-owns the default shell's presentation state.
+Add PlateLayoutRegions, an immutable bundle of already-bound default
+presentation regions (canvas, toolbar, feature tools, inspector, canvas
+status) plus the PlateRegionWidgetBuilder typedef, exported through the
+public support barrel. Custom PlateLayout hosts can place, omit, or
+reorder these regions and mix them with raw plugin outlets.
 
-- plate_presentation_state.dart: PlateEditorPresentationState snapshot and
-  PlatePresentationController (ValueListenable) binding, published from the
-  committed session/controller/coordinator only on actual state change.
-- plate_presentation_commands.dart: 25-method typed facade delegating to the
-  existing controller/session/support owners; controller-backed commands throw
-  StateError after Plate disposal, UI-context commands report disabled.
-- plate_presentation_ui_coordinator.dart: shell UI state owner (inspector
-  visibility/enablement, drawers, multi-select, file actions) with delegate
-  attach/detach; shell detaches in deactivate so composition transitions keep
-  the mounted shell's delegate.
-- plate.dart/plate_layout.dart/plate_default_editor_shell.dart: wire the
-  coordinator and presentation binding through Plate and the default shell;
-  PlateLayoutContext gains an optional presentation controller.
-- barrel: re-export the frozen curated PlateElement family (27 names) plus
-  PlateEditorPresentationState, PlatePresentationCommands,
-  PlatePresentationController.
-- Specs: element models are data contracts; callers may inspect/construct/
-  pattern-match/patch them; JSON/codec/schema-adapter imports stay forbidden.
-- Tests: state publish semantics, command delegation/undo/redo/viewport/
-  template/export, shell delegate attach, element public API, boundary guards,
-  layout presentation observations.
+- PlateLayoutContext gains an optional regions parameter; the canvas
+  compatibility alias remains for legacy custom layouts.
+- PlateLayoutRegionHost is a package-internal mutable binding: stable
+  composition references (controller, session, coordinator, registry)
+  plus shell-viewable slots, owned by one committed composition
+  generation under a lease. Successful generation replacement, controller
+  replacement, and unmount retire the old host so retained builders throw
+  StateError('Plate layout regions are retired.') and never render a
+  retired registry.
+- The default shell renders the same region builders as custom layouts;
+  buildPlateDefaultLayoutRegions is the single shared factory. Region
+  markers diagnose rendering the same single-logical-region twice per
+  composition with a FlutterError, scoped to one live render (registration
+  released on deactivate) and deferred to a post-frame callback so the
+  check never aborts a build that already mounted focusable siblings.
+- Specs document movable default regions and the Web Bridge build-time
+  composition boundary.
+
+Tests: new plate_layout_regions_test.dart (7 tests) plus layout and
+public-boundary updates; shared test-support transition plugin.
+Validation: focused 6-file suite 80/80, dart analyze EXIT=0,
+just test-baseline and just test-flutter pass.
