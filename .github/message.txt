@@ -1,1 +1,1 @@
-refactor: compose plate capabilities with plugins
+feat: showcase brand style compositions
