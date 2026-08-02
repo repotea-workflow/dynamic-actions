@@ -1,1 +1,1 @@
-Isolate PSA NuGet restore cache
+Allow all PSA parent-owned roots
