@@ -1,1 +1,1 @@
-fix(omsk): preserve trace id index after archive rebuild
+fix(omsk): preserve trace id index after archive rebuild (#260)
