@@ -1,1 +1,1 @@
-Use raw system queue for AirPrint host oracle
+Use non-raw raster PPD for AirPrint oracle
