@@ -1,1 +1,1 @@
-Diagnose and harden macOS AirPrint IPP oracle
+Validate AirPrint cleanup state before mutation
