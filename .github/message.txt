@@ -1,1 +1,1 @@
-Normalize AirPrint activation listener and lint
+Fail fast after Windows PSA preflight errors

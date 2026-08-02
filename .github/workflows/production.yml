@@ -576,6 +576,7 @@ jobs:
           if (-not ($lines -match '^SPOOLIX_WINDOWS_PSA_MSBUILD=')) { throw 'Print Support MSBuild path output is missing' }
           if (-not ($lines -match '^SPOOLIX_WINDOWS_PSA_BUILD_TOOLS_EVIDENCE=')) { throw 'Print Support build-tools evidence output is missing' }
       - name: Build signed Print Support package
+        id: psa_package
         if: ${{ matrix.route == 'windows.print-support-app' && steps.psa_lock.outcome == 'success' && steps.psa_tools.outcome == 'success' }}
         shell: pwsh
         run: |
@@ -586,6 +587,19 @@ jobs:
           $receiptPath = Join-Path $env:RUNNER_TEMP 'spoolix-psa-package-receipt.json'
           $receipt | Set-Content -LiteralPath $receiptPath -Encoding utf8NoBOM
           "SPOOLIX_WINDOWS_PRINT_SUPPORT_PACKAGE_RECEIPT=$receiptPath" >> $env:GITHUB_ENV
+      - name: Upload Print Support package build diagnostics
+        if: ${{ always() && matrix.route == 'windows.print-support-app' && env.SPOOLIX_WINDOWS_PSA_PACKAGE_ROOT != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-print-support-build-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: warn
+          path: |
+            ${{ env.SPOOLIX_WINDOWS_PSA_PACKAGE_ROOT }}
+      - name: Mark Print Support package preflight failure
+        if: ${{ always() && matrix.route == 'windows.print-support-app' && steps.psa_package.outcome != 'success' }}
+        shell: pwsh
+        run: |
+          "SPOOLIX_WINDOWS_ROUTE_PREFLIGHT_STATUS=101" >> $env:GITHUB_ENV
       - name: Run all three route candidates
         if: ${{ always() }}
         shell: bash
