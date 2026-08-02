@@ -1,1 +1,3 @@
-fix(support): export canvas status overlay contributions
+fix(support): export canvas status overlay contributions (#128)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
