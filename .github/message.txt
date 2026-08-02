@@ -1,1 +1,1 @@
-Fix AirPrint health probe response framing
+Harden Windows IPP discovery recovery
