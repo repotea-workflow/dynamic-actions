@@ -1,1 +1,1 @@
-refactor(support): type feature tool contributions
+feat(support): complete plugin composition migration
