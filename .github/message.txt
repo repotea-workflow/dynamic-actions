@@ -1,1 +1,1 @@
-Capture AirPrint CUPS diagnostics
+Fix AirPrint CUPS submit and Windows owner locks
