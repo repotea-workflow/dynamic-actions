@@ -1,1 +1,1 @@
-Normalize Windows terminal inventory relative paths
+Allow fail-fast fixture setup in Windows PSA tests
