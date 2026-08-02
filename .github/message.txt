@@ -1,1 +1,1 @@
-Fix Windows IPP namespace guard lifecycle
+Normalize AirPrint activation listener and lint
