@@ -1,1 +1,1 @@
-Align CLI Unidrv INF contract
+Capture AirPrint CUPS diagnostics
