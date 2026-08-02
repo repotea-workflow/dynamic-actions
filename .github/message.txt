@@ -1,1 +1,1 @@
-Fail fast after Windows PSA preflight errors
+Diagnose Windows pending recovery stages
