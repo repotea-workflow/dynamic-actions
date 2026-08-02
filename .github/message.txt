@@ -1,1 +1,1 @@
-Stabilize macOS AirPrint queue creation
+Use HTTP discovery URL for Windows IPP queue setup
