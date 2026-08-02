@@ -349,6 +349,19 @@ jobs:
         shell: bash
         run: just ci-macos-airprint-oracle "${{ matrix.profile }}"
 
+      - name: Capture macOS AirPrint diagnostics
+        if: ${{ always() }}
+        shell: bash
+        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics-candidate || true
+
+      - name: Upload macOS AirPrint diagnostics
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-airprint-diagnostics-${{ matrix.profile }}
+          path: target/macos-airprint-ci-diagnostics-candidate
+          if-no-files-found: ignore
+
       - name: Teardown macOS AirPrint success harness
         if: ${{ always() }}
         shell: bash
@@ -360,6 +373,19 @@ jobs:
         if: ${{ success() }}
         shell: bash
         run: just ci-macos-airprint-cleanup-oracle "${{ matrix.profile }}"
+
+      - name: Capture macOS AirPrint cleanup diagnostics
+        if: ${{ always() }}
+        shell: bash
+        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics-cleanup || true
+
+      - name: Upload macOS AirPrint cleanup diagnostics
+        if: ${{ always() }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-airprint-cleanup-diagnostics-${{ matrix.profile }}
+          path: target/macos-airprint-ci-diagnostics-cleanup
+          if-no-files-found: ignore
 
       - name: Teardown macOS CI harness
         if: ${{ always() }}
