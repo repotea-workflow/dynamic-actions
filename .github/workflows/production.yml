@@ -253,6 +253,18 @@ jobs:
             profile: escpos
             os: macos-latest
             timeout: 30
+          - route: windows.spooler
+            profile: tspl
+            os: windows-latest
+            timeout: 20
+          - route: windows.spooler
+            profile: cpcl
+            os: windows-latest
+            timeout: 20
+          - route: windows.spooler
+            profile: escpos
+            os: windows-latest
+            timeout: 20
     steps:
       - uses: actions/checkout@v6
 
@@ -289,12 +301,34 @@ jobs:
           lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
           lpstat -r
 
+      - name: Prepare Windows Spooler route-oracle anchor
+        if: ${{ matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          net session *> $null
+          if ($LASTEXITCODE -ne 0) { throw "Windows Spooler oracle requires an elevated administrator token" }
+          if (-not (Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction SilentlyContinue)) { Add-PrinterDriver -Name "Generic / Text Only" }
+          Get-PrinterDriver -Name "Generic / Text Only" -ErrorAction Stop | Out-Null
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-route-oracle-windows-spooler"
+          $anchor = just ci-prepare-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0 -or -not $anchor) { throw "failed to prepare Windows Spooler route-oracle anchor" }
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_ANCHOR=$anchor" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_TEST_ARTIFACT_COMPONENT=$component" >> $env:GITHUB_ENV
+
       - name: Run route oracle
         shell: bash
         env:
           # Every entry in the formal oracle matrix is a claimed route and must execute.
           SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
+
+      - name: Teardown Windows Spooler route-oracle anchor
+        if: ${{ always() && matrix.route == 'windows.spooler' }}
+        shell: pwsh
+        run: |
+          $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-route-oracle-windows-spooler"
+          just ci-teardown-windows-test-artifact-anchor $component
+          if ($LASTEXITCODE -ne 0) { throw "Windows Spooler route-oracle anchor teardown failed closed" }
 
       - name: Teardown macOS CI harness
         if: ${{ always() && matrix.route == 'macos.cups' }}
