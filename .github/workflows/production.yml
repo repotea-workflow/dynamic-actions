@@ -682,6 +682,21 @@ jobs:
         if: ${{ always() }}
         shell: bash
         run: just ci-windows-product-route-required-gate "${{ matrix.route }}" "$SPOOLIX_WINDOWS_ROUTE_EVIDENCE_PATH"
+      - name: Capture Windows Unidrv failure diagnostics
+        if: ${{ always() && matrix.route == 'windows.unidrv' }}
+        shell: pwsh
+        run: |
+          $output = Join-Path $env:RUNNER_TEMP "spoolix-windows-unidrv-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}"
+          & .github/scripts/collect-windows-unidrv-diagnostics.ps1 -OutputDirectory $output
+          if ($LASTEXITCODE -ne 0) { throw "Windows Unidrv diagnostics collection failed with exit $LASTEXITCODE" }
+          "SPOOLIX_WINDOWS_UNIDRV_DIAGNOSTICS=$output" >> $env:GITHUB_ENV
+      - name: Upload Windows Unidrv failure diagnostics
+        if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_DIAGNOSTICS != '' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: windows-unidrv-diagnostics-${{ github.run_id }}-${{ github.run_attempt }}
+          if-no-files-found: error
+          path: ${{ env.SPOOLIX_WINDOWS_UNIDRV_DIAGNOSTICS }}
       - name: Upload signed route evidence
         if: ${{ always() }}
         uses: actions/upload-artifact@v4
