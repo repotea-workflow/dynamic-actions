@@ -1,1 +1,1 @@
-Repair Windows Unidrv package lifecycle
+Fix Windows IPP namespace guard lifecycle
