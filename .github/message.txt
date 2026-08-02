@@ -1,1 +1,24 @@
-feat: showcase brand style compositions
+PR01: Contract and parity baseline
+
+Establish the presentation-contract boundary and parity oracle before
+any headless presentation refactor:
+
+- docs/spec/plugin-composition.md: add Presentation Composition Boundary
+  (typed immutable state/commands/builders/style/geometry in; session,
+  managed editor, renderer bridge, asset stores, schema adapters,
+  service locators, Map<String,Object?> out; reserved names preserved)
+- docs/spec/sdk-example-boundary.md: precise custom presentation
+  boundary (Flutter build-time widget injection vs Web Bridge runtime;
+  host may orchestrate presentation but not duplicate SDK behavior)
+- test-only parity oracle capturing document JSON, selection, undo/redo,
+  viewport zoom, plugin ids, visible widget keys
+- presentation contract test: default regions, custom layout outlets,
+  barrel hygiene (no session types via public barrel)
+- interaction parity test: nudge/undo/redo deltas, zoom resets viewport
+  only, selection does not dirty export JSON
+- transition regression: failed/superseded candidates and retired
+  registries never expose partial presentation
+- boundary test: runtime barrel exposes no Map<String,Object?> models
+
+Verification: test-baseline (4 suites) and test-flutter (melos exec,
+all packages) pass.
