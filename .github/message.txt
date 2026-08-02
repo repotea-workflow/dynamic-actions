@@ -1,1 +1,1 @@
-Expose AirPrint health probe failure reason
+Keep AirPrint diagnostics readable by CI runner
