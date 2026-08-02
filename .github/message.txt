@@ -1,1 +1,1 @@
-Use HTTP discovery URL for Windows IPP queue setup
+Diagnose and harden macOS AirPrint IPP oracle

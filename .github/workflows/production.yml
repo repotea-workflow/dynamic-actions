@@ -46,7 +46,8 @@ jobs:
   # Route smoke by coverage-manifest category (P1-08 / T10).
   # One job; display name includes category. ci-driver-route dispatches:
   #   virtual_printer → ci-virtual-printer-route-e2e / host queue smoke
-  #   direct_transport (linux.ipp-usb, windows.winusb) → ci-direct-transport-smoke
+  #   direct_transport (linux.ipp-usb, linux.direct, macos.iokit, windows.winusb)
+  #     → ci-direct-transport-smoke
   # This job is NOT the two-page oracle (see ci-*-oracle scaffolding).
   driver-route-check:
     name: Route smoke / ${{ matrix.category }} / ${{ matrix.route }}
@@ -68,12 +69,20 @@ jobs:
             category: direct_transport
             os: ubuntu-latest
             timeout: 20
+          - route: linux.direct
+            category: direct_transport
+            os: ubuntu-latest
+            timeout: 20
           - route: macos.ipp-airprint
             category: virtual_printer
             os: macos-latest
             timeout: 20
           - route: macos.cups
             category: virtual_printer
+            os: macos-latest
+            timeout: 20
+          - route: macos.iokit
+            category: direct_transport
             os: macos-latest
             timeout: 20
           - route: windows.winusb
@@ -119,6 +128,13 @@ jobs:
 
       - name: Install Linux ipp-usb dependencies
         if: ${{ matrix.route == 'linux.ipp-usb' }}
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libdbus-1-dev pkg-config
+
+      - name: Install Linux direct dependencies
+        if: ${{ matrix.route == 'linux.direct' }}
         shell: bash
         run: |
           sudo apt-get update
