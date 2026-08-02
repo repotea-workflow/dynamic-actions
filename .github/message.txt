@@ -1,1 +1,1 @@
-Diagnose Windows pending recovery stages
+Fix Windows terminal package verification
