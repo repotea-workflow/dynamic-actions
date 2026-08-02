@@ -1,1 +1,1 @@
-Reject rooted Windows inventory paths
+Fix AirPrint health probe response framing
