@@ -1,1 +1,1 @@
-feat(omsk): add end-to-end error diagnostics
+test(omsk): align diagnostics contract expectations
