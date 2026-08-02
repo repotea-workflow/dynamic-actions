@@ -1,1 +1,1 @@
-fix(omsk): preserve trace id index after archive rebuild (#260)
+test(omsk): restore diagnostic status compatibility
