@@ -1,1 +1,1 @@
-Force PSA restore paths and disable fallback caches
+Canonicalize AirPrint receipt roots before launchd config
