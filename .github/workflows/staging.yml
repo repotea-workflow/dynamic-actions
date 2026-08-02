@@ -551,15 +551,37 @@ jobs:
         if: ${{ matrix.route == 'windows.print-support-app' }}
         shell: pwsh
         run: |
+          $dotnet = (Get-Command dotnet -ErrorAction Stop).Source
+          # Remove runner-wide NuGet state before assigning the run-scoped
+          # paths.  This prevents a preinstalled/fallback package from being
+          # selected before the locked content hash is checked.
+          & $dotnet nuget locals all --clear
+          if ($LASTEXITCODE -ne 0) { throw 'default NuGet cache cleanup failed' }
           $nugetPackages = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-packages'
           $nugetHttpCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-http-cache'
           $nugetPluginsCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-plugins-cache'
           New-Item -ItemType Directory -Path $nugetPackages -Force | Out-Null
           New-Item -ItemType Directory -Path $nugetHttpCache -Force | Out-Null
           New-Item -ItemType Directory -Path $nugetPluginsCache -Force | Out-Null
+          $env:NUGET_PACKAGES = $nugetPackages
+          $env:NUGET_HTTP_CACHE_PATH = $nugetHttpCache
+          $env:NUGET_PLUGINS_CACHE_PATH = $nugetPluginsCache
+          & $dotnet nuget locals all --clear
+          if ($LASTEXITCODE -ne 0) { throw 'run-scoped NuGet cache cleanup failed' }
+          $pathEvidence = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-path-evidence.json'
+          [ordered]@{
+            schema = 'spoolix.windows.print_support.nuget_paths.v1'
+            globalPackagesFolder = [System.IO.Path]::GetFullPath($env:NUGET_PACKAGES)
+            httpCachePath = [System.IO.Path]::GetFullPath($env:NUGET_HTTP_CACHE_PATH)
+            pluginsCachePath = [System.IO.Path]::GetFullPath($env:NUGET_PLUGINS_CACHE_PATH)
+          } | ConvertTo-Json -Compress | Set-Content -LiteralPath $pathEvidence -Encoding utf8NoBOM
+          Write-Host "Spoolix NuGet globalPackagesFolder=$env:NUGET_PACKAGES"
+          Write-Host "Spoolix NuGet httpCachePath=$env:NUGET_HTTP_CACHE_PATH"
+          Write-Host "Spoolix NuGet pluginsCachePath=$env:NUGET_PLUGINS_CACHE_PATH"
           "NUGET_PACKAGES=$nugetPackages" >> $env:GITHUB_ENV
           "NUGET_HTTP_CACHE_PATH=$nugetHttpCache" >> $env:GITHUB_ENV
           "NUGET_PLUGINS_CACHE_PATH=$nugetPluginsCache" >> $env:GITHUB_ENV
+          "SPOOLIX_WINDOWS_PSA_NUGET_PATH_EVIDENCE=$pathEvidence" >> $env:GITHUB_ENV
       - name: Prepare Print Support NuGet lock evidence
         id: psa_lock
         if: ${{ matrix.route == 'windows.print-support-app' }}
@@ -647,6 +669,7 @@ jobs:
           path: |
             platform/windows/print-support/package/packages.lock.json
             ${{ runner.temp }}/spoolix-psa-nuget-lock-evidence.json
+            ${{ runner.temp }}/spoolix-psa-nuget-path-evidence.json
             ${{ runner.temp }}/spoolix-psa-build-tools-evidence.json
             ${{ runner.temp }}/spoolix-psa-package-receipt.json
             ${{ env.SPOOLIX_WINDOWS_PSA_PACKAGE_ROOT }}
