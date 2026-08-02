@@ -1,1 +1,1 @@
-Fix Print Support build-tool argument binding
+Preserve Windows artifact discovery diagnostics
