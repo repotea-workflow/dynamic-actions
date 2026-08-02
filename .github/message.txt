@@ -1,1 +1,1 @@
-Keep AirPrint diagnostics readable by CI runner
+Fix Windows artifact diagnostic clippy
