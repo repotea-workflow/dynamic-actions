@@ -1,1 +1,1 @@
-Allow fail-fast fixture setup in Windows PSA tests
+Reject rooted Windows inventory paths
