@@ -1,1 +1,1 @@
-Allow owned Windows package job manifests
+Allow owned PSA authority roots
