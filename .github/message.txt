@@ -1,1 +1,1 @@
-test(omsk): align diagnostics contract expectations
+feat(omsk): harden error diagnostics delivery
