@@ -1,1 +1,1 @@
-Recover Windows IPP endpoints before terminal cleanup
+Repair Windows Unidrv package lifecycle
