@@ -1,1 +1,1 @@
-Allow all PSA parent-owned roots
+Pin AirPrint receiver user identity
