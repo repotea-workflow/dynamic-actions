@@ -1,1 +1,1 @@
-Canonicalize AirPrint receipt roots before launchd config
+Stabilize Windows IPP abortive-close client timeout
