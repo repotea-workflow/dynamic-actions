@@ -1,1 +1,1 @@
-Keep macOS workflow files non-executable
+Fix Windows spooler diagnostic cleanup authority
