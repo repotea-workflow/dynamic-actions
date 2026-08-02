@@ -1,1 +1,1 @@
-Close AirPrint worker sockets after each request
+Harden Windows IPP WSD route recovery
