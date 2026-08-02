@@ -1,1 +1,1 @@
-Harden Windows IPP WSD route recovery
+Normalize Windows terminal inventory relative paths
