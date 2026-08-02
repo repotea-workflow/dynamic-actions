@@ -1,1 +1,1 @@
-Fix AirPrint worker queue backpressure
+Recover Windows IPP endpoints before terminal cleanup
