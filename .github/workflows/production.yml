@@ -552,8 +552,14 @@ jobs:
         shell: pwsh
         run: |
           $nugetPackages = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-packages'
+          $nugetHttpCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-http-cache'
+          $nugetPluginsCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-plugins-cache'
           New-Item -ItemType Directory -Path $nugetPackages -Force | Out-Null
+          New-Item -ItemType Directory -Path $nugetHttpCache -Force | Out-Null
+          New-Item -ItemType Directory -Path $nugetPluginsCache -Force | Out-Null
           "NUGET_PACKAGES=$nugetPackages" >> $env:GITHUB_ENV
+          "NUGET_HTTP_CACHE_PATH=$nugetHttpCache" >> $env:GITHUB_ENV
+          "NUGET_PLUGINS_CACHE_PATH=$nugetPluginsCache" >> $env:GITHUB_ENV
       - name: Prepare Print Support NuGet lock evidence
         id: psa_lock
         if: ${{ matrix.route == 'windows.print-support-app' }}
