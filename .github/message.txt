@@ -1,3 +1,1 @@
-Consolidate route and CI fixes
-
-Squash merge PR #7: route smoke dispatch, AirPrint cleanup hardening, Unidrv virtual model registration, and PSA inventory validation.
+Fix PSA locked restore package metadata
