@@ -1,1 +1,1 @@
-Capture Windows Unidrv installation diagnostics
+Scope Unidrv diagnostic probe exit codes
