@@ -557,9 +557,10 @@ jobs:
           # selected before the locked content hash is checked.
           & $dotnet nuget locals all --clear
           if ($LASTEXITCODE -ne 0) { throw 'default NuGet cache cleanup failed' }
-          $nugetPackages = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-packages'
-          $nugetHttpCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-http-cache'
-          $nugetPluginsCache = Join-Path $env:RUNNER_TEMP 'spoolix-psa-nuget-plugins-cache'
+          $nugetRoot = Join-Path $env:RUNNER_TEMP "spoolix-psa-nuget-${{ github.run_id }}-${{ github.run_attempt }}"
+          $nugetPackages = Join-Path $nugetRoot 'packages'
+          $nugetHttpCache = Join-Path $nugetRoot 'http-cache'
+          $nugetPluginsCache = Join-Path $nugetRoot 'plugins-cache'
           New-Item -ItemType Directory -Path $nugetPackages -Force | Out-Null
           New-Item -ItemType Directory -Path $nugetHttpCache -Force | Out-Null
           New-Item -ItemType Directory -Path $nugetPluginsCache -Force | Out-Null
