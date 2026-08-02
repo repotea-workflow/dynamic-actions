@@ -1,1 +1,1 @@
-Disable SDK NuGet fallback folders for PSA restore
+Diagnose Windows artifact validation failures
