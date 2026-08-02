@@ -1,1 +1,1 @@
-Make macOS route removal idempotent after partial cleanup
+Allow Windows artifact discovery under namespace guards
