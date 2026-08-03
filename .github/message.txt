@@ -1,12 +1,9 @@
-PR06: subscribe the direct canvas surface to the presentation coordinator
+PR07: preserve top-level SVG shared resources in every split layer
 
-The direct PlateLayoutContext.canvasSurface handle rendered the shared
-canvas builder without listening to the presentation coordinator, so a
-command- or config-driven multi-select change published presentation
-state while the mounted PlateManagedEditor kept its previous interaction
-mode until an unrelated rebuild. The surface now re-reads presentation-
-driven shell state from the coordinator through a guarded listener
-(deferring rebuilds during build/layout, matching the region canvas
-panel), so the compatibility canvas, regions.canvas, and the canvas
-surface all converge on the same live source. A widget test mounts the
-surface directly and covers command- and config-driven transitions.
+The committed-frame splitter only duplicated <defs>; top-level <style>,
+linearGradient, pattern, clipPath, mask, filter, symbol, and marker
+definitions stayed in the elements layer, so the frame-base document
+lost styles and paint references. Treat every shared resource tag as
+belonging to both rendered layers, and add rendered regressions for a
+direct top-level style rule and paint server plus the clip/mask/filter/
+pattern/symbol family.
