@@ -1,7 +1,10 @@
-PR10: map installed Flutter SDK for melos and document the linear stack
+PR09: re-verify showcase review comments
 
-The dyn-workflow installed Flutter under FLUTTER_ROOT but melos.yaml
-requires .fvm/flutter_sdk, so just check failed before running. Symlink
-the installed SDK to the melos path after setup, and update the delivery
-status to describe the linear stack with all review fixes rebased in order
-(892s, 8939).
+- Clamp the floating inspector panel to viewports smaller than the fixed
+  panel size and add width-smaller/height-smaller cases (4bc6)
+- Keep _ScenarioStage's Plate key language-stable so switching language
+  only updates localized plugins in place; add a language-switch test that
+  inserts/edits after the switch (4bcV)
+- Drop the removed grid theme from the displayed canvas-chrome snippet and
+  guard every displayed SDK snippet against undeclared public API symbols
+  (891j)
