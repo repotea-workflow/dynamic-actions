@@ -1,7 +1,12 @@
-PR08: forward the explicit useDrawer override through presentation commands
+PR10: isolate dyn-workflow state per source ref and report conclusions
 
-- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
-  and delegate it to the coordinator-backed path
-- preserve the caller's explicit override in the default shell action context
-  when the public command facade is attached
-- cover narrow useDrawer:false and wide useDrawer:true override cases
+The shared dynamic branch previously let concurrent source-branch pushes
+overwrite ref.txt and cancel one another. The check workflow now keys its
+concurrency group by the trigger SHA (each dynamic-branch push is its own
+trigger commit with its own branch/commit/ref metadata), verifies the
+checked-out source commit matches the trigger's recorded commit before
+running, and posts the downstream conclusion back to the source commit as
+the plate/check status so the PR surfaces the run that tested its head.
+The runbook Delivery Status documents the isolation and the requirement
+that the final gate is reconciled only by a completed run whose metadata
+is exactly pr-10 at the final integrated head.

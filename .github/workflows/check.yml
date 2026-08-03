@@ -9,8 +9,14 @@ permissions:
   contents: read
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
-  cancel-in-progress: true
+  # Every dynamic-branch push is a distinct trigger commit carrying its own
+  # source metadata (.github/branch.txt, commit.txt, ref.txt). Keying the
+  # group by the trigger SHA instead of the shared dynamic branch prevents a
+  # later source-branch push (for example pr-10 while pr-09 is running) from
+  # cancelling this run or sharing ref.txt state with it, so each run checks
+  # out exactly the source commit that triggered it.
+  group: ${{ github.workflow }}-${{ github.sha }}
+  cancel-in-progress: false
 
 jobs:
   check:
@@ -19,12 +25,32 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
-      - name: Checkout
+      - name: Read source metadata
+        id: source
+        run: |
+          set -euo pipefail
+          echo "source_branch=$(cat .github/branch.txt)" >> "$GITHUB_OUTPUT"
+          echo "source_commit=$(cat .github/commit.txt)" >> "$GITHUB_OUTPUT"
+          echo "source_repository=$(cat .github/repository.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout source
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/plate
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
           ref_file: .github/ref.txt
+
+      - name: Verify checked-out source matches this trigger
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse --short=7 HEAD)"
+          expected="${{ steps.source.outputs.source_commit }}"
+          branch="${{ steps.source.outputs.source_branch }}"
+          if [ "$actual" != "$expected" ]; then
+            echo "dynamic-branch race: checked out ${actual} but this trigger recorded ${expected} (${branch}); retry after the stack is quiet" >&2
+            exit 1
+          fi
+          echo "checked out ${branch} at ${actual}"
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -37,6 +63,11 @@ jobs:
         with:
           channel: stable
 
+      - name: Map installed Flutter to melos SDK path
+        run: |
+          mkdir -p .fvm
+          ln -s "$FLUTTER_ROOT" .fvm/flutter_sdk
+
       - name: Install melos
         run: dart pub global activate melos 2.9.0
 
@@ -45,3 +76,22 @@ jobs:
 
       - name: Run checks
         run: just check
+
+      - name: Report downstream conclusion to the source commit
+        if: always()
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+        run: |
+          set -euo pipefail
+          case "${{ job.status }}" in
+            success) state="success" ;;
+            cancelled) state="error" ;;
+            *) state="failure" ;;
+          esac
+          gh api \
+            --method POST \
+            "repos/${{ steps.source.outputs.source_repository }}/statuses/${{ steps.source.outputs.source_commit }}" \
+            -f state="$state" \
+            -f context="plate/check" \
+            -f description="downstream just check: ${{ job.status }}" \
+            -f target_url="${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
