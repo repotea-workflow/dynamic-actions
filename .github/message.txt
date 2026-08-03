@@ -1,1 +1,1 @@
-PR10: describe delivery status as open stack pending ordered merge
+PR02: Address review: stable presentation handle, multi-select live source, shell delegate reactivation, snapshot immutability
