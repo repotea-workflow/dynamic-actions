@@ -1,1 +1,1 @@
-Relax Windows IPP TCP deadline test timing
+Declare PSA package target framework
