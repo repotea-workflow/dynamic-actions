@@ -1,1 +1,1 @@
-PR01: Narrow PlateShellContext to public facade
+PR02: Address review: stable presentation handle, multi-select live source, shell delegate reactivation, snapshot immutability
