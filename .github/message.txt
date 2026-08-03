@@ -1,10 +1,1 @@
-PR09: re-verify showcase review comments
-
-- Clamp the floating inspector panel to viewports smaller than the fixed
-  panel size and add width-smaller/height-smaller cases (4bc6)
-- Keep _ScenarioStage's Plate key language-stable so switching language
-  only updates localized plugins in place; add a language-switch test that
-  inserts/edits after the switch (4bcV)
-- Drop the removed grid theme from the displayed canvas-chrome snippet and
-  guard every displayed SDK snippet against undeclared public API symbols
-  (891j)
+PR03: subscribe the shared canvas panel to the presentation coordinator
