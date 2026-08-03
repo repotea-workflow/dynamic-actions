@@ -1,1 +1,1 @@
-PR06: canvas surface and coordinate API
+PR07: canvas chrome theming
