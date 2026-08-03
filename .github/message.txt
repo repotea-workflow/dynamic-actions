@@ -1,7 +1,1 @@
-feat(support): render text-decoration on text elements
-
-Text elements already carried the textDecoration style key through the
-schema and the inline editor, but the SVG renderer only honored it for
-table cells. Emit text-decoration for plain text elements too so
-decorations like line-through survive the export/print pipeline, and
-keep the key in PlateTextContent's JSON round-trip.
+PR05: reusable inspector components
