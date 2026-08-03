@@ -1,1 +1,7 @@
-PR03: subscribe the shared canvas panel to the presentation coordinator
+PR04: migrate the devhost custom-section builder to the typed payload model
+
+PlateInspectorSectionModel is now generic over its payload so plugin-
+declared custom-section types survive the headless snapshot. The devhost
+showcase builder used the raw (dynamic) type, which no longer satisfies
+the List<PlateInspectorSectionModel<Object>> builder signature; declare
+the explicit payload type at the call site.
