@@ -1,7 +1,12 @@
-PR08: forward the explicit useDrawer override through presentation commands
+PR06: subscribe the direct canvas surface to the presentation coordinator
 
-- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
-  and delegate it to the coordinator-backed path
-- preserve the caller's explicit override in the default shell action context
-  when the public command facade is attached
-- cover narrow useDrawer:false and wide useDrawer:true override cases
+The direct PlateLayoutContext.canvasSurface handle rendered the shared
+canvas builder without listening to the presentation coordinator, so a
+command- or config-driven multi-select change published presentation
+state while the mounted PlateManagedEditor kept its previous interaction
+mode until an unrelated rebuild. The surface now re-reads presentation-
+driven shell state from the coordinator through a guarded listener
+(deferring rebuilds during build/layout, matching the region canvas
+panel), so the compatibility canvas, regions.canvas, and the canvas
+surface all converge on the same live source. A widget test mounts the
+surface directly and covers command- and config-driven transitions.
