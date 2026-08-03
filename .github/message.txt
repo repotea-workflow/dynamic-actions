@@ -1,1 +1,1 @@
-Tighten Windows PSA terminal inventory
+Shorten Windows PSA persistence fault sweeps
