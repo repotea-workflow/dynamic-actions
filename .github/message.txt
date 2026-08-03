@@ -1,11 +1,7 @@
-PR04: scope the stale-callback guard to selection-generation changes
+PR08: forward the explicit useDrawer override through presentation commands
 
-The selection revision token moved on every document mutation, so the
-first edit from one inspector snapshot invalidated all later setters from
-the same snapshot. Advance the token only for selection-set changes,
-element deletion, history restore, and document replacement; plain value
-edits to the selected element keep the retained bindings valid.
-
-Regressions: two setters from one resolved snapshot both apply and each
-record undo history; the default-inspector tests edit sequential fields
-without re-resolving between them.
+- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
+  and delegate it to the coordinator-backed path
+- preserve the caller's explicit override in the default shell action context
+  when the public command facade is attached
+- cover narrow useDrawer:false and wide useDrawer:true override cases
