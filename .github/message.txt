@@ -1,7 +1,7 @@
-PR09: compile showcased snippets against the public barrel
+PR08: forward the explicit useDrawer override through presentation commands
 
-Replace the lib-tree scan in snippet_api_guard_test.dart with a fixture
-that imports only package:plate_editor_support/plate_editor_support.dart
-and references every Plate* symbol the showcase snippets construct. The
-test compiles the fixture, so a symbol hidden under lib/src (or renamed
-or removed) fails the guard instead of being accepted by a source scan.
+- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
+  and delegate it to the coordinator-backed path
+- preserve the caller's explicit override in the default shell action context
+  when the public command facade is attached
+- cover narrow useDrawer:false and wide useDrawer:true override cases
