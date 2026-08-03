@@ -1,1 +1,1 @@
-PR08: default UI public contract migration
+PR09: Web example custom layout showcase
