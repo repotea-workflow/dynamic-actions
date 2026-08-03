@@ -1,9 +1,4 @@
-PR05: resolve reviewer feedback on reusable inspector components
+PR06: resolve reviewer feedback on canvas surface rebuild policy
 
-- route geometry section through sectionBuilder
-- key geometry/section subtrees by element identity
-- controlled select dropdowns keyed by current value
-- disable section-owned controls when bindings are disabled
-- wire spacing.fieldGap into built-in sections
-- export callback typedefs through the support barrel
-- document actual web gates in the runbook
+- compare selection content independently of interaction activity
+- re-run stable overlay builders on parent and dependency rebuilds
