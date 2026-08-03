@@ -1,10 +1,7 @@
-PR06: address re-review: frozen snapshot transforms and fresh parent rebuilds
+PR08: forward the explicit useDrawer override through presentation commands
 
-- PlateViewportPresentation captures the canvas affine transform (pan plus
-  the image of the world basis) at snapshot creation and converts through
-  pure closures, so an old snapshot no longer silently follows a later
-  pan/zoom of the live CanvasKit controller.
-- The overlay gate re-runs its stable builder whenever the parent rebuilds
-  with a value-equal presentation snapshot, so plain ancestor State values
-  (without an InheritedWidget) stay fresh; policy filtering applies only to
-  genuinely changed snapshots.
+- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
+  and delegate it to the coordinator-backed path
+- preserve the caller's explicit override in the default shell action context
+  when the public command facade is attached
+- cover narrow useDrawer:false and wide useDrawer:true override cases
