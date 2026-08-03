@@ -1,8 +1,11 @@
-PR10: pin the dyn-workflow Flutter SDK and post the full commit SHA
+PR04: scope the stale-callback guard to selection-generation changes
 
-The downstream run installed the latest stable Flutter (3.44.8) while the
-workspace pins 3.41.4 via .fvmrc, so the committed baseline goldens failed
-rasterization on every run. Setup Flutter now reads flutter-version-file:
-.fvmrc, so CI uses exactly the SDK the goldens were generated with. The
-conclusion status was also rejected because commit.txt records the short
-SHA; the verify step now resolves the full object id for the status API.
+The selection revision token moved on every document mutation, so the
+first edit from one inspector snapshot invalidated all later setters from
+the same snapshot. Advance the token only for selection-set changes,
+element deletion, history restore, and document replacement; plain value
+edits to the selected element keep the retained bindings valid.
+
+Regressions: two setters from one resolved snapshot both apply and each
+record undo history; the default-inspector tests edit sequential fields
+without re-resolving between them.
