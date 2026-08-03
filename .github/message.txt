@@ -1,12 +1,12 @@
-PR10: isolate dyn-workflow state per source ref and report conclusions
+PR06: subscribe the direct canvas surface to the presentation coordinator
 
-The shared dynamic branch previously let concurrent source-branch pushes
-overwrite ref.txt and cancel one another. The check workflow now keys its
-concurrency group by the trigger SHA (each dynamic-branch push is its own
-trigger commit with its own branch/commit/ref metadata), verifies the
-checked-out source commit matches the trigger's recorded commit before
-running, and posts the downstream conclusion back to the source commit as
-the plate/check status so the PR surfaces the run that tested its head.
-The runbook Delivery Status documents the isolation and the requirement
-that the final gate is reconciled only by a completed run whose metadata
-is exactly pr-10 at the final integrated head.
+The direct PlateLayoutContext.canvasSurface handle rendered the shared
+canvas builder without listening to the presentation coordinator, so a
+command- or config-driven multi-select change published presentation
+state while the mounted PlateManagedEditor kept its previous interaction
+mode until an unrelated rebuild. The surface now re-reads presentation-
+driven shell state from the coordinator through a guarded listener
+(deferring rebuilds during build/layout, matching the region canvas
+panel), so the compatibility canvas, regions.canvas, and the canvas
+surface all converge on the same live source. A widget test mounts the
+surface directly and covers command- and config-driven transitions.
