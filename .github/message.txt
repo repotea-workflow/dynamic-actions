@@ -1,7 +1,10 @@
-PR03: address layout region review threads
+PR04: address headless inspector state review threads
 
-- Refresh captured runtime services on config-only updates (syncRuntimeConfig)
-- Make standalone canvas-status geometry lifecycle-aware (publish/clear
-  through a ValueNotifier, deferred out of build/layout)
-- Disable toolbar controls that are inert in custom layouts
+- Bind field mutations to the snapshot's target element id; retained
+  callbacks no-op once a different element is selected or the controller
+  is disposed
+- Preserve custom plugin sections in the public headless state via
+  PlateCustomInspectorSectionState (default/headless parity)
+- Freeze all public snapshot collections (sections, selectedElementIds,
+  binding options, table cells/maps) through factory constructors
 - Add regression tests for all three threads
