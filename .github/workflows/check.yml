@@ -41,6 +41,7 @@ jobs:
           ref_file: .github/ref.txt
 
       - name: Verify checked-out source matches this trigger
+        id: verify
         run: |
           set -euo pipefail
           actual="$(git rev-parse --short=7 HEAD)"
@@ -51,6 +52,9 @@ jobs:
             exit 1
           fi
           echo "checked out ${branch} at ${actual}"
+          # The status API requires the full object id, while commit.txt
+          # records the short form for human-readable verification.
+          echo "source_commit_full=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Install Rust
         uses: dtolnay/rust-toolchain@stable
@@ -61,7 +65,10 @@ jobs:
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
-          channel: stable
+          # The workspace pins Flutter via .fvmrc; the baseline goldens are
+          # rasterized with that SDK, so the CI run must use the same version
+          # instead of the latest stable channel.
+          flutter-version-file: .fvmrc
 
       - name: Map installed Flutter to melos SDK path
         run: |
@@ -90,7 +97,7 @@ jobs:
           esac
           gh api \
             --method POST \
-            "repos/${{ steps.source.outputs.source_repository }}/statuses/${{ steps.source.outputs.source_commit }}" \
+            "repos/${{ steps.source.outputs.source_repository }}/statuses/${{ steps.verify.outputs.source_commit_full }}" \
             -f state="$state" \
             -f context="plate/check" \
             -f description="downstream just check: ${{ job.status }}" \

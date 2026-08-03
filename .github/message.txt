@@ -1,12 +1,8 @@
-PR06: subscribe the direct canvas surface to the presentation coordinator
+PR10: pin the dyn-workflow Flutter SDK and post the full commit SHA
 
-The direct PlateLayoutContext.canvasSurface handle rendered the shared
-canvas builder without listening to the presentation coordinator, so a
-command- or config-driven multi-select change published presentation
-state while the mounted PlateManagedEditor kept its previous interaction
-mode until an unrelated rebuild. The surface now re-reads presentation-
-driven shell state from the coordinator through a guarded listener
-(deferring rebuilds during build/layout, matching the region canvas
-panel), so the compatibility canvas, regions.canvas, and the canvas
-surface all converge on the same live source. A widget test mounts the
-surface directly and covers command- and config-driven transitions.
+The downstream run installed the latest stable Flutter (3.44.8) while the
+workspace pins 3.41.4 via .fvmrc, so the committed baseline goldens failed
+rasterization on every run. Setup Flutter now reads flutter-version-file:
+.fvmrc, so CI uses exactly the SDK the goldens were generated with. The
+conclusion status was also rejected because commit.txt records the short
+SHA; the verify step now resolves the full object id for the status API.
