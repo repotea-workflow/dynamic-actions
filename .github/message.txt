@@ -1,1 +1,1 @@
-Install PSA UWP SDK components
+Require PSA UWP build tools
