@@ -1,8 +1,7 @@
-PR10: pin the dyn-workflow Flutter SDK and post the full commit SHA
+PR09: compile showcased snippets against the public barrel
 
-The downstream run installed the latest stable Flutter (3.44.8) while the
-workspace pins 3.41.4 via .fvmrc, so the committed baseline goldens failed
-rasterization on every run. Setup Flutter now reads flutter-version-file:
-.fvmrc, so CI uses exactly the SDK the goldens were generated with. The
-conclusion status was also rejected because commit.txt records the short
-SHA; the verify step now resolves the full object id for the status API.
+Replace the lib-tree scan in snippet_api_guard_test.dart with a fixture
+that imports only package:plate_editor_support/plate_editor_support.dart
+and references every Plate* symbol the showcase snippets construct. The
+test compiles the fixture, so a symbol hidden under lib/src (or renamed
+or removed) fails the guard instead of being accepted by a source scan.
