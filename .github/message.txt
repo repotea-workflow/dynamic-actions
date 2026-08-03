@@ -1,1 +1,1 @@
-PR09: fix showcase review comments on stable session, panel rect, semantics, and Clear action
+PR10: describe delivery status as open stack pending ordered merge
