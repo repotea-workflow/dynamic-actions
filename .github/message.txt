@@ -1,1 +1,1 @@
-PR05: reusable inspector components
+PR06: canvas surface and coordinate API
