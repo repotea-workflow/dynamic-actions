@@ -1,1 +1,10 @@
-PR05: handle PlateCustomInspectorSectionState in the built-in section dispatcher
+PR06: address re-review: frozen snapshot transforms and fresh parent rebuilds
+
+- PlateViewportPresentation captures the canvas affine transform (pan plus
+  the image of the world basis) at snapshot creation and converts through
+  pure closures, so an old snapshot no longer silently follows a later
+  pan/zoom of the live CanvasKit controller.
+- The overlay gate re-runs its stable builder whenever the parent rebuilds
+  with a value-equal presentation snapshot, so plain ancestor State values
+  (without an InheritedWidget) stay fresh; policy filtering applies only to
+  genuinely changed snapshots.
