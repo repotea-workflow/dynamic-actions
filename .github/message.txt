@@ -1,1 +1,1 @@
-Let Unidrv package installs resolve core files
+Let Unidrv core files resolve from dependencies
