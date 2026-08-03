@@ -1,1 +1,1 @@
-Declare PSA package target framework
+Add Unidrv font substitution core dependency
