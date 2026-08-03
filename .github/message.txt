@@ -1,1 +1,1 @@
-Classify IPP execution dispatch failures
+Accept Windows IPP default job attributes
