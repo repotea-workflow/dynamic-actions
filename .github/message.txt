@@ -1,1 +1,1 @@
-Declare Unidrv core driver files
+Target installed PSA UAP SDK
