@@ -1,4 +1,18 @@
-PR06: resolve reviewer feedback on canvas surface rebuild policy
+PR07: resolve reviewer feedback on canvas chrome theming
 
-- compare selection content independently of interaction activity
-- re-run stable overlay builders on parent and dependency rebuilds
+- apply ruler major/minor tick lengths in the painter (theme mode)
+- thread guide dashPattern into the boundary guide painter; null stays solid
+- paint frame cornerRadius/backgroundColor via RRect fill + stroke
+- split element theming into a background underlay before committed content
+  and a foreground overlay after it
+- keep the delete handle icon white under an aggregate handle theme
+- honor strokeWidth for the resize handle
+- carry the host PlateThemeData extension through PlateHostThemeScope so the
+  public Plate entry point reaches the managed editor
+- use an unset sentinel in copyWith so nullable theme fields can be cleared
+- remove PlateGridThemeData (no visual consumer) from theme, barrel, docs
+- pass the minimap theme through PlateCanvasOverlayContext to the default
+  status overlay contribution
+- export PlateTransformHandlePresentation, PlateSelectionConstraintContext,
+  and TransformHandle through the support barrel
+- add rendered-behavior and compile-only consumer tests for every thread
