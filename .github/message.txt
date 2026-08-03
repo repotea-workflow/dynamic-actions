@@ -1,1 +1,1 @@
-Write PSA evidence without PowerShell 7 encoding
+Run Windows route terminal check before spooler anchor teardown

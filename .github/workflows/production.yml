@@ -751,6 +751,12 @@ jobs:
         if: ${{ always() && matrix.route == 'windows.unidrv' && env.SPOOLIX_WINDOWS_UNIDRV_CERT_THUMBPRINT != '' }}
         shell: pwsh
         run: platform/windows/unidrv/package/remove-host-oracle-certificate.ps1 -Thumbprint $env:SPOOLIX_WINDOWS_UNIDRV_CERT_THUMBPRINT
+      - name: Verify route terminal inventory
+        if: ${{ always() }}
+        shell: pwsh
+        run: |
+          $prefix = "Spoolix gha-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.route }}"
+          .github/scripts/verify-windows-product-route-terminal.ps1 -Route '${{ matrix.route }}' -DisplayPrefix $prefix
       - name: Teardown Spooler service-artifact anchor
         if: ${{ always() && matrix.route == 'windows.spooler' }}
         shell: pwsh
@@ -758,12 +764,6 @@ jobs:
           $component = "gha-${{ github.run_id }}-${{ github.run_attempt }}-oracle-windows-spooler"
           just ci-teardown-windows-test-artifact-anchor $component
           if ($LASTEXITCODE -ne 0) { throw "Spooler artifact anchor teardown failed closed" }
-      - name: Verify route terminal inventory
-        if: ${{ always() }}
-        shell: pwsh
-        run: |
-          $prefix = "Spoolix gha-${{ github.run_id }}-${{ github.run_attempt }}-${{ matrix.route }}"
-          .github/scripts/verify-windows-product-route-terminal.ps1 -Route '${{ matrix.route }}' -DisplayPrefix $prefix
 
   platform-check:
     name: Platform check / ${{ matrix.platform }} / ${{ matrix.group }}
