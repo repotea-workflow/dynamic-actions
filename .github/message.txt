@@ -1,1 +1,1 @@
-Align Windows IPP operation diagnostics test
+Relax Windows IPP diagnostic test timeout
