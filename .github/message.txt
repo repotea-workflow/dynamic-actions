@@ -1,18 +1,7 @@
-PR07: resolve reviewer feedback on canvas chrome theming
+PR08: forward the explicit useDrawer override through presentation commands
 
-- apply ruler major/minor tick lengths in the painter (theme mode)
-- thread guide dashPattern into the boundary guide painter; null stays solid
-- paint frame cornerRadius/backgroundColor via RRect fill + stroke
-- split element theming into a background underlay before committed content
-  and a foreground overlay after it
-- keep the delete handle icon white under an aggregate handle theme
-- honor strokeWidth for the resize handle
-- carry the host PlateThemeData extension through PlateHostThemeScope so the
-  public Plate entry point reaches the managed editor
-- use an unset sentinel in copyWith so nullable theme fields can be cleared
-- remove PlateGridThemeData (no visual consumer) from theme, barrel, docs
-- pass the minimap theme through PlateCanvasOverlayContext to the default
-  status overlay contribution
-- export PlateTransformHandlePresentation, PlateSelectionConstraintContext,
-  and TransformHandle through the support barrel
-- add rendered-behavior and compile-only consumer tests for every thread
+- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
+  and delegate it to the coordinator-backed path
+- preserve the caller's explicit override in the default shell action context
+  when the public command facade is attached
+- cover narrow useDrawer:false and wide useDrawer:true override cases
