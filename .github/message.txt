@@ -1,1 +1,1 @@
-Handle new IPP operations in route endpoints
+Tighten Windows PSA terminal inventory
