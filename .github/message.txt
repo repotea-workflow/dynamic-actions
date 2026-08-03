@@ -1,7 +1,1 @@
-PR08: forward the explicit useDrawer override through presentation commands
-
-- accept useDrawer on PlatePresentationCommands.showInspector/toggleInspector
-  and delegate it to the coordinator-backed path
-- preserve the caller's explicit override in the default shell action context
-  when the public command facade is attached
-- cover narrow useDrawer:false and wide useDrawer:true override cases
+PR09: fix showcase review comments on stable session, panel rect, semantics, and Clear action
