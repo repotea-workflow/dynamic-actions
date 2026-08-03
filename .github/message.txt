@@ -1,1 +1,1 @@
-PR10: Documentation and delivery gates
+PR01: Narrow PlateShellContext to public facade
