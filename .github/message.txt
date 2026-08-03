@@ -1,33 +1,7 @@
-PR04: headless inspector state and bindings
+feat(support): render text-decoration on text elements
 
-Add the typed headless inspector surface to plate_editor_support:
-PlateInspectorState snapshot types, PlateInspectorBinding<T> field
-mutations that delegate through PlatePresentationCommands, the
-lifecycle-owned PlateLayoutContext.inspector controller bound to the
-committed composition, and a hosted inspector controller wired through
-the default shell into the default inspector.
-
-- plate_inspector_state.dart: immutable state/binding/section-state
-  types, package-internal host controller + resolver sharing the
-  default inspector's model resolution, capability layout, visible
-  section filtering, and merge rules, plus a standalone command facade.
-- plate_presentation_commands.dart: inspector mutation methods
-  (geometry, text, shape, line, image, barcode, time, serial, formula,
-  emoji, boolean, table) delegating to the existing command controller.
-- plate.dart / plate_layout.dart / plate_layout_regions.dart /
-  plate_default_editor_shell.dart: hosted inspector binding lifecycle,
-  layout-context plumbing, and shell-to-panel wiring.
-- plate_default_inspector.dart / plate_default_inspector_panel.dart:
-  default inspector renders resolved headless state through the hosted
-  binding; binding notifications during the build phase are deferred to
-  a post-frame callback to avoid markNeedsBuild-during-build.
-- Tests: state (7), binding commands (8), controller lifecycle (5 + 1
-  composition-commit regression), model/state parity (8), facade
-  delegation (15), default inspector, public boundary, layout legacy
-  context.
-- Specs: plugin-composition Headless Inspector Boundary; example
-  custom-inspector guidance in sdk-example-boundary.
-
-Validation: 102/102 focused tests, dart analyze 0 errors/0 warnings,
-just test-flutter and just test-baseline green (SCRATCH
-pr-04-focused.log / pr-04-analyze.log / pr-04-full-suites.log).
+Text elements already carried the textDecoration style key through the
+schema and the inline editor, but the SVG renderer only honored it for
+table cells. Emit text-decoration for plain text elements too so
+decorations like line-through survive the export/print pipeline, and
+keep the key in PlateTextContent's JSON round-trip.
