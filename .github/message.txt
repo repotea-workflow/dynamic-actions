@@ -1,12 +1,7 @@
-PR07: address third-review chrome, ruler, and doc issues
+PR09: compile showcased snippets against the public barrel
 
-- Split the committed SVG into frame-base/elements layers only when an
-  element underlay is interposed; unthemed rendering keeps the original
-  single document, and shared resource definitions are duplicated into
-  every layer so url(#...) fills resolve in each rendered document.
-- Ruler tick lengths are unspecified by default and derive from the
-  effective thickness exactly like the legacy unthemed ruler, so opting
-  into the standard aggregate theme no longer shortens every tick.
-- Remove remaining grid-restyle claims from the runbook and the
-  pr-07 chrome-theming plan; the snippet API guard is replaced by a
-  public-barrel compile fixture (landing with pr-09).
+Replace the lib-tree scan in snippet_api_guard_test.dart with a fixture
+that imports only package:plate_editor_support/plate_editor_support.dart
+and references every Plate* symbol the showcase snippets construct. The
+test compiles the fixture, so a symbol hidden under lib/src (or renamed
+or removed) fails the guard instead of being accepted by a source scan.
