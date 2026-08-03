@@ -1,1 +1,7 @@
-PR02: Address review: stable presentation handle, multi-select live source, shell delegate reactivation, snapshot immutability
+PR03: address layout region review threads
+
+- Refresh captured runtime services on config-only updates (syncRuntimeConfig)
+- Make standalone canvas-status geometry lifecycle-aware (publish/clear
+  through a ValueNotifier, deferred out of build/layout)
+- Disable toolbar controls that are inert in custom layouts
+- Add regression tests for all three threads
