@@ -1,1 +1,1 @@
-Align PSA lock with UWP restore target
+Target PSA package to installed UAP SDK
