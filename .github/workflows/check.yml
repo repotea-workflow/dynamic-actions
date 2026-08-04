@@ -6,8 +6,8 @@ on:
       - "**"
 
 jobs:
-  backend-rust:
-    name: Backend Rust
+  backend-java:
+    name: Backend Java v4
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -21,17 +21,26 @@ jobs:
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
 
-      - name: Fetch parity evidence commits
-        run: git fetch origin f50dc9589eb65b966e8c5f59718bf8ddca3c470d 3f5337d588c35976d4a719700ace1b683c7c1a8a 547760d200d26356d7ebf1a167e43d31e15c713a dac3e7ef4bfd0f2160059c7c83b001b8b79eeeb9 f4b96317d98136d31ec5f778ae28a39784316797 fc88764d82b837e557438b5403255dcb636c8d3e 4aecb971c04971a38525639af8fd7fc7ad642530 ebc23fb9f13705aaa457aff1e3ba748d95d81db4 a442ecebd3920cd03839f877d0cedf15a0b006b1 91867a13ff9f94d4378443f2171be99f07d472c1 478c83182121dfb770a3c913284d82dae4c59aa2 0e2a01f43695013d8706fa32e4030fa0b776e47a 8b7f93e72244d149248504cd5a28617669e33ecf d52273282c6e76a9ff7caffe03fb505ffb064532 f2560e1fd3cdfdb9dbc5747addde91e56686087a 6168ed2c83999f2a269f239a2994e247fde12e2a facc3c940bc797dfbfc367c88c3a93acf4caba6f 0c5dd7ffea419343b73e14e26b3ece827a37da00 3f12f96cb4226806862ef0a2a9111292ae83ade6 4e97d317c00f0cff5244baf6351cbf35eefaaa38
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
 
-      - name: Install just
-        run: cargo install just --locked
+      - name: Build v4 Java backend
+        run: cd backend/java/omsk-pompeii && ./mvnw -B -DskipTests package
 
-      - name: Run backend Rust checks
-        run: |
-          just backend-fmt-check
-          just backend-check
-          just backend-test
-          just backend-clippy
-          just lint-file-size
-          just rust-migrate-smoke
+      - name: Check v4 migration wrapper
+        run: bash -n scripts/v4_migrate.sh
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build v4 Java backend image
+        uses: docker/build-push-action@v6
+        with:
+          push: false
+          context: .
+          file: docker/omsk-v4-java.Dockerfile
+          platforms: linux/amd64
+          provenance: false

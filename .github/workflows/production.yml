@@ -29,7 +29,7 @@ permissions:
 
 jobs:
   build-backend:
-    name: Build backend
+    name: Build v4 Java backend
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -65,8 +65,8 @@ jobs:
       - name: Set image tags
         id: tags
         run: |
-          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-backend:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-backend-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -80,7 +80,7 @@ jobs:
         with:
           push: true
           context: .
-          file: docker/omsk-pompeii.Dockerfile
+          file: docker/omsk-v4-java.Dockerfile
           platforms: linux/amd64
           provenance: true
           tags: |
@@ -88,7 +88,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-web:
-    name: Build web
+    name: Build v4 web
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -124,8 +124,8 @@ jobs:
       - name: Set image tags
         id: tags
         run: |
-          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-web:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
-          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -177,9 +177,9 @@ jobs:
           changes: |
             {
               "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
-                "ztomsV3.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
-                "ztomsV3.images.web": "${{ needs.build-web.outputs.uhub_image }}",
-                "ztomsV3.migration.image": "${{ needs.build-backend.outputs.uhub_image }}"
+                "ztomsV4.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
+                "ztomsV4.images.web": "${{ needs.build-web.outputs.uhub_image }}",
+                "ztomsV4.migration.image": "${{ needs.build-backend.outputs.uhub_image }}"
               }
             }
 

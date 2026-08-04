@@ -1,1 +1,1 @@
-test(omsk): restore diagnostic status compatibility
+Prepare OMSK v4 Java backend
