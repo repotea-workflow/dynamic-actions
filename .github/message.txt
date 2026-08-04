@@ -1,1 +1,1 @@
-Reuse prepared Print Support MSBuild
+Relax Windows IPP abortive client timeout
