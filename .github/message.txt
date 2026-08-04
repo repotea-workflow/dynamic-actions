@@ -1,10 +1,8 @@
-PR09: rebuild the localized plugin composition per language switch
+PR10: pin the dyn-workflow Flutter SDK and post the full commit SHA
 
-The plugin scenario re-used the scenario's active standard plugin instances
-on each language switch and only replaced the localization plugin, which
-Plate's composition guard rejects ('must not reuse an active plugin
-instance'). Build a complete fresh list - including new PlatePlugins.standard()
-instances - per language through an importable composition helper, cached per
-language to avoid registry churn on unrelated rebuilds. Add a regression test
-that keeps the scenario's standard instances, captures FlutterError.onError,
-and asserts the fresh composition commits with the new label.
+The downstream run installed the latest stable Flutter (3.44.8) while the
+workspace pins 3.41.4 via .fvmrc, so the committed baseline goldens failed
+rasterization on every run. Setup Flutter now reads flutter-version-file:
+.fvmrc, so CI uses exactly the SDK the goldens were generated with. The
+conclusion status was also rejected because commit.txt records the short
+SHA; the verify step now resolves the full object id for the status API.
