@@ -1,1 +1,1 @@
-Guard Windows bash cargo linker
+Reuse prepared Print Support MSBuild
