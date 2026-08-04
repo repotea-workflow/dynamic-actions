@@ -1,1 +1,6 @@
-PR10: re-post the dyn-workflow state on the final integrated head
+PR07: align support xml dev dependency with Dart 3.4 range
+
+plate_editor_support's dev xml ^6.6.1 required Dart ^3.8 and left no
+version intersection with plate_editor_flutter's >=6.4.0 <6.6.0 range.
+Use the same range so workspace resolution stays consistent on
+Dart >=3.4.
