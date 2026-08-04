@@ -1,1 +1,1 @@
-Accept Windows IPP default job attributes
+Keep IPP unsupported attribute test strict
