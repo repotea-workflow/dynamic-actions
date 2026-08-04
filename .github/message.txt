@@ -1,1 +1,1 @@
-Relax Windows IPP abortive client timeout
+Fix Windows IPP product route resilience
