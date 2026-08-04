@@ -1,1 +1,1 @@
-Keep IPP unsupported attribute test strict
+Poll after virtual RAW port deletion
