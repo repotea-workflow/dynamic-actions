@@ -1,1 +1,1 @@
-feat: mature plugin and canvas customization APIs
+feat: expand custom layout showcase
