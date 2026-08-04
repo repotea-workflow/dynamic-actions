@@ -1,4 +1,5 @@
-Merge branch 'pr-06' into pr-07
+Merge branch 'pr-07' into pr-08
 
 # Conflicts:
 #	packages/plate_editor_support/lib/src/plate.dart
+#	packages/plate_editor_support/lib/src/plate_default_editor_shell.dart
