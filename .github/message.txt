@@ -1,1 +1,10 @@
-PR05: handle PlateCustomInspectorSectionState in the built-in section dispatcher
+PR09: rebuild the localized plugin composition per language switch
+
+The plugin scenario re-used the scenario's active standard plugin instances
+on each language switch and only replaced the localization plugin, which
+Plate's composition guard rejects ('must not reuse an active plugin
+instance'). Build a complete fresh list - including new PlatePlugins.standard()
+instances - per language through an importable composition helper, cached per
+language to avoid registry churn on unrelated rebuilds. Add a regression test
+that keeps the scenario's standard instances, captures FlutterError.onError,
+and asserts the fresh composition commits with the new label.
