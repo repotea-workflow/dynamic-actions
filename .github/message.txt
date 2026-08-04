@@ -1,1 +1,41 @@
-Merge branch 'pr-09' into pr-10
+PR10: Documentation and delivery gates (#139)
+
+* PR10: Documentation and delivery gates
+
+* PR10: describe delivery status as open stack pending ordered merge
+
+* PR10: map installed Flutter SDK for melos and document the linear stack
+
+The dyn-workflow installed Flutter under FLUTTER_ROOT but melos.yaml
+requires .fvm/flutter_sdk, so just check failed before running. Symlink
+the installed SDK to the melos path after setup, and update the delivery
+status to describe the linear stack with all review fixes rebased in order
+(892s, 8939).
+
+* PR10: isolate dyn-workflow state per source ref and report conclusions
+
+The shared dynamic branch previously let concurrent source-branch pushes
+overwrite ref.txt and cancel one another. The check workflow now keys its
+concurrency group by the trigger SHA (each dynamic-branch push is its own
+trigger commit with its own branch/commit/ref metadata), verifies the
+checked-out source commit matches the trigger's recorded commit before
+running, and posts the downstream conclusion back to the source commit as
+the plate/check status so the PR surfaces the run that tested its head.
+The runbook Delivery Status documents the isolation and the requirement
+that the final gate is reconciled only by a completed run whose metadata
+is exactly pr-10 at the final integrated head.
+
+* PR10: pin the dyn-workflow Flutter SDK and post the full commit SHA
+
+The downstream run installed the latest stable Flutter (3.44.8) while the
+workspace pins 3.41.4 via .fvmrc, so the committed baseline goldens failed
+rasterization on every run. Setup Flutter now reads flutter-version-file:
+.fvmrc, so CI uses exactly the SDK the goldens were generated with. The
+conclusion status was also rejected because commit.txt records the short
+SHA; the verify step now resolves the full object id for the status API.
+
+* PR10: re-post the dyn-workflow state on the final integrated head
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
