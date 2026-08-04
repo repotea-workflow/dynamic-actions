@@ -1,7 +1,14 @@
-PR09: compile showcased snippets against the public barrel
+PR04: bind retained inspector callbacks to controller and composition leases
 
-Replace the lib-tree scan in snippet_api_guard_test.dart with a fixture
-that imports only package:plate_editor_support/plate_editor_support.dart
-and references every Plate* symbol the showcase snippets construct. The
-test compiles the fixture, so a symbol hidden under lib/src (or renamed
-or removed) fails the guard instead of being accepted by a source scan.
+The selection-revision guard alone let a retained callback from an old
+snapshot edit a replacement host: the stable command facade re-points to
+the new controller after Plate.controller changes, and a plugin
+composition commit replaces capabilities under the same controller and
+selection without moving the revision. The facade now exposes its current
+controller and committed composition generation, and the inspector mapper
+captures both at resolve time and rejects callbacks once either moves.
+
+Regressions: retained A binding no-ops after A-controller to B-controller
+re-point (A stays alive) and after a plugin A to B composition commit,
+asserting document, notifications, and undo/redo history stay unchanged
+while fresh snapshots keep working.
