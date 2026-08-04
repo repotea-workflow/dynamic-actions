@@ -1,1 +1,1 @@
-Poll after virtual RAW port deletion
+Recover invalid Unidrv port catalog
