@@ -1,1 +1,1 @@
-fix: normalize ICU data lists on Windows
+fix: account for static ICU data export
