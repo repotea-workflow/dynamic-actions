@@ -1,1 +1,1 @@
-Route packaged Windows oracles through product matrix
+Stabilize Windows IPP and PSA SDK checks
