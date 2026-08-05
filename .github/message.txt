@@ -1,1 +1,1 @@
-fix: replace sanitized Windows build environment
+ci: configure text engine source consumers
