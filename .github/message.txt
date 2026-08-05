@@ -1,1 +1,1 @@
-fix: make ICU4C builders portable
+fix: harden cross-platform text artifacts
