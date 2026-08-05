@@ -74,8 +74,8 @@ jobs:
       - name: Analyze packaging sources
         run: dart analyze hook tool/platform test/platform_manifest_test.dart test/platform_hook_test.dart test/platform_clean_checkout_test.dart
 
-      - name: Test manifest and hook selection matrix
-        run: dart test test/platform_manifest_test.dart test/platform_hook_test.dart
+      - name: Test manifest, hook, and patch selection matrix
+        run: dart test test/platform_manifest_test.dart test/platform_hook_test.dart test/freetype_patch_applicator_test.dart
 
   linux:
     name: Linux x64 Artifact
