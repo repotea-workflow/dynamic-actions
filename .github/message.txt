@@ -1,1 +1,1 @@
-fix: validate ICU4C MSVC configuration
+fix: relax generated ICU makefile check
