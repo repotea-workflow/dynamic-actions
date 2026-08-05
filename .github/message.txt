@@ -1,1 +1,1 @@
-fix: preserve ABI-first native loading
+fix: harden isolated source builds in CI

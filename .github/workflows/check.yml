@@ -93,6 +93,10 @@ jobs:
       - name: Add pub cache bin to PATH
         run: echo "$HOME/.pub-cache/bin" >> "$GITHUB_PATH"
 
+      - name: Configure text engine source fallback for pre-Release checks
+        run: |
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4c\n' >> packages/plate_text_engine/pubspec.yaml
+
       - name: Run checks
         run: just check
 
