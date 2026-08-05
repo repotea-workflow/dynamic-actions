@@ -1,1 +1,1 @@
-fix: select ICU MSVC platform fragment
+fix: complete ICU4C platform setup
