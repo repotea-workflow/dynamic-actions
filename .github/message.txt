@@ -1,1 +1,1 @@
-Advertise Windows IPP printer device id
+Fix Windows Print Support phase import
