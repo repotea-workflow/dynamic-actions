@@ -266,7 +266,7 @@ jobs:
           if-no-files-found: error
 
   apple:
-    name: Text Engine - ${{ matrix.target }} ${{ matrix.arch }} (icu4x)
+    name: Text Engine - ${{ matrix.target }} ${{ matrix.arch }} (${{ matrix.backend }})
     needs: source
     runs-on: macos-latest
     defaults:
@@ -276,31 +276,66 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - target: ios
+          - backend: icu4c
+            target: ios
+            arch: arm64
+            sdk: iphoneos
+            clang_arch: arm64
+            minimum_flag: -miphoneos-version-min=13.0
+          - backend: icu4c
+            target: ios-simulator
+            arch: arm64
+            sdk: iphonesimulator
+            clang_arch: arm64
+            minimum_flag: -mios-simulator-version-min=13.0
+          - backend: icu4c
+            target: ios-simulator
+            arch: x64
+            sdk: iphonesimulator
+            clang_arch: x86_64
+            minimum_flag: -mios-simulator-version-min=13.0
+          - backend: icu4c
+            target: macos
+            arch: arm64
+            sdk: macosx
+            clang_arch: arm64
+            minimum_flag: -mmacosx-version-min=13.0
+          - backend: icu4c
+            target: macos
+            arch: x64
+            sdk: macosx
+            clang_arch: x86_64
+            minimum_flag: -mmacosx-version-min=13.0
+          - backend: icu4x
+            target: ios
             arch: arm64
             rust_target: aarch64-apple-ios
             sdk: iphoneos
             clang_arch: arm64
             minimum_flag: -miphoneos-version-min=13.0
-          - target: ios-simulator
+          - backend: icu4x
+            target: ios-simulator
             arch: arm64
             rust_target: aarch64-apple-ios-sim
             sdk: iphonesimulator
             clang_arch: arm64
             minimum_flag: -mios-simulator-version-min=13.0
-          - target: ios-simulator
+          - backend: icu4x
+            target: ios-simulator
             arch: x64
             rust_target: x86_64-apple-ios
             sdk: iphonesimulator
             clang_arch: x86_64
             minimum_flag: -mios-simulator-version-min=13.0
-          - target: macos
+          - backend: icu4x
+            target: macos
             arch: arm64
             rust_target: aarch64-apple-darwin
             sdk: macosx
             clang_arch: arm64
             minimum_flag: -mmacosx-version-min=13.0
-          - target: macos
+          - backend: icu4x
+            target: macos
             arch: x64
             rust_target: x86_64-apple-darwin
             sdk: macosx
@@ -322,13 +357,14 @@ jobs:
         run: dart pub get
 
       - name: Install Rust target
+        if: ${{ matrix.backend == 'icu4x' }}
         run: rustup target add "${{ matrix.rust_target }}"
 
       - name: Build, inspect, and cross-link ABI3 probe
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart icu4x "${{ matrix.target }}" "${{ matrix.arch }}"
-          dart tool/platform/verify.dart icu4x "${{ matrix.target }}" "${{ matrix.arch }}"
+          dart tool/platform/build.dart "${{ matrix.backend }}" "${{ matrix.target }}" "${{ matrix.arch }}"
+          dart tool/platform/verify.dart "${{ matrix.backend }}" "${{ matrix.target }}" "${{ matrix.arch }}"
           artifact_dir="artifacts/native/${{ matrix.target }}-${{ matrix.arch }}"
           xcrun --sdk "${{ matrix.sdk }}" clang -arch "${{ matrix.clang_arch }}" "${{ matrix.minimum_flag }}" -I native/include tool/platform/abi_probe.c "$artifact_dir/libplate_text_engine.dylib" -o "$artifact_dir/abi_probe"
           file "$artifact_dir/abi_probe"
@@ -336,7 +372,8 @@ jobs:
       - name: Test target hook registration
         run: |
           set -euo pipefail
-          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> pubspec.yaml
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: %s\n' \
+            "${{ matrix.backend }}" >> pubspec.yaml
           PLATE_TEXT_ENGINE_HOOK_TARGET="${{ matrix.target }}" \
           PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
           PLATE_TEXT_ENGINE_HOOK_IOS_SDK="${{ matrix.sdk }}" \
@@ -345,18 +382,24 @@ jobs:
       - name: Upload text engine artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-${{ matrix.target }}-${{ matrix.arch }}
-          path: packages/plate_text_engine/artifacts/native/${{ matrix.target }}-${{ matrix.arch }}/libplate_text_engine.dylib
+          name: plate-text-engine-${{ matrix.backend }}-${{ matrix.target }}-${{ matrix.arch }}
+          path: |
+            packages/plate_text_engine/artifacts/native/${{ matrix.target }}-${{ matrix.arch }}/libplate_text_engine.dylib
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-${{ matrix.target }}-${{ matrix.arch }}.gz
           if-no-files-found: error
 
   windows:
-    name: Text Engine - Windows x64 (icu4x)
+    name: Text Engine - Windows x64 (${{ matrix.backend }})
     needs: source
     runs-on: windows-latest
     defaults:
       run:
         working-directory: packages/plate_text_engine
         shell: pwsh
+    strategy:
+      fail-fast: false
+      matrix:
+        backend: [icu4c, icu4x]
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -372,17 +415,45 @@ jobs:
       - name: Resolve Dart dependencies
         run: dart pub get
 
+      - name: Initialize Visual Studio x64 developer environment
+        if: ${{ matrix.backend == 'icu4c' }}
+        uses: ilammy/msvc-dev-cmd@0b201ec74fa43914dc39ae48a89fd1d8cb592756 # v1.13.0
+        with:
+          arch: x64
+
+      - name: Initialize MSYS2
+        if: ${{ matrix.backend == 'icu4c' }}
+        id: msys2
+        uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884 # v2.32.0
+        with:
+          msystem: MSYS
+          update: true
+          install: >-
+            make
+            python
+            unzip
+
       - name: Install Rust target
+        if: ${{ matrix.backend == 'icu4x' }}
         run: rustup target add x86_64-pc-windows-msvc
 
-      - name: Build, inspect, and call ABI3
+      - name: Build and verify ICU4C artifact
+        if: ${{ matrix.backend == 'icu4c' }}
+        env:
+          MSYS2_ROOT: ${{ steps.msys2.outputs.msys2-location }}
+        run: |
+          dart tool/platform/build.dart icu4c windows x64
+          dart tool/platform/verify.dart icu4c windows x64 --call
+
+      - name: Build and verify ICU4X artifact
+        if: ${{ matrix.backend == 'icu4x' }}
         run: |
           ./tool/platform/build_windows.ps1
           dart tool/platform/verify.dart icu4x windows x64 --call
 
       - name: Test target hook registration
         run: |
-          Add-Content -Path pubspec.yaml -Value "`nhooks:`n  user_defines:`n    plate_text_engine:`n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true`n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x"
+          Add-Content -Path pubspec.yaml -Value "`nhooks:`n  user_defines:`n    plate_text_engine:`n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true`n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: ${{ matrix.backend }}"
           $env:PLATE_TEXT_ENGINE_HOOK_TARGET = "windows"
           $env:PLATE_TEXT_ENGINE_HOOK_ARCH = "x64"
           dart test test/platform_hook_test.dart
@@ -390,17 +461,23 @@ jobs:
       - name: Upload text engine artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-windows-x64
-          path: packages/plate_text_engine/artifacts/native/windows-x64/plate_text_engine.dll
+          name: plate-text-engine-${{ matrix.backend }}-windows-x64
+          path: |
+            packages/plate_text_engine/artifacts/native/windows-x64/plate_text_engine.dll
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-windows-x64.gz
           if-no-files-found: error
 
   web:
-    name: Text Engine - Web WASM Smoke (icu4x)
+    name: Text Engine - Web wasm32 (${{ matrix.backend }})
     needs: source
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: packages/plate_text_engine
+    strategy:
+      fail-fast: false
+      matrix:
+        backend: [icu4c, icu4x]
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -417,28 +494,143 @@ jobs:
         run: dart pub get
 
       - name: Install Rust target
+        if: ${{ matrix.backend == 'icu4x' }}
         run: rustup target add wasm32-unknown-unknown
 
-      - name: Build, verify pair, and smoke
+      - name: Build, verify, and smoke artifact
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart icu4x web wasm32
-          dart tool/platform/verify.dart icu4x web wasm32
-          make -C native smoke-web
+          dart tool/platform/build.dart "${{ matrix.backend }}" web wasm32
+          dart tool/platform/verify.dart "${{ matrix.backend }}" web wasm32
+          node test/web_engine_smoke.mjs
 
       - name: Smoke Flutter example under a non-root base
+        if: ${{ matrix.backend == 'icu4c' }}
         working-directory: .
         run: |
-          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> apps/plate_web_example/pubspec.yaml
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4c\n' >> apps/plate_web_example/pubspec.yaml
           node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs
 
-      - name: Upload text engine artifact
+      - name: Upload ICU4C text engine artifact
+        if: ${{ matrix.backend == 'icu4c' }}
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-web-wasm32
+          name: plate-text-engine-icu4c-web-wasm32
           path: |
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.mjs
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.wasm
+            packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.data
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.mjs.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.wasm.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.data.gz
+          if-no-files-found: error
+
+      - name: Upload ICU4X text engine artifact
+        if: ${{ matrix.backend == 'icu4x' }}
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-icu4x-web-wasm32
+          path: |
+            packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.mjs
+            packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.wasm
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4x-web-wasm32.mjs.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4x-web-wasm32.wasm.gz
+          if-no-files-found: error
+
+  collect:
+    name: Text Engine - Collect Release Bundle
+    needs:
+      - source
+      - linux
+      - android
+      - apple
+      - windows
+      - web
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        working-directory: packages/plate_text_engine
+        run: dart pub get
+
+      - name: Download all text engine build artifacts
+        uses: actions/download-artifact@3e5f45b2cfb9172054b4087a40e8e0b5a5461e7c # v8.0.1
+        with:
+          pattern: plate-text-engine-icu*
+          path: downloaded-artifacts
+
+      - name: Validate and assemble fixed release asset set
+        env:
+          SOURCE_REPOSITORY: ${{ needs.source.outputs.source_repository }}
+          SOURCE_COMMIT: ${{ needs.source.outputs.source_commit_full }}
+          SOURCE_BRANCH: ${{ needs.source.outputs.source_branch }}
+          WORKFLOW_REPOSITORY: ${{ github.repository }}
+          WORKFLOW_RUN_ID: ${{ github.run_id }}
+          WORKFLOW_RUN_ATTEMPT: ${{ github.run_attempt }}
+        run: |
+          set -euo pipefail
+          release_tag=plate-text-engine-v0.1.0-abi3-r1
+          publication_repository=repotea-workflow/dynamic-actions
+          mkdir -p release-bundle/assets release-bundle/metadata upload
+          (
+            cd packages/plate_text_engine
+            dart tool/platform/assemble_release.dart \
+              ../../downloaded-artifacts \
+              ../../release-bundle/metadata/plate_text_engine_manifest.release-candidate.json
+          )
+          find downloaded-artifacts -type f -name '*.gz' -print0 | \
+            while IFS= read -r -d '' archive; do
+              cp "$archive" "release-bundle/assets/$(basename "$archive")"
+            done
+          jq -r '.artifacts[].files[]."asset-name"' \
+            release-bundle/metadata/plate_text_engine_manifest.release-candidate.json | \
+            sort > release-bundle/metadata/release-assets.txt
+          jq -n \
+            --arg schema "plate-text-engine-release-candidate-v1" \
+            --arg release_tag "$release_tag" \
+            --arg publication_repository "$publication_repository" \
+            --arg source_repository "$SOURCE_REPOSITORY" \
+            --arg source_commit "$SOURCE_COMMIT" \
+            --arg source_branch "$SOURCE_BRANCH" \
+            --arg workflow_repository "$WORKFLOW_REPOSITORY" \
+            --arg workflow_run_id "$WORKFLOW_RUN_ID" \
+            --arg workflow_run_attempt "$WORKFLOW_RUN_ATTEMPT" \
+            '{
+              schema: $schema,
+              "release-tag": $release_tag,
+              "publication-repository": $publication_repository,
+              source: {
+                repository: $source_repository,
+                commit: $source_commit,
+                branch: $source_branch
+              },
+              workflow: {
+                repository: $workflow_repository,
+                "run-id": $workflow_run_id,
+                "run-attempt": $workflow_run_attempt
+              }
+            }' > release-bundle/metadata/release-provenance.json
+          (cd release-bundle && sha256sum assets/* > metadata/assets.sha256)
+          tar --sort=name --mtime=@0 --owner=0 --group=0 --numeric-owner \
+            -C release-bundle -cf - . | gzip -n > "upload/${release_tag}-release-bundle.tar.gz"
+          cp release-bundle/metadata/* upload/
+          (cd upload && sha256sum "${release_tag}-release-bundle.tar.gz" > release-bundle.sha256)
+
+      - name: Upload release bundle and assembly metadata
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-v0.1.0-abi3-r1-release-bundle
+          path: upload
           if-no-files-found: error
 
   report:
@@ -453,6 +645,7 @@ jobs:
       - apple
       - windows
       - web
+      - collect
     runs-on: ubuntu-latest
     steps:
       - name: Report downstream conclusion to the source commit
@@ -475,7 +668,8 @@ jobs:
             "${{ needs.android.result }}" \
             "${{ needs.apple.result }}" \
             "${{ needs.windows.result }}" \
-            "${{ needs.web.result }}"; do
+            "${{ needs.web.result }}" \
+            "${{ needs.collect.result }}"; do
             if [ "$result" = "cancelled" ]; then
               state="error"
               break
