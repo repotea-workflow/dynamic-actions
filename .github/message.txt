@@ -1,1 +1,1 @@
-feat: add text rasterization example
+fix: harden text engine packaging
