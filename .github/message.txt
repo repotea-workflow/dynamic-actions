@@ -1,1 +1,1 @@
-ci: configure text engine source consumers
+fix: run Windows builds inside developer shell

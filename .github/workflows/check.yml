@@ -462,6 +462,8 @@ jobs:
           dart tool/platform/verify.dart icu4x windows x64 --call
 
       - name: Test target hook registration
+        env:
+          MSYS2_ROOT: ${{ steps.msys2.outputs.msys2-location }}
         run: |
           Add-Content -Path pubspec.yaml -Value "`nhooks:`n  user_defines:`n    plate_text_engine:`n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true`n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: ${{ matrix.backend }}"
           $env:PLATE_TEXT_ENGINE_HOOK_TARGET = "windows"
