@@ -519,6 +519,9 @@ jobs:
       - name: Smoke Flutter example under a non-root base
         if: ${{ matrix.backend == 'icu4c' }}
         working-directory: .
+        env:
+          PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: "1"
+          PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4c
         run: |
           printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4c\n' >> apps/plate_web_example/pubspec.yaml
           node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs

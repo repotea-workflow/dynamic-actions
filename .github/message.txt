@@ -1,1 +1,1 @@
-test: accept short Windows source workspaces
+fix: pin Windows ICU4C make
