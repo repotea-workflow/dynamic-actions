@@ -1,1 +1,1 @@
-fix: relax generated ICU makefile check
+fix: constrain Apple text engine builds
