@@ -429,6 +429,7 @@ jobs:
           msystem: MSYS
           update: true
           install: >-
+            diffutils
             make
             python
             unzip

@@ -1,1 +1,1 @@
-feat: complete ICU4C text engine packaging
+fix: make ICU4C builders portable
