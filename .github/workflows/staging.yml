@@ -293,6 +293,18 @@ jobs:
             profile: escpos
             os: windows-latest
             timeout: 20
+          - route: windows.unidrv
+            profile: tspl
+            os: windows-latest
+            timeout: 20
+          - route: windows.unidrv
+            profile: cpcl
+            os: windows-latest
+            timeout: 20
+          - route: windows.unidrv
+            profile: escpos
+            os: windows-latest
+            timeout: 20
     steps:
       - uses: actions/checkout@v6
 
