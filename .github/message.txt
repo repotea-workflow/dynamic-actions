@@ -1,1 +1,1 @@
-Fix Print Support queue association identity
+Advertise Windows IPP printer device id
