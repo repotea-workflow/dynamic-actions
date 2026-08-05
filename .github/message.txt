@@ -1,1 +1,1 @@
-fix: capture MSVC environment through wrapper
+fix: locate Visual Studio from sanitized hooks
