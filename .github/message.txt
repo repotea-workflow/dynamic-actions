@@ -1,1 +1,1 @@
-Fix Windows Print Support package trust flow
+Install Print Support AppX dependencies
