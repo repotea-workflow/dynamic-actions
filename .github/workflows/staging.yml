@@ -305,6 +305,18 @@ jobs:
             profile: escpos
             os: windows-latest
             timeout: 20
+          - route: windows.print-support-app
+            profile: tspl
+            os: windows-latest
+            timeout: 20
+          - route: windows.print-support-app
+            profile: cpcl
+            os: windows-latest
+            timeout: 20
+          - route: windows.print-support-app
+            profile: escpos
+            os: windows-latest
+            timeout: 20
     steps:
       - uses: actions/checkout@v6
 
