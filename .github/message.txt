@@ -1,1 +1,1 @@
-fix: constrain Apple text engine builds
+fix: select ICU MSVC platform fragment
