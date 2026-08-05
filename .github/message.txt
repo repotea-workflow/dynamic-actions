@@ -1,1 +1,1 @@
-feat: add versioned text engine delivery
+feat: add ICU4C Linux text backend

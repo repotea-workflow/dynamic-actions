@@ -121,16 +121,17 @@ jobs:
       - name: Analyze packaging sources
         run: dart analyze hook tool/platform test/platform_manifest_test.dart test/platform_hook_test.dart test/platform_clean_checkout_test.dart
 
-      - name: Test manifest, hook, and patch selection matrix
-        run: dart test test/platform_manifest_test.dart test/platform_hook_test.dart test/freetype_patch_applicator_test.dart
-
   linux:
-    name: Text Engine - Linux x64
+    name: Text Engine - Linux x64 (${{ matrix.backend }})
     needs: source
     runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: packages/plate_text_engine
+    strategy:
+      fail-fast: false
+      matrix:
+        backend: [icu4c, icu4x]
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
         with:
@@ -147,33 +148,45 @@ jobs:
         run: dart pub get
 
       - name: Install Rust target
+        if: ${{ matrix.backend == 'icu4x' }}
         run: rustup target add x86_64-unknown-linux-gnu
 
       - name: Build and verify artifact
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart linux x64
-          dart tool/platform/manifest.dart verify --target linux --arch x64
-          dart tool/platform/verify.dart linux x64 --call
+          dart tool/platform/build.dart "${{ matrix.backend }}" linux x64
+          dart tool/platform/verify.dart "${{ matrix.backend }}" linux x64 --call
 
-      - name: Test FFI, hook registration, and clean source fallback
+      - name: Configure source-build hook for tests
+        run: |
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: %s\n' \
+            "${{ matrix.backend }}" >> pubspec.yaml
+
+      - name: Test FFI and hook registration
         run: |
           set -euo pipefail
           PLATE_TEXT_ENGINE_LIBRARY="$PWD/artifacts/native/linux-x64/libplate_text_engine.so" \
           PLATE_TEXT_ENGINE_HOOK_TARGET=linux \
           PLATE_TEXT_ENGINE_HOOK_ARCH=x64 \
-            dart test test/native_engine_test.dart test/platform_hook_test.dart
+            dart test test/native_engine_test.dart test/platform_manifest_test.dart test/platform_hook_test.dart test/freetype_patch_applicator_test.dart
+
+      - name: Test clean ICU4X source fallback
+        if: ${{ matrix.backend == 'icu4x' }}
+        run: |
+          set -euo pipefail
           dart test test/platform_clean_checkout_test.dart
 
       - name: Upload text engine artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-linux-x64
-          path: packages/plate_text_engine/artifacts/native/linux-x64/libplate_text_engine.so
+          name: plate-text-engine-${{ matrix.backend }}-linux-x64
+          path: |
+            packages/plate_text_engine/artifacts/native/linux-x64/libplate_text_engine.so
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-linux-x64.gz
           if-no-files-found: error
 
   android:
-    name: Text Engine - Android ${{ matrix.arch }}
+    name: Text Engine - Android ${{ matrix.arch }} (icu4x)
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -214,9 +227,8 @@ jobs:
       - name: Build, inspect, and cross-link ABI3 probe
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart android "${{ matrix.arch }}"
-          dart tool/platform/manifest.dart verify --target android --arch "${{ matrix.arch }}"
-          dart tool/platform/verify.dart android "${{ matrix.arch }}"
+          dart tool/platform/build.dart icu4x android "${{ matrix.arch }}"
+          dart tool/platform/verify.dart icu4x android "${{ matrix.arch }}"
           artifact_dir="artifacts/native/android-${{ matrix.arch }}"
           clang="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/${{ matrix.clang_target }}23-clang"
           "$clang" -I native/include tool/platform/abi_probe.c -L "$artifact_dir" -lplate_text_engine -Wl,--allow-shlib-undefined -o "$artifact_dir/abi_probe"
@@ -225,6 +237,7 @@ jobs:
       - name: Test target hook registration
         run: |
           set -euo pipefail
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> pubspec.yaml
           PLATE_TEXT_ENGINE_HOOK_TARGET=android \
           PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
             dart test test/platform_hook_test.dart
@@ -237,7 +250,7 @@ jobs:
           if-no-files-found: error
 
   apple:
-    name: Text Engine - ${{ matrix.target }} ${{ matrix.arch }}
+    name: Text Engine - ${{ matrix.target }} ${{ matrix.arch }} (icu4x)
     needs: source
     runs-on: macos-latest
     defaults:
@@ -298,9 +311,8 @@ jobs:
       - name: Build, inspect, and cross-link ABI3 probe
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart "${{ matrix.target }}" "${{ matrix.arch }}"
-          dart tool/platform/manifest.dart verify --target "${{ matrix.target }}" --arch "${{ matrix.arch }}"
-          dart tool/platform/verify.dart "${{ matrix.target }}" "${{ matrix.arch }}"
+          dart tool/platform/build.dart icu4x "${{ matrix.target }}" "${{ matrix.arch }}"
+          dart tool/platform/verify.dart icu4x "${{ matrix.target }}" "${{ matrix.arch }}"
           artifact_dir="artifacts/native/${{ matrix.target }}-${{ matrix.arch }}"
           xcrun --sdk "${{ matrix.sdk }}" clang -arch "${{ matrix.clang_arch }}" "${{ matrix.minimum_flag }}" -I native/include tool/platform/abi_probe.c "$artifact_dir/libplate_text_engine.dylib" -o "$artifact_dir/abi_probe"
           file "$artifact_dir/abi_probe"
@@ -308,6 +320,7 @@ jobs:
       - name: Test target hook registration
         run: |
           set -euo pipefail
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> pubspec.yaml
           PLATE_TEXT_ENGINE_HOOK_TARGET="${{ matrix.target }}" \
           PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
           PLATE_TEXT_ENGINE_HOOK_IOS_SDK="${{ matrix.sdk }}" \
@@ -321,7 +334,7 @@ jobs:
           if-no-files-found: error
 
   windows:
-    name: Text Engine - Windows x64
+    name: Text Engine - Windows x64 (icu4x)
     needs: source
     runs-on: windows-latest
     defaults:
@@ -349,11 +362,11 @@ jobs:
       - name: Build, inspect, and call ABI3
         run: |
           ./tool/platform/build_windows.ps1
-          dart tool/platform/manifest.dart verify --target windows --arch x64
-          dart tool/platform/verify.dart windows x64 --call
+          dart tool/platform/verify.dart icu4x windows x64 --call
 
       - name: Test target hook registration
         run: |
+          Add-Content -Path pubspec.yaml -Value "`nhooks:`n  user_defines:`n    plate_text_engine:`n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true`n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x"
           $env:PLATE_TEXT_ENGINE_HOOK_TARGET = "windows"
           $env:PLATE_TEXT_ENGINE_HOOK_ARCH = "x64"
           dart test test/platform_hook_test.dart
@@ -366,7 +379,7 @@ jobs:
           if-no-files-found: error
 
   web:
-    name: Text Engine - Web WASM Smoke
+    name: Text Engine - Web WASM Smoke (icu4x)
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -393,14 +406,15 @@ jobs:
       - name: Build, verify pair, and smoke
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart web wasm32
-          dart tool/platform/manifest.dart verify --target web --arch wasm32
-          dart tool/platform/verify.dart web wasm32
+          dart tool/platform/build.dart icu4x web wasm32
+          dart tool/platform/verify.dart icu4x web wasm32
           make -C native smoke-web
 
       - name: Smoke Flutter example under a non-root base
         working-directory: .
-        run: node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs
+        run: |
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> apps/plate_web_example/pubspec.yaml
+          node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs
 
       - name: Upload text engine artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
