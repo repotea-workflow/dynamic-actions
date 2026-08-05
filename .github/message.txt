@@ -1,5 +1,1 @@
-revert: restore synchronized drag preview (#142)
-
-This reverts commit aa4d5e24de4a464423de2eec661c616784b30e70.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+perf: cache drag preview sessions
