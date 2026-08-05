@@ -1,1 +1,1 @@
-ci: label and collect text engine artifacts
+build: strip packaged text engine binaries
