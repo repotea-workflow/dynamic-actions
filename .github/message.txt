@@ -1,1 +1,1 @@
-Fix Spooler CI host pinning proof reuse
+Fix Windows Print Support package trust flow
