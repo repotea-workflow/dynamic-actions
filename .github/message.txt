@@ -1,1 +1,1 @@
-Bind Print Support AppX dependency packages
+Fix Windows Print Support activation cleanup
