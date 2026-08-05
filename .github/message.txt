@@ -1,1 +1,1 @@
-feat: add host-configurable font support (#140)
+fix: avoid full document work during element drag
