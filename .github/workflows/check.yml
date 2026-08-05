@@ -186,7 +186,7 @@ jobs:
           if-no-files-found: error
 
   android:
-    name: Text Engine - Android ${{ matrix.arch }} (icu4x)
+    name: Text Engine - Android ${{ matrix.arch }} (${{ matrix.backend }})
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -196,10 +196,18 @@ jobs:
       fail-fast: false
       matrix:
         include:
-          - arch: arm64
+          - backend: icu4c
+            arch: arm64
+            clang_target: aarch64-linux-android
+          - backend: icu4c
+            arch: x64
+            clang_target: x86_64-linux-android
+          - backend: icu4x
+            arch: arm64
             rust_target: aarch64-linux-android
             clang_target: aarch64-linux-android
-          - arch: x64
+          - backend: icu4x
+            arch: x64
             rust_target: x86_64-linux-android
             clang_target: x86_64-linux-android
     steps:
@@ -217,18 +225,23 @@ jobs:
       - name: Resolve Dart dependencies
         run: dart pub get
 
-      - name: Install NDK and Rust target
+      - name: Install NDK
         run: |
           set -euo pipefail
           "$ANDROID_HOME/cmdline-tools/latest/bin/sdkmanager" --install "ndk;28.2.13676358"
           echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/28.2.13676358" >> "$GITHUB_ENV"
+
+      - name: Install Rust target
+        if: ${{ matrix.backend == 'icu4x' }}
+        run: |
+          set -euo pipefail
           rustup target add "${{ matrix.rust_target }}"
 
       - name: Build, inspect, and cross-link ABI3 probe
         run: |
           set -euo pipefail
-          dart tool/platform/build.dart icu4x android "${{ matrix.arch }}"
-          dart tool/platform/verify.dart icu4x android "${{ matrix.arch }}"
+          dart tool/platform/build.dart "${{ matrix.backend }}" android "${{ matrix.arch }}"
+          dart tool/platform/verify.dart "${{ matrix.backend }}" android "${{ matrix.arch }}"
           artifact_dir="artifacts/native/android-${{ matrix.arch }}"
           clang="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/${{ matrix.clang_target }}23-clang"
           "$clang" -I native/include tool/platform/abi_probe.c -L "$artifact_dir" -lplate_text_engine -Wl,--allow-shlib-undefined -o "$artifact_dir/abi_probe"
@@ -237,7 +250,8 @@ jobs:
       - name: Test target hook registration
         run: |
           set -euo pipefail
-          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: icu4x\n' >> pubspec.yaml
+          printf '\nhooks:\n  user_defines:\n    plate_text_engine:\n      PLATE_TEXT_ENGINE_BUILD_FROM_SOURCE: true\n      PLATE_TEXT_ENGINE_UNICODE_BACKEND: %s\n' \
+            "${{ matrix.backend }}" >> pubspec.yaml
           PLATE_TEXT_ENGINE_HOOK_TARGET=android \
           PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
             dart test test/platform_hook_test.dart
@@ -245,8 +259,10 @@ jobs:
       - name: Upload text engine artifact
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-android-${{ matrix.arch }}
-          path: packages/plate_text_engine/artifacts/native/android-${{ matrix.arch }}/libplate_text_engine.so
+          name: plate-text-engine-${{ matrix.backend }}-android-${{ matrix.arch }}
+          path: |
+            packages/plate_text_engine/artifacts/native/android-${{ matrix.arch }}/libplate_text_engine.so
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-android-${{ matrix.arch }}.gz
           if-no-files-found: error
 
   apple:

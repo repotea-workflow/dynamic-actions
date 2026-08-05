@@ -1,1 +1,1 @@
-feat: add ICU4C Linux text backend
+feat: add ICU4C Android text backend
