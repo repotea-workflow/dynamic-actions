@@ -1,1 +1,1 @@
-build: strip packaged text engine binaries
+feat: add versioned text engine delivery
