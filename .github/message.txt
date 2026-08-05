@@ -1,1 +1,1 @@
-feat: add v4 risk config support
+fix: harden v4 risk migration readiness
