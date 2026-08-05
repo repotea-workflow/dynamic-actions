@@ -16,7 +16,7 @@ concurrency:
 
 jobs:
   source:
-    name: Resolve Dynamic Source
+    name: Resolve Plate Source
     runs-on: ubuntu-latest
     outputs:
       source_commit_full: ${{ steps.source.outputs.source_commit_full }}
@@ -61,7 +61,7 @@ jobs:
           echo "checked out ${branch} at ${actual}"
 
   check:
-    name: Check
+    name: Plate - Repository Checks
     needs: source
     runs-on: ubuntu-latest
     steps:
@@ -97,7 +97,7 @@ jobs:
         run: just check
 
   static:
-    name: Static Hook and Manifest
+    name: Text Engine - Static Packaging
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -125,7 +125,7 @@ jobs:
         run: dart test test/platform_manifest_test.dart test/platform_hook_test.dart test/freetype_patch_applicator_test.dart
 
   linux:
-    name: Linux x64 Artifact
+    name: Text Engine - Linux x64
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -165,8 +165,15 @@ jobs:
             dart test test/native_engine_test.dart test/platform_hook_test.dart
           dart test test/platform_clean_checkout_test.dart
 
+      - name: Upload text engine artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-linux-x64
+          path: packages/plate_text_engine/artifacts/native/linux-x64/libplate_text_engine.so
+          if-no-files-found: error
+
   android:
-    name: Android ${{ matrix.arch }}
+    name: Text Engine - Android ${{ matrix.arch }}
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -222,8 +229,15 @@ jobs:
           PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
             dart test test/platform_hook_test.dart
 
+      - name: Upload text engine artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-android-${{ matrix.arch }}
+          path: packages/plate_text_engine/artifacts/native/android-${{ matrix.arch }}/libplate_text_engine.so
+          if-no-files-found: error
+
   apple:
-    name: ${{ matrix.target }} ${{ matrix.arch }}
+    name: Text Engine - ${{ matrix.target }} ${{ matrix.arch }}
     needs: source
     runs-on: macos-latest
     defaults:
@@ -299,8 +313,15 @@ jobs:
           PLATE_TEXT_ENGINE_HOOK_IOS_SDK="${{ matrix.sdk }}" \
             dart test test/platform_hook_test.dart
 
+      - name: Upload text engine artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-${{ matrix.target }}-${{ matrix.arch }}
+          path: packages/plate_text_engine/artifacts/native/${{ matrix.target }}-${{ matrix.arch }}/libplate_text_engine.dylib
+          if-no-files-found: error
+
   windows:
-    name: Windows x64
+    name: Text Engine - Windows x64
     needs: source
     runs-on: windows-latest
     defaults:
@@ -337,8 +358,15 @@ jobs:
           $env:PLATE_TEXT_ENGINE_HOOK_ARCH = "x64"
           dart test test/platform_hook_test.dart
 
+      - name: Upload text engine artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-windows-x64
+          path: packages/plate_text_engine/artifacts/native/windows-x64/plate_text_engine.dll
+          if-no-files-found: error
+
   web:
-    name: Web mjs/wasm Smoke
+    name: Text Engine - Web WASM Smoke
     needs: source
     runs-on: ubuntu-latest
     defaults:
@@ -374,8 +402,17 @@ jobs:
         working-directory: .
         run: node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs
 
+      - name: Upload text engine artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: plate-text-engine-web-wasm32
+          path: |
+            packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.mjs
+            packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.wasm
+          if-no-files-found: error
+
   report:
-    name: Report combined result
+    name: Report Plate Check Result
     if: ${{ always() }}
     needs:
       - source

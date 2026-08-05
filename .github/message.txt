@@ -1,1 +1,1 @@
-ci: fold text engine packaging into check
+ci: label and collect text engine artifacts
