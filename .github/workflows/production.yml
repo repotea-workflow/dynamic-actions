@@ -222,9 +222,9 @@ jobs:
         run: just desktop-check
 
   # P1-06 / T11: Route × profile oracle matrix.
-  # Only claimed routes belong in this formal matrix, and every entry runs with
-  # SPOOLIX_ROUTE_ORACLE_REQUIRED=1. Pending proofs use explicitly named
-  # candidate jobs instead of green skip entries.
+  # This generic matrix only includes routes whose oracle recipe can prepare its
+  # own host state. Windows product routes that require signed package/driver
+  # setup run in windows-product-route-oracle below.
   route-oracle-matrix:
     name: Route oracle / ${{ matrix.route }} / ${{ matrix.profile }}
     runs-on: ${{ matrix.os }}
@@ -290,30 +290,6 @@ jobs:
             os: windows-latest
             timeout: 20
           - route: windows.ipp
-            profile: escpos
-            os: windows-latest
-            timeout: 20
-          - route: windows.unidrv
-            profile: tspl
-            os: windows-latest
-            timeout: 20
-          - route: windows.unidrv
-            profile: cpcl
-            os: windows-latest
-            timeout: 20
-          - route: windows.unidrv
-            profile: escpos
-            os: windows-latest
-            timeout: 20
-          - route: windows.print-support-app
-            profile: tspl
-            os: windows-latest
-            timeout: 20
-          - route: windows.print-support-app
-            profile: cpcl
-            os: windows-latest
-            timeout: 20
-          - route: windows.print-support-app
             profile: escpos
             os: windows-latest
             timeout: 20
