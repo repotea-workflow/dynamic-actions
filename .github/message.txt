@@ -1,1 +1,1 @@
-fix: optimize drawing preview commits
+fix: complete adaptive dark canvas theming
