@@ -1,1 +1,1 @@
-fix: link Rust Windows system libraries
+ci: fold text engine packaging into check
