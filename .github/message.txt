@@ -1,1 +1,1 @@
-fix: verify web source artifacts independently
+fix: preserve ABI-first native loading
