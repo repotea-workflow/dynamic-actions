@@ -1,0 +1,316 @@
+name: "[plate_text_engine] Packaging"
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.sha }}
+  cancel-in-progress: false
+
+defaults:
+  run:
+    working-directory: packages/plate_text_engine
+
+jobs:
+  source:
+    name: Resolve Dynamic Source
+    runs-on: ubuntu-latest
+    outputs:
+      source_commit_full: ${{ steps.verify.outputs.source_commit_full }}
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Read source metadata
+        id: source
+        working-directory: .
+        run: |
+          set -euo pipefail
+          echo "source_commit=$(cat .github/commit.txt)" >> "$GITHUB_OUTPUT"
+
+      - name: Checkout dynamic source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@e265ebca9b4a93aaf804be57c2687554dcc49dc7 # main verified 2026-08-05
+        with:
+          repository: boxliy/plate
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Verify checked-out source matches this trigger
+        id: verify
+        working-directory: .
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse --short=7 HEAD)"
+          expected="${{ steps.source.outputs.source_commit }}"
+          if [ "$actual" != "$expected" ]; then
+            echo "dynamic-branch race: checked out ${actual} but trigger recorded ${expected}" >&2
+            exit 1
+          fi
+          echo "source_commit_full=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+
+  static:
+    name: Static Hook and Manifest
+    needs: source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Analyze packaging sources
+        run: dart analyze hook tool/platform test/platform_manifest_test.dart test/platform_hook_test.dart test/platform_clean_checkout_test.dart
+
+      - name: Test manifest and hook selection matrix
+        run: dart test test/platform_manifest_test.dart test/platform_hook_test.dart
+
+  linux:
+    name: Linux x64 Artifact
+    needs: source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Install Rust target
+        run: rustup target add x86_64-unknown-linux-gnu
+
+      - name: Build and verify artifact
+        run: |
+          set -euo pipefail
+          dart tool/platform/build.dart linux x64
+          dart tool/platform/manifest.dart verify --target linux --arch x64
+          dart tool/platform/verify.dart linux x64 --call
+
+      - name: Test FFI, hook registration, and clean source fallback
+        run: |
+          set -euo pipefail
+          PLATE_TEXT_ENGINE_LIBRARY="$PWD/artifacts/native/linux-x64/libplate_text_engine.so" \
+          PLATE_TEXT_ENGINE_HOOK_TARGET=linux \
+          PLATE_TEXT_ENGINE_HOOK_ARCH=x64 \
+            dart test test/native_engine_test.dart test/platform_hook_test.dart
+          dart test test/platform_clean_checkout_test.dart
+
+  android:
+    name: Android ${{ matrix.arch }}
+    needs: source
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - arch: arm64
+            rust_target: aarch64-linux-android
+            clang_target: aarch64-linux-android
+          - arch: x64
+            rust_target: x86_64-linux-android
+            clang_target: x86_64-linux-android
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Install NDK and Rust target
+        run: |
+          set -euo pipefail
+          yes | sdkmanager "ndk;28.2.13676358"
+          echo "ANDROID_NDK_HOME=$ANDROID_HOME/ndk/28.2.13676358" >> "$GITHUB_ENV"
+          rustup target add "${{ matrix.rust_target }}"
+
+      - name: Build, inspect, and cross-link ABI3 probe
+        run: |
+          set -euo pipefail
+          dart tool/platform/build.dart android "${{ matrix.arch }}"
+          dart tool/platform/manifest.dart verify --target android --arch "${{ matrix.arch }}"
+          dart tool/platform/verify.dart android "${{ matrix.arch }}"
+          artifact_dir="artifacts/native/android-${{ matrix.arch }}"
+          clang="$ANDROID_NDK_HOME/toolchains/llvm/prebuilt/linux-x86_64/bin/${{ matrix.clang_target }}23-clang"
+          "$clang" -I native/include tool/platform/abi_probe.c -L "$artifact_dir" -lplate_text_engine -Wl,--allow-shlib-undefined -o "$artifact_dir/abi_probe"
+          file "$artifact_dir/abi_probe"
+
+      - name: Test target hook registration
+        run: |
+          set -euo pipefail
+          PLATE_TEXT_ENGINE_HOOK_TARGET=android \
+          PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
+            dart test test/platform_hook_test.dart
+
+  apple:
+    name: ${{ matrix.target }} ${{ matrix.arch }}
+    needs: source
+    runs-on: macos-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - target: ios
+            arch: arm64
+            rust_target: aarch64-apple-ios
+            sdk: iphoneos
+            clang_arch: arm64
+            minimum_flag: -miphoneos-version-min=13.0
+          - target: ios-simulator
+            arch: arm64
+            rust_target: aarch64-apple-ios-sim
+            sdk: iphonesimulator
+            clang_arch: arm64
+            minimum_flag: -mios-simulator-version-min=13.0
+          - target: ios-simulator
+            arch: x64
+            rust_target: x86_64-apple-ios
+            sdk: iphonesimulator
+            clang_arch: x86_64
+            minimum_flag: -mios-simulator-version-min=13.0
+          - target: macos
+            arch: arm64
+            rust_target: aarch64-apple-darwin
+            sdk: macosx
+            clang_arch: arm64
+            minimum_flag: -mmacosx-version-min=13.0
+          - target: macos
+            arch: x64
+            rust_target: x86_64-apple-darwin
+            sdk: macosx
+            clang_arch: x86_64
+            minimum_flag: -mmacosx-version-min=13.0
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Install Rust target
+        run: rustup target add "${{ matrix.rust_target }}"
+
+      - name: Build, inspect, and cross-link ABI3 probe
+        run: |
+          set -euo pipefail
+          dart tool/platform/build.dart "${{ matrix.target }}" "${{ matrix.arch }}"
+          dart tool/platform/manifest.dart verify --target "${{ matrix.target }}" --arch "${{ matrix.arch }}"
+          dart tool/platform/verify.dart "${{ matrix.target }}" "${{ matrix.arch }}"
+          artifact_dir="artifacts/native/${{ matrix.target }}-${{ matrix.arch }}"
+          xcrun --sdk "${{ matrix.sdk }}" clang -arch "${{ matrix.clang_arch }}" "${{ matrix.minimum_flag }}" -I native/include tool/platform/abi_probe.c "$artifact_dir/libplate_text_engine.dylib" -o "$artifact_dir/abi_probe"
+          file "$artifact_dir/abi_probe"
+
+      - name: Test target hook registration
+        run: |
+          set -euo pipefail
+          PLATE_TEXT_ENGINE_HOOK_TARGET="${{ matrix.target }}" \
+          PLATE_TEXT_ENGINE_HOOK_ARCH="${{ matrix.arch }}" \
+          PLATE_TEXT_ENGINE_HOOK_IOS_SDK="${{ matrix.sdk }}" \
+            dart test test/platform_hook_test.dart
+
+  windows:
+    name: Windows x64
+    needs: source
+    runs-on: windows-latest
+    defaults:
+      run:
+        working-directory: packages/plate_text_engine
+        shell: pwsh
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Install Rust target
+        run: rustup target add x86_64-pc-windows-msvc
+
+      - name: Build, inspect, and call ABI3
+        run: |
+          ./tool/platform/build_windows.ps1
+          dart tool/platform/manifest.dart verify --target windows --arch x64
+          dart tool/platform/verify.dart windows x64 --call
+
+      - name: Test target hook registration
+        run: |
+          $env:PLATE_TEXT_ENGINE_HOOK_TARGET = "windows"
+          $env:PLATE_TEXT_ENGINE_HOOK_ARCH = "x64"
+          dart test test/platform_hook_test.dart
+
+  web:
+    name: Web mjs/wasm Smoke
+    needs: source
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: boxliy/plate
+          ref: ${{ needs.source.outputs.source_commit_full }}
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2 # v2
+        with:
+          flutter-version-file: .fvmrc
+
+      - name: Resolve Dart dependencies
+        run: dart pub get
+
+      - name: Install Rust target
+        run: rustup target add wasm32-unknown-unknown
+
+      - name: Build, verify pair, and smoke
+        run: |
+          set -euo pipefail
+          dart tool/platform/build.dart web wasm32
+          dart tool/platform/manifest.dart verify --target web --arch wasm32
+          dart tool/platform/verify.dart web wasm32
+          make -C native smoke-web
+
+      - name: Smoke Flutter example under a non-root base
+        working-directory: .
+        run: node apps/plate_web_example/tool/smoke_plate_text_engine_web.mjs
