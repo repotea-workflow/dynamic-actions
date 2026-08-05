@@ -1,1 +1,1 @@
-fix: use nmake for Windows source builds
+fix: shorten Windows source workspaces
