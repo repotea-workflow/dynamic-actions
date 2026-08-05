@@ -1,1 +1,1 @@
-fix: run Windows builds inside developer shell
+fix: quote trailing Windows path separators
