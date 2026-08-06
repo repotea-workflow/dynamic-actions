@@ -1,1 +1,105 @@
-style: preserve boundary guard formatting
+feat: add optional FreeType print text optimization (#144)
+
+* feat: add standalone print text engine
+
+* feat: integrate optional print text optimization
+
+* ci: verify text engine packaging matrix
+
+* feat: add text rasterization example
+
+* fix: harden text engine packaging
+
+* fix: complete native packaging matrix
+
+* test: cover cached native patching
+
+* fix: link Rust Windows system libraries
+
+* ci: fold text engine packaging into check
+
+* ci: label and collect text engine artifacts
+
+* build: strip packaged text engine binaries
+
+* feat: add versioned text engine delivery
+
+* feat: add ICU4C Linux text backend
+
+* feat: add ICU4C Android text backend
+
+* feat: complete ICU4C text engine packaging
+
+* fix: make ICU4C builders portable
+
+* fix: harden cross-platform text artifacts
+
+* fix: validate ICU4C MSVC configuration
+
+* fix: relax generated ICU makefile check
+
+* fix: constrain Apple text engine builds
+
+* fix: select ICU MSVC platform fragment
+
+* fix: complete ICU4C platform setup
+
+* fix: honor Apple platform deployment floors
+
+* fix: normalize ICU data lists on Windows
+
+* fix: account for static ICU data export
+
+* fix: isolate text engine consumer delivery
+
+* fix: verify web source artifacts independently
+
+* fix: preserve ABI-first native loading
+
+* fix: harden isolated source builds in CI
+
+* test: accept isolated short source paths
+
+* fix: bootstrap MSVC for source hooks
+
+* fix: invoke MSVC developer shell correctly
+
+* fix: capture MSVC environment through wrapper
+
+* fix: locate Visual Studio from sanitized hooks
+
+* fix: replace sanitized Windows build environment
+
+* ci: configure text engine source consumers
+
+* fix: run Windows builds inside developer shell
+
+* fix: quote trailing Windows path separators
+
+* fix: reinitialize sanitized MSVC hook shells
+
+* fix: use nmake for Windows source builds
+
+* fix: shorten Windows source workspaces
+
+* test: accept short Windows source workspaces
+
+* ci: enable web smoke source delivery
+
+* fix: pin Windows ICU4C make
+
+* fix: isolate Windows MSYS2 toolchain
+
+* fix: compare ICU4C data with pinned Python
+
+* ci: reuse fixed MSYS2 root for hooks
+
+* build: record text engine release manifest
+
+* test: align web delivery boundary guard
+
+* style: preserve boundary guard formatting
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
