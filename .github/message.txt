@@ -1,1 +1,1 @@
-build: record text engine release manifest
+test: align web delivery boundary guard
