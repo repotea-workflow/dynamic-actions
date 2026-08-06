@@ -1,1 +1,1 @@
-fix: compare ICU4C data with pinned Python
+ci: reuse fixed MSYS2 root for hooks

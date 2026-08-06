@@ -436,6 +436,7 @@ jobs:
         uses: msys2/setup-msys2@66cd2cce69caa17b53920067426061ca1de3a884 # v2.32.0
         with:
           msystem: MSYS
+          release: false
           update: true
           install: >-
             diffutils
