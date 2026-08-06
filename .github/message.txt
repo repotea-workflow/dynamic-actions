@@ -1,1 +1,1 @@
-fix: pin Windows ICU4C make
+fix: isolate Windows MSYS2 toolchain
