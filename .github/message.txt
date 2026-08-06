@@ -1,1 +1,1 @@
-test: align web delivery boundary guard
+style: preserve boundary guard formatting
