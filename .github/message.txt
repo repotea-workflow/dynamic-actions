@@ -1,1 +1,1 @@
-ci: reuse fixed MSYS2 root for hooks
+build: record text engine release manifest
