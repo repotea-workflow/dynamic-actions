@@ -1,1 +1,1 @@
-fix: isolate Windows MSYS2 toolchain
+fix: compare ICU4C data with pinned Python
