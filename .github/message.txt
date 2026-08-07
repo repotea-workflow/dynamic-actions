@@ -1,3 +1,3 @@
-Add icon catalog with admin groups and public sync.
+Add icon catalog with admin groups and public sync. (#58)
 
 Mirror the font catalog for SVG/PNG icon groups, admin uploads, and public/App snapshot downloads used by templates.
