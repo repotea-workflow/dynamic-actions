@@ -1,3 +1,3 @@
-Use Astryx FileInput for font cover and face uploads.
+Use Astryx FileInput for font cover and face uploads. (#55)
 
 Replace native file inputs with the shared dropzone control so catalog uploads match other admin media flows.
