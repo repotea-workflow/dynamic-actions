@@ -1,3 +1,3 @@
-Improve admin font catalog UX for covers, routes, and downloads. (#56)
+Fix admin font cover preview for Astryx foundation check.
 
-Make reasons optional, show cover previews in forms and lists, sync detail view to #/fonts?id=, and add face download actions.
+Move cover image sizing off inline style onto data-attribute CSS so the Staging admin image build can pass.
