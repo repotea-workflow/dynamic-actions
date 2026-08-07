@@ -1,0 +1,3 @@
+Add admin font catalog for families and faces.
+
+Enable manage-console CRUD for font families/faces with dedicated uploads, permissions, and storage purpose wiring so templates can later reuse catalog fonts.
