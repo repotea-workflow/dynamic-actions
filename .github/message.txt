@@ -1,5 +1,7 @@
-Fix Windows routes check gates
+Make Windows IPP product queues submit Print-Job
 
-Synchronize the Windows-only IPP request snapshot test with Create-Job/Send-Document counters and satisfy Windows route clippy without suppressions.
+Advertise a Windows-compatible PWG letter raster profile for product IPP queues so the Windows IPP class driver proceeds from attribute probing into Validate-Job and Print-Job. Keep the route runtime normalization responsible for converting the submitted raster into Spoolix label outputs.
 
-Verified: cargo fmt --check; cargo test -p spoolix-platform-windows-ipp --test host_spike --locked; cargo clippy -p spoolix-platform-windows-ipp -p spoolix-platform-windows-print-support -p spoolix-platform-windows-spooler -p spoolix-platform-windows-unidrv -p spoolix-platform-windows-winusb --features spoolix-platform-windows-ipp/test-support,spoolix-platform-windows-print-support/test-support,spoolix-platform-windows-spooler/test-support,spoolix-platform-windows-unidrv/test-support --all-targets --locked -- -D warnings; Windows real host bash .github/scripts/run-windows-platform-checks.sh windows-routes.
+Also stop advertising Create-Job and Send-Document on the direct product receiver capability surface; staged handling remains internal but Windows should prefer the Print-Job path for the product oracle.
+
+Verified: cargo fmt --check; git diff --check; cargo test -p spoolix-platform-windows-ipp --test host_spike --locked. Real Windows host verification on administrator@43.118.25.43: windows.ipp TSPL/CPCL/ESCPOS two-page product route batch passed, product route evidence gate passed for C:/spoolix-evidence/product-route-windows-ipp-e2e49d2.json, and run-windows-platform-checks.sh windows-routes passed.
