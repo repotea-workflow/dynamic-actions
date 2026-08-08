@@ -1,1 +1,1 @@
-Stabilize macOS Desktop dev signing setup
+Fix Print Support oracle default prefix
