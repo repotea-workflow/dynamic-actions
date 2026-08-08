@@ -1,1 +1,1 @@
-ci: retry text engine matrix
+ci: add FreeType download fallback
