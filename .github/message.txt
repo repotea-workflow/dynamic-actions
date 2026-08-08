@@ -1,1 +1,1 @@
-fix(web): export rasterized text at physical size (#149)
+feat(web): add text rasterization export menu
