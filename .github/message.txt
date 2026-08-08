@@ -1,1 +1,9 @@
-build: record text engine r2 release hashes
+build: publish immutable Plate text engine r2 release (#148)
+
+* build: prepare immutable text engine r2 release
+
+* build: record text engine r2 release hashes
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
