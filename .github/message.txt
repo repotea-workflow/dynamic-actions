@@ -1,3 +1,1 @@
-Fix icon tile contrast for light and dark themes. (#61)
-
-Use shared Admin color tokens so tile surfaces, borders, and delete controls follow the active theme instead of light-only fallbacks.
+fix: localize ai printer settings
