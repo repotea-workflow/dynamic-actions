@@ -1,1 +1,5 @@
-Handle Windows IPP staged document jobs
+Handle Windows Print Support direct IPP raster jobs
+
+Route the Windows Print Support workflow through the bound loopback IPP endpoint, validate IPP responses, preserve loopback exemption lifecycle, and normalize Windows PWG raster jobs for the current label runtime.
+
+Verified: cargo fmt --check; git diff --check; cargo test -p spoolix-platform-common-cups --test conversion --locked; cargo test -p spoolix-platform-windows-print-support --test package_contract --test product_lifecycle --locked; cargo test -p spoolix-platform-windows-ipp --test host_spike --locked; cargo test -p spoolix-platform-windows-virtual-printer-runtime --lib --locked. Windows real host PSA Scheduled Task passed TSPL/CPCL/ESCPOS two-page oracles with exit 0.
