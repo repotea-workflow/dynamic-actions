@@ -1,1 +1,1 @@
-fix(text): avoid GCC 11 optional warning
+build(text): refresh compatible ABI4 manifest
