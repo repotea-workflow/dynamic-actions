@@ -1,1 +1,1 @@
-build(text): pin Linux release compatibility
+fix(ci): fail closed on Linux ABI checks
