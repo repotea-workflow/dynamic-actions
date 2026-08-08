@@ -1,1 +1,1 @@
-fix: localize ai printer settings
+fix: localize ai printer settings (#62)
