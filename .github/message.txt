@@ -1,1 +1,1 @@
-Recover retired Print Support lifecycle residue
+Fix Windows print support host oracle
