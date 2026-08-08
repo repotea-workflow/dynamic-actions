@@ -1,1 +1,1 @@
-Fix Windows print support package contract
+Fix macOS CI clippy warnings

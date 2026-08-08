@@ -257,6 +257,18 @@ jobs:
             profile: escpos
             os: ubuntu-latest
             timeout: 20
+          - route: macos.ipp-airprint
+            profile: tspl
+            os: macos-latest
+            timeout: 30
+          - route: macos.ipp-airprint
+            profile: cpcl
+            os: macos-latest
+            timeout: 30
+          - route: macos.ipp-airprint
+            profile: escpos
+            os: macos-latest
+            timeout: 30
           - route: macos.cups
             profile: tspl
             os: macos-latest
@@ -323,11 +335,18 @@ jobs:
           sudo systemctl start cups || sudo service cups start
 
       - name: Ensure macOS CUPS is running
-        if: ${{ matrix.route == 'macos.cups' }}
+        if: ${{ matrix.route == 'macos.cups' || matrix.route == 'macos.ipp-airprint' }}
         shell: bash
         run: |
           lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
           lpstat -r
+
+      - name: Select macOS AirPrint bind address
+        if: ${{ matrix.route == 'macos.ipp-airprint' }}
+        shell: bash
+        run: |
+          bind_address="$(bash .github/scripts/select-macos-airprint-bind-address.sh)"
+          echo "SPOOLIX_AIRPRINT_BIND_ADDRESS=$bind_address" >> "$GITHUB_ENV"
 
       - name: Prepare Windows Spooler route-oracle anchor
         if: ${{ matrix.route == 'windows.spooler' }}
@@ -350,6 +369,44 @@ jobs:
           SPOOLIX_ROUTE_ORACLE_REQUIRED: "1"
         run: just ci-route-oracle "${{ matrix.route }}" "${{ matrix.profile }}"
 
+      - name: Capture macOS AirPrint diagnostics
+        if: ${{ always() && matrix.route == 'macos.ipp-airprint' }}
+        shell: bash
+        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics || true
+
+      - name: Upload macOS AirPrint diagnostics
+        if: ${{ always() && matrix.route == 'macos.ipp-airprint' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-airprint-diagnostics-${{ matrix.profile }}
+          path: target/macos-airprint-ci-diagnostics
+          if-no-files-found: ignore
+
+      - name: Teardown macOS AirPrint success harness
+        if: ${{ always() && matrix.route == 'macos.ipp-airprint' }}
+        shell: bash
+        run: |
+          bash .github/scripts/teardown-macos-ci-harness.sh
+          bash .github/scripts/teardown-macos-ci-harness.sh
+
+      - name: Run macOS AirPrint cleanup failure matrix
+        if: ${{ success() && matrix.route == 'macos.ipp-airprint' }}
+        shell: bash
+        run: just ci-macos-airprint-cleanup-oracle "${{ matrix.profile }}"
+
+      - name: Capture macOS AirPrint cleanup diagnostics
+        if: ${{ always() && matrix.route == 'macos.ipp-airprint' }}
+        shell: bash
+        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics-cleanup || true
+
+      - name: Upload macOS AirPrint cleanup diagnostics
+        if: ${{ always() && matrix.route == 'macos.ipp-airprint' }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: macos-airprint-cleanup-diagnostics-${{ matrix.profile }}
+          path: target/macos-airprint-ci-diagnostics-cleanup
+          if-no-files-found: ignore
+
       - name: Teardown Windows Spooler route-oracle anchor
         if: ${{ always() && matrix.route == 'windows.spooler' }}
         shell: pwsh
@@ -359,98 +416,7 @@ jobs:
           if ($LASTEXITCODE -ne 0) { throw "Windows Spooler route-oracle anchor teardown failed closed" }
 
       - name: Teardown macOS CI harness
-        if: ${{ always() && matrix.route == 'macos.cups' }}
-        shell: bash
-        run: |
-          bash .github/scripts/teardown-macos-ci-harness.sh
-          bash .github/scripts/teardown-macos-ci-harness.sh
-
-  macos-airprint-candidate-oracle:
-    name: macOS AirPrint candidate / ${{ matrix.profile }}
-    runs-on: macos-latest
-    timeout-minutes: 40
-    strategy:
-      fail-fast: false
-      matrix:
-        profile: [tspl, cpcl, escpos]
-    steps:
-      - uses: actions/checkout@v6
-
-      - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/spoolix
-          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
-
-      - name: Authorize private Git dependencies
-        shell: bash
-        env:
-          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
-        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
-
-      - name: Install Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Install just
-        uses: taiki-e/install-action@just
-
-      - name: Ensure macOS CUPS is running
-        shell: bash
-        run: |
-          lpstat -r || sudo launchctl kickstart -k system/org.cups.cupsd
-          lpstat -r
-
-      - name: Select macOS AirPrint bind address
-        shell: bash
-        run: |
-          bind_address="$(bash .github/scripts/select-macos-airprint-bind-address.sh)"
-          echo "SPOOLIX_AIRPRINT_BIND_ADDRESS=$bind_address" >> "$GITHUB_ENV"
-
-      - name: Run macOS AirPrint candidate oracle
-        shell: bash
-        run: just ci-macos-airprint-oracle "${{ matrix.profile }}"
-
-      - name: Capture macOS AirPrint diagnostics
-        if: ${{ always() }}
-        shell: bash
-        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics-candidate || true
-
-      - name: Upload macOS AirPrint diagnostics
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: macos-airprint-diagnostics-${{ matrix.profile }}
-          path: target/macos-airprint-ci-diagnostics-candidate
-          if-no-files-found: ignore
-
-      - name: Teardown macOS AirPrint success harness
-        if: ${{ always() }}
-        shell: bash
-        run: |
-          bash .github/scripts/teardown-macos-ci-harness.sh
-          bash .github/scripts/teardown-macos-ci-harness.sh
-
-      - name: Run macOS AirPrint cleanup failure matrix
-        if: ${{ success() }}
-        shell: bash
-        run: just ci-macos-airprint-cleanup-oracle "${{ matrix.profile }}"
-
-      - name: Capture macOS AirPrint cleanup diagnostics
-        if: ${{ always() }}
-        shell: bash
-        run: bash .github/scripts/collect-macos-airprint-ci-diagnostics.sh target/macos-airprint-ci-diagnostics-cleanup || true
-
-      - name: Upload macOS AirPrint cleanup diagnostics
-        if: ${{ always() }}
-        uses: actions/upload-artifact@v4
-        with:
-          name: macos-airprint-cleanup-diagnostics-${{ matrix.profile }}
-          path: target/macos-airprint-ci-diagnostics-cleanup
-          if-no-files-found: ignore
-
-      - name: Teardown macOS CI harness
-        if: ${{ always() }}
+        if: ${{ always() && (matrix.route == 'macos.cups' || matrix.route == 'macos.ipp-airprint') }}
         shell: bash
         run: |
           bash .github/scripts/teardown-macos-ci-harness.sh
