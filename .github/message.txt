@@ -1,1 +1,1 @@
-Allow XPS Print Support workflow passthrough
+Diagnose Windows print support workflow recovery
