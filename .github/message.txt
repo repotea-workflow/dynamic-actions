@@ -1,1 +1,1 @@
-Fix Print Support oracle default prefix
+Fix macOS Desktop dev signing identity
