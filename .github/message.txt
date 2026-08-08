@@ -1,1 +1,1 @@
-build(text): refresh compatible ABI4 manifest
+feat(text): add colored binary text rasterization (#150)
