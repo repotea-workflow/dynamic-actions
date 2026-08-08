@@ -1,1 +1,1 @@
-test(web): include text download modules in guard
+build(text): publish ABI4 release manifest
