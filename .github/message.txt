@@ -1,1 +1,1 @@
-test(text): allow built release manifests
+test(web): include text download modules in guard
