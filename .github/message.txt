@@ -1,1 +1,1 @@
-fix(ci): fail closed on Linux ABI checks
+fix(text): avoid GCC 11 optional warning
