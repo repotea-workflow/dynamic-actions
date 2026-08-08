@@ -1,1 +1,1 @@
-Fix macOS Desktop virtual printer route readiness
+Fix macOS CUPS PPD raster resolution
