@@ -1,1 +1,1 @@
-build(text): publish ABI4 release manifest
+build(text): pin Linux release compatibility
