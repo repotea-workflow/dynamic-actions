@@ -1,1 +1,1 @@
-feat: prepare omsj v4 artifacts
+feat: add omsk babylon v4 app
