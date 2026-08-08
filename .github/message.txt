@@ -1,1 +1,1 @@
-Fix macOS Desktop dev signing identity
+Run macOS Desktop dev app with signed test helper support
