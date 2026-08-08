@@ -1,3 +1,1 @@
-Fix ICU4C layout errors in WebAssembly (#147)
-
-Enable Emscripten C++ exception handling for ICU4C paragraph layout failures, cover height-exceeded errors with a Wasm regression, and add a checksum-pinned FreeType mirror fallback for reliable clean builds.
+build: prepare immutable text engine r2 release

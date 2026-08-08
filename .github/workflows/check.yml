@@ -191,7 +191,7 @@ jobs:
           name: plate-text-engine-${{ matrix.backend }}-linux-x64
           path: |
             packages/plate_text_engine/artifacts/native/linux-x64/libplate_text_engine.so
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-linux-x64.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-${{ matrix.backend }}-linux-x64.gz
           if-no-files-found: error
 
   android:
@@ -271,7 +271,7 @@ jobs:
           name: plate-text-engine-${{ matrix.backend }}-android-${{ matrix.arch }}
           path: |
             packages/plate_text_engine/artifacts/native/android-${{ matrix.arch }}/libplate_text_engine.so
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-android-${{ matrix.arch }}.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-${{ matrix.backend }}-android-${{ matrix.arch }}.gz
           if-no-files-found: error
 
   apple:
@@ -394,7 +394,7 @@ jobs:
           name: plate-text-engine-${{ matrix.backend }}-${{ matrix.target }}-${{ matrix.arch }}
           path: |
             packages/plate_text_engine/artifacts/native/${{ matrix.target }}-${{ matrix.arch }}/libplate_text_engine.dylib
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-${{ matrix.target }}-${{ matrix.arch }}.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-${{ matrix.backend }}-${{ matrix.target }}-${{ matrix.arch }}.gz
           if-no-files-found: error
 
   windows:
@@ -477,7 +477,7 @@ jobs:
           name: plate-text-engine-${{ matrix.backend }}-windows-x64
           path: |
             packages/plate_text_engine/artifacts/native/windows-x64/plate_text_engine.dll
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-${{ matrix.backend }}-windows-x64.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-${{ matrix.backend }}-windows-x64.gz
           if-no-files-found: error
 
   web:
@@ -536,9 +536,9 @@ jobs:
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.mjs
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.wasm
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.data
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.mjs.gz
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.wasm.gz
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4c-web-wasm32.data.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-icu4c-web-wasm32.mjs.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-icu4c-web-wasm32.wasm.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-icu4c-web-wasm32.data.gz
           if-no-files-found: error
 
       - name: Upload ICU4X text engine artifact
@@ -549,8 +549,8 @@ jobs:
           path: |
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.mjs
             packages/plate_text_engine/artifacts/web/web-wasm32/plate_text_engine.wasm
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4x-web-wasm32.mjs.gz
-            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r1/plate-text-engine-icu4x-web-wasm32.wasm.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-icu4x-web-wasm32.mjs.gz
+            packages/plate_text_engine/artifacts/release/plate-text-engine-v0.1.0-abi3-r2/plate-text-engine-icu4x-web-wasm32.wasm.gz
           if-no-files-found: error
 
   collect:
@@ -595,7 +595,7 @@ jobs:
           WORKFLOW_RUN_ATTEMPT: ${{ github.run_attempt }}
         run: |
           set -euo pipefail
-          release_tag=plate-text-engine-v0.1.0-abi3-r1
+          release_tag=plate-text-engine-v0.1.0-abi3-r2
           publication_repository=repotea-workflow/dynamic-actions
           mkdir -p release-bundle/assets release-bundle/metadata upload
           (
@@ -645,7 +645,7 @@ jobs:
       - name: Upload release bundle and assembly metadata
         uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
         with:
-          name: plate-text-engine-v0.1.0-abi3-r1-release-bundle
+          name: plate-text-engine-v0.1.0-abi3-r2-release-bundle
           path: upload
           if-no-files-found: error
 
