@@ -1,5 +1,1 @@
-Verify Unidrv catalogs through WinTrust
-
-Use the existing WinTrust signer/thumbprint gate for signed catalog files instead of relying on PowerShell Get-AuthenticodeSignature object parsing, which returned empty status/thumbprint on Windows Server 2025 CI.
-
-Verified: cargo fmt --check; cargo test -p spoolix-platform-windows-unidrv --test host_oracle_package --locked. Real Windows host administrator@43.118.25.43: run-windows-platform-checks.sh all passed before the patch; after the patch, Unidrv package install/teardown/inventory passed, and windows.unidrv TSPL/CPCL/ESCPOS product route candidate batch plus required gate passed with evidence C:/spoolix-evidence/product-route-windows-unidrv-wintrust-c29c506.json.
+Align desktop runtime profile tests
