@@ -29,7 +29,7 @@ permissions:
 
 jobs:
   build-backend:
-    name: Build v4 Java backend
+    name: "[omsk] Build Backend"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -88,7 +88,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-web:
-    name: Build v4 web
+    name: "[omsk] Build Web"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -147,7 +147,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsj-api:
-    name: Build OMSJ v4 Java backend
+    name: "[omsj] Build API"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -206,7 +206,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsj-web:
-    name: Build OMSJ v4 web
+    name: "[omsj] Build Web"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
@@ -265,7 +265,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsk-babylon:
-    name: Build OMSK Babylon v4 web
+    name: "[omsk] Build Babylon"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}

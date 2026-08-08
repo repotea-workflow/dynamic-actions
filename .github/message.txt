@@ -1,1 +1,1 @@
-fix: simplify babylon upload copy
+ci: clarify dyn workflow job names

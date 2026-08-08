@@ -7,7 +7,7 @@ on:
 
 jobs:
   backend-java:
-    name: Backend Java v4
+    name: "[omsk] Check Backend"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -27,16 +27,16 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: Build v4 Java backend
+      - name: "[omsk] Build Backend"
         run: cd backend/java/omsk-pompeii && ./mvnw -B -DskipTests package
 
-      - name: Check v4 migration wrapper
+      - name: "[omsk] Check Migration Wrapper"
         run: bash -n scripts/v4_migrate.sh
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build v4 Java backend image
+      - name: "[omsk] Build Backend Image"
         uses: docker/build-push-action@v6
         with:
           push: false
@@ -46,7 +46,7 @@ jobs:
           provenance: false
 
   omsk-babylon-web:
-    name: OMSK Babylon v4 web
+    name: "[omsk] Check Babylon"
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v6
@@ -63,13 +63,13 @@ jobs:
       - name: Set up pnpm
         run: corepack enable && corepack prepare pnpm@10.33.2 --activate
 
-      - name: Check v4 Babylon web
+      - name: "[omsk] Check Babylon Web"
         run: cd frontend && pnpm install --frozen-lockfile --filter omsk-babylon... && pnpm --filter omsk-babylon check
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
 
-      - name: Build v4 Babylon web image
+      - name: "[omsk] Build Babylon Image"
         uses: docker/build-push-action@v6
         with:
           push: false
