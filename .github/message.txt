@@ -1,1 +1,1 @@
-Add macOS Desktop virtual printer dev harness
+Stabilize macOS Desktop dev signing setup
