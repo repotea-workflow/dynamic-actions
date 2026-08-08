@@ -1,7 +1,5 @@
-Make Windows IPP product queues submit Print-Job
+Verify Unidrv catalogs through WinTrust
 
-Advertise a Windows-compatible PWG letter raster profile for product IPP queues so the Windows IPP class driver proceeds from attribute probing into Validate-Job and Print-Job. Keep the route runtime normalization responsible for converting the submitted raster into Spoolix label outputs.
+Use the existing WinTrust signer/thumbprint gate for signed catalog files instead of relying on PowerShell Get-AuthenticodeSignature object parsing, which returned empty status/thumbprint on Windows Server 2025 CI.
 
-Also stop advertising Create-Job and Send-Document on the direct product receiver capability surface; staged handling remains internal but Windows should prefer the Print-Job path for the product oracle.
-
-Verified: cargo fmt --check; git diff --check; cargo test -p spoolix-platform-windows-ipp --test host_spike --locked. Real Windows host verification on administrator@43.118.25.43: windows.ipp TSPL/CPCL/ESCPOS two-page product route batch passed, product route evidence gate passed for C:/spoolix-evidence/product-route-windows-ipp-e2e49d2.json, and run-windows-platform-checks.sh windows-routes passed.
+Verified: cargo fmt --check; cargo test -p spoolix-platform-windows-unidrv --test host_oracle_package --locked. Real Windows host administrator@43.118.25.43: run-windows-platform-checks.sh all passed before the patch; after the patch, Unidrv package install/teardown/inventory passed, and windows.unidrv TSPL/CPCL/ESCPOS product route candidate batch plus required gate passed with evidence C:/spoolix-evidence/product-route-windows-unidrv-wintrust-c29c506.json.
