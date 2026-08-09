@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/full-function-provider-fixes
+fix(slack): start status before history gate
