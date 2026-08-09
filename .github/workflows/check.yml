@@ -31,7 +31,7 @@ jobs:
         run: cd backend/java/omsk-pompeii && ./mvnw -B -DskipTests package
 
       - name: "[omsk] Check Migration Wrapper"
-        run: bash -n scripts/v4_migrate.sh
+        run: bash -n scripts/v4_migrate.sh && bash scripts/test_v4_migrate.sh
 
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v3
