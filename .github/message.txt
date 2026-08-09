@@ -1,1 +1,1 @@
-feat(text): add colored binary text rasterization (#150)
+fix(web): download full font for text rasterization
