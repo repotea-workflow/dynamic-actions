@@ -1,3 +1,1 @@
-feat: copy AI job diagnostics
-
-Add a structured clipboard export for AI job detail diagnostics.
+fix: preserve avatar media references
