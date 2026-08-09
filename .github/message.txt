@@ -1,1 +1,3 @@
-fix: preserve aliyun task failure details
+fix: preserve Aliyun task failure details
+
+Preserve Aliyun polling task failure status, code, message, and body summaries on failed AI generation jobs.
