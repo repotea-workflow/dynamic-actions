@@ -1,3 +1,1 @@
-Fix avatar media retention
-
-Maintain avatar media references on profile updates, guard media reclaim against app profile avatar links, and backfill ready avatar references.
+Constrain ready media reclamation
