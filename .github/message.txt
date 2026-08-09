@@ -1,3 +1,1 @@
-fix(editor): prevent interaction preview ghosts (#154)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(text): refresh resize previews promptly
