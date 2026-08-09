@@ -1,1 +1,1 @@
-feat: add AI default prompts (#77)
+fix: align admin AI jobs navigation
