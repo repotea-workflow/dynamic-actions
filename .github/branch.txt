@@ -1,1 +1,1 @@
-agt/ztoms-go-worker
+main
