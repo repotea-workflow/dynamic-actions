@@ -1,1 +1,1 @@
-fix: make ai printer reasons optional
+fix: make ai printer reasons optional (#63)
