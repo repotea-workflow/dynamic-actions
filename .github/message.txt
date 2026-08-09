@@ -1,1 +1,1 @@
-fix(text): keep raster preview stable on release
+fix(text): keep raster preview stable on release (#157)
