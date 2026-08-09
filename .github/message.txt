@@ -1,1 +1,1 @@
-fix(admin): remove AI preview inline styles
+fix(admin): remove AI preview inline styles (#82)
