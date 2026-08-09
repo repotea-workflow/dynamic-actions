@@ -1,1 +1,1 @@
-fix(ci): restore formatting and migration checks
+fix(ai): keep print assets within app limits
