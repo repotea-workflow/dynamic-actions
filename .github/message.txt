@@ -1,1 +1,3 @@
 fix(ai): keep print assets within app limits
+
+Store AI print assets within App print limits, add App-side fallback for existing oversized assets, and restore MySQL migration checksum compatibility.
