@@ -1,1 +1,5 @@
-fix: link ai provider to endpoint
+fix: show AI provider in profile form (#64)
+
+* fix: show ai provider in profile form
+
+* fix: link ai provider to endpoint
