@@ -1,1 +1,1 @@
-feat(slack): report live agent status (#7)
+fix(codeoff): sync thread loading status
