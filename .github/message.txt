@@ -1,1 +1,1 @@
-fix(web): download full font for text rasterization
+test(web): track font download modules
