@@ -1,1 +1,5 @@
-fix(docker): include Codex runtime resources
+fix(codeon): harden provider completion flows
+
+Persist completion authority before provider terminal handling and retain cleanup ownership across restart and continuation paths.
+
+Create pull request requirements at dispatch time and reconcile exact existing bindings without weakening conflict or remote identity checks.
