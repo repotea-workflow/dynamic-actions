@@ -1,1 +1,9 @@
-test(golden): align text baselines
+fix(text): align display and edit baselines (#159)
+
+* fix(text): align display and edit baselines
+
+* test(golden): align text baselines
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
