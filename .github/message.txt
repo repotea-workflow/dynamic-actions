@@ -1,1 +1,1 @@
-feat(api): add AI generation metrics (#81)
+fix(admin): remove AI preview inline styles
