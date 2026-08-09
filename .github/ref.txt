@@ -1,1 +1,1 @@
-gt/ai-default-prompts
+main
