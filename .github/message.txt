@@ -1,1 +1,1 @@
-fix(codeoff): include channel history in threads (#9)
+fix(codex): normalize pull request digest
