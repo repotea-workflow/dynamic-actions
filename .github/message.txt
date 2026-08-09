@@ -1,3 +1,1 @@
-fix: support Wan image generation models
-
-Support wan2.6/wan2.7 image generation request bodies and synchronous provider submission fallback.
+feat: separate AI jobs page
