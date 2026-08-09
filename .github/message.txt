@@ -1,1 +1,1 @@
-fix(macos): reuse signed runtime sidecars
+fix(macos): supervise desktop runtime restart
