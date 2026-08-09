@@ -1,1 +1,1 @@
-Open virtual printer job output folders
+Speed up virtual printer job listing
