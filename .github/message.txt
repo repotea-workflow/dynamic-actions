@@ -1,1 +1,1 @@
-fix: clarify aliyun test network errors (#68)
+fix: align ai connection probe timeout
