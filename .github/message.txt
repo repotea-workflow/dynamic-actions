@@ -1,1 +1,1 @@
-Add opt-in virtual printer output recovery
+feat(macos): configure virtual printer capabilities
