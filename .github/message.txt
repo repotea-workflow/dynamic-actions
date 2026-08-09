@@ -1,1 +1,1 @@
-fix(admin): remove AI preview inline styles (#82)
+fix(ci): restore formatting and migration checks
