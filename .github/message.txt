@@ -1,1 +1,1 @@
-fix(text): stabilize optimized preview state (#158)
+fix(text): align display and edit baselines
