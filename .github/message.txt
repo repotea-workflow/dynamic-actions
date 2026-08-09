@@ -1,3 +1,1 @@
-fix: preserve Aliyun provider error details
-
-Preserve Aliyun provider HTTP status/code/message/body summaries when permanent submission failures are stored on AI generation jobs.
+feat: copy ai job diagnostics
