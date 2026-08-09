@@ -1,1 +1,1 @@
-feat(slack): report live agent status
+feat(slack): report live agent status (#7)
