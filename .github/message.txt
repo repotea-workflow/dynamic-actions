@@ -1,1 +1,1 @@
-fix(text): stabilize raster preview resizing
+build(text): record ABI4 r2 release hashes
