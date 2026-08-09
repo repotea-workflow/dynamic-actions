@@ -1,1 +1,1 @@
-main
+gt/show-ai-task-failure-detail
