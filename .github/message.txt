@@ -1,1 +1,1 @@
-Add desktop virtual printer runtime bootstrap
+Implement desktop macOS virtual printer runtime
