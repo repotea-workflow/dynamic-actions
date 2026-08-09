@@ -1,9 +1,3 @@
-fix(web): download full font for text rasterization (#151)
+perf(text): avoid embedded-font drag stalls
 
-* fix(web): download full font for text rasterization
-
-* test(web): track font download modules
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Keep URL fonts external by default and embed bytes only when explicitly requested for export. Cache the selected SVG and route move deltas through the interaction overlay so large font payloads stay out of the drag loop.
