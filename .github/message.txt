@@ -1,1 +1,3 @@
-fix(slack): start status before history gate
+fix(slack): start status before history gate (#5)
+
+Start assistant status timing before agent invocation while preserving the required-context gate for Slack streaming and protected channel actions.
