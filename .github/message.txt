@@ -1,1 +1,1 @@
-feat: scope omsk risk rules by outlet
+fix: improve risk outlet selector
