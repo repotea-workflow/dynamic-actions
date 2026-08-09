@@ -1,1 +1,1 @@
-fix(macos): supervise desktop runtime restart
+fix(macos): restart debug desktop with marker
