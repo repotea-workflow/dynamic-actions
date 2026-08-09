@@ -1,5 +1,5 @@
-fix(codeon): harden provider completion flows
+fix(docker): install native Codex CLI (#3)
 
-Persist completion authority before provider terminal handling and retain cleanup ownership across restart and continuation paths.
+* fix(docker): install native Codex CLI
 
-Create pull request requirements at dispatch time and reconcile exact existing bindings without weakening conflict or remote identity checks.
+* fix(docker): include Codex runtime resources
