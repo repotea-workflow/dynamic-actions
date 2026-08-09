@@ -1,1 +1,1 @@
-Show recent virtual printer jobs
+Open virtual printer job output folders
