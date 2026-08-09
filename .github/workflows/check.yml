@@ -56,6 +56,9 @@ jobs:
           test "$(codex --version)" = "codex-cli 0.144.6"
 
       - name: Run tests
+        timeout-minutes: 30
+        env:
+          RUST_TEST_THREADS: "1"
         run: cargo test --workspace --locked
 
       - name: Build image binaries
