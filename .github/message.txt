@@ -1,1 +1,1 @@
-fix(codeoff): sync thread loading status
+fix(codeoff): sync thread loading status (#8)
