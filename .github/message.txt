@@ -1,1 +1,1 @@
-fix(codeoff): sync thread loading status (#8)
+fix(codeoff): include channel history in threads
