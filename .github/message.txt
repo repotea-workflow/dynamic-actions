@@ -1,9 +1,1 @@
-fix(text): stabilize raster preview resizing (#153)
-
-* fix(text): stabilize raster preview resizing
-
-* build(text): record ABI4 r2 release hashes
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(editor): prevent interaction preview ghosts
