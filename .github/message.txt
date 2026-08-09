@@ -1,1 +1,3 @@
-chore: move omsj v4 migration to migrate
+feat: make ztoms worker replica safe
+
+Squash merge ztoms worker multi-replica safety and v4 golang-migrate changes.
