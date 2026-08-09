@@ -1,1 +1,3 @@
-fix(slack): show DM feedback before history gate
+fix(slack): show DM feedback before history gate (#6)
+
+Create the DM loading placeholder before agent startup while keeping output observation and protected actions behind required-context evidence.
