@@ -1,1 +1,1 @@
-fix(codex): normalize pull request digest
+fix(codex): validate planning artifacts early
