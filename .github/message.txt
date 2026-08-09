@@ -1,1 +1,1 @@
-Speed up virtual printer job listing
+Add opt-in virtual printer output recovery
