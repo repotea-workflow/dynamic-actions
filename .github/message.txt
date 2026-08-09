@@ -1,1 +1,1 @@
-fix(admin): improve AI job details (#80)
+feat(api): add AI generation metrics
