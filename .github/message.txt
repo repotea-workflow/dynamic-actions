@@ -1,1 +1,1 @@
-feat: add shared ztoms worker
+ci: update worker image in gitops deploy

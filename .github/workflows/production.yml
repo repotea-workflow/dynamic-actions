@@ -422,6 +422,7 @@ jobs:
                 "ztomsV4.images.omsjApi": "${{ needs.build-omsj-api.outputs.uhub_image }}",
                 "ztomsV4.images.omsjWeb": "${{ needs.build-omsj-web.outputs.uhub_image }}",
                 "ztomsV4.images.omskBabylon": "${{ needs.build-omsk-babylon.outputs.uhub_image }}",
+                "ztomsV4.images.worker": "${{ needs.build-worker.outputs.uhub_image }}",
                 "ztomsV4.migration.image": "${{ needs.build-backend.outputs.uhub_image }}"
               }
             }
