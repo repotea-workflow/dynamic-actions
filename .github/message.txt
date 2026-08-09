@@ -1,1 +1,1 @@
-feat(macos): configure virtual printer capabilities
+fix(macos): detect outdated printer runtime
