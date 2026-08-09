@@ -1,3 +1,1 @@
-perf(text): avoid embedded-font drag stalls (#152)
-
-Keep URL-backed fonts external by default and embed bytes only when explicitly requested for export. Cache selected SVG previews and route move deltas through the interaction overlay so large font payloads stay out of the drag loop.
+fix(text): stabilize raster preview resizing
