@@ -26,7 +26,7 @@ jobs:
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@e265ebca9b4a93aaf804be57c2687554dcc49dc7
         with:
           repository: fewensa/codeoo
-          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          token: "${{ secrets.GH_TOKEN_FEWENSA }}"
           ref_file: .github/ref.txt
 
       - name: Verify source revision
