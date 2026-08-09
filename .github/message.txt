@@ -1,1 +1,1 @@
-fix: align admin AI jobs navigation (#78)
+fix: tolerate legacy AI profile payloads
