@@ -1,1 +1,1 @@
-fix(admin): improve AI job details
+fix(admin): improve AI job details (#80)
