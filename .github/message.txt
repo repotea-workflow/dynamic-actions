@@ -1,1 +1,1 @@
-fix(codex): accept bounded large notifications
+fix(codex): require typed phase completion
