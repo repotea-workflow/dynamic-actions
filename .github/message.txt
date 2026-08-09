@@ -1,1 +1,1 @@
-fix(text): align display and edit baselines
+test(golden): align text baselines
