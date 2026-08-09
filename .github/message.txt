@@ -1,1 +1,3 @@
-fix(ci): bound workspace test execution
+Build and deploy unified Codeoo image (#2)
+
+Build Codeoff and Codeon into one runtime image, add dynamic checks, and deploy Codeoff from main through GitOps.
