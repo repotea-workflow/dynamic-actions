@@ -1,1 +1,1 @@
-ci: update worker image in gitops deploy
+feat: make ztoms worker replica safe
