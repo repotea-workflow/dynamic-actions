@@ -1,3 +1,1 @@
-feat(codeoff): require adaptive channel history
-
-Fail interactive channel turns closed until required history coverage completes. Slack history page limits must be between 1 and 100.
+fix(github): avoid repository API redirect
