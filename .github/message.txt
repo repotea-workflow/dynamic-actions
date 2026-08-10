@@ -1,1 +1,3 @@
-test(codeoff): stabilize heartbeat stop check
+fix(execution): unblock merge handoff
+
+Accept the Issue version advanced by Review, hash merge capabilities without capture time, and route recovery-required SCM operations back through the flow controller.
