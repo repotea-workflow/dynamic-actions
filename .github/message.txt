@@ -1,1 +1,1 @@
-feat(templates): add editor fullscreen modes (#88)
+feat(templates): redesign Plate inspector
