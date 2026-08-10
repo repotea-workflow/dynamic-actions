@@ -1,1 +1,1 @@
-test(codeoff): back off completion race (#14)
+fix(grok): compact completion discovery
