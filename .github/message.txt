@@ -1,3 +1,3 @@
-refactor(text): share layout metrics (#161)
+feat(text): add glyph layout snapshots
 
-Use one grapheme-aware layout authority for editor and SVG paths to keep wrapping, heights, and baselines aligned.
+Use stable text-run identities and ABI5 glyph snapshots so committed previews and exports share authoritative native layout. Bound snapshot caching by memory and fingerprint layouts with exact font bytes and artifact identity.
