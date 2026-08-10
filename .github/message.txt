@@ -1,1 +1,1 @@
-fix(grok): stage planning completion resume
+fix(grok): reuse session for continuation
