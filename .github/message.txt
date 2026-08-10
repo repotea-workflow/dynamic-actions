@@ -1,5 +1,3 @@
-test(codeoff): stabilize heartbeat stop check (#12)
+fix(merge): persist provider send outcomes
 
-* test(codeoff): stabilize heartbeat stop check
-
-* fix(slack): satisfy Rust 1.97 clippy
+Execute the database clock expression as a SELECT so accepted merge outcomes can commit instead of rolling back after the GitHub mutation.
