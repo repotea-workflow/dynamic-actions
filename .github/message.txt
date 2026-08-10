@@ -1,1 +1,1 @@
-Fix feedback MySQL rollback index
+feat(templates): add editor fullscreen modes
