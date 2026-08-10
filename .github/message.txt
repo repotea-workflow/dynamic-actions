@@ -1,1 +1,1 @@
-fix(worker): parse trace auth snake case
+feat(worker): cap trace push batch
