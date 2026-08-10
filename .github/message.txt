@@ -1,1 +1,3 @@
-fix(grok): reuse session for continuation
+fix(codeoff): bound required context callback
+
+Return whole-message partial history with explicit replay metadata when the Codex callback limit is reached, so required context remains usable instead of failing transport serialization.
