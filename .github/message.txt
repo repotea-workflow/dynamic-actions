@@ -1,1 +1,1 @@
-fix(persistence): accept task requirement reports
+fix(publication): load repository identity
