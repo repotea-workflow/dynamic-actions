@@ -1,1 +1,1 @@
-ci: build staging image directly
+ci: build staging image directly (#15)
