@@ -1,1 +1,1 @@
-feat(templates): redesign Plate inspector
+feat(templates): redesign Plate inspector (#89)
