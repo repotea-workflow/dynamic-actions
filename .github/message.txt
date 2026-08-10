@@ -1,1 +1,1 @@
-fix(landing): ignore bot-only feedback
+fix(grok): retain pending prompt response
