@@ -1,1 +1,1 @@
-fix(codeoff): handle Slack file and edit events (#11)
+test(codeoff): stabilize heartbeat stop check
