@@ -1,1 +1,1 @@
-test(text): expect ABI 5 in clean hook
+test(text): reuse artifact ABI constant
