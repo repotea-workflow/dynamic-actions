@@ -1,3 +1,1 @@
-fix(templates): restore editor interaction
-
-Clear stale Plate-scoped Flutter service workers before the iframe loads so cached bridge assets cannot leave the editor frozen. Fail open after a bounded cleanup delay.
+fix(templates): restore editor interaction (#86)
