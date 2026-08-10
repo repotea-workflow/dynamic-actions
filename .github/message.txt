@@ -1,1 +1,3 @@
-fix(codeoff): restore required context budget
+fix(codeoff): dispatch user proxy handoffs
+
+Preserve durable Codeoff ownership and deduplicate Slack message and app_mention echoes for represented-user handoffs.
