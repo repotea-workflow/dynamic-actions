@@ -1,1 +1,1 @@
-fix(grok): keep continuation prompts compact
+test(codeoff): back off completion race (#14)
