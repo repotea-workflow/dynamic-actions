@@ -1,1 +1,1 @@
-fix(templates): restore editor interaction (#86)
+Fix feedback MySQL rollback index
