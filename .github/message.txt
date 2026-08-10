@@ -1,1 +1,1 @@
-fix(agent): bound direct tool response content
+chore(runtime): satisfy strict workspace lint
