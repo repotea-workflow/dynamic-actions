@@ -1,1 +1,1 @@
-feat(editor): add common barcode formats
+feat(host): expose render and image APIs
