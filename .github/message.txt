@@ -1,1 +1,1 @@
-fix(grok): complete discovery continuations
+fix(slack): read context without channel scan
