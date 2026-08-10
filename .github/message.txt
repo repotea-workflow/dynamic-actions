@@ -1,1 +1,1 @@
-fix(admin): guard Plate navigation once
+fix(admin): bind Plate route allowance
