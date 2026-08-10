@@ -1,1 +1,1 @@
-fix(worker): keep trace push failure reason
+fix(worker): make trace archive idempotent
