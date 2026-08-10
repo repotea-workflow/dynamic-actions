@@ -1,1 +1,1 @@
-fix(codeon): gate picker on admission runtime
+fix(codeon): seal landing and merge authority
