@@ -1,1 +1,1 @@
-fix(grok): bound completion payloads
+fix(grok): reserve completion turn
