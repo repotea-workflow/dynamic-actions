@@ -1,1 +1,1 @@
-fix(slack): read context without channel scan
+fix(slack): read context without channel scan (#16)
