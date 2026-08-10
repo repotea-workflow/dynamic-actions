@@ -1,1 +1,1 @@
-fix(grok): require explicit prompt terminal
+feat(codeoff): expand Slack channel context (#13)
