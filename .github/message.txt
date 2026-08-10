@@ -1,1 +1,3 @@
-fix(grok): restart exited continuations
+fix(grok): retain child creator thread
+
+Grok uses a parent-death signal, so spawning it from a retiring Tokio blocking worker terminates healthy prompts. Keep the creator thread alive until lifecycle shutdown.
