@@ -1,1 +1,1 @@
-fix(admin): bind Plate route allowance
+feat(templates): integrate Plate editor host (#85)
