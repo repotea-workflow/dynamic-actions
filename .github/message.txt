@@ -1,1 +1,1 @@
-fix(grok): call completion after discovery
+fix(grok): complete discovery continuations
