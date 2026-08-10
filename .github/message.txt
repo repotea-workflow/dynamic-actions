@@ -1,1 +1,3 @@
-ci(codeoff): retrigger staging deployment (#20)
+fix(codex): keep runtime threads ephemeral
+
+Avoid materializing Codeon-owned agent threads in the Codex task list. Reject thread startup when App Server does not honor the requested ephemeral mode.
