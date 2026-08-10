@@ -1,1 +1,3 @@
-fix(grok): require planning coverage
+feat(codeoff): add user mention handoff
+
+Require server-bound reply decisions for proxied Slack users and persist Codeoff thread ownership across handoff delivery.\n\nAdd the handoff state migration while preserving legacy mention and optional user-sender configuration behavior.
