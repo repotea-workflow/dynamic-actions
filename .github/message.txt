@@ -1,1 +1,9 @@
-test(text): reuse artifact ABI constant
+test(text): align clean hook with ABI 5 (#163)
+
+* test(text): expect ABI 5 in clean hook
+
+* test(text): reuse artifact ABI constant
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
