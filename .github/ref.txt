@@ -1,1 +1,1 @@
-agt/barcode-symbology-selector
+main
