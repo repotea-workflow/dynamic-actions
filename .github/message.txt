@@ -1,3 +1,3 @@
-fix(codeoff): bound required context callback
+fix(codeoff): bound required context callback (#17)
 
-Return whole-message partial history with explicit replay metadata when the Codex callback limit is reached, so required context remains usable instead of failing transport serialization.
+Prevent oversized required-history callbacks from failing after evidence is recorded. Return whole-message partial snapshots with explicit coverage and replay metadata at the Codex adapter boundary.
