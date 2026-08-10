@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/plate-layout-integration
+fix(templates): isolate Plate editor
+
+Run the Flutter host in an opaque-origin sandbox and expose only the validated postMessage bridge. Preserve guarded browser history and freeze the editor during sign-out. Lock Flutter dependencies for reproducible CI builds.

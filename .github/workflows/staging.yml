@@ -150,7 +150,7 @@ jobs:
         working-directory: apps/plate_editor_host
         run: |
           printf 'dependency_overrides:\n  plate_editor_support:\n    path: ../../vendor/plate/packages/plate_editor_support\n' > pubspec_overrides.yaml
-          flutter pub get
+          flutter pub get --enforce-lockfile
           flutter analyze --no-pub
           flutter test --no-pub
           flutter build web \
