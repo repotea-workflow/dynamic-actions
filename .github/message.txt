@@ -1,1 +1,1 @@
-feat(templates): improve editor image controls
+feat(templates): improve editor image controls (#90)
