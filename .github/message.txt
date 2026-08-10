@@ -1,5 +1,3 @@
-fix(codeon): align direct tool budget and seal landing decisions
+fix(codeon): bind landing prior evidence
 
-Direct adapter and Codeoff required-context now share the authoritative 256 KiB dynamic tool budget, with boundary evidence at 64 KiB+1 and 256 KiB +/- 1.
-
-Landing Preflight decision checkpoints durably persist the sealed input and artifact (migration 0082); review-invalidated and repair-required terminals finalize atomically and hand off to a Review operation instead of entering recovery. Migration acceptance tracks the new latest version.
+Rebuild tokenless passed decisions from the preceding durable observation under the checkpoint lock. Reject caller-supplied history before any observation or phase mutation.
