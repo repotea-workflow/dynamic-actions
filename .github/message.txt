@@ -1,3 +1,3 @@
-feat(text): add glyph layout snapshots
+feat(text): add glyph layout snapshots (#162)
 
-Use stable text-run identities and ABI5 glyph snapshots so committed previews and exports share authoritative native layout. Bound snapshot caching by memory and fingerprint layouts with exact font bytes and artifact identity.
+Add stable text-run identities and ABI5 authoritative glyph layout snapshots for committed preview and export. Bound cache memory, fingerprint exact font inputs, and prepare the abi5-r1 release workflow.
