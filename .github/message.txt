@@ -1,3 +1,3 @@
 feat(templates): connect shared editor assets
 
-Expose versioned font and icon catalogs to the Admin Plate host and Flutter app. Add snapshot migrations so paginated catalogs remain consistent across updates.\n\nRetain published asset versions and validate checksums so historical templates cannot silently render replacement content. Replace the mobile Plate shell with Gprinter-owned touch UI.
+Expose versioned font and icon catalogs to the Admin Plate host and Flutter app. Add the Gprinter-owned mobile editor shell, immutable catalog asset delivery, and cross-database snapshot migrations.
