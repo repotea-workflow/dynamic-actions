@@ -1,3 +1,1 @@
-feat(text): add glyph layout snapshots (#162)
-
-Add stable text-run identities and ABI5 authoritative glyph layout snapshots for committed preview and export. Bound cache memory, fingerprint exact font inputs, and prepare the abi5-r1 release workflow.
+test(text): expect ABI 5 in clean hook
