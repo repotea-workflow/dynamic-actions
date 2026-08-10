@@ -1,1 +1,1 @@
-feat(templates): improve editor image controls (#90)
+feat(templates): support barcode symbologies
