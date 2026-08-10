@@ -1,1 +1,1 @@
-fix(codex): align completion evidence limits
+fix(persistence): accept task requirement reports
