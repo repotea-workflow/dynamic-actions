@@ -1,1 +1,1 @@
-fix(worker): preserve trace archive indexes
+chore(ci): rename omsk cusco build job

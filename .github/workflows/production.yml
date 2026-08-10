@@ -88,7 +88,7 @@ jobs:
             ${{ steps.tags.outputs.uhub_sha }}
 
   build-web:
-    name: "[omsk] Build Web"
+    name: "[omsk] Build Cusco"
     runs-on: ubuntu-latest
     outputs:
       ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
