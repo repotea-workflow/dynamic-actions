@@ -1,1 +1,1 @@
-fix(publication): load repository identity
+fix(publication): emit canonical review handoff
