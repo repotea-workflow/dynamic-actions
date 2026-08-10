@@ -1,1 +1,1 @@
-main
+agt/template-font-icon-catalog
