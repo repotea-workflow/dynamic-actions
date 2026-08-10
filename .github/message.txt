@@ -1,1 +1,1 @@
-fix(grok): bound planning artifacts
+fix(grok): constrain planning payload
