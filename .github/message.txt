@@ -1,1 +1,1 @@
-feat(templates): add editor fullscreen modes
+feat(templates): add editor fullscreen modes (#88)
