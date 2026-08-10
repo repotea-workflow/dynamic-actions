@@ -1,1 +1,1 @@
-fix(grok): bound continuation prompts
+fix(grok): call completion tool directly
