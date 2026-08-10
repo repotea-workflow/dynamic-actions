@@ -1,1 +1,5 @@
-fix(slack): satisfy Rust 1.97 clippy
+test(codeoff): stabilize heartbeat stop check (#12)
+
+* test(codeoff): stabilize heartbeat stop check
+
+* fix(slack): satisfy Rust 1.97 clippy
