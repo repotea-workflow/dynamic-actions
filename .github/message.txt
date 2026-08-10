@@ -1,1 +1,1 @@
-ci: build staging image directly (#15)
+fix(grok): bound completion payloads
