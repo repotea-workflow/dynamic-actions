@@ -1,1 +1,1 @@
-feat(worker): cap trace push batch
+fix(worker): match java trace payload order
