@@ -11,7 +11,7 @@ env:
   DOCKER_NAMESPACE_ALI: coohub
   PLATE_ALLOWED_PARENT_ORIGIN: https://gprinter-stg.taiok.life
   PLATE_EDITOR_HOST_PATH: apps/admin/public/plate-editor
-  PLATE_REF: dea348cb01d8cae0c392d91748dac84d74dc750e
+  PLATE_REF: 7878039a7b686dcb1d61ecd902e1a32d11c5a715
   PLATE_REPOSITORY: boxliy/plate
 
 permissions:
@@ -146,11 +146,15 @@ jobs:
           channel: stable
           cache: true
 
-      - name: Build Plate editor host
-        working-directory: vendor/plate/apps/plate-editor-host
+      - name: Build Gprinter Plate editor host
+        working-directory: apps/plate_editor_host
         run: |
+          printf 'dependency_overrides:\n  plate_editor_support:\n    path: ../../vendor/plate/packages/plate_editor_support\n' > pubspec_overrides.yaml
           flutter pub get
+          flutter analyze --no-pub
+          flutter test --no-pub
           flutter build web \
+            --no-pub \
             --release \
             --base-href /plate-editor/ \
             --dart-define=PLATE_ALLOWED_PARENT_ORIGIN=${PLATE_ALLOWED_PARENT_ORIGIN}
@@ -158,7 +162,7 @@ jobs:
       - name: Install Plate editor host into admin static assets
         run: |
           mkdir -p "${PLATE_EDITOR_HOST_PATH}"
-          cp -R vendor/plate/apps/plate-editor-host/build/web/. "${PLATE_EDITOR_HOST_PATH}/"
+          cp -R apps/plate_editor_host/build/web/. "${PLATE_EDITOR_HOST_PATH}/"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
