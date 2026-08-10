@@ -1,3 +1,1 @@
-fix(execution): unblock merge handoff
-
-Accept the Issue version advanced by Review, hash merge capabilities without capture time, and route recovery-required SCM operations back through the flow controller.
+fix(slack): satisfy Rust 1.97 clippy
