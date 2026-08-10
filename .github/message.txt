@@ -1,3 +1,3 @@
-fix(merge): persist provider send outcomes
+feat(codeoff): expand Slack channel context
 
-Execute the database clock expression as a SELECT so accepted merge outcomes can commit instead of rolling back after the GitHub mutation.
+Load complete threads attached to selected channel history roots and mark top-level channel messages read with a configurable eye reaction.
