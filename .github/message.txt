@@ -1,1 +1,3 @@
-fix(grok): retain pending prompt response
+fix(codeoff): bound required context delivery
+
+Chunk channel history within Codex content limits and reject invalid callback content before required-tool evidence. Keep historical thread expansion fail-closed under bounded memory.
