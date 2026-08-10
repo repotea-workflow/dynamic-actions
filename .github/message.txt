@@ -1,1 +1,1 @@
-chore(ci): rename omsk cusco build job
+feat(omsk): add async declaration exports
