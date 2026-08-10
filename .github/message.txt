@@ -1,1 +1,1 @@
-fix(grok): rediscover tools on resume
+fix(grok): call completion after discovery
