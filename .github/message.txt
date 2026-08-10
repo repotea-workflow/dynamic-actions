@@ -1,1 +1,3 @@
-fix(omsk): enforce order blacklist coverage
+fix(omsk): enforce ordinary order blacklist coverage
+
+Ensure ordinary order blacklist checks cover partner compatible create and both receiver contact fields.
