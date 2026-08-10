@@ -1,3 +1,3 @@
-feat(codeoff): add user mention handoff
+feat(codeoff): add user mention handoff (#18)
 
-Require server-bound reply decisions for proxied Slack users and persist Codeoff thread ownership across handoff delivery.\n\nAdd the handoff state migration while preserving legacy mention and optional user-sender configuration behavior.
+Require server-bound reply decisions for proxied Slack users and persist Codeoff thread ownership across handoff delivery. Preserve legacy mention and optional user-sender configuration behavior.
