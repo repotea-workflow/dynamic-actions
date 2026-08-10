@@ -1,3 +1,3 @@
-fix(text): align display baseline with editor (#160)
+refactor(text): share layout metrics
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use one grapheme-aware layout authority for editor and SVG paths to keep wrapping, heights, and baselines aligned.
