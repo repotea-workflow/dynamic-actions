@@ -1,1 +1,1 @@
-fix(grok): compact completion discovery
+fix(grok): front-load completion discovery
