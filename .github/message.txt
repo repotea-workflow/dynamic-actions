@@ -1,1 +1,1 @@
-fix(grok): ignore prompt round responses
+fix(grok): bound continuation prompts
