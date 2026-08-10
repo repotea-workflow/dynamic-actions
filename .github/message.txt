@@ -1,1 +1,1 @@
-fix(worker): back off failed task claims
+fix(omsk): enforce order blacklist coverage
