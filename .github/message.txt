@@ -1,3 +1,3 @@
-fix(editor): align previews and drag foregrounds (#167)
+feat(theme): add independent editor theme mode (#166)
 
-Share font metrics across preview and edit paths, and keep selected image, SVG, and table foregrounds synchronized with interaction chrome.
+Allow editor chrome to use follow, light, or dark independently from the surrounding shell while preserving custom handle themes and export data.
