@@ -1,3 +1,1 @@
-feat(printer): add A4 Bluetooth printing (#94)
-
-Add A4-only printer selection, NIB Bluetooth discovery and connection lifecycle, test printing, localized failures, and regression coverage.
+feat(printer): add A4 Bluetooth printing
