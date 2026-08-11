@@ -1,3 +1,1 @@
-fix(templates): separate emoji from shapes
-
-Migrate catalog icon assets to Plate emoji elements while preserving legacy templates, local assets, preview, and print behavior.
+fix(templates): separate emoji from shapes (#95)
