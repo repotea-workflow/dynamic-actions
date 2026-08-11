@@ -1,1 +1,1 @@
-fix(omsk): repair declaration export dropdown
+fix(omsk): repair exports and search pagination
