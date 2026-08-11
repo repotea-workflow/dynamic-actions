@@ -1,3 +1,1 @@
-feat(codeoff): harden channel thread turns (#29)
-
-Enforce durable channel completion evidence, bounded Thread batching, source-aware replies, and prompt cancellation without blocking unrelated provider turns.\n\nAdd SQLite migrations for obligation-scoped actions, ordered source events, and approval bindings. Existing unconsumed legacy approvals are retired during upgrade.
+fix(codeoff): make serve readiness lock-safe
