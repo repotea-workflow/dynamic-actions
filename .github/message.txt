@@ -1,1 +1,3 @@
-fix(codeoff): preserve proxy thread ownership (#22)
+fix(codeoff): dispatch Slack handoffs
+
+- enqueue delivered handoffs without relying on Slack echoes\n- bind read reactions to the active bot or user identity
