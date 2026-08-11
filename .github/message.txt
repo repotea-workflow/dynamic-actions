@@ -1,1 +1,5 @@
-fix(templates): stabilize resource editor (#100)
+feat(devices): classify A4 device models
+
+Add device_type catalog field; A4-only public catalog and app selection.
+Keep legacy models nullable until classified; backfill known A4 models.
+Width/DPI remain print-capability checks only.
