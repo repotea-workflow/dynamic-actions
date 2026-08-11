@@ -1,1 +1,1 @@
-fix(omsk): scope task center by outlets
+feat(omsk): export ident images as zip
