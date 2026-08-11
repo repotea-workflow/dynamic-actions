@@ -1,1 +1,1 @@
-feat(emoji): add image inspector controls (#176)
+feat(example): demonstrate image emoji flow
