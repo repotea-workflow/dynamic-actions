@@ -1,1 +1,1 @@
-fix(templates): separate emoji from shapes (#95)
+feat(templates): refine Plate editor controls
