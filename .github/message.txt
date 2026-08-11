@@ -1,3 +1,1 @@
-fix(editor): eliminate drag preview ghosting (#170)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(emoji): add configurable image catalog
