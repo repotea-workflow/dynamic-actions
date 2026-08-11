@@ -1,1 +1,1 @@
-feat: complete device-bound learning print pipeline (#108)
+fix(mobile): preserve template create idempotency
