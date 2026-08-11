@@ -1,1 +1,3 @@
-fix(editor): keep drag guides in sync
+fix(editor): keep drag guides in sync (#178)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
