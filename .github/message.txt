@@ -1,1 +1,1 @@
-fix(codeoff): make serve readiness lock-safe
+fix(codeoff): accept readiness media parameters
