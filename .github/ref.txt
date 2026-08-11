@@ -1,1 +1,1 @@
-agt/update-plate-latest
+agt/mobile-plate-print-nib

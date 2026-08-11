@@ -1,5 +1,1 @@
-chore(mobile): update Plate dependency to latest
-
-Bump plate_editor_flutter / plate_editor_support / plate_schema_dart refs
-from 6f47d019 to 897166f7 and refresh pubspec.lock. Includes image
-emoji schema support, export paper-frame crop, and editor fixes.
+feat(mobile): refine A4 editing and NIB printing
