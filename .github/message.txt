@@ -1,1 +1,3 @@
-fix(codeoff): report schedule executions (#26)
+feat(codeoff): enforce channel turn contract
+
+Persist required context, turn plans, evidence, responses, completion, and provider-neutral action claims so interactive channel work cannot bypass required tools or replay uncertain side effects.\n\nAdd SQLite migrations for turn contracts, evidence, approvals, finalization fences, and generic action executions.
