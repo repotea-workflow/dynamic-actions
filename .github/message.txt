@@ -1,4 +1,4 @@
-chore(mobile): update Plate dependency to latest
+chore(mobile): update Plate dependency to latest (#98)
 
 Bump plate_editor_flutter / plate_editor_support / plate_schema_dart refs
 from 6f47d019 to 897166f7 and refresh pubspec.lock. Includes image
