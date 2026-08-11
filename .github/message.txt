@@ -1,3 +1,1 @@
-feat(templates): connect shared editor assets
-
-Expose versioned font and icon catalogs to the Admin Plate host and Flutter app. Add the Gprinter-owned mobile editor shell, immutable catalog asset delivery, and cross-database snapshot migrations.
+feat(printer): add A4 Bluetooth printing
