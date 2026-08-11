@@ -1,1 +1,1 @@
-feat(example): demonstrate image emoji flow
+feat(example): demonstrate image emoji flow (#177)
