@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/feature-panel-layout
+feat(editor): add feature panel layout modes (#173)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
