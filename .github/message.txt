@@ -1,1 +1,5 @@
-fix(codeoff): accept readiness media parameters
+fix(codeoff): make serve readiness lock-safe (#30)
+
+* fix(codeoff): make serve readiness lock-safe
+
+* fix(codeoff): accept readiness media parameters
