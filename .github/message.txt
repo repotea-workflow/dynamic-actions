@@ -1,3 +1,1 @@
-feat(codeoff): enforce channel turn contract (#27)
-
-Persist required context, turn plans, evidence, completion, approvals, and provider-neutral mutation claims for interactive channel turns.
+fix(codeoff): clear status after reply
