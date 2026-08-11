@@ -1,1 +1,1 @@
-feat(mobile): refine A4 editing and NIB printing
+feat(mobile): refine A4 editing and NIB printing (#99)
