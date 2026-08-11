@@ -1,1 +1,1 @@
-fix(omsk): show ident export password prompt
+fix(omsk): render ident export password dialog
