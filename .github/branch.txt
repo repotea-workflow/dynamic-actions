@@ -1,1 +1,1 @@
-agt/device-model-type-a4
+agt/template-resource-columns
