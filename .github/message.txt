@@ -1,1 +1,1 @@
-fix(templates): refine resource table and handles
+fix(templates): refine resource table and handles (#102)
