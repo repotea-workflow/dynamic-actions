@@ -1,1 +1,1 @@
-feat(emoji): add image inspector controls
+feat(emoji): add image inspector controls (#176)
