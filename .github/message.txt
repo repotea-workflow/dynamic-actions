@@ -1,1 +1,3 @@
-test(editor): fix const lint warnings
+test(editor): fix const lint warnings (#179)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
