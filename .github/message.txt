@@ -1,1 +1,1 @@
-feat(omsk): export ident images as zip
+fix(omsk): show ident export password prompt
