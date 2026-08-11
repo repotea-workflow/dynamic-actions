@@ -1,1 +1,1 @@
-feat(emoji): add image entry commands
+feat(emoji): add image entry commands (#172)
