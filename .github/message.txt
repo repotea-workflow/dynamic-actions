@@ -1,1 +1,1 @@
-fix(text): preserve preview wrap points (#184)
+fix(text): align inline edit wrapping
