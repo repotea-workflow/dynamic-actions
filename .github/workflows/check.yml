@@ -11,7 +11,7 @@ permissions:
 env:
   PLATE_ALLOWED_PARENT_ORIGIN: https://gprinter-stg.taiok.life
   PLATE_EDITOR_HOST_PATH: apps/admin/public/plate-editor
-  PLATE_REF: 6f47d019c8229aa05c37976fe8cd7ca1a7bf32a5
+  PLATE_REF: 5e3342b8151f1823fa4d9d20eead05ccb38e8f4f
   PLATE_REPOSITORY: boxliy/plate
 
 jobs:
