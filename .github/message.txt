@@ -1,1 +1,1 @@
-feat(emoji): render image-backed entries
+feat(emoji): render image-backed entries (#174)
