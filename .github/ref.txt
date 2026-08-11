@@ -1,1 +1,1 @@
-agt/template-resource-table-layout
+main
