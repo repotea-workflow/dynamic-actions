@@ -1,1 +1,1 @@
-fix(ci): correct Plate revision (#107)
+fix(learning): enforce managed print assets
