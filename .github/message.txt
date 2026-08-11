@@ -1,1 +1,1 @@
-fix(ci): expect text engine ABI 5
+test(ci): align stale export baselines
