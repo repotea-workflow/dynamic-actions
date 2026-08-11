@@ -1,3 +1,1 @@
-fix(codeoff): preserve proxy thread ownership
-
-Persist the represented Slack identity until an explicit handoff.\n\nOnly durable handoff echoes bypass self-event suppression, and identity\nchanges start a fresh Agent session.
+fix(codeoff): preserve proxy thread ownership (#22)
