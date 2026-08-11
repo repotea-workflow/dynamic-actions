@@ -1,1 +1,5 @@
-fix(text): guard preview error cleanup race
+test(example): include raster worker and metrics in module inventory
+
+The text rasterization scenario now ships a web worker proxy and timing
+metric stubs/web files under lib; the boundary guard's explicit module
+inventory must list them.
