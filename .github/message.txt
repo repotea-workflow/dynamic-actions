@@ -1,1 +1,1 @@
-fix(codeoff): reject scheduler milliseconds
+fix(codeoff): reject scheduler milliseconds (#25)
