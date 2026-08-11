@@ -1,1 +1,3 @@
 fix(templates): use Plate document state token
+
+Replace JSON dirty tracking with Plate documentStateToken and preserve save-time edit races.
