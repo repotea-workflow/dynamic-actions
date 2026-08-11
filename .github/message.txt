@@ -1,3 +1,1 @@
-fix(export): crop output to paper frame
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(schema): support image emoji content
