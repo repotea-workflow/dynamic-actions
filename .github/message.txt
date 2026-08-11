@@ -1,3 +1,1 @@
-feat(editor): track document state
-
-Bind opaque state tokens to undo history and preserve token identity across live transforms. Coalesce inline text editing into one undo entry while keeping per-edit dirty detection.
+fix(editor): sync raster rotation preview (#187)
