@@ -1,1 +1,1 @@
-fix(example): restore app boundary checks
+fix(example): isolate browser route API
