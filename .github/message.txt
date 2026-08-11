@@ -1,1 +1,1 @@
-feat(schema): support image emoji content (#169)
+fix(editor): eliminate drag preview ghosting
