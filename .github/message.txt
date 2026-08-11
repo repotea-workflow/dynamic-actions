@@ -1,1 +1,1 @@
-fix(codeoff): harden scheduler runtime
+test(codeoff): update default config fixture
