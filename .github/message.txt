@@ -1,1 +1,1 @@
-feat(templates): complete starter designs
+feat(templates): complete starter designs (#105)
