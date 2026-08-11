@@ -1,1 +1,1 @@
-feat(templates): complete starter designs (#105)
+fix(ci): align Plate build revision
