@@ -1,1 +1,1 @@
-fix(omsk): repair declaration export dropdowns (#268)
+fix(omsk): replace declaration export menus
