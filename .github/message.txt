@@ -1,1 +1,1 @@
-feat(omsk): add async declaration exports (#264)
+fix(omsk): repair declaration export dropdown
