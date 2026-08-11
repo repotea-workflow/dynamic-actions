@@ -1,3 +1,3 @@
-fix(codeon): bind landing prior evidence
+fix(codeoff): preserve proxy thread ownership
 
-Rebuild tokenless passed decisions from the preceding durable observation under the checkpoint lock. Reject caller-supplied history before any observation or phase mutation.
+Persist the represented Slack identity until an explicit handoff.\n\nOnly durable handoff echoes bypass self-event suppression, and identity\nchanges start a fresh Agent session.
