@@ -1,1 +1,1 @@
-feat(templates): add designs and previews
+feat(templates): add designs and generated previews (#103)
