@@ -1,1 +1,1 @@
-fix(omsk): add task audit columns (#267)
+fix(omsk): repair declaration export dropdowns
