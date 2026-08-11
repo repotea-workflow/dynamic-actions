@@ -1,1 +1,1 @@
-feat(example): demonstrate image emoji flow (#177)
+fix(editor): keep drag guides in sync
