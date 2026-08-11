@@ -1,1 +1,1 @@
-feat(templates): redesign resource catalog
+feat(templates): redesign resource catalog (#97)
