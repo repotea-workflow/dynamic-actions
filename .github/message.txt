@@ -1,1 +1,1 @@
-feat(emoji): add configurable image catalog (#171)
+feat(emoji): add image entry commands
