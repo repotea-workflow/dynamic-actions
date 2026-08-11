@@ -1,1 +1,1 @@
-feat(emoji): render image-backed entries (#174)
+fix(editor): stabilize overlay lifecycle
