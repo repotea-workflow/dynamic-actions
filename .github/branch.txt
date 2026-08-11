@@ -1,1 +1,1 @@
-main
+agt/template-all-starters
