@@ -1,1 +1,3 @@
-fix(codeon): preserve review candidate lineage
+fix(codeon): stabilize operation timeout
+
+Use the frozen policy deadline from running_at and allow long Grok operations a bounded 30-minute execution window.
