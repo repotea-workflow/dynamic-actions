@@ -1,1 +1,41 @@
-fix(example): isolate browser route API
+perf(text): move web rasterization off main thread (#183)
+
+* perf(text): move web rasterization off main thread
+
+* fix(ci): drop committed text engine source-build hooks
+
+CI appends hooks.user_defines.plate_text_engine itself before running
+checks; committing the same block created a duplicate YAML mapping key
+and broke pub get.
+
+* fix(text): debounce prewarm and surface preview errors
+
+- Deactivate pending prewarm work when the renderer binding is replaced.
+- Debounce prewarm by 150 ms and skip stale revisions so rapid edits do
+  not rasterize throwaway frames.
+- Report committed-preview optimization failures through the config so
+  hosts can stop live timers and show the error.
+- Fall back to the main-thread engine if the Worker cannot initialize.
+- Reuse hooks configuration from CI instead of committing it.
+
+* fix(ci): expect text engine ABI 5
+
+* test(ci): align stale export baselines
+
+* fix(text): keep export errors through preview retry
+
+* fix(text): guard preview error cleanup race
+
+* test(example): include raster worker and metrics in module inventory
+
+The text rasterization scenario now ships a web worker proxy and timing
+metric stubs/web files under lib; the boundary guard's explicit module
+inventory must list them.
+
+* fix(example): restore app boundary checks
+
+* fix(example): isolate browser route API
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
