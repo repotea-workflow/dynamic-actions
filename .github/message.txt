@@ -1,3 +1,1 @@
-feat(editor): track document state (#188)
-
-Bind opaque state tokens to undo history, preserve token identity across live transforms, and coalesce inline text edits while retaining per-edit dirty detection.
+fix(text): keep debug rasterization in worker

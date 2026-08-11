@@ -109,6 +109,10 @@ jobs:
         working-directory: packages/plate_editor_support
         run: flutter test --platform chrome test/plate_png_export_web_test.dart
 
+      - name: Verify debug Worker message arrays
+        working-directory: apps/plate_web_example
+        run: flutter test --platform chrome test/text_rasterization_engine_worker_web_test.dart
+
   static:
     name: Text Engine - Static Packaging
     needs: source
