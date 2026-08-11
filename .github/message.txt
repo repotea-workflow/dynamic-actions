@@ -1,3 +1,1 @@
-fix(editor): align previews and drag foregrounds
-
-Share example font metrics across editor paths and keep selected image, table, and SVG foregrounds synchronized with interaction chrome.
+feat(theme): add independent editor theme mode
