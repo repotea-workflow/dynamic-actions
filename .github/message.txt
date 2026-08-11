@@ -1,3 +1,1 @@
-fix(text): align inline edit wrapping (#185)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+test(text): cover inline wrap wiring
