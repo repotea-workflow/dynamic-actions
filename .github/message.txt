@@ -1,1 +1,9 @@
-perf(text): move web rasterization off main thread
+fix(text): debounce prewarm and surface preview errors
+
+- Deactivate pending prewarm work when the renderer binding is replaced.
+- Debounce prewarm by 150 ms and skip stale revisions so rapid edits do
+  not rasterize throwaway frames.
+- Report committed-preview optimization failures through the config so
+  hosts can stop live timers and show the error.
+- Fall back to the main-thread engine if the Worker cannot initialize.
+- Reuse hooks configuration from CI instead of committing it.
