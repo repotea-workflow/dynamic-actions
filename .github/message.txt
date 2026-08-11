@@ -1,1 +1,1 @@
-fix(codeoff): reject scheduler milliseconds (#25)
+fix(codeoff): report schedule executions
