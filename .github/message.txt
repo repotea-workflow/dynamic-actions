@@ -1,3 +1,1 @@
-fix(codeoff): dispatch Slack handoffs (#23)
-
-- enqueue delivered handoffs without relying on Slack echoes\n- bind read reactions to the active bot or user identity
+fix(codeoff): harden scheduler runtime
