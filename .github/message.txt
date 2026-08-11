@@ -1,7 +1,1 @@
-fix(codeon): align existing PR review candidate to revision head
-
-After a revision operation advances the PR head, the existing-PR review
-candidate preparation compared the fetched head against the attempt base
-commit, always failing with AgentExecutionBindingUnavailable. Compare
-against the previous revision's resulting head when a revision handoff
-artifact exists, falling back to the base commit otherwise.
+fix(codeon): preserve review candidate lineage
