@@ -1,4 +1,4 @@
-feat(devices): classify A4 device models
+feat(devices): classify A4 device models (#101)
 
 Add device_type catalog field; A4-only public catalog and app selection.
 Keep legacy models nullable until classified; backfill known A4 models.

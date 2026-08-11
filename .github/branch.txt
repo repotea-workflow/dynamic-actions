@@ -1,1 +1,1 @@
-agt/device-model-type-a4
+main
