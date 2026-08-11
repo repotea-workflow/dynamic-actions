@@ -1,1 +1,1 @@
-fix(ci): align Plate build revision (#106)
+fix(ci): correct Plate revision

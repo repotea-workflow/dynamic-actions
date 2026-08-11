@@ -11,7 +11,7 @@ env:
   DOCKER_NAMESPACE_ALI: coohub
   PLATE_ALLOWED_PARENT_ORIGIN: https://gprinter-stg.taiok.life
   PLATE_EDITOR_HOST_PATH: apps/admin/public/plate-editor
-  PLATE_REF: 4b6da96ad3b34364d12609b5250119eb374c5794
+  PLATE_REF: 4b6da969f3493d725ed03519d0c7646361f40ee0
   PLATE_REPOSITORY: boxliy/plate
 
 permissions:
