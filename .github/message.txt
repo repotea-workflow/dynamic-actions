@@ -1,3 +1,1 @@
-feat(theme): add independent editor theme mode (#166)
-
-Allow editor chrome to use follow, light, or dark independently from the surrounding shell while preserving custom handle themes and export data.
+fix(export): crop output to paper frame
