@@ -1,3 +1,1 @@
-feat(editor): add mobile external editing (#182)
-
-Add Plate-managed mobile external editing with host presentation hooks, detached drafts, conflict protection, and regression coverage.
+perf(text): move web rasterization off main thread
