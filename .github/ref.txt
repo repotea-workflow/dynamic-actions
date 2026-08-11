@@ -1,1 +1,1 @@
-agt/emoji-plugin-config
+main
