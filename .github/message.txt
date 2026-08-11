@@ -1,1 +1,1 @@
-test(ci): align stale export baselines
+fix(text): keep export errors through preview retry
