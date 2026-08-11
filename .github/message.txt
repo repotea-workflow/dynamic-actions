@@ -1,1 +1,3 @@
-feat(templates): refine Plate editor controls
+feat(templates): refine Plate editor controls (#96)
+
+Upgrade Plate, simplify image inputs, add synchronized canvas sizing, and keep editor internals in light mode.
