@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/app-feature-completion
+feat(mobile): add workspace account template cache
+
+AccountTemplateCacheRepository stores validated remote id/revision/status, Plate draft, and image bytes per account workspace. Corrupt or incomplete cache is ignored and refetched; writes are atomic generation replacements. W3-A slice 1.
