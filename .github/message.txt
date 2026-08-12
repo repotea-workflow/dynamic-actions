@@ -1,3 +1,3 @@
-fix(codeon): cancel recovered dispatches
+fix(codeon): cancel recovered dispatches (#54)
 
 Provision-stage outcome-unknown dispatches have no accepted input lineage, but operator cancellation must still fence and terminate them. Allow recovery dispatch cancellation and evolve the reference constraint without weakening partial-input lineage checks.
