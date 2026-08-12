@@ -1,1 +1,5 @@
-fix(templates): bind favorites to signed-in accounts
+fix(mobile): stabilize editor overlays and account favorites (#113)
+
+* fix(mobile): stabilize Plate editor overlays
+
+* fix(templates): bind favorites to signed-in accounts
