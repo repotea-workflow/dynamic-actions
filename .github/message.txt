@@ -1,3 +1,1 @@
-fix(text): keep debug rasterization in worker (#189)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(editor): keep mobile keyboard editing overlay stable
