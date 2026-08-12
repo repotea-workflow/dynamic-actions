@@ -1,1 +1,13 @@
-fix(admin): defer image ref access (#112)
+merge: integrate origin/main into app feature completion
+
+Resolve conflicts with origin/main (d71421ed) by keeping the PR's
+physical-media, template-print, continuous-paper and A4 fixes while
+adopting main's learning print pipeline and device-model changes.
+
+- renumber account_template_lifecycle migrations (postgres 000074,
+  mysql 000077) after main's learning migrations
+- restore learning asset reference reconciliation in both dialects
+- drop legacy paper-size fallback and update admin catalog fixtures
+- align nib learning raster validation with device media profiles
+- fix clippy/lint findings and stale print flow tests so the full
+  check gates are green again
