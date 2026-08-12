@@ -1,1 +1,1 @@
-agt/capability-gateway
+agt/fix-grok-review-completion-schema
