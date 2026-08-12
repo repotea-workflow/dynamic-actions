@@ -1,1 +1,1 @@
-fix(codeon): satisfy workspace clippy
+fix(codeon): satisfy workspace clippy (#38)
