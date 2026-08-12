@@ -1,5 +1,9 @@
-feat: enforce template printer compatibility (#114)
+feat(mobile): manage account template lifecycle
 
-* feat(templates): enforce printer compatibility
-
-* test(mobile): cover printer selection return
+Adds cursor pagination to the typed account-templates client, exposes the
+workspace cache list/image bytes and metadata-only updates, and introduces an
+AccountTemplatesController with revision-guarded rename/submit/delete plus
+offline cached open. GraphicEditor saves through an account-template draft
+repository that PATCHes with the cached revision and rewrites the cache only
+from the server response; a 409 refreshes the cache and surfaces a localized
+conflict instead of overwriting. W3-A slice 4a/4b.
