@@ -1,1 +1,1 @@
-ci: allow workspace tests to finish
+ci: allow workspace tests to finish (#40)
