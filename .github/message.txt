@@ -1,6 +1,1 @@
-fix(codeon): raise verification output cap and require full local verification
-
-Raise the planning/revision evidence output limit from 64 KiB to 4 MiB so
-cargo test --all-features output is not truncated into OutputOverflow
-failures. Require the full repository verification suite to pass locally
-before implementation/revision submissions.
+fix(codeon): accept open progress inputs
