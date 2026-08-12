@@ -1,10 +1,1 @@
-feat(mobile): complete template detail print and edit fork flow
-
-Direct image/editable Use downloads and validates the published resource
-into the real print preview without creating any personal or account copy.
-Editable Edit signs in when needed, stores a code/version-only pending
-intent, forks idempotently into the account workspace, and opens the
-account-owned copy in Plate. My Templates gains the full status action
-matrix with cursor pagination and 409 conflict refresh. Router wires the
-templates tab/detail with the shared print controller and adds the account
-editor and public edit continuation routes.
+fix(templates): improve navigation and A4 rendering
