@@ -1,3 +1,3 @@
-fix(codeon): surface dispatch recovery
+fix(codeon): cancel recovered dispatches
 
-Adopt exact dispatch outcome-unknown recovery as canonical operator attention so daemon restart can cancel stranded attempts through the durable MCP path.
+Provision-stage outcome-unknown dispatches have no accepted input lineage, but operator cancellation must still fence and terminate them. Allow recovery dispatch cancellation and evolve the reference constraint without weakening partial-input lineage checks.
