@@ -1,3 +1,3 @@
-feat(mobile): fetch and validate remote account templates
+feat(mobile): fork public templates into account workspace
 
-AccountTemplateRemoteReader GETs the detail, downloads the file and every referenced image through the typed clients, verifies size/checksum/envelope/frame/assets, rewrites ids to local draft assets, and atomically caches only after full validation under the captured lease. Dart client now decodes sourceTemplateVersionId. W3-A slice 2.
+ForkPublicTemplateUseCase reloads and revalidates the published version, builds an editable or exact-size image Plate draft, uploads content-addressed assets, creates with a durable clientRequestId, and caches the validated remote template. Crash recovery reuses the operation record; a create-then-cache-failure recovers by GET without duplicating. Saver now content-addresses uploads and PATCHes existing templates. W3-A slice 3.
