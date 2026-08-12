@@ -1,3 +1,5 @@
-fix(templates): improve navigation and A4 rendering (#115)
+feat(mobile): complete personal template workflow
 
-Fix template-center navigation, A4 DPI rasterization, printable-area handling, and admin physical presentation.
+- preserve #114 template device-type migrations at PostgreSQL 74 and MySQL 77
+- shift account-template lifecycle and paper-dimension migrations forward without rewriting applied history
+- validate account media/template Snowflake IDs before authenticated requests
