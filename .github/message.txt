@@ -1,4 +1,4 @@
-fix(codeon): keep daemon alive on provider recovery failures
+fix(codeon): keep daemon alive on provider recovery failures (#55)
 
 Dispatch provisioning failures with transient provider conditions
 (AuthenticationUnavailable, TemporarilyUnavailable, ProviderRejected,
