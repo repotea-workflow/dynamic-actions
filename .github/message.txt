@@ -1,1 +1,3 @@
-fix(templates): improve navigation and A4 rendering
+fix(templates): improve navigation and A4 rendering (#115)
+
+Fix template-center navigation, A4 DPI rasterization, printable-area handling, and admin physical presentation.
