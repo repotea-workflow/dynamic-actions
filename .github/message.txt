@@ -1,1 +1,31 @@
-fix(codeon): teach review agents reject excludes actionable findings
+feat(codeoff): add governed agent capabilities
+
+* feat(capability): add execution gateway contracts
+
+* feat(codeoff): persist turn MCP capabilities
+
+* feat(codeoff): authenticate turn MCP over HTTP
+
+* feat(codeoff): bind turn tools to MCP capabilities
+
+* feat(capability): add GitHub read backend
+
+* feat(codeoff): manage turn MCP capability leases
+
+* feat(codeoff): serve authenticated turn MCP
+
+* feat(agent): unify turn MCP provider binding
+
+* feat(codeoff): expose governed GitHub capability
+
+* feat(codeoff): gate turns on accepted plans
+
+* fix(codeoff): require context before planning
+
+* feat(agent): add controlled ACP invocation
+
+* refactor(grok): share production ACP process
+
+* feat(codeoff): add governed agent providers
+
+Route Cursor turns through authenticated per-turn MCP capabilities and share provider-neutral Grok process controls with Codeon. Preserve Codex defaults and fail Codeoff Grok closed until required containment is available.
