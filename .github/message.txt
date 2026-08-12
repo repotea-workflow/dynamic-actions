@@ -1,1 +1,1 @@
-fix(codeon): restore workspace CI
+fix(codeon): gate startup operation MCP
