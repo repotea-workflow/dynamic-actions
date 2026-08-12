@@ -1,1 +1,1 @@
-fix(codeon): expose Grok review schema
+fix(codeon): bind provider callback catalog
