@@ -1,5 +1,3 @@
-fix(omsk): repair task export delivery (#279)
+fix(worker): stream identity ZIP exports
 
-Allow ten minutes for final export uploads, grant CHIEF and OUTLETS task endpoint access, and preserve partial image failures in an XLSX report.
-
-Migration 000008 rejects conflicting nodes and marks owned rows so rollback cannot remove pre-existing authorization data.
+Large identity exports held the ZIP and multipart body in memory at the same time, causing repeated OOM restarts. Use temporary files for both stages so memory stays bounded to the current image and report.
