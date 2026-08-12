@@ -1,3 +1,3 @@
 fix(codeoff): pass Slack images to agents
 
-Require every source attachment to be read before protected actions while allowing bounded failure explanations. Keep private image payloads within callback limits and redact them from diagnostics.
+Deliver bounded Slack image content to agents, enforce attachment evidence gates, and redact private image payloads.
