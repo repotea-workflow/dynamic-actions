@@ -1,31 +1,20 @@
-feat(codeoff): add governed agent capabilities
+fix(codeon): teach review agents reject excludes actionable findings (#37)
 
-* feat(capability): add execution gateway contracts
+* fix(codeon): expose Grok review schema
 
-* feat(codeoff): persist turn MCP capabilities
+* fix(codeon): bind provider callback catalog
 
-* feat(codeoff): authenticate turn MCP over HTTP
+* fix(codeon): match reject-close PR snapshot repository
 
-* feat(codeoff): bind turn tools to MCP capabilities
+pull_request_review_snapshots stores owner and repository_name split;
+the reject-close lookup compared owner || '/' || repository_name against
+the full github.com/owner/repo identity, so existing-PR reviews always
+failed with PersistenceUnavailable and crashed the daemon during the
+RejectClose input load. Align the predicate with the landing-preflight
+join by prefixing github.com/.
 
-* feat(capability): add GitHub read backend
+* fix(codeon): align Grok runtime with persisted callback catalog
 
-* feat(codeoff): manage turn MCP capability leases
+* fix(codeon): persist RejectClose terminal-flow handoff
 
-* feat(codeoff): serve authenticated turn MCP
-
-* feat(agent): unify turn MCP provider binding
-
-* feat(codeoff): expose governed GitHub capability
-
-* feat(codeoff): gate turns on accepted plans
-
-* fix(codeoff): require context before planning
-
-* feat(agent): add controlled ACP invocation
-
-* refactor(grok): share production ACP process
-
-* feat(codeoff): add governed agent providers
-
-Route Cursor turns through authenticated per-turn MCP capabilities and share provider-neutral Grok process controls with Codeon. Preserve Codex defaults and fail Codeoff Grok closed until required containment is available.
+* fix(codeon): teach review agents reject excludes actionable findings
