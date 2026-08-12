@@ -1,1 +1,5 @@
-fix(codeon): gate startup operation MCP
+fix(codeon): resume startup followups (#44)
+
+* fix(codeon): resume startup followups
+
+* fix(codeon): gate startup operation MCP
