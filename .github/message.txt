@@ -1,3 +1,5 @@
-fix(worker): normalize trace push endpoint
+fix(omsk): repair task export delivery
 
-Normalize OMSK trace push host values that are configured without an URL scheme.
+Allow ten minutes for final export uploads, grant CHIEF and OUTLETS task endpoint access, and preserve partial image failures in an XLSX report.
+
+Migration 000008 rejects conflicting nodes and marks owned rows so rollback cannot remove pre-existing authorization data.
