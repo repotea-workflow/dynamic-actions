@@ -1,1 +1,3 @@
 fix(worker): normalize trace push endpoint
+
+Normalize OMSK trace push host values that are configured without an URL scheme.
