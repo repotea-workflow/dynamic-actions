@@ -1,1 +1,1 @@
-fix(codeon): keep active review and handoff replay progressing
+fix(codeon): remove Grok review elapsed gate
