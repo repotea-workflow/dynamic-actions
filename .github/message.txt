@@ -1,1 +1,1 @@
-fix(worker): retry exhausted trace pushes
+fix(deny): upsert blacklist saves (#276)
