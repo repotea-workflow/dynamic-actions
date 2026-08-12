@@ -1,1 +1,1 @@
-fix(codeon): preserve Codex toolchain environment (#49)
+fix(codeon): keep active review and handoff replay progressing
