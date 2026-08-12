@@ -1,1 +1,1 @@
-fix(editor): update Plate and handle styling
+fix(editor): update Plate and handle styling (#110)
