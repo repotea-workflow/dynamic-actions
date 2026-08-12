@@ -1,6 +1,1 @@
-merge: integrate origin/main learning editor and preview fixes
-
-Bring in #111 (template previews) and #112 (defer image ref access) and
-complete the merge with main by adopting the upstream openImagePicker
-handler, restoring the transactional learning reference coverage for
-both dialects, and fixing the MySQL timestamp fixture boundary.
+feat(templates): persist image paper dimensions
