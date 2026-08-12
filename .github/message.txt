@@ -1,1 +1,1 @@
-fix(codeon): split verification command argv (#33)
+fix(codeon): recover running agent on daemon startup
