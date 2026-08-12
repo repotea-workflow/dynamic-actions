@@ -1,1 +1,3 @@
-fix(deny): upsert blacklist saves (#276)
+fix(worker): retry exhausted trace pushes
+
+Allow failed OMSK trace pushes that exhausted automatic retries to be reclaimed after a cooldown.
