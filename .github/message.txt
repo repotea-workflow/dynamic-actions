@@ -1,4 +1,5 @@
-Merge remote-tracking branch 'origin/main' into agt/template-printer-compatibility
+feat: enforce template printer compatibility (#114)
 
-# Conflicts:
-#	apps/mobile/lib/features/templates/presentation/templates_screen.dart
+* feat(templates): enforce printer compatibility
+
+* test(mobile): cover printer selection return

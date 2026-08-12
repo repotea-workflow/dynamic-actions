@@ -1,1 +1,1 @@
-agt/template-printer-compatibility
+main
