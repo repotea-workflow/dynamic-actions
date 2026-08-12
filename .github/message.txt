@@ -1,11 +1,1 @@
-fix(codeon): restore reject-close uniqueness and keep attempts progressing after restart (#42)
-
-* fix(codeon): make RejectClose uniqueness per review operation
-
-* fix(codeon): keep attempt progressing after daemon startup reconciliation
-
-Startup reconciliation ticks an executing attempt once but never enqueues
-a followup wakeup, so multi-tick flows (e.g. RejectClose intent ->
-receipt -> completion) stall after a daemon restart once the wakeup
-chain is exhausted. Mirror the tick loop: enqueue a followup wakeup
-whenever a startup-reconciled tick reports progress.
+fix(codeon): restore workspace CI
