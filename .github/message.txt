@@ -1,3 +1,1 @@
-fix(worker): stream identity ZIP exports (#280)
-
-Large identity exports held the ZIP and multipart body in memory at the same time, causing repeated OOM restarts. Use temporary files for both stages so memory stays bounded to the current image and report.
+fix(worker): allow hour-long export uploads
