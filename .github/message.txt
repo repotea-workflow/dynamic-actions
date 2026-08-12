@@ -1,3 +1,1 @@
-fix(worker): retry exhausted trace pushes
-
-Allow failed OMSK trace pushes that exhausted automatic retries to be reclaimed after a cooldown.
+fix(worker): normalize trace push endpoint
