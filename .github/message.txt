@@ -1,1 +1,1 @@
-fix(mobile): preserve template create idempotency
+fix(editor): update Plate and handle styling
