@@ -1,12 +1,1 @@
-fix(codeon): keep daemon alive on provider recovery failures (#55)
-
-Dispatch provisioning failures with transient provider conditions
-(AuthenticationUnavailable, TemporarilyUnavailable, ProviderRejected,
-OutcomeUnknown, ContainmentUnavailable) no longer fail the daemon
-closed; they become dispatch outcome-unknown so the operation can be
-recovered by an operator attention case.
-
-Startup reconciliation now also adopts dispatch-outcome-unknown
-recoveries (AgentDispatchRecoveryRequired /
-agent-dispatch:inflight-outcome-unknown) as operator attention, and
-attention opening accepts that evidence pair without replacing it.
+fix(codeon): finalize unsuccessful dispatches
