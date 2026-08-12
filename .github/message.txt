@@ -1,3 +1,3 @@
-feat(mobile): add workspace account template cache
+feat(mobile): fetch and validate remote account templates
 
-AccountTemplateCacheRepository stores validated remote id/revision/status, Plate draft, and image bytes per account workspace. Corrupt or incomplete cache is ignored and refetched; writes are atomic generation replacements. W3-A slice 1.
+AccountTemplateRemoteReader GETs the detail, downloads the file and every referenced image through the typed clients, verifies size/checksum/envelope/frame/assets, rewrites ids to local draft assets, and atomically caches only after full validation under the captured lease. Dart client now decodes sourceTemplateVersionId. W3-A slice 2.
