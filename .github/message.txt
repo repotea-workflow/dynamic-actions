@@ -1,1 +1,1 @@
-feat(templates): persist image paper dimensions
+fix(templates): bind favorites to signed-in accounts
