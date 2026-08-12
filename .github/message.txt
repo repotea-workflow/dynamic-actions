@@ -1,1 +1,1 @@
-fix(codeon): preserve recovery tool paths (#46)
+fix(codeon): keep git runner tests last
