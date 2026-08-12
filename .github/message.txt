@@ -1,1 +1,1 @@
-fix(codeon): preserve recovery tool paths
+fix(codeon): preserve recovery tool paths (#46)
