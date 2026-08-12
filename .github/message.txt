@@ -1,3 +1,1 @@
-fix(codeoff): pass Slack images to agents
-
-Deliver bounded Slack image content to agents, enforce attachment evidence gates, and redact private image payloads.
+feat(codeoff): clean retained Slack artifacts
