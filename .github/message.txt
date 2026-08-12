@@ -1,18 +1,1 @@
-fix(codeon): stabilize Grok review and reject-close acceptance flow (#36)
-
-* fix(codeon): expose Grok review schema
-
-* fix(codeon): bind provider callback catalog
-
-* fix(codeon): match reject-close PR snapshot repository
-
-pull_request_review_snapshots stores owner and repository_name split;
-the reject-close lookup compared owner || '/' || repository_name against
-the full github.com/owner/repo identity, so existing-PR reviews always
-failed with PersistenceUnavailable and crashed the daemon during the
-RejectClose input load. Align the predicate with the landing-preflight
-join by prefixing github.com/.
-
-* fix(codeon): align Grok runtime with persisted callback catalog
-
-* fix(codeon): persist RejectClose terminal-flow handoff
+Merge origin/main into agt/capability-gateway
