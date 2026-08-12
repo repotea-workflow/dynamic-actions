@@ -1,1 +1,1 @@
-feat(codeoff): clean retained Slack artifacts (#32)
+fix(codeon): split verification command argv
