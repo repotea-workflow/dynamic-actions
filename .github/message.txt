@@ -1,3 +1,4 @@
-feat(mobile): fork public templates into account workspace
+Merge remote-tracking branch 'origin/main' into agt/template-printer-compatibility
 
-ForkPublicTemplateUseCase reloads and revalidates the published version, builds an editable or exact-size image Plate draft, uploads content-addressed assets, creates with a durable clientRequestId, and caches the validated remote template. Crash recovery reuses the operation record; a create-then-cache-failure recovers by GET without duplicating. Saver now content-addresses uploads and PATCHes existing templates. W3-A slice 3.
+# Conflicts:
+#	apps/mobile/lib/features/templates/presentation/templates_screen.dart
