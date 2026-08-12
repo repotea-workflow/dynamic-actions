@@ -1,3 +1,1 @@
-fix(mobile): restore exam paper print preview (#116)
-
-Use the refreshed selected printer profile for learning-material previews and make preview pagination theme-aware.
+fix(deps): update Plate renderer fix
