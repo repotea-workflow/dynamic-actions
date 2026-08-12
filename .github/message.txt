@@ -1,1 +1,1 @@
-fix(worker): keep ident zip export on image failures
+fix(deny): upsert blacklist saves
