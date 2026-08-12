@@ -1,13 +1,6 @@
-merge: integrate origin/main into app feature completion
+merge: integrate origin/main learning editor and preview fixes
 
-Resolve conflicts with origin/main (d71421ed) by keeping the PR's
-physical-media, template-print, continuous-paper and A4 fixes while
-adopting main's learning print pipeline and device-model changes.
-
-- renumber account_template_lifecycle migrations (postgres 000074,
-  mysql 000077) after main's learning migrations
-- restore learning asset reference reconciliation in both dialects
-- drop legacy paper-size fallback and update admin catalog fixtures
-- align nib learning raster validation with device media profiles
-- fix clippy/lint findings and stale print flow tests so the full
-  check gates are green again
+Bring in #111 (template previews) and #112 (defer image ref access) and
+complete the merge with main by adopting the upstream openImagePicker
+handler, restoring the transactional learning reference coverage for
+both dialects, and fixing the MySQL timestamp fixture boundary.
