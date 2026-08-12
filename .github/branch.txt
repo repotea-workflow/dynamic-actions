@@ -1,1 +1,1 @@
-agt/auto-template-previews
+main
