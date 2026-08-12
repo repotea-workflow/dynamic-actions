@@ -1,1 +1,3 @@
-fix(codeon): recover running agent on daemon startup (#34)
+feat(codeoff): add governed agent providers
+
+Route Cursor turns through authenticated per-turn MCP capabilities and share provider-neutral Grok process controls with Codeon. Preserve Codex defaults and fail Codeoff Grok closed until required containment is available.

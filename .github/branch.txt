@@ -1,1 +1,1 @@
-main
+agt/capability-gateway
