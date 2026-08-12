@@ -1,1 +1,1 @@
-feat(codeoff): clean retained Slack artifacts
+feat(codeoff): clean retained Slack artifacts (#32)
