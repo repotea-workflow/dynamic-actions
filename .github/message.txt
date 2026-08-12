@@ -1,1 +1,3 @@
 fix(deps): update Plate renderer fix
+
+Update Plate dependencies to merged renderer debug overlay fix 7f1978f.
