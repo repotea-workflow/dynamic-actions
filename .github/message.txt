@@ -1,5 +1,1 @@
-feat(mobile): complete personal template workflow
-
-- preserve #114 template device-type migrations at PostgreSQL 74 and MySQL 77
-- shift account-template lifecycle and paper-dimension migrations forward without rewriting applied history
-- validate account media/template Snowflake IDs before authenticated requests
+fix(mobile): restore exam paper print preview
