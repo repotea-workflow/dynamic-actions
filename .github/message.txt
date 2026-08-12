@@ -1,1 +1,1 @@
-fix(codeon): accept open progress inputs
+fix(codeon): accept open progress inputs (#57)
