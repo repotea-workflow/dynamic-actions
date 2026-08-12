@@ -1,1 +1,1 @@
-ci: allow workspace tests to finish (#40)
+refactor(codeon): make agent prompts task-first
