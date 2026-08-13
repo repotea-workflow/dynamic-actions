@@ -1,1 +1,1 @@
-feat(id-photo): restore print records
+fix(id-photo): discard cancelled session
