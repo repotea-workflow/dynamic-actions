@@ -1,1 +1,1 @@
-feat(sync): compose account sync runtime
+feat(sync): add account sync controls
