@@ -1,1 +1,1 @@
-feat(sync): resume plate onboarding
+fix(sync): honor onboarding selection
