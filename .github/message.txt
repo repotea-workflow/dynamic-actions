@@ -1,1 +1,1 @@
-feat(id-photo): add local portrait adapters
+feat(id-photo): add local print layout core
