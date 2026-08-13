@@ -1,1 +1,1 @@
-fix(worker): shrink Upyun upload parts (#286)
+fix(worker): refresh trace retry baseline
