@@ -1,1 +1,1 @@
-fix(codeon): track latest thread activity (#64)
+fix(codeoff): treat DM update errors as unknown
