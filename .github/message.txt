@@ -1,1 +1,1 @@
-fix(sync): preserve Plate import mutation ids
+fix(sync): fence onboarding receipts
