@@ -1,1 +1,1 @@
-fix(grok): continue ready sessions without completion
+fix(codeon): keep implementation agents off PRs
