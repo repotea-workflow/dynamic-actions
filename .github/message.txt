@@ -1,1 +1,1 @@
-feat(codeon): bind revision publication language
+test(codeon): cover independent revision reply languages
