@@ -1,1 +1,1 @@
-fix(codeoff): require GitHub planning decisions (#72)
+fix(codeoff): remove GitHub text inference
