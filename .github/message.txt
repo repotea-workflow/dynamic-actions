@@ -1,1 +1,1 @@
-test(sudoku): cover disposed generation
+fix(sync): fence favorite network calls
