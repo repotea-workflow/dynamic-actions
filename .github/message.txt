@@ -1,1 +1,1 @@
-fix(sync): stop runtime before consent write
+fix(sync): resume after stale active run
