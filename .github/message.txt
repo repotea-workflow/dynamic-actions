@@ -1,1 +1,1 @@
-fix(id-photo): cancel stale composites
+fix(id-photo): cancel stale analysis
