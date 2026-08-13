@@ -1,3 +1,1 @@
-feat(auth): add identity and feature control
-
-Add PostgreSQL-backed management and App authorization, protected Platform Owner recovery, AppUser access, Feature Rollout, stable A/B experiments, generated API contracts, and Robin administration surfaces.
+feat(robin): adopt Astryx admin shell
