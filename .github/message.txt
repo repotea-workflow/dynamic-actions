@@ -1,3 +1,3 @@
-fix(sync): reject duplicate import items
+fix(sync): fail closed while disabling
 
-Duplicate persisted identifiers can replay source content or make items compete for one target. Treat the attempt as corrupt before any import.
+A pending consent write must not leave the previous enabled record usable for new network work.
