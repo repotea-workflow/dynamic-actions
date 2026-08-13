@@ -1,1 +1,1 @@
-feat(sudoku): add generated puzzle screen
+feat(sudoku): add physical print contract
