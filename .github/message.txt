@@ -1,1 +1,1 @@
-fix(id-photo): reject mismatched record asset
+fix(id-photo): fence stale asset checks
