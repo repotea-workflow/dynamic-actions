@@ -1,1 +1,1 @@
-fix(codeon): resolve terminal attention (#67)
+feat(codeon): add language policy config
