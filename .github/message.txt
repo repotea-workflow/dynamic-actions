@@ -1,1 +1,1 @@
-feat(doodle): connect public material plaza
+fix(doodle): require fresh plaza revalidation
