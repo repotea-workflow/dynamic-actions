@@ -1,1 +1,1 @@
-feat(sync): journal quick text mutations
+feat(sync): journal Plate draft mutations
