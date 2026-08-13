@@ -1,3 +1,1 @@
-feat(sync): migrate private templates
-
-Route onboarding templates through account_templates with durable replay keys. Cache the server result before completing the import receipt.
+feat(sync): wire onboarding runtime
