@@ -1,1 +1,1 @@
-fix(sudoku): fence stale print setup
+fix(id-photo): join native disposal
