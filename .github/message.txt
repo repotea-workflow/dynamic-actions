@@ -1,3 +1,1 @@
-feat(id-photo): add private session storage
-
-Reject unsafe session IDs before cleanup can resolve paths outside the private storage root.
+feat(id-photo): wire private asset runtime
