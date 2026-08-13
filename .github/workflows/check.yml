@@ -45,15 +45,15 @@ jobs:
           channel: stable
           cache: true
 
-      - name: Install FVM
+      - name: Configure FVM command
         run: |
-          dart pub global activate fvm 4.1.2
-          echo "$HOME/.pub-cache/bin" >> "$GITHUB_PATH"
+          mkdir -p "$RUNNER_TEMP/bin"
+          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          chmod +x "$RUNNER_TEMP/bin/fvm"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
 
       - name: Install dependencies
         run: |
-          mkdir -p waterfowl/swan/.fvm
-          ln -s "$FLUTTER_ROOT" waterfowl/swan/.fvm/flutter_sdk
           cd waterfowl/swan && fvm dart pub get && fvm dart run melos bootstrap
           cd ../..
           pnpm --dir songbirds install --frozen-lockfile

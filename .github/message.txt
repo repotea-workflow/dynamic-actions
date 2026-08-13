@@ -1,1 +1,1 @@
-fix(ci): reuse the installed Flutter SDK
+fix(ci): route FVM commands to Flutter
