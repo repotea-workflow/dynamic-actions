@@ -1,1 +1,1 @@
-feat(sudoku): add physical print contract
+feat(sudoku): wire print and records
