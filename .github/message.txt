@@ -1,1 +1,1 @@
-fix(grok): require phase read tools
+fix(codeon): allow failed attempt cancellation
