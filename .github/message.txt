@@ -1,1 +1,1 @@
-test(id-photo): fence network imports
+fix(id-photo): validate before pixel copy
