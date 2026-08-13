@@ -1,1 +1,1 @@
-feat(id-photo): add acquisition entry
+feat(id-photo): add manual crop flow
