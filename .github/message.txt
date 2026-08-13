@@ -1,1 +1,1 @@
-fix(sync): retire legacy template writes
+fix(sudoku): cancel generation worker
