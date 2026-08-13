@@ -1,1 +1,1 @@
-feat(id-photo): load bounded analysis input
+feat(id-photo): preserve manual fallbacks
