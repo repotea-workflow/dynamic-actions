@@ -1,1 +1,1 @@
-fix(codeon): cancel unsent recovered dispatches
+fix(grok): declare model effort support
