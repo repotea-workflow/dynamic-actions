@@ -1,1 +1,1 @@
-fix(doodle): require fresh plaza revalidation
+feat(sync): gate account sync on consent
