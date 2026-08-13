@@ -1,1 +1,1 @@
-fix(worker): refresh trace retry baseline (#287)
+feat(cusco): improve task file details
