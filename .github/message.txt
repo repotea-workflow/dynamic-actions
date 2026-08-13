@@ -1,9 +1,3 @@
-fix(codeon): raise verification output cap and cancel issue-level recoveries
+revert(codeon): drop unverified recovery mix
 
-- Raise planning evidence runtime output limit from 64 KiB to 4 MiB so
-  full verification command output is not truncated (Revision outcomes
-  no longer fail verification).
-- When an issue transitions back to Todo/Cancelled, cancel the active
-  issue-gated recovery attempt, seal its runtime closure receipt, and
-  release the attempt so the picker can start a fresh run.
-- Add a recovery-operation lock helper used by the cancel path.
+Keep the verified LandingPreflight and verification-output fixes from #61, but remove the unrelated recovery cancellation transaction and prompt changes until they have dedicated invariant coverage.
