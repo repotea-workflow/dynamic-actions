@@ -1,1 +1,1 @@
-fix(worker): shrink Upyun upload parts
+fix(worker): shrink Upyun upload parts (#286)
