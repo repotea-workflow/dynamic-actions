@@ -1,1 +1,1 @@
-test(sudoku): fence network imports
+test(sudoku): cover disposed generation
