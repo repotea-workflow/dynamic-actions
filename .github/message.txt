@@ -1,1 +1,1 @@
-test(codeon): preserve routing digest compatibility
+fix(codeon): preserve absent reasoning digests
