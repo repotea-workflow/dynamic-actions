@@ -1,1 +1,1 @@
-agt/fix-grok-ambient-auth
+agt/transparent-mcp-proxy
