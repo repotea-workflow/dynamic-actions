@@ -1,5 +1,10 @@
-fix(codeoff): prevent duplicate DM fallback (#65)
+fix(codeon): drain reconciliation wakeups in bounded batches
 
-* fix(codeoff): prevent duplicate DM fallback
+The runtime tick fetched wakeups with
+limit.saturating_sub(progressed_count).max(1), where limit is
+max_successful_claims (typically 1). A large backlog of stale wakeups for
+terminal attempts was therefore consumed one row per tick, stalling new
+attempts behind thousands of no-op rows for many minutes.
 
-* fix(codeoff): treat DM update errors as unknown
+Fetch a bounded batch of 100 instead; the existing progressed_count >= limit
+check still caps actual progression per tick.
