@@ -1,1 +1,1 @@
-fix(id-photo): join native disposal
+fix(id-photo): guarantee session cleanup
