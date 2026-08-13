@@ -1,5 +1,24 @@
-merge: main #58-#60 into landing-preflight-thread-stability
+fix(codeon): stabilize LandingPreflight digest and verification output (#61)
 
-Reconcile with main's preflight thread-wait and malformed-response
-handling; keep the verified digest-stability fix (real thread
-updatedAt + comments pageInfo).
+* fix(codeon): use GitHub thread updatedAt for LandingPreflight digest stability
+
+build_threads previously stamped each review thread's updated_at with the
+current observation time, so the decision digest changed on every poll and a
+Passed LandingPreflight could never accumulate two stable observations. Fetch
+the thread's real updatedAt from GitHub and use that instead.
+
+* fix(codeon): include pageInfo in review thread comments query
+
+The GraphQL connection deserializer requires pageInfo; the previous
+query omitted it, so LandingPreflight observations failed to parse
+and the operation entered provider recovery.
+
+* fix(codeon): raise verification output cap and cancel issue-level recoveries
+
+- Raise planning evidence runtime output limit from 64 KiB to 4 MiB so
+  full verification command output is not truncated (Revision outcomes
+  no longer fail verification).
+- When an issue transitions back to Todo/Cancelled, cancel the active
+  issue-gated recovery attempt, seal its runtime closure receipt, and
+  release the attempt so the picker can start a fresh run.
+- Add a recovery-operation lock helper used by the cancel path.
