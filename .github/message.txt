@@ -1,1 +1,1 @@
-feat(codeon): require language contract reads
+fix(codeon): keep language catalog migration generic
