@@ -1,1 +1,1 @@
-fix(sync): require selected attempt lists
+fix(sync): fence onboarding summaries
