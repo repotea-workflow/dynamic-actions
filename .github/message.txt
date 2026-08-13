@@ -1,1 +1,1 @@
-fix(id-photo): validate before pixel copy
+fix(id-photo): bound mask conversion
