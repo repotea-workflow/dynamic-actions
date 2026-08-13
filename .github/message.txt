@@ -1,1 +1,1 @@
-fix(id-photo): cancel stale layout renders
+fix(id-photo): cancel stale crop workers
