@@ -1,1 +1,1 @@
-feat(id-photo): preserve manual fallbacks
+feat(id-photo): persist manual crops
