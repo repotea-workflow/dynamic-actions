@@ -1,1 +1,3 @@
-fix(sync): fence favorite network calls
+fix(sync): gate legacy template migration
+
+Opt-out accounts must not run compatibility migration requests. Stop the multi-request migration when consent generation changes.
