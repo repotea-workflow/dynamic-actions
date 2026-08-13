@@ -1,1 +1,1 @@
-ci: add staging build and deployment
+fix(ci): install Swan from its FVM root

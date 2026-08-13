@@ -52,8 +52,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          fvm install
-          cd waterfowl/swan && fvm dart pub get && fvm dart run melos bootstrap
+          cd waterfowl/swan && fvm install && fvm dart pub get && fvm dart run melos bootstrap
           cd ../..
           pnpm --dir songbirds install --frozen-lockfile
 
