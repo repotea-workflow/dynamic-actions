@@ -1,1 +1,1 @@
-feat(sync): resume quick text onboarding
+feat(sync): resume plate onboarding
