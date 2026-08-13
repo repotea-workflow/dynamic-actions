@@ -1,1 +1,1 @@
-feat(sync): migrate legacy remote templates
+fix(sync): recover corrupt onboarding attempts
