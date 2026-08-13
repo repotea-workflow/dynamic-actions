@@ -1,3 +1,3 @@
-fix(sync): defer onboarding migration
+fix(sync): reject widened import attempts
 
-No-import and dismissed onboarding choices must not trigger legacy content network requests.
+Corrupt attempts must not import content outside the user's durable selection.
