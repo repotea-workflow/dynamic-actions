@@ -1,5 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/management-identity-permissions
+feat(auth): add identity and feature control
 
-# Conflicts:
-#	Justfile
-#	openwiki/systems/robin.md
+Add PostgreSQL-backed management and App authorization, protected Platform Owner recovery, AppUser access, Feature Rollout, stable A/B experiments, generated API contracts, and Robin administration surfaces.
