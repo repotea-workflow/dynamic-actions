@@ -1,1 +1,1 @@
-fix(codeoff): remove GitHub text inference
+fix(codeoff): remove GitHub text inference (#73)
