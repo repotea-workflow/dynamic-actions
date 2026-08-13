@@ -1,1 +1,1 @@
-fix(worker): support large Upyun uploads
+fix(worker): support large Upyun uploads (#282)
