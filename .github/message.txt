@@ -1,1 +1,1 @@
-fix(ci): install Swan from its FVM root
+fix(ci): resolve Swan packages before analyze

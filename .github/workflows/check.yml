@@ -59,12 +59,12 @@ jobs:
       - name: Verify repository
         run: |
           trap 'just db-down' EXIT
+          just -f waterfowl/swan/Justfile test
           just check
           pnpm --dir songbirds lint
           pnpm --dir songbirds test
           pnpm --dir songbirds build
           just -f waterfowl/swan/Justfile format-check
-          just -f waterfowl/swan/Justfile test
           just db-up
           just migrate
           just test-db
