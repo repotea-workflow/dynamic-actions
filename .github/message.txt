@@ -1,1 +1,1 @@
-perf(id-photo): isolate final sheet render
+feat(id-photo): reject stale portrait work
