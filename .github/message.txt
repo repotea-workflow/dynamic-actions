@@ -1,3 +1,3 @@
-fix(hawk): allow HTTP dev sessions
+fix(hawk): allow HTTP dev sessions (#9)
 
 Keep Secure cookies for HTTPS origins while allowing the configured HTTP development origin to persist management sessions.
