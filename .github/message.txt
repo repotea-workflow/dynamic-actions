@@ -1,1 +1,1 @@
-feat(cusco): improve task file details
+feat(cusco): improve task file details (#288)
