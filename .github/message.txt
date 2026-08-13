@@ -1,1 +1,1 @@
-fix(codeon): keep implementation agents off PRs
+fix(codeon): stabilize grok rttp acceptance
