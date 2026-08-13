@@ -1,1 +1,1 @@
-fix(worker): chunk large Upyun uploads (#283)
+fix(worker): retry exhausted pending traces
