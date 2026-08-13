@@ -1,1 +1,1 @@
-feat(id-photo): reject stale portrait work
+feat(id-photo): acquire private portraits
