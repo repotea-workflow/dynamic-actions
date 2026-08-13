@@ -1,13 +1,1 @@
-feat(mobile): integrate main and split oversized structure blockers
-
-Merge origin/main (Plate renderer pin 7f1978f) with the app-feature
-completion work, keeping the selected-media landscape crop fixes.
-
-Split the seven >800-line source/test files into semantic modules and
-case files: rasterizer dispatch and content rasterizers for the NIB
-transport, template form/catalog/detail presentation, and per-concern
-test suites for preview, submission, rendering, payloads, failures,
-catalog, detail, and editor flows.
-
-Structure gate: 0 blockers. Mobile suite, mobile-api suite, and plate
-editor host suite/analyze/release build all pass.
+fix(ci): align Plate host revision
