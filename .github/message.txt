@@ -1,1 +1,1 @@
-feat(id-photo): add photo size selection
+feat(id-photo): add face crop guidance
