@@ -1,3 +1,1 @@
-fix(sync): fail closed while disabling
-
-A pending consent write must not leave the previous enabled record usable for new network work.
+fix(doodle): expose catalog refresh
