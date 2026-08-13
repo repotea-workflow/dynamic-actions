@@ -1,1 +1,1 @@
-fix(codeoff): prevent duplicate DM fallback
+fix(codeon): track latest thread activity (#64)
