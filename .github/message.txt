@@ -1,1 +1,1 @@
-feat(sync): prompt first-login import
+feat(sync): migrate legacy remote templates
