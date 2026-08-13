@@ -1,3 +1,1 @@
-refactor(codeoff): proxy GitHub MCP transparently (#75)
-
-Preserve upstream MCP catalogs, arguments, streaming responses, and tool results while enforcing turn-scoped account and exact mutation authority. Record completion evidence out of band so proxy metadata never alters upstream payloads.
+fix(codeoff): complete proxied channel turns
