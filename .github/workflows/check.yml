@@ -43,7 +43,6 @@ jobs:
         with:
           flutter-version: 3.44.9
           channel: stable
-          cache: true
 
       - name: Configure FVM command
         run: |
