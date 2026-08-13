@@ -1,1 +1,1 @@
-feat(codeoff): route GitHub accounts per turn (#69)
+feat(codeon): seal thinking language bindings
