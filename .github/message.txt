@@ -1,1 +1,1 @@
-feat(sync): import onboarding preferences
+feat(sync): import onboarding favorites
