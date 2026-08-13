@@ -1,1 +1,5 @@
-fix(codeoff): treat DM update errors as unknown
+fix(codeoff): prevent duplicate DM fallback (#65)
+
+* fix(codeoff): prevent duplicate DM fallback
+
+* fix(codeoff): treat DM update errors as unknown
