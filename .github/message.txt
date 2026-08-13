@@ -1,1 +1,1 @@
-fix(id-photo): validate snapshot geometry
+test(id-photo): verify retry raster stability
