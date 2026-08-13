@@ -1,1 +1,1 @@
-feat(id-photo): add local print layout core
+feat(id-photo): persist final print snapshot
