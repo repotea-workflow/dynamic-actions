@@ -1,1 +1,1 @@
-fix(codeon): preserve absent reasoning digests
+fix(codeon): require configured thinking language
