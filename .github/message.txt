@@ -1,1 +1,1 @@
-fix(ci): route FVM commands to Flutter
+fix(dev): load Hawk environment correctly
