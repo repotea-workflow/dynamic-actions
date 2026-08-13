@@ -1,1 +1,1 @@
-feat(id-photo): persist background composites
+feat(id-photo): finalize printable assets
