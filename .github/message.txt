@@ -1,1 +1,1 @@
-fix(id-photo): validate final PNG payloads
+fix(id-photo): cancel stale layout renders
