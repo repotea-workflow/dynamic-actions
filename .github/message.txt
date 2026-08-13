@@ -1,19 +1,4 @@
-fix(codeon): stabilize LandingPreflight digest and verification output (#61)
-
-* fix(codeon): use GitHub thread updatedAt for LandingPreflight digest stability
-
-build_threads previously stamped each review thread's updated_at with the
-current observation time, so the decision digest changed on every poll and a
-Passed LandingPreflight could never accumulate two stable observations. Fetch
-the thread's real updatedAt from GitHub and use that instead.
-
-* fix(codeon): include pageInfo in review thread comments query
-
-The GraphQL connection deserializer requires pageInfo; the previous
-query omitted it, so LandingPreflight observations failed to parse
-and the operation entered provider recovery.
-
-* fix(codeon): raise verification output cap and cancel issue-level recoveries
+fix(codeon): raise verification output cap and cancel issue-level recoveries
 
 - Raise planning evidence runtime output limit from 64 KiB to 4 MiB so
   full verification command output is not truncated (Revision outcomes
