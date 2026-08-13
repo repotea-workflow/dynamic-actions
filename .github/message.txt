@@ -1,1 +1,1 @@
-fix(sync): serialize consent decisions
+fix(sync): stop runtime before consent write
