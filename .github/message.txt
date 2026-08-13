@@ -1,1 +1,1 @@
-fix(codeon): fail invalid implementation completion
+fix(codeon): recover with persisted agent bindings
