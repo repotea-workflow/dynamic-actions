@@ -1,1 +1,1 @@
-feat(id-photo): wire private asset runtime
+perf(id-photo): isolate final sheet render
