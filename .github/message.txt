@@ -1,1 +1,1 @@
-feat(sync): add account sync triggers
+feat(sync): deliver favorite mutations
