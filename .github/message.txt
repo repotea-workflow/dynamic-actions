@@ -1,1 +1,1 @@
-fix(codeon): allow failed attempt cancellation
+fix(grok): keep missing tool completions retriable
