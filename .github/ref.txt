@@ -1,1 +1,1 @@
-agt/codeoff-github-mcp-cli
+main
