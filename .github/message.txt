@@ -1,1 +1,3 @@
 fix(worker): retry exhausted pending traces
+
+Allow exhausted PENDING OMSK trace rows to be reclaimed after the retry cooldown.
