@@ -1,1 +1,1 @@
-fix(sync): fence onboarding favorite reads
+fix(sync): fence legacy migration receipts
