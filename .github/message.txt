@@ -1,1 +1,1 @@
-fix(grok): expose completion contract schema
+fix(codeoff): refresh execution tool catalog
