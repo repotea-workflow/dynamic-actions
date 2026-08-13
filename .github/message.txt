@@ -1,1 +1,1 @@
-feat(sync): add onboarding receipt summary
+feat(sync): resume quick text onboarding
