@@ -1,1 +1,1 @@
-fix(id-photo): clean up finalize errors
+fix(id-photo): discard rejected handoff
