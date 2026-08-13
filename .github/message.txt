@@ -1,1 +1,1 @@
-feat(id-photo): open unified print preview
+feat(id-photo): restore print records
