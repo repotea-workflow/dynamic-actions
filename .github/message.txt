@@ -1,1 +1,1 @@
-fix(grok): keep missing tool completions retriable
+fix(codeon): fail invalid implementation completion
