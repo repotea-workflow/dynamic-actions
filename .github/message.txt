@@ -1,1 +1,1 @@
-fix(sync): enforce preference delivery order
+feat(sync): add onboarding receipt summary
