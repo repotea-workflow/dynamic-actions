@@ -1,1 +1,1 @@
-fix(sync): validate onboarding receipt choices
+fix(sync): require selected attempt lists
