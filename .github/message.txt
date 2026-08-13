@@ -1,1 +1,1 @@
-feat(codeon): persist artifact language lineage
+feat(codeon): bind revision publication language
