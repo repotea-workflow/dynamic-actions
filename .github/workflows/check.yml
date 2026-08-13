@@ -52,7 +52,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd waterfowl/swan && fvm install && fvm dart pub get && fvm dart run melos bootstrap
+          mkdir -p waterfowl/swan/.fvm
+          ln -s "$FLUTTER_ROOT" waterfowl/swan/.fvm/flutter_sdk
+          cd waterfowl/swan && fvm dart pub get && fvm dart run melos bootstrap
           cd ../..
           pnpm --dir songbirds install --frozen-lockfile
 

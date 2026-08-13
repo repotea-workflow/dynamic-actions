@@ -1,1 +1,1 @@
-fix(ci): resolve Swan packages before analyze
+fix(ci): reuse the installed Flutter SDK
