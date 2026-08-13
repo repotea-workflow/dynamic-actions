@@ -1,1 +1,1 @@
-fix(id-photo): bound mask conversion
+fix(id-photo): freeze analysis buffers
