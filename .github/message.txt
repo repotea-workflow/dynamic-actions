@@ -1,1 +1,1 @@
-fix(macos): restart debug desktop with marker
+feat(macos): complete desktop virtual printer workflow
