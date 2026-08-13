@@ -1,1 +1,1 @@
-agt/configurable-language-policy
+agt/codeoff-github-mcp-cli

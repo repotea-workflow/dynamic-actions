@@ -1,1 +1,3 @@
-feat(codeon): add language policy config
+feat(codeoff): add scoped GitHub MCP
+
+Proxy GitHub MCP and CLI access through per-turn capabilities so provider adapters never receive long-lived account tokens. Persist planned tool authority and fail closed for mutations, approvals, and ambiguous outcomes.
