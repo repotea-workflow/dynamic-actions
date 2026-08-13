@@ -1,1 +1,1 @@
-fix(codeoff): recover incomplete channel turns (#71)
+fix(codeoff): require GitHub planning decisions
