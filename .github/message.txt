@@ -1,1 +1,1 @@
-fix(sync): fence stale consent sessions
+fix(sync): cancel reruns on dispose
