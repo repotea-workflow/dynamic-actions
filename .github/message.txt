@@ -1,1 +1,1 @@
-fix(sync): fence legacy migration receipts
+fix(sync): retire legacy template writes
