@@ -1,1 +1,1 @@
-test(id-photo): verify retry raster stability
+fix(id-photo): validate final PNG payloads
