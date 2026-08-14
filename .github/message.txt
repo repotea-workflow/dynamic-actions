@@ -1,3 +1,1 @@
-fix(app): remove unused device info plugin
-
-The unused transitive plugin requires Xcode 26.1 and breaks the unsigned iOS release build on the macOS 15 runner.
+build(app): set initial release version
