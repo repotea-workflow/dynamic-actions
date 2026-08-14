@@ -1,1 +1,3 @@
-fix(catalog): distinguish cleared parent
+fix(templates): keep direct use local
+
+Personal copies are created only by Edit's durable fork flow.
