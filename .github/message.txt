@@ -1,1 +1,3 @@
-test(doodle): cover refresh and favorites
+fix(sync): preserve pending Plate edits
+
+Remote tombstones must not delete or acknowledge a newer durable local upsert.
