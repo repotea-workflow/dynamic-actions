@@ -1,1 +1,1 @@
-test(sync): verify disabled runtime stays local
+fix(sync): migrate legacy templates on opt-out
