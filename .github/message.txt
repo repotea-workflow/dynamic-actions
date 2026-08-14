@@ -1,1 +1,1 @@
-fix(sync): coordinate Quick Text workspace writes
+fix(sync): preserve active onboarding attempts
