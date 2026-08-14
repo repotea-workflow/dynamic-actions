@@ -1,1 +1,1 @@
-refactor(cli): split command tests
+refactor(runtime): split Slack target resolution
