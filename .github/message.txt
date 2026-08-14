@@ -1,1 +1,1 @@
-fix(sync): resume onboarding after switch
+fix(sync): fence onboarding attempt cleanup
