@@ -168,3 +168,51 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
         run: git config --global --unset-all url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf || true
+
+  ios:
+    name: iOS release check
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref_file: .github/ref.txt
+
+      # subosito/flutter-action v2
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.41.7
+          channel: stable
+          cache: true
+
+      - name: Install FVM
+        run: |
+          dart pub global activate fvm 4.1.2
+          echo "$HOME/.pub-cache/bin" >> "$GITHUB_PATH"
+
+      - name: Install the pinned Flutter SDK
+        run: fvm install
+
+      - name: Configure private GitHub dependencies
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf "https://github.com/"
+
+      - name: Install app dependencies
+        run: fvm flutter pub get
+
+      - name: Build unsigned iOS release
+        working-directory: apps/mobile
+        run: fvm flutter build ios --release --no-codesign --no-pub
+
+      - name: Remove private GitHub dependency credentials
+        if: always()
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+        run: git config --global --unset-all url."https://x-access-token:${GH_TOKEN}@github.com/".insteadOf || true
