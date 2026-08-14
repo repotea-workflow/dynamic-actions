@@ -1,1 +1,1 @@
-refactor(review): split lifecycle decisions
+refactor(postgres): split publication tests
