@@ -1,1 +1,1 @@
-fix(app): authorize sync after onboarding
+ci(app): build Android release APK

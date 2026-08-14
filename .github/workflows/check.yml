@@ -162,6 +162,10 @@ jobs:
       - name: Test app
         run: just test-mobile
 
+      - name: Build Android release APK
+        working-directory: apps/mobile
+        run: fvm flutter build apk --release --no-pub
+
       - name: Remove private GitHub dependency credentials
         if: always()
         shell: bash
