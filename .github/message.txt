@@ -1,1 +1,1 @@
-fix(id-photo): correct cleanup failure guidance
+fix(id-photo): exit invalid crop on failure
