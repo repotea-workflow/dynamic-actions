@@ -1,1 +1,1 @@
-refactor(github): split mock server
+refactor(postgres): split completion test
