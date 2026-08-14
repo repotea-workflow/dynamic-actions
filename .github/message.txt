@@ -1,1 +1,1 @@
-fix(omsj): align order file SQL parameter type (#291)
+fix(omsj): type task log ID parameter
