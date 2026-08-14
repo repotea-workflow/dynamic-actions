@@ -1,1 +1,1 @@
-test(sudoku): cover production route wiring
+test(id-photo): cover in-memory ML input
