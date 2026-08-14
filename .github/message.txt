@@ -1,4 +1,3 @@
-fix(sync): fence disposed settings sync
+fix(sync): refresh consent after card exit
 
-Reload persisted status when the card returns instead of touching a
-disposed WidgetRef after manual sync completes.
+Consent completion must refresh onboarding even when the settings card\nwas removed during the write.
