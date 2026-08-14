@@ -1,3 +1,1 @@
-fix(sync): retry deferred legacy migration
-
-Cloud-sync consent defaults off, so legacy migration may defer. Re-run the onboarding runtime after consent is enabled instead of treating the account as permanently handled.
+test(sudoku): prove immutable print replay
