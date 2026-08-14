@@ -1,3 +1,3 @@
-fix(sync): fence pulled favorite state
+fix(sync): fence preference workspace loads
 
-Reject a stale account lease before remote favorites reach the live controller.
+Ignore preference reads that finish after the active account workspace changes.
