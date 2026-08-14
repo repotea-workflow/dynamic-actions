@@ -1,1 +1,3 @@
-test(app): resolve boundary paths from cwd
+fix(id-photo): purge abandoned sessions
+
+Remove working sessions and staging on runtime initialization so private originals and intermediates do not survive process termination. Published assets remain available for record retry.
