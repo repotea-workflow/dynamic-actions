@@ -1,1 +1,1 @@
-refactor(codex): split adapter integration tests
+refactor(codeon): split issue store
