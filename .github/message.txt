@@ -1,1 +1,1 @@
-refactor(cli): split direct agent runtime
+refactor(codeon): split daemon bootstrap
