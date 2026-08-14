@@ -1,1 +1,1 @@
-refactor(picker): split runtime services
+refactor(codex): split thread protocol
