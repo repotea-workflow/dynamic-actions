@@ -1,3 +1,1 @@
-feat: add workspace selection flow
-
-Expose tenant memberships separately from App access so accounts can choose among platform and tenant workspaces.
+perf(robin): lazy-load route modules
