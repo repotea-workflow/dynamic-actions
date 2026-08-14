@@ -1,1 +1,1 @@
-refactor(tracker): split merge domain
+refactor(postgres): split attention scenarios
