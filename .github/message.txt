@@ -1,1 +1,1 @@
-refactor(postgres): split attention scenarios
+refactor(postgres): split cleanup store
