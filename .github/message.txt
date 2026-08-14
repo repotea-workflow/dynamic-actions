@@ -1,1 +1,5 @@
-fix(export): preserve specified order IDs (#290)
+feat(omsj): add batch order search tasks (#289)
+
+* feat(omsj): add batch order search tasks
+
+* fix(worker): harden OMSJ export tasks
