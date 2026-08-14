@@ -1,1 +1,1 @@
-refactor(postgres): split planning store
+refactor(github): split PR provider
