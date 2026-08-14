@@ -1,1 +1,1 @@
-test(print): cover landscape media tolerance
+test(sync): verify disabled runtime stays local
