@@ -1,1 +1,1 @@
-fix(sync): coordinate Plate workspace writes
+fix(sync): coordinate Quick Text workspace writes
