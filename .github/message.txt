@@ -1,1 +1,1 @@
-refactor(codeon): split issue finalization store
+refactor(codeon): split revision artifact
