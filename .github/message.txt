@@ -1,1 +1,1 @@
-refactor(runtime): split Slack target resolution
+refactor(postgres): split requirements row decode
