@@ -1,1 +1,1 @@
-test(id-photo): cover in-memory ML input
+fix(id-photo): lock snapshot print settings
