@@ -1,3 +1,3 @@
-ci(app): build unsigned iOS release
+fix(app): remove unused device info plugin
 
-Check native Flutter plugin compatibility on macOS before enabling ID-photo segmentation.
+The unused transitive plugin requires Xcode 26.1 and breaks the unsigned iOS release build on the macOS 15 runner.
