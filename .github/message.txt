@@ -1,1 +1,1 @@
-refactor(codeon): split issue finalization domain
+refactor(codex): split adapter integration tests
