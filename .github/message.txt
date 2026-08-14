@@ -1,1 +1,1 @@
-refactor(postgres): split PR publication store
+refactor(runtime): split delivery scenarios
