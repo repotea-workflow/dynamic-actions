@@ -1,1 +1,1 @@
-refactor(github): split review snapshot provider
+refactor(mcp): split HTTP server tests
