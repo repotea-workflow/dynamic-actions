@@ -1,1 +1,1 @@
-refactor(codeoff): split state store
+refactor(codeoff): split Slack Web API
