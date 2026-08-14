@@ -1,3 +1,3 @@
-fix(sync): bind favorite mutation trigger
+fix(sync): fence favorite workspace state
 
-Delayed account mutations must not schedule the next workspace sync runtime.
+Async favorite completions must not update the next account controller state.
