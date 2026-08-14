@@ -1,3 +1,1 @@
-refactor(management): rename URL codes to slugs
-
-Add a forward migration so databases that already applied resource codes preserve migration history and upgrade safely.
+feat(robin): standardize admin interactions
