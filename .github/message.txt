@@ -1,1 +1,1 @@
-refactor(execution): split preflight tests
+refactor(slack): split delivery tests
