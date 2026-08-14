@@ -1,1 +1,1 @@
-refactor(runtime): split turn contract tests
+refactor(slack): split sender status tests
