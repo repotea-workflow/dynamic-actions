@@ -1,1 +1,1 @@
-refactor(tracker): split revision canonicalization
+refactor(codex): split executable identity
