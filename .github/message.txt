@@ -1,1 +1,1 @@
-refactor(tracker): split reject close tests
+refactor(tracker): split reject close state
