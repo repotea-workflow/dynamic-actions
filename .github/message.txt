@@ -1,1 +1,1 @@
-refactor(codeon): split Grok operation runner
+refactor(codeon): split execution domain
