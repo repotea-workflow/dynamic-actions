@@ -1,1 +1,1 @@
-feat(cusco): improve task file details (#288)
+feat(omsj): add batch order search tasks
