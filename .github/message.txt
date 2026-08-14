@@ -1,1 +1,1 @@
-refactor(postgres): split review artifact store
+refactor(postgres): split PR publication store
