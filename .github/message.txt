@@ -1,1 +1,1 @@
-refactor(codeon): split GitHub merge tests
+refactor(codeon): split local cleanup tests
