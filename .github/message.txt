@@ -1,1 +1,1 @@
-refactor(mcp): split dispatcher tests
+refactor(codex): split JSONL transport tests
