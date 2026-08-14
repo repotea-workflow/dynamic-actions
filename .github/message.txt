@@ -1,1 +1,3 @@
-feat(robin): add workspace top bar
+feat(robin): add workspace top bar (#11)
+
+Add responsive workspace breadcrumbs, active account context, and sign-out navigation above the right-side content area.
