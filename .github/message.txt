@@ -1,1 +1,1 @@
-feat(id-photo): enable configurable segmentation
+fix(catalog): accept category parent
