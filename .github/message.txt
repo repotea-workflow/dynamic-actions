@@ -1,1 +1,4 @@
-fix(doodle): fence stale direct prints
+fix(doodle): validate pending favorites
+
+Ignore stale or crafted favorite query ids unless the loaded plaza
+still contains the requested template.
