@@ -1,1 +1,1 @@
-refactor(codeon): split daemon bootstrap
+refactor(tracker): split operation scenarios
