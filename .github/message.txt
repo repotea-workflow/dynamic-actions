@@ -1,1 +1,1 @@
-refactor(tracker): split knowledge resolver
+refactor(postgres): split registry store
