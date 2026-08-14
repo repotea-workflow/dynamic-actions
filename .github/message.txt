@@ -1,1 +1,1 @@
-refactor(postgres): split implementation artifact store
+refactor(capability): split authorization core
