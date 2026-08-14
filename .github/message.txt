@@ -1,1 +1,1 @@
-refactor(tracker): split execution fake
+refactor(postgres): split picker candidate tests
