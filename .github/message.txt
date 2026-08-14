@@ -1,1 +1,1 @@
-refactor(slack): split delivery tests
+refactor(grok): split protocol events
