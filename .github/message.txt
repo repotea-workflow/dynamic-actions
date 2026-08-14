@@ -1,1 +1,1 @@
-fix(sync): serialize local content intents
+fix(sync): coordinate Plate workspace writes
