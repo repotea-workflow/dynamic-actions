@@ -1,1 +1,3 @@
-fix(sync): preserve active onboarding attempts
+fix(sync): clear completed onboarding attempts
+
+Recover the crash window after receipt persistence by clearing the durable attempt when a valid receipt is read.
