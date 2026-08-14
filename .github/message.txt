@@ -1,1 +1,1 @@
-refactor(codeon): split reject close provider
+refactor(codeon): split git publication
