@@ -1,3 +1,3 @@
-fix(id-photo): purge orphan final assets
+fix(app): bundle Cupertino icon font
 
-Reconcile final assets against strictly decoded persisted drafts at startup. Corrupt or unknown print state cannot authorize deletion.
+Plate's drawing board uses CupertinoIcons at runtime, so release builds must package the font asset.
