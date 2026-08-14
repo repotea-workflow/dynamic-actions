@@ -1,1 +1,1 @@
-fix(codeoff): validate planned GitHub tools
+fix(codeoff): validate planned GitHub tools (#78)
