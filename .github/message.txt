@@ -1,1 +1,1 @@
-refactor(codeoff): split scheduler domain
+refactor(codeon): split issue finalization store
