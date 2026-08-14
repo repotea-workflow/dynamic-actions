@@ -1,1 +1,1 @@
-refactor(contracts): split completion instructions
+refactor(github): split mock server
