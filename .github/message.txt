@@ -1,1 +1,1 @@
-refactor(cursor): split project MCP config
+refactor(tracker): split operation input tests
