@@ -1,4 +1,4 @@
-fix(doodle): validate pending favorites
+fix(sync): fence stale failure status
 
-Ignore stale or crafted favorite query ids unless the loaded plaza
-still contains the requested template.
+Recheck the captured session before persisting a failure so a late
+network error cannot update an inactive account.
