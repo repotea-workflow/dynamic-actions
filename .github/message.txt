@@ -1,3 +1,1 @@
-feat(robin): add navigation preferences (#12)
-
-Group related navigation and persist language and theme selection.
+refactor(robin): simplify preference menus
