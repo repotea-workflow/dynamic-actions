@@ -1,1 +1,1 @@
-fix(omsj): type task log ID parameter
+fix(omsj): type task log ID parameter (#292)
