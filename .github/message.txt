@@ -1,1 +1,1 @@
-refactor(binding): split validation tests
+refactor(evidence): split collector tests
