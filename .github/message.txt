@@ -1,1 +1,1 @@
-refactor(tracker): split revision handler
+refactor(tracker): split repository rules
