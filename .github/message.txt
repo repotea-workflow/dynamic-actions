@@ -1,1 +1,1 @@
-refactor(config): split configuration domains
+refactor(tracker): split repository instructions
