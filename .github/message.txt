@@ -1,1 +1,1 @@
-refactor(postgres): split completion test
+refactor(runtime): split turn contract tests
