@@ -1,1 +1,1 @@
-refactor(agent): split core contracts
+refactor(runtime): split channel dispatch
