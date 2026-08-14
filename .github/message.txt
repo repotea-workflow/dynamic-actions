@@ -1,1 +1,1 @@
-refactor(codeon): split revision artifact
+refactor(codeoff): split scheduler CLI
