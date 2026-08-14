@@ -1,1 +1,3 @@
-fix(robin): expand nav groups from full row
+refactor(management): rename URL codes to slugs
+
+Add a forward migration so databases that already applied resource codes preserve migration history and upgrade safely.
