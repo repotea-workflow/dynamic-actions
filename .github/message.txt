@@ -1,1 +1,1 @@
-refactor(codeon): split config loading
+refactor(postgres): split planning store
