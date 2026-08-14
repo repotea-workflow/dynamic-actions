@@ -1,3 +1,1 @@
-fix(templates): keep direct use local
-
-Personal copies are created only by Edit's durable fork flow.
+test(doodle): cover refresh and favorites
