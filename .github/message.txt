@@ -1,1 +1,1 @@
-refactor(execution): split completion registry tests
+refactor(tools): split Cursor ACP probe runtime
