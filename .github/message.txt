@@ -1,1 +1,1 @@
-refactor(cursor): split preflight checks
+refactor(codex): split protocol manifest
