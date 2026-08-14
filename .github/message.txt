@@ -1,1 +1,1 @@
-refactor(agents): split cursor runtime
+refactor(config): split integration tests
