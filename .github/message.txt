@@ -1,3 +1,1 @@
-fix(sync): fence favorite workspace state
-
-Async favorite completions must not update the next account controller state.
+fix(sync): decouple legacy import consent
