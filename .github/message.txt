@@ -1,1 +1,1 @@
-fix(id-photo): keep superseded photo draft
+fix(sudoku): keep superseded print draft
