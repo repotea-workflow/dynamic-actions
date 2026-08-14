@@ -1,1 +1,1 @@
-test(sudoku): prove immutable print replay
+fix(id-photo): correct cleanup failure guidance
