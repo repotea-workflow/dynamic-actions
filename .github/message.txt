@@ -1,1 +1,1 @@
-fix(id-photo): defer final PNG decode
+fix(id-photo): remove canceled artifacts
