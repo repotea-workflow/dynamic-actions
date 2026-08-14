@@ -1,1 +1,3 @@
-perf(robin): lazy-load route modules
+feat(management): add resource URL codes
+
+Backfill stable tenant and App codes for readable URLs while preserving legacy numeric ID access.
