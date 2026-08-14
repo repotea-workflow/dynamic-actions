@@ -1,1 +1,1 @@
-refactor(codeon): split agent dispatch store
+refactor(codeon): split issue finalization domain
