@@ -1,1 +1,1 @@
-refactor(codeon): split git publication
+refactor(runtime): split scheduled delivery
