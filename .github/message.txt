@@ -1,3 +1,3 @@
-fix(robin): widen admin content area (#15)
+feat: add workspace selection flow
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Expose tenant memberships separately from App access so accounts can choose among platform and tenant workspaces.
