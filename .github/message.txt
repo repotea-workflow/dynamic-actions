@@ -1,4 +1,4 @@
-fix(sync): rerun after trigger rebind
+fix(sync): fence disposed settings sync
 
-A lease refresh can replace the trigger owner while an old run is active.
-Queue the current callback instead of surfacing the stale failure.
+Reload persisted status when the card returns instead of touching a
+disposed WidgetRef after manual sync completes.
