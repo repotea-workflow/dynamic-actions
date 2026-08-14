@@ -1,5 +1,1 @@
-feat(omsj): add batch order search tasks (#289)
-
-* feat(omsj): add batch order search tasks
-
-* fix(worker): harden OMSJ export tasks
+fix(omsj): align order file SQL parameter type
