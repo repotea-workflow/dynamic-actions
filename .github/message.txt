@@ -1,1 +1,1 @@
-refactor(codeon): split runtime and MCP modules
+refactor(codeoff): split CLI runtime modules
