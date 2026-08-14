@@ -1,3 +1,1 @@
-feat(robin): add API error diagnostics (#10)
-
-Aggregate API failures into a single Astryx notification with redacted, navigable diagnostics that reset at session boundaries.
+feat(robin): add workspace top bar
