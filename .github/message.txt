@@ -1,1 +1,1 @@
-refactor(codex): split thread protocol
+refactor(daemon): split picker runtime
