@@ -1,1 +1,1 @@
-refactor(postgres): split reject close tests
+refactor(config): split configuration domains
