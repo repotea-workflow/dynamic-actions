@@ -1,1 +1,1 @@
-refactor(capability): split authorization core
+refactor(cursor): split project MCP config
