@@ -1,1 +1,3 @@
-refactor(robin): simplify preference menus
+refactor(robin): simplify preference menus (#13)
+
+Use plain Astryx menu items instead of radio-style selectors.
