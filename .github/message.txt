@@ -1,1 +1,1 @@
-refactor(daemon): split picker runtime
+refactor(planning): split validation tests
