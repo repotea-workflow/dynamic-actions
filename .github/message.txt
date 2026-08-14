@@ -1,1 +1,1 @@
-test(sync): cover Plate import collision
+test(sudoku): cover production route wiring
