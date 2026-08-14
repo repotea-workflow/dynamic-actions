@@ -1,1 +1,1 @@
-refactor(grok): split protocol events
+refactor(tracker): split revision canonicalization
