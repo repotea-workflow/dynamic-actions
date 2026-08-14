@@ -1,1 +1,1 @@
-refactor(codeoff): split Slack dispatch tests
+refactor(codeoff): split scheduler domain
