@@ -1,1 +1,1 @@
-refactor(config): split loading tests
+refactor(mcp): split dispatcher tests
