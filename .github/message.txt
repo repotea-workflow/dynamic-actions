@@ -1,4 +1,4 @@
-fix(sync): fence stale failure status
+fix(sync): rerun after trigger rebind
 
-Recheck the captured session before persisting a failure so a late
-network error cannot update an inactive account.
+A lease refresh can replace the trigger owner while an old run is active.
+Queue the current callback instead of surfacing the stale failure.
