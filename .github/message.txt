@@ -1,1 +1,1 @@
-refactor(tracker): split reject close state
+refactor(postgres): split operation input store
