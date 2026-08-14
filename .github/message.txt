@@ -1,3 +1,3 @@
-fix(sync): bind preference write workspace
+fix(sync): bind favorite replacement workspace
 
-Queued settings must keep the journal captured when the user changed them.
+Queued account snapshots must persist to the store captured when they arrived.
