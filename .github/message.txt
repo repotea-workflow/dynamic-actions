@@ -1,1 +1,1 @@
-refactor(github): split PR provider
+refactor(cli): split observability
