@@ -1,1 +1,1 @@
-fix(sudoku): keep superseded print draft
+fix(doodle): fence disposed catalog loads
