@@ -1,1 +1,1 @@
-refactor(cursor): split adapter facade
+refactor(codeon): split reject close store
