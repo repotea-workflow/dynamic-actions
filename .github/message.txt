@@ -1,1 +1,1 @@
-fix(id-photo): cancel late native failures
+fix(id-photo): preserve retry snapshots
