@@ -1,1 +1,1 @@
-refactor(postgres): split operation store tests
+refactor(codeon): split GitHub merge tests
