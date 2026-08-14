@@ -1,1 +1,1 @@
-build(app): set initial release version
+fix(app): authorize sync after onboarding
