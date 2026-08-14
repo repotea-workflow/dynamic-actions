@@ -1,1 +1,1 @@
-agt/wide-admin-content
+main
