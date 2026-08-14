@@ -1,1 +1,9 @@
-fix(robin): use admin local login alias
+feat(robin): add local admin login alias (#14)
+
+* feat(robin): add dev admin username
+
+* fix(robin): use admin local login alias
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
