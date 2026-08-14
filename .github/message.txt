@@ -1,1 +1,3 @@
-fix(id-photo): lock snapshot print settings
+fix(sync): persist legacy Plate mutation IDs
+
+Upgrade schema-v1 tombstones before network delivery so retries reuse the same idempotency key after a lost response.
