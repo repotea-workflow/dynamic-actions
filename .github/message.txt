@@ -1,3 +1,1 @@
-fix(sync): preserve pending Plate edits
-
-Remote tombstones must not delete or acknowledge a newer durable local upsert.
+test(sync): cover Plate import collision
