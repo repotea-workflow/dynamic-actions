@@ -1,1 +1,1 @@
-fix(doodle): fence disposed catalog loads
+fix(doodle): discard stale material imports
