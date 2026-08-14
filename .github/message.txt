@@ -1,1 +1,1 @@
-refactor(commit): split preparation tests
+refactor(binding): split validation tests
