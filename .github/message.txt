@@ -1,1 +1,1 @@
-refactor(merge): split durable store
+refactor(postgres): split operation store tests
