@@ -1,1 +1,1 @@
-style(app): satisfy Dart formatter
+test(app): resolve boundary paths from cwd
