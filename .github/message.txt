@@ -1,1 +1,1 @@
-refactor(codeon): split issue store
+refactor(cursor): split adapter facade
