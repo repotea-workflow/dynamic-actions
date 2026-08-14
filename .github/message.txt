@@ -1,1 +1,1 @@
-ci(app): build Android release APK
+feat(id-photo): enable configurable segmentation
