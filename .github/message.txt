@@ -1,1 +1,1 @@
-fix(id-photo): remove canceled artifacts
+style(app): satisfy Dart formatter
