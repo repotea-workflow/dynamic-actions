@@ -1,1 +1,1 @@
-refactor(codeon): split reject close store
+refactor(codeon): split review domain
