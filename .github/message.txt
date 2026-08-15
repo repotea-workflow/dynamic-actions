@@ -1,1 +1,1 @@
-test(codeon): cover landing recovery attention
+fix(codeon): honor required Codex goals
