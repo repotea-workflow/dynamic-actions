@@ -1,1 +1,1 @@
-fix(codeoff): preserve valid DM context (#87)
+fix(codeoff): expose planned Slack tools
