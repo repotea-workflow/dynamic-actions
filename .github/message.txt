@@ -1,1 +1,1 @@
-fix(codeon): cancel failed agent attempts
+fix(codeon): apply Native Goal sandbox roots
