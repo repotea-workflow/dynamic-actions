@@ -1,3 +1,3 @@
-feat: complete remaining app core features (#109)
+fix(migrations): preserve MySQL history
 
-Complete the GP-M821 App feature waves covering template workflows, doodle materials, account sync/onboarding, Sudoku, and the local ID-photo print chain. Validation and remaining device/Staging risks are recorded in the PR.
+Restore the applied v76 checksum and move learning-material reference support to v80 so shared database upgrades do not fail with VersionMismatch(76).
