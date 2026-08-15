@@ -1,3 +1,3 @@
-refactor(state): split delivery migration
+refactor: split oversized source files (#82)
 
-Preserve the published SQLx checksum by assembling semantic fragments at runtime and materializing the historical filename in migration fixtures.
+Split handwritten source, test, script, and migration files by semantic responsibility while preserving existing behavior and public entrypoints.
