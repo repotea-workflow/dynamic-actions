@@ -1,1 +1,1 @@
-fix(codeon): honor required Codex goals
+fix(codeon): set goals before dispatch
