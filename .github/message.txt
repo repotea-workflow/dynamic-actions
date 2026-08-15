@@ -1,1 +1,3 @@
-fix(codeon): bound Grok completion payloads
+fix(codeon): authorize linked Git metadata
+
+Add a versioned policy root for the canonical Git common directory so sandboxed commit phases can write linked-worktree metadata and create signed commits.
