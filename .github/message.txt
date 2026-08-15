@@ -1,3 +1,3 @@
-feat(swan): add compiled component bundles
+feat(api): publish split OpenAPI specs
 
-Keep runtime Stac payloads limited to components selected by each Shell binary.
+Replace checked-in OpenAPI artifacts with Hawk management/runtime endpoints and generated Robin/Swan clients.
