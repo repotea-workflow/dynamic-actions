@@ -1,3 +1,1 @@
-fix(codeon): recover signing preparation
-
-Missing signing configuration previously stranded attempts before any operation existed. Retry before Git mutation and requeue exact restart-safe recoveries on the same issue.
+fix(codeon): inline planning tool schema
