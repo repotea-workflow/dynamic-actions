@@ -1,1 +1,1 @@
-fix(codeon): bind goal callback tools
+fix(codeon): observe goals without blocking
