@@ -1,1 +1,1 @@
-fix(codeon): allow failed agent attempt cancellation
+fix(codeon): register goal callbacks before activation
