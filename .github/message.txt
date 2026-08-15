@@ -1,3 +1,1 @@
-fix(migrations): preserve MySQL history
-
-Restore the applied v76 checksum and move learning-material reference support to v80 so shared database upgrades do not fail with VersionMismatch(76).
+test(migrations): track MySQL v80 tail
