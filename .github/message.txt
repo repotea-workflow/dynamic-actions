@@ -1,1 +1,1 @@
-fix(codeoff): expose planned Slack tools (#88)
+fix(codeoff): guide rich Slack planning
