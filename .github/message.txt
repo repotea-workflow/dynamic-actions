@@ -1,1 +1,3 @@
 fix(codeoff): guide rich Slack planning
+
+Guide Rich Message selection across supported Slack conversations while preserving capability filtering and obligation enforcement.
