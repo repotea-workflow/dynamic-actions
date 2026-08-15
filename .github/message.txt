@@ -1,1 +1,1 @@
-fix(codeon): activate goals after input
+fix(codeon): bind goal callback tools
