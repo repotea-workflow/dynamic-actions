@@ -1,3 +1,4 @@
-fix(codeoff): bound completion recovery (#85)
+feat(codeoff): refine Slack DM task flow
 
-Allow recovery to run past the initial response SLA while bounding its fresh provider turn to 60 seconds.
+- hide plan cards for simple turns
+- route overlapping DM work to per-message threads
