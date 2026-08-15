@@ -1,5 +1,4 @@
-feat(swan): add compiled component bundles (#18)
+Merge remote-tracking branch 'origin/main' into agt/admin-content-iteration
 
-Keep runtime Stac payloads limited to components selected by each Shell binary.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+# Conflicts:
+#	waterfowl/swan/apps/shell/pubspec.yaml
