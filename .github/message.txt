@@ -1,1 +1,1 @@
-fix(codeon): inline planning tool schema
+fix(codeon): expose planning completion contract
