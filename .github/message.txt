@@ -1,1 +1,1 @@
-fix(codeon): publish revision conversations
+fix(codeon): clarify completion contract errors
