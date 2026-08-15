@@ -1,1 +1,1 @@
-fix(codeon): expose planning completion contract
+fix(codeon): disclose planning invariants
