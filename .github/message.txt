@@ -1,1 +1,3 @@
-fix(codeon): disclose planning invariants
+fix(codeon): preserve published review lineage
+
+Treat a CodeOn-published PR as the live Review candidate while retaining its originating Implementation publication as Revision ancestry.
