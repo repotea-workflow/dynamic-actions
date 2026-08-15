@@ -1,4 +1,4 @@
-feat(codeoff): refine Slack DM task flow
+feat(codeoff): refine Slack DM task flow (#86)
 
 - hide plan cards for simple turns
 - route overlapping DM work to per-message threads
