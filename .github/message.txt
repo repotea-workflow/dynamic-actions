@@ -1,1 +1,5 @@
-chore(dev): align management origin
+feat(swan): add compiled component bundles (#18)
+
+Keep runtime Stac payloads limited to components selected by each Shell binary.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
