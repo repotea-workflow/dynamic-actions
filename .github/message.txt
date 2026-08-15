@@ -1,3 +1,3 @@
-fix(codeon): preserve Git account config
+fix(codeon): recover signing preparation
 
-Materialization clears ambient secrets but Git still needs HOME to resolve includeIf account identity and signing authority before agent work.
+Missing signing configuration previously stranded attempts before any operation existed. Retry before Git mutation and requeue exact restart-safe recoveries on the same issue.
