@@ -1,1 +1,3 @@
-fix(slack): encode external upload request (#91)
+feat(codeoff): add principal authorization
+
+Persist actor grants and immutable turn snapshots across planning and execution.\n\nEnforce exact GitHub MCP scopes, repository arguments, and Owner approvals.\nAdd durable channel authorization and approval continuation state.
