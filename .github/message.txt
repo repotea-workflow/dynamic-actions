@@ -1,1 +1,1 @@
-fix(codeon): accept bounded successful verification
+fix(codeon): resolve canonical review threads
