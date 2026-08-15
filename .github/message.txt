@@ -1,1 +1,1 @@
-refactor(slack): split sender status tests
+refactor(mcp): split catalog config
