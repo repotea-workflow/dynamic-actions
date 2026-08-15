@@ -1,1 +1,3 @@
-refactor(mcp): split catalog config
+refactor(state): split delivery migration
+
+Preserve the published SQLx checksum by assembling semantic fragments at runtime and materializing the historical filename in migration fixtures.
