@@ -1,1 +1,1 @@
-fix(codeoff): expose planned Slack tools
+fix(codeoff): expose planned Slack tools (#88)
