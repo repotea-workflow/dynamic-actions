@@ -1,3 +1,1 @@
-fix(codeoff): guide rich Slack planning
-
-Guide Rich Message selection across supported Slack conversations while preserving capability filtering and obligation enforcement.
+fix(codeoff): replay planned action arguments
