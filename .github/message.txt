@@ -1,1 +1,1 @@
-fix(codeon): keep paused goals inspectable
+fix(codeon): allow failed agent attempt cancellation
