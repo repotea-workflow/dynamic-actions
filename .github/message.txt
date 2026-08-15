@@ -1,1 +1,3 @@
-fix(codeon): apply Native Goal sandbox roots
+fix(codeon): authorize linked worktree Git dir
+
+Codex protects the resolved linked-worktree metadata as a narrower read-only path, so authorizing only the common Git directory still blocks signed commits. Freeze both exact metadata roots without broadening source access.
