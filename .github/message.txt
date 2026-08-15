@@ -1,3 +1,1 @@
-feat(api): publish split OpenAPI specs
-
-Replace checked-in OpenAPI artifacts with Hawk management/runtime endpoints and generated Robin/Swan clients.
+chore(dev): align management origin
