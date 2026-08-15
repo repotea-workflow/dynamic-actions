@@ -1,1 +1,1 @@
-fix(codeon): observe goals without blocking
+fix(codeon): keep paused goals inspectable
