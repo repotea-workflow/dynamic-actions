@@ -1,1 +1,1 @@
-fix(codeon): persist native goal threads
+fix(codeon): activate goals after input
