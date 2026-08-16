@@ -1,3 +1,1 @@
-fix(dynamic): close runtime execution gaps
-
-Align CEL validation and execution contracts, wire authenticated DataSource runtime context, and enforce release/data-source lifecycle. Keep runtime database grants compatible with release publication.
+fix(osprey): generate contracts from schemas
