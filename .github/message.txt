@@ -1,1 +1,1 @@
-Merge branch 'main' into agt/aviary-dynamic-platform
+feat(swan): version compiled capabilities
