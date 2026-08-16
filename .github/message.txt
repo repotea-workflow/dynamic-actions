@@ -1,1 +1,1 @@
-fix(codeon): close linked GitHub issues
+fix(codeon): fail rejected agent preflight
