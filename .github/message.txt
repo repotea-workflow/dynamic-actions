@@ -1,3 +1,3 @@
-fix(hawk): trust component contract digests
+fix(dynamic): scope catalogs and validate sources
 
-Resolve component contracts from an immutable artifact and keep its digest in the catalog. Make database suites fail fast when their required connection settings are absent.
+Add App-scoped component contracts and DataSource catalog state so Robin and Hawk never invent or publish unresolved references.
