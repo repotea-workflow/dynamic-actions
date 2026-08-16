@@ -1,3 +1,3 @@
-fix(codeon): accept merged upstream history
+fix(codeon): permit prepared merge commits
 
-Collect Revision-owned commits along first-parent history so ordinary upstream commits merged for conflict resolution are not misclassified as CodeOn commit evidence.
+Keep first-parent preparation and metadata authority strict while allowing additional parents that record conflict-resolution merges.
