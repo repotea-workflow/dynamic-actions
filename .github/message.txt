@@ -1,3 +1,1 @@
-fix(codeon): retain reviewed feedback baseline
-
-Reuse feedback sealed by Revision final snapshots so LandingPreflight does not reclassify handled review activity as late feedback.
+fix(codeon): close linked GitHub issues
