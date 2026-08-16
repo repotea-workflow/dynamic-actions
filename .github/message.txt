@@ -1,5 +1,1 @@
-feat(dynamic): add safe runtime execution
-
-Evaluate versioned expressions and actions only from the compiled capability set, and resolve scoped data sources without exposing network credentials in releases.
-
-Includes the Hawk data-source migration and generated management/runtime clients.
+feat(robin): add catalog and app studio
