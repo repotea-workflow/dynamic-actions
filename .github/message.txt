@@ -1,3 +1,1 @@
-fix(contract): reject null artifact kind
-
-Keep generated Dart decoding aligned with Rust and OpenAPI by defaulting only when artifactKind is absent.
+Merge remote-tracking branch 'origin/agt/aviary-dynamic-platform-pr3' into agt/aviary-dynamic-platform-pr4
