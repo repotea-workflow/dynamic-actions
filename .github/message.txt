@@ -1,3 +1,3 @@
-fix(dynamic): bind preview transport origin
+fix(dynamic): harden release delivery
 
-Keep preview out of store builds and move compositions from URLs to a versioned, origin-checked message channel.
+Compile releases from immutable compositions, persist crash-safe slots, and keep release storage aligned with the existing schema and runtime permission boundaries.
