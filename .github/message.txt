@@ -1,1 +1,1 @@
-feat(robin): add catalog and app studio
+feat(dynamic): add release compiler preview
