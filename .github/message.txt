@@ -1,5 +1,5 @@
-fix(dynamic): close stacked review gaps
+fix(db): avoid migration version collisions
 
-Align PR26 with the stacked contract, runtime, release, and build reviews.
+Keep versioned migration identifiers unique across the stacked PR history so SQLx can validate and replay the ledger.
 
-Use trusted app build identity, signer-derived verification, stable artifact digests, and strict composition validation across the release path.
+Refs #25
