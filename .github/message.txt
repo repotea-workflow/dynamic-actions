@@ -1,3 +1,1 @@
-fix(renderer): default debug overlay to off (#191)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(plate): expose public preset presentation commands
