@@ -1,1 +1,1 @@
-fix(codeon): accept internal revision notes
+fix(codeon): restore detached review branches
