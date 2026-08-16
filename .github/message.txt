@@ -1,5 +1,1 @@
-fix(codeon): recover conflict revisions
-
-- accept prepared merge ancestry and history-only conflict fixes
-- replay exact legacy artifact-validation failures
-- permit failed-to-succeeded recovery lifecycle events
+fix(codeoff): join duplicate Slack sources
