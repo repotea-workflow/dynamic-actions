@@ -1,3 +1,1 @@
-feat(hawk): add dynamic app catalog
-
-Add Osprey-validated component versions, capability sets, and immutable composition versions with scoped management APIs.
+feat(dynamic): add signed release delivery
