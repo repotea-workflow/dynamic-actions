@@ -1,3 +1,5 @@
-fix(hawk): hold build leases through cleanup
+feat(dynamic): add safe runtime execution
 
-Keep the heartbeat alive until cleanup and terminal persistence finish so stale recovery cannot reclaim a job during its finalization window.
+Evaluate versioned expressions and actions only from the compiled capability set, and resolve scoped data sources without exposing network credentials in releases.
+
+Includes the Hawk data-source migration and generated management/runtime clients.
