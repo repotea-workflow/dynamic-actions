@@ -1,1 +1,3 @@
-fix(codeon): unblock revision recovery
+feat(scheduler): add delegated GitHub runs
+
+Persist exact GitHub authorization ceilings and per-attempt action ledger entries, then intersect them with the owner current grants before scheduled execution. Add Slack response digest v2 so broadcast intent is part of the durable identity.
