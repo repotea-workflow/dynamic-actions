@@ -1,3 +1,3 @@
-fix(build): close binary build review gaps
+fix(osprey): align binary build validation
 
-Use registry metadata and signer-derived values for publishable builds, preflight duplicate migration versions, and expose the metadata update API.
+Keep Rust and Dart binary-build errors and selection rules in parity, and exercise the canonical component contract in the database test.
