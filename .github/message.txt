@@ -1,1 +1,3 @@
-fix(codeoff): join duplicate Slack sources
+fix(codeoff): dedupe Slack channel responses
+
+Pair duplicate Slack source events while preserving durable completion bindings.
