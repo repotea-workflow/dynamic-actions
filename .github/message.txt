@@ -1,3 +1,5 @@
-feat(codeoff): add synthetic Slack E2E (#96)
+fix(codeon): recover conflict revisions
 
-Add the supported Slack-visible synthetic ingress smoke command, live-state safety checks, regression coverage, and the related authorization and E2E runbooks.
+- accept prepared merge ancestry and history-only conflict fixes
+- replay exact legacy artifact-validation failures
+- permit failed-to-succeeded recovery lifecycle events
