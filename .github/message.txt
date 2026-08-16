@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/agt/aviary-dynamic-platform-pr3' into agt/aviary-dynamic-platform-pr4
+fix(build): harden sandbox inputs
+
+Require Bubblewrap and explicit FVM paths, isolate writable SDK cache, stabilize idempotent builds, and migrate iOS bundle IDs off underscores.
