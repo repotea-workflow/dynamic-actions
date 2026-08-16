@@ -1,3 +1,1 @@
-fix(osprey): enforce contract generation
-
-Drive generated targets from a normalized schema identity, reject union drift, and exercise the shared Rust/Dart conformance manifest.
+fix(stac): validate declared child slots
