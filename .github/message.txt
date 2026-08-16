@@ -1,5 +1,3 @@
-fix(db): avoid migration version collisions
+fix(build): close binary build review gaps
 
-Keep versioned migration identifiers unique across the stacked PR history so SQLx can validate and replay the ledger.
-
-Refs #25
+Use registry metadata and signer-derived values for publishable builds, preflight duplicate migration versions, and expose the metadata update API.
