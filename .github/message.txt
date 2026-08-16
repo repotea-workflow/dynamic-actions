@@ -1,3 +1,1 @@
-fix(codeon): stabilize review repair flow
-
-Persist LandingPreflight blockers so merge conflicts, failed checks, and unresolved threads return through Review and Revision. Bind review replies and squash metadata to verified PR and commit authority, and requeue cancelled attempts on the same Issue and PR.
+fix(codeon): unblock revision recovery
