@@ -1,3 +1,3 @@
-fix(codeoff): dedupe Slack channel responses
+fix(codeon): retry read-only recovery
 
-Pair duplicate Slack source events while preserving durable completion bindings.
+Permit operator recheck to replace an unknown-outcome Planning or Review dispatch without changing operation authority. Writable operations remain fail-closed, and PostgreSQL receipts guard the recovery transition.
