@@ -1,1 +1,3 @@
-fix(codeon): restore detached review branches
+fix(codeon): accept merged upstream history
+
+Collect Revision-owned commits along first-parent history so ordinary upstream commits merged for conflict resolution are not misclassified as CodeOn commit evidence.
