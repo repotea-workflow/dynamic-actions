@@ -1,3 +1,1 @@
-fix(codeon): permit prepared merge commits
-
-Keep first-parent preparation and metadata authority strict while allowing additional parents that record conflict-resolution merges.
+feat(codeoff): add synthetic Slack E2E
