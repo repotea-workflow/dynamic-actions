@@ -1,3 +1,1 @@
-feat(scheduler): add delegated GitHub runs
-
-Persist exact scheduled GitHub authorization ceilings, per-attempt action ledger fencing, and Slack response digest v2. Full local regression and independent review passed.
+fix(codeon): preserve PR authority across revisions
