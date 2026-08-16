@@ -1,1 +1,1 @@
-fix(codeon): preserve PR authority across revisions
+fix(codeon): accept internal revision notes
