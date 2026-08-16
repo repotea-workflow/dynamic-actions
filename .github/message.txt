@@ -1,1 +1,5 @@
-merge: propagate contract generation fixes
+fix(dynamic): close stacked review gaps
+
+Align PR26 with the stacked contract, runtime, release, and build reviews.
+
+Use trusted app build identity, signer-derived verification, stable artifact digests, and strict composition validation across the release path.
