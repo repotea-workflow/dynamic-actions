@@ -1,1 +1,1 @@
-fix(omsj): type task log ID parameter (#292)
+fix(omsk): sync product tax rate by tax number
