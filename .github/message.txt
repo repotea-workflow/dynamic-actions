@@ -1,3 +1,1 @@
-Revert "ci(codeoff): migrate scheduled GitHub read (#102)"
-
-This reverts commit 02c826ced084c66328f0c94ac339fab55e4fb8f6.
+revert: remove scheduler config migration (#103)
