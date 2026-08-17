@@ -1,1 +1,1 @@
-feat(omsj): add search-based batch printing
+feat(omsj): add search-based batch printing (#294)
