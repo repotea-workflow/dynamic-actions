@@ -1,3 +1,1 @@
-feat(codeoff): add scheduled GitHub write controls (#99)
-
-Add a separate default-off scheduled write switch, exact server-side tool policies, current remote catalog compatibility, and a guarded live scheduled GitHub E2E command.
+ci(codeoff): enable scheduled GitHub read
