@@ -1,1 +1,1 @@
-refactor(release): split canonical support
+refactor(build): split config and profile
