@@ -1,0 +1,208 @@
+name: "[nib] Check"
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  check-java:
+    name: Check nib-java
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/nib
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Checkout pxlab
+        uses: actions/checkout@v6
+        with:
+          repository: boxliy/pxlab
+          ref: main
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          path: pxlab
+
+      - name: Link pxlab workspace dependency
+        run: ln -s "$GITHUB_WORKSPACE/pxlab" "$GITHUB_WORKSPACE/../pxlab"
+
+      - name: Setup Java & Maven
+        uses: s4u/setup-maven-action@v1.19.0
+        with:
+          java-version: 17
+          maven-version: 3.9.11
+          checkout-enabled: false
+
+      - name: Build & test
+        working-directory: sdk/java
+        run: mvn clean verify
+
+  check-dart:
+    name: Check nib-dart
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/nib
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Checkout pxlab
+        uses: actions/checkout@v6
+        with:
+          repository: boxliy/pxlab
+          ref: main
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          path: pxlab
+
+      - name: Configure Git token for private dependencies
+        env:
+          GH_TOKEN: "${{ secrets.GH_TOKEN_0X128BIT }}"
+        run: git config --global url."https://x-access-token:${GH_TOKEN}@github.com/boxliy/".insteadOf "https://github.com/boxliy/"
+
+      - name: Setup Dart
+        uses: dart-lang/setup-dart@v1
+        with:
+          sdk: stable
+
+      - name: Install melos
+        run: dart pub global activate melos
+
+      - name: Install dependencies
+        working-directory: sdk/dart
+        run: dart pub get
+
+      - name: Analyze
+        working-directory: sdk/dart
+        run: dart pub global run melos exec --ignore="nib_bluetooth_ble,nib_bluetooth_classic" -- dart analyze .
+
+      - name: Test
+        working-directory: sdk/dart
+        run: dart pub global run melos exec --ignore="nib_bluetooth_ble,nib_bluetooth_classic" --dir-exists=test -- dart test
+
+  check-flutter:
+    name: Check nib-flutter
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/nib
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: "3.x"
+          channel: stable
+
+      - name: Install dependencies (nib_bluetooth_ble)
+        working-directory: sdk/dart/device/nib_bluetooth_ble
+        run: flutter pub get
+
+      - name: Analyze (nib_bluetooth_ble)
+        working-directory: sdk/dart/device/nib_bluetooth_ble
+        run: flutter analyze .
+
+      - name: Install dependencies (nib_bluetooth_classic)
+        working-directory: sdk/dart/device/nib_bluetooth_classic
+        run: flutter pub get
+
+      - name: Analyze (nib_bluetooth_classic)
+        working-directory: sdk/dart/device/nib_bluetooth_classic
+        run: flutter analyze .
+
+  check-ts:
+    name: Check nib-ts
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/nib
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Checkout pxlab
+        uses: actions/checkout@v6
+        with:
+          repository: boxliy/pxlab
+          ref: main
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          path: pxlab
+
+      - name: Link pxlab workspace dependency
+        run: ln -s "$GITHUB_WORKSPACE/pxlab" "$GITHUB_WORKSPACE/../pxlab"
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Enable pnpm
+        run: corepack enable pnpm
+
+      - name: Install pxlab dependencies
+        working-directory: ../pxlab/ts
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Install dependencies
+        working-directory: sdk/ts
+        run: pnpm install --no-frozen-lockfile
+
+      - name: Build
+        working-directory: sdk/ts
+        run: |
+          pnpm --filter @nib/core run build
+          pnpm run build
+
+      - name: Test
+        working-directory: sdk/ts
+        run: pnpm run test
+
+  check-rust:
+    name: Check nib-rust
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/nib
+          token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
+
+      - name: Install Rust
+        uses: dtolnay/rust-toolchain@stable
+
+      - name: Install Rust system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes libdbus-1-dev pkg-config
+
+      - name: Install just
+        uses: taiki-e/install-action@just
+
+      - name: Run Rust checks
+        run: |
+          just test-rust
+          just test-rust-usb
+          just test-rust-classic
+          just test-rust-ble
+          just package-rust
