@@ -1,3 +1,3 @@
-feat(codeoff): add scheduled GitHub E2E
+feat(codeoff): add scheduled GitHub write controls (#99)
 
-Verify a live read-only scheduled run and its provider action ledger through one guarded command. Require explicit live confirmation and an exact configured Owner.
+Add a separate default-off scheduled write switch, exact server-side tool policies, current remote catalog compatibility, and a guarded live scheduled GitHub E2E command.
