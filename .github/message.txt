@@ -1,3 +1,3 @@
-fix(signing): normalize signed zero
+fix(audit): record artifact downloads
 
-PostgreSQL JSONB rewrites -0.0 during storage. Normalize both zero forms so Release signatures remain stable after a database round trip.
+Artifact reads enforce App scope but previously left no evidence of successful downloads. Record build and target context, and align the acceptance documentation with verified platform evidence.
