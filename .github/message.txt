@@ -1,1 +1,1 @@
-ci(codeoff): enable scheduled GitHub read
+ci(codeoff): enable scheduled GitHub read (#100)

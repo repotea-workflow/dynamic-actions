@@ -1,1 +1,1 @@
-agt/enable-scheduled-github-read
+main
