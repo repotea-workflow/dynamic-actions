@@ -144,52 +144,6 @@ jobs:
           test "$actual_full" = "$image_sha"
           test "$actual_full" = "$remote_main"
 
-      - name: Checkout GitOps repository
-        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-        with:
-          repository: repotea-workflow/gitops-fes
-          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
-          path: gitops-repo
-          fetch-depth: 0
-
-      - name: Enable scheduled GitHub read capabilities
-        shell: bash
-        run: |
-          set -euo pipefail
-
-          app_dir="gitops-repo/argocd/infra/codeoff-de0"
-          mapfile -t config_files < <(
-            grep -RIl \
-              --include='*.toml' \
-              --include='*.yaml' \
-              --include='*.yml' \
-              'scheduled_github_capabilities_enabled' \
-              "$app_dir"
-          )
-
-          if [ "${#config_files[@]}" -ne 1 ]; then
-            echo "Expected exactly one Codeoff scheduler configuration file; found ${#config_files[@]}." >&2
-            exit 1
-          fi
-
-          config_file="${config_files[0]}"
-          read_setting_count="$(grep -Ec '^[[:space:]]*scheduled_github_capabilities_enabled[[:space:]]*=[[:space:]]*(true|false)[[:space:]]*$' "$config_file" || true)"
-          if [ "$read_setting_count" -ne 1 ]; then
-            echo "Expected exactly one scheduled GitHub read setting." >&2
-            exit 1
-          fi
-
-          if grep -REq '^[[:space:]]*scheduled_github_write_capabilities_enabled[[:space:]]*=[[:space:]]*true[[:space:]]*$' "$app_dir"; then
-            echo "Scheduled GitHub writes must remain disabled during the read rollout." >&2
-            exit 1
-          fi
-
-          perl -0pi -e \
-            's/(^[ \t]*scheduled_github_capabilities_enabled[ \t]*=[ \t]*)false[ \t]*$/${1}true/m' \
-            "$config_file"
-
-          grep -Eq '^[[:space:]]*scheduled_github_capabilities_enabled[[:space:]]*=[[:space:]]*true[[:space:]]*$' "$config_file"
-
       - name: Deploy
         uses: repotea-workspace/kangumi/github-actions/gitops-deploy@e265ebca9b4a93aaf804be57c2687554dcc49dc7
         with:

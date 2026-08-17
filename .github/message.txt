@@ -1,1 +1,3 @@
-ci(codeoff): enable scheduled GitHub read (#100)
+Revert "ci(codeoff): enable scheduled GitHub read (#100)"
+
+This reverts commit 8bb05ddcbfc643a5093d95a5a82d04047c289250.
