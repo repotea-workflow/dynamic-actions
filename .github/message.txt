@@ -1,3 +1,3 @@
-feat(mallard): add browser validation app
+fix(swan): clear context on session loss
 
-Keep browser validation outside the Android/iOS Swan shell while exercising the same renderer, expression, data source, and action boundaries.
+Discard cached permission and feature context whenever Hawk revokes or invalidates the runtime session so stale user state cannot continue driving expressions.
