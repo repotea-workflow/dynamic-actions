@@ -1,1 +1,1 @@
-feat(omsj): add search-based batch printing (#294)
+fix(print): harden pending order loading
