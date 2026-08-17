@@ -1,1 +1,3 @@
-fix(codeoff): repair owner GitOps migration (#106)
+fix(codex): initialize turn MCP catalogs
+
+Wait for invocation-scoped MCP servers to load their tool catalogs before starting the Codex thread. This prevents scheduled runs from completing without their authorized tools.
