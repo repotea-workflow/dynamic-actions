@@ -1,1 +1,1 @@
-fix(print): harden pending order loading
+fix(print): harden pending order loading (#295)
