@@ -1,3 +1,3 @@
-chore(ci): satisfy workspace clippy
+fix(codex): initialize turn MCP catalogs (#107)
 
-Rust 1.97 enables additional default Clippy warnings that block the shared check workflow. Keep existing APIs and test scenarios intact while making lint-safe equivalent expressions.
+Initialize invocation-scoped MCP tool catalogs before starting Codex turns and restore Rust 1.97 workspace Clippy compatibility.
