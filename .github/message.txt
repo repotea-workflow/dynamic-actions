@@ -1,3 +1,1 @@
-fix(codex): initialize turn MCP catalogs (#107)
-
-Initialize invocation-scoped MCP tool catalogs before starting Codex turns and restore Rust 1.97 workspace Clippy compatibility.
+fix(scheduler): clarify MCP tool access
