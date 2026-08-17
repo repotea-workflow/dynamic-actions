@@ -1,3 +1,3 @@
-fix(codeon): stabilize terminal execution flow (#98)
+feat(codeoff): add scheduled GitHub writes
 
-Stabilize provider execution, review and revision recovery, completion contracts, terminal cleanup, and safe read-only operation retry.
+Keep scheduled mutations behind an independent default-off switch and an exact server-side allowlist. Reject destructive upstream annotations and preserve action-ledger replay fencing.
