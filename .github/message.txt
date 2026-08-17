@@ -1,1 +1,3 @@
-docs(openwiki): record module convergence
+fix(deploy): harden release rollout
+
+Prevent duplicate Theme resources during upgrades and make the DB gate apply pending migrations before testing. Restrict bootstrap signing to development/test and reject incomplete publishable signing or insecure non-development origins.
