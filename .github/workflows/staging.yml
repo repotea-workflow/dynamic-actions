@@ -152,7 +152,7 @@ jobs:
           path: gitops-repo
           fetch-depth: 0
 
-      - name: Configure scheduled GitHub capabilities
+      - name: Configure production authorization
         shell: bash
         run: |
           set -euo pipefail
@@ -179,12 +179,24 @@ jobs:
               "$production_values"
           fi
 
+          if ! grep -q '^  \[authorization\]$' "$production_values"; then
+            perl -0pi -e \
+              's/^codexConfig: \|/  [authorization]\n  enabled = true\n\n  [[authorization.owners]]\n  provider = "slack"\n  workspace_id = "T01GRMKUW1W"\n  actor_id = "U01P78FFM2B"\n+\ncodexConfig: |/m' \
+              "$production_values"
+          fi
+
           grep -q 'scheduled_github_capabilities_enabled = {{ .Values.scheduler.scheduledGithubCapabilitiesEnabled }}' "$chart_template"
           grep -q 'scheduled_github_write_capabilities_enabled = {{ .Values.scheduler.scheduledGithubWriteCapabilitiesEnabled }}' "$chart_template"
           grep -q '^  scheduledGithubCapabilitiesEnabled: false$' "$chart_values"
           grep -q '^  scheduledGithubWriteCapabilitiesEnabled: false$' "$chart_values"
           grep -q '^  scheduledGithubCapabilitiesEnabled: true$' "$production_values"
           grep -q '^  scheduledGithubWriteCapabilitiesEnabled: false$' "$production_values"
+          grep -q '^  \[authorization\]$' "$production_values"
+          grep -q '^  enabled = true$' "$production_values"
+          grep -q '^  \[\[authorization.owners\]\]$' "$production_values"
+          grep -q '^  provider = "slack"$' "$production_values"
+          grep -q '^  workspace_id = "T01GRMKUW1W"$' "$production_values"
+          grep -q '^  actor_id = "U01P78FFM2B"$' "$production_values"
 
       - name: Deploy
         uses: repotea-workspace/kangumi/github-actions/gitops-deploy@e265ebca9b4a93aaf804be57c2687554dcc49dc7

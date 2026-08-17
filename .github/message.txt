@@ -1,1 +1,1 @@
-ci(codeoff): persist scheduled GitHub read (#104)
+ci(codeoff): configure production owner
