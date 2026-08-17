@@ -1,1 +1,1 @@
-agt/simplify-mcp-authorization
+main
