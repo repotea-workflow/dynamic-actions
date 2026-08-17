@@ -1,1 +1,1 @@
-refactor(tests): split data source E2E
+refactor(tests): split release delivery E2E
