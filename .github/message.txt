@@ -1,1 +1,1 @@
-revert: remove scheduler config migration (#103)
+ci(codeoff): persist scheduled GitHub read
