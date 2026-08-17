@@ -181,7 +181,7 @@ jobs:
 
           if ! grep -q '^  \[authorization\]$' "$production_values"; then
             perl -0pi -e \
-              's/^codexConfig: \|/  [authorization]\n  enabled = true\n\n  [[authorization.owners]]\n  provider = "slack"\n  workspace_id = "T01GRMKUW1W"\n  actor_id = "U01P78FFM2B"\n+\ncodexConfig: |/m' \
+              's/^codexConfig: \|/  [authorization]\n  enabled = true\n\n  [[authorization.owners]]\n  provider = "slack"\n  workspace_id = "T01GRMKUW1W"\n  actor_id = "U01P78FFM2B"\n\ncodexConfig: |/m' \
               "$production_values"
           fi
 

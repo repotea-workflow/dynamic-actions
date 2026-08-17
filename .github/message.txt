@@ -1,1 +1,1 @@
-ci(codeoff): configure production owner (#105)
+fix(codeoff): repair owner GitOps migration
