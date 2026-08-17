@@ -1,1 +1,1 @@
-revert: restore Codeoff deployment workflow (#101)
+ci(codeoff): migrate scheduled GitHub read
