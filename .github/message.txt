@@ -1,6 +1,5 @@
-feat(esc): add Gprinter dialect across languages
+fix(esc): address Gprinter review findings
 
-Introduce an EscGprinter sibling dialect that inherits Boxliy ESC and
-overrides raster framing, paper type, and A4 page/document cuts for
-GP-M821-class printers. Wire the package through Dart, TypeScript, Java,
-Rust, Objective-C, Swift, and the standard editions.
+Restore full zlib on the Swift compress path, map the TypeScript edition
+to the new package, reject oversized ObjC compressed rasters, and forward
+the remaining Boxliy helpers on the Rust wrapper.
