@@ -1,3 +1,1 @@
-fix(scheduler): clarify MCP tool access (#108)
-
-Distinguish denied Codeoff callback tools from invocation-scoped MCP tools so scheduled runs can use their provisioned GitHub catalog.
+fix(github): resolve owner repositories
