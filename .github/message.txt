@@ -1,1 +1,3 @@
-fix(github): send repository user agent (#110)
+refactor(auth): simplify MCP access leases
+
+Authorize upstream MCP calls by account, repository, and coarse access level instead of persisted tool arguments. Keep legacy plan and scheduler snapshots readable while preserving approval, audit, and durable run boundaries.
