@@ -1,3 +1,3 @@
-feat(dynamic-app): implement reviewed release flow
+feat(mallard): add browser validation app
 
-Unify generated contracts, compilation, per-App signing, sessions, and release resources across Hawk, Robin, and Swan.\n\nHarden publishable build staging, target jobs, and artifact delivery. Add database migrations and cross-runtime acceptance coverage for the new trust boundaries.
+Keep browser validation outside the Android/iOS Swan shell while exercising the same renderer, expression, data source, and action boundaries.
