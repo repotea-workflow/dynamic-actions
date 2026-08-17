@@ -1,1 +1,1 @@
-fix(github): send repository user agent
+fix(github): send repository user agent (#110)
