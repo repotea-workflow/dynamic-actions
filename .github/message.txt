@@ -1,3 +1,1 @@
-fix(audit): record artifact downloads
-
-Artifact reads enforce App scope but previously left no evidence of successful downloads. Record build and target context, and align the acceptance documentation with verified platform evidence.
+refactor(tests): split data source E2E
