@@ -1,1 +1,5 @@
-fix(codeon): isolate missing preflight authority
+fix(codeon): make preparation recovery operable
+
+Allow operators to cancel attempts that fail before operation creation. The cancellation seals runtime closure, abandons the never-dispatched attempt, and atomically requeues the original Issue.
+
+Migration 0105 extends the attention reason and action constraints.
