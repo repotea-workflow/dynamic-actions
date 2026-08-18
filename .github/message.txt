@@ -1,4 +1,4 @@
-feat: add backend-managed home banner carousel
+feat: add backend-managed home banner carousel (#120)
 
 Publish home hero and secondary banners from the admin console,
 including images, locales, app or https links, schedules, and
