@@ -1,1 +1,1 @@
-fix(cursor): accept bounded provider updates
+fix(codeon): retry completion read contention
