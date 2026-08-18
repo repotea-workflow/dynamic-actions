@@ -1,5 +1,6 @@
-fix(esc): address Gprinter review findings
+feat(esc): lock Gprinter parent methods to V1.6 bytes
 
-Restore full zlib on the Swift compress path, map the TypeScript edition
-to the new package, reject oversized ObjC compressed rasters, and forward
-the remaining Boxliy helpers on the Rust wrapper.
+Block Boxliy-only 10 FF / 1F commands on EscGprinter, rewrite
+barcode/QR/underline/imageGray/query to the Gprinter handbook, and
+keep Excel GS UB / GS S / GS T / m=04 frames. Dart, TS, Java, Rust,
+ObjC, and Swift share the same golden bytes.
