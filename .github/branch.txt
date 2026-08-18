@@ -1,1 +1,1 @@
-agt/dynamic-app-review
+main
