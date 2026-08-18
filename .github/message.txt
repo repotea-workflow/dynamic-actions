@@ -1,3 +1,1 @@
-fix(codeon): harden agent request validation
-
-Reject invalid provider requests at the operation boundary so one bad model configuration cannot terminate the daemon. Require Review finding authority before completion and allow rejected dispatches to use the audited MCP cancellation path.
+fix(codeon): stabilize session inspection
