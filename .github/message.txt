@@ -1,1 +1,1 @@
-fix(codeon): log preflight skip reasons
+fix(codeon): require merge conflict commits
