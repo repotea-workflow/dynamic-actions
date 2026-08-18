@@ -1,1 +1,3 @@
-fix(codeon): require merge conflict commits
+fix(codeon): retire superseded pull requests
+
+Queue best-effort cleanup only after Issue finalization so retry attempts can continue reusing their published PR.
