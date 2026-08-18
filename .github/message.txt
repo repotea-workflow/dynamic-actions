@@ -1,1 +1,3 @@
-fix(codeon): retry completion read contention
+fix(codeon): allow revision merge commits
+
+Revision must be able to merge the latest base into an existing PR while preserving signed canonical commit authority. Keep Implementation single-parent-only and validate only the Revision first-parent chain.
