@@ -1,3 +1,7 @@
-refactor(auth): simplify MCP access leases (#111)
+fix(codeon): harden provider execution
 
-Authorize upstream MCP calls by account, repository, and coarse access level instead of persisted tool arguments. Keep legacy plan and scheduler snapshots readable while preserving approval, audit, and durable run boundaries.
+Make recovery and completion handling durable across daemon restarts.
+
+Persist repository verification evidence, tighten revision and landing gates, and complete Cursor/Grok transport, timeout, commit, and cleanup paths.
+
+Includes database migrations 0101 through 0104.
