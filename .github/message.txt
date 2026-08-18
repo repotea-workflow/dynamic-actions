@@ -1,1 +1,1 @@
-fix(codeon): seal compact planning artifact
+fix(codeon): bound worktree registry readback
