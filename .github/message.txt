@@ -1,3 +1,1 @@
-feat(management): improve identity workflows
-
-Add paginated identity management, tenant membership controls, configurable table sizing, localized login improvements, and permission-aware Studio access.
+chore(web): remove bundled fallback fonts
