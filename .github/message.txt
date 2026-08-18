@@ -1,1 +1,1 @@
-fix(codeon): stabilize session inspection
+fix(cursor): classify prompt transport closure
