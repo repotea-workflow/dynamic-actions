@@ -1,6 +1,7 @@
-feat(esc): lock Gprinter parent methods to V1.6 bytes
+feat(esc): complete Gprinter ESC/POS V1.6 surface
 
-Block Boxliy-only 10 FF / 1F commands on EscGprinter, rewrite
-barcode/QR/underline/imageGray/query to the Gprinter handbook, and
-keep Excel GS UB / GS S / GS T / m=04 frames. Dart, TS, Java, Rust,
-ObjC, and Swift share the same golden bytes.
+Add the remaining handbook commands (charset, bitmaps, barcode HRI,
+kanji, cut/beep, cash drawer, network, 2D symbols, page mode, macros)
+plus GprinterResponseParser in all six languages. Shared golden bytes
+live in test/resources/gprinter/v1.6-golden.json. Excel A4 frames and
+the parent-method safety lock stay in place.
