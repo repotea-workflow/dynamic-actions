@@ -1,1 +1,1 @@
-fix(cursor): classify prompt transport closure
+fix(codeon): finalize approved no-change work
