@@ -1,7 +1,1 @@
-feat(cel): evaluate cel@1 with cel-bridge v0.5.0 (#30)
-
-Replace the local CEL subset with the pinned cel-bridge runtime so
-Osprey, Swan, and Mallard share one evaluator, wire protocol, and
-six-scope environment.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+chore: ignore OpenWiki local files and CI workflow
