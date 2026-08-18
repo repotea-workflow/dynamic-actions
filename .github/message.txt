@@ -1,1 +1,5 @@
-chore(web): remove bundled fallback fonts
+feat(cel): evaluate cel@1 with cel-bridge v0.5.0
+
+Replace the local CEL subset with the pinned cel-bridge runtime so
+Osprey, Swan, and Mallard share one evaluator, wire protocol, and
+six-scope environment.
