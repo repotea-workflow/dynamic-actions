@@ -1,3 +1,1 @@
-fix(codeon): requeue runtime recovery cancel
-
-Explicit operator cancellation fences late callbacks and requeues the original Issue while preserving published PR evidence. Idempotent replay repairs orphaned In Progress issues left by earlier behavior.
+fix(codeon): seal compact planning artifact
