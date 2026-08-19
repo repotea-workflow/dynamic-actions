@@ -1,1 +1,1 @@
-fix(codeon): replay terminal completions
+fix(codeon): isolate replay recovery
