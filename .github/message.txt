@@ -1,3 +1,1 @@
-fix(codeon): target cleanup git queries
-
-Avoid false path drift when bounded worktree-list output omits the target in repositories with many registered worktrees.
+fix(runtime): cancel unstarted recovery operations
