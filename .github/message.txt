@@ -1,3 +1,5 @@
-fix(runtime): retry unknown operations
+fix(runtime): preserve implementation baseline
 
-Allow operation owners to resolve canonical runtime-outcome-unknown attention with deterministic evidence and replace the fenced dispatch after daemon restart. Preserve human recheck authority and leave dispatchless recovery operator-controlled.
+Reuse the first operation baseline across replacement dispatches so daemon restarts cannot freeze an in-progress dirty worktree.
+
+Migration 0108 permits only the exact durable ImplementationArtifactInvalid replay to restore the recovered attempt.
