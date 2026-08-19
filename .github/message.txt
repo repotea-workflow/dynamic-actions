@@ -1,3 +1,1 @@
-fix(codeon): replace stale recovery attention
-
-A changed operation recovery authority must supersede its stale active attention before an operator-cancel attention can be opened.
+fix(codeon): scope runtime recovery authority
