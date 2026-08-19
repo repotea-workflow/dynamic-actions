@@ -1,1 +1,3 @@
-fix(codeon): isolate replay recovery
+fix(codeon): surface failed operation attention
+
+Materialize operator-cancel attention for failed recovery operations so existing issues cannot remain hidden and strand their pull requests.
