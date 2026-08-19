@@ -1,1 +1,1 @@
-fix(runtime): cancel preflight rejections
+fix(cursor): bind model at ACP startup
