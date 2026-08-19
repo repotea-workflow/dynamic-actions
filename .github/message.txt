@@ -1,3 +1,3 @@
-fix(codeon): surface failed operation attention
+fix(codeon): target cleanup git queries
 
-Materialize operator-cancel attention for failed recovery operations so existing issues cannot remain hidden and strand their pull requests.
+Avoid false path drift when bounded worktree-list output omits the target in repositories with many registered worktrees.
