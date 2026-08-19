@@ -1,1 +1,3 @@
-fix(runtime): validate phase outcomes
+fix(runtime): retry unknown operations
+
+Allow operation owners to resolve canonical runtime-outcome-unknown attention with deterministic evidence and replace the fenced dispatch after daemon restart. Preserve human recheck authority and leave dispatchless recovery operator-controlled.
