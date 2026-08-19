@@ -1,3 +1,1 @@
-fix(runtime): retire stale attentions
-
-Supersede operation-owned cancellation attention only after the owner succeeds and downstream authority exists.
+fix(codex): enforce review completion schema
