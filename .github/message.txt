@@ -1,5 +1,3 @@
-fix(runtime): preserve implementation baseline
+fix(runtime): rotate repository candidates
 
-Reuse the first operation baseline across replacement dispatches so daemon restarts cannot freeze an in-progress dirty worktree.
-
-Migration 0108 permits only the exact durable ImplementationArtifactInvalid replay to restore the recovered attempt.
+Persist a per-profile runtime cursor so one long-lived operation cannot starve later active attempts in the same repository.
