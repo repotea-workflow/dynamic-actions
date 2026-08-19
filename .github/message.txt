@@ -1,1 +1,1 @@
-fix(codeon): expose unknown outcomes to attention
+fix(codeon): adopt legacy unknown outcomes
