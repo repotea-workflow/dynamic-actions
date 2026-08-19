@@ -1,1 +1,1 @@
-fix(runtime): require prepared revisions
+fix(runtime): reject empty preflight revisions
