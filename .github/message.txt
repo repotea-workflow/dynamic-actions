@@ -1,1 +1,3 @@
-chore: ignore OpenWiki local files and CI workflow
+fix(db): remove all foreign keys
+
+Preserve deployed migration history while enforcing the schema-wide zero-foreign-key invariant for upgraded and fresh databases.
