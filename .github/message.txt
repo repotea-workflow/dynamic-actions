@@ -1,1 +1,1 @@
-fix(admin): constrain device DPI options
+fix(admin): constrain device DPI options (#125)
