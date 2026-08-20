@@ -1,3 +1,1 @@
-fix(banners): restore draft image previews (#123)
-
-Serve saved draft images through a permission-protected admin route while keeping unpublished assets unavailable publicly.
+fix(admin): clarify protocol and paper form
