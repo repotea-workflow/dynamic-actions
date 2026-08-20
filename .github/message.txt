@@ -1,1 +1,7 @@
-fix(runtime): render delivery contract lines
+fix(runtime): establish scheduled delivery contract (#115)
+
+* fix(runtime): add scheduled delivery contract
+
+* fix(runtime): borrow scheduled delivery source
+
+* fix(runtime): render delivery contract lines
