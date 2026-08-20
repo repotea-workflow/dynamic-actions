@@ -1,3 +1,3 @@
-fix(codeon): validate review authority
+fix(codeon): finalize recovered reviews
 
-Reject findings without structured authority at provider tool ingress. Replay pre-validation completions with durable dispatch lineage.
+Replay validated legacy Review completions through the exact failed-operation database guard and restore the Attempt atomically.
