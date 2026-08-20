@@ -1,4 +1,4 @@
-feat(mobile): restyle prototype chrome and overlay editor docks
+feat(mobile): restyle prototype chrome and overlay editor docks (#121)
 
 Align home, profile, templates, and print flows with the current
 Gprinter theme, and keep the Plate canvas size stable when the
