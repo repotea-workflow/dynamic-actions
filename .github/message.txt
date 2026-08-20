@@ -1,4 +1,25 @@
-feat(robin): add app access control
+feat(auth): add app roles and three-level permission catalogs (#34)
+
+* test(db): isolate integration databases
+
+Keep Hawk DB suites off the shared aviary database so local
+development data cannot change during tests.
+
+* feat(auth): scope app permission catalogs
+
+Keep platform, app-common, and app-private catalogs on the existing
+permission tables so App roles cannot bind across domains.
+
+* feat(sdk): regenerate management client
+
+Expose generated App permission and role APIs so Robin can manage
+scoped catalogs without hand-written client types.
+
+* feat(robin): add app access control
 
 Split platform vs App-common catalogs and add App workspace users,
 roles, and permissions so operators can close the authorization loop.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
