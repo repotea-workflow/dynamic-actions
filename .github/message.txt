@@ -1,3 +1,4 @@
-feat(management): paginate resource lists (#33)
+test(db): isolate integration databases
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Keep Hawk DB suites off the shared aviary database so local
+development data cannot change during tests.
