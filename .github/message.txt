@@ -1,1 +1,1 @@
-fix(codeon): retry legacy review completion
+fix(codeon): replace failed review dispatch
