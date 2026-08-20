@@ -1,1 +1,1 @@
-agt/unify-mcp-resource-scopes
+agt/cursor-provider-validation

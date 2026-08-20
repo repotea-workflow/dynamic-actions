@@ -1,1 +1,1 @@
-fix(codeoff): classify MCP call scopes
+fix(codeon): defer unavailable agent dispatch
