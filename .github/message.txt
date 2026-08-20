@@ -1,3 +1,147 @@
-fix(codeon): recover transient verification
+fix(codeon): stabilize autonomous execution recovery (#112)
+
+* fix(codeon): harden provider execution
+
+Make recovery and completion handling durable across daemon restarts.
+
+Persist repository verification evidence, tighten revision and landing gates, and complete Cursor/Grok transport, timeout, commit, and cleanup paths.
+
+Includes database migrations 0101 through 0104.
+
+* fix(codeon): harden agent request validation
+
+Reject invalid provider requests at the operation boundary so one bad model configuration cannot terminate the daemon. Require Review finding authority before completion and allow rejected dispatches to use the audited MCP cancellation path.
+
+* fix(codeon): stabilize session inspection
+
+* fix(cursor): classify prompt transport closure
+
+* fix(codeon): finalize approved no-change work
+
+* fix(codeon): isolate missing preflight authority
+
+* fix(codeon): make preparation recovery operable
+
+Allow operators to cancel attempts that fail before operation creation. The cancellation seals runtime closure, abandons the never-dispatched attempt, and atomically requeues the original Issue.
+
+Migration 0105 extends the attention reason and action constraints.
+
+* fix(codeon): requeue runtime recovery cancel
+
+Explicit operator cancellation fences late callbacks and requeues the original Issue while preserving published PR evidence. Idempotent replay repairs orphaned In Progress issues left by earlier behavior.
+
+* fix(codeon): seal compact planning artifact
+
+* fix(codeon): bound worktree registry readback
+
+* fix(cursor): accept bounded provider updates
+
+* fix(codeon): retry completion read contention
+
+* fix(codeon): allow revision merge commits
+
+Revision must be able to merge the latest base into an existing PR while preserving signed canonical commit authority. Keep Implementation single-parent-only and validate only the Revision first-parent chain.
+
+* fix(codeon): log preflight skip reasons
+
+* fix(codeon): require merge conflict commits
+
+* fix(codeon): retire superseded pull requests
+
+Queue best-effort cleanup only after Issue finalization so retry attempts can continue reusing their published PR.
+
+* fix(codeon): replace stale recovery attention
+
+A changed operation recovery authority must supersede its stale active attention before an operator-cancel attention can be opened.
+
+* fix(codeon): scope runtime recovery authority
+
+* fix(codeon): expose unknown outcomes to attention
+
+* fix(codeon): adopt legacy unknown outcomes
+
+* fix(codeon): replay terminal completions
+
+* fix(codeon): isolate replay recovery
+
+* fix(codeon): surface failed operation attention
+
+Materialize operator-cancel attention for failed recovery operations so existing issues cannot remain hidden and strand their pull requests.
+
+* fix(codeon): target cleanup git queries
+
+Avoid false path drift when bounded worktree-list output omits the target in repositories with many registered worktrees.
+
+* fix(runtime): cancel unstarted recovery operations
+
+* fix(runtime): match controller recovery reason
+
+* fix(cursor): accept encoded effort model IDs
+
+* fix(runtime): cancel preflight rejections
+
+* fix(cursor): bind model at ACP startup
+
+* fix(runtime): recover preflight repair loops
+
+* fix(runtime): require prepared revisions
+
+* fix(runtime): reject empty preflight revisions
+
+* fix(runtime): validate phase outcomes
+
+* fix(runtime): retry unknown operations
+
+Allow operation owners to resolve canonical runtime-outcome-unknown attention with deterministic evidence and replace the fenced dispatch after daemon restart. Preserve human recheck authority and leave dispatchless recovery operator-controlled.
+
+* fix(runtime): preserve implementation baseline
+
+Reuse the first operation baseline across replacement dispatches so daemon restarts cannot freeze an in-progress dirty worktree.
+
+Migration 0108 permits only the exact durable ImplementationArtifactInvalid replay to restore the recovered attempt.
+
+* fix(runtime): rotate repository candidates
+
+Persist a per-profile runtime cursor so one long-lived operation cannot starve later active attempts in the same repository.
+
+* fix(runtime): retire stale attentions
+
+Supersede operation-owned cancellation attention only after the owner succeeds and downstream authority exists.
+
+* fix(codex): enforce review completion schema
+
+* fix(codeon): retry unknown agent outcomes
+
+* fix(codeon): defer unavailable agent dispatch
+
+* fix(codeon): recover rejected preflight
+
+Retry legacy AgentPreflightRejected operations only after the currently configured runner reports compatible preflight evidence. The migration permits only the exact failed-to-recovery event shape required for this repair.
+
+* fix(codeon): retry legacy Grok timeout
+
+A closed Grok prompt-timeout runtime has no remaining external execution to reconcile. Re-run only that exact legacy failure after the current provider preflight succeeds; explicit agent failures and invalid artifacts remain operator-gated.
+
+* fix(codeon): replace failed retry dispatch
+
+A terminal failed dispatch without completion evidence is already closed and cannot be cancelled again. Revoke its callback capability and create the next deterministic dispatch while preserving fail-closed behavior for completed or non-cancellable states.
+
+* fix(codeon): validate review authority
+
+Reject findings without structured authority at provider tool ingress. Replay pre-validation completions with durable dispatch lineage.
+
+* fix(codeon): finalize recovered reviews
+
+Replay validated legacy Review completions through the exact failed-operation database guard and restore the Attempt atomically.
+
+* fix(codeon): retry legacy review completion
+
+* fix(codeon): replace failed review dispatch
+
+* fix(codeon): deliver recovered review handoff
+
+Recovered Review finalization restores the Attempt to canonical version 4. Accept the exact previously persisted version-5 handoff only when append-only recovery evidence proves its lineage.
+
+* fix(codeon): recover transient verification
 
 Retry ordinary verification command failures once, rerun failed GitHub Actions checks with a durable attempt boundary, and allow authoritative no-change check recovery. Preserve legacy callback catalog restart identity.
