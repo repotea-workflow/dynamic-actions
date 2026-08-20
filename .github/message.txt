@@ -1,1 +1,1 @@
-feat(robin): refine management experience
+fix(robin): remove redundant settings summary
