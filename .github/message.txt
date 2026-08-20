@@ -1,3 +1,1 @@
-feat(robin): refine navigation and settings (#31)
-
-Remove the redundant authorization-check UI, add route-aware titles and a standalone not-found page, use numeric pagination, and adopt the Astryx settings template with Robin-aligned spacing.
+style(robin): color required markers
