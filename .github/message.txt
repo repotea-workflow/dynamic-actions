@@ -1,3 +1,1 @@
-fix(codeoff): simplify planned mutations (#113)
-
-Bind internal action identities on the server and expose only mutations declared by the persisted plan. Align GitHub planning schemas and preserve repository resolver results.
+fix(codeon): retry unknown agent outcomes
