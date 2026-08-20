@@ -1,1 +1,1 @@
-fix(runtime): add scheduled delivery contract
+fix(runtime): borrow scheduled delivery source
