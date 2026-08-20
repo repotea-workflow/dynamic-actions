@@ -1,3 +1,1 @@
-fix(codeon): finalize recovered reviews
-
-Replay validated legacy Review completions through the exact failed-operation database guard and restore the Attempt atomically.
+fix(runtime): render delivery contract lines
