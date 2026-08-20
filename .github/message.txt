@@ -1,3 +1,3 @@
-fix(banners): repair form and image uploads (#122)
+fix(banners): restore draft image previews
 
-Allow home_banner assets through database media constraints so upload intents can persist. Make optional form fields explicit and keep newest banners first.
+Serve saved draft images through a permission-protected admin route while keeping unpublished assets unavailable publicly.
