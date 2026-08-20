@@ -1,1 +1,7 @@
-fix(admin): constrain device DPI options (#125)
+feat(mobile): add printer status tips and continuous-paper advance
+
+Listen after connect for paper-out and cover-open using framed DLE EOT
+replies, and show a dismissible top-right tip. Drive print feed from
+catalog paperModes, keep the selected protocol in sync, and advance
+continuous jobs about 20 mm after the raster. Restore bundled home
+banners when the public catalog is empty.
