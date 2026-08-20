@@ -1,1 +1,3 @@
-fix(runtime): borrow scheduled delivery source
+fix(codeon): validate review authority
+
+Reject findings without structured authority at provider tool ingress. Replay pre-validation completions with durable dispatch lineage.
