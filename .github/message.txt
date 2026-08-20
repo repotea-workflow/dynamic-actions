@@ -1,3 +1,3 @@
-fix(codeon): recover rejected preflight
+fix(codeon): retry legacy Grok timeout
 
-Retry legacy AgentPreflightRejected operations only after the currently configured runner reports compatible preflight evidence. The migration permits only the exact failed-to-recovery event shape required for this repair.
+A closed Grok prompt-timeout runtime has no remaining external execution to reconcile. Re-run only that exact legacy failure after the current provider preflight succeeds; explicit agent failures and invalid artifacts remain operator-gated.
