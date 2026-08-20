@@ -1,1 +1,3 @@
-fix(admin): remove banner inline styles
+fix(banners): repair form and image uploads
+
+Allow home_banner assets through database media constraints so upload intents can persist. Make optional form fields explicit and keep newest banners first.
