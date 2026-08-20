@@ -1,1 +1,3 @@
-fix(codeoff): classify MCP call scopes (#114)
+fix(codeon): recover rejected preflight
+
+Retry legacy AgentPreflightRejected operations only after the currently configured runner reports compatible preflight evidence. The migration permits only the exact failed-to-recovery event shape required for this repair.
