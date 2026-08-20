@@ -1,4 +1,4 @@
-test(db): isolate integration databases
+feat(robin): add app access control
 
-Keep Hawk DB suites off the shared aviary database so local
-development data cannot change during tests.
+Split platform vs App-common catalogs and add App workspace users,
+roles, and permissions so operators can close the authorization loop.
