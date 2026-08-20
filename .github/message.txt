@@ -1,3 +1,1 @@
-style(robin): color required markers (#32)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(management): paginate resource lists
