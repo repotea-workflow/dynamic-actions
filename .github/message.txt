@@ -1,1 +1,1 @@
-fix(robin): remove redundant settings summary
+fix(robin): align settings page heading
