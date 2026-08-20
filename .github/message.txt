@@ -1,6 +1,9 @@
-feat: add backend-managed home banner carousel (#120)
+feat(mobile): restyle prototype chrome and overlay editor docks
 
-Publish home hero and secondary banners from the admin console,
-including images, locales, app or https links, schedules, and
-device filters. The app keeps the current three bundled slides as
-the fallback when the public catalog is empty or unreachable.
+Align home, profile, templates, and print flows with the current
+Gprinter theme, and keep the Plate canvas size stable when the
+fused properties or emoji panel opens. Shape properties use
+tappable glyphs instead of dropdowns.
+
+Also rename the compiled ESC dialect to nib_gprinter_esc and drop
+the redundant cloud-sync settings card.
