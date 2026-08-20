@@ -1,1 +1,3 @@
-fix(codeon): replace failed review dispatch
+fix(codeon): deliver recovered review handoff
+
+Recovered Review finalization restores the Attempt to canonical version 4. Accept the exact previously persisted version-5 handoff only when append-only recovery evidence proves its lineage.
