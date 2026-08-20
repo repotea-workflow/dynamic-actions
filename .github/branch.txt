@@ -1,1 +1,1 @@
-agt/cursor-provider-validation
+agt/simplify-planned-mutations

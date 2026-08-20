@@ -1,1 +1,3 @@
-fix(codex): enforce review completion schema
+fix(codeoff): simplify planned mutations
+
+Bind internal action identities on the server and expose only mutations declared by the persisted plan. Align GitHub planning schemas and preserve repository resolver results.
