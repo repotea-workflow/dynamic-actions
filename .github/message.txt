@@ -1,3 +1,5 @@
-feat(management): add tenant business profiles
+feat(management): add tenant business profiles (#35)
 
 Keep Tenant as the identity and lifecycle boundary, and store optional contact, address, notes, and restricted attributes in a 1:1 profile so platform operators can maintain customer details without exposing PII in list or session projections.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
