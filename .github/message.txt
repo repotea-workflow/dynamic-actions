@@ -1,23 +1,7 @@
-Remove obsolete Picker capacity settings (#150)
+Align zh-TW runtime auth guide with scopes
 
 codeon:
   version: 1
-  authority: fewensa-50
+  authority: fewensa-4
   description: |-
-    ## Summary
-    
-    - remove the legacy `picker.global_concurrency` fallback and inactive `picker.observer_concurrency` setting
-    - make total-active and runnable capacity the complete Picker admission contract, each defaulting to ten
-    - version new claim policy evidence as `attempt-capacity-policy/v2` over total and runnable only while retaining stored v1 digests unchanged
-    - update focused tests, the checked-in example, the normative Picker specification, and OpenWiki architecture guidance
-    
-    ## Verification
-    
-    - `cargo test -p codeon --test config`
-    - `cargo test -p codeon-tracker --lib capacity_policy_tests`
-    - `cargo test -p codeon-tracker --test picker`
-    - `cargo test -p codeon-postgres --features postgres-acceptance --test picker_candidates -- --test-threads=1`
-    - `cargo test -p codeon-postgres --features postgres-acceptance --test execution_attempt_store attempt_claims:: -- --test-threads=1`
-    - focused `rustfmt --check`, `git diff --check`, and `cargo clippy -p codeon-tracker --lib -- -D warnings`
-    
-    OpenWiki CLI regeneration was attempted but blocked by the managed filesystem rejecting `chmod /root/.openwiki`; the affected generated pages were reviewed and aligned manually. Wider all-target strict Clippy remains blocked by unrelated pre-existing warnings.
+    Mirror the English scheduled GitHub authorization migration and resource-scope containment guidance in the normative Traditional Chinese runtime document, and refresh its verification date so operators no longer follow tool-list or metadata-only repository_scope instructions.
