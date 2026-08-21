@@ -1,7 +1,7 @@
-fix(codeon): bound live e2e preflight and review pagination
+Fail closed on unsupported result coordinates
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-6
   description: |-
-    Keep Codex live-e2e preflight on a no-model authentication/capability probe with kill-on-drop, paginate GitHub review threads to exhaustion, and restore rustfmt so verify stays green.
+    Treat repo/repos/repositories and organization collection keys as lease-checked coordinates, validate string collection elements, and reject unverifiable scalar shapes so approved pointers cannot mask foreign repository data. Format candidate-owned MCP containment and proxy test files for rustfmt.
