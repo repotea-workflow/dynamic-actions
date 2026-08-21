@@ -1,7 +1,20 @@
-fix(api): stabilize Redoc asset verification
+Persist CodeOn notifications in PostgreSQL (#157)
 
 codeon:
   version: 1
-  authority: FWN-55
+  authority: fewensa-33
   description: |-
-    Content-address the self-hosted Redoc bootstrap so immutable caching cannot retain bytes from an earlier build. Keep the Chromium DOM acceptance test behind an explicit documented gate while preserving service-free Redoc contract coverage in the default suite.
+    ## Summary
+    
+    - add additive PostgreSQL migrations for notification consumer checkpoints, frozen outbox deliveries, and delivery attempts
+    - implement the profile-bound PostgreSQL notification store with atomic routing/checkpoint advancement, fenced claims and leases, retry/terminal/ambiguous transitions, and expired-lease recovery
+    - add PostgreSQL acceptance coverage and document the persistence contract
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo clippy --workspace --all-targets --locked -- -D warnings`
+    - `cargo test --workspace --locked`
+    - `cargo test -p codeon-postgres --locked`
+    - `cargo test -p codeon-postgres --test notification_persistence --features postgres-acceptance --locked`
+    - `cargo test -p codeon-postgres --test migration_acceptance --features postgres-acceptance --locked`
