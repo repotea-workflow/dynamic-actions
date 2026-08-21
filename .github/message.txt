@@ -1,16 +1,7 @@
-Expose strict MCP blocked_by create contract (#151)
+Preserve role-union tool ceilings and org routes
 
 codeon:
   version: 1
-  authority: fewensa-41
+  authority: fewensa-4
   description: |-
-    ## Summary
-    - Require MCP create blocked_by as none or unique Issue UUID array and wire it through create-to-eligibility E2E.
-    - Update fixtures, catalog, docs, and OpenWiki; rename colliding lifecycle migration 0115 to 0116.
-    
-    ## Test plan
-    - [x] just fmt-check and just lint
-    - [x] cargo test -p codeon --lib issue_create_requires_strict_blocked_by
-    - [x] cargo test -p codeon --test mcp_catalog
-    - [x] cargo test -p codeon --features postgres-acceptance --test mcp_issue_blockers
-    - [x] cargo test -p codeon-postgres --features postgres-acceptance --test migration_acceptance schema_contracts::migration_directory
+    Stop role-union canonicalization from synthesizing unrestricted write from unrestricted read plus restricted write. Disabled-authorization Turn planning now keeps AuthorizedGitHubRoute proofs, rewrites auto accounts, and uses credential-only lookup so organization scopes authorize correctly.
