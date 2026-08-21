@@ -1,7 +1,7 @@
-Atomic Issue create with blocker edges
+fix: preserve cancelling attempt authority
 
 codeon:
   version: 1
-  authority: fewensa-38
+  authority: fewensa-43
   description: |-
-    Preserve CreateIssue blocker declarations in one PostgreSQL transaction so Issues are never observable before every declared edge, with issue.created carrying the exact declaration and focused rollback, replay, and concurrency coverage.
+    Decode the persisted cancelling state and include it in every PostgreSQL active-attempt authority query. Extend cancellation acceptance coverage for capacity, candidate exclusion, issue projection, and mutation fencing, and document the durable cancellation contract.
