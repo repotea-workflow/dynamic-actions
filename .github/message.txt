@@ -1,9 +1,7 @@
-fix(tracker): render canonical execution stages
+Enforce effective blockers across execution boundaries
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-40
   description: |-
-    Render CodeOn execution stage semantic facts with the canonical snake-case values used by serde and producer payloads.
-    
-    Add exhaustive stage-name coverage and focused operation/attention outcome assertions for multi-word stages.
+    Wire the canonical effective-blocker projection through Picker filtering, claim recheck, Admission snapshot evidence, dispatchability fingerprints, late finalization validation, and Package aggregation so Parent Package blockers cannot be bypassed at eligibility or completion.
