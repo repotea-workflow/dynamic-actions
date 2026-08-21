@@ -1,9 +1,9 @@
-fix(postgres): scope cancellation idempotency
+fix(postgres): deduplicate activity digests
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-14
   description: |-
-    Preserve completion-first cancellation audit receipts without treating them as permanent Attempt-level authority. Replay exact command receipts, scope active idempotency to the current Operation and dispatch generation, and keep requested cancellation snapshots authoritative for late callbacks.
+    Check every activity observation digest before accepting a higher provider sequence so duplicate evidence cannot renew idle leases.
     
-    Allow append-only cancellation history per Attempt and cover advancement from completed Planning to a cancellable Implementation operation.
+    Merge current main and move lifecycle v2 migration to 0115, preserving the contiguous SQLx ledger and upgrading from 0114.
