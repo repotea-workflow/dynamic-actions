@@ -1,7 +1,9 @@
-fix(codeon): harden smoke and live e2e harness bounds
+Establish V1 API contract foundation
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-55
   description: |-
-    Require every run-owned review thread to be resolved, bound smoke readiness and live database cleanup, and reap agent preflight process groups on timeout so routine and live acceptance entry points fail closed instead of hanging or leaking provider sessions.
+    Add the service-free codeon-api crate with generated OpenAPI 3.1 JSON and YAML, version discovery, RFC 9457 problems, pagination and ETag primitives, request ID propagation, and an OpenAPI-aware Axum router.
+    
+    Vendor the integrity-verified Redoc 2.5.3 bundle and license with self-hosted CSP-hardened documentation routes. Add contract tests for deterministic specifications, media types, ETags, version and format errors, self-hosted assets, exact route metadata, and raw Axum route exclusion.
