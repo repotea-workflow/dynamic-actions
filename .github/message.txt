@@ -1,7 +1,7 @@
-fix(codeoff): preserve scheduler notification authority
+Accept GitHub actor profile URL subresources
 
 codeon:
   version: 1
-  authority: FWN-30
+  authority: FWN-6
   description: |-
-    Accept the scheduler's bounded Unicode run IDs and maximum encoded delivery IDs in the shared Codeoff notification authority contract. Keep exact identifiers in semantic envelopes and durable enqueue receipts while using Unicode-safe fact previews and a domain-separated digest for header-unsafe authority metadata. Add boundary, all-terminal-event, and restart reconciliation regressions, and document the projection behavior.
+    ActorMetadata previously allowed only api.github.com/users/<login>, so real user objects with followers_url, repos_url, and similar subresource paths failed closed on in-scope search results. Accept verified users/<login>/… API families while still lease-checking nested repos and orgs URLs, and cover the full actor fixture in regression tests.
