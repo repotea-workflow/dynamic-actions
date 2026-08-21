@@ -1,7 +1,7 @@
-fix(codeon): bound live-e2e whole-run timeout
+fix(postgres): seal notification routing invariants
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-33
   description: |-
-    Route harness git children through async tokio::process with kill_on_drop and a per-call deadline, and cap post-deadline failure recovery database/GitHub reads with an explicit report grace so live-e2e cannot hang past timeout=. Also satisfy rustfmt on the smoke PathBuf join and document the new bounds.
+    Fail closed when a typed Issue activity reports schema drift so the router transaction cannot advance its durable checkpoint. Reject expired claimed leases and mismatched attempt/fence evidence at the schema boundary, with focused PostgreSQL acceptance coverage and specification clarification.
