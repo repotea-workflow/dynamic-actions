@@ -1,3 +1,9 @@
-fix(codeon): allow cancelled attempt recovery (#128)
+feat(tracker): define case-insensitive Issue references
 
-Agent-requested cancellation produces an AgentCancelled operation. Permit that terminal fact to open operator attention so the attempt can be closed and requeued without rewriting operation history.
+codeon:
+  version: 1
+  authority: fewensa-21
+  description: |-
+    IssueId remains the only semantic identity for equivalent prefix and legacy-key forms.
+    
+    Callers need one transport-neutral contract that accepts mixed-case prefix input, stores and emits uppercase prefixes, and parses hyphenated Workspace keys without guessing identity from raw strings.
