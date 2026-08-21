@@ -1,9 +1,7 @@
-Generate prefix execution names with legacy recovery (#148)
+fix(tracker): project merge assignments as ready
 
 codeon:
   version: 1
-  authority: fewensa-25
+  authority: fewensa-34
   description: |-
-    Newly planned execution branches and worktrees use uppercase Issue-prefix components.
-    
-    Planning prefers prefix-form Git names, discovers an existing prefix ref first, and falls back to the historical Workspace-key ref without renaming or duplicating branches. Persisted environment names stay exact. Database checks accept historical key components and new uppercase prefix components, and the forward migration does not rewrite existing rows.
+    Recognize the validated pending Merge operation creation context emitted by Ready-for-Merge assignment as issue.execution.ready_for_merge. Add a focused producer-shape regression test while preserving the existing explicit ready_for_merge stage projection.
