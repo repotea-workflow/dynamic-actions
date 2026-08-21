@@ -1,17 +1,9 @@
-Persist runtime lifecycle v2 in PostgreSQL (#140)
+fix(postgres): fence cancelled dispatch progression
 
 codeon:
   version: 1
-  authority: fewensa-14
+  authority: fewensa-43
   description: |-
-    ## Summary
+    Lock the owning Attempt before normal dispatch creation, claim acquisition, and send-permit issuance. Reject progression when durable cancellation authority is present so restarted workers cannot resume prepared or running dispatches after cancel-first wins.
     
-    - add migration 0111 for lifecycle v2 policy fields, dispatch activity-lease projections, and append-only lifecycle events
-    - preserve immutable v1 policy encoding while validating and reading v2 timeout and lease policies
-    - atomically accept digest-only activity evidence, coalesce renewals, reject invalid authority or replay, and expose restart-safe expiry queries
-    - cover historical migrations, concurrency, replay, isolation, append-only protection, and expiry ordering
-    
-    ## Verification
-    
-    - focused codeon-postgres PostgreSQL store and migration tests passed
-    - formatting and compile checks passed
+    Add PostgreSQL acceptance coverage for cancellation before dispatch creation and restarted prepared/running dispatch progression.
