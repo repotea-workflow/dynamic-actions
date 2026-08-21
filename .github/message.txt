@@ -1,7 +1,7 @@
-fix(codeoff): recover conclusive run notifications
+fix(codeon): apply rustfmt to e2e harness sources
 
 codeon:
   version: 1
-  authority: FWN-30
+  authority: FWN-1
   description: |-
-    Map timed-out and cancelled scheduled runs to schedule.run.failed during notification reconciliation so transient enqueue failures remain recoverable after restart. Refactor the Webhook delivery test into focused helpers and satisfy the strict all-target clippy gate.
+    Keep the repository formatting gate green by applying cargo fmt to the smoke and live e2e harness files that rustfmt reported as dirty, without changing runtime behavior.
