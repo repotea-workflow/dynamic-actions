@@ -1,7 +1,9 @@
-fix: bind exact provider cancellation
+fix: isolate provider startup calls
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-16
   description: |-
-    Namespace retained Cursor sessions by dispatch authority so identical provider session IDs cannot replace another dispatch's process. Derive bounded cancellation evidence from the sealed cancellation identity, exact provider target, and observed provider result across Codex, Cursor, and Grok.
+    Route every synchronous Codex App Server call through the shared bounded blocking-call supervisor, reserving cancellation capacity for exact goal and turn cancellation.
+    
+    Publish Cursor and Grok termination handles under dispatch-scoped startup references before initialization, so draining can cancel spawned provider processes before runtime checkpoints exist. Add deterministic concurrency and blocked-handshake coverage.
