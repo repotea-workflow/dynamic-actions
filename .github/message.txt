@@ -1,9 +1,7 @@
-fix(tracker): enforce routing activity invariants
+fix(postgres): retain cancellation authority
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-43
   description: |-
-    Reject issue.created contexts unless routing keys exactly match binding keys, and reject routing replacements with no changed keys or unchanged policy digests. Add focused schema-drift fixtures for each invalid shape.
-    
-    Remove the candidate-added PostgreSQL execution activity writes and acceptance assertions so the catalog revision remains tracker-owned and existing Issue activity feed behavior stays compatible.
+    Refuse the Attempt cancellation authority down migration whenever cancellation request or event rows remain. Direct operators to roll forward so exact cancellation receipts and late-callback audit evidence cannot be silently dropped after an Attempt leaves the cancelling state.
