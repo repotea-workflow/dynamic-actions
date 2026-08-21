@@ -1,1 +1,1 @@
-fix(codeon): recover merge capability preflight
+fix(codeon): prioritize landing recovery at startup
