@@ -1,9 +1,7 @@
-fix(runtime): retain exact dispatch on drain
+fix(codeon): keep live-e2e cleanup on prepared branch
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-1
   description: |-
-    Resolve active operation and durable dispatch authority before supervisor admission so bounded shutdown always retains the exact operation, dispatch, and fence for cancellation and abandonment evidence.
-    
-    Add deterministic coverage for a worker paused before execution, exact abandoned lifecycle persistence, and restart discovery of the unfinished dispatch.
+    Preserve durable execution_environments branch authority for live-e2e cleanup readback. Compare it with the published PR head and fail on mismatch before asserting local and remote deletion, so a diverged ownership-derived branch cannot be reported as cleaned.
