@@ -1,7 +1,9 @@
-fix(notification): restore tracker issue authority
+fix(postgres): scope cancellation idempotency
 
 codeon:
   version: 1
-  authority: fewensa-29
+  authority: fewensa-43
   description: |-
-    Restore the merged v1 notification envelope API by using codeon_tracker::IssueIdentifier for CodeOn producer authority. Remove the duplicated local identifier grammar and verify the nominal constructor and accessor types in the envelope contract test.
+    Preserve completion-first cancellation audit receipts without treating them as permanent Attempt-level authority. Replay exact command receipts, scope active idempotency to the current Operation and dispatch generation, and keep requested cancellation snapshots authoritative for late callbacks.
+    
+    Allow append-only cancellation history per Attempt and cover advancement from completed Planning to a cancellable Implementation operation.
