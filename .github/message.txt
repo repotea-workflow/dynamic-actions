@@ -1,11 +1,9 @@
-feat(postgres): persist runtime lifecycle v2
+fix(notification): harden delivery boundaries
 
 codeon:
   version: 1
-  authority: fewensa-14
+  authority: fewensa-29
   description: |-
-    Add migration 0111 for lifecycle v2 policy fields, dispatch activity lease projections, and append-only lifecycle events.
+    Remove the shared envelope's dependency on codeon-tracker while preserving the v1 wire contract.
     
-    Persist and validate v1/v2 execution policies, atomically accept or replay digest-only activity evidence, coalesce lease renewal, expose restart-safe expiry queries, and record worker lifecycle evidence without raw activity content.
-    
-    Cover historical migration compatibility, immutable v1 preservation, policy round trips, concurrent activity CAS, replay and authority rejection, expiry ordering, restart readback, append-only protection, and profile isolation.
+    Persist dispatch-start authority and atomically seal post-dispatch lost fences as ambiguous before any newer claim can run. Reject exhausted claim attempts before provider dispatch and cover both behaviors with focused seam and transition tests.
