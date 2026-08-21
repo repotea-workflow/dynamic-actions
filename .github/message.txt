@@ -1,11 +1,7 @@
-feat(notification): add Webhook provider
+Enforce legacy lease ceilings and fail closed on invalid scopes
 
 codeon:
   version: 1
-  authority: fewensa-31
+  authority: fewensa-4
   description: |-
-    Add application-neutral Markdown and plaintext rendering with replay-bound metadata and exact frozen-byte delivery.
-    
-    Resolve endpoints and bearer credentials only at send time, enforce HTTPS with explicit loopback-only HTTP tests, bound responses and Retry-After, and classify confirmed, retryable, terminal, and ambiguous outcomes.
-    
-    Cover exact bodies and headers, authentication, limits, failures, redaction, and semantic-core isolation with focused mock-server tests and document the provider contract.
+    Legacy tool-list plans omit access and were treated as read only during route selection, then still exposed and forwarded destructive tools when Owner or authorization-disabled callers skipped grant checks. Derive the lease ceiling from the catalog before provisioning and always compare each call against that ceiling, including Owner snapshots. Resource collection also ignored invalid explicit coordinates, so mixed-case out-of-scope owner/repo values could be masked by an in-scope decoy; fail closed whenever a recognized coordinate is present but incomplete or invalid.
