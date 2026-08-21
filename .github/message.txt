@@ -1,11 +1,21 @@
-fix(codeon): harden durable operation progress
+Add the Webhook notification provider (#154)
 
 codeon:
   version: 1
-  authority: fewensa-17
+  authority: fewensa-31
   description: |-
-    Expose the shared closed progress v2 schema to Codex and cover digest-only callbacks.
+    ## Summary
     
-    Revalidate hashed MCP capability authority, activation, revocation, expiry, and catalog binding inside the atomic activity transaction while keeping the trusted Codex route distinct.
+    - add the shared `codeoo-notification-webhook` crate with secret-free configuration snapshots and send-time endpoint and bearer resolution
+    - render deterministic Markdown or plaintext, persist exact bytes plus closed delivery metadata, and send bounded Codeoo headers without the semantic JSON envelope
+    - classify HTTP and transport outcomes, cap `Retry-After`, redact endpoint/credential/provider data, and document the provider contract
     
-    Document durable progress semantics and legacy v1 non-renewal behavior.
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo clippy -p codeoo-notification-core -p codeoo-notification-webhook --all-targets --locked -- -D warnings`
+    - `cargo test -p codeoo-notification-core -p codeoo-notification-webhook --locked` (29 passed)
+    
+    ## Notes
+    
+    The OpenWiki generator could not refresh because its tool home is read-only. The maintained normative Webhook specification is included, and unauthorized partial generator output was removed.
