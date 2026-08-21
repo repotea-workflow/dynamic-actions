@@ -1,7 +1,9 @@
-Fix cancellation authority validation
+fix(postgres): align activity lease recovery
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-14
   description: |-
-    Reject stale active cancellation requests before completion-first resolution, report the durable post-request Attempt state, and validate persisted cancellation reasons during deserialization. Add focused domain and PostgreSQL coverage for stale completion races, deterministic receipts, and malformed persisted authority.
+    Allow idle-lease and resource-ceiling expiry observations for dispatches whose dispatch and operation are both recovery-required, while preserving running-state runtime-reference validation.
+    
+    Scope activity lease restart readback to the full dispatch identity and fence so replacement dispatches cannot read retained terminal projections. Add PostgreSQL regressions for recovery expiry and replacement-dispatch readback.
