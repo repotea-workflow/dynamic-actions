@@ -1,7 +1,7 @@
-fix(codeon): validate and persist activity projections
+fix(notification): restore tracker issue authority
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-29
   description: |-
-    Persist terminal and ready-for-merge execution activity at their authoritative producer transitions, and validate operation and attention contexts against the closed producer contract before rendering. Derive catalog completeness from the effective ordered migration history so future SQL event additions require a matching Rust catalog update.
+    Restore the merged v1 notification envelope API by using codeon_tracker::IssueIdentifier for CodeOn producer authority. Remove the duplicated local identifier grammar and verify the nominal constructor and accessor types in the envelope contract test.
