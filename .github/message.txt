@@ -1,7 +1,7 @@
-fix(runtime): fence observation persistence atomically
+fix(codeon): seal live e2e failure report and DB lifecycle
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-1
   description: |-
-    Carry the worker's dispatch ID and fence into running-observation persistence and validate that authority under the same PostgreSQL transaction as the operation mutation. Treat a fence race as scheduler contention and add a barrier-based regression test that advances the fence after inspection readback but before the write.
+    Name ownership-derived remote branches in partial live-e2e failure reports by reading execution_environments and probing the exact GitHub ref, and keep the live report as running until disposable database provisioning, exercise, cleanup, and the final write all succeed.
