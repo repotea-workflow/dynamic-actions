@@ -1,7 +1,3 @@
-fix(codeoff): validate notification authority
+fix(codeon): bound Agent Cargo disk growth
 
-codeon:
-  version: 1
-  authority: FWN-30
-  description: |-
-    Validate scheduled-run notification authority against the scheduler's canonical identity and timestamp grammar. Timestamp provider terminal notifications at the committed delivery transition, preserve Unicode boundary behavior, and cover canonical decode and SQLite rejection paths. Merge the refreshed main branch while retaining both structured GitHub scope and notification-store composition, with non-conflicting migration versions.
+Disable Cargo incremental artifacts in Codeon-managed Codex, Cursor, and Grok processes so concurrent Attempt worktrees do not multiply tens of gigabytes of disposable compiler state.
