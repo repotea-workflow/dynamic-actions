@@ -1,9 +1,7 @@
-fix(postgres): preserve requested cancellation receipt
+Merge origin/main and keep preferred Issue-prefix identifiers
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-23
   description: |-
-    Return the original requested cancellation receipt even after the Attempt becomes terminal, so replay behavior remains independent of lifecycle timing, command ID, and stale expected versions.
-    
-    Add PostgreSQL acceptance coverage for request, terminalization, restart-style replay with a different command, and retention of the cancelled Attempt state.
+    Refresh origin/main and merge it into this branch so the preferred uppercase Issue-prefix work can land. Resolve the only conflict by adopting main's contiguous 1..=115 PostgreSQL migration ceiling, which already includes workspace aliases at 0113 plus later 0114 and 0115 migrations. Keep both sides' behavior: shared Issue-reference resolution and preferred identifier projections from this branch, and main's effective blockers, commit-authority aliases, prefix execution names, and related runtime persistence.
