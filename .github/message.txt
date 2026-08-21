@@ -1,7 +1,7 @@
-fix(runtime): replay terminal dispatch completions
+Validate runnable lease evidence digests
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-53
   description: |-
-    Skip runtime worker start evidence when startup recovery loads a terminal dispatch. This preserves refreshed dispatch and fence authority while allowing the durable completion replay path to run; nonterminal workers retain the existing lifecycle evidence.
+    Reject non-canonical runtime-resume evidence before acquiring the global capacity lock or mutating runnable-lease state. Add domain and PostgreSQL regression coverage proving a forged digest leaves the projection, held count, and event history unchanged.
