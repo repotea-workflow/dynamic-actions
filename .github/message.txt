@@ -1,7 +1,9 @@
-Implement durable runnable lease state machine
+fix(runtime): supervise startup recovery
 
 codeon:
   version: 1
-  authority: fewensa-53
+  authority: fewensa-16
   description: |-
-    Add fenced runnable lease release and reacquisition contracts with a versioned current projection, monotonic generations, and immutable ordered transition history. Serialize reacquisition with the existing global claim capacity lock, preserve mutation-free capacity-pending outcomes, and cover the canonical A-E flow plus claim/reacquire and reacquire/reacquire final-slot races. Document persistence semantics, rollout order, and deferred lifecycle wiring.
+    Route durable operations that survive restart through provider-aware reconciliation inside the bounded dispatch-worker supervisor. Refresh exact operation, dispatch, and fence authority at the worker boundary so recovery results remain fenced and candidate-local read failures stay isolated.
+    
+    Replace broad Picker invariant fatal classification with explicit process-fatal authority for persistence integrity and essential daemon resources. Add restart recovery coverage that records an abandoned dispatch and reconstructs the execution runtime service.
