@@ -1,7 +1,7 @@
-fix(codeon): apply rustfmt to e2e harness sources
+Inspect org-lease repository list results
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-6
   description: |-
-    Keep the repository formatting gate green by applying cargo fmt to the smoke and live e2e harness files that rustfmt reported as dirty, without changing runtime behavior.
+    Under an organization lease, repository-bound list_* tools can embed foreign forks or pull-request heads. Require reviewed response extractors for those shapes (or reject them) so out-of-scope coordinates fail closed before data returns.
