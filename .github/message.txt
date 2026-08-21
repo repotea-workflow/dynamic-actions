@@ -1,9 +1,3 @@
-fix(notification): harden delivery boundaries
+fix(codeon): replay durable review completion
 
-codeon:
-  version: 1
-  authority: fewensa-29
-  description: |-
-    Remove the shared envelope's dependency on codeon-tracker while preserving the v1 wire contract.
-    
-    Persist dispatch-start authority and atomically seal post-dispatch lost fences as ambiguous before any newer claim can run. Reject exhausted claim attempts before provider dispatch and cover both behaviors with focused seam and transition tests.
+Recover exact runtime-unknown Review operations from persisted completion evidence before deterministic retry, then resolve the matching Attention case. Renumber the conflicting workspace alias migration and add the guarded retry-receipt allowance required by atomic recovery.
