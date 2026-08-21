@@ -1,7 +1,9 @@
-Merge origin/main; fix E2E create and report paths
+fix(notification): align authority and retention
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-30
   description: |-
-    Integrate refreshed origin/main into the frozen E2E candidate while preserving supervised daemon behavior, retiring legacy live MCP smokes, and aligning migration authority to 121. Also require blocked_by=none on smoke/live Issue create and keep live report markers unique and contained under the report root.
+    Accept both canonical CodeOn issue authority forms without introducing a CodeOn crate dependency.
+    
+    Retain Codeoff enqueue receipts while either their scheduler source or notification outbox still needs deduplication, then remove orphaned receipts under the notification retention cutoff.
