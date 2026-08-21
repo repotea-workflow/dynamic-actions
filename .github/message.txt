@@ -1,9 +1,7 @@
-fix: enforce runnable lease audit consistency
+Inspect GitHub MCP structuredContent for scope leaks
 
 codeon:
   version: 1
-  authority: fewensa-53
+  authority: fewensa-6
   description: |-
-    Fence pre-0118 projection-only writers with deferred projection/event consistency constraints, and cover legacy claim and terminal update rejection during migration acceptance.
-    
-    Return the closed wrong-profile outcome for release and reacquisition requests whose identity does not match the supplied Profile context, with focused PostgreSQL coverage.
+    Organization-scoped responses inspected only text content blocks, so foreign coordinates in CallToolResult.structuredContent could pass with an in-scope decoy. Validate structuredContent with the same catalog extractor, require agreement with content, reject unreviewed result fields, and cover unit plus interactive and scheduled regressions.
