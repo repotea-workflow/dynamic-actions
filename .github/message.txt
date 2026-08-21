@@ -1,9 +1,7 @@
-fix(tracker): seal lifecycle v2 boundaries
+fix(tracker): seal activity rehydration timestamps
 
 codeon:
   version: 1
   authority: fewensa-12
   description: |-
-    Derive adapter-facing runtime call deadlines from sealed v2 execution policy while preserving explicit v1 fixed-deadline compatibility.
-    
-    Render renewable activity leases and all control-call deadlines in v2 operation prompts without changing v1 canonical output. Add a tracker-owned persistence reader boundary for external activity evidence rehydration.
+    Retire the public persistence callback that lent timestamp-minting authority to arbitrary callers. Keep persisted activity construction crate-private and cover the external API boundary with a compile-fail doctest.
