@@ -1,7 +1,9 @@
-Align migration versions and preferred identifier contract
+fix(postgres): require worker runtime authority
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-14
   description: |-
-    Raise the PostgreSQL migration version authority from 1..=111 to 1..=113 after renaming workspace aliases to 0113. Document that stored issues.identifier remains {workspace_key}-{number}, preferred output is derived from Workspace issue_prefix plus number, and get/search accept both forms through the shared resolver without bulk rewriting stored identifiers.
+    Reject worker lifecycle events when the caller omits or mismatches the dispatch's established runtime reference.
+    
+    Add PostgreSQL acceptance coverage for started, stopped, and abandoned lifecycle events without valid runtime authority.
