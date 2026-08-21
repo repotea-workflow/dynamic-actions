@@ -1,3 +1,3 @@
-fix(codeon): complete terminal retry recovery
+fix(codeon): recover terminal agent dispatches (#162)
 
-Persist recovery evidence on replacement dispatches so retries preserve existing workspace and PR progress. Recognize every exact historical Codex terminal-without-completion evidence value during startup promotion.
+Recover terminal provider turns that did not submit durable completion by fencing the old Dispatch and retrying the same Operation with a fresh Dispatch. Preserve existing workspace and PR progress, cap automatic retries, promote exact legacy Codex incidents at startup, and let durable completion win terminal races.
