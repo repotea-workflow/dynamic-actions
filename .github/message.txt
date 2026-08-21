@@ -1,3 +1,1 @@
-fix(codeon): recover terminal agent dispatches (#162)
-
-Recover terminal provider turns that did not submit durable completion by fencing the old Dispatch and retrying the same Operation with a fresh Dispatch. Preserve existing workspace and PR progress, cap automatic retries, promote exact legacy Codex incidents at startup, and let durable completion win terminal races.
+feat(console): add routed operations prototype
