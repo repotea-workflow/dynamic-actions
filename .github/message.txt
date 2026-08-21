@@ -1,7 +1,7 @@
-fix(codeon): seal notification fence races
+Fail closed on org-scope MCP leaks
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: fewensa-6
   description: |-
-    Make lost-fence ambiguity sealing serialized and idempotent when lease recovery wins the row lock first. Tighten notification outbox state constraints so claimed delivery states carry coherent attempt and fence evidence, and cover both lock orders plus impossible durable shapes in PostgreSQL acceptance tests.
+    SSE non-data fields, nested organization list arguments, and unrecognized repository coordinate keys could bypass containment. Enforce full SSE grammar, recursive org-policy detection, and closed coordinate/URL validation so organization-scoped results cannot leak.
