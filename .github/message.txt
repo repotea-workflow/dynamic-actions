@@ -1,7 +1,7 @@
-Enforce effective blockers across execution boundaries
+fix(postgres): fence activity after expiry
 
 codeon:
   version: 1
-  authority: fewensa-40
+  authority: fewensa-14
   description: |-
-    Wire the canonical effective-blocker projection through Picker filtering, claim recheck, Admission snapshot evidence, dispatchability fingerprints, late finalization validation, and Package aggregation so Parent Package blockers cannot be bypassed at eligibility or completion.
+    Preserve exact activity replay after a durable expiry observation, but reject all new evidence with a typed ActivityExpired error. Guard the dispatch projection update with expiry_observed_at IS NULL and cover committed-expiry plus concurrent expiry-versus-renewal ordering against PostgreSQL.
