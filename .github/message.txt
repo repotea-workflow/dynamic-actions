@@ -1,16 +1,11 @@
-Atomic Issue create with blocker edges (#136)
+Persist Profile-scoped Issue aliases and freeze Issue prefixes (#139)
 
 codeon:
   version: 1
-  authority: fewensa-38
+  authority: fewensa-22
   description: |-
-    ## Summary
-    - Persist CreateIssue blocker declarations in one PostgreSQL create transaction under the Workspace topology lock.
-    - Emit a single issue.created event with the exact declaration and IDs; keep initial Issue version at 1 without blocker-added events.
-    - Cover rollback, replay, cross-workspace/repo validation, archived/non-Task rejection, and create/topology-lock concurrency.
+    Add a Profile-scoped PostgreSQL alias namespace that maps Workspace keys and Issue prefixes to one Workspace owner. Migration 0111 backfills current aliases, collapses same-Workspace key/prefix pairs, and fails clearly on cross-Workspace collisions without rewriting historical Issue identifiers.
     
-    ## Test plan
-    - [x] cargo test -p codeon-postgres --features postgres-acceptance --test issue_blockers create_with_blockers
-    - [x] cargo test -p codeon-postgres --features postgres-acceptance --test issue_core agent_routing
-    - [x] cargo clippy -p codeon-postgres --features postgres-acceptance --all-targets -- -D warnings
-    - [x] cargo fmt --all --check
+    Workspace creation writes both aliases transactionally. Prefix updates serialize on the Workspace row lock shared with Issue creation, no-op on normalized equality, freeze with PrefixAlreadyInUse after any Issue exists, and otherwise replace alias and prefix atomically.
+    
+    A focused resolver maps Profile + IssueReference + optional expected Workspace through alias roles and Issue number to IssueId, returning preferred uppercase prefix and legacy key forms. Expected-Workspace mismatch is not found.
