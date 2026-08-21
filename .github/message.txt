@@ -1,7 +1,7 @@
-Fail closed on GitHub MCP containment gaps
+fix(codeon): harden smoke and live e2e harnesses
 
 codeon:
   version: 1
-  authority: fewensa-6
+  authority: fewensa-1
   description: |-
-    Reject error-bearing JSON-RPC envelopes, require reviewed inspection for organization-scoped list shapes, and validate every returned repository or organization coordinate so search and list responses cannot leak foreign scope.
+    Keep the default live canonical clone alive for the full run, assert durable production operation stages after Done, retain failed-run databases with marker-owned GitHub artifact discovery, require exact squash `(#PR)` suffixes and fixing-commit resolution replies, and fail smoke when owned database cleanup does not verify.
