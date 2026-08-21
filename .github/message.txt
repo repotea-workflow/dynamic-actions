@@ -1,9 +1,7 @@
-fix(notification): align authority and retention
+fix: bind exact provider cancellation
 
 codeon:
   version: 1
-  authority: FWN-30
+  authority: FWN-44
   description: |-
-    Accept both canonical CodeOn issue authority forms without introducing a CodeOn crate dependency.
-    
-    Retain Codeoff enqueue receipts while either their scheduler source or notification outbox still needs deduplication, then remove orphaned receipts under the notification retention cutoff.
+    Namespace retained Cursor sessions by dispatch authority so identical provider session IDs cannot replace another dispatch's process. Derive bounded cancellation evidence from the sealed cancellation identity, exact provider target, and observed provider result across Codex, Cursor, and Grok.
