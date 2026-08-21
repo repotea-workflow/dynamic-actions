@@ -1,9 +1,7 @@
-fix(runtime): reconcile drained worker faults
+fix(codeon): fail live cleanup on git probe errors
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-1
   description: |-
-    Preserve completed dispatch worker outcomes during shutdown and route them through the fenced recovery path before reporting a clean drain.
-    
-    Retain concrete agent runtime error kinds through PickerError so dispatch, profile, and provider-generation failures receive their intended isolation scope.
+    Distinguish missing-ref absence from harness git failures so cleanup cannot pass when rev-parse spawn or timeout errors. Bound just live-e2e with an outer timeout plus compile grace and a recipe-level hang kill check so cargo resolve/compile/launch cannot stall past the advertised budget.
