@@ -1,7 +1,7 @@
-fix(runtime): preserve isolated shutdown evidence
+Fail closed on object-shaped coordinate fields
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-6
   description: |-
-    Share one absolute shutdown deadline between the service and runtime loop so worker drain leaves bounded time for durable abandonment evidence before the join timeout. Keep malformed issue-finalization rows isolated to their profile while retaining explicit process-fatal classification for global persistence integrity loss. Add deterministic shutdown and fault-scope coverage.
+    Object and array values under repository/organization coordinate keys were recursively accepted when they lacked recognized nested keys, so unverifiable foreign coordinates such as repo:{name,owner_name} could ride beside approved full_name/owner pointers. Reject those unsupported shapes unless the closed catalog declares nested pointers for that exact path, and only lease-check string collection elements.
