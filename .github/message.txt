@@ -1,9 +1,7 @@
-fix(notification): enforce canonical v1 inputs
+Require explicit IssueBlockerDeclaration on CreateIssue
 
 codeon:
   version: 1
-  authority: fewensa-28
+  authority: fewensa-37
   description: |-
-    Normalize validated HTTPS URLs before storing and encoding them, and require namespace-qualified event names.
-    
-    Add exact Codeoff canonical bytes, digest, and replay coverage alongside normalized URL regression coverage. Document the notification crate in the OpenWiki workspace ownership maps.
+    Make CreateIssue carry a mandatory IssueBlockerDeclaration with only None or non-empty unique BlockedBy IDs, fail closed on omission or invalid input, and keep PostgreSQL create transactions unchanged for the follow-on atomic edge writer.
