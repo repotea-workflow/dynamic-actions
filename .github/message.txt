@@ -1,9 +1,7 @@
-fix: isolate provider startup calls
+Make live-e2e branch ownership unique per run
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-1
   description: |-
-    Route every synchronous Codex App Server call through the shared bounded blocking-call supervisor, reserving cancellation capacity for exact goal and turn cancellation.
-    
-    Publish Cursor and Grok termination handles under dispatch-scoped startup references before initialization, so draining can cancel spawned provider processes before runtime checkpoints exist. Add deterministic concurrency and blocked-handshake coverage.
+    Derive the disposable Issue prefix from the run marker so each live acceptance plans a distinct ownership branch, fail preflight when that ref already exists, and retain the marker-to-ref mapping in the report. Seed issue states from a run-scoped fixture and resolve Todo/Done by category before admission and terminal assertions so the live entry point no longer embeds hard-coded state UUID literals.
