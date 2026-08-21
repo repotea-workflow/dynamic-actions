@@ -1,7 +1,25 @@
-fix(postgres): freeze notification evidence
+Persist exact Attempt cancellation authority (#134)
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: fewensa-43
   description: |-
-    Protect notification outbox enqueue-time fields and completed delivery attempts from later database updates. Require a strictly unexpired lease before marking provider dispatch, and cover immutability, lease-boundary recovery, and frozen deadline policies in PostgreSQL acceptance tests.
+    ## Summary
+    
+    - Add provider-neutral cancellation request, receipt, identity snapshot, and late-callback audit contracts.
+    - Persist cancellation authority transactionally in PostgreSQL, move active Attempts to `cancelling`, and advance the current dispatch fence.
+    - Preserve completion-first ordering while rejecting and auditing cancel-first late completions without mutating Issue state.
+    - Cover stale versions, terminal outcomes, profile isolation, concurrent replay, deterministic receipts, and completion races.
+    
+    ## Verification
+    
+    - `cargo check --workspace --all-targets --all-features`
+    - `cargo test -p codeon-tracker attempt_cancellation --lib`
+    - `cargo test -p codeon-tracker execution::tests --lib`
+    - `cargo test -p codeon-postgres postgres_state_mapping --lib`
+    
+    PostgreSQL acceptance tests compiled but could not execute because `CODEON_TEST_DATABASE_URL` was not configured. Focused Clippy is also blocked by two pre-existing warnings in untouched files.
+    
+    ## Scope
+    
+    Tracker cancellation contracts and PostgreSQL authority only. No provider adapters, daemon cancellation worker, filesystem behavior, or MCP surface changes.
