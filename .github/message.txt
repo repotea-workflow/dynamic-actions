@@ -1,7 +1,7 @@
-fix(codeon): seal live e2e failure report and DB lifecycle
+Canonicalize GitHub URL hosts in containment
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-6
   description: |-
-    Name ownership-derived remote branches in partial live-e2e failure reports by reading execution_environments and probing the exact GitHub ref, and keep the live report as running until disposable database provisioning, exercise, cleanup, and the final write all succeed.
+    Treat mixed-case github.com hosts as GitHub coordinates and canonicalize paths before lease checks so foreign repositories cannot hide behind case or path-traversal URL forms.
