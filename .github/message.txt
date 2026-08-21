@@ -1,7 +1,7 @@
-fix(postgres): preserve notification event order
+fix(postgres): preserve historical lease releases
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: FWN-53
   description: |-
-    Allocate profile-scoped Issue event positions under transactional serialization and checkpoint notification routing by that commit-ordered authority. Guard rollback when durable ordering evidence cannot be represented, and cover the lower-identity/later-commit race plus migration catalog upgrades in PostgreSQL acceptance tests.
+    Map historical runtime_quiescent and runtime_reaped lease evidence to their matching append-only baseline events during migration 0118. Permit those release events as valid first historical events and extend migration acceptance coverage to verify preserved evidence, state, and canonical digests.
