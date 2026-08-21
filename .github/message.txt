@@ -1,7 +1,7 @@
-Fail closed on org-scope MCP leaks
+fix: seal runnable lease release authority
 
 codeon:
   version: 1
-  authority: fewensa-6
+  authority: FWN-53
   description: |-
-    SSE non-data fields, nested organization list arguments, and unrecognized repository coordinate keys could bypass containment. Enforce full SSE grammar, recursive org-policy detection, and closed coordinate/URL validation so organization-scoped results cannot leak.
+    Derive runnable lease releases from sealed runtime-closure decisions so callers cannot fabricate release evidence tags or references. Reject pre-runtime release attempts at the PostgreSQL boundary and cover closed, unknown, incomplete, and replay outcomes.
