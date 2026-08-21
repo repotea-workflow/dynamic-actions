@@ -1,9 +1,3 @@
-fix(notification): isolate Codeoff from Codeon
+fix(codeon): complete terminal retry recovery
 
-codeon:
-  version: 1
-  authority: fewensa-30
-  description: |-
-    Replace the shared semantic crate's tracker-owned IssueIdentifier with a validated public notification authority while preserving the v1 wire representation.
-    
-    Remove CodeOn crate dependencies from the notification and Webhook manifests, add a locked cargo-tree boundary regression test for Codeoff runtime and state, and document the application conversion boundary.
+Persist recovery evidence on replacement dispatches so retries preserve existing workspace and PR progress. Recognize every exact historical Codex terminal-without-completion evidence value during startup promotion.
