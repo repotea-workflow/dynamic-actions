@@ -1,1 +1,7 @@
-feat(console): add login flow and settings
+fix(codeon): seal live and smoke e2e harness retries
+
+codeon:
+  version: 1
+  authority: fewensa-1
+  description: |-
+    Freeze MCP mutation payloads before retry, bound child processes to the whole-run deadline, require GitHub push authority in live preflight, restrict the smoke provider override to HTTP IP-loopback bases, and validate each review-thread reply against its own fixing commit in the final PR ancestry.
