@@ -1,7 +1,9 @@
-Harden GitHub MCP org search containment
+fix: enforce runnable lease audit consistency
 
 codeon:
   version: 1
-  authority: fewensa-6
+  authority: fewensa-53
   description: |-
-    Reject Boolean search escapes, recursively fail closed on nested foreign coordinates, accept consistent owners under exact-repository leases, and treat omitted isError as success.
+    Fence pre-0118 projection-only writers with deferred projection/event consistency constraints, and cover legacy claim and terminal update rejection during migration acceptance.
+    
+    Return the closed wrong-profile outcome for release and reacquisition requests whose identity does not match the supplied Profile context, with focused PostgreSQL coverage.
