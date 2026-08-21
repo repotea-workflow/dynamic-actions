@@ -1,7 +1,7 @@
-fix(tracker): validate activity contexts
+Align migration versions and preferred identifier contract
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-23
   description: |-
-    Decode every existing issue state-transition payload through a closed typed union and render only bounded identifiers. Validate package aggregation summaries for closed fields, consistent counts, and event-specific producer invariants, with focused regression fixtures for valid and drift cases.
+    Raise the PostgreSQL migration version authority from 1..=111 to 1..=113 after renaming workspace aliases to 0113. Document that stored issues.identifier remains {workspace_key}-{number}, preferred output is derived from Workspace issue_prefix plus number, and get/search accept both forms through the shared resolver without bulk rewriting stored identifiers.
