@@ -1,7 +1,11 @@
-fix(codeon): seal live e2e harness review findings
+Use structured GitHub scopes in Turn account resolution (#160)
 
 codeon:
   version: 1
-  authority: fewensa-1
+  authority: fewensa-5
   description: |-
-    Redact disposable database credentials from live reports, route post-create exits through a verified cleanup finalizer, bound the whole-run timeout across preflight and provisioning, and normalize agent=grok to grok_build in daemon config.
+    Carry structured GitHub {kind, name} scope through Channel Turn planning, approval, persistence, and execution.
+    
+    Account selection is exact configured repository route, then owning-organization route, then Owner-only dynamic discovery. Dynamic evidence is user-login match, active org membership, or matching GitHub App installation; write and destructive calls also need repository permission evidence. Public 200 is reachability only and never selects an account. Equal-authority accounts return a bounded ambiguity error.
+    
+    Durable plans persist an explicit account; auto does not survive. Execution provisions the planned account and structured scope without reselection. Credential-read remains for account-bound calls such as get_me. Legacy repository-only plans still decode safely.
