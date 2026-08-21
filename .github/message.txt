@@ -1,7 +1,9 @@
-fix(codeon): reserve live-e2e report before fail-fast
+Implement exact provider cancellation
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-44
   description: |-
-    Initialize report.json and the sealing trap before prerequisite, argument, duration, or marker-generator exits so every live-e2e invocation leaves a machine-readable recovery artifact.
+    Expose provider-neutral cancellation outcomes with bounded evidence and bind every request to the sealed operation, runtime reference, dispatch, and fence.
+    
+    Fail closed on missing or conflicting retained identity, interrupt only the exact Codex turn, cancel only exact Grok or Cursor targets, and prevent cancellation deadlines from stopping shared runtimes. Add focused adapter and concurrency coverage and align the cancellation contract documentation.
