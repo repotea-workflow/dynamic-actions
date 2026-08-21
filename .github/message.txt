@@ -1,1 +1,1 @@
-fix(codeon): recover terminal agent dispatches
+feat(console): add login flow and settings
