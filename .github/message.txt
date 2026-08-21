@@ -1,7 +1,7 @@
-Prefer uppercase Issue-prefix identifiers in tracker and MCP
+feat: resolve commit authority aliases by Issue identity
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-24
   description: |-
-    Use the shared Issue-reference resolver at tracker get and search boundaries so mixed-case prefix and workspace-key forms resolve to one Issue. Project preferred {ISSUE_PREFIX}-{number} on new create, mutation, detail, list, and search results without rewriting stored identifiers. MCP get accepts those forms, treats malformed syntax as invalid arguments, and maps workspace mismatch as not found.
+    Parse codeon.authority as an IssueReference so prefix and workspace-key forms stay syntax-valid. Resolve those aliases at the store boundary against Profile, Workspace, and Attempt context, and authenticate them only when they map to the same IssueId. Generate new requirements, preparations, and messages with the preferred uppercase prefix while keeping historical key metadata, sealed receipts, and canonical bytes exact.
