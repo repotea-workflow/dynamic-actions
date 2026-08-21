@@ -1,7 +1,11 @@
-fix(tracker): seal runnable lease authority
+feat(codeon): scope agent runtimes by profile
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-61
   description: |-
-    Merge the refreshed main branch into the frozen revision head, renumber the durable runnable-lease migration to the next contiguous version, and prevent reconstructed or caller-authored runtime-closure evidence from authorizing capacity release.
+    Add strict provider-keyed Agent Runtime Profile configuration and bind the selected key atomically with provider, model, reasoning effort, and goal mode across Issue, Repository, Codeon Profile, and global routing.
+    
+    Persist Agent Runtime Profile identity through routing and PostgreSQL schemas, route daemon execution to profile-specific Codex, Cursor, and Grok runners, pass isolated runtime homes and native provider profiles, and keep unavailable profiles from disabling healthy runners.
+    
+    Add strict configuration, selection, provider process, migration, and documentation coverage.
