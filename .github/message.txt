@@ -1,7 +1,7 @@
-Reject GitHub URL query and fragment in containment
+fix(runtime): replay terminal dispatch completions
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-16
   description: |-
-    Fail closed when HTTP(S) or SSH GitHub URL coordinates carry uninspected query or fragment components so an in-scope path cannot smuggle a foreign repository past response inspection.
+    Skip runtime worker start evidence when startup recovery loads a terminal dispatch. This preserves refreshed dispatch and fence authority while allowing the durable completion replay path to run; nonterminal workers retain the existing lifecycle evidence.
