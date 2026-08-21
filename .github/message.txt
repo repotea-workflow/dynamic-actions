@@ -1,7 +1,7 @@
-fix(codeon): contain e2e timeouts and seal reports
+fix(codeoff): validate notification authority
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-30
   description: |-
-    Make outer smoke/live timeouts own the cargo process group so descendants stop with the wall clock, atomically rewrite live reports and rebuild them on interrupt, and reserve the disposable database name in the report before CREATE DATABASE.
+    Validate scheduled-run notification authority against the scheduler's canonical identity and timestamp grammar. Timestamp provider terminal notifications at the committed delivery transition, preserve Unicode boundary behavior, and cover canonical decode and SQLite rejection paths. Merge the refreshed main branch while retaining both structured GitHub scope and notification-store composition, with non-conflicting migration versions.
