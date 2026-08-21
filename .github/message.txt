@@ -1,1 +1,7 @@
-fix(codeon): preserve landing runtime on recovery
+Define provider-neutral runtime lifecycle v2 contracts (#127)
+
+codeon:
+  version: 1
+  authority: fewensa-12
+  description: |-
+    Separates bounded runtime control-call deadlines from renewable activity leases; adds digest-only dispatch-fenced activity evidence and pure lifecycle decisions; preserves v1 canonical bytes and fixed-deadline semantics. Verification: cargo test -p codeon-tracker; cargo clippy -p codeon-tracker --all-targets --all-features -- -D warnings; cargo fmt --all -- --check; git diff --check. Full just verify remains blocked by the pre-existing migration catalog expectation (105 versus 110 files).
