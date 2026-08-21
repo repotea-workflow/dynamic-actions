@@ -1,7 +1,7 @@
-Fail closed on object-shaped coordinate fields
+fix(codeon): harden smoke and live e2e harness bounds
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-1
   description: |-
-    Object and array values under repository/organization coordinate keys were recursively accepted when they lacked recognized nested keys, so unverifiable foreign coordinates such as repo:{name,owner_name} could ride beside approved full_name/owner pointers. Reject those unsupported shapes unless the closed catalog declares nested pointers for that exact path, and only lease-check string collection elements.
+    Require every run-owned review thread to be resolved, bound smoke readiness and live database cleanup, and reap agent preflight process groups on timeout so routine and live acceptance entry points fail closed instead of hanging or leaking provider sessions.
