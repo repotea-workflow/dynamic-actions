@@ -1,7 +1,20 @@
-Make live-e2e branch ownership unique per run
+Compose the secure daemon API host
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-56
   description: |-
-    Derive the disposable Issue prefix from the run marker so each live acceptance plans a distinct ownership branch, fail preflight when that ref already exists, and retain the marker-to-ref mapping in the report. Seed issue states from a run-scoped fixture and resolve Todo/Done by category before admission and terminal assertions so the live entry point no longer embeds hard-coded state UUID literals.
+    ## Summary
+    
+    - add strict disabled-by-default API configuration with bounded limits, compiled version validation, loopback/TLS-terminated deployment modes, explicit lifecycle policy, exact origins, and environment-only credentials
+    - derive constant-time Bearer identities into bounded Actor, Profile, and scope request context while enforcing command headers, CORS, request IDs, security headers, deadlines, concurrency, and body/result limits
+    - bind the sealed codeon-api foundation on a separate listener with loaded Profile and PostgreSQL query services, readiness gating, observable failure isolation, and bounded daemon shutdown
+    - preserve disabled-mode and MCP behavior while adding focused configuration, authentication, listener, limit, and lifecycle coverage
+    
+    ## Verification
+    
+    - cargo test -p codeon --test config
+    - cargo test -p codeon --lib daemon::api::tests
+    - cargo test -p codeon --lib daemon::runtime::tests
+    - cargo test -p codeon --test mcp_security
+    - cargo clippy -p codeon --all-targets -- -D warnings
