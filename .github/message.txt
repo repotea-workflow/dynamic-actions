@@ -1,9 +1,7 @@
-fix(postgres): align activity lease recovery
+Resolve commit authority aliases by Issue identity (#147)
 
 codeon:
   version: 1
-  authority: fewensa-14
+  authority: fewensa-24
   description: |-
-    Allow idle-lease and resource-ceiling expiry observations for dispatches whose dispatch and operation are both recovery-required, while preserving running-state runtime-reference validation.
-    
-    Scope activity lease restart readback to the full dispatch identity and fence so replacement dispatches cannot read retained terminal projections. Add PostgreSQL regressions for recovery expiry and replacement-dispatch readback.
+    Parse `codeon.authority` as an IssueReference instead of a lowercase-only identifier. Prefix and workspace-key aliases authenticate the same Issue only when the shared resolver maps them to the same IssueId. New requirements, preparations, and messages use the preferred uppercase prefix; historical key metadata remains valid. Sealed preparation receipts, canonical bytes, and digests stay exact-string compared.
