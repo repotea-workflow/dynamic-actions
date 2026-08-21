@@ -1,18 +1,7 @@
-Integrate Codeoff with shared notifications (#156)
+fix(runtime): seal Agent Runtime Profiles
 
 codeon:
   version: 1
-  authority: fewensa-30
+  authority: FWN-61
   description: |-
-    ## Summary
-    
-    - add strict shared Webhook destination and delivery policy configuration for Codeoff
-    - add a dedicated SQLite notification outbox and shared delivery worker with durable retry, fencing, ambiguity, restart, and retention behavior
-    - emit five typed terminal scheduler events without changing existing Slack or scheduler ownership
-    - cover future Slack rendering compatibility and Markdown/plaintext Webhook delivery
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo clippy --all-features -p codeoo-notification -p codeoo-notification-core -p codeoo-notification-webhook -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-channel-slack -p codeoff-cli -- -D warnings`
-    - `cargo test --all-features -p codeoo-notification -p codeoo-notification-core -p codeoo-notification-webhook -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-channel-slack -p codeoff-cli`
+    Persist canonical runtime identity snapshots with execution bindings and reject legacy or drifted replay. Route only startup-available provider profiles, expose sanitized per-profile health and capacity accounting, and enforce canonical trusted operator paths.
