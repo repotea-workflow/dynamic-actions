@@ -1,7 +1,7 @@
-Align zh-TW runtime auth guide with scopes
+fix(runtime): isolate supervised dispatch recovery
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-16
   description: |-
-    Mirror the English scheduled GitHub authorization migration and resource-scope containment guidance in the normative Traditional Chinese runtime document, and refresh its verification date so operators no longer follow tool-list or metadata-only repository_scope instructions.
+    Make daemon startup reconciliation persistence-only so provider recovery is admitted after readiness through the bounded dispatch supervisor. Split durable dispatch creation from provider I/O, require worker-start evidence before provider calls, retain typed dispatch and fence authority for exact cancellation, and keep reaper-stage failures within worker fault scope. Add focused supervision and stale-authority tests.
