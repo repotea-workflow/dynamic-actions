@@ -1,11 +1,9 @@
-fix(postgres): bind runnable lease audit semantics
+Isolate post-terminal cleanup workers
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-16
   description: |-
-    Bind each durable runnable-lease event kind to its closed evidence class so alternate SQL writers cannot create semantically contradictory audit records.
+    Supervise provider-backed post-terminal cleanup outside the scheduler loop with bounded admission, panic isolation, and bounded draining.
     
-    Refuse migration rollback whenever any runnable-lease event exists, including a post-migration generation-1 reservation, because the immutable event cannot be proven synthetic and would otherwise be discarded.
-    
-    Extend migration acceptance to reject every mismatched event/evidence pair and to prove rollback rejects a newly committed held reservation.
+    Quarantine malformed completion handoffs into durable manual recovery and keep candidate-local invariants below the process-fatal boundary.
