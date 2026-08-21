@@ -1,9 +1,11 @@
-fix(runtime): refresh dispatch worker authority
+Prefer uppercase Issue-prefix identifiers in tracker and MCP (#146)
 
 codeon:
   version: 1
-  authority: fewensa-16
+  authority: fewensa-23
   description: |-
-    Refresh supervised dispatch worker authority immediately after durable claim acquisition while keeping duplicate admission keyed to stable dispatch identity. Resolve cancellation requests from the latest fenced dispatch state so newly checkpointed provider runtime and exact input references are used.
+    Wire the shared Issue-reference resolver into tracker get and search so helixbox-9112, HBX-9112, hbx-9112, and mixed-case prefix forms resolve to one IssueId while preserving Profile and Workspace isolation.
     
-    Add focused supervisor and PostgreSQL acceptance coverage for refreshed fencing, bounded duplicate admission, durable lifecycle evidence, and latest-input cancellation authority.
+    New create, mutation, detail, list, and search projections render preferred `{ISSUE_PREFIX}-{number}` without rewriting stored identifiers. Exact identifier search ranks preferred and legacy forms first. MCP get accepts those forms, rejects malformed syntax as invalid arguments, and maps unknown or workspace-mismatch references as not found. UUID-only mutation schemas stay UUID-only.
+    
+    Also renumber the workspace-alias migration to 0113 so it no longer collides with landing-capability 0111.
