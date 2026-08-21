@@ -1,23 +1,9 @@
-Persist authenticated operation progress activity (#153)
+fix(runtime): refresh dispatch worker authority
 
 codeon:
   version: 1
-  authority: fewensa-17
+  authority: fewensa-16
   description: |-
-    ## Summary
+    Refresh supervised dispatch worker authority immediately after durable claim acquisition while keeping duplicate admission keyed to stable dispatch identity. Resolve cancellation requests from the latest fenced dispatch state so newly checkpointed provider runtime and exact input references are used.
     
-    - Add a closed, versioned operation progress v2 request with monotonic sequence, bounded activity kinds, and digest-only evidence.
-    - Resolve trusted callback authority through the active profile, operation, dispatch, runtime reference, and frozen catalog before atomically updating the lifecycle-v2 activity projection.
-    - Route MCP and Codex progress callbacks through the shared durable store while preserving legacy v1 acknowledgement behavior without lease renewal.
-    - Add focused schema, catalog, replay/conflict, authority, and projection coverage.
-    
-    ## Verification
-    
-    - `cargo check -p codeon-tracker -p codeon-postgres -p codeon`
-    - `cargo test -p codeon-tracker operation_progress` (1 passed)
-    - `cargo test -p codeon-postgres --lib agent_dispatch_store` (10 passed)
-    - `cargo test -p codeon --lib mcp::implementation::tests` (58 passed)
-    - `cargo test -p codeon --lib execution::agents::codex::tests` (75 passed)
-    - Touched-file rustfmt check and `git diff --check`
-    
-    The PostgreSQL projection acceptance test compiled but was skipped because this environment did not provide an isolated disposable PostgreSQL target.
+    Add focused supervisor and PostgreSQL acceptance coverage for refreshed fencing, bounded duplicate admission, durable lifecycle evidence, and latest-input cancellation authority.
