@@ -1,15 +1,1 @@
-feat(config): define GitHub resource scopes and account routes
-
-codeon:
-  version: 1
-  authority: fewensa-3
-  description: |-
-    Introduce the shared Codeoff GitHub authorization contract in codeoff-config:
-    
-    - Add canonical GitHubResourceScope (exact lowercase repository or organization login), GitHubRepositoryScope/GitHubOrganizationScope parsers that reject URLs, wildcards, mixed case, whitespace, empty segments, and extra path segments.
-    - Add github.accounts.<alias>.routes[] with scope + max_access (read | write | destructive); legacy repositories = [...] remains a migration-only input converted to exact repository routes with a destructive ceiling, and mixing repositories with routes for one account is rejected.
-    - Resolve routes deterministically: exact repository outranks the owning organization; auto resolution fails closed on equal-specificity ambiguity instead of using account sort order.
-    - Extend role/default/source/subject GitHub grants to structured scopes while keeping legacy owner input readable and canonical output as destructive.
-    - Consume the shared contract in runtime authorization (grant intersection narrows organization to repository), scheduled delegation, and MCP/CLI call sites.
-    
-    Validation: cargo test -p codeoff-config (75), codeoff-runtime (225), codeoff-mcp (60), codeoff-cli (242) all pass; cargo clippy --all-targets -- -D warnings and cargo fmt --check clean on the changed crates; cargo check --workspace clean.
+fix(codeon): allow long-running Grok work
