@@ -1,7 +1,7 @@
-fix(codeon): keep live-e2e cleanup on prepared branch
+fix(postgres): preserve notification event order
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-33
   description: |-
-    Preserve durable execution_environments branch authority for live-e2e cleanup readback. Compare it with the published PR head and fail on mismatch before asserting local and remote deletion, so a diverged ownership-derived branch cannot be reported as cleaned.
+    Allocate profile-scoped Issue event positions under transactional serialization and checkpoint notification routing by that commit-ordered authority. Guard rollback when durable ordering evidence cannot be represented, and cover the lower-identity/later-commit race plus migration catalog upgrades in PostgreSQL acceptance tests.
