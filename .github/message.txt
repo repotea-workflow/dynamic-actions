@@ -1,7 +1,7 @@
-fix(codeon): use valid live-e2e Issue priority
+fix(codeoff): reconcile terminal notifications
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-30
   description: |-
-    Replace the invalid MCP priority "normal" with "medium" so live Issue creation passes schema validation, and lock the live Issue-create payload against the priority enum with a unit regression test.
+    Persist enqueue receipts atomically with notification outbox rows and reconcile committed scheduler terminal states that lack receipts. This preserves scheduler authority while making run and delivery terminal notifications retryable across transient enqueue failures, restarts, and outbox retention.
