@@ -1,7 +1,7 @@
-feat: resolve commit authority aliases by Issue identity
+Fix cancellation authority validation
 
 codeon:
   version: 1
-  authority: fewensa-24
+  authority: fewensa-43
   description: |-
-    Parse codeon.authority as an IssueReference so prefix and workspace-key forms stay syntax-valid. Resolve those aliases at the store boundary against Profile, Workspace, and Attempt context, and authenticate them only when they map to the same IssueId. Generate new requirements, preparations, and messages with the preferred uppercase prefix while keeping historical key metadata, sealed receipts, and canonical bytes exact.
+    Reject stale active cancellation requests before completion-first resolution, report the durable post-request Attempt state, and validate persisted cancellation reasons during deserialization. Add focused domain and PostgreSQL coverage for stale completion races, deterministic receipts, and malformed persisted authority.
