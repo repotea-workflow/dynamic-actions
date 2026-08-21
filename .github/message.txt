@@ -1,9 +1,7 @@
-fix: fence durable runnable lease transitions
+Harden GitHub MCP search/list containment
 
 codeon:
   version: 1
-  authority: fewensa-53
+  authority: fewensa-6
   description: |-
-    Bind release and reacquisition to fresh Attempt and Profile authority, restrict reacquisition to durable resume boundaries, and validate held replay against its command/correlation intent.
-    
-    Use one canonical v2 digest over every retained runnable-lease event field for migrated reservations, new claims, releases, and reacquisitions. Expand PostgreSQL acceptance for state transitions, stale fences, scope isolation, immutable history, migration upgrades, global capacity, and claim/reacquire/terminal races.
+    Expand the reviewed containment catalog for organization search and list shapes, reject unreviewed query-bearing tools, and fail closed on uninspectable JSON-RPC error envelopes so foreign coordinates cannot leak through results or errors.
