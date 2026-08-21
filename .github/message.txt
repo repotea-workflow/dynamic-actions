@@ -1,11 +1,7 @@
-feat(codeon): scope agent runtimes by profile
+Isolate stuck provider shutdown and cancellation
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-16
   description: |-
-    Add strict provider-keyed Agent Runtime Profile configuration and bind the selected key atomically with provider, model, reasoning effort, and goal mode across Issue, Repository, Codeon Profile, and global routing.
-    
-    Persist Agent Runtime Profile identity through routing and PostgreSQL schemas, route daemon execution to profile-specific Codex, Cursor, and Grok runners, pass isolated runtime homes and native provider profiles, and keep unavailable profiles from disabling healthy runners.
-    
-    Add strict configuration, selection, provider process, migration, and documentation coverage.
+    Bound daemon runtime shutdown so permanently stuck blocking provider calls cannot hold process exit. Reserve independently bounded cancellation capacity and route exact provider cancellations through it. Retain per-dispatch Cursor and Grok process-group termination handles while sessions are owned by in-flight blocking calls, with cleanup after successful teardown. Add deterministic supervisor, subprocess shutdown, and per-provider termination tests.
