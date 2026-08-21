@@ -1,8 +1,7 @@
-feat(mobile): fit print jobs to paper and unify companion flows
+fix(ci): pass format and clippy gates
 
-Scale photos and scans down to A4 without stretching smaller images,
-fit web captures and notes to the selected media, keep scanner
-contrast local, and reconnect the last bonded printer on launch.
+Replace home-banner test expect() with panic mappings so clippy
+-D warnings succeeds, and format Dart/Prettier files the check
+workflow requires.
 
-Also unifies 1-bit threshold/dither on the shared print preview,
-adds Japanese locale, and generates AI print pages at printer size.
+Also apply the 佳博打印机 display name and square G-mark icon.
