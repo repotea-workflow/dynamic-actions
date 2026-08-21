@@ -1,7 +1,23 @@
-Remove obsolete Picker capacity settings
+Add typed CodeOn activity event catalog (#137)
 
 codeon:
   version: 1
-  authority: fewensa-50
+  authority: fewensa-34
   description: |-
-    Remove the legacy single-capacity fallback and inactive observer setting from strict Picker configuration. Resolve, schedule, and persist claims through the explicit total-active and runnable capacities only, with a v2 canonical policy digest that leaves stored v1 evidence untouched. Update focused tests, examples, the normative runtime specification, and OpenWiki architecture guidance.
+    ## Summary
+    
+    - Add a closed `IssueActivityEventKind` catalog covering all 36 SQL-constrained source events.
+    - Decode existing `change_context` payloads into strict typed contexts and return mapped, intentionally non-notifiable, or schema-drift outcomes with source audit identity.
+    - Project `issue.execution_updated` into 13 stable route event names with bounded semantic content, facts, links, and severity.
+    - Add catalog completeness, payload contract, execution, attention, drift-safety tests, and update tracker documentation.
+    
+    ## Verification
+    
+    - `cargo test -p codeon-tracker -- --test-threads=1`
+    - `cargo fmt --all --check`
+    - `cargo clippy -p codeon-tracker --all-targets --all-features -- -D warnings`
+    
+    ## Notes
+    
+    - Routes, delivery, HTTP, config, and event producers remain unchanged.
+    - OpenWiki generation could not complete because `/root/.openwiki` is read-only; the owning OpenWiki page was aligned manually with the maintained specification.
