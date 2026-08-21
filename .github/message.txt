@@ -1,9 +1,7 @@
-feat(codeoff): integrate shared notifications
+feat(postgres): persist notification deliveries
 
 codeon:
   version: 1
-  authority: fewensa-30
+  authority: fewensa-33
   description: |-
-    Add provider-neutral terminal schedule notifications backed by a dedicated SQLite outbox and the shared delivery worker.
-    
-    Reuse the public Webhook destination and delivery policy contracts, preserve scheduler and Slack ownership boundaries, and cover fencing, retry, restart, retention, authority validation, rendering compatibility, and Webhook delivery.
+    Add migrations for notification consumer checkpoints, frozen outbox deliveries, and delivery attempts. Implement the PostgreSQL notification store with atomic event routing, fenced leases, retries, terminal and ambiguous outcomes, and expired-lease recovery. Add PostgreSQL acceptance coverage and document the durable persistence contract.
