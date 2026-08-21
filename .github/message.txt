@@ -1,9 +1,7 @@
-fix(postgres): fence cancelled dispatch progression
+Enforce route ceilings when authorization is disabled
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-4
   description: |-
-    Lock the owning Attempt before normal dispatch creation, claim acquisition, and send-permit issuance. Reject progression when durable cancellation authority is present so restarted workers cannot resume prepared or running dispatches after cancel-first wins.
-    
-    Add PostgreSQL acceptance coverage for cancellation before dispatch creation and restarted prepared/running dispatch progression.
+    When role authorization is off, MCP planning and lease provisioning validate tagged scopes through the shared configured-route resolver so organization containment and max_access ceilings still apply.
