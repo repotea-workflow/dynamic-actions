@@ -1,7 +1,7 @@
-feat(codeon): persist operation progress
+Bound temporary grants and activate destructive approvals
 
 codeon:
   version: 1
-  authority: fewensa-17
+  authority: fewensa-4
   description: |-
-    Introduce the versioned, digest-only operation progress v2 contract and bind accepted evidence to the active dispatch through the lifecycle activity store. Preserve legacy v1 acknowledgement behavior without renewing v2 leases, and route trusted MCP and Codex callback contexts through the shared ingress with focused contract, catalog, capability, and projection coverage.
+    Clear Owner bypass when installing a temporary GitHub grant so approved account, resource, and access remain authoritative. Accept destructive access approvals end to end by validating access before the state transition and mapping destructive through grant activation.
