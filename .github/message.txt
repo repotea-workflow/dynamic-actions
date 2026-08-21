@@ -1,7 +1,1 @@
-feat(codeon): persist Attempt cancellation authority
-
-codeon:
-  version: 1
-  authority: fewensa-43
-  description: |-
-    Persist exact cancellation intent, actor, expected version, and current Operation/dispatch identity in an immutable PostgreSQL receipt. Move active Attempts to cancelling and advance the dispatch fence atomically so completion-first remains authoritative while cancel-first callbacks become bounded audit evidence.
+fix(codeon): recover merge capability preflight
