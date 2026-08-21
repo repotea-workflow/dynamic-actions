@@ -1,7 +1,7 @@
-fix(codeon): harden live e2e GitHub and preflight checks
+fix(runtime): fence observation persistence atomically
 
 codeon:
   version: 1
-  authority: fewensa-1
+  authority: FWN-16
   description: |-
-    Require resolution replies to cite durable Revision fixing commits, including outdated resolved threads; enforce the run marker on PR title/body and squash message while paginating artifact discovery and recording PRs early; fail-fast with provider production preflight before Issue creation; keep docs and formatting aligned.
+    Carry the worker's dispatch ID and fence into running-observation persistence and validate that authority under the same PostgreSQL transaction as the operation mutation. Treat a fence race as scheduler contention and add a barrier-based regression test that advances the fence after inspection readback but before the write.
