@@ -1,7 +1,7 @@
-Inspect PR detail under org leases; guard legacy action digests
+fix(api): publish spec media and hide Redoc logo
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-55
   description: |-
-    Organization leases now inspect pull-request detail responses so foreign head repositories cannot leak, and scheduled GitHub actions version identity with a legacy idempotency conflict guard so completed pre-upgrade writes are not replayed after the digest change.
+    Declare JSON and YAML response content for both generated OpenAPI specification routes, including object schemas for client discovery. Disable the external Redocly logo and cover both fixes with service-free contract assertions.
