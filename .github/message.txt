@@ -1,7 +1,7 @@
-Validate runnable lease evidence digests
+fix(codeon): bound live e2e preflight and review pagination
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-1
   description: |-
-    Reject non-canonical runtime-resume evidence before acquiring the global capacity lock or mutating runnable-lease state. Add domain and PostgreSQL regression coverage proving a forged digest leaves the projection, held count, and event history unchanged.
+    Keep Codex live-e2e preflight on a no-model authentication/capability probe with kill-on-drop, paginate GitHub review threads to exhaustion, and restore rustfmt so verify stays green.
