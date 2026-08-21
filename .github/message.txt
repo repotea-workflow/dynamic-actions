@@ -1,7 +1,7 @@
-Close GitHub MCP item paths and actor URL roles
+fix(codeon): redact hostless Postgres URLs without panic
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-1
   description: |-
-    Reject unreviewed nested response fields that can smuggle foreign GitHub URLs, and treat actor profile URLs as non-resource metadata so in-scope issue and pull-request results with external authors are not false-rejected.
+    Hostless Unix-socket database URLs lack an authority host. Redact them to scheme plus path only so live-e2e can seal a machine-readable report instead of panicking after a successful provision.
