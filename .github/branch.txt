@@ -1,1 +1,1 @@
-agt/codeon-console-shell
+codeon/fewensa/fewensa-30/a1

@@ -1,1 +1,11 @@
-feat(codeon): add console shell
+fix(codeoff): preserve terminal notifications
+
+codeon:
+  version: 1
+  authority: fewensa-30
+  description: |-
+    Emit notification events only after expired run, expired delivery, and readiness-rejection transitions commit successfully.
+    
+    Bind scheduled-delivery producer metadata and stable notification identity to the delivery ID while retaining the parent run authority, so independent targets enqueue separately and exact replays remain idempotent.
+    
+    Add focused fake-sink and outbox coverage and document the delivery authority contract.
