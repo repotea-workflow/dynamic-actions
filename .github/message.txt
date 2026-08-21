@@ -1,7 +1,3 @@
-Add dynamic Parent Package blocker inheritance
+fix(codeon): deliver recovered review handoff
 
-codeon:
-  version: 1
-  authority: fewensa-39
-  description: |-
-    Introduce a canonical effective-blocker projection that unions a Task's direct blockers with its Parent Package's direct blockers without copying edges. Wire readiness filters, completion checks, and topology mutation guards so Parent/reparent and Package blocker changes reject when affected children hold active Attempts.
+Accept the canonical restored Attempt version when a Review completed from the exact runtime-unknown recovery history, while preserving the existing failed-artifact replay guard.
