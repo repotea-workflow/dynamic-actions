@@ -1,7 +1,9 @@
-Preserve role-union tool ceilings and org routes
+Fence Operation mutations after cancellation
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-43
   description: |-
-    Stop role-union canonicalization from synthesizing unrestricted write from unrestricted read plus restricted write. Disabled-authorization Turn planning now keeps AuthorizedGitHubRoute proofs, rewrites auto accounts, and uses credential-only lookup so organization scopes authorize correctly.
+    Serialize ordinary current-Operation mutations against their parent Attempt before locking the Operation. Reject new mutations after a durable requested cancellation while preserving completed command replay semantics.
+    
+    Add PostgreSQL lock-gated coverage for completion-first and cancel-first races with and without Dispatch authority. Align the maintained Picker specification and OpenWiki lifecycle table with the cancelling state, durable receipts, fencing semantics, and guarded rollback constraint.
