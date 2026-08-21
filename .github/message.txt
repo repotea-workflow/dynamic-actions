@@ -1,7 +1,7 @@
-feat(postgres): persist notification deliveries
+Enforce GitHub MCP repository and organization containment
 
 codeon:
   version: 1
-  authority: fewensa-33
+  authority: fewensa-6
   description: |-
-    Add migrations for notification consumer checkpoints, frozen outbox deliveries, and delivery attempts. Implement the PostgreSQL notification store with atomic event routing, fenced leases, retries, terminal and ambiguous outcomes, and expired-lease recovery. Add PostgreSQL acceptance coverage and document the durable persistence contract.
+    The GitHub MCP proxy previously required an explicit repository coordinate and forwarded arguments and results unchanged, so organization leases and credential reads could not be contained independently of the prompt. Classify each call, normalize bounded search qualifiers onto the structured lease, inspect organization-wide results before release, and tag catalog, action, and audit identities with the lease scope.
