@@ -1,7 +1,9 @@
-fix(postgres): retain cancellation authority
+Generate prefix execution names with legacy recovery (#148)
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-25
   description: |-
-    Refuse the Attempt cancellation authority down migration whenever cancellation request or event rows remain. Direct operators to roll forward so exact cancellation receipts and late-callback audit evidence cannot be silently dropped after an Attempt leaves the cancelling state.
+    Newly planned execution branches and worktrees use uppercase Issue-prefix components.
+    
+    Planning prefers prefix-form Git names, discovers an existing prefix ref first, and falls back to the historical Workspace-key ref without renaming or duplicating branches. Persisted environment names stay exact. Database checks accept historical key components and new uppercase prefix components, and the forward migration does not rewrite existing rows.
