@@ -1,7 +1,18 @@
-Propagate Codex exe override into live-e2e config
+Integrate Codeoff with shared notifications (#156)
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: fewensa-30
   description: |-
-    When CODEON_CODEX_APP_SERVER_EXE is set, live-e2e must emit executable_env so daemon startup uses the same override preflight accepted. Add a PATH-less Codex config resolution test covering that contract.
+    ## Summary
+    
+    - add strict shared Webhook destination and delivery policy configuration for Codeoff
+    - add a dedicated SQLite notification outbox and shared delivery worker with durable retry, fencing, ambiguity, restart, and retention behavior
+    - emit five typed terminal scheduler events without changing existing Slack or scheduler ownership
+    - cover future Slack rendering compatibility and Markdown/plaintext Webhook delivery
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo clippy --all-features -p codeoo-notification -p codeoo-notification-core -p codeoo-notification-webhook -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-channel-slack -p codeoff-cli -- -D warnings`
+    - `cargo test --all-features -p codeoo-notification -p codeoo-notification-core -p codeoo-notification-webhook -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-channel-slack -p codeoff-cli`
