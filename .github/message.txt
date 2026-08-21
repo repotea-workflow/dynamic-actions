@@ -1,11 +1,7 @@
-Prefer uppercase Issue-prefix identifiers in tracker and MCP (#146)
+Implement durable runnable lease state machine
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-53
   description: |-
-    Wire the shared Issue-reference resolver into tracker get and search so helixbox-9112, HBX-9112, hbx-9112, and mixed-case prefix forms resolve to one IssueId while preserving Profile and Workspace isolation.
-    
-    New create, mutation, detail, list, and search projections render preferred `{ISSUE_PREFIX}-{number}` without rewriting stored identifiers. Exact identifier search ranks preferred and legacy forms first. MCP get accepts those forms, rejects malformed syntax as invalid arguments, and maps unknown or workspace-mismatch references as not found. UUID-only mutation schemas stay UUID-only.
-    
-    Also renumber the workspace-alias migration to 0113 so it no longer collides with landing-capability 0111.
+    Add fenced runnable lease release and reacquisition contracts with a versioned current projection, monotonic generations, and immutable ordered transition history. Serialize reacquisition with the existing global claim capacity lock, preserve mutation-free capacity-pending outcomes, and cover the canonical A-E flow plus claim/reacquire and reacquire/reacquire final-slot races. Document persistence semantics, rollout order, and deferred lifecycle wiring.
