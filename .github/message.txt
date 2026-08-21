@@ -1,7 +1,7 @@
-fix: seal runnable lease release authority
+Contain api.github.com org and user URLs
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-6
   description: |-
-    Derive runnable lease releases from sealed runtime-closure decisions so callers cannot fabricate release evidence tags or references. Reject pre-runtime release attempts at the PostgreSQL boundary and cover closed, unknown, incomplete, and replay outcomes.
+    Reject foreign api.github.com/orgs and /users coordinates during organization-scoped response inspection, and fail closed on unsupported GitHub API path families so an in-scope login cannot mask out-of-scope URL fields.
