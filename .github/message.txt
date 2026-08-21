@@ -1,9 +1,3 @@
-Supervise blocking provider calls
+fix(codeon): bound Agent Cargo disk growth (#167)
 
-codeon:
-  version: 1
-  authority: FWN-16
-  description: |-
-    Route synchronous Codex, Cursor, and Grok session operations through one bounded supervisor backed by the existing runnable-capacity authority. Retain physical-call capacity after caller timeouts, join tracked calls during bounded daemon drain, and preserve exact provider session ownership across blocking boundaries.
-    
-    Add deterministic coverage for two stuck calls with responsive MCP, Picker, and independent repository work; timeout-retained capacity; bounded drain; and the existing panic, fencing, recovery, and fault-scope contracts.
+Disable Cargo incremental artifacts in Codeon-managed Codex, Cursor, and Grok processes to reduce per-Attempt disk amplification while preserving isolated worktree targets.
