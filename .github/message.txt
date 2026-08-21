@@ -1,9 +1,7 @@
-Merge main and repair cancellation rollback
+fix(codeon): use valid live-e2e Issue priority
 
 codeon:
   version: 1
-  authority: FWN-43
+  authority: FWN-1
   description: |-
-    Resolve the refreshed main conflict while preserving Attempt cancellation and runtime lifecycle coverage.
-    
-    Renumber cancellation authority to migration 0118, make constraint insertion and removal fail closed against PostgreSQL-deparsed definitions, and cover the exact up/down/up shape. Keep cancel-first completion tests invariant across the merged operation lifecycle.
+    Replace the invalid MCP priority "normal" with "medium" so live Issue creation passes schema validation, and lock the live Issue-create payload against the priority enum with a unit regression test.
