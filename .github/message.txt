@@ -1,7 +1,7 @@
-fix(postgres): preserve historical lease releases
+fix(api): seal V1 contract foundation
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-55
   description: |-
-    Map historical runtime_quiescent and runtime_reaped lease evidence to their matching append-only baseline events during migration 0118. Permit those release events as valid first historical events and extend migration acceptance coverage to verify preserved evidence, state, and canonical digests.
+    Prevent consumers from merging raw Axum routes into the finalized public namespaces by exposing the API foundation as an opaque service and verifying registered routes against generated OpenAPI metadata. Preserve immutable cache and nosniff headers on conditional Redoc asset responses. Record the mandated OpenAPI dependency graph and advisory disposition, and align OpenWiki with the service-free API contract boundary.
