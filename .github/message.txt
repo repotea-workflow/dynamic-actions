@@ -1,7 +1,7 @@
-fix(postgres): validate all event scopes
+fix(api): stabilize Redoc asset verification
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: FWN-55
   description: |-
-    Route workspace and repository events with nullable issue IDs through the typed notification catalog. This prevents malformed non-issue activity from advancing the durable consumer checkpoint.
+    Content-address the self-hosted Redoc bootstrap so immutable caching cannot retain bytes from an earlier build. Keep the Chromium DOM acceptance test behind an explicit documented gate while preserving service-free Redoc contract coverage in the default suite.
