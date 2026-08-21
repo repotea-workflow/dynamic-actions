@@ -1,3 +1,7 @@
-fix(codeon): match recovered attention authority (#142)
+Add dynamic Parent Package blocker inheritance
 
-Rebuild the canonical runtime-unknown Attention from the pre-recovery operation version and its durable observation timestamp, matching the authority that opened the recovery case.
+codeon:
+  version: 1
+  authority: fewensa-39
+  description: |-
+    Introduce a canonical effective-blocker projection that unions a Task's direct blockers with its Parent Package's direct blockers without copying edges. Wire readiness filters, completion checks, and topology mutation guards so Parent/reparent and Package blocker changes reject when affected children hold active Attempts.
