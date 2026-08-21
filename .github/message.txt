@@ -1,9 +1,7 @@
-fix(postgres): enforce runnable lease event continuity
+Fail closed on uninspected MCP response fields
 
 codeon:
   version: 1
-  authority: fewensa-53
+  authority: fewensa-6
   description: |-
-    Validate every durable runnable-lease event digest and require each event to continue from its predecessor before the deferred projection consistency check can commit.
-    
-    Add migration acceptance coverage for canonical-digest tampering and a locally valid but discontinuous multi-event transaction, and document the commit-time chain invariant.
+    Reject organization-scoped GitHub MCP responses whose JSON-RPC envelope or content blocks carry unreviewed fields, so foreign repository coordinates cannot ride beside inspected text payloads that the proxy would otherwise forward unchanged.
