@@ -1,7 +1,7 @@
-refactor: supervise dispatch runtime workers
+Project preferred prefix on effective blocker summaries
 
 codeon:
   version: 1
-  authority: fewensa-16
+  authority: fewensa-23
   description: |-
-    Move execution-runtime candidate and reconciliation work behind a bounded supervisor so provider calls cannot block scheduler fairness. Persist worker lifecycle evidence, fence stale completions, isolate worker faults and panics, and cancel exact dispatch runtimes during bounded shutdown while retaining global fail-closed invariants.
+    IssueDetail.effective_blockers still selected stored issues.identifier. Derive blocker_identifier from the current Workspace issue_prefix and Issue number, matching other detail and list projections, and group by that expression. Keep stored identifiers and frozen finalization text unchanged. Assert preferred identifiers on get, inheritance, and MCP blocker results.
