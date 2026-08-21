@@ -1,25 +1,7 @@
-Persist exact Attempt cancellation authority (#134)
+Reject GitHub URL query and fragment in containment
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: FWN-6
   description: |-
-    ## Summary
-    
-    - Add provider-neutral cancellation request, receipt, identity snapshot, and late-callback audit contracts.
-    - Persist cancellation authority transactionally in PostgreSQL, move active Attempts to `cancelling`, and advance the current dispatch fence.
-    - Preserve completion-first ordering while rejecting and auditing cancel-first late completions without mutating Issue state.
-    - Cover stale versions, terminal outcomes, profile isolation, concurrent replay, deterministic receipts, and completion races.
-    
-    ## Verification
-    
-    - `cargo check --workspace --all-targets --all-features`
-    - `cargo test -p codeon-tracker attempt_cancellation --lib`
-    - `cargo test -p codeon-tracker execution::tests --lib`
-    - `cargo test -p codeon-postgres postgres_state_mapping --lib`
-    
-    PostgreSQL acceptance tests compiled but could not execute because `CODEON_TEST_DATABASE_URL` was not configured. Focused Clippy is also blocked by two pre-existing warnings in untouched files.
-    
-    ## Scope
-    
-    Tracker cancellation contracts and PostgreSQL authority only. No provider adapters, daemon cancellation worker, filesystem behavior, or MCP surface changes.
+    Fail closed when HTTP(S) or SSH GitHub URL coordinates carry uninspected query or fragment components so an in-scope path cannot smuggle a foreign repository past response inspection.
