@@ -1,9 +1,21 @@
-fix(postgres): deduplicate activity digests
+Build shared notification delivery core (#138)
 
 codeon:
   version: 1
-  authority: fewensa-14
+  authority: fewensa-29
   description: |-
-    Check every activity observation digest before accepting a higher provider sequence so duplicate evidence cannot renew idle leases.
+    ## Summary
     
-    Merge current main and move lifecycle v2 migration to 0115, preserving the contiguous SQLx ledger and upgrading from 0114.
+    - Add the stable provider-neutral notification delivery crate and reuse the canonical v1 semantic envelope.
+    - Freeze destination, binding, rendered payload, idempotency, receipt, and fence identities behind validated public types.
+    - Define pure render/exact-send provider contracts, application-owned store ports, deterministic retry policy, and common fenced worker transitions.
+    - Cover cancellation, lease loss, stale fences, deadlines, retry exhaustion, bounded provider delay, timeout, panic containment, and exact payload replay.
+    - Update OpenWiki ownership guidance for the new shared boundary.
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo clippy -p codeoo-notification-core --all-targets -- -D warnings`
+    - `cargo test -p codeoo-notification-core`
+    - `RUSTDOCFLAGS="-D warnings" cargo doc -p codeoo-notification-core --no-deps`
+    - `cargo tree -p codeoo-notification-core --depth 1`
