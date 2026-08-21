@@ -1,7 +1,1 @@
-Reject MCP tool-error leaks in org containment
-
-codeon:
-  version: 1
-  authority: fewensa-6
-  description: |-
-    Require CallToolResult isError to be false and validate closed search/list payload shapes so foreign coordinates cannot hide in tool-error text or sibling metadata outside reviewed item pointers.
+fix(console): allow preview proxy host
