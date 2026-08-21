@@ -1,7 +1,7 @@
-Merge origin/main and keep preferred Issue-prefix identifiers
+Expose strict MCP blocked_by create contract
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-41
   description: |-
-    Refresh origin/main and merge it into this branch so the preferred uppercase Issue-prefix work can land. Resolve the only conflict by adopting main's contiguous 1..=115 PostgreSQL migration ceiling, which already includes workspace aliases at 0113 plus later 0114 and 0115 migrations. Keep both sides' behavior: shared Issue-reference resolution and preferred identifier projections from this branch, and main's effective blockers, commit-authority aliases, prefix execution names, and related runtime persistence.
+    Require codeon_issue_create blocked_by as literal none or a unique Issue UUID array, wire it into IssueBlockerDeclaration, and prove create-to-eligibility E2E with provenance. Resolve the duplicate 0115 migration collision so PostgreSQL acceptance can apply again.
