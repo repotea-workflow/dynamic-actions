@@ -1,7 +1,11 @@
-fix(codeon): redact hostless Postgres URLs without panic
+fix(runtime): isolate worker faults
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-16
   description: |-
-    Hostless Unix-socket database URLs lack an authority host. Redact them to scheme plus path only so live-e2e can seal a machine-readable report instead of panicking after a successful provision.
+    Merge the refreshed target branch without discarding either runtime lifecycle path.
+    
+    Validate the live migration ledger from the execution runtime so global persistence corruption signals ProcessFatal while transient persistence and provider-local invariants remain isolated.
+    
+    Exercise dispatch-worker panic recovery through the execution service and verify Picker and MCP remain responsive.
