@@ -1,7 +1,9 @@
-Keep persisted execution branch names exact
+fix(tracker): enforce routing activity invariants
 
 codeon:
   version: 1
-  authority: fewensa-25
+  authority: fewensa-34
   description: |-
-    Recovery adopted a sibling Issue-linked Git ref when the persisted name was missing. Validate that persisted name exactly and fail closed instead of substituting. Cover the missing-persisted cases plus preflight prefix-first discovery, Workspace-key fallback, both/neither, and commit-mismatch rejection without sibling fallback.
+    Reject issue.created contexts unless routing keys exactly match binding keys, and reject routing replacements with no changed keys or unchanged policy digests. Add focused schema-drift fixtures for each invalid shape.
+    
+    Remove the candidate-added PostgreSQL execution activity writes and acceptance assertions so the catalog revision remains tracker-owned and existing Issue activity feed behavior stays compatible.
