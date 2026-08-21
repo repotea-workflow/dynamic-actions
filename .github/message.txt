@@ -1,7 +1,17 @@
-Expect preferred uppercase Issue-prefix identifiers in e2e and OpenWiki
+Persist runtime lifecycle v2 in PostgreSQL (#140)
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-14
   description: |-
-    Align foundation_e2e create and search result assertions with preferred {issue_prefix}-{number} projections (HBX-1/HBX-2/HBX-3) while keeping the hbx-2 query as a legacy-form search input. Update OpenWiki MCP acceptance examples to the preferred uppercase prefix form and keep stored {workspace_key}-{number} as the storage example only.
+    ## Summary
+    
+    - add migration 0111 for lifecycle v2 policy fields, dispatch activity-lease projections, and append-only lifecycle events
+    - preserve immutable v1 policy encoding while validating and reading v2 timeout and lease policies
+    - atomically accept digest-only activity evidence, coalesce renewals, reject invalid authority or replay, and expose restart-safe expiry queries
+    - cover historical migrations, concurrency, replay, isolation, append-only protection, and expiry ordering
+    
+    ## Verification
+    
+    - focused codeon-postgres PostgreSQL store and migration tests passed
+    - formatting and compile checks passed
