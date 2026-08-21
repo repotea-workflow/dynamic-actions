@@ -1,21 +1,9 @@
-Build shared notification delivery core (#138)
+fix(codeon): harden activity catalog decoding
 
 codeon:
   version: 1
-  authority: fewensa-29
+  authority: fewensa-34
   description: |-
-    ## Summary
+    Prevent schema-drift diagnostics from including input-derived serde details, and enforce the producer-specific required and null invariants for finalization activity contexts.
     
-    - Add the stable provider-neutral notification delivery crate and reuse the canonical v1 semantic envelope.
-    - Freeze destination, binding, rendered payload, idempotency, receipt, and fence identities behind validated public types.
-    - Define pure render/exact-send provider contracts, application-owned store ports, deterministic retry policy, and common fenced worker transitions.
-    - Cover cancellation, lease loss, stale fences, deadlines, retry exhaustion, bounded provider delay, timeout, panic containment, and exact payload replay.
-    - Update OpenWiki ownership guidance for the new shared boundary.
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo clippy -p codeoo-notification-core --all-targets -- -D warnings`
-    - `cargo test -p codeoo-notification-core`
-    - `RUSTDOCFLAGS="-D warnings" cargo doc -p codeoo-notification-core --no-deps`
-    - `cargo tree -p codeoo-notification-core --depth 1`
+    Restore the existing public CurrentExecutionStatus contract while retaining catalog-local typed terminal activity statuses and the original persisted terminal event meanings. Add focused regression coverage for redaction canaries, malformed finalization variants, and public API compatibility.
