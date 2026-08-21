@@ -1,7 +1,9 @@
-fix(tracker): seal activity rehydration timestamps
+feat(notification): add canonical v1 envelope
 
 codeon:
   version: 1
-  authority: fewensa-12
+  authority: fewensa-28
   description: |-
-    Retire the public persistence callback that lent timestamp-minting authority to arbitrary callers. Keep persisted activity construction crate-private and cover the external API boundary with a compile-fail doctest.
+    Add shared CodeOn and Codeoff producer metadata with bounded semantic content validation.
+    
+    Define deterministic JSON encoding and a domain-separated digest with focused contract tests.
