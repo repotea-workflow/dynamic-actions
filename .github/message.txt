@@ -1,7 +1,1 @@
-Inspect GitHub MCP structuredContent for scope leaks
-
-codeon:
-  version: 1
-  authority: fewensa-6
-  description: |-
-    Organization-scoped responses inspected only text content blocks, so foreign coordinates in CallToolResult.structuredContent could pass with an in-scope decoy. Validate structuredContent with the same catalog extractor, require agreement with content, reject unreviewed result fields, and cover unit plus interactive and scheduled regressions.
+fix(codeon): recover terminal agent dispatches
