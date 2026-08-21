@@ -1,7 +1,9 @@
-Persist requester authority on temporary access approval
+fix(postgres): preserve requested cancellation receipt
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-43
   description: |-
-    Owner approval decisions were writing an Owner-derived authorization snapshot for the grant turn. Continuation planning and lease provisioning re-resolve the requester with the temporary grant, so the Owner digest could never match and approved access was rejected before GitHub MCP use. Persist the snapshot from the approval requester identity plus the exact temporary account/resource/access grant, and cover approval through continuation plan replay and lease provisioning in runtime tests.
+    Return the original requested cancellation receipt even after the Attempt becomes terminal, so replay behavior remains independent of lifecycle timing, command ID, and stale expected versions.
+    
+    Add PostgreSQL acceptance coverage for request, terminalization, restart-style replay with a different command, and retention of the cancelled Attempt state.
