@@ -1,9 +1,7 @@
-Fence Operation mutations after cancellation
+refactor: supervise dispatch runtime workers
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-16
   description: |-
-    Serialize ordinary current-Operation mutations against their parent Attempt before locking the Operation. Reject new mutations after a durable requested cancellation while preserving completed command replay semantics.
-    
-    Add PostgreSQL lock-gated coverage for completion-first and cancel-first races with and without Dispatch authority. Align the maintained Picker specification and OpenWiki lifecycle table with the cancelling state, durable receipts, fencing semantics, and guarded rollback constraint.
+    Move execution-runtime candidate and reconciliation work behind a bounded supervisor so provider calls cannot block scheduler fairness. Persist worker lifecycle evidence, fence stale completions, isolate worker faults and panics, and cancel exact dispatch runtimes during bounded shutdown while retaining global fail-closed invariants.
