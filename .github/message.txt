@@ -1,7 +1,9 @@
-Inspect org-lease repository list results
+fix(runtime): retain exact dispatch on drain
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-16
   description: |-
-    Under an organization lease, repository-bound list_* tools can embed foreign forks or pull-request heads. Require reviewed response extractors for those shapes (or reject them) so out-of-scope coordinates fail closed before data returns.
+    Resolve active operation and durable dispatch authority before supervisor admission so bounded shutdown always retains the exact operation, dispatch, and fence for cancellation and abandonment evidence.
+    
+    Add deterministic coverage for a worker paused before execution, exact abandoned lifecycle persistence, and restart discovery of the unfinished dispatch.
