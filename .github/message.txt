@@ -1,7 +1,7 @@
-fix(codeon): preserve unknown Codex cancel outcomes
+Propagate Codex exe override into live-e2e config
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-1
   description: |-
-    Map transient Codex runtime unavailability during an exact turn interrupt to OutcomeUnknown instead of Unsupported. Add a regression runtime and test while preserving the explicit unsupported native Goal contract.
+    When CODEON_CODEX_APP_SERVER_EXE is set, live-e2e must emit executable_env so daemon startup uses the same override preflight accepted. Add a PATH-less Codex config resolution test covering that contract.
