@@ -1,7 +1,9 @@
-fix: preserve cancelling attempt authority
+feat(tracker): add typed activity catalog
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-34
   description: |-
-    Decode the persisted cancelling state and include it in every PostgreSQL active-attempt authority query. Extend cancellation acceptance coverage for capacity, candidate exclusion, issue projection, and mutation fencing, and document the durable cancellation contract.
+    Decode the complete SQL activity event set through closed tracker-domain contracts so notification consumers cannot match arbitrary strings or silently ignore schema drift.
+    
+    Project execution updates into stable bounded semantic events while preserving source event identity and keeping routing and delivery out of scope.
