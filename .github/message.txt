@@ -1,7 +1,7 @@
-feat(codeon): add smoke and live end-to-end test entry points
+Fail closed on GitHub MCP containment gaps
 
 codeon:
   version: 1
-  authority: fewensa-1
+  authority: fewensa-6
   description: |-
-    Add two maintained E2E surfaces under codeon/: a fast deterministic smoke (just smoke-e2e) that provisions disposable PostgreSQL, loopback Git/GitHub doubles, and a scripted non-paid Agent, drives the real daemon and HTTP MCP endpoint through a full Issue lifecycle, and asserts terminal state plus owned worktree/branch cleanup; and an explicit opt-in live acceptance (just live-e2e profile= repository= agent=) that runs the complete production path against the real GitHub provider and Agent with a unique run marker, bounded timeout, fail-fast preflight, machine-readable report, and GitHub publication-contract assertions. Retire the hard-coded legacy live_daemon_mcp tests in favor of the single maintained entry point, and document prerequisites, side effects, cleanup, and failure diagnostics in the README and OpenWiki development guide.
+    Reject error-bearing JSON-RPC envelopes, require reviewed inspection for organization-scoped list shapes, and validate every returned repository or organization coordinate so search and list responses cannot leak foreign scope.
