@@ -1,7 +1,7 @@
-fix(postgres): fence lease release replay
+fix(codeoff): recover conclusive run notifications
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-30
   description: |-
-    Require a non-held runnable-lease release replay to match the requested generation and the immediately preceding version fence before returning AlreadyReleased. Add PostgreSQL acceptance coverage for generation 1 release, generation 2 reacquisition and release with reused evidence, and a stale generation 1 replay that leaves the generation 2 projection unchanged.
+    Map timed-out and cancelled scheduled runs to schedule.run.failed during notification reconciliation so transient enqueue failures remain recoverable after restart. Refactor the Webhook delivery test into focused helpers and satisfy the strict all-target clippy gate.
