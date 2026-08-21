@@ -1,7 +1,11 @@
-Bound temporary grants and activate destructive approvals
+feat(notification): add Webhook provider
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-31
   description: |-
-    Clear Owner bypass when installing a temporary GitHub grant so approved account, resource, and access remain authoritative. Accept destructive access approvals end to end by validating access before the state transition and mapping destructive through grant activation.
+    Add application-neutral Markdown and plaintext rendering with replay-bound metadata and exact frozen-byte delivery.
+    
+    Resolve endpoints and bearer credentials only at send time, enforce HTTPS with explicit loopback-only HTTP tests, bound responses and Retry-After, and classify confirmed, retryable, terminal, and ambiguous outcomes.
+    
+    Cover exact bodies and headers, authentication, limits, failures, redaction, and semantic-core isolation with focused mock-server tests and document the provider contract.
