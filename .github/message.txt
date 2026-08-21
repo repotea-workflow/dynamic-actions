@@ -1,7 +1,11 @@
-fix: seal cancellation callback evidence
+feat(postgres): persist runtime lifecycle v2
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-14
   description: |-
-    Validate late completion authority, contract limits, and canonical digest before recording cancellation audit evidence. Reuse the exact-snapshot digest-sealed callback receipt path with restart-safe replay validation, add the full Attempt state and callback race matrix, and remove the unauthorized scheduled OpenWiki workflow while restoring local-only guidance.
+    Add migration 0111 for lifecycle v2 policy fields, dispatch activity lease projections, and append-only lifecycle events.
+    
+    Persist and validate v1/v2 execution policies, atomically accept or replay digest-only activity evidence, coalesce lease renewal, expose restart-safe expiry queries, and record worker lifecycle evidence without raw activity content.
+    
+    Cover historical migration compatibility, immutable v1 preservation, policy round trips, concurrent activity CAS, replay and authority rejection, expiry ordering, restart readback, append-only protection, and profile isolation.
