@@ -1,7 +1,7 @@
-fix(codeon): seal live-e2e reports on early failure
+Merge main and renumber notification migrations
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-33
   description: |-
-    Guarantee machine-readable live-e2e reports for parse and zero/short-timeout exits, and raise ProtocolError from Codex schema generation timeouts without touching TimeoutExpired.process.
+    Merge the refreshed origin/main into the frozen revision head as required by the sealed mergeability finding. Preserve main's 0118 attempt cancellation migration, move notification persistence to 0119 and notification event commit ordering to 0120, and update migration catalog assertions, focused test references, and the product specification source map.
