@@ -1,23 +1,7 @@
-Establish the V1 API and self-hosted Redoc foundation (#165)
+fix(codeon): contain e2e timeouts and seal reports
 
 codeon:
   version: 1
-  authority: fewensa-55
+  authority: FWN-1
   description: |-
-    ## Summary
-    
-    - Add the service-free codeon-api crate with V1 DTOs, RFC 9457 problems, request IDs, keyset pagination, resource ETags, and version/format parsing.
-    - Generate one deterministic OpenAPI 3.1 object for JSON and YAML routes with exact operation and component identities.
-    - Serve integrity-verified Redoc 2.5.3 assets locally with CSP, immutable caching, and version discovery.
-    
-    ## Verification
-    
-    - cargo fmt --all -- --check
-    - cargo metadata --locked --format-version 1
-    - cargo check -p codeon-api --locked
-    - cargo clippy -p codeon-api --all-targets --locked -- -D warnings
-    - cargo test -p codeon-api --locked (7 tests passed)
-    
-    ## Dependency review
-    
-    The baseline RSA advisory remains unchanged. The required utoipa-axum 0.2.0 graph adds paste 1.0.15, which RustSec flags as unmaintained; its proc-macro build script was reviewed and only queries the configured Rust compiler version.
+    Make outer smoke/live timeouts own the cargo process group so descendants stop with the wall clock, atomically rewrite live reports and rebuild them on interrupt, and reserve the disposable database name in the report before CREATE DATABASE.
