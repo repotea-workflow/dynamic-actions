@@ -1,7 +1,1 @@
-fix(api): prevent remote Redoc assets
-
-codeon:
-  version: 1
-  authority: FWN-55
-  description: |-
-    Reject non-local image sources before Redoc can schedule a request, and remove the unsupported Redocly attribution node without modifying the vendored bundle. Add a headless Chromium contract test that initializes the actual self-hosted documentation service and verifies the rendered DOM contains no remote image, script, stylesheet, or CSP-blocked Redocly resource.
+fix(codeon): restart daemon after fatal loss
