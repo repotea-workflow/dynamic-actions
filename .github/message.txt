@@ -1,3 +1,9 @@
-fix(codeon): deliver recovered review handoff (#144)
+Fix cancellation receipt identity seals
 
-Accept the canonical restored Attempt version when a Review completed from the exact runtime-unknown recovery history, while preserving the existing failed-artifact replay guard.
+codeon:
+  version: 1
+  authority: fewensa-43
+  description: |-
+    Encode optional actor subjects and dispatch runtime references with explicit presence and byte-length framing so absent identity cannot collide with the valid literal value `none`.
+    
+    Add focused digest collision regressions for both optional fields.
