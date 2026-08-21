@@ -1,5 +1,7 @@
-fix(editor): keep overlay geometry live and distinguish italic styles
+fix(editor): keep overlay geometry live and distinguish italic styles (#192)
 
 Rebuild selection overlay geometry during move/resize, and give the
 inspector upright, left-italic, and right-italic glyphs instead of
 reusing the left-italic mark for normal text.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
