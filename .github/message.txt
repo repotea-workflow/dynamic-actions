@@ -1,3 +1,3 @@
-fix(codeon): keep legacy retry fail-closed
+fix(codeon): classify failed retry dispatches (#163)
 
-Require a failed Dispatch before applying legacy Review recovery compatibility. Cover non-terminal durable authority with a no-mutation regression.
+Permit canonical Review recovery to replace a failed Dispatch whether or not durable completion was observed, while preserving fail-closed rejection for non-failed Dispatch authority. Includes live-state-equivalent positive and no-mutation negative PostgreSQL regressions.
