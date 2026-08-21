@@ -1,7 +1,9 @@
-fix(runtime): preserve worker fault boundaries
+fix: fence durable runnable lease transitions
 
 codeon:
   version: 1
-  authority: fewensa-16
+  authority: fewensa-53
   description: |-
-    Signal process-fatal authority for global persistence invariants while keeping provider-local invariants isolated. Abort and join a runtime task after bounded shutdown expires, and include synchronous worker construction inside the panic boundary so capacity is always released.
+    Bind release and reacquisition to fresh Attempt and Profile authority, restrict reacquisition to durable resume boundaries, and validate held replay against its command/correlation intent.
+    
+    Use one canonical v2 digest over every retained runnable-lease event field for migrated reservations, new claims, releases, and reacquisitions. Expand PostgreSQL acceptance for state transitions, stale fences, scope isolation, immutable history, migration upgrades, global capacity, and claim/reacquire/terminal races.
