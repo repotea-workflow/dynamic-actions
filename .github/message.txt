@@ -1,7 +1,7 @@
-Contain api.github.com org and user URLs
+fix(codeon): harden live e2e GitHub and preflight checks
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: fewensa-1
   description: |-
-    Reject foreign api.github.com/orgs and /users coordinates during organization-scoped response inspection, and fail closed on unsupported GitHub API path families so an in-scope login cannot mask out-of-scope URL fields.
+    Require resolution replies to cite durable Revision fixing commits, including outdated resolved threads; enforce the run marker on PR title/body and squash message while paginating artifact discovery and recording PRs early; fail-fast with provider production preflight before Issue creation; keep docs and formatting aligned.
