@@ -1,9 +1,7 @@
-feat(tracker): add typed activity catalog
+Allow Package blocked endpoints in blocker APIs
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-38
   description: |-
-    Decode the complete SQL activity event set through closed tracker-domain contracts so notification consumers cannot match arbitrary strings or silently ignore schema drift.
-    
-    Project execution updates into stable bounded semantic events while preserving source event identity and keeping routing and delivery out of scope.
+    Create already persisted Package blocked_by edges, but list/add/remove still rejected non-Task anchors, leaving durable edges unlistable and unremovable. Align those store paths and docs with Task-or-Package blocked endpoints while keeping Package-as-blocker rejected.
