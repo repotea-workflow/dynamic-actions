@@ -1,9 +1,9 @@
-fix(tracker): enforce lifecycle v2 boundaries
+fix(tracker): seal lifecycle v2 boundaries
 
 codeon:
   version: 1
   authority: fewensa-12
   description: |-
-    Validate execution policy v2 solely through its lifecycle authority while retaining legacy timeout bounds for v1.
+    Derive adapter-facing runtime call deadlines from sealed v2 execution policy while preserving explicit v1 fixed-deadline compatibility.
     
-    Stamp live activity evidence inside the tracker and require opaque persistence authority for timestamp-bearing rehydration. Add regression coverage for independent timeout limits and the external observation API boundary.
+    Render renewable activity leases and all control-call deadlines in v2 operation prompts without changing v1 canonical output. Add a tracker-owned persistence reader boundary for external activity evidence rehydration.
