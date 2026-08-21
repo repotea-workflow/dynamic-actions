@@ -1,9 +1,7 @@
-Isolate post-terminal cleanup workers
+fix(codeon): seal notification fence races
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-33
   description: |-
-    Supervise provider-backed post-terminal cleanup outside the scheduler loop with bounded admission, panic isolation, and bounded draining.
-    
-    Quarantine malformed completion handoffs into durable manual recovery and keep candidate-local invariants below the process-fatal boundary.
+    Make lost-fence ambiguity sealing serialized and idempotent when lease recovery wins the row lock first. Tighten notification outbox state constraints so claimed delivery states carry coherent attempt and fence evidence, and cover both lock orders plus impossible durable shapes in PostgreSQL acceptance tests.
