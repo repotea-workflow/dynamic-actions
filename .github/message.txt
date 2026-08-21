@@ -1,7 +1,9 @@
-fix(postgres): seal notification routing invariants
+fix(runtime): reconcile drained worker faults
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: FWN-16
   description: |-
-    Fail closed when a typed Issue activity reports schema drift so the router transaction cannot advance its durable checkpoint. Reject expired claimed leases and mismatched attempt/fence evidence at the schema boundary, with focused PostgreSQL acceptance coverage and specification clarification.
+    Preserve completed dispatch worker outcomes during shutdown and route them through the fenced recovery path before reporting a clean drain.
+    
+    Retain concrete agent runtime error kinds through PickerError so dispatch, profile, and provider-generation failures receive their intended isolation scope.
