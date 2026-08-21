@@ -1,7 +1,7 @@
-Accept GitHub actor profile URL subresources
+fix(codeon): bound smoke-e2e whole-run hangs
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-1
   description: |-
-    ActorMetadata previously allowed only api.github.com/users/<login>, so real user objects with followers_url, repos_url, and similar subresource paths failed closed on in-scope search results. Accept verified users/<login>/… API families while still lease-checking nested repos and orgs URLs, and cover the full actor fixture in regression tests.
+    Bound smoke-e2e with a whole-run Justfile timeout, fail-fast git/git-http-backend/ssh-keygen checks, and kill-on-expiry child and database provisioning budgets so routine CI cannot hang before the daemon phase. Document the prerequisites and timeout diagnostics; live GitHub acceptance remains blocked under this revision's loopback-only constraints.
