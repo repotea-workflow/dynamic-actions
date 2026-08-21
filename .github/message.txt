@@ -1,7 +1,7 @@
-fix(tracker): project merge assignments as ready
+Remove obsolete Picker capacity settings
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-50
   description: |-
-    Recognize the validated pending Merge operation creation context emitted by Ready-for-Merge assignment as issue.execution.ready_for_merge. Add a focused producer-shape regression test while preserving the existing explicit ready_for_merge stage projection.
+    Remove the legacy single-capacity fallback and inactive observer setting from strict Picker configuration. Resolve, schedule, and persist claims through the explicit total-active and runnable capacities only, with a v2 canonical policy digest that leaves stored v1 evidence untouched. Update focused tests, examples, the normative runtime specification, and OpenWiki architecture guidance.
