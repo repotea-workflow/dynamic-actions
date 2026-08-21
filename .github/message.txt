@@ -1,9 +1,7 @@
-Use structured GitHub scopes in Turn account resolution
+fix(postgres): close notification recovery gaps
 
 codeon:
   version: 1
-  authority: fewensa-5
+  authority: fewensa-33
   description: |-
-    Replace string repository_scope in Channel Turn MCP authorization with a versioned {kind, name} scope, and select GitHub accounts by exact configured repository route, owning-organization route, then Owner-only dynamic evidence.
-    
-    Persist an explicit account before execution so auto cannot survive durable plans. Public reachability never selects an account; equal-authority aliases fail closed with a bounded ambiguity error. Execution provisions the planned account and structured scope without reselection.
+    Recover expired claims independently of delivery deadlines and terminalize expired undispatched work. Permit confirmed-no-write retry and terminal transitions before dispatch, accept maximum-size destination snapshots, and include notification persistence in the PostgreSQL gate.
