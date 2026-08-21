@@ -1,9 +1,3 @@
-Recover durable Review completion before runtime retry (#141)
+fix(codeon): match recovered attention authority
 
-* fix(codeon): replay durable review completion
-
-Recover exact runtime-unknown Review operations from persisted completion evidence before deterministic retry, then resolve the matching Attention case. Renumber the conflicting workspace alias migration and add the guarded retry-receipt allowance required by atomic recovery.
-
-* fix(codeon): scope review attention closure
-
-Resolve Attention after recovered Review completion only for the exact operation-owned runtime outcome unknown case, preserving legacy artifact-validation recovery behavior.
+Rebuild the canonical runtime-unknown Attention from the pre-recovery operation version and its durable observation timestamp, matching the authority that opened the recovery case.
