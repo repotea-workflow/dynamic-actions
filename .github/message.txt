@@ -1,9 +1,7 @@
-Establish V1 API contract foundation
+fix(postgres): fence lease release replay
 
 codeon:
   version: 1
-  authority: FWN-55
+  authority: FWN-53
   description: |-
-    Add the service-free codeon-api crate with generated OpenAPI 3.1 JSON and YAML, version discovery, RFC 9457 problems, pagination and ETag primitives, request ID propagation, and an OpenAPI-aware Axum router.
-    
-    Vendor the integrity-verified Redoc 2.5.3 bundle and license with self-hosted CSP-hardened documentation routes. Add contract tests for deterministic specifications, media types, ETags, version and format errors, self-hosted assets, exact route metadata, and raw Axum route exclusion.
+    Require a non-held runnable-lease release replay to match the requested generation and the immediately preceding version fence before returning AlreadyReleased. Add PostgreSQL acceptance coverage for generation 1 release, generation 2 reacquisition and release with reused evidence, and a stale generation 1 replay that leaves the generation 2 projection unchanged.
