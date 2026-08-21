@@ -1,7 +1,9 @@
-docs: refresh Webhook provider ownership
+Merge current main into Picker cleanup
 
 codeon:
   version: 1
-  authority: fewensa-31
+  authority: fewensa-50
   description: |-
-    Align OpenWiki path and ownership guidance with the shared application-neutral codeoo-notification-webhook crate. Preserve application ownership of persistence adapters and runtime composition.
+    Merge refreshed origin/main into the frozen Picker cleanup and resolve its schema-contract conflict at the candidate's existing version 117 boundary.
+    
+    Adapt the newly merged blocker-claim test to ClaimCapacityPolicy::new(total, runnable), preserving the two-capacity public contract. Leave the candidate's migration numbering unchanged because reconciling published migration ledger identities requires separate deployment authority.
