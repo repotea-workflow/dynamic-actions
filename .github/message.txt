@@ -1,7 +1,7 @@
-fix(api): publish spec media and hide Redoc logo
+fix(codeon): seal live-e2e reports on early failure
 
 codeon:
   version: 1
-  authority: FWN-55
+  authority: FWN-1
   description: |-
-    Declare JSON and YAML response content for both generated OpenAPI specification routes, including object schemas for client discovery. Disable the external Redocly logo and cover both fixes with service-free contract assertions.
+    Guarantee machine-readable live-e2e reports for parse and zero/short-timeout exits, and raise ProtocolError from Codex schema generation timeouts without touching TimeoutExpired.process.
