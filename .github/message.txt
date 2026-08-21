@@ -1,9 +1,15 @@
-Fix cancellation receipt identity seals
+Add dynamic Parent Package blocker inheritance (#143)
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: fewensa-39
   description: |-
-    Encode optional actor subjects and dispatch runtime references with explicit presence and byte-length framing so absent identity cannot collide with the valid literal value `none`.
+    ## Summary
+    - Add effective-blocker projection: Task direct blockers union Parent Package blockers without edge copying.
+    - Preserve provenance on reads; use the same union for readiness filters and completion eligibility.
+    - Reject Parent/reparent and Package blocker mutations under topology lock when affected children have active Attempts.
     
-    Add focused digest collision regressions for both optional fields.
+    ## Test plan
+    - Run cargo test -p codeon-tracker --lib
+    - Run cargo check for codeon-tracker, codeon-postgres, and codeon with all features
+    - Run just test-postgres issue_blockers when an isolated database URL is available
