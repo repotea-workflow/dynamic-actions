@@ -1,3 +1,3 @@
-fix(codeon): match recovered attention authority
+fix(codeon): match recovered attention authority (#142)
 
 Rebuild the canonical runtime-unknown Attention from the pre-recovery operation version and its durable observation timestamp, matching the authority that opened the recovery case.
