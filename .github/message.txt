@@ -1,7 +1,23 @@
-fix(codeon): seal live-e2e reports on outer kill
+Establish the V1 API and self-hosted Redoc foundation (#165)
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: fewensa-55
   description: |-
-    Make live-e2e recoverable when the outer timeout kills cargo mid-run by reserving the run marker and report before launch, persisting database and branch authority as soon as they are known, and sealing interrupted reports with recovery targets. Also stop smoke cleanup from treating git probe failures as successful remote absence, and clear rustfmt so verify stays green.
+    ## Summary
+    
+    - Add the service-free codeon-api crate with V1 DTOs, RFC 9457 problems, request IDs, keyset pagination, resource ETags, and version/format parsing.
+    - Generate one deterministic OpenAPI 3.1 object for JSON and YAML routes with exact operation and component identities.
+    - Serve integrity-verified Redoc 2.5.3 assets locally with CSP, immutable caching, and version discovery.
+    
+    ## Verification
+    
+    - cargo fmt --all -- --check
+    - cargo metadata --locked --format-version 1
+    - cargo check -p codeon-api --locked
+    - cargo clippy -p codeon-api --all-targets --locked -- -D warnings
+    - cargo test -p codeon-api --locked (7 tests passed)
+    
+    ## Dependency review
+    
+    The baseline RSA advisory remains unchanged. The required utoipa-axum 0.2.0 graph adds paste 1.0.15, which RustSec flags as unmaintained; its proc-macro build script was reviewed and only queries the configured Rust compiler version.
