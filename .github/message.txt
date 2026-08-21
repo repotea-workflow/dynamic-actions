@@ -1,9 +1,7 @@
-Merge current main into Picker cleanup
+Give the three 0115 PostgreSQL migrations unique versions
 
 codeon:
   version: 1
-  authority: fewensa-50
+  authority: fewensa-23
   description: |-
-    Merge refreshed origin/main into the frozen Picker cleanup and resolve its schema-contract conflict at the candidate's existing version 117 boundary.
-    
-    Adapt the newly merged blocker-claim test to ClaimCapacityPolicy::new(total, runnable), preserving the two-capacity public contract. Leave the candidate's migration numbering unchanged because reconciling published migration ledger identities requires separate deployment authority.
+    SQLx stores migration version as a primary key, so three 0115 pairs blocked a fresh migrate and unique-version authority. Keep blocker provenance at 0115, move runtime lifecycle v2 to 0116 and prefix environment names to 0117, and raise schema_contracts to 1..=117. Do not rewrite stored issues.identifier. Align the workspace archive versus issue-create waiter expectation with the topology advisory lock already covered by sibling tests.
