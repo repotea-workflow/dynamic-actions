@@ -1,1 +1,7 @@
-fix(codeon): allow long-running Grok work (#126)
+feat(tracker): define lifecycle v2 contracts
+
+codeon:
+  version: 1
+  authority: fewensa-12
+  description: |-
+    Separate bounded runtime control-call deadlines from renewable activity liveness. Add digest-only, dispatch-fenced activity evidence and pure lease, ordering, deduplication, ceiling, and stale-authority decisions while preserving v1 canonical bytes and fixed-deadline semantics.
