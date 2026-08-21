@@ -1,3 +1,7 @@
-fix(codeon): restart daemon after fatal loss
+fix(codeon): bound live-e2e whole-run timeout
 
-Supervise process-fatal daemon failures, drain and join the old lifecycle, retry only transient bootstrap failures, and resume durable work without MCP or operator wakeups.
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Route harness git children through async tokio::process with kill_on_drop and a per-call deadline, and cap post-deadline failure recovery database/GitHub reads with an explicit report grace so live-e2e cannot hang past timeout=. Also satisfy rustfmt on the smoke PathBuf join and document the new bounds.
