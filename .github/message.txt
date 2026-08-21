@@ -1,7 +1,7 @@
-fix(codeon): seal live-e2e reports on every nonzero exit
+fix(codeon): reserve live-e2e report before fail-fast
 
 codeon:
   version: 1
   authority: FWN-1
   description: |-
-    The live wrapper left report.json as result=running whenever cargo failed for a non-timeout reason, so compile errors, panics, and harness failures could drop recovery classification after external artifacts existed. Seal every nonzero wrapper exit (and INT/TERM traps) while preserving already-terminal finalizer output and any persisted database or branch authority.
+    Initialize report.json and the sealing trap before prerequisite, argument, duration, or marker-generator exits so every live-e2e invocation leaves a machine-readable recovery artifact.
