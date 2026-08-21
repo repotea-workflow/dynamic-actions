@@ -1,7 +1,7 @@
-Enforce route ceilings when authorization is disabled
+Keep persisted execution branch names exact
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-25
   description: |-
-    When role authorization is off, MCP planning and lease provisioning validate tagged scopes through the shared configured-route resolver so organization containment and max_access ceilings still apply.
+    Recovery adopted a sibling Issue-linked Git ref when the persisted name was missing. Validate that persisted name exactly and fail closed instead of substituting. Cover the missing-persisted cases plus preflight prefix-first discovery, Workspace-key fallback, both/neither, and commit-mismatch rejection without sibling fallback.
