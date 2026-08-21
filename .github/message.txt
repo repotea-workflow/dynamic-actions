@@ -1,9 +1,9 @@
-feat(tracker): define case-insensitive Issue references
+fix(tracker): enforce lifecycle v2 boundaries
 
 codeon:
   version: 1
-  authority: fewensa-21
+  authority: fewensa-12
   description: |-
-    IssueId remains the only semantic identity for equivalent prefix and legacy-key forms.
+    Validate execution policy v2 solely through its lifecycle authority while retaining legacy timeout bounds for v1.
     
-    Callers need one transport-neutral contract that accepts mixed-case prefix input, stores and emits uppercase prefixes, and parses hyphenated Workspace keys without guessing identity from raw strings.
+    Stamp live activity evidence inside the tracker and require opaque persistence authority for timestamp-bearing rehydration. Add regression coverage for independent timeout limits and the external observation API boundary.
