@@ -1,3 +1,7 @@
-fix(codeon): bound Agent Cargo disk growth (#167)
+fix(codeon): seal live-e2e reports on every nonzero exit
 
-Disable Cargo incremental artifacts in Codeon-managed Codex, Cursor, and Grok processes to reduce per-Attempt disk amplification while preserving isolated worktree targets.
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    The live wrapper left report.json as result=running whenever cargo failed for a non-timeout reason, so compile errors, panics, and harness failures could drop recovery classification after external artifacts existed. Seal every nonzero wrapper exit (and INT/TERM traps) while preserving already-terminal finalizer output and any persisted database or branch authority.
