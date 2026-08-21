@@ -1,7 +1,7 @@
-fix(codeon): bound smoke-e2e whole-run hangs
+Reject organization-scoped GitHub CLI execution
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-6
   description: |-
-    Bound smoke-e2e with a whole-run Justfile timeout, fail-fast git/git-http-backend/ssh-keygen checks, and kill-on-expiry child and database provisioning budgets so routine CI cannot hang before the daemon phase. Document the prerequisites and timeout diagnostics; live GitHub acceptance remains blocked under this revision's loopback-only constraints.
+    Organization leases share the CLI bearer but argv validation only constrains -R/--repo, so global search and --org selectors could read cross-organization data. Fail closed for organization scopes until CLI has equivalent structured containment, and cover the leak paths with HTTP regressions.
