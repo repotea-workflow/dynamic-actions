@@ -1,7 +1,7 @@
-Merge main and renumber notification migrations
+fix(tracker): preserve runtime lease digest
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: FWN-53
   description: |-
-    Merge the refreshed origin/main into the frozen revision head as required by the sealed mergeability finding. Preserve main's 0118 attempt cancellation migration, move notification persistence to 0119 and notification event commit ordering to 0120, and update migration catalog assertions, focused test references, and the product specification source map.
+    Carry the sealed runtime-closure digest through runnable lease release authority so projection and event evidence identify the exact runtime record. Treat a replay with the same evidence reference but a different runtime digest as an evidence conflict, with focused domain and PostgreSQL readback coverage.
