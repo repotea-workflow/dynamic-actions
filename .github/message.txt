@@ -1,11 +1,7 @@
-Require explicit IssueBlockerDeclaration on CreateIssue (#133)
+Fix GitHub merge capability preflight recovery (#135)
 
-codeon:
-  version: 1
-  authority: fewensa-37
-  description: |-
-    Summary
-    Add mandatory IssueBlockerDeclaration to CreateIssue with None or non-empty unique BlockedBy IDs. Fail closed on omission, null, empty, duplicates, and malformed input. Leave PostgreSQL create transactions unchanged for fewensa-38.
-    
-    Test plan
-    Run cargo test -p codeon-tracker, cargo fmt --check, and cargo clippy -p codeon-tracker --all-targets --all-features -- -D warnings.
+* fix(codeon): recover merge capability preflight
+
+* fix(codeon): prioritize landing recovery at startup
+
+* fix(codeon): preserve landing runtime on recovery
