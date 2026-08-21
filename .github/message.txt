@@ -1,3 +1,7 @@
-fix(codeon): support blocking callbacks (#164)
+fix(postgres): fence runnable lease admission
 
-Codex persistence callbacks use block_in_place, which panics on the daemon current-thread runtime. Run the daemon on a bounded multi-thread runtime and lock the contract with a regression test.
+codeon:
+  version: 1
+  authority: FWN-53
+  description: |-
+    Validate the canonical capacity-policy digest before claim or reacquisition can acquire the global capacity lock. Preserve the claim command identity in reserved runnable-lease events and add regression coverage for forged policies, unchanged lease state, and event readback.
