@@ -1,7 +1,7 @@
-Project preferred prefix on effective blocker summaries
+Merge current main into Picker cleanup
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-50
   description: |-
-    IssueDetail.effective_blockers still selected stored issues.identifier. Derive blocker_identifier from the current Workspace issue_prefix and Issue number, matching other detail and list projections, and group by that expression. Keep stored identifiers and frozen finalization text unchanged. Assert preferred identifiers on get, inheritance, and MCP blocker results.
+    Integrate the sealed current-main authority into the two-capacity Picker cleanup while preserving the frozen candidate as the first parent. Resolve independently reused PostgreSQL migration versions into the contiguous 0115-0117 sequence, retain both normative picker specification updates, and apply the minimal formatting and Clippy repairs required for the merged tree to verify.
