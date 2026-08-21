@@ -1,7 +1,7 @@
-fix(codeoff): reconcile terminal notifications
+fix(postgres): freeze notification evidence
 
 codeon:
   version: 1
-  authority: FWN-30
+  authority: FWN-33
   description: |-
-    Persist enqueue receipts atomically with notification outbox rows and reconcile committed scheduler terminal states that lack receipts. This preserves scheduler authority while making run and delivery terminal notifications retryable across transient enqueue failures, restarts, and outbox retention.
+    Protect notification outbox enqueue-time fields and completed delivery attempts from later database updates. Require a strictly unexpired lease before marking provider dispatch, and cover immutability, lease-boundary recovery, and frozen deadline policies in PostgreSQL acceptance tests.
