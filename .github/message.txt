@@ -1,7 +1,9 @@
-fix(codeon): harden smoke and live e2e harnesses
+Use structured GitHub scopes in Turn account resolution
 
 codeon:
   version: 1
-  authority: fewensa-1
+  authority: fewensa-5
   description: |-
-    Keep the default live canonical clone alive for the full run, assert durable production operation stages after Done, retain failed-run databases with marker-owned GitHub artifact discovery, require exact squash `(#PR)` suffixes and fixing-commit resolution replies, and fail smoke when owned database cleanup does not verify.
+    Replace string repository_scope in Channel Turn MCP authorization with a versioned {kind, name} scope, and select GitHub accounts by exact configured repository route, owning-organization route, then Owner-only dynamic evidence.
+    
+    Persist an explicit account before execution so auto cannot survive durable plans. Public reachability never selects an account; equal-authority aliases fail closed with a bounded ambiguity error. Execution provisions the planned account and structured scope without reselection.
