@@ -1,7 +1,1 @@
-fix(postgres): close notification recovery gaps
-
-codeon:
-  version: 1
-  authority: fewensa-33
-  description: |-
-    Recover expired claims independently of delivery deadlines and terminalize expired undispatched work. Permit confirmed-no-write retry and terminal transitions before dispatch, accept maximum-size destination snapshots, and include notification persistence in the PostgreSQL gate.
+feat(codeon): add console shell
