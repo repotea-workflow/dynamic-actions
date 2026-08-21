@@ -1,1 +1,7 @@
-fix(console): allow preview proxy host
+fix(codeon): seal live e2e harness review findings
+
+codeon:
+  version: 1
+  authority: fewensa-1
+  description: |-
+    Redact disposable database credentials from live reports, route post-create exits through a verified cleanup finalizer, bound the whole-run timeout across preflight and provisioning, and normalize agent=grok to grok_build in daemon config.
