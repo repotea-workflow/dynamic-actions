@@ -1,9 +1,9 @@
-fix(runtime): supervise startup recovery
+feat(codeoff): integrate shared notifications
 
 codeon:
   version: 1
-  authority: fewensa-16
+  authority: fewensa-30
   description: |-
-    Route durable operations that survive restart through provider-aware reconciliation inside the bounded dispatch-worker supervisor. Refresh exact operation, dispatch, and fence authority at the worker boundary so recovery results remain fenced and candidate-local read failures stay isolated.
+    Add provider-neutral terminal schedule notifications backed by a dedicated SQLite outbox and the shared delivery worker.
     
-    Replace broad Picker invariant fatal classification with explicit process-fatal authority for persistence integrity and essential daemon resources. Add restart recovery coverage that records an abandoned dispatch and reconstructs the execution runtime service.
+    Reuse the public Webhook destination and delivery policy contracts, preserve scheduler and Slack ownership boundaries, and cover fencing, retry, restart, retention, authority validation, rendering compatibility, and Webhook delivery.
