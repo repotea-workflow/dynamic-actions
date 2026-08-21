@@ -1,11 +1,7 @@
-Persist Profile-scoped Issue aliases and freeze Issue prefixes (#139)
+fix: seal cancellation callback evidence
 
 codeon:
   version: 1
-  authority: fewensa-22
+  authority: fewensa-43
   description: |-
-    Add a Profile-scoped PostgreSQL alias namespace that maps Workspace keys and Issue prefixes to one Workspace owner. Migration 0111 backfills current aliases, collapses same-Workspace key/prefix pairs, and fails clearly on cross-Workspace collisions without rewriting historical Issue identifiers.
-    
-    Workspace creation writes both aliases transactionally. Prefix updates serialize on the Workspace row lock shared with Issue creation, no-op on normalized equality, freeze with PrefixAlreadyInUse after any Issue exists, and otherwise replace alias and prefix atomically.
-    
-    A focused resolver maps Profile + IssueReference + optional expected Workspace through alias roles and Issue number to IssueId, returning preferred uppercase prefix and legacy key forms. Expected-Workspace mismatch is not found.
+    Validate late completion authority, contract limits, and canonical digest before recording cancellation audit evidence. Reuse the exact-snapshot digest-sealed callback receipt path with restart-safe replay validation, add the full Attempt state and callback race matrix, and remove the unauthorized scheduled OpenWiki workflow while restoring local-only guidance.
