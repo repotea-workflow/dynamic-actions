@@ -1,7 +1,9 @@
-Canonicalize GitHub URL hosts in containment
+Merge main and repair cancellation rollback
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-43
   description: |-
-    Treat mixed-case github.com hosts as GitHub coordinates and canonicalize paths before lease checks so foreign repositories cannot hide behind case or path-traversal URL forms.
+    Resolve the refreshed main conflict while preserving Attempt cancellation and runtime lifecycle coverage.
+    
+    Renumber cancellation authority to migration 0118, make constraint insertion and removal fail closed against PostgreSQL-deparsed definitions, and cover the exact up/down/up shape. Keep cancel-first completion tests invariant across the merged operation lifecycle.
