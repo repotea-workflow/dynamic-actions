@@ -1,7 +1,3 @@
-Fail closed on unsupported result coordinates
+fix(codeon): support blocking callbacks
 
-codeon:
-  version: 1
-  authority: FWN-6
-  description: |-
-    Treat repo/repos/repositories and organization collection keys as lease-checked coordinates, validate string collection elements, and reject unverifiable scalar shapes so approved pointers cannot mask foreign repository data. Format candidate-owned MCP containment and proxy test files for rustfmt.
+Codex persistence callbacks use block_in_place, which panics on the daemon current-thread runtime. Run the daemon on a bounded multi-thread runtime and lock the contract with a regression test.
