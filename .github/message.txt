@@ -1,7 +1,7 @@
-fix(postgres): fence runnable lease admission
+fix(runtime): preserve isolated shutdown evidence
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-16
   description: |-
-    Validate the canonical capacity-policy digest before claim or reacquisition can acquire the global capacity lock. Preserve the claim command identity in reserved runnable-lease events and add regression coverage for forged policies, unchanged lease state, and event readback.
+    Share one absolute shutdown deadline between the service and runtime loop so worker drain leaves bounded time for durable abandonment evidence before the join timeout. Keep malformed issue-finalization rows isolated to their profile while retaining explicit process-fatal classification for global persistence integrity loss. Add deterministic shutdown and fault-scope coverage.
