@@ -1,1 +1,3 @@
-fix(codeon): harden daemon recovery
+fix(codeon): restart daemon after fatal loss
+
+Supervise process-fatal daemon failures, drain and join the old lifecycle, retry only transient bootstrap failures, and resume durable work without MCP or operator wakeups.
