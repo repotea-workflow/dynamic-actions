@@ -1,7 +1,7 @@
-Resolve commit authority aliases by Issue identity (#147)
+fix(tracker): validate activity contexts
 
 codeon:
   version: 1
-  authority: fewensa-24
+  authority: fewensa-34
   description: |-
-    Parse `codeon.authority` as an IssueReference instead of a lowercase-only identifier. Prefix and workspace-key aliases authenticate the same Issue only when the shared resolver maps them to the same IssueId. New requirements, preparations, and messages use the preferred uppercase prefix; historical key metadata remains valid. Sealed preparation receipts, canonical bytes, and digests stay exact-string compared.
+    Decode every existing issue state-transition payload through a closed typed union and render only bounded identifiers. Validate package aggregation summaries for closed fields, consistent counts, and event-specific producer invariants, with focused regression fixtures for valid and drift cases.
