@@ -1,7 +1,7 @@
-fix(tracker): preserve runtime lease digest
+fix(codeon): redact DB URL query in live reports
 
 codeon:
   version: 1
-  authority: FWN-53
+  authority: FWN-1
   description: |-
-    Carry the sealed runtime-closure digest through runnable lease release authority so projection and event evidence identify the exact runtime record. Treat a replay with the same evidence reference but a different runtime digest as an evidence conflict, with focused domain and PostgreSQL readback coverage.
+    Live-e2e report.json previously kept PostgreSQL URL query parameters after stripping userinfo, so secrets in sslmode-adjacent or password= query fields could leak into recovery data. Rebuild the redacted endpoint from scheme, host, port, and database path only, and cover query/fragment stripping with a regression test.
