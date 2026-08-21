@@ -1,9 +1,9 @@
-fix(postgres): require worker runtime authority
+Generate prefix execution names with legacy recovery
 
 codeon:
   version: 1
-  authority: fewensa-14
+  authority: fewensa-25
   description: |-
-    Reject worker lifecycle events when the caller omits or mismatches the dispatch's established runtime reference.
+    Newly planned execution branches and worktrees now use uppercase Issue-prefix components while persisted Workspace-key names stay exact.
     
-    Add PostgreSQL acceptance coverage for started, stopped, and abandoned lifecycle events without valid runtime authority.
+    Planning generates DAM-style prefix names, discovers an existing prefix ref first, and falls back to the historical key-form ref without renaming or duplicating Git refs. Database checks accept both historical key components and new uppercase prefix components, and the forward migration does not rewrite existing environment rows.
