@@ -1,7 +1,9 @@
-fix(codeon): redact DB URL query in live reports
+fix(postgres): seal notification outbox states
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-33
   description: |-
-    Live-e2e report.json previously kept PostgreSQL URL query parameters after stripping userinfo, so secrets in sslmode-adjacent or password= query fields could leak into recovery data. Rebuild the redacted endpoint from scheme, host, port, and database path only, and cover query/fragment stripping with a regression test.
+    Require ready deliveries to retain their initial zero attempt and fence, and require lease owner and expiry metadata to remain jointly present or absent.
+    
+    Add PostgreSQL acceptance coverage for the rejected state shapes and correct the OpenWiki notification migration references.
