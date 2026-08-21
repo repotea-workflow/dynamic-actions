@@ -1,7 +1,15 @@
-fix(runtime): isolate supervised dispatch recovery
+Refactor GitHub authorization around resource scopes (#145)
 
 codeon:
   version: 1
-  authority: fewensa-16
+  authority: fewensa-4
   description: |-
-    Make daemon startup reconciliation persistence-only so provider recovery is admitted after readiness through the bounded dispatch supervisor. Split durable dispatch creation from provider I/O, require worker-start evidence before provider calls, retain typed dispatch and fence authority for exact cancellation, and keep reaper-stage failures within worker fault scope. Add focused supervision and stale-authority tests.
+    Replace flattened repository-list GitHub grants with correlated tagged scopes and enforce account-route ceilings for every caller, including Owner and temporary approvals.
+    
+    - Role union and intersection keep account, resource, and access together as clauses.
+    - An organization route contains that organization and its owned repositories; an exact repository contains only itself.
+    - Owner bypasses ordinary role clauses but still needs a containing configured route whose max_access is sufficient.
+    - Auto account selection uses configured routes, not public readability. Temporary approvals stay exact-repository grants and cannot exceed the route ceiling.
+    - Tool lists remain compatibility-only; new exposure comes from access and the catalog.
+    
+    Validation: cargo test -p codeoff-runtime, cargo test -p codeoff-config, cargo test -p codeoff-mcp, cargo test -p codeoff-cli, cargo fmt --all -- --check, and targeted clippy with warnings denied.
