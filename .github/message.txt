@@ -1,9 +1,7 @@
-fix(postgres): seal notification outbox states
+Close GitHub MCP item paths and actor URL roles
 
 codeon:
   version: 1
-  authority: FWN-33
+  authority: FWN-6
   description: |-
-    Require ready deliveries to retain their initial zero attempt and fence, and require lease owner and expiry metadata to remain jointly present or absent.
-    
-    Add PostgreSQL acceptance coverage for the rejected state shapes and correct the OpenWiki notification migration references.
+    Reject unreviewed nested response fields that can smuggle foreign GitHub URLs, and treat actor profile URLs as non-resource metadata so in-scope issue and pull-request results with external authors are not false-rejected.
