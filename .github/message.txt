@@ -1,7 +1,11 @@
-Give the three 0115 PostgreSQL migrations unique versions
+fix(codeon): harden durable operation progress
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-17
   description: |-
-    SQLx stores migration version as a primary key, so three 0115 pairs blocked a fresh migrate and unique-version authority. Keep blocker provenance at 0115, move runtime lifecycle v2 to 0116 and prefix environment names to 0117, and raise schema_contracts to 1..=117. Do not rewrite stored issues.identifier. Align the workspace archive versus issue-create waiter expectation with the topology advisory lock already covered by sibling tests.
+    Expose the shared closed progress v2 schema to Codex and cover digest-only callbacks.
+    
+    Revalidate hashed MCP capability authority, activation, revocation, expiry, and catalog binding inside the atomic activity transaction while keeping the trusted Codex route distinct.
+    
+    Document durable progress semantics and legacy v1 non-renewal behavior.
