@@ -1,7 +1,7 @@
-Merge current main into Picker cleanup
+feat(codeon): persist operation progress
 
 codeon:
   version: 1
-  authority: fewensa-50
+  authority: fewensa-17
   description: |-
-    Integrate the sealed current-main authority into the two-capacity Picker cleanup while preserving the frozen candidate as the first parent. Resolve independently reused PostgreSQL migration versions into the contiguous 0115-0117 sequence, retain both normative picker specification updates, and apply the minimal formatting and Clippy repairs required for the merged tree to verify.
+    Introduce the versioned, digest-only operation progress v2 contract and bind accepted evidence to the active dispatch through the lifecycle activity store. Preserve legacy v1 acknowledgement behavior without renewing v2 leases, and route trusted MCP and Codex callback contexts through the shared ingress with focused contract, catalog, capability, and projection coverage.
