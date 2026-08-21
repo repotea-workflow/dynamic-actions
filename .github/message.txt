@@ -1,23 +1,7 @@
-Add typed CodeOn activity event catalog (#137)
+Persist requester authority on temporary access approval
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-4
   description: |-
-    ## Summary
-    
-    - Add a closed `IssueActivityEventKind` catalog covering all 36 SQL-constrained source events.
-    - Decode existing `change_context` payloads into strict typed contexts and return mapped, intentionally non-notifiable, or schema-drift outcomes with source audit identity.
-    - Project `issue.execution_updated` into 13 stable route event names with bounded semantic content, facts, links, and severity.
-    - Add catalog completeness, payload contract, execution, attention, drift-safety tests, and update tracker documentation.
-    
-    ## Verification
-    
-    - `cargo test -p codeon-tracker -- --test-threads=1`
-    - `cargo fmt --all --check`
-    - `cargo clippy -p codeon-tracker --all-targets --all-features -- -D warnings`
-    
-    ## Notes
-    
-    - Routes, delivery, HTTP, config, and event producers remain unchanged.
-    - OpenWiki generation could not complete because `/root/.openwiki` is read-only; the owning OpenWiki page was aligned manually with the maintained specification.
+    Owner approval decisions were writing an Owner-derived authorization snapshot for the grant turn. Continuation planning and lease provisioning re-resolve the requester with the temporary grant, so the Owner digest could never match and approved access was rejected before GitHub MCP use. Persist the snapshot from the approval requester identity plus the exact temporary account/resource/access grant, and cover approval through continuation plan replay and lease provisioning in runtime tests.
