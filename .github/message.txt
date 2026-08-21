@@ -1,7 +1,7 @@
-fix(codeon): fail live cleanup on git probe errors
+fix(postgres): validate all event scopes
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-33
   description: |-
-    Distinguish missing-ref absence from harness git failures so cleanup cannot pass when rev-parse spawn or timeout errors. Bound just live-e2e with an outer timeout plus compile grace and a recipe-level hang kill check so cargo resolve/compile/launch cannot stall past the advertised budget.
+    Route workspace and repository events with nullable issue IDs through the typed notification catalog. This prevents malformed non-issue activity from advancing the durable consumer checkpoint.
