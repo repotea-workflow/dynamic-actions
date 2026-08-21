@@ -1,7 +1,7 @@
-Enforce GitHub MCP repository and organization containment
+fix(runtime): preserve worker fault boundaries
 
 codeon:
   version: 1
-  authority: fewensa-6
+  authority: fewensa-16
   description: |-
-    The GitHub MCP proxy previously required an explicit repository coordinate and forwarded arguments and results unchanged, so organization leases and credential reads could not be contained independently of the prompt. Classify each call, normalize bounded search qualifiers onto the structured lease, inspect organization-wide results before release, and tag catalog, action, and audit identities with the lease scope.
+    Signal process-fatal authority for global persistence invariants while keeping provider-local invariants isolated. Abort and join a runtime task after bounded shutdown expires, and include synchronous worker construction inside the panic boundary so capacity is always released.
