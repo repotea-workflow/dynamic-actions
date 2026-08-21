@@ -1,9 +1,11 @@
-fix(codeon): harden activity catalog decoding
+Refactor GitHub authorization around resource scopes
 
 codeon:
   version: 1
-  authority: fewensa-34
+  authority: fewensa-4
   description: |-
-    Prevent schema-drift diagnostics from including input-derived serde details, and enforce the producer-specific required and null invariants for finalization activity contexts.
+    Replace flattened repository-list grants with correlated tagged permission clauses and a single policy-owned route proof.
     
-    Restore the existing public CurrentExecutionStatus contract while retaining catalog-local typed terminal activity statuses and the original persisted terminal event meanings. Add focused regression coverage for redaction canaries, malformed finalization variants, and public API compatibility.
+    Owner bypasses ordinary role clauses only; every caller, including Owner and temporary approval, still needs a containing configured account route whose max_access is sufficient. Auto account selection uses configured routes rather than public repository readability. Tool lists remain compatibility-only narrowing evidence.
+    
+    Validation: cargo test -p codeoff-runtime; cargo test -p codeoff-config; cargo test -p codeoff-mcp; cargo test -p codeoff-cli; cargo fmt --all -- --check; cargo clippy -p codeoff-runtime -p codeoff-config -p codeoff-mcp -p codeoff-cli --all-targets -- -D warnings.
