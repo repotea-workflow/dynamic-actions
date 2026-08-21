@@ -1,11 +1,7 @@
-fix(runtime): isolate worker faults
+fix(codeoff): preserve scheduler notification authority
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-30
   description: |-
-    Merge the refreshed target branch without discarding either runtime lifecycle path.
-    
-    Validate the live migration ledger from the execution runtime so global persistence corruption signals ProcessFatal while transient persistence and provider-local invariants remain isolated.
-    
-    Exercise dispatch-worker panic recovery through the execution service and verify Picker and MCP remain responsive.
+    Accept the scheduler's bounded Unicode run IDs and maximum encoded delivery IDs in the shared Codeoff notification authority contract. Keep exact identifiers in semantic envelopes and durable enqueue receipts while using Unicode-safe fact previews and a domain-separated digest for header-unsafe authority metadata. Add boundary, all-terminal-event, and restart reconciliation regressions, and document the projection behavior.
