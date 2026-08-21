@@ -1,15 +1,7 @@
-Enforce effective blockers across execution boundaries (#149)
+Expect preferred uppercase Issue-prefix identifiers in e2e and OpenWiki
 
 codeon:
   version: 1
-  authority: fewensa-40
+  authority: fewensa-23
   description: |-
-    ## Summary
-    - Consume the canonical effective-blocker projection at Picker filtering, claim recheck, and Admission so Parent Package blockers block eligibility the same way Direct blockers do.
-    - Freeze deduplicated Direct/Parent provenance on Admission snapshot blocker rows and include non-Direct provenance in the dispatchability fingerprint while keeping Direct-only evidence byte-identical.
-    - Block late Task/Package finalization and Package aggregation auto-Done across unsatisfied effective blockers, with focused candidate, admission, and claim/mutation race coverage.
-    
-    ## Test plan
-    - [x] `cargo test -p codeon-tracker --lib` (562 passed)
-    - [x] `cargo check -p codeon-tracker -p codeon-postgres -p codeon --features postgres-acceptance`
-    - [ ] `just test-postgres` for `issue_blockers`, `picker_candidates`, and `execution_attempt_store` when `CODEON_TEST_DATABASE_URL` is available
+    Align foundation_e2e create and search result assertions with preferred {issue_prefix}-{number} projections (HBX-1/HBX-2/HBX-3) while keeping the hbx-2 query as a legacy-form search input. Update OpenWiki MCP acceptance examples to the preferred uppercase prefix form and keep stored {workspace_key}-{number} as the storage example only.
