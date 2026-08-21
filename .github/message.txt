@@ -1,20 +1,7 @@
-Persist CodeOn notifications in PostgreSQL (#157)
+fix(codeon): seal live-e2e reports on outer kill
 
 codeon:
   version: 1
-  authority: fewensa-33
+  authority: FWN-1
   description: |-
-    ## Summary
-    
-    - add additive PostgreSQL migrations for notification consumer checkpoints, frozen outbox deliveries, and delivery attempts
-    - implement the profile-bound PostgreSQL notification store with atomic routing/checkpoint advancement, fenced claims and leases, retry/terminal/ambiguous transitions, and expired-lease recovery
-    - add PostgreSQL acceptance coverage and document the persistence contract
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo clippy --workspace --all-targets --locked -- -D warnings`
-    - `cargo test --workspace --locked`
-    - `cargo test -p codeon-postgres --locked`
-    - `cargo test -p codeon-postgres --test notification_persistence --features postgres-acceptance --locked`
-    - `cargo test -p codeon-postgres --test migration_acceptance --features postgres-acceptance --locked`
+    Make live-e2e recoverable when the outer timeout kills cargo mid-run by reserving the run marker and report before launch, persisting database and branch authority as soon as they are known, and sealing interrupted reports with recovery targets. Also stop smoke cleanup from treating git probe failures as successful remote absence, and clear rustfmt so verify stays green.
