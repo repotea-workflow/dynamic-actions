@@ -1,7 +1,9 @@
-Allow Package blocked endpoints in blocker APIs
+Build shared notification delivery core
 
 codeon:
   version: 1
-  authority: fewensa-38
+  authority: fewensa-29
   description: |-
-    Create already persisted Package blocked_by edges, but list/add/remove still rejected non-Task anchors, leaving durable edges unlistable and unremovable. Align those store paths and docs with Task-or-Package blocked endpoints while keeping Package-as-blocker rejected.
+    Add the provider-neutral notification delivery crate with validated destination identities, frozen payload bindings, provider and application-store ports, deterministic retry policy, and fenced worker transitions.
+    
+    Cover cancellation, lease loss, stale fences, deadlines, retry exhaustion, provider outcomes, panic containment, exact payload replay, and PostgreSQL/SQLite adapter compatibility. Update the generated repository ownership summary for the new boundary.
