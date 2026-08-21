@@ -1,7 +1,7 @@
-Fix GitHub merge capability preflight recovery (#135)
+Atomic Issue create with blocker edges
 
-* fix(codeon): recover merge capability preflight
-
-* fix(codeon): prioritize landing recovery at startup
-
-* fix(codeon): preserve landing runtime on recovery
+codeon:
+  version: 1
+  authority: fewensa-38
+  description: |-
+    Preserve CreateIssue blocker declarations in one PostgreSQL transaction so Issues are never observable before every declared edge, with issue.created carrying the exact declaration and focused rollback, replay, and concurrency coverage.
