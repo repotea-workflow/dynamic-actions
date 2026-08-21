@@ -1,9 +1,9 @@
-fix(postgres): bind notification evidence
+fix(postgres): enforce runnable lease event continuity
 
 codeon:
   version: 1
-  authority: fewensa-33
+  authority: fewensa-53
   description: |-
-    Enforce notification outbox source lineage against the authoritative Issue event, align persisted identifiers with the shared store contract, bind rendered metadata to its semantic envelope, and reject partial delivery receipt states.
+    Validate every durable runnable-lease event digest and require each event to continue from its predecessor before the deferred projection consistency check can commit.
     
-    Add focused PostgreSQL coverage for contradictory lineage, leading punctuation, metadata mismatch, and partial receipt shapes.
+    Add migration acceptance coverage for canonical-digest tampering and a locally valid but discontinuous multi-event transaction, and document the commit-time chain invariant.
