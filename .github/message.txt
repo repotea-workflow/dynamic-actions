@@ -1,7 +1,7 @@
-Merge origin/main and keep preferred Issue-prefix identifiers
+fix: serialize progress with completion close
 
 codeon:
   version: 1
-  authority: fewensa-23
+  authority: fewensa-17
   description: |-
-    Refresh origin/main at 90ddad7c and merge it into this branch so preferred uppercase Issue-prefix identifiers can land with later main work. The only conflict was PostgreSQL Issue store imports; keep this branch's IssueReferenceStore and ResolveIssueReference while retaining main's blocked_by create contract, activity catalog, webhook provider, GitHub resource-scope authorization, and picker capacity cleanup. Continue deriving preferred identifiers from Workspace prefix plus Issue number without rewriting stored identifiers.
+    Hold the completion registry entry guard through durable progress recording so terminal closure and activity persistence cannot interleave. Revalidate MCP and Codex progress authority inside the guarded ingress and add deterministic stale-resolution and serialization coverage.
