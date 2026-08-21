@@ -1,7 +1,11 @@
-Fence direct completions after cancellation
+fix(postgres): bind runnable lease audit semantics
 
 codeon:
   version: 1
-  authority: fewensa-43
+  authority: FWN-53
   description: |-
-    Centralize the durable requested-cancellation authority check and apply it before new shared finalizer, Merge, pull request publication, RejectClose, and Agent Dispatch success mutations. Preserve committed completion replay behavior and add PostgreSQL regression coverage that verifies cancel-first finalization leaves artifacts, outboxes, and terminal state untouched.
+    Bind each durable runnable-lease event kind to its closed evidence class so alternate SQL writers cannot create semantically contradictory audit records.
+    
+    Refuse migration rollback whenever any runnable-lease event exists, including a post-migration generation-1 reservation, because the immutable event cannot be proven synthetic and would otherwise be discarded.
+    
+    Extend migration acceptance to reject every mismatched event/evidence pair and to prove rollback rejects a newly committed held reservation.
