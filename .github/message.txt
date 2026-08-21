@@ -1,7 +1,7 @@
-Require explicit IssueBlockerDeclaration on CreateIssue
+feat(codeon): persist Attempt cancellation authority
 
 codeon:
   version: 1
-  authority: fewensa-37
+  authority: fewensa-43
   description: |-
-    Make CreateIssue carry a mandatory IssueBlockerDeclaration with only None or non-empty unique BlockedBy IDs, fail closed on omission or invalid input, and keep PostgreSQL create transactions unchanged for the follow-on atomic edge writer.
+    Persist exact cancellation intent, actor, expected version, and current Operation/dispatch identity in an immutable PostgreSQL receipt. Move active Attempts to cancelling and advance the dispatch fence atomically so completion-first remains authoritative while cancel-first callbacks become bounded audit evidence.
