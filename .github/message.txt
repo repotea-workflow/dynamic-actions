@@ -1,7 +1,7 @@
-Enforce legacy lease ceilings and fail closed on invalid scopes
+docs: refresh Webhook provider ownership
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-31
   description: |-
-    Legacy tool-list plans omit access and were treated as read only during route selection, then still exposed and forwarded destructive tools when Owner or authorization-disabled callers skipped grant checks. Derive the lease ceiling from the catalog before provisioning and always compare each call against that ceiling, including Owner snapshots. Resource collection also ignored invalid explicit coordinates, so mixed-case out-of-scope owner/repo values could be masked by an in-scope decoy; fail closed whenever a recognized coordinate is present but incomplete or invalid.
+    Align OpenWiki path and ownership guidance with the shared application-neutral codeoo-notification-webhook crate. Preserve application ownership of persistence adapters and runtime composition.
