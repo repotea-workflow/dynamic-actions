@@ -1,3 +1,7 @@
-fix(codeon): classify failed retry dispatches (#163)
+Fence direct completions after cancellation
 
-Permit canonical Review recovery to replace a failed Dispatch whether or not durable completion was observed, while preserving fail-closed rejection for non-failed Dispatch authority. Includes live-state-equivalent positive and no-mutation negative PostgreSQL regressions.
+codeon:
+  version: 1
+  authority: fewensa-43
+  description: |-
+    Centralize the durable requested-cancellation authority check and apply it before new shared finalizer, Merge, pull request publication, RejectClose, and Agent Dispatch success mutations. Preserve committed completion replay behavior and add PostgreSQL regression coverage that verifies cancel-first finalization leaves artifacts, outboxes, and terminal state untouched.
