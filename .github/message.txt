@@ -1,1 +1,1 @@
-fix(codeon): prioritize landing recovery at startup
+fix(codeon): preserve landing runtime on recovery
