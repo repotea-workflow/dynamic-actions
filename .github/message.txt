@@ -1,9 +1,9 @@
-Preserve v1 Turn auth snapshot lease recovery
+fix(tracker): render canonical execution stages
 
 codeon:
   version: 1
-  authority: fewensa-4
+  authority: fewensa-34
   description: |-
-    Decode schema-aware Turn authorization snapshots at lease time and re-authorize against the current route and grant instead of comparing incompatible v1/v2 policy digests.
+    Render CodeOn execution stage semantic facts with the canonical snake-case values used by serde and producer payloads.
     
-    Keep the persisted v1 tool list only as a compatibility ceiling so in-flight Turns planned before the scope refactor can still provision under the new runtime.
+    Add exhaustive stage-name coverage and focused operation/attention outcome assertions for multi-word stages.
