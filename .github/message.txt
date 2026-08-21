@@ -1,7 +1,3 @@
-fix(runtime): release provider startup handles
+fix(codeon): recover dirty revision retries
 
-codeon:
-  version: 1
-  authority: FWN-16
-  description: |-
-    Remove dispatch-keyed Cursor and Grok termination handles after successful runtime handoff, termination, or cleanup so completed dispatches do not accumulate stale process handles. Preserve handles when cleanup remains unresolved, and cover both provider registries with focused size assertions.
+Revalidate frozen repository authority before replacing legacy operator-cancel attention so restart recovery can fence and retry the dispatch without manual intervention.
