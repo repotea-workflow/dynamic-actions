@@ -1,3 +1,3 @@
-fix(codeon): deliver recovered review handoff
+fix(codeon): deliver recovered review handoff (#144)
 
 Accept the canonical restored Attempt version when a Review completed from the exact runtime-unknown recovery history, while preserving the existing failed-artifact replay guard.
