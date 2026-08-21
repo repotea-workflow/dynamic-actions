@@ -1,9 +1,7 @@
-fix(notification): bound post-dispatch store waits
+fix(codeon): validate and persist activity projections
 
 codeon:
   version: 1
-  authority: fewensa-29
+  authority: fewensa-34
   description: |-
-    Poll lease heartbeats alongside provider send, cancellation, and send timeout so a stalled store heartbeat cannot strand dispatched work.
-    
-    Bound final heartbeat and completion transitions with a frozen finalization timeout, conservatively recording durable ambiguity when a post-dispatch transition stalls. Preserve lost-fence sealing and cover stalled heartbeat, cancellation, completion, and final-heartbeat fence loss.
+    Persist terminal and ready-for-merge execution activity at their authoritative producer transitions, and validate operation and attention contexts against the closed producer contract before rendering. Derive catalog completeness from the effective ordered migration history so future SQL event additions require a matching Rust catalog update.
