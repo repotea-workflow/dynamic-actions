@@ -1,9 +1,11 @@
-Build shared notification delivery core
+Persist Profile-scoped Issue aliases and freeze Issue prefixes
 
 codeon:
   version: 1
-  authority: fewensa-29
+  authority: fewensa-22
   description: |-
-    Add the provider-neutral notification delivery crate with validated destination identities, frozen payload bindings, provider and application-store ports, deterministic retry policy, and fenced worker transitions.
+    Add a durable Profile-scoped alias namespace that maps Workspace keys and Issue prefixes onto one Workspace owner, with lowercase comparison aliases, same-owner collapse, and a clear migration failure for cross-Workspace collisions.
     
-    Cover cancellation, lease loss, stale fences, deadlines, retry exhaustion, provider outcomes, panic containment, exact payload replay, and PostgreSQL/SQLite adapter compatibility. Update the generated repository ownership summary for the new boundary.
+    Workspace creation writes both aliases in the existing receipt transaction. Prefix updates reserve idempotency, lock the Workspace row shared with Issue creation, no-op on normalized equality, reject a material change with PrefixAlreadyInUse after any Issue exists, and otherwise replace the alias and prefix atomically while appending the existing bounded event.
+    
+    A focused PostgreSQL resolver maps Profile, IssueReference, and optional expected Workspace through alias roles and Issue number to IssueId, returning preferred uppercase prefix and legacy key forms. Expected-Workspace mismatch is not found. Historical Issue identifiers are left unchanged.
