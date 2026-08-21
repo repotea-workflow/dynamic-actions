@@ -1,1 +1,5 @@
-feat(plate): expose public preset presentation commands
+fix(editor): keep overlay geometry live and distinguish italic styles
+
+Rebuild selection overlay geometry during move/resize, and give the
+inspector upright, left-italic, and right-italic glyphs instead of
+reusing the left-italic mark for normal text.
