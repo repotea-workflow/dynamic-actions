@@ -1,7 +1,22 @@
-Isolate stuck provider shutdown and cancellation
+Implement durable runnable lease state machine (#155)
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: fewensa-53
   description: |-
-    Bound daemon runtime shutdown so permanently stuck blocking provider calls cannot hold process exit. Reserve independently bounded cancellation capacity and route exact provider cancellations through it. Retain per-dispatch Cursor and Grok process-group termination handles while sessions are owned by in-flight blocking calls, with cleanup after successful teardown. Add deterministic supervisor, subprocess shutdown, and per-provider termination tests.
+    ## Summary
+    
+    - add provider-neutral runnable lease state, fence, evidence, release, and reacquisition contracts
+    - evolve the current PostgreSQL projection with monotonic generations and immutable ordered transition events
+    - serialize claims and reacquisitions on the same global capacity authority and return mutation-free capacity pending
+    - document the A-E scenario, rollout order, and deferred lifecycle wiring
+    
+    ## Verification
+    
+    - cargo test -p codeon-tracker capacity_policy_tests
+    - cargo test -p codeon-postgres --features postgres-acceptance --test migration_acceptance migration_reaches_latest_and_replays_without_changes -- --nocapture
+    - cargo test -p codeon-postgres --features postgres-acceptance --test migration_acceptance migration_directory_is_the_contiguous_unique_version_authority -- --nocapture
+    - cargo test -p codeon-postgres --features postgres-acceptance --test execution_attempt_store runnable_leases -- --nocapture
+    - cargo test -p codeon-postgres --features postgres-acceptance --test picker_candidates capacity_limits -- --nocapture
+    - cargo fmt -p codeon-tracker -p codeon-postgres -- --check
+    - cargo clippy -p codeon-tracker -p codeon-postgres --all-targets --all-features -- -D warnings
