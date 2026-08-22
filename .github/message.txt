@@ -1,7 +1,9 @@
-feat(runtime): integrate runnable lease lifecycle
+Coordinate durable attempt cancellation
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-45
   description: |-
-    Bind Waiting and Recovery Required transitions to durable runtime-closure evidence and runnable-lease release in the owner transaction. Reacquire capacity with generation-fenced activation, prioritize bounded ready resumptions, reconcile leases fail closed at startup, and expose bounded diagnostics. Cover release authority, rollback, capacity pending, generation fencing, fairness, migration replay, and the canonical A-E scenario; update the picker runtime specification and OpenWiki architecture context.
+    Persist restart-safe cancellation phases from exact provider interrupt through bounded runtime inspection, confirmed closure, and cleanup handoff.
+    
+    Expose profile-scoped MCP cancel and status tools, fence unknown outcomes with runtime_outcome_unknown Attention, and rotate scoped worker faults so other cancellation work can continue.
