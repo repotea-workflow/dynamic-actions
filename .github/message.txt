@@ -1,7 +1,3 @@
-Fix cancellation restart coordination
+fix(runtime): preserve retry budget
 
-codeon:
-  version: 1
-  authority: FWN-45
-  description: |-
-    Recover sealed provider runtime authority before cancellation interrupt and closure readback so persisted requests continue safely after daemon restart. Persist already-terminal and completion-first cancellation status projections so MCP status can observe the returned request ID.
+Worker abandonment is infrastructure recovery and must not consume the bounded provider outcome retry budget.
