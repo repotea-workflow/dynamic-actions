@@ -1,7 +1,7 @@
-Format live_e2e assertions for cargo fmt
+Reject duplicate API authority headers
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-56
   description: |-
-    Apply rustfmt so repository fmt-check passes on the live-e2e validation and Just recipe contract assertions.
+    Fail closed before CORS, authentication, or routing when Origin, Authorization, Idempotency-Key, or If-Match appears more than once. Preserve defensive single-value parsing and add listener coverage for conflicting duplicate values.
