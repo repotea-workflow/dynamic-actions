@@ -1,11 +1,11 @@
-Migrate Cursor ACP to activity leases
+fix(runtime): close runnable lease resume gaps
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: FWN-51
   description: |-
-    Use lifecycle-v2 call deadlines for Cursor control calls and treat prompt acknowledgement separately from work duration.
+    Atomically coordinate Landing Preflight handoff into Agent-backed Review with runnable lease reacquisition or durable capacity-pending activation.
     
-    Normalize exact session and active-prompt output, tool, permission, phase, and terminal events into durable activity evidence. Ignore empty reads, generic running observations, unrelated targets, unknown events, and duplicate digests for renewal.
+    Fail startup reconciliation closed when its bounded batch cannot cover every active or terminal-held projection, and reject noncanonical containment evidence before classification or release.
     
-    Preserve legacy fixed deadlines, exact idle cancellation, resource-ceiling cancel/load continuation with Attention fallback, continuation authority, completion capability ordering, and bounded transport ownership.
+    Add focused PostgreSQL and daemon regressions and align the runtime specification and OpenWiki architecture documentation.
