@@ -1,5 +1,3 @@
-fix(recovery): replay worker completions
+fix(recovery): validate flow evidence version
 
-Distinguish operation, attention, and execution-flow recovery evidence so restart finalization restores only the matching Attempt authority.
-
-Add a guarded Revision replay migration and preserve microsecond precision in runnable-lease event timestamps.
+Require the complete positive Attempt version suffix before a recovered finalizer can restore Execution Flow authority.
