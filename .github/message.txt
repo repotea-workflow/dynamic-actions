@@ -1,1 +1,1 @@
-feat(console): expand issue graph sample data
+fix(console): tint state graph columns
