@@ -1,7 +1,7 @@
-Preserve terminal cancellation recovery evidence
+Expose completed cancellation handoff states
 
 codeon:
   version: 1
   authority: FWN-45
   description: |-
-    Consume provider-confirmed terminal recovery outcomes before issuing another cancel or inspect action. Persist the already-terminal interrupt and confirmed runtime closure atomically, and cover restart behavior for terminal, running, unknown, and controller-decision recovery dispositions.
+    Preserve the durable cleanup and requeue progression in cancellation status responses instead of collapsing completed handoffs back to ready. Add focused decoder and PostgreSQL transition coverage for the public wire values.
