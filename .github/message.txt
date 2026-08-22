@@ -1,5 +1,3 @@
-feat(management): add tenant business profiles (#35)
+feat(auth): harden App access management
 
-Keep Tenant as the identity and lifecycle boundary, and store optional contact, address, notes, and restricted attributes in a 1:1 profile so platform operators can maintain customer details without exposing PII in list or session projections.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+- preserve legacy authorization rows during migration while enforcing new input formats\n- make App access management foundational and versioned\n- add consistent effective-access evaluation and backend pagination\n- protect tenant profile data with explicit permissions and optimistic concurrency
