@@ -1,18 +1,1 @@
-Supervise daemon dispatch workers (#152)
-
-codeon:
-  version: 1
-  authority: fewensa-16
-  description: |-
-    Summary:
-    - Run provider-facing reconciliation in bounded supervised workers.
-    - Persist worker lifecycle evidence and fence stale dispatch results.
-    - Isolate worker panics and provider faults while retaining global fail-closed behavior.
-    - Cancel exact dispatch runtimes and bound shutdown draining.
-    
-    Verification:
-    - Focused daemon execution runtime tests: 56 passed, 0 failed, 18 database-gated ignored.
-    - Scoped Rust formatting check: passed.
-    - Scoped library Clippy with documented baseline lint allowances: passed.
-    
-    PostgreSQL acceptance cases require the isolated test database and were not available in this operation.
+feat(console): expand issue execution views
