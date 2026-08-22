@@ -1,1 +1,9 @@
-feat(console): reorganize runtime list
+fix(runtime): seal live profile authority
+
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Maintain Agent Runtime Profile health per provider/profile identity after startup and consult the live healthy set before repository preparation. Runtime failures now mark only the affected identity unavailable, while successful recovery can restore it.
+    
+    Seal Codex bindings from sanitized successful preflight observations, including executable, native config source, account reference, schema, feature, and capability digests. Add isolation, restart-drift, and pre-mutation regression coverage.
