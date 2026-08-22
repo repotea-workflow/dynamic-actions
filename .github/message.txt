@@ -1,1 +1,3 @@
-feat(console): add navigation loading states
+fix(runtime): recover legacy worker faults
+
+Older running dispatches lack activity-v2 lease fields. Recover only the exact worker-lifecycle fault shape before recording a new worker start, and retain the original dispatch fence.\n\nMigration 0122 adds strict database authority for this read-only retry while keeping rollback compatible with immutable recovery history.
