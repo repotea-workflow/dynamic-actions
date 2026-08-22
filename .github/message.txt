@@ -1,7 +1,7 @@
-fix(cursor): accept evidence-bound runtime version
+Repair complete execution observability history
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-58
   description: |-
-    Allow Cursor Agent Runtime Profiles to pass startup preflight for the accepted Linux Cursor Agent version, while retaining fail-closed rejection for unsupported versions. Add isolated multi-profile startup coverage, preserve sanitized credential references, record the bounded acceptance evidence, and align operator-facing implementation status.
+    Accept all current runtime-lifecycle dispatch categories in timeline and Operation-detail decoding. Project immutable package aggregation and runtime-closure history with stable identities, and expand bounded representative PostgreSQL, restart, scope, EXPLAIN, query-budget, and redaction coverage.
