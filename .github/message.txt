@@ -1,1 +1,1 @@
-feat(console): add issue graph view
+feat(console): paginate issue graph lanes
