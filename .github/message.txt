@@ -1,7 +1,5 @@
-Fix live-e2e schema fixture and artifact proof
+Merge remote-tracking branch 'origin/main' into agt/recover-invalid-agent-completion
 
-codeon:
-  version: 1
-  authority: FWN-1
-  description: |-
-    Add required blocked_by to the live Issue-create schema fixture so the library suite stays green, and populate created_repository_path only after asserting the merge-commit file contents.
+# Conflicts:
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/finalization_cleanup.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/mod.rs
