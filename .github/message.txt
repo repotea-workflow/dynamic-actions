@@ -1,9 +1,11 @@
-Merge origin/main and isolate runtime profiles
+fix(runtime): fence lease resume authority
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-51
   description: |-
-    Resolve the frozen branch against refreshed origin/main while preserving both Agent Runtime Profile behavior and the target branch's Attention changes.
+    Bind release-capable containment evidence to the locked attempt, operation, latest dispatch, and canonical persisted containment readback before releasing runnable capacity.
     
-    Defer invalid per-profile state paths to isolated runtime composition while retaining overlap checks for successfully resolved homes. Remove the process-wide Codex protocol-mode override so keyed configuration and sealed snapshots agree. Renumber the unlanded Agent Runtime Profile migration to 0130 after the target branch's established 0124-0129 migrations.
+    Derive resume capacity requirements from the locked operation kind, and carry the exact operation ID and version through activation claim, delivery, worker admission, and pre-I/O runtime fencing.
+    
+    Add PostgreSQL and daemon regression coverage for cross-dispatch evidence rejection, stale activation versions, and operation-version worker fencing.
