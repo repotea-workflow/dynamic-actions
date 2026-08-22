@@ -1,3 +1,17 @@
-fix(auth): bound role graph traversal
+Harden App authorization management (#36)
+
+* feat(auth): harden App access management
+
+- preserve legacy authorization rows during migration while enforcing new input formats\n- make App access management foundational and versioned\n- add consistent effective-access evaluation and backend pagination\n- protect tenant profile data with explicit permissions and optimistic concurrency
+
+* fix(auth): close review gaps
+
+Keep unchanged legacy fields grandfathered during status updates.\nLimit effective-access role loading to the bound transitive closure.
+
+* fix(auth): bound role graph traversal
 
 Deduplicate recursive role closure by role ID and validate cycles and\ndepth with a memoized graph walk. This prevents dense inheritance DAGs\nfrom expanding exponentially during policy updates and access checks.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
