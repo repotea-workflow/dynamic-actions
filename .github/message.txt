@@ -1,3 +1,3 @@
-fix(runtime): recover orphaned restart workers
+fix(cursor): keep pending prompts running
 
-Persist abandonment when startup finds an unmatched worker start from a prior daemon process, allowing the bounded runtime-unknown retry path to resume automatically.
+Session-level ACP events can arrive before prompt-scoped activity. Trust the retained session pending state so those unrelated events do not force a recoverable live prompt into Unknown.
