@@ -1,5 +1,7 @@
-fix(runtime): close automatic recovery gaps
+fix(cursor): reject runtime env collisions
 
-Replay durable completions across worker restarts and replacement dispatches, refresh provider cancellation fences, and bound merge commit readback payloads.
-
-Migrations 0127 and 0128 authorize commit-preparation replay and preserve repeated failed lifecycle events.
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Reject reserved Cursor child environment names and endpoint/credential key collisions before an Agent Runtime Profile is sealed. This keeps startup preflight, sealed snapshots, and spawned process environments bound to the same runtime authority.
