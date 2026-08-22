@@ -1,9 +1,9 @@
-fix(observability): type persisted categories
+fix(runtime): fence runnable lease recovery
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-51
   description: |-
-    Replace persisted categorical strings in execution observability projections with owning tracker enums and a narrow derived finalization status enum. Decode every projected category at the PostgreSQL boundary with fail-closed corruption tests.
+    Revalidate workspace, repository, and blocker authority before runnable-lease reacquisition and persist a durable authority-conflict outcome.
     
-    Merge refreshed origin/main and resolve the execution attempt store import conflict while retaining both observability and reconciliation coverage.
+    Move held leases with unknown startup runtime evidence into Recovery Required without releasing capacity. Reject activation observation conflicts so lease reacquisition, Attention resolution, Attempt resume, and activation enqueue roll back together.
