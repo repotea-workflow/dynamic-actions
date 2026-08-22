@@ -1,1 +1,1 @@
-feat(console): split execution detail views
+fix(runtime): supersede stale recovery attentions
