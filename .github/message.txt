@@ -1,1 +1,7 @@
-feat(console): refine triage and internal links
+fix(cursor): accept evidence-bound runtime version
+
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Allow Cursor Agent Runtime Profiles to pass startup preflight for the accepted Linux Cursor Agent version, while retaining fail-closed rejection for unsupported versions. Add isolated multi-profile startup coverage, preserve sanitized credential references, record the bounded acceptance evidence, and align operator-facing implementation status.
