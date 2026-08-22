@@ -1,1 +1,1 @@
-fix(console): clarify issue graph routing
+fix(console): simplify issue graph routing
