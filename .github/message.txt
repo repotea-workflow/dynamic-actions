@@ -1,7 +1,9 @@
-fix(codeon): isolate cancellation worker faults
+fix(postgres): exclude recovery attempts from active
 
 codeon:
   version: 1
-  authority: FWN-45
+  authority: FWN-58
   description: |-
-    Route cancellation runtime OutcomeUnknown errors into the durable runtime_outcome_unknown Attention transition so preservation remains held and cleanup and requeue remain forbidden. Contain provider panics at the cancellation receipt boundary, durably defer only that request, and add restart and repeated-tick regression coverage for recovery, cancellation, inspection, and panic paths.
+    Filter active Attempt observability queries to exclude recovery-required rows, keeping the active, terminal, and recovery buckets disjoint.
+    
+    Add PostgreSQL acceptance coverage that moves a representative Attempt through active, recovery-required, and terminal states and verifies exclusive classification.
