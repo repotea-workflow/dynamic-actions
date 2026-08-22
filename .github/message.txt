@@ -1,7 +1,7 @@
-fix(codex): order native profile globally
+Record live-e2e permanent file and serialize smoke PATH
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-1
   description: |-
-    Codex parses --profile as a global option, so emit it before the app-server subcommand and lock the accepted order with a regression test.
+    Live reports omitted the squash-merged live-e2e/<run_marker>.txt path and lacked navigable Issue/merge links, while smoke git probes still raced on process-global PATH. Record the permanent artifact and links in the machine-readable report and docs, and share one PATH lock across the smoke probe tests.
