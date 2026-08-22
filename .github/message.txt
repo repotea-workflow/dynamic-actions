@@ -1,6 +1,5 @@
-Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
+fix(recovery): replay worker completions
 
-# Conflicts:
-#	codeon/crates/codeon-postgres/src/execution_attention_store/legacy_worker_lifecycle_recovery.rs
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/startup_attempt_recovery.rs
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/force_prepared_with_package.rs
+Distinguish operation, attention, and execution-flow recovery evidence so restart finalization restores only the matching Attempt authority.
+
+Add a guarded Revision replay migration and preserve microsecond precision in runnable-lease event timestamps.
