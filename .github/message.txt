@@ -1,3 +1,3 @@
-fix(auth): close review gaps
+fix(auth): bound role graph traversal
 
-Keep unchanged legacy fields grandfathered during status updates.\nLimit effective-access role loading to the bound transitive closure.
+Deduplicate recursive role closure by role ID and validate cycles and\ndepth with a memoized graph walk. This prevents dense inheritance DAGs\nfrom expanding exponentially during policy updates and access checks.
