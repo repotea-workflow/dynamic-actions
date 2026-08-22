@@ -1,3 +1,1 @@
-fix(cursor): keep retained prompts running
-
-Avoid opening runtime-unknown Attention before a retained active prompt receives its first provider event.
+feat(console): remember issues view
