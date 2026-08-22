@@ -1,3 +1,1 @@
-fix(runtime): replay committed worker completions
-
-Durable completion evidence must be replayed before runtime-unknown recovery can cancel or replace its dispatch.
+fix(codeon): narrow completion replay recovery
