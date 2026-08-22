@@ -1,11 +1,9 @@
-fix(runtime): close runnable lease resume gaps
+fix(grok): persist activity recovery fences
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-13
   description: |-
-    Atomically coordinate Landing Preflight handoff into Agent-backed Review with runnable lease reacquisition or durable capacity-pending activation.
+    Add a controller-authorized, generation-idempotent activity lease rearm transition for exact Grok recovery. The transition advances only the idle deadline, preserves the frozen resource ceiling, and refuses recovery when either returned deadline is already due.
     
-    Fail startup reconciliation closed when its bounded batch cannot cover every active or terminal-held projection, and reject noncanonical containment evidence before classification or release.
-    
-    Add focused PostgreSQL and daemon regressions and align the runtime specification and OpenWiki architecture documentation.
+    Persist fenced closed-generation provider evidence as bounded audit-only dispatch events so late and duplicate activity remains restart-safe without renewing the lease. Cover recovery, ceiling, duplicate, migration, and observability behavior with focused fake ACP and PostgreSQL tests.
