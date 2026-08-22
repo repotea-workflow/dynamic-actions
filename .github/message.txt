@@ -1,9 +1,9 @@
-fix(postgres): exclude recovery attempts from active
+fix: preserve attention resolution replays
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-60
   description: |-
-    Filter active Attempt observability queries to exclude recovery-required rows, keeping the active, terminal, and recovery buckets disjoint.
+    Check the profile-scoped Attention command ledger before HTTP or MCP state and directive prechecks. Exact retries now return durable resolving or resolved readback, while changed payloads retain typed idempotency conflicts across both transports.
     
-    Add PostgreSQL acceptance coverage that moves a representative Attempt through active, recovery-required, and terminal states and verifies exclusive classification.
+    Add PostgreSQL-backed HTTP and MCP acceptance coverage for terminal exact replay and changed-directive conflicts, plus a focused MCP error-mapping contract test.
