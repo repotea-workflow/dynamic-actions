@@ -1,7 +1,9 @@
-Expose completed cancellation handoff states
+feat(grok): adopt activity leases
 
 codeon:
   version: 1
-  authority: FWN-45
+  authority: FWN-13
   description: |-
-    Preserve the durable cleanup and requeue progression in cancellation status responses instead of collapsing completed handoffs back to ready. Add focused decoder and PostgreSQL transition coverage for the public wire values.
+    Replace the temporary fixed Grok prompt deadline with policy-scoped acknowledgement timing and renewable lifecycle-v2 activity evidence.
+    
+    Drain and normalize bounded text, tool, terminal, cancellation, error, and provider-exit evidence during inspection, persist it through the existing dispatch lease store, fence late generations, and keep legacy v1 deadlines intact. Isolate idle/resource expiry to the affected retained session and require recovery without manufacturing progress or failing the business operation.
