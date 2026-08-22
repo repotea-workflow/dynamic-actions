@@ -1,7 +1,9 @@
-Drain live-e2e probe pipes concurrently
+fix(grok): bind cancellation to active prompt
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-44
   description: |-
-    Wait-then-read left provider probes blocked once either OS pipe buffer filled, so the harness timed out healthy agents. Drain stdout and stderr while waiting and keep TERM/KILL on the process group; add a regression that emits past pipe capacity.
+    Retain the exact accepted Grok prompt for the active session and reject stale or foreign cancellation references before state transition or provider I/O.
+    
+    Clear the retained identity on terminal and shutdown paths, and cover two simultaneous repository-scoped sessions to prove one dispatch cannot cancel or stop the other.
