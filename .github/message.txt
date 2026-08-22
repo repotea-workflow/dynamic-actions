@@ -1,7 +1,9 @@
-Merge origin/main into GitHub MCP containment
+fix(runtime): clear failed startup handles
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: FWN-16
   description: |-
-    Resolve diverged main and branch histories so structured Turn scopes and MCP containment coexist. Keep typed GitHubResourceScope registration from main while retaining classifier-based repository and organization containment from this branch. Require live inputSchema coordinate binding before promoting unscoped tools, so decoy owner/repo arguments cannot authorize unscoped service mutations.
+    Remove dispatch-keyed termination handles whenever Cursor or Grok provider startup settles with an error or supervised panic. This prevents stale numeric process-group authority from surviving startup cleanup while preserving handles for Grok failures that still own pending cleanup.
+    
+    Add lifecycle regression coverage for a real Cursor startup failure and a supervised Grok startup panic.
