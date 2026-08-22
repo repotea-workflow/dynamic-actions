@@ -1,7 +1,7 @@
-fix(cursor): restore exact lifecycle recovery
+Expose V1 execution observability APIs
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: FWN-59
   description: |-
-    Persist queued exact-prompt activity before evaluating idle expiry. Dispatch resource-ceiling and restart continuations only after exact session load, and reject permissions outside the active prompt.
+    Add profile-scoped Attempt, timeline, Operation, artifact, and execution statistics read routes backed by the existing bounded projections. Define redacted V1 DTOs and OpenAPI operations with opaque cursors, observed timestamps, RFC 9457 failures, and ETag support, and cover the generated contract and daemon routing.
