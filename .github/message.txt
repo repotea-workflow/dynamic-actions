@@ -1,7 +1,7 @@
-test: preserve Codex recovery fence authority
+Fix Agent Runtime Profile fixture bindings
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-61
   description: |-
-    Reuse the retained cancellation fence in the rebuilt-handle recovery fixture so the test exercises valid handle convergence. Dedicated mismatch coverage continues to verify fail-closed recovery behavior.
+    Add provider-matching Agent Runtime Profile keys to the shipped example and daemon/MCP test configurations so strict configuration loading reaches each fixture's intended behavior. Update the MCP catalog golden contract to require runtime_profile alongside kind.
