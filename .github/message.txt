@@ -1,9 +1,3 @@
-Fix Attention V1 revision findings
+refactor(cli): remove one-off wake command
 
-codeon:
-  version: 1
-  authority: FWN-60
-  description: |-
-    Return 404 for absent Attention resolution, expose durable observation freshness and a typed Profile reference, and validate list limits at the HTTP boundary.
-    
-    Add authenticated PostgreSQL host acceptance for every closed directive and required fence, idempotency, profile, terminal, and failed-cancel behavior. Refresh the affected OpenWiki ownership and operator guidance.
+Historical states that cannot recur are repaired with exact operator SQL instead of a permanent product interface.
