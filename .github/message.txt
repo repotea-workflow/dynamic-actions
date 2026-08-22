@@ -1,7 +1,3 @@
-fix(api): expose complete tracker REST parity
+fix(cursor): keep retained prompts running
 
-codeon:
-  version: 1
-  authority: FWN-57
-  description: |-
-    Replace the REST-to-MCP proxy with an explicit V1 HTTP adapter over TrackerService and typed domain commands. Align activity and issue-detail representations, per-operation request schemas, query parameters, Location/CORS behavior, and stable error fencing with the generated contract. Add contract, handler, and PostgreSQL-backed daemon acceptance coverage for idempotency, optimistic concurrency, Actor provenance, and REST/MCP convergence.
+Avoid opening runtime-unknown Attention before a retained active prompt receives its first provider event.
