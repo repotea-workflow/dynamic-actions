@@ -1,3 +1,1 @@
-fix(cursor): keep pending prompts running
-
-Session-level ACP events can arrive before prompt-scoped activity. Trust the retained session pending state so those unrelated events do not force a recoverable live prompt into Unknown.
+feat(console): add configuration management prototype
