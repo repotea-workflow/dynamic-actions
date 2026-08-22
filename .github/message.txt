@@ -1,7 +1,3 @@
-Fix cancellation runtime identity snapshot
+fix(runtime): prevent wakeup starvation
 
-codeon:
-  version: 1
-  authority: FWN-45
-  description: |-
-    Capture the accepted provider input reference and pre-fence dispatch identity in the durable cancellation receipt. Treat missing runtime authority after a dispatch may have started as an unknown outcome so cleanup and requeue remain forbidden until reconciliation. Add persistence and daemon restart coverage for exact interrupt and closure coordination.
+Coalesce append-only wakeups before applying the page limit so duplicate owners cannot hide later reconciliation work.
