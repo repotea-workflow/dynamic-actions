@@ -1,7 +1,9 @@
-fix(observability): preserve attention history
+fix(runtime): complete runnable lease integration
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-51
   description: |-
-    Project exact Attention observations, resolution intents, and receipts into bounded typed timeline payloads instead of reusing mutable case evidence. Decode dispatch checkpoint states through the closed tracker enum, extend representative PostgreSQL acceptance coverage, and refresh stale OpenWiki observability boundaries.
+    Wire Landing Preflight Waiting owners through atomic lease release and typed Review resume authority using configured capacities. Persist resume runtime requirements, fence activation generations, and add daemon coverage for release and generation-2 reacquisition.
+    
+    Reconcile startup leases from bounded containment plus matching durable owner checkpoints, failing closed for released live runtimes and preserving unknown ownership. Scope ready-resume selection to owned Profiles and reserve deterministic scheduler budget for new claims under sustained resume backlog.
