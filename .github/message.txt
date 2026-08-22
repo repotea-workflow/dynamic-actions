@@ -1,7 +1,5 @@
-fix(cursor): reject runtime env collisions
+Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
 
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Reject reserved Cursor child environment names and endpoint/credential key collisions before an Agent Runtime Profile is sealed. This keeps startup preflight, sealed snapshots, and spawned process environments bound to the same runtime authority.
+# Conflicts:
+#	codeon/crates/codeon-postgres/tests/migration_acceptance/pre_cutover_ledger.rs
+#	codeon/crates/codeon-postgres/tests/migration_acceptance/schema_contracts.rs
