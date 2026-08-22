@@ -1,9 +1,7 @@
-fix(grok): bind cancellation to active prompt
+Document secure daemon API host
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-56
   description: |-
-    Retain the exact accepted Grok prompt for the active session and reject stale or foreign cancellation references before state transition or provider I/O.
-    
-    Clear the retained identity on terminal and shutdown paths, and cover two simultaneous repository-scoped sessions to prove one dispatch cannot cancel or stop the other.
+    Add the disabled-by-default API listener and credential examples to the operator configuration template. Align OpenWiki ownership, security gates, failure policy, and bounded shutdown guidance with the composed daemon API implementation.
