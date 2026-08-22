@@ -1,5 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/recover-invalid-agent-completion
+fix(codeon): recover invalid completions (#173)
 
-# Conflicts:
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/finalization_cleanup.rs
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/mod.rs
+Reject stale PR publication authority before completion becomes durable. Recover legacy artifact-invalid results during normal reconciliation with a bounded fenced dispatch retry.
