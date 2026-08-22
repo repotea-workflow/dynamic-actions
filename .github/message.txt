@@ -1,5 +1,9 @@
-Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
+Fix Attention V1 revision findings
 
-# Conflicts:
-#	codeon/crates/codeon-postgres/tests/migration_acceptance/pre_cutover_ledger.rs
-#	codeon/crates/codeon-postgres/tests/migration_acceptance/schema_contracts.rs
+codeon:
+  version: 1
+  authority: FWN-60
+  description: |-
+    Return 404 for absent Attention resolution, expose durable observation freshness and a typed Profile reference, and validate list limits at the HTTP boundary.
+    
+    Add authenticated PostgreSQL host acceptance for every closed directive and required fence, idempotency, profile, terminal, and failed-cancel behavior. Refresh the affected OpenWiki ownership and operator guidance.
