@@ -1,11 +1,9 @@
-fix(runtime): fence lease resume authority
+Integrate Codex activity leases
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-15
   description: |-
-    Bind release-capable containment evidence to the locked attempt, operation, latest dispatch, and canonical persisted containment readback before releasing runnable capacity.
+    Bind Codeon Codex App Server invocations to profile, operation, dispatch fence, exact thread, and exact turn activity observers. Normalize provider output, phases, dynamic tool lifecycle, trusted progress/completion, and terminal events into bounded durable activity ingress while preserving exact recovery and shared-process fail-closed termination behavior.
     
-    Derive resume capacity requirements from the locked operation kind, and carry the exact operation ID and version through activation claim, delivery, worker admission, and pre-I/O runtime fencing.
-    
-    Add PostgreSQL and daemon regression coverage for cross-dispatch evidence rejection, stale activation versions, and operation-version worker fencing.
+    Extend direct invocation recovery so daemon restart readback restores the observer for the persisted thread and turn. Keep observer and persistence backpressure off the App Server transport reader.
