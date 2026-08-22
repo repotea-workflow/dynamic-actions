@@ -1,20 +1,9 @@
-Integrate Codex App Server activity leases (#194)
+fix(grok): gate exact resume on rearmed lease
 
 codeon:
   version: 1
-  authority: fewensa-15
+  authority: FWN-13
   description: |-
-    ## Summary
+    Require retained lifecycle-v2 Grok sessions to observe a durable, unexpired activity lease before exact provider resume. Bind the recovered generation to the controller-provided fence and keep the closed session retained when re-arm authority or persistence is unavailable.
     
-    - bind production Codex invocations to profile, operation, dispatch fence, and exact thread and turn activity observers
-    - persist deduplicated output, phase, tool, trusted progress and completion, and terminal evidence through a bounded nonblocking ingress
-    - restore observers during exact restart recovery while preserving per-RPC timeouts and shared App Server fail-closed termination
-    
-    ## Verification
-    
-    - cargo test -p codeoo-agent-codex
-    - cargo test -p codeon execution::agents::codex
-    - cargo clippy -p codeoo-agent-codex --all-targets -- -D warnings
-    - cargo clippy -p codeon --lib --no-deps -- -D warnings
-    - cargo fmt --all -- --check
-    - Live gpt-5.6-sol medium canary not run because the sealed operation allows loopback-only networking.
+    Add stateful expiry regression coverage for recovery-required, explicit lease re-arm, post-recovery inspection, and legacy recovery compatibility.
