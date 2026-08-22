@@ -1,11 +1,7 @@
-fix(runtime): preserve binding migration replay
+fix(api): close tracker parity review gaps
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-57
   description: |-
-    Allow Agent execution binding format and validator versions 1 through 2 in migration 0121, while restoring version-1-only constraints on rollback.
-    
-    Preserve historical format-1 routing and decision digests for the reserved legacy runtime identity so migrated snapshots fail with explicit runtime unavailability and completed decisions remain readable.
-    
-    Add schema, canonicalization, version-2 create/readback, and migration replay acceptance coverage.
+    Replace untyped Issue detail projections with explicit V1 DTOs and field-level conversions. Read bounded dependency graphs in one repeatable-read transaction and include every referenced blocker node. Reject unknown nested Agent binding identity fields, and expand route and PostgreSQL acceptance coverage for REST/MCP parity.
