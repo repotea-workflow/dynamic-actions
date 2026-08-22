@@ -1,1 +1,7 @@
-feat(console): add configuration management prototype
+fix(cancellation): fence provider recovery
+
+codeon:
+  version: 1
+  authority: FWN-44
+  description: |-
+    Reject conflicting Grok and Cursor recovery identities before provider, completion, or lifecycle access. Preserve the exact retained runtime for valid replays and merge the refreshed target branch without weakening provider-scoped cancellation.
