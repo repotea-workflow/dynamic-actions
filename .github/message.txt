@@ -1,9 +1,20 @@
-fix(codex): enforce activity lease lifecycle
+Integrate Codex App Server activity leases (#194)
 
 codeon:
   version: 1
-  authority: FWN-15
+  authority: fewensa-15
   description: |-
-    Interrupt exact Codex turns after durable idle expiry while preserving validated completion races and shared App Server safety.
+    ## Summary
     
-    Arm activity observers only after InputAccepted is durable, retain bounded observer overflow without dropping terminal evidence, serialize expiry checks behind queued activity persistence, and prevent legacy operation_progress acknowledgements from renewing v2 leases.
+    - bind production Codex invocations to profile, operation, dispatch fence, and exact thread and turn activity observers
+    - persist deduplicated output, phase, tool, trusted progress and completion, and terminal evidence through a bounded nonblocking ingress
+    - restore observers during exact restart recovery while preserving per-RPC timeouts and shared App Server fail-closed termination
+    
+    ## Verification
+    
+    - cargo test -p codeoo-agent-codex
+    - cargo test -p codeon execution::agents::codex
+    - cargo clippy -p codeoo-agent-codex --all-targets -- -D warnings
+    - cargo clippy -p codeon --lib --no-deps -- -D warnings
+    - cargo fmt --all -- --check
+    - Live gpt-5.6-sol medium canary not run because the sealed operation allows loopback-only networking.
