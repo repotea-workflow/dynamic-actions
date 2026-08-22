@@ -1,1 +1,1 @@
-feat(console): paginate issue graph lanes
+feat(console): route issue detail tabs
