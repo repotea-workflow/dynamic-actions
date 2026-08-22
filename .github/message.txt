@@ -1,7 +1,1 @@
-Fix Agent Runtime Profile fixture bindings
-
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Add provider-matching Agent Runtime Profile keys to the shipped example and daemon/MCP test configurations so strict configuration loading reaches each fixture's intended behavior. Update the MCP catalog golden contract to require runtime_profile alongside kind.
+fix(console): unify issue view filters
