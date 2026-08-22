@@ -1,1 +1,1 @@
-fix(console): keep issue view switching synchronous
+fix(console): remove large navigation loading states
