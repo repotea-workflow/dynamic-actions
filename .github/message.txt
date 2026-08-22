@@ -1,7 +1,7 @@
-Bound live-e2e probe pipe drains after exit
+Restore rustfmt and Clippy containment gates
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-6
   description: |-
-    Keep draining probe stdout/stderr concurrently under one wall-clock deadline while retaining only a fixed trailing diagnostic window. If pipes do not reach EOF before the budget expires, terminate the owned process group and abort the drain tasks so sustained output or a descendant holding inherited fds cannot exhaust memory or hang the harness.
+    Apply rustfmt across the GitHub MCP containment changes and clear Clippy -D warnings by nesting or-patterns, merging identical match arms, collapsing nested ifs, passing Copy hosts by value, relocating unused parse_proxy_scope into tests, and allowing documented long integration tests.
