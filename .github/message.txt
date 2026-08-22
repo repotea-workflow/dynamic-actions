@@ -1,9 +1,7 @@
-fix(observability): bound timeline evidence
+fix(codeon): seal resolved runtime authority
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-61
   description: |-
-    Validate persisted timeline evidence references as bounded public-safe values before projection serialization, including control text, oversized values, and local-path cases.
-    
-    Exercise production-scale timeline and operation-detail fixtures with executed EXPLAIN ANALYZE buffer measurements, bounded rows and bytes, timing, and fixed statement-count coverage.
+    Derive Codex, Cursor, and Grok Agent Runtime Profile snapshots from the same resolved spawn/runtime authority retained by each runner. Carry the sealed snapshots through daemon composition and add environment-drift regressions for all three providers.
