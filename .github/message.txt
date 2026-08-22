@@ -1,9 +1,11 @@
-fix(live-e2e): escape TOML config and scope cleanup readback
+fix(runtime): preserve binding migration replay
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-61
   description: |-
-    Serialize live daemon config strings through TOML escaping so worktree paths and profile display names with quotes or backslashes load correctly.
+    Allow Agent execution binding format and validator versions 1 through 2 in migration 0121, while restoring version-1-only constraints on rollback.
     
-    Assert cleanup against the run-owned preparation worktree_path from operation history instead of requiring an empty worktree_root directory, and add regression tests for both findings.
+    Preserve historical format-1 routing and decision digests for the reserved legacy runtime identity so migrated snapshots fail with explicit runtime unavailability and completed decisions remain readable.
+    
+    Add schema, canonicalization, version-2 create/readback, and migration replay acceptance coverage.
