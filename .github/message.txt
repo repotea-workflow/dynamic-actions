@@ -1,1 +1,1 @@
-style(console): simplify issue detail layout
+fix(console): restore text selection highlight
