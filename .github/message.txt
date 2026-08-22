@@ -1,1 +1,1 @@
-feat(console): localize loading and review cycles
+feat(console): add execution detail sheet
