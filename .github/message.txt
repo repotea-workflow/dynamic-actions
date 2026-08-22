@@ -1,1 +1,7 @@
-fix(console): remove large navigation loading states
+test: preserve Codex recovery fence authority
+
+codeon:
+  version: 1
+  authority: FWN-44
+  description: |-
+    Reuse the retained cancellation fence in the rebuilt-handle recovery fixture so the test exercises valid handle convergence. Dedicated mismatch coverage continues to verify fail-closed recovery behavior.
