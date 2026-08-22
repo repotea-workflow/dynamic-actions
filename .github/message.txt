@@ -1,9 +1,9 @@
-fix(cursor): align preflight ACP command
+fix: validate configured runtime profiles
 
 codeon:
   version: 1
   authority: FWN-61
   description: |-
-    Launch Cursor startup preflight with the same `acp --sandbox enabled` command used by the production adapter.
+    Derive Agent Runtime Profile identities for Issue routing validation from the strict execution configuration instead of runner startup state.
     
-    Tighten adapter and daemon fixtures to reject the obsolete extra `agent` argument.
+    Keep runtime availability as the independent pre-dispatch gate so Picker-disabled or unhealthy profiles do not invalidate durable routing mutations.
