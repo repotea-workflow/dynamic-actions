@@ -1,9 +1,1 @@
-fix(runtime): enforce profile routing safety
-
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Require HTTP Issue routing to carry a configured provider and Agent Runtime Profile pair, and preserve that identity in V1 read projections.
-    
-    Retain per-profile capacity when runtime provisioning is ambiguous. Gate Cursor startup on a frozen compatibility manifest and the required loadSession capability.
+feat(console): refine triage and internal links
