@@ -1,7 +1,7 @@
-Complete execution observability projections
+fix(runtime): preserve profile migration evidence
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-61
   description: |-
-    Expand the transport-neutral attempt and operation projections so every durable execution source is queryable with typed, redacted summaries and fail-closed decoding. Add profile-scoped bounded PostgreSQL coverage for timeline families, joined detail facts, operation seals and checkpoints, artifact verification, restart durability, scope isolation, and production-sized pagination.
+    Preserve bounded runtime observation evidence while quarantining legacy Agent Runtime Profile bindings. Append recovery lifecycle events for pending and running Operations, retain an immutable migration addendum for Operations already in recovery, and cover all three migration states with PostgreSQL acceptance. Integrate the refreshed target branch while retaining provider-scoped runtime isolation and target-side lifecycle fixes.
