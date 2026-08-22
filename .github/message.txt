@@ -1,7 +1,7 @@
-fix(runtime): seal provider account identity
+fix(api): prioritize Attention preconditions
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-60
   description: |-
-    Fence Codex API-key and Grok authentication across runtime restarts with safe account or opaque epoch references. Preserve Grok native-agent identity as an independent preflight comparison. Validate every operator-path ancestor against symlink, ownership, and write-permission policy.
+    Evaluate terminal state, Attention version, and observation digest from owner readback before checking directive compatibility. Preserve resolving-state transaction replay for exact idempotent retries and cover combined stale/incompatible requests.
