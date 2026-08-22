@@ -1,9 +1,7 @@
-fix(runtime): fence runnable lease recovery
+fix(codeon): isolate cancellation worker faults
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-45
   description: |-
-    Revalidate workspace, repository, and blocker authority before runnable-lease reacquisition and persist a durable authority-conflict outcome.
-    
-    Move held leases with unknown startup runtime evidence into Recovery Required without releasing capacity. Reject activation observation conflicts so lease reacquisition, Attention resolution, Attempt resume, and activation enqueue roll back together.
+    Route cancellation runtime OutcomeUnknown errors into the durable runtime_outcome_unknown Attention transition so preservation remains held and cleanup and requeue remain forbidden. Contain provider panics at the cancellation receipt boundary, durably defer only that request, and add restart and repeated-tick regression coverage for recovery, cancellation, inspection, and panic paths.
