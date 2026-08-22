@@ -1,1 +1,1 @@
-feat(console): remember issues view
+feat(console): reorganize runtime list
