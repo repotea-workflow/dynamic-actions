@@ -1,3 +1,7 @@
-fix(runtime): prevent wakeup starvation (#192)
+fix(runtime): seal provider account identity
 
-Coalesce append-only wakeups before applying the page limit so duplicate owners cannot hide later reconciliation work.
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Fence Codex API-key and Grok authentication across runtime restarts with safe account or opaque epoch references. Preserve Grok native-agent identity as an independent preflight comparison. Validate every operator-path ancestor against symlink, ownership, and write-permission policy.
