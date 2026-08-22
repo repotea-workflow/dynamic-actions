@@ -1,7 +1,1 @@
-fix(codex): fence recovery before provider access
-
-codeon:
-  version: 1
-  authority: FWN-44
-  description: |-
-    Reserve and validate the exact retained Codex cancellation identity before completion-registry or provider recovery access. Cover turn and native-goal conflicts with regressions that prove no provider calls occur and the simultaneous Repository dispatch remains authoritative.
+fix(console): make loading states opt-in
