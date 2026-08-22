@@ -1,21 +1,9 @@
-Fix automatic recovery of abandoned runtime workers (#178)
+fix(cursor): isolate MCP approval environment
 
-* fix(runtime): retry after worker abandonment
-
-Preserve capped fast retries while allowing one new retry when the latest dispatch records a newer durable worker abandonment.
-
-* fix(cursor): keep retained prompts running
-
-Avoid opening runtime-unknown Attention before a retained active prompt receives its first provider event.
-
-* fix(runtime): recover orphaned restart workers
-
-Persist abandonment when startup finds an unmatched worker start from a prior daemon process, allowing the bounded runtime-unknown retry path to resume automatically.
-
-* fix(cursor): keep pending prompts running
-
-Session-level ACP events can arrive before prompt-scoped activity. Trust the retained session pending state so those unrelated events do not force a recoverable live prompt into Unknown.
-
-* fix(runtime): use causal recovery identity
-
-Bind worker abandonment to a daemon instance and retry budget to the latest dispatch so wall-clock regressions cannot strand recoverable work. Preserve synchronous Cursor prompt returns as terminal evidence.
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Clear the inherited daemon environment before running Cursor MCP approval helpers, then apply only the selected Agent Runtime Profile environment and the provider allowlist.
+    
+    Add process coverage proving ambient secret and XDG variables are absent while the selected HOME, endpoint, and credential are present.
