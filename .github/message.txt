@@ -1,7 +1,7 @@
-fix(postgres): link representative attention observation
+fix(api): expose fenced Attention candidates
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-60
   description: |-
-    Insert the representative Attention's initial observation and reference sequence 1 from its opened event so the timeline projection can decode the durable event after restart.
+    Expose bounded owner-authored candidate references in durable Attention observations and V1/MCP readback, then validate candidate selections against the current observation digest. Persist the selected candidate on resolution intents and label the existing full digest accurately as resolution_digest. Merge the refreshed main branch while preserving both Attention V1 read models and worker lifecycle recovery exports.
