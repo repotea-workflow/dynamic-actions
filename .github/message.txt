@@ -1,7 +1,4 @@
-fix(editor): keep overlay geometry live and distinguish italic styles (#192)
+fix(text): vertically center text in the element box
 
-Rebuild selection overlay geometry during move/resize, and give the
-inspector upright, left-italic, and right-italic glyphs instead of
-reusing the left-italic mark for normal text.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Place ordinary text, time, and serial on the vertical center of the
+element bounds. Horizontal left/center/right alignment is unchanged.
