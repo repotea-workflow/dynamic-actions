@@ -1,7 +1,9 @@
-Merge origin/main into FWN-45
+fix(cursor): retire accepted prompt deadline
 
 codeon:
   version: 1
-  authority: FWN-45
+  authority: FWN-19
   description: |-
-    Resolve the sealed pull request mergeability conflict by integrating the freshly fetched origin/main tip while preserving the durable cancellation coordination and public MCP cancellation workflow.
+    Treat the Cursor prompt acknowledgement timeout as a control-call deadline only. Once exact prompt evidence is accepted, preserve pending response ownership without expiring it at that deadline while leaving generic ACP and Grok behavior unchanged.
+    
+    Add ACP and fake Cursor regressions proving activity and terminal response can arrive after the acknowledgement window, including isolation from a stalled session in another repository.
