@@ -1,3 +1,7 @@
-fix(runtime): cap runtime unknown retries
+test(cancellation): fence mismatched identities
 
-Bound owner-deterministic recovery by immutable committed receipts. Leave Attention open after three retries instead of spawning unbounded provider processes.
+codeon:
+  version: 1
+  authority: FWN-44
+  description: |-
+    Verify Codex, Cursor, and Grok reject missing or mismatched retained cancellation authority before provider I/O while simultaneous dispatches remain running.
