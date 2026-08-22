@@ -1,1 +1,1 @@
-fix(codeon): narrow completion replay recovery
+fix(codeon): resolve terminal completion recovery
