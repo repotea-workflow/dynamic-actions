@@ -1,3 +1,7 @@
-fix(cursor): keep pending prompts running
+fix(codex): fence recovery before provider access
 
-Session-level ACP events can arrive before prompt-scoped activity. Trust the retained session pending state so those unrelated events do not force a recoverable live prompt into Unknown.
+codeon:
+  version: 1
+  authority: FWN-44
+  description: |-
+    Reserve and validate the exact retained Codex cancellation identity before completion-registry or provider recovery access. Cover turn and native-goal conflicts with regressions that prove no provider calls occur and the simultaneous Repository dispatch remains authoritative.
