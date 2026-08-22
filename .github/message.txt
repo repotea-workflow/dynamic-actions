@@ -1,1 +1,9 @@
-feat(console): expand issue execution views
+Fence Agent Runtime Profile launches
+
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Expose the required runtime_profile key in Issue routing MCP schemas and validate create/replace deserialization.
+    
+    Recompute sealed executable and native provider profile identities before Cursor and Grok process launch so in-place operator file drift enters explicit unavailable recovery instead of silently switching runtimes. Reuse the sealing digest implementation for launch checks and cover replacement detection with focused tests.
