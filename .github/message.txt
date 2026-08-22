@@ -1,9 +1,7 @@
-fix(postgres): move enum codec tests last
+fix(runtime): bind profile state and auth
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-61
   description: |-
-    Move the enum codec test module after all production items so the repository's items-after-test-module Clippy lint no longer rejects the target file.
-    
-    The focused landing-preflight result decoder test remains unchanged and passes. The required all-target Clippy command proceeds past this finding but remains blocked by an unrelated pre-existing notification_persistence.rs type mismatch outside the sealed revision scope.
+    Reject overlapping same-provider state directories and bind observed Cursor and Grok account identities into sealed runtime snapshots. Recovery now fails closed when the original provider account cannot be proven.
