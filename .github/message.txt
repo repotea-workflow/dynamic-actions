@@ -1,6 +1,5 @@
-fix(text): vertically center text in the element box (#193)
+fix(editor): keep user zoom when inserting elements
 
-Place ordinary text, time, and serial on the vertical center of the
-element bounds. Horizontal left/center/right alignment is unchanged.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Re-fit the viewport only when the controller or the active frame
+changes. Document content edits no longer reset pinch-zoom back to
+the fitted size.
