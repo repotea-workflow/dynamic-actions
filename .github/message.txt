@@ -1,1 +1,9 @@
-fix(console): restore issue card navigation
+Enforce GitHub MCP repository and organization containment (#158)
+
+codeon:
+  version: 1
+  authority: fewensa-6
+  description: |-
+    Make the GitHub MCP proxy enforce structured repository and organization containment on call arguments and organization-wide results, independently of prompts.
+    
+    Each tools/call is classified as credential, repository, organization, bounded search, or unscoped service before provider I/O. Bounded searches strip caller org, user, and repo qualifiers and inject one canonical authorized qualifier. Organization search and list responses are inspected against a fixture-backed containment catalog; mixed, foreign, malformed, unsupported, or oversized results fail closed and withhold the whole body. Credential reads such as get_me bind to the selected account without a fake repository. Catalog, action, and audit identities use tagged scope.
