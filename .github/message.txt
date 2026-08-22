@@ -1,3 +1,1 @@
-fix(recovery): validate flow evidence version
-
-Require the complete positive Attempt version suffix before a recovered finalizer can restore Execution Flow authority.
+fix(recovery): validate flow recovery version
