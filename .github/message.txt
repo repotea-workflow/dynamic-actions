@@ -1,3 +1,1 @@
-fix(runtime): recover legacy worker faults (#174)
-
-Recover upgrade-era running dispatches before worker lifecycle persistence, preserve their original dispatch fence, and add strict database recovery authority with rollback-compatible history. Increase the bounded Tokio worker stack for full startup reconciliation.
+feat(console): localize loading and review cycles
