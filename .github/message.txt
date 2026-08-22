@@ -1,9 +1,7 @@
-fix(codeon): bind Cursor continuation cancellation
+Merge origin/main into GitHub MCP containment
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-6
   description: |-
-    Retain the continuation prompt operation ID alongside its returned prompt so session/cancel sends one internally consistent Cursor target.
-    
-    Extend the cross-Repository cancellation regression to trigger a completion continuation, verify the exact dispatch/session/prompt-operation/prompt tuple, and prove the other retained dispatch remains live.
+    Resolve diverged main and branch histories so structured Turn scopes and MCP containment coexist. Keep typed GitHubResourceScope registration from main while retaining classifier-based repository and organization containment from this branch. Require live inputSchema coordinate binding before promoting unscoped tools, so decoy owner/repo arguments cannot authorize unscoped service mutations.
