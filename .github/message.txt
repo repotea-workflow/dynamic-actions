@@ -1,1 +1,1 @@
-feat(console): reshape execution workspace
+feat(console): split execution detail views
