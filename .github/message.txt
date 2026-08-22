@@ -1,7 +1,11 @@
-Expose V1 execution observability APIs
+fix(grok): preserve activity recovery authority
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-13
   description: |-
-    Add profile-scoped Attempt, timeline, Operation, artifact, and execution statistics read routes backed by the existing bounded projections. Define redacted V1 DTOs and OpenAPI operations with opaque cursors, observed timestamps, RFC 9457 failures, and ETag support, and cover the generated contract and daemon routing.
+    Drain and normalize bounded provider activity from pending ACP prompt responses, including first-event deduplication and active prompt binding.
+    
+    Retain completion context and MCP capability until provider session cleanup is proven, and require controller recovery when a retained session lacks accepted-input authority.
+    
+    Remove the candidate-only shared activity lease rearm migration and persistence mutations so Grok continues to consume the existing lifecycle v2 controller authority.
