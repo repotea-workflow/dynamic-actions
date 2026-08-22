@@ -1,3 +1,1 @@
-fix(runtime): replay quarantined revisions
-
-Resume exact Revision completion recoveries from durable callback authority without rerunning the Agent runtime. Provider conversation replay reads back deterministic receipts and fails closed on evidence drift.
+feat(console): adopt top navigation shell
