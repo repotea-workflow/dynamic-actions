@@ -1,7 +1,11 @@
-Expose V1 tracker REST parity
+fix(runtime): enforce profile migration and gating
 
 codeon:
   version: 1
-  authority: FWN-57
+  authority: FWN-61
   description: |-
-    Add the complete profile-scoped Workspace, Repository, Issue workflow and topology, Label, Comment, Activity, and dependency graph route surface. Bind HTTP authentication, idempotency, optimistic version fencing, typed timestamps, errors, OpenAPI operations, and audit Actor provenance to the existing tracker service and command semantics. Add exhaustive contract/capability coverage and align OpenWiki capability documentation.
+    Backfill legacy Agent Runtime Profile bindings with a reserved recovery identity so historical issue policies, admission snapshots, and completed operations remain readable without selecting operator configuration.
+    
+    Reject unavailable runtime identities before repository preparation and keep the live unavailability error from falling back to stale snapshot routing. Add PostgreSQL acceptance coverage for unavailable-versus-healthy routing and legacy migration readback.
+    
+    Replace singleton runtime configuration guidance with strict keyed Agent Runtime Profile examples and migration instructions.
