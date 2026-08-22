@@ -1,7 +1,7 @@
-test(cancellation): fence mismatched identities
+Expose V1 tracker REST parity
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-57
   description: |-
-    Verify Codex, Cursor, and Grok reject missing or mismatched retained cancellation authority before provider I/O while simultaneous dispatches remain running.
+    Add the complete profile-scoped Workspace, Repository, Issue workflow and topology, Label, Comment, Activity, and dependency graph route surface. Bind HTTP authentication, idempotency, optimistic version fencing, typed timestamps, errors, OpenAPI operations, and audit Actor provenance to the existing tracker service and command semantics. Add exhaustive contract/capability coverage and align OpenWiki capability documentation.
