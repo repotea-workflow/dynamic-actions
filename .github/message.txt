@@ -1,1 +1,3 @@
-fix(console): restore text selection highlight
+fix(runtime): retry after worker abandonment
+
+Preserve capped fast retries while allowing one new retry when the latest dispatch records a newer durable worker abandonment.
