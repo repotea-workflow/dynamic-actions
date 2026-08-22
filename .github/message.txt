@@ -1,1 +1,3 @@
-test(recovery): model later flow recovery
+fix(recovery): replay revision worker completion (#184)
+
+Restore Revision completion from exact worker-lifecycle recovery authority, validate typed Attempt recovery evidence across completion finalizers, preserve canonical runnable lease timestamps, and cover migration plus recovery state-machine regressions.
