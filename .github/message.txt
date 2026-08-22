@@ -1,13 +1,3 @@
-Stabilize automatic runtime recovery (#175)
-
-* fix(runtime): cap runtime unknown retries
-
-Bound owner-deterministic recovery by immutable committed receipts. Leave Attention open after three retries instead of spawning unbounded provider processes.
-
-* fix(runtime): replay quarantined revisions
-
-Resume exact Revision completion recoveries from durable callback authority without rerunning the Agent runtime. Provider conversation replay reads back deterministic receipts and fails closed on evidence drift.
-
-* fix(runtime): schedule quarantined replays
+fix(runtime): schedule quarantined replays
 
 Keep exact completion-replay recoveries eligible after the original runtime-unknown attention has been resolved and a provider-response attention remains open.
