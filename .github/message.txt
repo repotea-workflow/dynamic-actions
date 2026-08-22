@@ -1,15 +1,6 @@
-fix(editor): revert text vertical center and keep zoom on insert (#194)
+fix(editor): keep viewport zoom when keyboard text editing starts
 
-* Revert "fix(text): vertically center text in the element box (#193)"
-
-This reverts commit 612c0a5b229ed4fc617586574804e44990b89991.
-
-* fix(editor): keep user zoom when inserting elements
-
-Re-fit the viewport only when the controller or the active frame
-changes. Document content edits no longer reset pinch-zoom back to
-the fitted size.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Wrapping the canvas in PopScope only after an external edit session
+starts remounted PlateEditor and re-fit the template to the default
+size. Keep PopScope in the tree so adding text no longer resets pinch
+zoom.
