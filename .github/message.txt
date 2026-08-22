@@ -1,3 +1,1 @@
-fix(runtime): bypass legacy recovery invariants (#182)
-
-Modern worker evidence without causal abandonment belongs to the modern recovery path even when legacy dispatch predicates have changed.
+Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
