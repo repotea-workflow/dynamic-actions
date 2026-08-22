@@ -1,7 +1,9 @@
-fix(api): prioritize Attention preconditions
+fix(observability): type persisted categories
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-58
   description: |-
-    Evaluate terminal state, Attention version, and observation digest from owner readback before checking directive compatibility. Preserve resolving-state transaction replay for exact idempotent retries and cover combined stale/incompatible requests.
+    Replace persisted categorical strings in execution observability projections with owning tracker enums and a narrow derived finalization status enum. Decode every projected category at the PostgreSQL boundary with fail-closed corruption tests.
+    
+    Merge refreshed origin/main and resolve the execution attempt store import conflict while retaining both observability and reconciliation coverage.
