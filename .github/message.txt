@@ -1,7 +1,7 @@
-fix(grok): use supported ACP authentication
+fix(observability): preserve attention history
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-58
   description: |-
-    Replace the unsupported auth/status request with Grok 1.0.5's advertised authenticate contract. Bind successful authentication to the native agent identity, require the invoked method in compatibility manifests, and cover the installed runtime handshake.
+    Project exact Attention observations, resolution intents, and receipts into bounded typed timeline payloads instead of reusing mutable case evidence. Decode dispatch checkpoint states through the closed tracker enum, extend representative PostgreSQL acceptance coverage, and refresh stale OpenWiki observability boundaries.
