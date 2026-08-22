@@ -1,9 +1,1 @@
-fix(cursor): isolate MCP approval environment
-
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Clear the inherited daemon environment before running Cursor MCP approval helpers, then apply only the selected Agent Runtime Profile environment and the provider allowlist.
-    
-    Add process coverage proving ambient secret and XDG variables are absent while the selected HOME, endpoint, and credential are present.
+fix(console): refine execution workspace layout
