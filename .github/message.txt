@@ -1,9 +1,3 @@
-fix(runtime): seal live profile authority
+fix(runtime): recover orphaned restart workers
 
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Maintain Agent Runtime Profile health per provider/profile identity after startup and consult the live healthy set before repository preparation. Runtime failures now mark only the affected identity unavailable, while successful recovery can restore it.
-    
-    Seal Codex bindings from sanitized successful preflight observations, including executable, native config source, account reference, schema, feature, and capability digests. Add isolation, restart-drift, and pre-mutation regression coverage.
+Persist abandonment when startup finds an unmatched worker start from a prior daemon process, allowing the bounded runtime-unknown retry path to resume automatically.
