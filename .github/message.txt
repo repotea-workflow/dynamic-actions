@@ -1,11 +1,3 @@
-fix(api): return typed tracker resources
+fix(runtime): replay quarantined revisions
 
-codeon:
-  version: 1
-  authority: FWN-57
-  description: |-
-    Define resource-specific V1 tracker representations and keyset page schemas, then bind each REST operation to its exact response component.
-    
-    Require If-Match for comment creation, project domain results explicitly, and read back receipt-only issue, label, and comment mutations so successful responses contain current resources and ETags.
-    
-    Propagate dependency-graph blocker failures, convert graph timestamps through the V1 projection, and expose bounded edge truncation.
+Resume exact Revision completion recoveries from durable callback authority without rerunning the Agent runtime. Provider conversation replay reads back deterministic receipts and fails closed on evidence drift.
