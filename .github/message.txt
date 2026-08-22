@@ -1,7 +1,20 @@
-Restore rustfmt and Clippy containment gates
+Compose the secure daemon API host (#170)
 
 codeon:
   version: 1
-  authority: FWN-6
+  authority: fewensa-56
   description: |-
-    Apply rustfmt across the GitHub MCP containment changes and clear Clippy -D warnings by nesting or-patterns, merging identical match arms, collapsing nested ifs, passing Copy hosts by value, relocating unused parse_proxy_scope into tests, and allowing documented long integration tests.
+    ## Summary
+    
+    - add strict disabled-by-default API configuration with bounded limits, compiled version validation, loopback/TLS-terminated deployment modes, explicit listener failure policy, exact origins, and environment-only credentials
+    - derive constant-time Bearer identities into bounded Actor, Profile, scope, idempotency, and optimistic-version request context
+    - serve the sealed `codeon-api` foundation on a separate readiness-gated listener with loaded Profile and PostgreSQL query services, safe diagnostics, security headers, independent limits, and bounded shutdown
+    - preserve disabled-mode and MCP behavior with focused configuration, listener, lifecycle, and MCP regression coverage
+    
+    ## Verification
+    
+    - `cargo test -p codeon --test config` (46 passed)
+    - `cargo test -p codeon --lib daemon::api::tests` (7 passed)
+    - `cargo test -p codeon --lib daemon::runtime::tests` (6 passed)
+    - `cargo test -p codeon --test mcp_security` (1 passed)
+    - `cargo clippy -p codeon --all-targets -- -D warnings`
