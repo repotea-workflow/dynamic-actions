@@ -1,1 +1,1 @@
-style(console): refine issue summary metadata
+feat(console): switch issue planning documents
