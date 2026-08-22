@@ -1,7 +1,7 @@
-fix(cursor): preserve recovery lease authority
+Merge origin/main into FWN-45
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: FWN-45
   description: |-
-    Quiesce the exact pending prompt before resource-ceiling load continuation. Require retained completion MCP configuration and reconstruct lifecycle v2 timing from durable activity projections during restart recovery, falling back to controller Attention when authority cannot be proven.
+    Resolve the sealed pull request mergeability conflict by integrating the freshly fetched origin/main tip while preserving the durable cancellation coordination and public MCP cancellation workflow.
