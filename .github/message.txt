@@ -1,11 +1,7 @@
-fix(runtime): enforce runtime profile isolation
+Bound live-e2e probe pipe drains after exit
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-1
   description: |-
-    Launch Grok from the sealed command arguments so native agent profiles reach the child process.
-    
-    Preflight Cursor and Grok runtime profiles with their isolated provider environments, retain sanitized evidence and failure classifications, and fence sealed executable paths and Cursor endpoint values.
-    
-    Move legacy unsealed operations into explicit recovery and restore per-profile active operation counts from durable bindings during bootstrap.
+    Keep draining probe stdout/stderr concurrently under one wall-clock deadline while retaining only a fixed trailing diagnostic window. If pipes do not reach EOF before the budget expires, terminate the owned process group and abort the drain tasks so sustained output or a descendant holding inherited fds cannot exhaust memory or hang the harness.
