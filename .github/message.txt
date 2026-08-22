@@ -1,7 +1,9 @@
-Repair complete execution observability history
+fix(cursor): align preflight ACP command
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-61
   description: |-
-    Accept all current runtime-lifecycle dispatch categories in timeline and Operation-detail decoding. Project immutable package aggregation and runtime-closure history with stable identities, and expand bounded representative PostgreSQL, restart, scope, EXPLAIN, query-budget, and redaction coverage.
+    Launch Cursor startup preflight with the same `acp --sandbox enabled` command used by the production adapter.
+    
+    Tighten adapter and daemon fixtures to reject the obsolete extra `agent` argument.
