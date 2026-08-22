@@ -1,9 +1,24 @@
-fix(cursor): retire accepted prompt deadline
+Coordinate durable attempt cancellation (#190)
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: fewensa-45
   description: |-
-    Treat the Cursor prompt acknowledgement timeout as a control-call deadline only. Once exact prompt evidence is accepted, preserve pending response ownership without expiring it at that deadline while leaving generic ACP and Grok behavior unchanged.
+    ## Summary
     
-    Add ACP and fake Cursor regressions proving activity and terminal response can arrive after the acknowledgement window, including isolation from a stalled session in another repository.
+    - Persist restart-safe Attempt cancellation coordination through exact interrupt, bounded inspection, sealed runtime closure, and cleanup handoff.
+    - Expose `codeon_attempt_cancel` and `codeon_attempt_cancellation_status` through the exact MCP catalog.
+    - Fence unknown runtime outcomes with recovery Attention and rotate scoped worker faults to preserve other repository progress.
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo check -p codeon-tracker -p codeon-postgres -p codeon`
+    - `cargo test -p codeon-tracker attempt_cancellation`
+    - `cargo test -p codeon --test mcp_catalog`
+    - `cargo test -p codeon operation_tools_schemas_and_errors_are_operation_scoped_and_redacted`
+    - `cargo clippy -p codeon-tracker --all-targets -- -D warnings`
+    - `cargo clippy -p codeon-postgres --lib -- -D warnings`
+    - `cargo test -p codeon-postgres --features postgres-acceptance --test execution_attempt_store --no-run`
+    
+    PostgreSQL acceptance execution was not available because `CODEON_TEST_DATABASE_URL` and isolated-database confirmation were unset.
