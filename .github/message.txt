@@ -1,7 +1,9 @@
-test(postgres): use Codeon Issue authority
+fix(postgres): preserve legacy Attention intents
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-60
   description: |-
-    Update the notification persistence fixture to construct the notification crate's current Codeon Issue authority type so all workspace test targets compile.
+    Keep migration 0129 compatible with pre-existing select_observed_candidate resolution intents whose new candidate-reference column is null, while retaining constraint enforcement for new writes.
+    
+    Add PostgreSQL migration acceptance coverage that seeds a pre-0129 selection intent, verifies the upgrade preserves it, and confirms a new selection intent without a candidate reference is rejected.
