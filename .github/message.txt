@@ -1,3 +1,3 @@
-fix(runtime): recover legacy worker faults
+fix(runtime): recover legacy worker faults (#174)
 
-Older running dispatches lack activity-v2 lease fields. Recover only the exact worker-lifecycle fault shape before recording a new worker start, and retain the original dispatch fence.\n\nMigration 0122 adds strict database authority for this read-only retry while keeping rollback compatible with immutable recovery history.
+Recover upgrade-era running dispatches before worker lifecycle persistence, preserve their original dispatch fence, and add strict database recovery authority with rollback-compatible history. Increase the bounded Tokio worker stack for full startup reconciliation.
