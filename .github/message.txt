@@ -1,9 +1,11 @@
-fix(grok): gate exact resume on rearmed lease
+Migrate Cursor ACP to activity leases
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-19
   description: |-
-    Require retained lifecycle-v2 Grok sessions to observe a durable, unexpired activity lease before exact provider resume. Bind the recovered generation to the controller-provided fence and keep the closed session retained when re-arm authority or persistence is unavailable.
+    Use lifecycle-v2 call deadlines for Cursor control calls and treat prompt acknowledgement separately from work duration.
     
-    Add stateful expiry regression coverage for recovery-required, explicit lease re-arm, post-recovery inspection, and legacy recovery compatibility.
+    Normalize exact session and active-prompt output, tool, permission, phase, and terminal events into durable activity evidence. Ignore empty reads, generic running observations, unrelated targets, unknown events, and duplicate digests for renewal.
+    
+    Preserve legacy fixed deadlines, exact idle cancellation, resource-ceiling cancel/load continuation with Attention fallback, continuation authority, completion capability ordering, and bounded transport ownership.
