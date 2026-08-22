@@ -1,9 +1,7 @@
-fix(runtime): complete runnable lease integration
+fix(postgres): link representative attention observation
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-58
   description: |-
-    Wire Landing Preflight Waiting owners through atomic lease release and typed Review resume authority using configured capacities. Persist resume runtime requirements, fence activation generations, and add daemon coverage for release and generation-2 reacquisition.
-    
-    Reconcile startup leases from bounded containment plus matching durable owner checkpoints, failing closed for released live runtimes and preserving unknown ownership. Scope ready-resume selection to owned Profiles and reserve deterministic scheduler budget for new claims under sustained resume backlog.
+    Insert the representative Attention's initial observation and reference sequence 1 from its opened event so the timeline projection can decode the durable event after restart.
