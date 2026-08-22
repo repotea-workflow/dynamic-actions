@@ -1,1 +1,1 @@
-feat(omsk): add identity upload source picker
+fix(omsk): restore batch search paste flow
