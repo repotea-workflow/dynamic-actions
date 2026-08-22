@@ -1,3 +1,1 @@
-fix(codeon): recover invalid completions (#173)
-
-Reject stale PR publication authority before completion becomes durable. Recover legacy artifact-invalid results during normal reconciliation with a bounded fenced dispatch retry.
+feat(console): add attempt history selector
