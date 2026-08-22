@@ -1,7 +1,7 @@
-fix(runtime): bind profile state and auth
+fix(api): honor attention resolution fences
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-60
   description: |-
-    Reject overlapping same-provider state directories and bind observed Cursor and Grok account identities into sealed runtime snapshots. Recovery now fails closed when the original provider account cannot be proven.
+    Validate observed candidate selections against durable owner observations and let transactional command replay precede version fencing. Document emitted 400 Attention problem responses and cover the repaired replay and candidate paths.
