@@ -1,7 +1,3 @@
-fix(runtime): preserve profile migration evidence
+fix(runtime): canonicalize commit receipts
 
-codeon:
-  version: 1
-  authority: FWN-61
-  description: |-
-    Preserve bounded runtime observation evidence while quarantining legacy Agent Runtime Profile bindings. Append recovery lifecycle events for pending and running Operations, retain an immutable migration addendum for Operations already in recovery, and cover all three migration states with PostgreSQL acceptance. Integrate the refreshed target branch while retaining provider-scoped runtime isolation and target-side lifecycle fixes.
+Transport retries could append equivalent preparation receipts and make completion replay fail its one-to-one metadata gate. Register one canonical receipt per semantic request while preserving historical aliases for audit and completed artifact authority.
