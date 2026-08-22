@@ -1,1 +1,7 @@
-merge: sync recovery maintenance with main
+Complete execution observability projections
+
+codeon:
+  version: 1
+  authority: FWN-58
+  description: |-
+    Expand the transport-neutral attempt and operation projections so every durable execution source is queryable with typed, redacted summaries and fail-closed decoding. Add profile-scoped bounded PostgreSQL coverage for timeline families, joined detail facts, operation seals and checkpoints, artifact verification, restart durability, scope isolation, and production-sized pagination.
