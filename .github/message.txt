@@ -1,7 +1,1 @@
-Restore exact cancellation after recovery
-
-codeon:
-  version: 1
-  authority: FWN-44
-  description: |-
-    Rebuild provider-neutral cancellation identity from the durable recovery binding, runtime reference, dispatch, and current fence after exact provider readback. Retain and validate Codex native-goal identity before reporting unsupported, and restore Grok's exact-loaded active prompt so only the recovered target can receive cancellation. Add recovery and mismatch regression coverage that proves simultaneous dispatches from another Repository continue.
+style(console): simplify issue detail layout
