@@ -1,7 +1,1 @@
-fix(cancellation): preserve recovery authority
-
-codeon:
-  version: 1
-  authority: FWN-44
-  description: |-
-    Reject conflicting Codex and Grok recovery identities before replacing retained provider targets. This keeps simultaneous Repository dispatches running and prevents cancellation authority from crossing fences.
+fix(console): align issue table group markers
