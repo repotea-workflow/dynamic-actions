@@ -1,1 +1,21 @@
-fix(console): remove page-level loading states
+Implement exact provider-scoped cancellation (#168)
+
+codeon:
+  version: 1
+  authority: fewensa-44
+  description: |-
+    ## Summary
+    
+    - add one provider-neutral cancellation identity and the `Confirmed`, `Requested`, `AlreadyTerminal`, `Unsupported`, and `OutcomeUnknown` outcomes with bounded evidence
+    - fail closed on missing, stale, or conflicting retained identity before provider I/O
+    - interrupt only the exact Codex turn and cancel only exact Grok or Cursor dispatch/session/prompt targets
+    - keep cancellation deadlines observational so they never stop shared runtimes or provider processes
+    - add focused provider, concurrent-dispatch, and cross-Repository safety tests and align cancellation documentation
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo clippy -p codeon-tracker -p codeon -p codeoo-agent -p codeoo-agent-codex -p codeoo-agent-cursor -p codeoo-agent-grok --all-targets -- -D warnings`
+    - `cargo test -p codeon -p codeoo-agent -p codeoo-agent-cursor -p codeoo-agent-grok cancel`
+    - `cargo test -p codeoo-agent-codex --test adapter_integration mcp_runtime::`
+    - `cargo test -p codeoo-agent-cursor -p codeoo-agent-grok`
