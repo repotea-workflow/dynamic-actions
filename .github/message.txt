@@ -1,1 +1,1 @@
-feat(console): add issue activity timeline
+style(console): balance issue overview columns
