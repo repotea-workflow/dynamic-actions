@@ -1,7 +1,7 @@
-fix(api): expose fenced Attention candidates
+test(postgres): use Codeon Issue authority
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-61
   description: |-
-    Expose bounded owner-authored candidate references in durable Attention observations and V1/MCP readback, then validate candidate selections against the current observation digest. Persist the selected candidate on resolution intents and label the existing full digest accurately as resolution_digest. Merge the refreshed main branch while preserving both Attention V1 read models and worker lifecycle recovery exports.
+    Update the notification persistence fixture to construct the notification crate's current Codeon Issue authority type so all workspace test targets compile.
