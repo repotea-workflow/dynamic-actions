@@ -1,9 +1,7 @@
-fix(postgres): preserve legacy Attention intents
+fix(observability): secure operation projections
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-58
   description: |-
-    Keep migration 0129 compatible with pre-existing select_observed_candidate resolution intents whose new candidate-reference column is null, while retaining constraint enforcement for new writes.
-    
-    Add PostgreSQL migration acceptance coverage that seeds a pre-0129 selection intent, verifies the upgrade preserves it, and confirms a new selection intent without a candidate reference is rejected.
+    Redact legacy evidence and runtime references from bounded Attempt Operation list items before serialization. Read Operation detail facts from one read-only repeatable-read PostgreSQL transaction and cover concurrent snapshot coherence.
