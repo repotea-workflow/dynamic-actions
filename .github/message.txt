@@ -1,9 +1,6 @@
-Replay committed worker completions before retry (#183)
+Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
 
-* fix(runtime): replay committed worker completions
-
-Durable completion evidence must be replayed before runtime-unknown recovery can cancel or replace its dispatch.
-
-* fix(codeon): narrow completion replay recovery
-
-* fix(codeon): resolve terminal completion recovery
+# Conflicts:
+#	codeon/crates/codeon-postgres/src/execution_attention_store/legacy_worker_lifecycle_recovery.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/startup_attempt_recovery.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/force_prepared_with_package.rs
