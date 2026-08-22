@@ -1,9 +1,7 @@
-Add bounded execution observability projections
+Make pull_request_read containment method-aware
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-6
   description: |-
-    Introduce transport-neutral Attempt and Operation observability query contracts with bounded, scope-bound cursors and typed durable timeline records.
-    
-    Implement PostgreSQL Attempt list/detail, Operation list/detail, and chronological timeline projections by reusing the existing agent execution read model and joining durable Attempt, Operation, Attention, finalization, and cleanup event sources.
+    Organization leases were applying the PR-detail extractor to every pull_request_read method, so valid get_files/get_diff/status/comment reads failed closed as unverifiable. Select inspection by method and cover each supported method under an organization lease.
