@@ -1,22 +1,7 @@
-Expose fenced Attention APIs over V1 (#187)
+Preserve terminal cancellation recovery evidence
 
 codeon:
   version: 1
-  authority: fewensa-60
+  authority: FWN-45
   description: |-
-    ## Summary
-    
-    - expose safe current and historical Attention list/detail representations through V1
-    - add profile-scoped, scope/idempotency/version/observation-digest fenced resolution directives
-    - expose failed-execution cancel-Attention creation without direct active cancellation or provider mutation
-    - document the closed OpenAPI union, scopes, problem mappings, examples, and MCP parity
-    - persist bounded resolution intent/receipt readback
-    
-    ## Verification
-    
-    - `cargo fmt --all --check`
-    - `cargo test -p codeon-api --test contract attention_` (2 passed)
-    - `cargo test -p codeon --lib attention` (10 passed; 7 PostgreSQL-dependent tests ignored)
-    - package-scoped Cargo check and Clippy for changed crates
-    - `just verify` attempted; blocked by unchanged notification persistence type mismatch and Cursor Clippy warning
-    - PostgreSQL acceptance not run because an isolated test database was not configured
+    Consume provider-confirmed terminal recovery outcomes before issuing another cancel or inspect action. Persist the already-terminal interrupt and confirmed runtime closure atomically, and cover restart behavior for terminal, running, unknown, and controller-decision recovery dispositions.
