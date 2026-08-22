@@ -1,9 +1,1 @@
-fix(cancellation): preserve terminal outcomes
-
-codeon:
-  version: 1
-  authority: FWN-44
-  description: |-
-    Classify Grok SessionReady prompts as already terminal without provider I/O.
-    
-    Request exact cancellation for durably committed Codeoff plans and completions without waiting for convergence or forcing shared runtimes.
+feat(console): organize localized issue details
