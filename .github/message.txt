@@ -1,1 +1,1 @@
-fix(console): keep issue view switches instant
+feat(console): reshape execution workspace
