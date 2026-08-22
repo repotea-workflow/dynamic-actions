@@ -1,7 +1,7 @@
-fix(observability): secure operation projections
+Fix cancellation runtime identity snapshot
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-45
   description: |-
-    Redact legacy evidence and runtime references from bounded Attempt Operation list items before serialization. Read Operation detail facts from one read-only repeatable-read PostgreSQL transaction and cover concurrent snapshot coherence.
+    Capture the accepted provider input reference and pre-fence dispatch identity in the durable cancellation receipt. Treat missing runtime authority after a dispatch may have started as an unknown outcome so cleanup and requeue remain forbidden until reconciliation. Add persistence and daemon restart coverage for exact interrupt and closure coordination.
