@@ -1,9 +1,22 @@
-fix(codeon): repair runtime profile verification
+Expose fenced Attention APIs over V1 (#187)
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: fewensa-60
   description: |-
-    Move Agent Runtime Profile test fixtures under a trusted ancestor so production path validation remains strict while the isolation tests exercise their intended behavior.
+    ## Summary
     
-    Test-gate snapshot helpers used only by unit tests and apply the candidate-owned Clippy simplifications for Codex, Cursor, and Grok runtime code.
+    - expose safe current and historical Attention list/detail representations through V1
+    - add profile-scoped, scope/idempotency/version/observation-digest fenced resolution directives
+    - expose failed-execution cancel-Attention creation without direct active cancellation or provider mutation
+    - document the closed OpenAPI union, scopes, problem mappings, examples, and MCP parity
+    - persist bounded resolution intent/receipt readback
+    
+    ## Verification
+    
+    - `cargo fmt --all --check`
+    - `cargo test -p codeon-api --test contract attention_` (2 passed)
+    - `cargo test -p codeon --lib attention` (10 passed; 7 PostgreSQL-dependent tests ignored)
+    - package-scoped Cargo check and Clippy for changed crates
+    - `just verify` attempted; blocked by unchanged notification persistence type mismatch and Cursor Clippy warning
+    - PostgreSQL acceptance not run because an isolated test database was not configured
