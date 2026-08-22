@@ -1,9 +1,7 @@
-fix(grok): rearm expired activity leases
+Repair execution observability projections
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-59
   description: |-
-    Add an atomic lifecycle-v2 activity lease rearm transition that advances the dispatch fence while preserving the original resource ceiling and continuation authority.
-    
-    Persist bounded late closed-generation provider evidence in the dispatch event stream without renewing the active lease, and cover exact recovery plus audit replay in fake and PostgreSQL store tests.
+    Expose phase artifact outcomes, safe evidence, and bounded phase-specific summary sets through the execution query port and V1 DTOs. Use discriminated statistics members with explicit unavailable problems, preserve parent Attempt presence for operation collections, and share one execution route table between runtime registration and OpenAPI generation. Extend contract and PostgreSQL-enabled acceptance coverage for the repaired behavior.
