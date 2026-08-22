@@ -1,9 +1,7 @@
-fix(grok): persist activity recovery fences
+fix(cursor): restore exact lifecycle recovery
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-19
   description: |-
-    Add a controller-authorized, generation-idempotent activity lease rearm transition for exact Grok recovery. The transition advances only the idle deadline, preserves the frozen resource ceiling, and refuses recovery when either returned deadline is already due.
-    
-    Persist fenced closed-generation provider evidence as bounded audit-only dispatch events so late and duplicate activity remains restart-safe without renewing the lease. Cover recovery, ceiling, duplicate, migration, and observability behavior with focused fake ACP and PostgreSQL tests.
+    Persist queued exact-prompt activity before evaluating idle expiry. Dispatch resource-ceiling and restart continuations only after exact session load, and reject permissions outside the active prompt.
