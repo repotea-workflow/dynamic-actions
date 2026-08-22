@@ -1,11 +1,7 @@
-fix(grok): preserve activity recovery authority
+fix(codeon): close runnable lease review gaps
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-51
   description: |-
-    Drain and normalize bounded provider activity from pending ACP prompt responses, including first-event deduplication and active prompt binding.
-    
-    Retain completion context and MCP capability until provider session cleanup is proven, and require controller recovery when a retained session lacks accepted-input authority.
-    
-    Remove the candidate-only shared activity lease rearm migration and persistence mutations so Grok continues to consume the existing lifecycle v2 controller authority.
+    Fail startup reconciliation when terminal attempts have released lease projections but their latest runtime containment is still populated. Extend daemon integration coverage for the capacity-pending A-E resume path, generation fencing before provider I/O, and unknown Agent runtime evidence retaining held capacity.
