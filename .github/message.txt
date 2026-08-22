@@ -1,7 +1,9 @@
-Record live-e2e permanent file and serialize smoke PATH
+fix(cancellation): preserve terminal outcomes
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-44
   description: |-
-    Live reports omitted the squash-merged live-e2e/<run_marker>.txt path and lacked navigable Issue/merge links, while smoke git probes still raced on process-global PATH. Record the permanent artifact and links in the machine-readable report and docs, and share one PATH lock across the smoke probe tests.
+    Classify Grok SessionReady prompts as already terminal without provider I/O.
+    
+    Request exact cancellation for durably committed Codeoff plans and completions without waiting for convergence or forcing shared runtimes.
