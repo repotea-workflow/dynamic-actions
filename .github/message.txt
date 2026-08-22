@@ -1,7 +1,9 @@
-Serialize PATH mutation in live-e2e cleanup tests
+Add bounded execution observability projections
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-58
   description: |-
-    Hold a module mutex across hanging-fake-git PATH install and restore so parallel live_e2e cases cannot inherit the fake binary and flake on real git probes.
+    Introduce transport-neutral Attempt and Operation observability query contracts with bounded, scope-bound cursors and typed durable timeline records.
+    
+    Implement PostgreSQL Attempt list/detail, Operation list/detail, and chronological timeline projections by reusing the existing agent execution read model and joining durable Attempt, Operation, Attention, finalization, and cleanup event sources.
