@@ -1,9 +1,7 @@
-fix(runtime): clear failed startup handles
+Format live_e2e assertions for cargo fmt
 
 codeon:
   version: 1
-  authority: FWN-16
+  authority: FWN-1
   description: |-
-    Remove dispatch-keyed termination handles whenever Cursor or Grok provider startup settles with an error or supervised panic. This prevents stale numeric process-group authority from surviving startup cleanup while preserving handles for Grok failures that still own pending cleanup.
-    
-    Add lifecycle regression coverage for a real Cursor startup failure and a supervised Grok startup panic.
+    Apply rustfmt so repository fmt-check passes on the live-e2e validation and Just recipe contract assertions.
