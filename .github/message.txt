@@ -1,1 +1,1 @@
-fix(runtime): recover worker lifecycle faults
+feat(console): filter completed issues
