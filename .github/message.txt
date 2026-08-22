@@ -1,1 +1,9 @@
-fix(console): size execution rail to viewport
+Merge remote-tracking branch 'origin/main' into agt/fix-runtime-auto-recovery
+
+# Conflicts:
+#	codeon/crates/codeon-postgres/src/agent_dispatch_store/activity_lifecycle.rs
+#	codeon/crates/codeon-postgres/tests/execution_attempt_store/activity_lifecycle.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/mod.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/startup_attempt_recovery.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/force_prepared_with_package.rs
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/tests/mod.rs
