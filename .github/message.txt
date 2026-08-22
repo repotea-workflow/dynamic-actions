@@ -1,7 +1,1 @@
-Make pull_request_read containment method-aware
-
-codeon:
-  version: 1
-  authority: FWN-6
-  description: |-
-    Organization leases were applying the PR-detail extractor to every pull_request_read method, so valid get_files/get_diff/status/comment reads failed closed as unverifiable. Select inspection by method and cover each supported method under an organization lease.
+fix(console): restore issue card navigation
