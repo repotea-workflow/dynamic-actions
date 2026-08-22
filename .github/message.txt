@@ -1,1 +1,3 @@
-feat(console): filter completed issues
+fix(runtime): bypass legacy recovery invariants
+
+Modern worker evidence without causal abandonment belongs to the modern recovery path even when legacy dispatch predicates have changed.
