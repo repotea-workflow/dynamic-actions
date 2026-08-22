@@ -1,7 +1,7 @@
-Reject duplicate API authority headers
+Drain live-e2e probe pipes concurrently
 
 codeon:
   version: 1
-  authority: FWN-56
+  authority: FWN-1
   description: |-
-    Fail closed before CORS, authentication, or routing when Origin, Authorization, Idempotency-Key, or If-Match appears more than once. Preserve defensive single-value parsing and add listener coverage for conflicting duplicate values.
+    Wait-then-read left provider probes blocked once either OS pipe buffer filled, so the harness timed out healthy agents. Drain stdout and stderr while waiting and keep TERM/KILL on the process group; add a regression that emits past pipe capacity.
