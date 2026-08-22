@@ -1,11 +1,11 @@
-fix(runtime): enforce profile migration and gating
+fix(api): return typed tracker resources
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-57
   description: |-
-    Backfill legacy Agent Runtime Profile bindings with a reserved recovery identity so historical issue policies, admission snapshots, and completed operations remain readable without selecting operator configuration.
+    Define resource-specific V1 tracker representations and keyset page schemas, then bind each REST operation to its exact response component.
     
-    Reject unavailable runtime identities before repository preparation and keep the live unavailability error from falling back to stale snapshot routing. Add PostgreSQL acceptance coverage for unavailable-versus-healthy routing and legacy migration readback.
+    Require If-Match for comment creation, project domain results explicitly, and read back receipt-only issue, label, and comment mutations so successful responses contain current resources and ETags.
     
-    Replace singleton runtime configuration guidance with strict keyed Agent Runtime Profile examples and migration instructions.
+    Propagate dependency-graph blocker failures, convert graph timestamps through the V1 projection, and expose bounded edge truncation.
