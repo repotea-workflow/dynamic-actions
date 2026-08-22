@@ -1,1 +1,1 @@
-fix(console): refine execution workspace layout
+fix(console): size execution rail to viewport
