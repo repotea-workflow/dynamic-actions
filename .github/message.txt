@@ -1,1 +1,1 @@
-feat(console): show execution actors
+feat(console): redesign execution history
