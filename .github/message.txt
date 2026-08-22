@@ -1,3 +1,1 @@
-Fix automatic recovery of worker lifecycle faults (#181)
-
-Recover causal worker lifecycle faults through canonical bounded runtime retry, including cross-process abandonment handoff and multi-cycle audit continuity.
+fix(runtime): recover worker lifecycle faults
