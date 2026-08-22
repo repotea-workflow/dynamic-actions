@@ -1,7 +1,7 @@
-Prevent completion-first cleanup handoff
+fix(grok): use supported ACP authentication
 
 codeon:
   version: 1
-  authority: FWN-45
+  authority: FWN-61
   description: |-
-    Keep completion-first cancellation coordination pending so an active Attempt cannot advertise runtime closure or cleanup authority. Bind already-terminal status only to a persisted Attempt runtime-closure receipt, preserve replacement by a later real cancellation request, and cover restart-safe status and worker selection.
+    Replace the unsupported auth/status request with Grok 1.0.5's advertised authenticate contract. Bind successful authentication to the native agent identity, require the invoked method in compatibility manifests, and cover the installed runtime handshake.
