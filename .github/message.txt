@@ -1,7 +1,9 @@
-Preserve live-e2e Just argument boundaries
+fix(codeon): bind Cursor continuation cancellation
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-44
   description: |-
-    Pass live-e2e recipe arguments through Just positional argv and a JSON CODEON_LIVE_ARGS array so paths with spaces or quotes stay one token, and stop splitting that env value on whitespace.
+    Retain the continuation prompt operation ID alongside its returned prompt so session/cancel sends one internally consistent Cursor target.
+    
+    Extend the cross-Repository cancellation regression to trigger a completion continuation, verify the exact dispatch/session/prompt-operation/prompt tuple, and prove the other retained dispatch remains live.
