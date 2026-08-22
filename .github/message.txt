@@ -1,1 +1,1 @@
-feat(macos): complete desktop virtual printer workflow
+feat(windows): complete desktop virtual printer workflow
