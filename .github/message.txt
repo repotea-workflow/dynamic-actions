@@ -1,18 +1,11 @@
-Scope Agent runtimes by runtime profile (#169)
+fix(grok): preserve lifecycle v2 recovery
 
 codeon:
   version: 1
-  authority: fewensa-61
+  authority: FWN-13
   description: |-
-    ## Summary
-    - add strict provider-scoped Agent Runtime Profile maps and atomic routing precedence
-    - persist runtime-profile identity and sealed snapshot columns through a guarded PostgreSQL migration
-    - isolate Codex, Cursor, and Grok process construction by runtime profile while preserving healthy profiles when another is unavailable
+    Treat the first prompt-bound provider event as prompt acknowledgement while retaining the pending ACP call for inspection.
     
-    ## Verification
-    - `cargo check -p codeon-tracker -p codeon-postgres -p codeon --all-targets`
-    - `cargo test -p codeon-tracker --test agent_selection`
-    - `cargo test -p codeon --test config`
-    - `cargo test -p codeoo-agent-codex process::tests`
-    - `cargo test -p codeoo-agent-grok`
-    - `cargo fmt --all --check`
+    Normalize prompt-local provider sequences without placing them in the dispatch-wide monotonic sequence field, while preserving raw sequence identity in the event digest.
+    
+    Carry exact Grok session, prompt, generation, and continuation authority through production recovery so closed generations load exactly without resetting lifecycle state.
