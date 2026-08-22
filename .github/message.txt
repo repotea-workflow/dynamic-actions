@@ -1,7 +1,7 @@
-fix(api): honor attention resolution fences
+Fix cancellation restart coordination
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-45
   description: |-
-    Validate observed candidate selections against durable owner observations and let transactional command replay precede version fencing. Document emitted 400 Attention problem responses and cover the repaired replay and candidate paths.
+    Recover sealed provider runtime authority before cancellation interrupt and closure readback so persisted requests continue safely after daemon restart. Persist already-terminal and completion-first cancellation status projections so MCP status can observe the returned request ID.
