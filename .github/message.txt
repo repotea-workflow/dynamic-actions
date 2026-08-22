@@ -1,1 +1,1 @@
-style(console): balance issue overview columns
+style(console): refine issue summary metadata
