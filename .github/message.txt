@@ -1,41 +1,9 @@
-fix(migrations): guard receipt rollback (#186)
+fix(runtime): enforce profile routing safety
 
-* fix(runtime): retry after worker abandonment
-
-Preserve capped fast retries while allowing one new retry when the latest dispatch records a newer durable worker abandonment.
-
-* fix(cursor): keep retained prompts running
-
-Avoid opening runtime-unknown Attention before a retained active prompt receives its first provider event.
-
-* fix(runtime): recover orphaned restart workers
-
-Persist abandonment when startup finds an unmatched worker start from a prior daemon process, allowing the bounded runtime-unknown retry path to resume automatically.
-
-* fix(cursor): keep pending prompts running
-
-Session-level ACP events can arrive before prompt-scoped activity. Trust the retained session pending state so those unrelated events do not force a recoverable live prompt into Unknown.
-
-* fix(runtime): use causal recovery identity
-
-Bind worker abandonment to a daemon instance and retry budget to the latest dispatch so wall-clock regressions cannot strand recoverable work. Preserve synchronous Cursor prompt returns as terminal evidence.
-
-* fix(runtime): recover restart lifecycle gaps
-
-* fix(runtime): recover worker lifecycle faults
-
-* fix(runtime): bypass legacy recovery invariants
-
-Modern worker evidence without causal abandonment belongs to the modern recovery path even when legacy dispatch predicates have changed.
-
-* fix(runtime): replay committed worker completions
-
-Durable completion evidence must be replayed before runtime-unknown recovery can cancel or replace its dispatch.
-
-* fix(runtime): canonicalize commit receipts
-
-Transport retries could append equivalent preparation receipts and make completion replay fail its one-to-one metadata gate. Register one canonical receipt per semantic request while preserving historical aliases for audit and completed artifact authority.
-
-* fix(migrations): guard receipt rollback
-
-Semantic retry commands can depend on the canonical registry without owning a same-command preparation row. Refuse downgrade instead of leaving those commands unreplayable by the previous runtime.
+codeon:
+  version: 1
+  authority: FWN-61
+  description: |-
+    Require HTTP Issue routing to carry a configured provider and Agent Runtime Profile pair, and preserve that identity in V1 read projections.
+    
+    Retain per-profile capacity when runtime provisioning is ambiguous. Gate Cursor startup on a frozen compatibility manifest and the required loadSession capability.
