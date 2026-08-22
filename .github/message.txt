@@ -1,1 +1,1 @@
-feat(console): add grouped issue graph layout
+fix(console): clarify issue graph routing
