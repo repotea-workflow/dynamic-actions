@@ -1,3 +1,7 @@
-Recover dirty Revision retries after restart (#171)
+Preserve live-e2e Just argument boundaries
 
-Revalidate frozen repository authority and automatically replace legacy operator-cancel Attention with restart-safe deterministic retry.
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Pass live-e2e recipe arguments through Just positional argv and a JSON CODEON_LIVE_ARGS array so paths with spaces or quotes stay one token, and stop splitting that env value on whitespace.
