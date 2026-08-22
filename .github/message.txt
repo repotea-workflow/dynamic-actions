@@ -1,11 +1,9 @@
-Expose fenced Attention APIs over V1
+fix(observability): bound timeline evidence
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-58
   description: |-
-    Expose current and historical execution Attention cases through sanitized V1 representations and generated OpenAPI contracts.
+    Validate persisted timeline evidence references as bounded public-safe values before projection serialization, including control text, oversized values, and local-path cases.
     
-    Route operator resolutions through the existing profile-owned Attention store with credential-derived actors, idempotency, version, and observation-digest fences. Keep failed execution cancellation as Attention creation only, and preserve owner readback and domain cancellation authority.
-    
-    Add HTTP/MCP parity, closed directive union, safe response-shape, host scope, and durable PostgreSQL intent/receipt readback coverage.
+    Exercise production-scale timeline and operation-detail fixtures with executed EXPLAIN ANALYZE buffer measurements, bounded rows and bytes, timing, and fixed statement-count coverage.
