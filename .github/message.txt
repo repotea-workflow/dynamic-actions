@@ -1,1 +1,1 @@
-feat(windows): complete desktop virtual printer workflow
+fix(desktop): bundle Windows virtual printer runtime
