@@ -1,7 +1,9 @@
-fix(cancellation): fence provider recovery
+fix(live-e2e): escape TOML config and scope cleanup readback
 
 codeon:
   version: 1
-  authority: FWN-44
+  authority: FWN-1
   description: |-
-    Reject conflicting Grok and Cursor recovery identities before provider, completion, or lifecycle access. Preserve the exact retained runtime for valid replays and merge the refreshed target branch without weakening provider-scoped cancellation.
+    Serialize live daemon config strings through TOML escaping so worktree paths and profile display names with quotes or backslashes load correctly.
+    
+    Assert cleanup against the run-owned preparation worktree_path from operation history instead of requiring an empty worktree_root directory, and add regression tests for both findings.
