@@ -1,7 +1,11 @@
-Document secure daemon API host
+fix(runtime): enforce runtime profile isolation
 
 codeon:
   version: 1
-  authority: FWN-56
+  authority: FWN-61
   description: |-
-    Add the disabled-by-default API listener and credential examples to the operator configuration template. Align OpenWiki ownership, security gates, failure policy, and bounded shutdown guidance with the composed daemon API implementation.
+    Launch Grok from the sealed command arguments so native agent profiles reach the child process.
+    
+    Preflight Cursor and Grok runtime profiles with their isolated provider environments, retain sanitized evidence and failure classifications, and fence sealed executable paths and Cursor endpoint values.
+    
+    Move legacy unsealed operations into explicit recovery and restore per-profile active operation counts from durable bindings during bootstrap.
