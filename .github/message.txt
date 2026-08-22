@@ -1,9 +1,7 @@
-fix(observability): redact execution paths
+feat(runtime): integrate runnable lease lifecycle
 
 codeon:
   version: 1
-  authority: FWN-58
+  authority: FWN-51
   description: |-
-    Project legacy operation, recovery, and runtime references through the public-safe reference boundary so local paths serialize only as deterministic digests.
-    
-    Expand external review rows into stable planned, requested, acknowledged, response-observed, and terminal timeline checkpoints so persisted lifecycle timestamps survive restart.
+    Bind Waiting and Recovery Required transitions to durable runtime-closure evidence and runnable-lease release in the owner transaction. Reacquire capacity with generation-fenced activation, prioritize bounded ready resumptions, reconcile leases fail closed at startup, and expose bounded diagnostics. Cover release authority, rollback, capacity pending, generation fencing, fairness, migration replay, and the canonical A-E scenario; update the picker runtime specification and OpenWiki architecture context.
