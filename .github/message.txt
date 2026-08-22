@@ -1,3 +1,1 @@
-fix(runtime): use causal recovery identity
-
-Bind worker abandonment to a daemon instance and retry budget to the latest dispatch so wall-clock regressions cannot strand recoverable work. Preserve synchronous Cursor prompt returns as terminal evidence.
+fix(console): refine task filter and graph controls
