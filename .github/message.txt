@@ -1,24 +1,9 @@
-Coordinate durable attempt cancellation (#190)
+fix(grok): rearm expired activity leases
 
 codeon:
   version: 1
-  authority: fewensa-45
+  authority: FWN-13
   description: |-
-    ## Summary
+    Add an atomic lifecycle-v2 activity lease rearm transition that advances the dispatch fence while preserving the original resource ceiling and continuation authority.
     
-    - Persist restart-safe Attempt cancellation coordination through exact interrupt, bounded inspection, sealed runtime closure, and cleanup handoff.
-    - Expose `codeon_attempt_cancel` and `codeon_attempt_cancellation_status` through the exact MCP catalog.
-    - Fence unknown runtime outcomes with recovery Attention and rotate scoped worker faults to preserve other repository progress.
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo check -p codeon-tracker -p codeon-postgres -p codeon`
-    - `cargo test -p codeon-tracker attempt_cancellation`
-    - `cargo test -p codeon --test mcp_catalog`
-    - `cargo test -p codeon operation_tools_schemas_and_errors_are_operation_scoped_and_redacted`
-    - `cargo clippy -p codeon-tracker --all-targets -- -D warnings`
-    - `cargo clippy -p codeon-postgres --lib -- -D warnings`
-    - `cargo test -p codeon-postgres --features postgres-acceptance --test execution_attempt_store --no-run`
-    
-    PostgreSQL acceptance execution was not available because `CODEON_TEST_DATABASE_URL` and isolated-database confirmation were unset.
+    Persist bounded late closed-generation provider evidence in the dispatch event stream without renewing the active lease, and cover exact recovery plus audit replay in fake and PostgreSQL store tests.
