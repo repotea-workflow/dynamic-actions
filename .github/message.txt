@@ -1,11 +1,9 @@
-fix(grok): preserve lifecycle v2 recovery
+fix(codex): enforce activity lease lifecycle
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-15
   description: |-
-    Treat the first prompt-bound provider event as prompt acknowledgement while retaining the pending ACP call for inspection.
+    Interrupt exact Codex turns after durable idle expiry while preserving validated completion races and shared App Server safety.
     
-    Normalize prompt-local provider sequences without placing them in the dispatch-wide monotonic sequence field, while preserving raw sequence identity in the event digest.
-    
-    Carry exact Grok session, prompt, generation, and continuation authority through production recovery so closed generations load exactly without resetting lifecycle state.
+    Arm activity observers only after InputAccepted is durable, retain bounded observer overflow without dropping terminal evidence, serialize expiry checks behind queued activity persistence, and prevent legacy operation_progress acknowledgements from renewing v2 leases.
