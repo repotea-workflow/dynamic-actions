@@ -1,4 +1,6 @@
-fix(text): vertically center text in the element box
+fix(text): vertically center text in the element box (#193)
 
 Place ordinary text, time, and serial on the vertical center of the
 element bounds. Horizontal left/center/right alignment is unchanged.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
