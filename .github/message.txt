@@ -1,9 +1,11 @@
-fix: validate configured runtime profiles
+Expose fenced Attention APIs over V1
 
 codeon:
   version: 1
-  authority: FWN-61
+  authority: FWN-60
   description: |-
-    Derive Agent Runtime Profile identities for Issue routing validation from the strict execution configuration instead of runner startup state.
+    Expose current and historical execution Attention cases through sanitized V1 representations and generated OpenAPI contracts.
     
-    Keep runtime availability as the independent pre-dispatch gate so Picker-disabled or unhealthy profiles do not invalidate durable routing mutations.
+    Route operator resolutions through the existing profile-owned Attention store with credential-derived actors, idempotency, version, and observation-digest fences. Keep failed execution cancellation as Attention creation only, and preserve owner readback and domain cancellation authority.
+    
+    Add HTTP/MCP parity, closed directive union, safe response-shape, host scope, and durable PostgreSQL intent/receipt readback coverage.
