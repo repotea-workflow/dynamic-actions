@@ -1,3 +1,7 @@
-fix(runtime): preserve retry budget (#191)
+Prevent completion-first cleanup handoff
 
-Worker abandonment is infrastructure recovery and must not consume the bounded provider outcome retry budget.
+codeon:
+  version: 1
+  authority: FWN-45
+  description: |-
+    Keep completion-first cancellation coordination pending so an active Attempt cannot advertise runtime closure or cleanup authority. Bind already-terminal status only to a persisted Attempt runtime-closure receipt, preserve replacement by a later real cancellation request, and cover restart-safe status and worker selection.
