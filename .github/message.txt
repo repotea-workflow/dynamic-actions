@@ -1,9 +1,9 @@
-Coordinate durable attempt cancellation
+fix(postgres): move enum codec tests last
 
 codeon:
   version: 1
-  authority: FWN-45
+  authority: FWN-58
   description: |-
-    Persist restart-safe cancellation phases from exact provider interrupt through bounded runtime inspection, confirmed closure, and cleanup handoff.
+    Move the enum codec test module after all production items so the repository's items-after-test-module Clippy lint no longer rejects the target file.
     
-    Expose profile-scoped MCP cancel and status tools, fence unknown outcomes with runtime_outcome_unknown Attention, and rotate scoped worker faults so other cancellation work can continue.
+    The focused landing-preflight result decoder test remains unchanged and passes. The required all-target Clippy command proceeds past this finding but remains blocked by an unrelated pre-existing notification_persistence.rs type mismatch outside the sealed revision scope.
