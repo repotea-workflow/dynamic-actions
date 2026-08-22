@@ -1,9 +1,21 @@
-fix: preserve attention resolution replays
+Add bounded execution observability projections (#172)
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: fewensa-58
   description: |-
-    Check the profile-scoped Attention command ledger before HTTP or MCP state and directive prechecks. Exact retries now return durable resolving or resolved readback, while changed payloads retain typed idempotency conflicts across both transports.
+    ## Summary
     
-    Add PostgreSQL-backed HTTP and MCP acceptance coverage for terminal exact replay and changed-directive conflicts, plus a focused MCP error-mapping contract test.
+    - Add transport-neutral bounded Attempt and Operation observability query contracts.
+    - Implement PostgreSQL Attempt list/detail, Operation list/detail, and a deterministic durable timeline across Attempt, Operation, Attention, finalization, and cleanup events.
+    - Reuse the existing agent execution read model for selection, binding, dispatch, runtime, and aggregate facts.
+    
+    ## Verification
+    
+    - `cargo test -p codeon-tracker execution_observability -- --test-threads=1`
+    - `cargo check -p codeon-tracker -p codeon-postgres --lib --all-features`
+    - `cargo clippy -p codeon-tracker -p codeon-postgres --lib --all-features -- -D warnings`
+    - `cargo fmt --all -- --check`
+    - `git diff --check`
+    
+    PostgreSQL acceptance, restart, and production-sized EXPLAIN checks were not run because no isolated test database target was configured.
