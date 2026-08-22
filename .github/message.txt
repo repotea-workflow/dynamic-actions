@@ -1,7 +1,9 @@
-Fence REST candidate resolution
+fix(observability): redact execution paths
 
 codeon:
   version: 1
-  authority: FWN-60
+  authority: FWN-58
   description: |-
-    Reject select_observed_candidate over V1 REST until owner-authoritative candidate observation validation exists, matching the existing MCP refusal. Add fresh unobserved and stale-observation acceptance coverage and publish candidate_not_allowed in the generated OpenAPI problem examples.
+    Project legacy operation, recovery, and runtime references through the public-safe reference boundary so local paths serialize only as deterministic digests.
+    
+    Expand external review rows into stable planned, requested, acknowledged, response-observed, and terminal timeline checkpoints so persisted lifecycle timestamps survive restart.
