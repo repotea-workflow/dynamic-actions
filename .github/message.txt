@@ -1,7 +1,19 @@
-fix(api): close tracker parity review gaps
+Expose complete V1 tracker REST parity (#176)
 
 codeon:
   version: 1
-  authority: FWN-57
+  authority: fewensa-57
   description: |-
-    Replace untyped Issue detail projections with explicit V1 DTOs and field-level conversions. Read bounded dependency graphs in one repeatable-read transaction and include every referenced blocker node. Reject unknown nested Agent binding identity fields, and expand route and PostgreSQL acceptance coverage for REST/MCP parity.
+    ## Summary
+    
+    - expose every current profile-scoped tracker capability as a documented V1 REST operation
+    - preserve TrackerService validation, idempotency, optimistic concurrency, Profile isolation, and credential-derived Actor provenance
+    - add complete OpenAPI method/path coverage, capability parity checks, and aligned OpenWiki guidance
+    
+    ## Verification
+    
+    - `cd codeon && just verify`
+    - `cd codeon && cargo test -p codeon-api --test contract` (8 passed)
+    - `cd codeon && cargo test -p codeon daemon::tracker_api::tests --lib` (6 passed)
+    
+    PostgreSQL acceptance was not run because no disposable database target was supplied. `decodex docs check` was attempted but could not create its log file under the read-only tool home.
