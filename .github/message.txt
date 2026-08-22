@@ -1,1 +1,7 @@
-feat(console): organize localized issue details
+Fix live-e2e schema fixture and artifact proof
+
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Add required blocked_by to the live Issue-create schema fixture so the library suite stays green, and populate created_repository_path only after asserting the merge-commit file contents.
