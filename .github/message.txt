@@ -1,1 +1,1 @@
-feat(console): add attempt history selector
+feat(console): enrich issue detail views
