@@ -1,1 +1,1 @@
-feat(console): enrich issue detail views
+feat(console): add issue graph view
