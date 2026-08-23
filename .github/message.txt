@@ -1,7 +1,9 @@
-Integrate CodeOn notification workers
+fix: preserve cancellation recovery authority
 
 codeon:
   version: 1
-  authority: FWN-32
+  authority: FWN-46
   description: |-
-    Add strict notification routing configuration, transactional PostgreSQL event routing with LISTEN wake hints and polling recovery, shared Webhook delivery workers, daemon lifecycle integration, focused validation tests, and runtime documentation.
+    Bind cancellation remote readback to the execution environment's sealed sanitized remote identity before querying the branch. Treat identity mismatch as authority drift so cleanup cannot discard code based on a repointed remote.
+    
+    Allow migration 0132 to roll back legacy completed handoffs without recovery evidence by restoring their prior completed state, while retaining guards for preservation evidence and new cleanup states. Add focused cancellation and migration regression coverage.
