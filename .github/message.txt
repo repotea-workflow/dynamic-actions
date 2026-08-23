@@ -1,9 +1,5 @@
-fix(pi): bound response tracking and cleanup
+fix(codeon): replace inspect-unknown current dispatch without budget stall
 
-codeon:
-  version: 1
-  authority: FWN-68
-  description: |-
-    Fence ID-less response correlation after its first completion and cap completed request IDs with a typed runtime limit.
-    
-    Confirm native process-group exit before cleanup succeeds, and bound transport thread joins by the graceful-close deadline. Add regressions for stale ID-less responses, completed-ID overflow, and a leader-exited RPC descendant retaining stdout.
+FWN-1 kept parking on runtime_outcome_unknown because the replacement that
+just failed inspect was counted against MAX_RUNTIME_UNKNOWN_AUTO_RETRIES.
+Do not count the current latest dispatch when applying that budget.
