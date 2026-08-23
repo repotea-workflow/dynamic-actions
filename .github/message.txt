@@ -1,11 +1,7 @@
-fix(pi): bound writes and retain process ownership
+Harden sealed capability evidence
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-62
   description: |-
-    Route JSONL stdin through an observed writer worker so command deadlines include blocked pipe writes and preserve exact write certainty.
-    
-    Keep oversized provider rejections correlated with bounded diagnostics, and transfer failed drop cleanup to a lifecycle supervisor until exit is confirmed.
-    
-    Add fake-process regressions for blocked stdin, rejection boundaries, and cleanup faults, and align OpenWiki ownership maps with the Pi adapter boundary.
+    Stop Cursor from staging MCP credentials in repository-local configuration, report unsupported Plugin and Skill invocation proof as unknown, and reserve and revalidate Grok's internal MCP server namespace.
