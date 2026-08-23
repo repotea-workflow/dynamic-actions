@@ -1,7 +1,9 @@
-Fix lifecycle v2 reconciliation and rollout
+Seal MCP proxy upstream identity
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Recover Cursor idle-expired prompts through exact quiescence and session readback before classifying their outcome. Scope lifecycle v2 generation by profile, repository, and provider while preserving false as the rollback default. Add bounded secret-free lifecycle diagnostics across persistence and provider reconciliation paths, with focused tests and updated rollout documentation.
+    Fail Codex runtime profiles closed when third-party MCP capabilities cannot use a Codeon-owned execution boundary.
+    
+    Bind Cursor and Grok capability proxies to the sealed server identity, endpoint or executable digest, and full observed tool catalog. Revalidate executable identity around spawn and reject upstream identity or catalog drift before serving authorized calls.
