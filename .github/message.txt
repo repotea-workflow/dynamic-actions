@@ -1,7 +1,7 @@
-Preserve sealed bindings during capability migration
+fix(api): harden execution observability projections
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-59
   description: |-
-    Keep validator-v2 Agent bindings and their active Operations unchanged when migration 0132 installs capability-manifest storage. Replay legacy bindings with their original v2 canonical and evidence digests, and permit runtime reuse only when the sealed runtime profile still matches and the current capability manifest is explicitly empty.
+    Redact persisted execution references before public projection, define typed V1 Attempt and timeline availability payloads, and represent missing verification authority explicitly. Expand execution-read contract and PostgreSQL HTTP acceptance coverage across the full operation phase sequence, and align OpenWiki guidance.
