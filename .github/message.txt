@@ -1,11 +1,7 @@
-Fail closed on unsealed Agent capabilities
+fix(cursor): fence recovery capability rotation
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-19
   description: |-
-    Reject non-empty Agent Capability Manifests until provider injection and readback are implemented, and keep preflight-only evidence from claiming an observed inventory digest.
-    
-    Quarantine active validator-v2 bindings into durable recovery during migration 0132, and reserve the exact codeon-operation-completion server and qualified tool namespace across configuration, domain, and PostgreSQL validation.
-    
-    Align the runtime specification and OpenWiki summary with the fail-closed boundary.
+    Rotate the completion MCP capability only for the exact active Cursor dispatch and recovery fence, replacing the prior bearer authority atomically. Close the completion registry and revoke the rotated capability after exact-load or continuation failure, with focused runner and PostgreSQL-equivalent coverage.
