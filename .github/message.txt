@@ -1,9 +1,10 @@
-Enforce sealed capability readback
+fix(codeon): keep live recover gaps running
 
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Make Cursor project MCP masking crash-recoverable with a durable, fsynced, ownership-fenced recovery record and CAS restoration.
-    
-    Require provider-native Codex MCP inventory readback for sealed required servers, validate provider-specific plugin manifests during preflight, and persist qualified Plugin and Skill invocation observations for Codex, Cursor, and Grok.
+677081b7 classified dead Cursor as TWC but also reverted
+c3f49d21's recover-path deferral. Recover Unknown/StateUnavailable
+then opened runtime_outcome_unknown, owner-retried, and flashed
+FWN-1 revision/recovery_required while list_execution_attentions
+lagged.
+
+Restore recover-gap ObservedRunning. Cursor process-exited TWC
+still replaces.
