@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(pi): preserve correlated write certainty
+
+codeon:
+  version: 1
+  authority: FWN-68
+  description: |-
+    Keep provider-failure events as bounded runtime evidence while awaiting the matching command response, so write certainty follows the write and correlated response. Classify running events with the exact Pi 0.84.2 event allowlist and retain unknown tool- or retry-like names as compatibility events.
