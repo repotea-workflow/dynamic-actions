@@ -1,7 +1,7 @@
-Preserve cancelled attempt repository state
+fix(api): order attempt operations by sequence
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-59
   description: |-
-    Classify the full cancelled-attempt Git state, preserve unpushed and dirty content behind stable recovery refs with OID readback, and clean only the verified owned local worktree, temp root, and branch. Fail closed with typed Attention outcomes on drift, suspicious ignored content, preservation failures, unknown readback, or cleanup failures.
+    Use an attempt-specific sequence and operation ID keyset cursor so pagination follows execution order without changing global operation listings.
