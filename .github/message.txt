@@ -1,9 +1,7 @@
-fix(api): expose safe artifact summaries
+Harden Pi operation extension bridge
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-69
   description: |-
-    Project bounded planning, implementation, review, and revision finding/change summaries through the public execution read model with unsafe text reduced to digest references.
-    
-    Add representative HTTP acceptance coverage for available and redacted phase summaries, and align the normative V1 model-selection specification with the implemented exposure policy.
+    Match activation retries only to the server's complete structured refusal and replace arbitrary abort reasons with a fixed cancellation error. Exercise the embedded extension through real Pi, including a dynamic operation tool call and a child-process environment probe.
