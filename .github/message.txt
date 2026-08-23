@@ -1,1 +1,9 @@
-fix(console): adapt review round controls
+Complete notification acceptance and rollout docs
+
+codeon:
+  version: 1
+  authority: FWN-35
+  description: |-
+    Add focused cross-application notification acceptance coverage, including Codeon provider substitution and bounded Codeoff Webhook delivery.
+    
+    Document the shared architecture, event catalogs, routing semantics, configuration, operational metrics, rollout, failure recovery, and evidence-preserving rollback.
