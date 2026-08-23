@@ -1,7 +1,7 @@
-fix(grok): honor lifecycle recovery fences
+Repair sealed capability evidence
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-62
   description: |-
-    Keep unknown prompt sends under controller authority, retain the durable resource-ceiling marker across exact recovery, drain provider evidence after the process fence, and remove Grok-specific generic persistence APIs.
+    Filter optional degraded MCP definitions during provider startup, validate Codex Plugin manifest identity, keep Plugin and Skill invocation evidence unknown without provider attribution, repair the PostgreSQL capability projection query, and preserve provider acceptance history across reprovisioned sessions.
