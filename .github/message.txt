@@ -1,10 +1,6 @@
-fix(codeon): retry isolated Review and revision readback without operator_cancel
+fix(codeon): allow revision readback retry after runtime-unknown budget
 
-Isolated DispatchWorkerFault recovery promoted Review operations to
-runtime-unknown, but replacement still cancelled the old dispatch and
-rejected completion_observed. FWN-13/46 stayed parked. Force-fail the
-finished worker dispatch and insert a replacement.
-
-Revision capture_readback InvalidReadback still opened operator_cancel
-because startup only retried baseline-unavailable. Supersede that cancel
-attention to runtime-unknown and reuse the completed-dispatch retry.
+FWN-1 left operator_cancel after supersede because the operation had
+already used MAX_RUNTIME_UNKNOWN_AUTO_RETRIES. Readback-invalid and
+isolated completed-worker retries are distinct owner recoveries and
+must not inherit that generic budget.
