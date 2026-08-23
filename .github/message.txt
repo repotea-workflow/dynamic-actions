@@ -1,7 +1,11 @@
-fix(pi): observe post-acknowledgement events
+Verify sealed Agent capabilities
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-62
   description: |-
-    Expose bounded event observation after prompt acknowledgement, classify Pi's real provider-failure event shapes, verify the exact dispatch session ID during handshake, and enforce safe runtime limit ceilings. Update fake-process coverage so acknowledgement precedes asynchronous events.
+    Preflight each required MCP server against its live identity and catalog before binding, canonicalize executable paths, and preserve optional failures as degraded evidence.
+    
+    Persist provider session evidence and capability invocations from Codex, Cursor, and Grok while keeping unknown inventory readback explicit. Extend invocation storage to Plugins and Skills.
+    
+    Restore immutable migration 0132 and advance the observation schema through migration 0133.
