@@ -1,9 +1,11 @@
-Seal MCP proxy upstream identity
+Resolve cancellation recovery cleanup findings
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-47
   description: |-
-    Fail Codex runtime profiles closed when third-party MCP capabilities cannot use a Codeon-owned execution boundary.
+    Classify valid no-artifact cancellation manifests before requiring recovery ref and OID authority.
     
-    Bind Cursor and Grok capability proxies to the sealed server identity, endpoint or executable digest, and full observed tool catalog. Revalidate executable identity around spawn and reject upstream identity or catalog drift before serving authorized calls.
+    Expose post-terminal cleanup authority drift on Issue detail and let the cleanup worker retry and resolve the deferred Attention without changing terminal Issue state.
+    
+    Add focused contract and PostgreSQL acceptance coverage for no-artifact outcomes and deferred cleanup recovery.
