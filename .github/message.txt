@@ -1,18 +1,7 @@
-Add standalone Rust Pi JSONL RPC adapter (#210)
+fix(grok): preserve lifecycle recovery gates
 
 codeon:
   version: 1
-  authority: fewensa-68
+  authority: FWN-13
   description: |-
-    ## Summary
-    
-    - Add the codeoo-agent-pi workspace crate with validated spawn, manifest, model, protocol, process, and session APIs.
-    - Preserve prompt write certainty and process cleanup ownership across timeout, EOF, rejection, cancellation, and failed startup.
-    - Cover JSONL boundaries, model/reasoning selection, recovery fencing, stderr limits, abort escalation, session reuse, and the native spawn path with fake Pi tests.
-    
-    ## Verification
-    
-    - cargo fmt --all -- --check
-    - cargo test -p codeoo-agent-pi --all-targets --locked (15 passed)
-    - cargo clippy -p codeoo-agent-pi --all-targets --locked -- -D warnings
-    - just verify (blocked by pre-existing codeoff-cli InvocationEvent initializer and pattern errors outside this change)
+    Honor continuation prompt write certainty before granting running authority. Keep exact recovery pending after an observed resource ceiling until the shared controller supplies a durable transition.
