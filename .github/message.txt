@@ -1,6 +1,6 @@
-fix(codeon): always retry Cursor process-exited TWC
+fix(cursor): reap leftover process group after leader exit
 
-Consecutive TWC budget still parked FWN-1 on operator_cancel after
-recover-process-exited because those dispatches often die in under 60s.
-Skip the consecutive fail-closed path for inspect/recover process-exited
-evidence so a dead Cursor is replaced instead of waiting for cancel.
+Cursor ACP leaves worker-server/tsserver in the process group after the
+agent leader exits. Shutdown treated that as AlreadyExited/Reaped and
+skipped killpg, so leftovers kept killpg(pgid,0) alive and poisoned the
+next session/prompt in the same worktree (FWN-1 recovery_required flash).
