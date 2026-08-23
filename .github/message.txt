@@ -1,7 +1,7 @@
-fix(pi): bound version probe output
+fix(api): register execution read routes
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-59
   description: |-
-    Read version stdout under the startup deadline so a descendant retaining the pipe cannot block session startup. Kill and reap the isolated probe process group before returning.
+    Register execution read handlers and their OpenAPI metadata through the same generated router. Exercise supported execution filters, invalid cursors and ranges, unsupported parameters, result limits, and statistics filters through the PostgreSQL HTTP acceptance surface.
