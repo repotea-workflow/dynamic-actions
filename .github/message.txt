@@ -1,18 +1,10 @@
-Embed Pi operation MCP extension (#217)
+fix(codeon): retry isolated DispatchWorkerFault on inflight dispatch
 
-codeon:
-  version: 1
-  authority: fewensa-69
-  description: |-
-    ## Summary
-    
-    - embed and securely materialize the repository-owned Pi extension
-    - discover and register the operation MCP catalog with server-provided schemas
-    - proxy bounded calls with secret redaction, cancellation, and activation-race retries
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo test -p codeoo-agent-pi`
-    - real Pi extension load test
-    - `cargo clippy -p codeoo-agent-pi --all-targets -- -D warnings`
+FWN-62 revision parked at operator_cancel after DispatchWorkerFault
+because isolated recovery required operation.runtime_reference plus
+input_runtime_reference and only running/failed/cancelled dispatch
+states. Startup then returned attempt_not_ready.
+
+Allow isolated recovery from inflight input/runtime states without
+those extra references so the same-daemon replacement dispatch can
+proceed. Do not MCP-cancel.
