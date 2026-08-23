@@ -1,7 +1,7 @@
-Fix provider lifecycle recovery
+Fix recovery artifact finalization cleanup
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-47
   description: |-
-    Route Grok resource-ceiling expiry through exact-session continuation. Preserve recorded Cursor expiry authority across daemon restart and exercise that branch with the fake runtime.
+    Enumerate cancellation recovery artifacts by Profile, Workspace, and Issue while retaining each historical Attempt's Repository authority. Validate cleanup evidence against the completed persisted recovery outcome and classify fatal Git ref readback failures as unknown. Add focused reassignment, unassignment, digest-drift, and fake-Git regression coverage.
