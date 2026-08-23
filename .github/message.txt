@@ -1,7 +1,9 @@
-fix(codeon): retry isolated DWF when dispatch row is missing
+Fix lifecycle recovery diagnostics
 
-FWN-70 Review parked on DispatchWorkerFault/operator_cancel because
-startup isolated recovery treated a missing dispatch as an invariant
-and never created a replacement. Isolated recover now promotes to
-runtime-unknown and inserts the first prepared dispatch from the
-binding.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Prevent Cursor restart recovery from loading an expired session and sending a continuation when durable idle-expiry authority lacks an exact prompt target. Return an unknown controller decision instead of risking duplicate semantic work.
+    
+    Hash dispatch fence tokens in lifecycle diagnostics across PostgreSQL, Codex, Cursor, and Grok, and add focused regression coverage for the recovery guard and shared digest behavior.
