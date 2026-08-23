@@ -1,9 +1,6 @@
-fix(postgres): preserve leases on unknown readback
+fix(codeon): reset runtime-unknown retry budget after completed dispatch
 
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Treat missing or incomplete containment evidence from any owned dispatch as an unknown startup runtime outcome before applying a non-Agent operation's not-applicable lease contract.
-    
-    Cover both NULL readback and missing-containment cases so startup enters Recovery Required and retains the held runnable lease.
+FWN-1's readback replacement later went inspect-unknown, but the generic
+owner-retry budget still counted pre-completion replacements and parked
+the Attempt. Count automatic retries only after the latest succeeded
+dispatch with completion_observed.
