@@ -1,11 +1,7 @@
-fix(grok): persist lifecycle recovery evidence
+Integrate CodeOn notification workers
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-32
   description: |-
-    Commit activity lease rearm state before exact Grok recovery while preserving the original resource ceiling and continuation count.
-    
-    Persist fenced late-generation provider evidence durably, and drain close-time provider activity after the provider fence before final cleanup and capability release.
-    
-    Add exact-resume, cleanup-race, and PostgreSQL lifecycle regression coverage.
+    Add strict notification routing configuration, transactional PostgreSQL event routing with LISTEN wake hints and polling recovery, shared Webhook delivery workers, daemon lifecycle integration, focused validation tests, and runtime documentation.
