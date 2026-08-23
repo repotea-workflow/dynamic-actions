@@ -1,7 +1,8 @@
-merge: resolve execution API conflicts
+fix(codeon): treat dead Cursor inspect/recover gaps as terminal
 
-codeon:
-  version: 1
-  authority: FWN-59
-  description: |-
-    Merge the refreshed target branch into the frozen revision head while preserving both sides' execution behavior. Mark digest-only artifact finding and change summaries unavailable until an authoritative public-safe text projection exists, and retain the merged Pi and statistics coverage without exposing requested model identifiers.
+Keeping live Cursor inspect/recover readback as Running left FWN-1
+zombie-running after the process exited with no last_activity.
+
+If the Cursor process group is gone, recover/inspect gaps now return
+terminal-without-completion so replacement can proceed; a live process
+still defers as Running.
