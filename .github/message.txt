@@ -1,7 +1,7 @@
-Repair sealed capability evidence
+fix(pi): preserve RPC recovery semantics
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-68
   description: |-
-    Filter optional degraded MCP definitions during provider startup, validate Codex Plugin manifest identity, keep Plugin and Skill invocation evidence unknown without provider attribution, repair the PostgreSQL capability projection query, and preserve provider acceptance history across reprovisioned sessions.
+    Classify Pi 0.84.2 compaction and summarization retry events as running. Preserve correlated write certainty for oversized diagnostics and keep provider failures from fencing healthy transport.
