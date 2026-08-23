@@ -1,11 +1,7 @@
-Integrate runtime lifecycle v2
+fix: enforce sealed MCP capability evidence
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Add the temporary lifecycle-v2 policy generation gate while preserving v1 reads and defaults.
-    
-    Reconcile idle and resource-ceiling expiry through exact provider invocation authority, including Codex exact-turn interruption and provider-local recovery outcomes.
-    
-    Document rollout and rollback behavior, keep the Grok fixed prompt timeout removed, and align provider/runtime compatibility fixes with workspace lint requirements.
+    Route authorized third-party MCP servers through a Codeon-owned proxy that enforces sealed startup, execution, result-size, and concurrency limits. Reap stdio preflight children on timeout, error, and panic paths. Persist unknown MCP result metadata explicitly, and reject provider inventory acceptance when its digest does not match the sealed manifest.
