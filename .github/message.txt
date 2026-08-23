@@ -1,6 +1,7 @@
-fix(cursor): reap leftover process group after leader exit
+Fix Pi lifecycle ownership races
 
-Cursor ACP leaves worker-server/tsserver in the process group after the
-agent leader exits. Shutdown treated that as AlreadyExited/Reaped and
-skipped killpg, so leftovers kept killpg(pgid,0) alive and poisoned the
-next session/prompt in the same worktree (FWN-1 recovery_required flash).
+codeon:
+  version: 1
+  authority: FWN-70
+  description: |-
+    Serialize cancellation with in-flight inspection so the retained Pi session remains available for abort and cleanup. Retain retryable extension cleanup ownership before process creation, and preserve final provider failures across ordinary activity events. Add focused regression coverage for cancellation, cleanup uncertainty, and provider-failure ordering.
