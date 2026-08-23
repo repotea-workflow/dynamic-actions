@@ -1,7 +1,11 @@
-fix(runtime): persist dispatch lease authority
+Fail closed on unsealed Agent capabilities
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Persist runnable lease generations on Agent dispatches and require an exact held-generation match during claim and worker reconstruction. Require canonical containment readback before Agent lease release, schedule checks-pending observation durably, and cover restart, resume, migration, and A-E integration behavior.
+    Reject non-empty Agent Capability Manifests until provider injection and readback are implemented, and keep preflight-only evidence from claiming an observed inventory digest.
+    
+    Quarantine active validator-v2 bindings into durable recovery during migration 0132, and reserve the exact codeon-operation-completion server and qualified tool namespace across configuration, domain, and PostgreSQL validation.
+    
+    Align the runtime specification and OpenWiki summary with the fail-closed boundary.
