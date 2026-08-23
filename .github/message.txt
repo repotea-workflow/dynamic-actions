@@ -1,7 +1,9 @@
-fix(codeon): format live E2E and restore production deps
+fix(grok): retain startup cleanup authority
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-13
   description: |-
-    Run cargo fmt on live_e2e.rs resolution-reply assertions and move sqlx, tempfile, RMCP client transport, and Tokio process support back to dev-dependencies so production builds stay lean.
+    Route failed Grok startup cleanup through the shared runtime resource closer so completion context and MCP capability release happen only after provider cleanup is proven.
+    
+    Add regressions for ambiguous startup cleanup and periodic text/tool activity beyond 30 minutes followed by silent idle expiry.
