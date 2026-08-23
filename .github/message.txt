@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(runtime): restore Cursor and Grok startup (#200)
+
+Restore compatibility with current Cursor and Grok ACP contracts, preserve provider-native authentication evidence, and isolate Cursor startup ambient probing.
