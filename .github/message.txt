@@ -1,7 +1,7 @@
-Complete notification acceptance revisions
+fix(runtime): serialize agent recovery authority
 
 codeon:
   version: 1
-  authority: FWN-35
+  authority: FWN-51
   description: |-
-    Add bounded Codeon and Codeoff Webhook acceptance coverage, handle legacy Grok activity outcomes, satisfy the ACP drain lint, and correct the notification rollback runbook.
+    Require fresh startup runtime evidence before releasing held runnable leases. Fence recovery I/O with a durable dispatch claim, block lease and terminal release while that claim is active, and advance the dispatch fence when recovery finishes. Bind the canonical A-E concurrency test to fake process closure before capacity release.
