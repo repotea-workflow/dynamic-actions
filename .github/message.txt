@@ -1,7 +1,7 @@
-fix(runtime): fence recovery lease authority
+Repair sealed capability enforcement
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Require current runnable-lease generations before completion cleanup and cancellation provider I/O. Reconcile startup leases from bounded fresh containment readbacks, preserve unknown runtimes fail closed, and document the startup authority boundary. Add regression coverage for stale generations and fresh live, quiescent, unknown, and historical evidence.
+    Make the capability evidence migration replace its exact predecessor constraint and add forward 0132–0135 acceptance coverage. Allow Codex runtime-profile MCP manifests to use the exact native profile inventory, reject or degrade unsupported Grok stdio MCP servers during preflight, and mask repository-local Cursor MCP configuration until the sealed ACP session is accepted without staging credentials.
