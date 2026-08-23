@@ -1,9 +1,7 @@
-fix(api): redact execution summaries
+Complete notification acceptance revisions
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-35
   description: |-
-    Always digest agent-authored phase summaries before exposing them through execution artifact projections.
-    
-    Extend the PostgreSQL HTTP acceptance fixture with authoritative Merge, finalization, and cleanup facts, and verify their available panels and ordered timeline events.
+    Add bounded Codeon and Codeoff Webhook acceptance coverage, handle legacy Grok activity outcomes, satisfy the ACP drain lint, and correct the notification rollback runbook.
