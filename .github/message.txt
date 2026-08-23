@@ -1,6 +1,7 @@
-fix(codeon): reset runtime-unknown retry budget after completed dispatch
+fix(api): expose attempt PR publication
 
-FWN-1's readback replacement later went inspect-unknown, but the generic
-owner-retry budget still counted pre-completion replacements and parked
-the Attempt. Count automatic retries only after the latest succeeded
-dispatch with completion_observed.
+codeon:
+  version: 1
+  authority: FWN-59
+  description: |-
+    Project durable pull request publication state through the bounded Attempt detail read model so API clients can distinguish publication progress, confirmed pull requests, completed review handoff, and explicit absence without provider or database inspection. Keep provider URLs redacted through the existing safe execution reference contract.
