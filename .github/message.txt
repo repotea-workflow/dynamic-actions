@@ -1,9 +1,9 @@
-Close Issue-reference identity integration
+fix(grok): restore lifecycle recovery persistence
 
 codeon:
   version: 1
-  authority: FWN-26
+  authority: FWN-13
   description: |-
-    Issue UUID is the semantic identity. Tracker and MCP now prove one Issue resolves from key, uppercase prefix, lowercase prefix, and mixed prefix, while new results stay uppercase and stored identifiers stay the Workspace-key alias.
+    Rearm lifecycle-v2 activity leases before exact Grok session recovery while preserving the resource ceiling and advancing the dispatch fence.
     
-    Prefix freeze, alias isolation, concurrent collision, migration backfill, commit authority, and execution-name recovery are documented as one model: live resolution is semantic, sealed bytes and Git refs stay exact, and 0113_workspace_aliases rolls forward only.
+    Persist closed-generation Grok activity as append-only, replay-classified dispatch evidence and cover exact resume and production persistence behavior.
