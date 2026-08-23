@@ -1,6 +1,7 @@
-fix(codeon): skip inspect-unknown budget after TWC
+Fix notification acceptance lifecycle
 
-Terminal-without-completion replacements still opened runtime_unknown
-attention, so process-exited Cursor retries burned MAX=3 and parked
-FWN-1 at runtime_unknown_retry_budget_exhausted. TWC keeps its own
-consecutive budget; inspect-unknown must not double-count it.
+codeon:
+  version: 1
+  authority: FWN-35
+  description: |-
+    Stabilize the Codeoff Webhook acceptance mock and explicitly close its SQLite pool. Reconnect the CodeOn PostgreSQL notification store after closing the original composition, then verify no second delivery is claimed.
