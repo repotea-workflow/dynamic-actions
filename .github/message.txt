@@ -1,7 +1,7 @@
-Delete recovery artifacts after Issue finalization
+Qualify sealed capability invocation evidence
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: FWN-62
   description: |-
-    Enqueue exact cancellation recovery refs and snapshots only from authoritative Issue terminal outcomes. Reuse post-terminal cleanup with recovery-specific idempotency authority, defer active consumers to maintenance Attention, and seal exact delete/readback receipts while retaining preservation manifests and digests.
+    Carry MCP server provenance through Codex, Cursor, and Grok provider events before matching an invocation to the sealed manifest. Reject cross-namespace Plugin, server, and tool identity collisions, and project the newest bounded invocation records in chronological presentation order.
