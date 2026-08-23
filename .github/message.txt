@@ -1,1 +1,7 @@
-Merge origin/main back into agt/allow-symlink-runtime-paths
+fix(cancellation): reconcile interrupted cleanup
+
+codeon:
+  version: 1
+  authority: FWN-46
+  description: |-
+    Persist a cleaning checkpoint before mutating owned cancellation resources. On retry, accept exact absent worktree, temp root, registration, and local branch readback only when the preserved recovery ref still matches, then continue cleanup completion and requeue.
