@@ -1,7 +1,7 @@
-fix(api): expose attempt PR publication
+Reject undeliverable notification routes
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-32
   description: |-
-    Project durable pull request publication state through the bounded Attempt detail read model so API clients can distinguish publication progress, confirmed pull requests, completed review handoff, and explicit absence without provider or database inspection. Keep provider URLs redacted through the existing safe execution reference contract.
+    Restrict startup route validation to Issue and Comment semantic events plus execution projections so accepted routes always have Issue delivery authority. Add config and daemon regressions covering rejected non-Issue/raw execution names and both deliverable route classes.
