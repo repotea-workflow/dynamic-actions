@@ -1,7 +1,7 @@
-Fix Pi lifecycle ownership races
+Fix provider lifecycle recovery
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Serialize cancellation with in-flight inspection so the retained Pi session remains available for abort and cleanup. Retain retryable extension cleanup ownership before process creation, and preserve final provider failures across ordinary activity events. Add focused regression coverage for cancellation, cleanup uncertainty, and provider-failure ordering.
+    Route Grok resource-ceiling expiry through exact-session continuation. Preserve recorded Cursor expiry authority across daemon restart and exercise that branch with the fake runtime.
