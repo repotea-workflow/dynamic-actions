@@ -1,9 +1,5 @@
-fix(api): preserve runtime timeline durability
+fix(codeon): parse porcelain directory records without slash stripping
 
-codeon:
-  version: 1
-  authority: FWN-59
-  description: |-
-    Project the source-owned runtime observation marker through timeline queries so additive event kinds cannot be mistaken for durable facts.
-    
-    Cover an unknown runtime-observed operation kind through the generated V1 timeline response, including freshness.
+Porcelain v2 ?/! are record types; Git's one trailing / is the directory
+marker, not a path segment. Status InvalidReadback on a descendant HEAD
+is dirty progress, not operator_cancel.
