@@ -1,11 +1,9 @@
-Verify sealed Agent capabilities
+fix(api): preserve runtime timeline durability
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-59
   description: |-
-    Preflight each required MCP server against its live identity and catalog before binding, canonicalize executable paths, and preserve optional failures as degraded evidence.
+    Project the source-owned runtime observation marker through timeline queries so additive event kinds cannot be mistaken for durable facts.
     
-    Persist provider session evidence and capability invocations from Codex, Cursor, and Grok while keeping unknown inventory readback explicit. Extend invocation storage to Plugins and Skills.
-    
-    Restore immutable migration 0132 and advance the observation schema through migration 0133.
+    Cover an unknown runtime-observed operation kind through the generated V1 timeline response, including freshness.
