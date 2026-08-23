@@ -1,7 +1,11 @@
-fix(codeon): count consecutive terminal-without-completion failures
+Integrate runtime lifecycle v2
 
-Lifetime TWC counts on a long revision opened operator_cancel after three
-historical deaths, then startup retry undid the fail without a budget.
-Count only the consecutive TWC streak after the last non-TWC dispatch,
-honor that budget on both retry paths, and do not require a runtime
-reference for recoverable Cursor/Grok/fake TWC recovery.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Add the temporary lifecycle-v2 policy generation gate while preserving v1 reads and defaults.
+    
+    Reconcile idle and resource-ceiling expiry through exact provider invocation authority, including Codex exact-turn interruption and provider-local recovery outcomes.
+    
+    Document rollout and rollback behavior, keep the Grok fixed prompt timeout removed, and align provider/runtime compatibility fixes with workspace lint requirements.
