@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+Preserve cancelled attempt repository state
+
+codeon:
+  version: 1
+  authority: FWN-46
+  description: |-
+    Classify the full cancelled-attempt Git state, preserve unpushed and dirty content behind stable recovery refs with OID readback, and clean only the verified owned local worktree, temp root, and branch. Fail closed with typed Attention outcomes on drift, suspicious ignored content, preservation failures, unknown readback, or cleanup failures.
