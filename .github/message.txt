@@ -1,9 +1,7 @@
-fix(grok): preserve activity before cleanup
+Fix Pi recommended Goal fallback
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-67
   description: |-
-    Persist retained Grok provider activity before completion-triggered cleanup so transient persistence failures can retry without losing evidence.
-    
-    Remove the issue-owned lifecycle rearm migration and shared PostgreSQL APIs, restoring controller-required recovery until the blocked persistence dependency lands.
+    Seal CapabilityUnsupported when the default daemon policy resolves a recommended Pi Goal to Standard execution. Add an end-to-end regression that builds the default Pi policy snapshot, renders the operation input, and validates the binding before runtime dispatch.
