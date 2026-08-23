@@ -1,4 +1,9 @@
-fix(codeon): allow DWF reclassification without running from_state
+fix(runtime): preserve pre-runtime leases on restart
 
-Promote isolated missing-dispatch DWF to runtime-unknown was rejected
-because the recovery lifecycle guard still required from_state=running.
+codeon:
+  version: 1
+  authority: FWN-51
+  description: |-
+    Preserve held runnable leases for selected, preparing, and prepared Attempts that have no dispatch or containment authority, so startup reconciliation does not force routine preparation into Recovery Required.
+    
+    Expose a bounded per-owner runnable-lease diagnostic projection and emit its release reason, reacquire outcome, and generation from scheduler diagnostics. Add PostgreSQL regression coverage for the pre-runtime startup matrix and persisted owner diagnostics.
