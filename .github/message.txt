@@ -1,9 +1,11 @@
-fix(grok): retain startup cleanup authority
+fix(api): harden execution read projections
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-59
   description: |-
-    Route failed Grok startup cleanup through the shared runtime resource closer so completion context and MCP capability release happen only after provider cleanup is proven.
+    Redact sensitive artifact summary text before it reaches the public execution API.
     
-    Add regressions for ambiguous startup cleanup and periodic text/tool activity beyond 30 minutes followed by silent idle expiry.
+    Read all execution statistics members and their observation timestamp from one repeatable-read PostgreSQL snapshot.
+    
+    Merge the refreshed origin/main target and preserve both execution observability and current runtime-profile initialization behavior.
