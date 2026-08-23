@@ -1,7 +1,9 @@
-fix(api): secure artifact observability
+fix(grok): rebase activity leases onto main
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-13
   description: |-
-    Fail closed when exposing persisted Agent-authored artifact summaries by returning stable digest references. Report verification as not applicable or unavailable unless authoritative Implementation or Revision verification rows and repository readback evidence support an available result. Add regression coverage for credential/path redaction and every V1 artifact verification shape.
+    Resolve the migration ownership conflict by consuming main's lifecycle v2 persistence and routing expired retained generations to controller recovery.
+    
+    Make the long-running Grok lease test advance the injected runner clock, renew from the same fake clock, and assert each renewal before silent expiry.
