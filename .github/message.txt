@@ -1,7 +1,9 @@
-fix(api): tolerate additive timeline kinds
+feat(pi): add standalone JSONL RPC adapter
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-68
   description: |-
-    Project unknown additive timeline event kinds through the documented safe fact payload instead of failing the entire timeline read. Keep known operation state transitions and known fact status validation strict, and cover the PostgreSQL-to-HTTP path with generated-client deserialization.
+    Add the provider-neutral Pi subprocess owner with bounded JSONL protocol handling, explicit prompt write certainty, model and reasoning selection, session recovery fencing, and owned cancellation escalation.
+    
+    Cover the adapter with stream-level fault injection and a real fake Pi executable for spawn, protocol, recovery, and cleanup behavior.
