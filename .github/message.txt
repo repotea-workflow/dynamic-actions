@@ -1,7 +1,8 @@
-Make recovery cleanup intent durable
+fix(codeon): keep live Cursor running across inspect/recover gaps
 
-codeon:
-  version: 1
-  authority: FWN-47
-  description: |-
-    Enumerate scoped cancellation preservation records before validating recovery authority so malformed refs open deferred Attention. Persist cleanup intent before deleting exact recovery refs, then record post-mutation absence and receipts. Add focused coverage for missing refs and missing durable intent, and allow the existing direct enqueue signature through Clippy.
+Inspect StateUnavailable and recover Unknown opened recovery_required
+and replaced FWN-1's live Cursor dispatch every few minutes. The UI
+flashed revision/recovery_required while patrol sampled running.
+
+Treat those provider readback gaps as Running instead of replacing
+the inflight dispatch, matching Codex inspect-timeout deferral.
