@@ -1,7 +1,7 @@
-Preserve cancellation recovery credentials
+fix(grok): preserve activity on drain errors
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-13
   description: |-
-    Retain configured profile credentials independently of the optional merge runtime so disabled preparation can classify and recover cancelled repositories. Add a composition regression covering credential authority when merge runtime is absent.
+    Restore all accumulated provider events when inspection fails so accepted activity remains available for the next persistence attempt. Add a fake ACP regression covering valid activity followed by a mismatched prompt notification and exact-once retry draining.
