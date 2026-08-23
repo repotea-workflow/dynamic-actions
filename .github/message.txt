@@ -1,7 +1,9 @@
-fix(api): harden execution observability projections
+fix(runtime): release leases for SCM phases
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-51
   description: |-
-    Redact persisted execution references before public projection, define typed V1 Attempt and timeline availability payloads, and represent missing verification authority explicitly. Expand execution-read contract and PostgreSQL HTTP acceptance coverage across the full operation phase sequence, and align OpenWiki guidance.
+    Coordinate runnable capacity at every typed Agent/SCM handoff. Agent-to-SCM transitions now release held leases with store-derived not-applicable evidence in the handoff transaction, while resolved SCM-to-Agent activation validation accepts every typed SCM source.
+    
+    Startup reconciliation now treats the locked current executing SCM operation as valid not-applicable runtime authority without requiring an Attention row, preserving the executing owner instead of forcing Recovery Required. Add PostgreSQL regression coverage and align the runtime specification and OpenWiki architecture context.
