@@ -1,9 +1,7 @@
-fix(cancellation): complete owned recovery
+fix(api): secure artifact observability
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-59
   description: |-
-    Persist recovery classification and cleanup checkpoints after sealed runtime closure, then release the runnable lease and requeue only after owned cleanup completes.
-    
-    Fence forced cleanup with exact index and worktree tree identities, treat known target output as disposable, and run snapshot Git commands through the bounded cancellation-aware runner.
+    Fail closed when exposing persisted Agent-authored artifact summaries by returning stable digest references. Report verification as not applicable or unavailable unless authoritative Implementation or Revision verification rows and repository readback evidence support an available result. Add regression coverage for credential/path redaction and every V1 artifact verification shape.
