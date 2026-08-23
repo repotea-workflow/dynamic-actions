@@ -1,19 +1,7 @@
-Add Pi agent routing contract (#205)
+fix(codeon): fail closed on cancellation drift
 
 codeon:
   version: 1
-  authority: fewensa-67
+  authority: FWN-46
   description: |-
-    ## Summary
-    - Add the exact `pi` AgentKind wire value across configuration, canonical encoding, PostgreSQL persistence, execution snapshots, and tracker MCP schemas.
-    - Enforce Standard-only Pi Goal behavior and use the ordinary Codeon completion callback catalog.
-    - Add migration 0133 with four downgrade guards plus focused fail-closed codec and schema tests.
-    
-    ## Verification
-    - `cargo test -p codeon-tracker --test agent_selection`
-    - `cargo test -p codeon-postgres --lib pi_round_trips_and_unknown_values_fail_closed`
-    - Pi migration safety and migration directory authority tests
-    - Pi config parsing, MCP schema enum, and callback catalog tests
-    - `cargo check -p codeon-tracker -p codeon-postgres -p codeon --all-targets`
-    
-    PostgreSQL acceptance targets compile with `postgres-acceptance`; live execution was unavailable because no isolated `CODEON_TEST_DATABASE_URL` was configured.
+    Detect nested repository markers inside ignored generated paths before treating those paths as disposable. Revalidate symbolic HEAD ownership before cancellation cleanup and cover both drift cases with regression tests.
