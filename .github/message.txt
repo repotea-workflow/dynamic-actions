@@ -1,9 +1,6 @@
-Fix lifecycle recovery diagnostics
+fix(codeon): match isolated missing-dispatch DWF without running from_state
 
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Prevent Cursor restart recovery from loading an expired session and sending a continuation when durable idle-expiry authority lacks an exact prompt target. Return an unknown controller decision instead of risking duplicate semantic work.
-    
-    Hash dispatch fence tokens in lifecycle diagnostics across PostgreSQL, Codex, Cursor, and Grok, and add focused regression coverage for the recovery guard and shared digest behavior.
+FWN-70 Review still parked after the missing-dispatch retry: the
+isolated recover required from_state=running, but the live DWF event
+does not. Non-isolated missing dispatch is NotApplicable so startup
+can fall through to isolated retry.
