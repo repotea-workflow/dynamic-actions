@@ -1,9 +1,9 @@
-fix(api): omit requested model digest
+fix(postgres): retire stale resume activations
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-51
   description: |-
-    Remove requested model identifiers and their derived digests from the execution read projection until an authoritative exposure policy permits them.
+    Persist authority_conflict for stale capacity-pending resume activations in the same owner transaction. Convert expected operation-version drift into a structured stale outcome so bounded resume scans can advance to later valid candidates.
     
-    Keep the public OpenAPI contract and domain redaction checks aligned with the policy-safe omission.
+    Add PostgreSQL coverage proving an older stale activation cannot starve a newer valid resume.
