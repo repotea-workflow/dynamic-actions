@@ -1,7 +1,9 @@
-Harden Pi operation extension bridge
+fix(codeon): treat live Cursor inspect/recover gaps as running
 
-codeon:
-  version: 1
-  authority: FWN-69
-  description: |-
-    Match activation retries only to the server's complete structured refusal and replace arbitrary abort reasons with a fixed cancellation error. Exercise the embedded extension through real Pi, including a dynamic operation tool call and a child-process environment probe.
+Cursor inspect StateUnavailable and recover Unknown opened
+runtime_outcome_unknown while a just-started Cursor session was still
+live. Owner retry then inspect-too-soon again, parking FWN-1.
+
+Defer inspect when the session is not yet retained, skip recover while
+inspect holds the session, and classify a retained live session without
+prompt events as Running instead of RecoveryRequired.
