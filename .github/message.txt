@@ -1,8 +1,7 @@
-fix(codeon): keep live Cursor running across inspect/recover gaps
+merge: resolve execution API conflicts
 
-Inspect StateUnavailable and recover Unknown opened recovery_required
-and replaced FWN-1's live Cursor dispatch every few minutes. The UI
-flashed revision/recovery_required while patrol sampled running.
-
-Treat those provider readback gaps as Running instead of replacing
-the inflight dispatch, matching Codex inspect-timeout deferral.
+codeon:
+  version: 1
+  authority: FWN-59
+  description: |-
+    Merge the refreshed target branch into the frozen revision head while preserving both sides' execution behavior. Mark digest-only artifact finding and change summaries unavailable until an authoritative public-safe text projection exists, and retain the merged Pi and statistics coverage without exposing requested model identifiers.
