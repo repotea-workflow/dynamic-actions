@@ -1,11 +1,22 @@
-fix(codeon): map legacy unsealed runtime profile to the only available one
+Preserve unique code during attempt cancellation (#203)
 
-Issue routing that omitted a runtime profile was stored as
-__codeon_legacy_unsealed__, which is reserved and not configurable.
-Environment planning then skipped AgentRuntimeProfileUnavailable forever,
-so FWN-18/35/69 sat in awaiting_environment_plan while holding started
-capacity.
-
-If the sentinel is selected and exactly one runtime profile exists for
-that agent kind (or default is configured), use it. Ambiguous or missing
-profiles still fail closed.
+codeon:
+  version: 1
+  authority: fewensa-46
+  description: |-
+    ## Summary
+    
+    - classify base, HEAD, local and remote branch state plus staged, unstaged, untracked, and ignored content
+    - preserve unpushed commits and deterministic staged/worktree snapshots behind stable CodeOn recovery refs with OID readback
+    - immediately remove only the verified owned local worktree, paired temp root, and exact local branch while retaining recovery refs and never mutating remotes
+    - fail closed with typed Attention outcomes for drift, suspicious ignored content, preservation failures, unknown readback, or cleanup failures
+    
+    ## Verification
+    
+    - `cargo fmt --check --all`
+    - `git diff --check HEAD^ HEAD`
+    - `TMPDIR=/data/codeon/worktrees/fewensa/codeoo/FWN-46/attempt-2.codeon-tmp cargo test -p codeon cancellation_recovery --lib` (8 passed)
+    
+    ## Verification gap
+    
+    `cargo clippy -p codeon --lib -- -D warnings` remains blocked by two pre-existing `collapsible_if` findings in `codeon/crates/codeon/src/execution/agents/cursor/mod.rs`; this change does not touch that file.
