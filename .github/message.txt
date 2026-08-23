@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(merge): reconcile external PR merges
+
+Preserve strict metadata validation for Codeon mutations while allowing exact reviewed PRs merged externally to finalize through provider and Git readback.
