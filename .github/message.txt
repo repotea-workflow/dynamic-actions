@@ -1,1 +1,1 @@
-fix(config): accept runtime executable symlinks
+fix(config): accept runtime executable symlinks (#198)
