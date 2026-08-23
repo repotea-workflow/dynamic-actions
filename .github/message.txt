@@ -1,7 +1,3 @@
-fix(postgres): cancel undispatched attempts (#199)
+fix(runtime): restore Cursor and Grok startup
 
-* fix(config): accept runtime executable symlinks
-
-* fix(postgres): cancel undispatched attempts
-
-Durable cancellation can close selected, preparing, or prepared Attempts before an Agent runtime exists. Align the database terminal-state constraint with that domain authority when a runtime closure receipt proves the never-dispatched outcome.
+Accept current provider ACP contracts without fabricating account identity, and keep daemon startup probes separate from repository ambient inspection.
