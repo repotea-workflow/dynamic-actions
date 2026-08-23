@@ -1,11 +1,7 @@
-Embed Pi operation MCP extension
+Delete recovery artifacts after Issue finalization
 
 codeon:
   version: 1
-  authority: FWN-69
+  authority: FWN-47
   description: |-
-    Embed the repository-owned TypeScript extension in codeoo-agent-pi and materialize it with restrictive permissions for explicit Pi loading.
-    
-    Discover the capability-scoped MCP catalog at session startup, register server-defined schemas, proxy bounded tool calls with exact activation retries, redact bootstrap values, and clear short-lived environment variables before child tools can inherit them.
-    
-    Cover fake Streamable HTTP behavior, collisions, cancellation, retry and error semantics, secret non-inheritance, cleanup, and loading by the reviewed real Pi executable.
+    Enqueue exact cancellation recovery refs and snapshots only from authoritative Issue terminal outcomes. Reuse post-terminal cleanup with recovery-specific idempotency authority, defer active consumers to maintenance Attention, and seal exact delete/readback receipts while retaining preservation manifests and digests.
