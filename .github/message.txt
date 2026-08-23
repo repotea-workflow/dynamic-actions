@@ -1,7 +1,7 @@
-style: run rustfmt on scheduled authorization files
+fix(codeon): retry isolated DispatchWorkerFault without operator_cancel
 
-codeon:
-  version: 1
-  authority: FWN-7
-  description: |-
-    Apply cargo fmt to github_call.rs, scheduled_github_proxy.rs, and scheduled_authorization.rs so the pre-merge rustfmt check passes.
+A modern worker that returns Err was isolated as DispatchWorkerFault then
+materialized as operator_cancel. Legacy recovery only resumes after a
+new runtime instance records abandonment, so FWN-13/46/51 stayed parked
+and held runnable leases. Startup wakeup now treats an already-completed
+worker fault as runtime-unknown and bounded-retries a replacement dispatch.
