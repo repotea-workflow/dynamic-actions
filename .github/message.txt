@@ -1,7 +1,9 @@
-Repair execution observability projections
+fix(cursor): honor activity lease acknowledgements
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-19
   description: |-
-    Expose phase artifact outcomes, safe evidence, and bounded phase-specific summary sets through the execution query port and V1 DTOs. Use discriminated statistics members with explicit unavailable problems, preserve parent Attempt presence for operation collections, and share one execution route table between runtime registration and OpenAPI generation. Extend contract and PostgreSQL-enabled acceptance coverage for the repaired behavior.
+    Retire the Cursor prompt acknowledgement deadline after exact session or permission activity while preserving bounded normalized evidence and pending response ownership.
+    
+    Issue and inject dispatch-scoped completion MCP authority before exact-session recovery, with cleanup on recovery-plan failures. Extend fake ACP coverage for long acknowledged prompts, early permissions, isolated stalls, and restart loading.
