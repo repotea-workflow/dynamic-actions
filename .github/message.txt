@@ -1,9 +1,6 @@
-fix: distinguish execution observations
+fix(codeon): load revision commit preparations through dispatch lineage
 
-codeon:
-  version: 1
-  authority: FWN-59
-  description: |-
-    Mark runtime-observed timeline facts separately from durable facts and include their observation timestamp in typed V1 payloads.
-    
-    Return artifact finding and change summaries as unavailable when only digest redactions exist, instead of presenting digests as summary text.
+Revision coverage still used the current-dispatch-only gate loader, so a
+retry Dispatch could miss preparations recorded earlier in the same
+Operation. Drive both public coverage loaders through isolated Postgres
+after creating two Dispatches via real store APIs.
