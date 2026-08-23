@@ -1,9 +1,9 @@
-fix(grok): rebase activity leases onto main
+Add Pi agent routing contract
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-67
   description: |-
-    Resolve the migration ownership conflict by consuming main's lifecycle v2 persistence and routing expired retained generations to controller recovery.
+    Define the exact `pi` AgentKind wire value across canonical encoding, configuration, persistence, execution snapshots, and tracker MCP schemas.
     
-    Make the long-running Grok lease test advance the injected runner clock, renew from the same fake clock, and assert each renewal before silent expiry.
+    Add a data-safe four-table PostgreSQL migration, fail-closed codec coverage, Standard-only Goal validation, and ordinary operation callback catalog selection without adding Pi runtime transport.
