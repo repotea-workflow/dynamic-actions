@@ -1,7 +1,9 @@
-fix(grok): redact post-fence event logs
+Repair sealed capability readback
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-62
   description: |-
-    Log only provider classification and the bounded transport evidence digest when post-fence ACP notification normalization fails.
+    Revalidate required sealed Plugin, Skill, and MCP evidence during Cursor preflight and immediately before spawn.
+    
+    Persist exact Plugin and Skill invocation observations alongside MCP tool evidence, and expose bounded per-capability expected-versus-observed records plus invocation summaries from durable storage.
