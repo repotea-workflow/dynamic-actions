@@ -1,7 +1,9 @@
-Fail closed on unverified Agent capabilities
+fix(runtime): bind runnable lease release authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Reject required MCP servers until exact-profile authenticated catalog readback and provider delivery are available, while recording optional servers as degraded instead of available. Reject unsupported required standalone Skill roots for Cursor and Grok. Carry sealed Plugin tree digests into Cursor and Grok launches and verify content immediately before and after spawn to fence in-flight bindings against directory replacement.
+    Require terminal dispatch evidence alongside quiescent containment before releasing Agent-backed runnable leases during Waiting and startup reconciliation.
+    
+    Fence queued activation claims against both persisted and current Profile configuration generations.
