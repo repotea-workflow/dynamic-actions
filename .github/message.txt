@@ -1,9 +1,9 @@
-Complete notification acceptance and rollout docs
+Reject Pi startup on Codeon extension errors
 
 codeon:
   version: 1
-  authority: FWN-35
+  authority: FWN-69
   description: |-
-    Add focused cross-application notification acceptance coverage, including Codeon provider substitution and bounded Codeoff Webhook delivery.
+    Treat an extension_error emitted for the explicitly loaded Codeon operation extension as a failed startup handshake, even when Pi returns a successful get_state response.
     
-    Document the shared architecture, event catalogs, routing semantics, configuration, operational metrics, rollout, failure recovery, and evidence-preserving rollback.
+    Add a real Pi 0.84.2 regression that serves a colliding bash tool catalog and verifies PiSession::spawn fails closed.
