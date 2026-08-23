@@ -1,7 +1,7 @@
-fix: enforce sealed MCP capability evidence
+Defer recovery artifact cleanup safely
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-47
   description: |-
-    Route authorized third-party MCP servers through a Codeon-owned proxy that enforces sealed startup, execution, result-size, and concurrency limits. Reap stdio preflight children on timeout, error, and panic paths. Persist unknown MCP result metadata explicitly, and reject provider inventory acceptance when its digest does not match the sealed manifest.
+    Preserve authoritative Issue terminal outcomes by recording malformed recovery-artifact authority as durable post-terminal cleanup Attention. Revalidate active consumers at claim time so deferred recovery artifacts remain pending until exact cleanup can complete.
