@@ -1,7 +1,9 @@
-Validate cancellation recovery cleanup authority
+Harden Pi operation runner lifecycle
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: FWN-70
   description: |-
-    Reject drifted cancellation recovery outcomes before constructing post-terminal deletion authority, retaining exact artifacts behind deferred Attention. Add focused PostgreSQL coverage and document the authoritative Issue-terminal retirement boundary and guarded rollback.
+    Close Pi completion races with atomic registry readback, require cleanup proof during recovery, and preserve redacted provider failure categories.
+    
+    Spawn Pi with an explicit environment allowlist and add fake-runner lifecycle coverage for send-once, cancellation, cleanup, recovery, concurrency, model, and provider invariants.
