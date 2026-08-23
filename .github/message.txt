@@ -1,7 +1,7 @@
-Fix Pi routing contract validation
+Fail closed on unverified Agent capabilities
 
 codeon:
   version: 1
-  authority: FWN-67
+  authority: FWN-62
   description: |-
-    Allow Pi bindings to pass full daemon configuration loading without a provider runtime profile. Enforce the required CapabilityUnsupported fallback for recommended Standard Goal execution, and replace SQL text inspection with an isolated PostgreSQL migration acceptance test covering all four constraints and safe downgrade behavior.
+    Reject required MCP servers until exact-profile authenticated catalog readback and provider delivery are available, while recording optional servers as degraded instead of available. Reject unsupported required standalone Skill roots for Cursor and Grok. Carry sealed Plugin tree digests into Cursor and Grok launches and verify content immediately before and after spawn to fence in-flight bindings against directory replacement.
