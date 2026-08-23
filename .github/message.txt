@@ -1,9 +1,9 @@
-fix(runtime): preserve pre-runtime leases on restart
+Enforce sealed capability readback
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Preserve held runnable leases for selected, preparing, and prepared Attempts that have no dispatch or containment authority, so startup reconciliation does not force routine preparation into Recovery Required.
+    Make Cursor project MCP masking crash-recoverable with a durable, fsynced, ownership-fenced recovery record and CAS restoration.
     
-    Expose a bounded per-owner runnable-lease diagnostic projection and emit its release reason, reacquire outcome, and generation from scheduler diagnostics. Add PostgreSQL regression coverage for the pre-runtime startup matrix and persisted owner diagnostics.
+    Require provider-native Codex MCP inventory readback for sealed required servers, validate provider-specific plugin manifests during preflight, and persist qualified Plugin and Skill invocation observations for Codex, Cursor, and Grok.
