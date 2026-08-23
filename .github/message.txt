@@ -1,9 +1,1 @@
-fix(runtime): fence agent recovery by lease generation
-
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Require every Agent recovery request to carry the durable runnable-lease generation and refuse recovery before runner I/O unless the dispatch generation still owns a held lease.
-    
-    Track fake Agent process starts, resumes, and cancellations so the canonical A-E integration scenario asserts stale recovery performs no runner call and maximum process concurrency remains four.
+fix(console): adapt review round controls

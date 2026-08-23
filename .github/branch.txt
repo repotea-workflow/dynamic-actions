@@ -1,1 +1,1 @@
-codeon/fewensa/FWN-51/a2
+agt/codeon-console-shell
