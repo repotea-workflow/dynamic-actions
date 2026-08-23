@@ -1,1 +1,11 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(pi): bound writes and retain process ownership
+
+codeon:
+  version: 1
+  authority: FWN-68
+  description: |-
+    Route JSONL stdin through an observed writer worker so command deadlines include blocked pipe writes and preserve exact write certainty.
+    
+    Keep oversized provider rejections correlated with bounded diagnostics, and transfer failed drop cleanup to a lifecycle supervisor until exit is confirmed.
+    
+    Add fake-process regressions for blocked stdin, rejection boundaries, and cleanup faults, and align OpenWiki ownership maps with the Pi adapter boundary.
