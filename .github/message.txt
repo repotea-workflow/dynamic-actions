@@ -1,11 +1,7 @@
-Resolve cancellation recovery cleanup findings
+fix(api): classify operation availability by owner
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: FWN-59
   description: |-
-    Classify valid no-artifact cancellation manifests before requiring recovery ref and OID authority.
-    
-    Expose post-terminal cleanup authority drift on Issue detail and let the cleanup worker retry and resolve the deferred Attention without changing terminal Issue state.
-    
-    Add focused contract and PostgreSQL acceptance coverage for no-artifact outcomes and deferred cleanup recovery.
+    Report pending Agent-owned operation fields with lifecycle reasons and mark Agent-only projections as not applicable for Codeon-owned operations. Add focused mapper assertions for both ownership classes.
