@@ -1,9 +1,9 @@
-Repair sealed capability evidence
+fix(grok): preserve activity before cleanup
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-13
   description: |-
-    Allow exact-profile MCP definitions to satisfy required manifests, reject collisions across every provider configuration source, and deliver only sealed servers to Cursor and Grok sessions.
+    Persist retained Grok provider activity before completion-triggered cleanup so transient persistence failures can retry without losing evidence.
     
-    Persist bounded provider-acceptance and invocation observations, validate replayed invocation evidence against the binding-owned manifest, and derive the sanitized inventory projection from durable records.
+    Remove the issue-owned lifecycle rearm migration and shared PostgreSQL APIs, restoring controller-required recovery until the blocked persistence dependency lands.
