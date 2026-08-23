@@ -1,7 +1,10 @@
-fix(api): order attempt operations by sequence
+fix(live-e2e): require distinct resolution reply on resolved threads
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-1
   description: |-
-    Use an attempt-specific sequence and operation ID keyset cursor so pagination follows execution order without changing global operation listings.
+    Query review-thread comment totalCount and trailing comment IDs/authors
+    so a resolved one-comment thread cannot pass when the original review
+    comment happens to mention a fixing SHA. Add regression fixtures for
+    one-comment and duplicate-id false-positive paths.
