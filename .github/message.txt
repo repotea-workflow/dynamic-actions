@@ -1,9 +1,9 @@
-Repair sealed capability readback
+fix(pi): bound response tracking and cleanup
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-68
   description: |-
-    Revalidate required sealed Plugin, Skill, and MCP evidence during Cursor preflight and immediately before spawn.
+    Fence ID-less response correlation after its first completion and cap completed request IDs with a typed runtime limit.
     
-    Persist exact Plugin and Skill invocation observations alongside MCP tool evidence, and expose bounded per-capability expected-versus-observed records plus invocation summaries from durable storage.
+    Confirm native process-group exit before cleanup succeeds, and bound transport thread joins by the graceful-close deadline. Add regressions for stale ID-less responses, completed-ID overflow, and a leader-exited RPC descendant retaining stdout.
