@@ -1,7 +1,9 @@
-Fix capability manifest evidence storage
+fix(cancellation): complete owned recovery
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-46
   description: |-
-    Add append-only MCP invocation observations, persist the missing replay fields and secret references, and require coherent provider-acceptance readback evidence.
+    Persist recovery classification and cleanup checkpoints after sealed runtime closure, then release the runnable lease and requeue only after owned cleanup completes.
+    
+    Fence forced cleanup with exact index and worktree tree identities, treat known target output as disposable, and run snapshot Git commands through the bounded cancellation-aware runner.
