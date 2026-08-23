@@ -1,21 +1,9 @@
-Integrate CodeOn notification router and workers (#211)
+fix(codeon): reset runtime-unknown budget after started dispatch
 
-codeon:
-  version: 1
-  authority: fewensa-32
-  description: |-
-    ## Summary
-    
-    - add strict disabled-by-default notification routes and Webhook destination configuration
-    - compose transactional PostgreSQL routing, LISTEN wake hints with polling recovery, and bounded shared delivery workers into daemon readiness and shutdown
-    - document runtime configuration and add focused startup-validation coverage
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo check -p codeon --all-features`
-    - `cargo clippy -p codeon --all-features -- -A clippy::collapsible_if -A clippy::collapsible_match -D warnings`
-    - `cargo test -p codeon --test config` (54 passed)
-    - `cargo test -p codeoo-notification-core -p codeoo-notification-webhook` (30 passed)
-    
-    PostgreSQL acceptance was not run because `CODEON_TEST_DATABASE_URL` is unavailable in the prepared worktree.
+Inspect-unknown after a dispatch that actually started was still counted
+against the same MAX retry generation as never-started replacements, so
+FWN-1 parked at recovery_required once the worker died.
+
+Treat a prior running_at dispatch as the generation anchor so owner retry
+can replace the current inspect-unknown dispatch. Never-started loops
+still stop at the durable budget.
