@@ -1,1 +1,9 @@
-fix(console): improve review round navigation
+fix(codeon): replace inflight dispatch on runtime-unknown retry
+
+Owner retry for inspect-unknown cancelled only Prepared/ProvisionSending/
+Configuring/Running/RecoveryRequired. After restart, FWN-1's Cursor
+dispatch was still in InputSending/RuntimeConfigured, so retry and
+recheck_now refused owner_authority_changed and logged DispatchFault.
+
+Treat inflight input/runtime states as replaceable so a parked
+runtime_outcome_unknown attention can start a new dispatch.
