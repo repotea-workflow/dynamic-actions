@@ -1,49 +1,7 @@
-Runtime Lifecycle v2: migrate Grok ACP to activity leases (#193)
+Fix cancellation recovery Attention
 
 codeon:
   version: 1
-  authority: fewensa-13
+  authority: FWN-46
   description: |-
-    ## Execution instruction
-    
-    Skip Planning. Migrate the production Grok ACP runner from the temporary fixed prompt deadline to lifecycle v2. Do not alter Cursor, Codex, generic persistence, or scheduler architecture.
-    
-    ## Dependencies
-    
-    Blocked by lifecycle v2 persistence and supervised dispatch worker Issues.
-    
-    ## Responsibility and file ownership
-    
-    Own:
-    
-    - crates/agent/grok session, prompt runtime, and provider-event normalization required for activity reporting;
-    - codeon/crates/codeon/src/execution/agents/grok* production authority, retained-session state, inspection, cancel/recover, and tests;
-    - removal of the temporary GROK_PROMPT_TIMEOUT only after all acceptance criteria in this Issue pass.
-    
-    ## Required behavior
-    
-    1. Split prompt acknowledgement timeout from execution activity lease.
-    2. Waiting for first accepted prompt evidence uses ack_timeout only.
-    3. After acceptance, Text, ToolStarted, ToolCompleted, provider terminal, cancelled, and provider error events are converted to AgentActivityEvidence with bounded digest and provider identity.
-    4. Drain and persist nonterminal provider events during inspection; do not only detect terminal events.
-    5. Delete synthetic observed_steps increments. Empty inspection and retained PromptRunning state do not renew.
-    6. Idle expiry closes/cancels only this Grok session and produces recovery/attention according to the shared controller; it does not exit daemon.
-    7. Resource ceiling requests checkpoint/cancel/exact resume rather than directly failing the business Operation.
-    8. SentUnknown remains outcome-unknown and requires recovery; do not redispatch automatically.
-    9. Continuation attempts inherit the same policy and cannot reset resource ceiling or manufacture activity.
-    10. Late events from a closed generation are fenced and auditable.
-    11. Session cleanup remains proven before completion context/capability release.
-    
-    ## Compatibility
-    
-    Existing v1 dispatches retain legacy interpretation. New v2 dispatches must not construct a fixed prompt_deadline. Do not change model selection, Grok credentials, completion authority, prompt contents, or business-result validation.
-    
-    ## Verification
-    
-    Add fake ACP tests for first-event ack, periodic text/tool activity beyond the old 30-minute limit using paused time, silent idle expiry, duplicate events, terminal, cancellation ambiguity, provider exit, continuation, late generation evidence, exact recovery, and concurrent operation isolation.
-    
-    Run Grok adapter and Codeon Grok runner tests. If live Grok credentials/runtime are available, perform a bounded real canary and record dispatch/session evidence without secrets.
-    
-    ## Definition of done
-    
-    Grok runs as long as trustworthy activity continues, silent hangs affect only their dispatch, no synthetic activity exists, and the four-hour timeout workaround is removed.
+    Persist actionable recovery Attention when cancellation cleanup cannot acquire or validate its initial repository authority. Generate a fresh observation-bound Attention identity after an unresolved condition is resolved and observed again. Add restart coverage for missing authority, reopen-without-repair, and canonical temporary-root drift.
