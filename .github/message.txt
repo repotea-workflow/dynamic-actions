@@ -1,7 +1,7 @@
-fix(cursor): fence recovery capability rotation
+Preserve sealed bindings during capability migration
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: FWN-62
   description: |-
-    Rotate the completion MCP capability only for the exact active Cursor dispatch and recovery fence, replacing the prior bearer authority atomically. Close the completion registry and revoke the rotated capability after exact-load or continuation failure, with focused runner and PostgreSQL-equivalent coverage.
+    Keep validator-v2 Agent bindings and their active Operations unchanged when migration 0132 installs capability-manifest storage. Replay legacy bindings with their original v2 canonical and evidence digests, and permit runtime reuse only when the sealed runtime profile still matches and the current capability manifest is explicitly empty.
