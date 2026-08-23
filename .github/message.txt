@@ -1,3 +1,1 @@
-fix(runtime): harden provider startup probes
-
-Keep Cursor ambient validation mandatory through an isolated startup worktree, and reject ambiguous Grok authentication catalogs.
+Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
