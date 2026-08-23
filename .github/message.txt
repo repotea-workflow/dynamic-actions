@@ -1,7 +1,7 @@
-fix(codeon): preserve observability fallbacks
+Fix notification daemon revision findings
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-32
   description: |-
-    Route additive Attempt, Attention, finalization, and cleanup timeline kinds through the safe fact projection while retaining strict validation for known facts. Report absent Attention history as unavailable and keep genuine closed history available.
+    Keep disabled notifications from terminating the daemon, initialize first-time consumers at the durable profile event high-water mark without changing restart checkpoints, and expose bounded notification metrics and delivery outcome logs with redaction coverage. Update the authoritative notification persistence specification.
