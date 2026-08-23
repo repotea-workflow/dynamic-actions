@@ -1,9 +1,7 @@
-fix(grok): restore lifecycle recovery persistence
+test(postgres): expect redacted evidence reference
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-59
   description: |-
-    Rearm lifecycle-v2 activity leases before exact Grok session recovery while preserving the resource ceiling and advancing the dispatch fence.
-    
-    Persist closed-generation Grok activity as append-only, replay-classified dispatch evidence and cover exact resume and production persistence behavior.
+    Derive the PostgreSQL acceptance expectation with SafeExecutionReference::from_legacy_reference so it stays aligned with the production projection's redaction behavior.
