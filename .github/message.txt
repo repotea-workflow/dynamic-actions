@@ -1,9 +1,4 @@
-fix(runtime): release leases for SCM phases
+Merge remote-tracking branch 'origin/main' into codeon/fewensa/FWN-19/a1
 
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Coordinate runnable capacity at every typed Agent/SCM handoff. Agent-to-SCM transitions now release held leases with store-derived not-applicable evidence in the handoff transaction, while resolved SCM-to-Agent activation validation accepts every typed SCM source.
-    
-    Startup reconciliation now treats the locked current executing SCM operation as valid not-applicable runtime authority without requiring an Attention row, preserving the executing owner instead of forcing Recovery Required. Add PostgreSQL regression coverage and align the runtime specification and OpenWiki architecture context.
+# Conflicts:
+#	codeon/crates/codeon-postgres/tests/execution_attempt_store.rs
