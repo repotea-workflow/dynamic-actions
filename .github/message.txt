@@ -1,4 +1,61 @@
-Merge remote-tracking branch 'origin/main' into codeon/fewensa/FWN-19/a1
+Migrate Cursor ACP to activity leases (#195)
 
-# Conflicts:
-#	codeon/crates/codeon-postgres/tests/execution_attempt_store.rs
+* Migrate Cursor ACP to activity leases
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Use lifecycle-v2 call deadlines for Cursor control calls and treat prompt acknowledgement separately from work duration.
+    
+    Normalize exact session and active-prompt output, tool, permission, phase, and terminal events into durable activity evidence. Ignore empty reads, generic running observations, unrelated targets, unknown events, and duplicate digests for renewal.
+    
+    Preserve legacy fixed deadlines, exact idle cancellation, resource-ceiling cancel/load continuation with Attention fallback, continuation authority, completion capability ordering, and bounded transport ownership.
+
+* fix(cursor): restore exact lifecycle recovery
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Persist queued exact-prompt activity before evaluating idle expiry. Dispatch resource-ceiling and restart continuations only after exact session load, and reject permissions outside the active prompt.
+
+* fix(cursor): preserve recovery lease authority
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Quiesce the exact pending prompt before resource-ceiling load continuation. Require retained completion MCP configuration and reconstruct lifecycle v2 timing from durable activity projections during restart recovery, falling back to controller Attention when authority cannot be proven.
+
+* fix(cursor): retire accepted prompt deadline
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Treat the Cursor prompt acknowledgement timeout as a control-call deadline only. Once exact prompt evidence is accepted, preserve pending response ownership without expiring it at that deadline while leaving generic ACP and Grok behavior unchanged.
+    
+    Add ACP and fake Cursor regressions proving activity and terminal response can arrive after the acknowledgement window, including isolation from a stalled session in another repository.
+
+* fix(cursor): honor activity lease acknowledgements
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Retire the Cursor prompt acknowledgement deadline after exact session or permission activity while preserving bounded normalized evidence and pending response ownership.
+    
+    Issue and inject dispatch-scoped completion MCP authority before exact-session recovery, with cleanup on recovery-plan failures. Extend fake ACP coverage for long acknowledged prompts, early permissions, isolated stalls, and restart loading.
+
+* fix(cursor): fence recovery capability rotation
+
+codeon:
+  version: 1
+  authority: FWN-19
+  description: |-
+    Rotate the completion MCP capability only for the exact active Cursor dispatch and recovery fence, replacing the prior bearer authority atomically. Close the completion registry and revoke the rotated capability after exact-load or continuation failure, with focused runner and PostgreSQL-equivalent coverage.
+
+* fix(cursor): honor durable lease renewal
+
+Propagate the store's persisted renewal timestamp and advance the local idle clock only when the durable lease was actually renewed. Keep coalesced activity from deferring idle cancellation.
