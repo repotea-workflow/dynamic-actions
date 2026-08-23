@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): format live E2E and restore production deps
+
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Run cargo fmt on live_e2e.rs resolution-reply assertions and move sqlx, tempfile, RMCP client transport, and Tokio process support back to dev-dependencies so production builds stay lean.
