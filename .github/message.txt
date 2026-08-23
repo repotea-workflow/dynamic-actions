@@ -1,7 +1,7 @@
-Repair sealed capability enforcement
+Resolve recovery cleanup review findings
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-47
   description: |-
-    Make the capability evidence migration replace its exact predecessor constraint and add forward 0132–0135 acceptance coverage. Allow Codex runtime-profile MCP manifests to use the exact native profile inventory, reject or degrade unsupported Grok stdio MCP servers during preflight, and mask repository-local Cursor MCP configuration until the sealed ACP session is accepted without staging credentials.
+    Merge the refreshed target branch without rebasing, preserving both the cancellation-recovery cleanup work and the target branch's execution API additions. Recheck recovery consumers on every claim and under the Issue lock before persisting deletion intent, gate new Attempts while that intent is active, and defer resource-authority conflicts through typed idempotent cleanup Attention without changing terminal Issue state. Add the authority-conflict migration and focused regression coverage.
