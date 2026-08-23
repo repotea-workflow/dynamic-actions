@@ -1,9 +1,9 @@
-fix(grok): retain activity until persisted
+fix: distinguish execution observations
 
 codeon:
   version: 1
-  authority: FWN-13
+  authority: FWN-59
   description: |-
-    Keep normalized current- and closed-generation provider activity attached to the retained Grok session until persistence succeeds. Retry transient failures with the same digest-bound evidence and preserve terminal or provider-exit interpretation across retries.
+    Mark runtime-observed timeline facts separately from durable facts and include their observation timestamp in typed V1 payloads.
     
-    Add fake persistence-failure coverage for current and closed generations, including idempotent late-activity replay.
+    Return artifact finding and change summaries as unavailable when only digest redactions exist, instead of presenting digests as summary text.
