@@ -1,7 +1,7 @@
-Clarify live E2E paid Agent invocation counts in docs
+fix(runtime): close runnable lease races
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-51
   description: |-
-    The live acceptance path invokes one paid Agent per Agent-owned Operation, not a single run. Document the minimum (Implementation and Review with default planning_mode=skip) and conditional stages (Planning when required; Revision plus follow-up Review when Review requests changes) in the Justfile, live_e2e harness module docs, and OpenWiki guide so opt-in cost and side effects are accurately described.
+    Fence dispatch claims and durable send permits with the caller's runnable lease generation. Wait for locked startup reconciliation rows and preserve resume priority across capacity-pending ticks.
