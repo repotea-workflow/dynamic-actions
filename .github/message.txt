@@ -1,3 +1,3 @@
-fix(runtime): restore Cursor and Grok startup
+fix(runtime): harden provider startup probes
 
-Accept current provider ACP contracts without fabricating account identity, and keep daemon startup probes separate from repository ambient inspection.
+Keep Cursor ambient validation mandatory through an isolated startup worktree, and reject ambiguous Grok authentication catalogs.
