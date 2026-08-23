@@ -1,9 +1,7 @@
-Add Pi agent routing contract
+Persist scheduled GitHub authorization schema v3
 
 codeon:
   version: 1
-  authority: FWN-67
+  authority: FWN-7
   description: |-
-    Define the exact `pi` AgentKind wire value across canonical encoding, configuration, persistence, execution snapshots, and tracker MCP schemas.
-    
-    Add a data-safe four-table PostgreSQL migration, fail-closed codec coverage, Standard-only Goal validation, and ordinary operation callback catalog selection without adding Pi runtime transport.
+    Extend the deployed v3 snapshot so scheduled GitHub jobs store an explicit account, tagged repository or organization scope, and read/write access. Keep v1/v2 payloads byte-compatible as exact repositories, reject auto and mixed organization ceilings, and require a generation-checked update before any repository job can widen to organization scope.
