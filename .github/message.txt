@@ -1,9 +1,11 @@
-feat(pi): add standalone JSONL RPC adapter
+fix(grok): persist lifecycle recovery evidence
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-13
   description: |-
-    Add the provider-neutral Pi subprocess owner with bounded JSONL protocol handling, explicit prompt write certainty, model and reasoning selection, session recovery fencing, and owned cancellation escalation.
+    Commit activity lease rearm state before exact Grok recovery while preserving the original resource ceiling and continuation count.
     
-    Cover the adapter with stream-level fault injection and a real fake Pi executable for spawn, protocol, recovery, and cleanup behavior.
+    Persist fenced late-generation provider evidence durably, and drain close-time provider activity after the provider fence before final cleanup and capability release.
+    
+    Add exact-resume, cleanup-race, and PostgreSQL lifecycle regression coverage.
