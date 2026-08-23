@@ -1,9 +1,7 @@
-fix: recover cancellations when preparation is disabled
+fix(grok): honor lifecycle recovery fences
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-13
   description: |-
-    Retain cancellation recovery composition from the configured preparation root even when new execution preparation is disabled, so sealed cleanup handoffs can preserve unique work or open Attention instead of stalling.
-    
-    Document migration 0132 preservation, immediate owned cleanup, requeue gating, downgrade safety, and the cancellation-policy exception in the picker specification and OpenWiki.
+    Keep unknown prompt sends under controller authority, retain the durable resource-ceiling marker across exact recovery, drain provider evidence after the process fence, and remove Grok-specific generic persistence APIs.
