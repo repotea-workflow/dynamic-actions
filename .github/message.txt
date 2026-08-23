@@ -1,11 +1,11 @@
-Persist scheduled GitHub authorization schema v3 (#206)
+fix(runtime): close runnable lease review gaps
 
 codeon:
   version: 1
-  authority: fewensa-7
+  authority: FWN-51
   description: |-
-    Scheduled GitHub jobs now persist canonical schema v3 with an explicit account, tagged repository or organization scope, and read/write access.
+    Bind Publication checks waiting to terminal Agent containment evidence in the existing owner transaction, and defer Review handoff until the attention is resolved and runnable capacity is reacquired with a fresh generation.
     
-    v1/v2 snapshots stay byte-compatible exact-repository ceilings. Create/update and every attempt intersect the saved ceiling with current owner, route, and live catalog/risk. Organization escape, auto accounts, destructive access, and later privilege growth fail closed. Expanding an exact-repository job to organization scope requires a generation-checked update; deployment does not rewrite old jobs.
+    Reconcile startup against the latest containment generation for every dispatch owned by an Attempt so older live Agent runtimes preserve held capacity or fail closed when a lease was released.
     
-    No migration is added. Scheduler diagnostics expose secret-free schema, digest, account, scope, and access.
+    Add canonical A-E safe/unsafe daemon coverage, older-runtime startup acceptance tests, and update the runtime specification and OpenWiki architecture context.
