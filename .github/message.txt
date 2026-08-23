@@ -1,11 +1,9 @@
-Close Issue-reference identity integration (#207)
+Repair sealed capability evidence
 
 codeon:
   version: 1
-  authority: fewensa-26
+  authority: FWN-62
   description: |-
-    Issue UUID is the semantic identity. New tracker and MCP results use the preferred uppercase prefix, while stored identifiers remain the permanent Workspace-key alias.
+    Allow exact-profile MCP definitions to satisfy required manifests, reject collisions across every provider configuration source, and deliver only sealed servers to Cursor and Grok sessions.
     
-    This change adds cross-crate, isolation, concurrency, and MCP acceptance so one Issue resolves from key, uppercase, lowercase, and mixed prefix forms. Prefix freeze, alias collision, migration backfill, commit authority, and execution-name recovery are documented as one model: live resolution is semantic, sealed bytes and Git refs stay exact, and 0113_workspace_aliases rolls forward only.
-    
-    Identity suites passed against disposable PostgreSQL at 127.0.0.1:21432. Full `just test-postgres` and `just verify` remain red on pre-existing runtime-profile fixtures and codeoff InvocationEvent compile errors outside this identity model.
+    Persist bounded provider-acceptance and invocation observations, validate replayed invocation evidence against the binding-owned manifest, and derive the sanitized inventory projection from durable records.
