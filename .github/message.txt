@@ -1,1 +1,7 @@
-Merge origin/main back into agt/allow-symlink-runtime-paths
+fix(cancellation): preserve recovery on retry
+
+codeon:
+  version: 1
+  authority: FWN-46
+  description: |-
+    Backfill legacy completed handoffs before enforcing recovery evidence, and resume cancellation cleanup only from fenced Attention resolutions. Verify persisted manifests, reject dirty nested repositories, and make owned cleanup monotonic across interruption boundaries.
