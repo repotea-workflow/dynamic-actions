@@ -1,7 +1,7 @@
-Resolve recovery cleanup review findings
+fix(codeon): retry isolated DWF when dispatch row is missing
 
-codeon:
-  version: 1
-  authority: FWN-47
-  description: |-
-    Merge the refreshed target branch without rebasing, preserving both the cancellation-recovery cleanup work and the target branch's execution API additions. Recheck recovery consumers on every claim and under the Issue lock before persisting deletion intent, gate new Attempts while that intent is active, and defer resource-authority conflicts through typed idempotent cleanup Attention without changing terminal Issue state. Add the authority-conflict migration and focused regression coverage.
+FWN-70 Review parked on DispatchWorkerFault/operator_cancel because
+startup isolated recovery treated a missing dispatch as an invariant
+and never created a replacement. Isolated recover now promotes to
+runtime-unknown and inserts the first prepared dispatch from the
+binding.
