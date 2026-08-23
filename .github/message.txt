@@ -1,11 +1,11 @@
-fix(codeon): recover Cursor terminal-without-completion without operator_cancel
+Embed Pi operation MCP extension
 
-retry_agent_failure_if_recoverable only adopted Codex idle-without-completion
-evidence. Cursor/Grok terminal-without-completion exhausted MAX=3 into
-ResultInvalid + operator_cancel, then startup returned attempt_not_ready
-because the matcher was Codex-only and live-session preflight blocked a
-dead Cursor session.
-
-Treat the published Cursor/Grok/fake terminal-without-completion strings as
-recoverable, skip live-session preflight for that class, and promote a
-fresh fenced dispatch the same way Codex already does.
+codeon:
+  version: 1
+  authority: FWN-69
+  description: |-
+    Embed the repository-owned TypeScript extension in codeoo-agent-pi and materialize it with restrictive permissions for explicit Pi loading.
+    
+    Discover the capability-scoped MCP catalog at session startup, register server-defined schemas, proxy bounded tool calls with exact activation retries, redact bootstrap values, and clear short-lived environment variables before child tools can inherit them.
+    
+    Cover fake Streamable HTTP behavior, collisions, cancellation, retry and error semantics, secret non-inheritance, cleanup, and loading by the reviewed real Pi executable.
