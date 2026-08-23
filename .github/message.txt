@@ -1,9 +1,7 @@
-fix(api): bound execution statistics
+fix(runtime): persist dispatch lease authority
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-51
   description: |-
-    Pair landing-preflight artifact references with their outer artifact digest in operation and timeline projections.
-    
-    Bound repository/kind statistics to the execution query limit and report an unavailable statistic member when the breakdown is truncated. Extend isolated PostgreSQL HTTP acceptance to verify the exact landing artifact identity, ETag behavior, and bounded statistics degradation.
+    Persist runnable lease generations on Agent dispatches and require an exact held-generation match during claim and worker reconstruction. Require canonical containment readback before Agent lease release, schedule checks-pending observation durably, and cover restart, resume, migration, and A-E integration behavior.
