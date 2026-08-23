@@ -1,8 +1,7 @@
-fix(codeon): treat dead Cursor inspect/recover gaps as terminal
+Fix lifecycle v2 reconciliation and rollout
 
-Keeping live Cursor inspect/recover readback as Running left FWN-1
-zombie-running after the process exited with no last_activity.
-
-If the Cursor process group is gone, recover/inspect gaps now return
-terminal-without-completion so replacement can proceed; a live process
-still defers as Running.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Recover Cursor idle-expired prompts through exact quiescence and session readback before classifying their outcome. Scope lifecycle v2 generation by profile, repository, and provider while preserving false as the rollback default. Add bounded secret-free lifecycle diagnostics across persistence and provider reconciliation paths, with focused tests and updated rollout documentation.
