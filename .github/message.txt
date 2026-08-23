@@ -1,7 +1,7 @@
-fix(codeon): fail closed on cancellation drift
+fix(api): tolerate additive timeline kinds
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-59
   description: |-
-    Detect nested repository markers inside ignored generated paths before treating those paths as disposable. Revalidate symbolic HEAD ownership before cancellation cleanup and cover both drift cases with regression tests.
+    Project unknown additive timeline event kinds through the documented safe fact payload instead of failing the entire timeline read. Keep known operation state transitions and known fact status validation strict, and cover the PostgreSQL-to-HTTP path with generated-client deserialization.
