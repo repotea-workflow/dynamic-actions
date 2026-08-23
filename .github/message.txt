@@ -1,11 +1,9 @@
-fix cancellation recovery cleanup safety
+Close Issue-reference identity integration
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-26
   description: |-
-    Authenticate cancellation remote readback with the profile Git credential and fail closed when it is unavailable.
+    Issue UUID is the semantic identity. Tracker and MCP now prove one Issue resolves from key, uppercase prefix, lowercase prefix, and mixed prefix, while new results stay uppercase and stored identifiers stay the Workspace-key alias.
     
-    Check registered worktree users immediately before deleting the owned local branch, preserving the ref and opening AuthorityDrift when another worktree still uses it.
-    
-    Add focused regression coverage for both sealed findings.
+    Prefix freeze, alias isolation, concurrent collision, migration backfill, commit authority, and execution-name recovery are documented as one model: live resolution is semantic, sealed bytes and Git refs stay exact, and 0113_workspace_aliases rolls forward only.
