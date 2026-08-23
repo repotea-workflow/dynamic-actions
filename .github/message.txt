@@ -1,9 +1,9 @@
-fix(runtime): bind runnable lease release authority
+fix(grok): retain activity until persisted
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-13
   description: |-
-    Require terminal dispatch evidence alongside quiescent containment before releasing Agent-backed runnable leases during Waiting and startup reconciliation.
+    Keep normalized current- and closed-generation provider activity attached to the retained Grok session until persistence succeeds. Retry transient failures with the same digest-bound evidence and preserve terminal or provider-exit interpretation across retries.
     
-    Fence queued activation claims against both persisted and current Profile configuration generations.
+    Add fake persistence-failure coverage for current and closed generations, including idempotent late-activity replay.
