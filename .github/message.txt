@@ -1,7 +1,7 @@
-Fix notification daemon revision findings
+style: run rustfmt on scheduled authorization files
 
 codeon:
   version: 1
-  authority: FWN-32
+  authority: FWN-7
   description: |-
-    Keep disabled notifications from terminating the daemon, initialize first-time consumers at the durable profile event high-water mark without changing restart checkpoints, and expose bounded notification metrics and delivery outcome logs with redaction coverage. Update the authoritative notification persistence specification.
+    Apply cargo fmt to github_call.rs, scheduled_github_proxy.rs, and scheduled_authorization.rs so the pre-merge rustfmt check passes.
