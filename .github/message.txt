@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(postgres): cancel undispatched attempts (#199)
+
+* fix(config): accept runtime executable symlinks
+
+* fix(postgres): cancel undispatched attempts
+
+Durable cancellation can close selected, preparing, or prepared Attempts before an Agent runtime exists. Align the database terminal-state constraint with that domain authority when a runtime closure receipt proves the never-dispatched outcome.
