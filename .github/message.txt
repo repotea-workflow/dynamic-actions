@@ -1,7 +1,9 @@
-Qualify sealed capability invocation evidence
+fix(api): expose safe artifact summaries
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-59
   description: |-
-    Carry MCP server provenance through Codex, Cursor, and Grok provider events before matching an invocation to the sealed manifest. Reject cross-namespace Plugin, server, and tool identity collisions, and project the newest bounded invocation records in chronological presentation order.
+    Project bounded planning, implementation, review, and revision finding/change summaries through the public execution read model with unsafe text reduced to digest references.
+    
+    Add representative HTTP acceptance coverage for available and redacted phase summaries, and align the normative V1 model-selection specification with the implemented exposure policy.
