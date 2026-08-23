@@ -1,7 +1,7 @@
-fix(pi): preserve RPC recovery semantics
+fix(codeon): preserve observability fallbacks
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-59
   description: |-
-    Classify Pi 0.84.2 compaction and summarization retry events as running. Preserve correlated write certainty for oversized diagnostics and keep provider failures from fencing healthy transport.
+    Route additive Attempt, Attention, finalization, and cleanup timeline kinds through the safe fact projection while retaining strict validation for known facts. Report absent Attention history as unavailable and keep genuine closed history available.
