@@ -1,7 +1,6 @@
-Fix restart-safe activity expiry reconciliation
+fix(codeon): always retry Cursor process-exited TWC
 
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Persist and replay Cursor activity expiry under the exact dispatch fence before provider cancellation. Preserve the durable expiry kind in PostgreSQL projections so Grok restart recovery resumes observed idle-expiry reconciliation without duplicate prompt delivery. Add focused crash-boundary regression coverage for both providers.
+Consecutive TWC budget still parked FWN-1 on operator_cancel after
+recover-process-exited because those dispatches often die in under 60s.
+Skip the consecutive fail-closed path for inspect/recover process-exited
+evidence so a dead Cursor is replaced instead of waiting for cancel.
