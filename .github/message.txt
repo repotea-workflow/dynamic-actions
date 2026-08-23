@@ -1,3 +1,3 @@
-fix(db): preserve released migration order
+fix(db): reconcile legacy migration ledger
 
-Restore the deployed tenant-profile migration at version 202608200001\nand move the new App permission catalog forward to 202608200002. This\nkeeps SQLx checksums valid for existing databases while preserving clean\ninstall ordering.
+Keep the canonical App-001 and tenant-002 migrations unchanged. Before\nSQLx validation, recognize the exact released tenant-001 checksum and\nschema, apply the missing App catalog atomically, and canonicalize its\nledger. Unexpected histories remain fail-closed.\n\nAdd an isolated upgrade fixture for the released tenant-001 database.
