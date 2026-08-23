@@ -1,7 +1,6 @@
-Fix recovery artifact finalization cleanup
+fix(codeon): skip inspect-unknown budget after TWC
 
-codeon:
-  version: 1
-  authority: FWN-47
-  description: |-
-    Enumerate cancellation recovery artifacts by Profile, Workspace, and Issue while retaining each historical Attempt's Repository authority. Validate cleanup evidence against the completed persisted recovery outcome and classify fatal Git ref readback failures as unknown. Add focused reassignment, unassignment, digest-drift, and fake-Git regression coverage.
+Terminal-without-completion replacements still opened runtime_unknown
+attention, so process-exited Cursor retries burned MAX=3 and parked
+FWN-1 at runtime_unknown_retry_budget_exhausted. TWC keeps its own
+consecutive budget; inspect-unknown must not double-count it.
