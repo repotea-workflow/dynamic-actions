@@ -1,6 +1,7 @@
-fix(codeon): allow revision readback retry after runtime-unknown budget
+fix(pi): bound version probe output
 
-FWN-1 left operator_cancel after supersede because the operation had
-already used MAX_RUNTIME_UNKNOWN_AUTO_RETRIES. Readback-invalid and
-isolated completed-worker retries are distinct owner recoveries and
-must not inherit that generic budget.
+codeon:
+  version: 1
+  authority: FWN-68
+  description: |-
+    Read version stdout under the startup deadline so a descendant retaining the pipe cannot block session startup. Kill and reap the isolated probe process group before returning.
