@@ -1,11 +1,7 @@
-fix(api): harden execution read projections
+Clarify live E2E paid Agent invocation counts in docs
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-1
   description: |-
-    Redact sensitive artifact summary text before it reaches the public execution API.
-    
-    Read all execution statistics members and their observation timestamp from one repeatable-read PostgreSQL snapshot.
-    
-    Merge the refreshed origin/main target and preserve both execution observability and current runtime-profile initialization behavior.
+    The live acceptance path invokes one paid Agent per Agent-owned Operation, not a single run. Document the minimum (Implementation and Review with default planning_mode=skip) and conditional stages (Planning when required; Revision plus follow-up Review when Review requests changes) in the Justfile, live_e2e harness module docs, and OpenWiki guide so opt-in cost and side effects are accurately described.
