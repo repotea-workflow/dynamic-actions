@@ -1,9 +1,7 @@
-Implement Pi operation runner lifecycle
+Make recovery cleanup intent durable
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-47
   description: |-
-    Add the Pi AgentOperationRunner lifecycle with deterministic runtime and input authority, operation-scoped MCP capability ordering, send-once prompt dispatch, completion-first inspection, cancellation cleanup, and restart-safe recovery classification.
-    
-    Validate sealed model and reasoning configuration, preserve unknown transport ownership, and cover Pi references, Goal behavior, error redaction, and model evidence with focused tests.
+    Enumerate scoped cancellation preservation records before validating recovery authority so malformed refs open deferred Attention. Persist cleanup intent before deleting exact recovery refs, then record post-mutation absence and receipts. Add focused coverage for missing refs and missing durable intent, and allow the existing direct enqueue signature through Clippy.
