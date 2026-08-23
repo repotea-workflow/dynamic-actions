@@ -1,9 +1,18 @@
-Reject Pi startup on Codeon extension errors
+Embed Pi operation MCP extension (#217)
 
 codeon:
   version: 1
-  authority: FWN-69
+  authority: fewensa-69
   description: |-
-    Treat an extension_error emitted for the explicitly loaded Codeon operation extension as a failed startup handshake, even when Pi returns a successful get_state response.
+    ## Summary
     
-    Add a real Pi 0.84.2 regression that serves a colliding bash tool catalog and verifies PiSession::spawn fails closed.
+    - embed and securely materialize the repository-owned Pi extension
+    - discover and register the operation MCP catalog with server-provided schemas
+    - proxy bounded calls with secret redaction, cancellation, and activation-race retries
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo test -p codeoo-agent-pi`
+    - real Pi extension load test
+    - `cargo clippy -p codeoo-agent-pi --all-targets -- -D warnings`
