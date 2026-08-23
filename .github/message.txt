@@ -1,9 +1,5 @@
-fix: preserve cancellation recovery authority
+fix(codeon): resume dirty Revision worktrees with untracked directories
 
-codeon:
-  version: 1
-  authority: FWN-46
-  description: |-
-    Bind cancellation remote readback to the execution environment's sealed sanitized remote identity before querying the branch. Treat identity mismatch as authority drift so cleanup cannot discard code based on a repointed remote.
-    
-    Allow migration 0132 to roll back legacy completed handoffs without recovery evidence by restoring their prior completed state, while retaining guards for preservation evidence and new cleanup states. Add focused cancellation and migration regression coverage.
+git status porcelain v2 reports untracked directories with a trailing
+slash. Treating that as InvalidReadback parked recoverable Revisions
+on operator_cancel after restart (FWN-1 baseline-unavailable).
