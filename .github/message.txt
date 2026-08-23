@@ -1,10 +1,7 @@
-fix(codeon): retry isolated DispatchWorkerFault on inflight dispatch
+fix(codeon): count consecutive terminal-without-completion failures
 
-FWN-62 revision parked at operator_cancel after DispatchWorkerFault
-because isolated recovery required operation.runtime_reference plus
-input_runtime_reference and only running/failed/cancelled dispatch
-states. Startup then returned attempt_not_ready.
-
-Allow isolated recovery from inflight input/runtime states without
-those extra references so the same-daemon replacement dispatch can
-proceed. Do not MCP-cancel.
+Lifetime TWC counts on a long revision opened operator_cancel after three
+historical deaths, then startup retry undid the fail without a budget.
+Count only the consecutive TWC streak after the last non-TWC dispatch,
+honor that budget on both retry paths, and do not require a runtime
+reference for recoverable Cursor/Grok/fake TWC recovery.
