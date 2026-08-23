@@ -1,7 +1,7 @@
-fix(runtime): close runnable lease races
+Fix capability manifest evidence storage
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Fence dispatch claims and durable send permits with the caller's runnable lease generation. Wait for locked startup reconciliation rows and preserve resume priority across capacity-pending ticks.
+    Add append-only MCP invocation observations, persist the missing replay fields and secret references, and require coherent provider-acceptance readback evidence.
