@@ -1,6 +1,4 @@
-fix(codeon): match isolated missing-dispatch DWF without running from_state
+fix(codeon): allow DWF reclassification without running from_state
 
-FWN-70 Review still parked after the missing-dispatch retry: the
-isolated recover required from_state=running, but the live DWF event
-does not. Non-isolated missing dispatch is NotApplicable so startup
-can fall through to isolated retry.
+Promote isolated missing-dispatch DWF to runtime-unknown was rejected
+because the recovery lifecycle guard still required from_state=running.
