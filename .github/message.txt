@@ -1,1 +1,9 @@
-Merge origin/main back into agt/allow-symlink-runtime-paths
+Enforce scheduled GitHub server allowlist for v2/v3
+
+codeon:
+  version: 1
+  authority: FWN-7
+  description: |-
+    Intersect live catalog-derived scheduled tools with SCHEDULED_GITHUB_READ_TOOLS and SCHEDULED_GITHUB_WRITE_TOOLS during materialization and MCP preflight so forged or stale leases cannot expose unapproved non-destructive write tools.
+    
+    Add github_scheduled_tools_for_access and is_scheduled_github_server_tool helpers, a regression test for dispatch_workflow rejection, and reconcile the normative scheduled-authorization plan with the implemented v3 contract.
