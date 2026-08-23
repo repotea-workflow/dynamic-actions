@@ -1,7 +1,11 @@
-Harden sealed capability evidence
+Persist scheduled GitHub authorization schema v3 (#206)
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: fewensa-7
   description: |-
-    Stop Cursor from staging MCP credentials in repository-local configuration, report unsupported Plugin and Skill invocation proof as unknown, and reserve and revalidate Grok's internal MCP server namespace.
+    Scheduled GitHub jobs now persist canonical schema v3 with an explicit account, tagged repository or organization scope, and read/write access.
+    
+    v1/v2 snapshots stay byte-compatible exact-repository ceilings. Create/update and every attempt intersect the saved ceiling with current owner, route, and live catalog/risk. Organization escape, auto accounts, destructive access, and later privilege growth fail closed. Expanding an exact-repository job to organization scope requires a generation-checked update; deployment does not rewrite old jobs.
+    
+    No migration is added. Scheduler diagnostics expose secret-free schema, digest, account, scope, and access.
