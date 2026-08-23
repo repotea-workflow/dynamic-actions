@@ -1,9 +1,9 @@
-fix(cursor): honor activity lease acknowledgements
+Seal Agent capability manifests
 
 codeon:
   version: 1
-  authority: FWN-19
+  authority: FWN-62
   description: |-
-    Retire the Cursor prompt acknowledgement deadline after exact session or permission activity while preserving bounded normalized evidence and pending response ownership.
+    Add provider-scoped operator capability inputs for Plugins, standalone Skills, and third-party MCP servers. Seal the canonical manifest revision and digest into Agent binding v3, persist immutable normalized inventory and evidence through migration 0132, reject reserved or colliding Codeon identities, and expose sanitized expected-versus-observed invocation facts.
     
-    Issue and inject dispatch-scoped completion MCP authority before exact-session recovery, with cleanup on recovery-plan failures. Extend fake ACP coverage for long acknowledged prompts, early permissions, isolated stalls, and restart loading.
+    Add focused domain, configuration, and migration-contract coverage and align the picker runtime specification.
