@@ -1,1 +1,1 @@
-agt/allow-symlink-runtime-paths
+agt/codeon-console-shell

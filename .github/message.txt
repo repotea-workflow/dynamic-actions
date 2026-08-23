@@ -1,9 +1,1 @@
-fix(codeon): treat live Cursor inspect/recover gaps as running
-
-Cursor inspect StateUnavailable and recover Unknown opened
-runtime_outcome_unknown while a just-started Cursor session was still
-live. Owner retry then inspect-too-soon again, parking FWN-1.
-
-Defer inspect when the session is not yet retained, skip recover while
-inspect holds the session, and classify a retained live session without
-prompt events as Running instead of RecoveryRequired.
+fix(console): improve review round navigation
