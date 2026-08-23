@@ -1,5 +1,1 @@
-fix(codeon): parse porcelain directory records without slash stripping
-
-Porcelain v2 ?/! are record types; Git's one trailing / is the directory
-marker, not a path segment. Status InvalidReadback on a descendant HEAD
-is dirty progress, not operator_cancel.
+Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
