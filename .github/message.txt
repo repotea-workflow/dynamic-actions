@@ -1,7 +1,7 @@
-fix(api): register execution read routes
+Preserve cancellation recovery credentials
 
 codeon:
   version: 1
-  authority: FWN-59
+  authority: FWN-46
   description: |-
-    Register execution read handlers and their OpenAPI metadata through the same generated router. Exercise supported execution filters, invalid cursors and ranges, unsupported parameters, result limits, and statistics filters through the PostgreSQL HTTP acceptance surface.
+    Retain configured profile credentials independently of the optional merge runtime so disabled preparation can classify and recover cancelled repositories. Add a composition regression covering credential authority when merge runtime is absent.
