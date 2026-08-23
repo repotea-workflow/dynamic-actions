@@ -1,7 +1,7 @@
-Fix notification acceptance lifecycle
+fix(runtime): fence recovery lease authority
 
 codeon:
   version: 1
-  authority: FWN-35
+  authority: FWN-51
   description: |-
-    Stabilize the Codeoff Webhook acceptance mock and explicitly close its SQLite pool. Reconnect the CodeOn PostgreSQL notification store after closing the original composition, then verify no second delivery is claimed.
+    Require current runnable-lease generations before completion cleanup and cancellation provider I/O. Reconcile startup leases from bounded fresh containment readbacks, preserve unknown runtimes fail closed, and document the startup authority boundary. Add regression coverage for stale generations and fresh live, quiescent, unknown, and historical evidence.
