@@ -1,7 +1,10 @@
-Fix notification recovery shutdown
+fix(codeon): retry isolated Review and revision readback without operator_cancel
 
-codeon:
-  version: 1
-  authority: FWN-32
-  description: |-
-    Abort and await unfinished notification router and worker tasks when bounded shutdown expires. Surface terminal and ambiguous transitions made during PostgreSQL claim recovery so daemon metrics and sanitized delivery logs observe restart recovery.
+Isolated DispatchWorkerFault recovery promoted Review operations to
+runtime-unknown, but replacement still cancelled the old dispatch and
+rejected completion_observed. FWN-13/46 stayed parked. Force-fail the
+finished worker dispatch and insert a replacement.
+
+Revision capture_readback InvalidReadback still opened operator_cancel
+because startup only retried baseline-unavailable. Supersede that cancel
+attention to runtime-unknown and reuse the completed-dispatch retry.
