@@ -1,7 +1,11 @@
-Fix cancellation recovery Attention
+fix(codeon): map legacy unsealed runtime profile to the only available one
 
-codeon:
-  version: 1
-  authority: FWN-46
-  description: |-
-    Persist actionable recovery Attention when cancellation cleanup cannot acquire or validate its initial repository authority. Generate a fresh observation-bound Attention identity after an unresolved condition is resolved and observed again. Add restart coverage for missing authority, reopen-without-repair, and canonical temporary-root drift.
+Issue routing that omitted a runtime profile was stored as
+__codeon_legacy_unsealed__, which is reserved and not configurable.
+Environment planning then skipped AgentRuntimeProfileUnavailable forever,
+so FWN-18/35/69 sat in awaiting_environment_plan while holding started
+capacity.
+
+If the sentinel is selected and exactly one runtime profile exists for
+that agent kind (or default is configured), use it. Ambiguous or missing
+profiles still fail closed.
