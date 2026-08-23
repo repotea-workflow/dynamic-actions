@@ -1,9 +1,11 @@
-fix(postgres): retire stale resume activations
+fix(codeon): recover Cursor terminal-without-completion without operator_cancel
 
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Persist authority_conflict for stale capacity-pending resume activations in the same owner transaction. Convert expected operation-version drift into a structured stale outcome so bounded resume scans can advance to later valid candidates.
-    
-    Add PostgreSQL coverage proving an older stale activation cannot starve a newer valid resume.
+retry_agent_failure_if_recoverable only adopted Codex idle-without-completion
+evidence. Cursor/Grok terminal-without-completion exhausted MAX=3 into
+ResultInvalid + operator_cancel, then startup returned attempt_not_ready
+because the matcher was Codex-only and live-session preflight blocked a
+dead Cursor session.
+
+Treat the published Cursor/Grok/fake terminal-without-completion strings as
+recoverable, skip live-session preflight for that class, and promote a
+fresh fenced dispatch the same way Codex already does.
