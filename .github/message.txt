@@ -1,7 +1,9 @@
-fix(pi): preserve correlated write certainty
+fix: recover cancellations when preparation is disabled
 
 codeon:
   version: 1
-  authority: FWN-68
+  authority: FWN-46
   description: |-
-    Keep provider-failure events as bounded runtime evidence while awaiting the matching command response, so write certainty follows the write and correlated response. Classify running events with the exact Pi 0.84.2 event allowlist and retain unknown tool- or retry-like names as compatibility events.
+    Retain cancellation recovery composition from the configured preparation root even when new execution preparation is disabled, so sealed cleanup handoffs can preserve unique work or open Attention instead of stalling.
+    
+    Document migration 0132 preservation, immediate owned cleanup, requeue gating, downgrade safety, and the cancellation-policy exception in the picker specification and OpenWiki.
