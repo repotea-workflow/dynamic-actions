@@ -1,7 +1,7 @@
-fix(cancellation): reconcile interrupted cleanup
+Fix Pi routing contract validation
 
 codeon:
   version: 1
-  authority: FWN-46
+  authority: FWN-67
   description: |-
-    Persist a cleaning checkpoint before mutating owned cancellation resources. On retry, accept exact absent worktree, temp root, registration, and local branch readback only when the preserved recovery ref still matches, then continue cleanup completion and requeue.
+    Allow Pi bindings to pass full daemon configuration loading without a provider runtime profile. Enforce the required CapabilityUnsupported fallback for recommended Standard Goal execution, and replace SQL text inspection with an isolated PostgreSQL migration acceptance test covering all four constraints and safe downgrade behavior.
