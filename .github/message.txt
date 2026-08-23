@@ -1,7 +1,11 @@
-Seal Agent capability manifests
+fix cancellation recovery cleanup safety
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-46
   description: |-
-    Resolve operator-owned Plugin, standalone Skill, and MCP allowlists under each exact Agent Runtime Profile. Persist and replay normalized binding-owned inventories with required/optional preflight evidence, safe digests, secret references, provider acceptance strength, and distinct invocation records. Reject ambient or repository-local expansion, pass only sealed Plugin directories to Cursor and Grok, and preserve guarded Cursor MCP configuration. Required gaps fail before binding creation; optional gaps remain explicit degraded evidence.
+    Authenticate cancellation remote readback with the profile Git credential and fail closed when it is unavailable.
+    
+    Check registered worktree users immediately before deleting the owned local branch, preserving the ref and opening AuthorityDrift when another worktree still uses it.
+    
+    Add focused regression coverage for both sealed findings.
