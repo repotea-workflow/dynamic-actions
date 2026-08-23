@@ -1,7 +1,9 @@
-fix(api): classify operation availability by owner
+fix(codeon): retry Cursor process-exited TWC instead of parking
 
-codeon:
-  version: 1
-  authority: FWN-59
-  description: |-
-    Report pending Agent-owned operation fields with lifecycle reasons and mark Agent-only projections as not applicable for Codeon-owned operations. Add focused mapper assertions for both ownership classes.
+Dead Cursor recover/inspect now returns terminal-without-completion with
+process-exited evidence, but that evidence was not in the owner-retry
+allowlist. Consecutive TWC budget also counted dispatches that had already
+run for minutes. FWN-1 then parked on operator_cancel after a live Cursor
+died during smoke-e2e. Allow the new evidence and reset the consecutive
+budget after a dispatch ran for 60s so Codeon replaces the agent instead
+of waiting for cancel.
