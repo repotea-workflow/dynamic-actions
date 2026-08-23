@@ -1,7 +1,9 @@
-fix(runtime): serialize agent recovery authority
+Implement Pi operation runner lifecycle
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Require fresh startup runtime evidence before releasing held runnable leases. Fence recovery I/O with a durable dispatch claim, block lease and terminal release while that claim is active, and advance the dispatch fence when recovery finishes. Bind the canonical A-E concurrency test to fake process closure before capacity release.
+    Add the Pi AgentOperationRunner lifecycle with deterministic runtime and input authority, operation-scoped MCP capability ordering, send-once prompt dispatch, completion-first inspection, cancellation cleanup, and restart-safe recovery classification.
+    
+    Validate sealed model and reasoning configuration, preserve unknown transport ownership, and cover Pi references, Goal behavior, error redaction, and model evidence with focused tests.
