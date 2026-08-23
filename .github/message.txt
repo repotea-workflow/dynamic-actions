@@ -1,7 +1,9 @@
-Defer recovery artifact cleanup safely
+fix(api): redact execution summaries
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: FWN-59
   description: |-
-    Preserve authoritative Issue terminal outcomes by recording malformed recovery-artifact authority as durable post-terminal cleanup Attention. Revalidate active consumers at claim time so deferred recovery artifacts remain pending until exact cleanup can complete.
+    Always digest agent-authored phase summaries before exposing them through execution artifact projections.
+    
+    Extend the PostgreSQL HTTP acceptance fixture with authoritative Merge, finalization, and cleanup facts, and verify their available panels and ordered timeline events.
