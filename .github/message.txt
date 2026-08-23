@@ -1,7 +1,7 @@
-Persist scheduled GitHub authorization schema v3
+test(api): align preflight verification assertion
 
 codeon:
   version: 1
-  authority: FWN-7
+  authority: FWN-59
   description: |-
-    Extend the deployed v3 snapshot so scheduled GitHub jobs store an explicit account, tagged repository or organization scope, and read/write access. Keep v1/v2 payloads byte-compatible as exact repositories, reject auto and mixed organization ceilings, and require a generation-checked update before any repository job can widen to organization scope.
+    Expect landing-preflight verification to be not_applicable while preserving artifact availability, matching the authoritative execution projection.
