@@ -1,3 +1,19 @@
-fix(merge): reconcile external PR merges
+fix(merge): reconcile external PR merges (#201)
+
+* fix(config): accept runtime executable symlinks
+
+* fix(postgres): cancel undispatched attempts
+
+Durable cancellation can close selected, preparing, or prepared Attempts before an Agent runtime exists. Align the database terminal-state constraint with that domain authority when a runtime closure receipt proves the never-dispatched outcome.
+
+* fix(runtime): restore Cursor and Grok startup
+
+Accept current provider ACP contracts without fabricating account identity, and keep daemon startup probes separate from repository ambient inspection.
+
+* fix(runtime): harden provider startup probes
+
+Keep Cursor ambient validation mandatory through an isolated startup worktree, and reject ambiguous Grok authentication catalogs.
+
+* fix(merge): reconcile external PR merges
 
 Preserve strict metadata validation for Codeon mutations while allowing exact reviewed PRs merged externally to finalize through provider and Git readback.
