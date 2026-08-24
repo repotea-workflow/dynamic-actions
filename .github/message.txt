@@ -1,9 +1,9 @@
-fix(runtime): bound lifecycle recovery
+fix: seal capability evidence across restarts
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Clear a reconciled resource ceiling from the current dispatch projection while preserving its original deadline in append-only lifecycle evidence.
+    Keep MCP result receipts in a daemon-private sibling root and use directory-relative no-follow file operations so Agent-writable temporary roots cannot forge invocation evidence.
     
-    Apply the sealed recovery timeout to Grok exact load and Codex exact recovery and resource-ceiling continuation, returning unknown evidence while the blocking supervisor retains late-call ownership. Add PostgreSQL and provider regressions for rearm and stalled calls.
+    Archive each sanitized, secret-free MCP and Codex plugin capability generation by sealed manifest digest. Runtime routing and Codex, Cursor, and Grok provisioning now replay the binding's archived generation after profile changes while continuing to fence executable, native profile, and account identity drift.
