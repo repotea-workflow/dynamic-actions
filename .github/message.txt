@@ -1,7 +1,3 @@
-test(codeon): prove cancellation lifecycle
+fix(cursor): contain dispatch process trees
 
-codeon:
-  version: 1
-  authority: FWN-48
-  description: |-
-    Add cross-repository cancellation fault isolation coverage and prove that cleanup requeue creates a fresh Attempt only after current direct and inherited Parent blockers complete. Document the cross-layer acceptance gate in the picker specification and owning OpenWiki page.
+Cursor tools can escape the provider process group with setsid. Bind MCP helpers, ACP, and all descendants to durable per-dispatch cgroups, then fence and prove them empty before recovery or closure.\n\nRoll terminal evidence to v4 so exhausted v3 attentions receive one bounded self-healing retry after deployment.
