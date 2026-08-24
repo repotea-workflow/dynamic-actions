@@ -1,9 +1,7 @@
-fix(runtime): rearm continued activity leases
+Merge origin/main and resolve Grok activity semantics
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-35
   description: |-
-    Atomically re-arm lifecycle v2 leases after exact Grok or Cursor continuation so durable provider activity remains writable without losing the original expiry and ceiling lineage.
-    
-    Select Grok's earliest overdue deadline and prevent recovered generations from replaying a reconciled expiry. Add migration 0135, PostgreSQL/provider regressions, observability classification, and OpenWiki lifecycle documentation.
+    Synchronize the notification acceptance branch with the refreshed target branch while preserving both sides of the sole conflict. Keep the notification compatibility match arm and retain main's accepted/recorded semantics for ignored legacy Grok activity policy.
