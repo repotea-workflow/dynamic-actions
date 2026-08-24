@@ -1,7 +1,7 @@
-docs: correct cancellation recovery migration
+fix(pi): preserve cleanup uncertainty
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Update the normative runtime specification and generated OpenWiki architecture guidance to identify migration 0137 as the Attempt cancellation recovery migration. Also repair the adjacent malformed lease-ownership sentence.
+    Do not treat a missing retained owner after an inspection wait as proof that Pi process and Extension cleanup completed. Require retained ownership or independent recovery evidence, and cover cancellation while inspection owns the session.
