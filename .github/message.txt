@@ -1,7 +1,7 @@
-fix(codeon): seal capability drift checks
+Bound provider expiry reconciliation
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Fail closed on ambiguous Codex plugin cache entries and degraded Codex skill roots, revalidate required Grok MCP capabilities during preflight and provisioning, and update the Codex direct-runtime test for capability provenance.
+    Apply the sealed cancellation deadline to Cursor idle/resource-ceiling expiry and Grok activity expiry. Preserve retained session authority for late blocking-call completion, return an Unknown observation when cancellation remains ambiguous, and cover provider-started stalls in both fake runtimes.
