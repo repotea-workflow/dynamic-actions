@@ -1,9 +1,7 @@
-fix(codex): isolate empty capability manifests
+fix(runtime): fence recovery side effects
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Require Codex runtime isolation for every sealed capability manifest, including an empty allowlist. Persist the canonical empty MCP inventory digest as provider-accepted evidence when exact readback succeeds without optional degradation.
-    
-    Add a regression covering empty-manifest isolation and ProviderAccepted readback.
+    Revalidate runnable lease generations immediately before Cursor completion capability issuance and Codex idle-expiry cancellation. Revoke Cursor completion authority when the final pre-provider lease fence fails, and cover both stale recovery races with focused regression tests.
