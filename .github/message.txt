@@ -1,3 +1,7 @@
-fix(codeon): stabilize completion recovery
+fix(runtime): keep terminal Grok idle expiry
 
-Read durable completion by dispatch input authority and honor the frozen Cursor continuation budget. Version corrected terminal evidence so historical Cursor and Grok failures receive one compatibility retry without reopening the dispatch loop.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Return terminal observations after terminal idle-cancellation readback instead of resuming the exact Grok prompt. Preserve exact continuation for resource-ceiling recovery and correct the attempt-cancellation recovery migration number in the runtime specification.
