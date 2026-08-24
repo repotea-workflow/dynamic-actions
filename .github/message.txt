@@ -1,9 +1,1 @@
-fix(postgres): restore migration authority
-
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Restore the applied current-main 0135 and 0136 migration bytes, move runnable-lease integration and dispatch fencing to unused forward versions 0138 and 0139, and correct the forward cancellation-recovery constraint spelling required by that upgrade path.
-    
-    Add PostgreSQL acceptance coverage that seeds the frozen through-0136 ledger and proves the production migrator upgrades it without checksum drift.
+fix(codeon): retry failed completions
