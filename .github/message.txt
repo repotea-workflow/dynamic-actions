@@ -1,3 +1,7 @@
-fix(codeon): bound terminal recovery retries
+fix(pi): preserve provider failure categories
 
-Runtime duration and process-exited evidence are not completion progress. Counting them as generation resets allowed FWN-8 to exceed 100 terminal retries.
+codeon:
+  version: 1
+  authority: FWN-70
+  description: |-
+    Restore the Grok legacy activity outcome match so the Codeon library compiles. Preserve redacted Pi provider failure kinds across the adapter boundary and map authentication failures to the dedicated runtime category.
