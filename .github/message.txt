@@ -1,7 +1,7 @@
-Add authorization regression coverage and docs
+fix(api): expose cleanup attention reasons
 
 codeon:
   version: 1
-  authority: FWN-8
+  authority: FWN-47
   description: |-
-    Compose config-to-provider Turn and scheduled tests for repository and organization scopes, feed realistic public-alias probe evidence into production account selection, and document structured scopes, diagnostics, migration, and rollback without adding product behavior.
+    Add ref_drift and provider_outcome_unknown to the closed V1 maintenance cleanup Attention reason enum. Exercise both values through the Issue detail projection and typed V1 deserialization.
