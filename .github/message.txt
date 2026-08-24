@@ -1,7 +1,7 @@
-fix(codex): seal MCP inventory readback
+docs: correct cancellation recovery migration
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Validate isolated Codex MCP readback even when the sealed manifest is empty. Reject paginated inventory responses before thread start because the first page cannot prove the complete authorized server set, and cover both cases with fake App Server regressions.
+    Update the normative runtime specification and generated OpenWiki architecture guidance to identify migration 0137 as the Attempt cancellation recovery migration. Also repair the adjacent malformed lease-ownership sentence.
