@@ -1,11 +1,9 @@
-Repair sealed capability runtime drift
+Keep Pi lifecycle work within runner scope
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Revalidate sealed Codex capability content before provider work and allow compatible native Goal MCP sessions.
+    Supervise the settled final-text diagnostic through the provider blocking-call supervisor so a missing Pi response cannot block an async daemon worker.
     
-    Drop drifted optional MCP servers for Codex, Cursor, and Grok while retaining fatal required-capability behavior and durable degraded evidence.
-    
-    Record Plugin and Skill invocation only when provider-native provenance identifies an authorized MCP server, avoiding false evidence from unqualified tool names.
+    Restore the prerequisite Pi Adapter and Extension implementation unchanged, keeping cleanup retry behavior and redacted provider-failure handling local to the operation runner.
