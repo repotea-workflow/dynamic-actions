@@ -1,9 +1,9 @@
-fix(runtime): repair lifecycle v2 acceptance
+test(runtime): cover activation delivery restarts
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-51
   description: |-
-    Restore the unpublished cancellation-recovery migration to contiguous version 0138 and align its acceptance and OpenWiki references.
+    Drive the canonical A-E resume scenario through the daemon activation consumer instead of invoking generation-2 recovery directly.
     
-    Model late Cursor ceiling cancellation with matching exact-session evidence so bounded timeout handoff can verify quiescence, load the exact session, and continue safely.
+    Verify queued activation survives a pre-delivery restart, delivery binds generation 2, stale generation 1 performs no I/O, and a post-delivery restart does not provision the Agent runtime twice.
