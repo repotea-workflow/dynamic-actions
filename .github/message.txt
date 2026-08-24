@@ -1,7 +1,9 @@
-fix: degrade optional Codex Plugin drift
+fix(codex): reject invalid MCP binding names
 
 codeon:
   version: 1
   authority: FWN-62
   description: |-
-    Keep required Codex Plugins fail-closed while treating missing or changed optional Plugins as degraded runtime evidence. Disable degraded optional Plugins in the invocation-scoped Codex runtime so pre-mutation routing can continue without expanding sealed capability authority.
+    Reject Codex MCP server identities that cannot be represented by the native TurnMcpBinding grammar while loading the operator runtime profile. This keeps the broader provider-neutral identity grammar for other providers and ensures invalid required capabilities fail before picker repository materialization.
+    
+    Add configuration coverage for dotted and slashed Codex MCP identities.
