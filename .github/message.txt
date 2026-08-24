@@ -1,7 +1,9 @@
-Fence inspection and recovery by lease generation
+fix(runtime): repair lifecycle v2 acceptance
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-18
   description: |-
-    Carry the runnable-lease generation into inspection and recovery operations, and validate the current held dispatch lease immediately before mutating provider actions or reconnect/resume I/O. Add focused stale-generation regressions and document the point-of-use fencing contract.
+    Restore the unpublished cancellation-recovery migration to contiguous version 0138 and align its acceptance and OpenWiki references.
+    
+    Model late Cursor ceiling cancellation with matching exact-session evidence so bounded timeout handoff can verify quiescence, load the exact session, and continue safely.
