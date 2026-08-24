@@ -1,7 +1,3 @@
-fix: enforce sealed capability degradation
+fix(codeon): bound terminal recovery retries
 
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Allow unavailable optional Codex Skill roots to remain degraded while preserving valid-content drift checks and durable runtime observations. Reject duplicate third-party MCP tool names during preflight and proxy readback. Stabilize the Cursor forced-cancellation regression around bounded guarded startup and report the worker result on failure.
+Runtime duration and process-exited evidence are not completion progress. Counting them as generation resets allowed FWN-8 to exceed 100 terminal retries.
