@@ -1,7 +1,7 @@
-fix capability manifest revalidation
+fix(runtime): repair recovery fence tests
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Reject Codex runtime-home Skill drift against sealed empty inventories and bound third-party MCP HTTP and stdio responses before preflight decoding.
+    Move the Codex stale-generation rejection counter to the runtime lease validation callback that recovery invokes. Assert that Cursor recovery creates no fake-agent report when the generation fence prevents process launch.
