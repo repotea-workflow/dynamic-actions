@@ -1,9 +1,9 @@
-fix(postgres): fence Agent-to-SCM lease release
+Resume late Cursor ceiling cancellation
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-18
   description: |-
-    Require the current source Agent dispatch to be terminal, bound to the held runnable-lease generation, and backed by canonical quiescent containment before an SCM handoff releases capacity.
+    Preserve pending resource-ceiling reconciliation when Cursor cancellation finishes after the controller timeout. Recovery now re-enters exact session load, rearms the lease, and dispatches one continuation instead of terminalizing the cancellation event.
     
-    Cover Review handoffs to LandingPreflight and RejectClose for quiescent, live, unknown, and stale-generation runtime evidence.
+    Extend the bounded cancellation race to recover the late Cursor session and assert a running disposition with one exact continuation.
