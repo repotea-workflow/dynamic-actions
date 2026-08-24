@@ -1,7 +1,3 @@
-fix(pi): retain cleanup retry authority
+fix(codeon): retry first v3 recovery once
 
-codeon:
-  version: 1
-  authority: FWN-70
-  description: |-
-    Reuse confirmed cleanup tombstones for completed cancellation and retain capability-only owners when early capability revocation fails.
+Use durable dispatch evidence counts so stale operations get one rollout retry while a second v3 terminal failure still parks.
