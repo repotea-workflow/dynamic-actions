@@ -1,9 +1,9 @@
-fix(pi): recover completed orphan cleanup
+fix(runtime): fail closed on unknown lease owners
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-51
   description: |-
-    Reuse validated Pi recovery evidence when accepted completion exists without an in-memory owner. Close completion authority and revoke the capability only when prompt, process, and temporary-resource cleanup proof is complete; otherwise retain controller decision authority.
+    Treat released runnable leases with unknown or incomplete runtime readback as startup authority conflicts before any resume can reacquire capacity.
     
-    Add regression coverage for both proven and incomplete cleanup outcomes.
+    Restore the first applied version-132 migration unchanged, renumber the later runnable-lease and cancellation-recovery migrations under unique versions, and cover the historical checksum upgrade path.
