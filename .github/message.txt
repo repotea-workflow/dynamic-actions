@@ -1,1 +1,3 @@
-style(swan): apply pinned Dart formatting
+fix(ci): exclude generated Dart from format
+
+Osprey and API generation checks own generated output; formatting it makes their canonical output stale.
