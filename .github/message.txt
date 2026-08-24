@@ -1,7 +1,7 @@
-Prevent Cursor restart continuation race
+Add authorization regression coverage and docs
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-8
   description: |-
-    Fail closed when a durable Cursor lifecycle expiry is recovered without a retained exact prompt cancellation target. Cover both idle and resource-ceiling restart paths with the shared fake-runtime no-resend test.
+    Compose config-to-provider Turn and scheduled tests for repository and organization scopes, feed realistic public-alias probe evidence into production account selection, and document structured scopes, diagnostics, migration, and rollback without adding product behavior.
