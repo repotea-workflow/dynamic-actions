@@ -47,7 +47,7 @@ jobs:
       - name: Configure FVM command
         run: |
           mkdir -p "$RUNNER_TEMP/bin"
-          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          printf '#!/bin/sh\nif [ "$1" = exec ]; then\n  shift\n  PATH="$FLUTTER_ROOT/bin:$FLUTTER_ROOT/bin/cache/dart-sdk/bin:$PATH"\n  export PATH\n  exec "$@"\nfi\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
           chmod +x "$RUNNER_TEMP/bin/fvm"
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
 
