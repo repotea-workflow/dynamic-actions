@@ -1,8 +1,7 @@
-fix(pi): enforce retained lifecycle authority
+Fence inspection and recovery by lease generation
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-51
   description: |-
-    Retain and verify Pi cancellation fences across dispatch and recovery.
-    Preserve active inspection state and map redacted authentication failures distinctly.
+    Carry the runnable-lease generation into inspection and recovery operations, and validate the current held dispatch lease immediately before mutating provider actions or reconnect/resume I/O. Add focused stale-generation regressions and document the point-of-use fencing contract.
