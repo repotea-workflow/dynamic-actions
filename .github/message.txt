@@ -1,9 +1,7 @@
-fix(pi): retain successful cleanup proof
+fix(runtime): preserve Grok recovery expiry
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Record a bounded cleanup-confirmed tombstone only after the Pi process, extension, completion context, capability, and input mapping are fully closed.
-    
-    Let concurrent inspect and recovery waiters return the accepted completion from that proof while preserving Unknown or controller-decision outcomes when the prior inspector was cancelled.
+    Keep a durably recorded Grok lifecycle expiry intact when an exact session is loaded after restart. Reconcile the expired invocation through bounded inspect, cancellation, and readback; only re-arm after matched provider activity is observed, and return Unknown when safe continuation remains unproved. Update focused recovery/resource-ceiling regressions and OpenWiki lifecycle guidance.
