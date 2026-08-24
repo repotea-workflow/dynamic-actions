@@ -1,7 +1,9 @@
-fix(postgres): order lease expiry by event sequence
+Fix Pi lifecycle edge cases
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-70
   description: |-
-    Use the execution_dispatch_events.event_sequence column when reading the latest lifecycle-v2 expiry event. This restores PostgreSQL lease readback for idle-expiry and resource-ceiling reconciliation.
+    Classify redacted Pi provider failures so authentication remains distinct, and report uncertain inspection transport outcomes before historical activity.
+    
+    Stabilize the blocked-inspection fixture with a fixture-local timeout and cover protocol loss after agent start.
