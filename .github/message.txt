@@ -1,3 +1,7 @@
-fix(codeon): retry first v3 recovery once
+fix(runtime): atomically rearm Grok activity
 
-Use durable dispatch evidence counts so stale operations get one rollout retry while a second v3 terminal failure still parks.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Persist recovered Grok activity evidence and lease re-arm in one PostgreSQL transaction so expiry cannot be cleared without durable continuation proof. Return Unknown when recovered activity persistence fails and cover the failure boundary with a focused regression.
