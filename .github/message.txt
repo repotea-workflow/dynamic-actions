@@ -1,9 +1,7 @@
-fix(runtime): rearm recovered activity leases
+Reject unexpected Codex MCP servers
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Re-arm Cursor and Grok activity leases before returning trusted Running recovery observations, persist the matched provider activity, and fall back to Unknown when durable recovery writes cannot be proved.
-    
-    Bound Grok provider inspection with the sealed inspect timeout while retaining or asynchronously restoring the exact session. Add fake-runtime regressions for inspection timeout and trusted-running idle-expiry recovery.
+    Require Codex App Server MCP readback to match the sealed server identity set before dispatch. Add an integration regression proving an ambient server causes fail-closed rejection before a turn starts.
