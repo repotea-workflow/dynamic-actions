@@ -1,7 +1,11 @@
-chore: remove unauthorized OpenWiki workflow
+Repair sealed capability runtime drift
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Delete the unapproved scheduled workflow that exposed repository secrets to external OpenWiki tooling and could create branches and pull requests. Restore the repository policy requiring local OpenWiki refreshes and separate authority for workflow changes.
+    Revalidate sealed Codex capability content before provider work and allow compatible native Goal MCP sessions.
+    
+    Drop drifted optional MCP servers for Codex, Cursor, and Grok while retaining fatal required-capability behavior and durable degraded evidence.
+    
+    Record Plugin and Skill invocation only when provider-native provenance identifies an authorized MCP server, avoiding false evidence from unqualified tool names.
