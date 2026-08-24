@@ -1,7 +1,11 @@
-Fix Pi dispatch and inspection authority
+merge(main): repair lifecycle v2 integration
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Bind Pi prompt dispatch to the durable permit digest and serialize completion cleanup with the inspection lease. Restore prerequisite-owned Pi adapter files while keeping runner failure handling compatible with the accepted redacted protocol.
+    Merge refreshed origin/main into the frozen lifecycle v2 target while preserving the required two-parent history.
+    
+    Renumber the lifecycle re-arm and undispatched-cancellation migrations into unique forward slots and extend contiguous catalog acceptance through version 138.
+    
+    Retain an externally accepted Cursor continuation when lease re-arm fails, return Unknown for Attention handling, and suppress duplicate continuation sends. Select the earliest overdue idle or resource-ceiling deadline for retained and recovered Cursor lifecycle authority.
