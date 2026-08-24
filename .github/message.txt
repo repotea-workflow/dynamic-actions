@@ -1,1 +1,9 @@
-fix(codeon): retry legacy Cursor terminal once
+fix(postgres): preserve migration authority
+
+codeon:
+  version: 1
+  authority: FWN-51
+  description: |-
+    Restore the applied cancellation recovery and final-cleanup migration files to their current-main checksums.
+    
+    Move the separately merged undispatched-cancellation constraint repair into unique forward migration 137, and extend the migration authority test through version 138.
