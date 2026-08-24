@@ -1,9 +1,7 @@
-Resume late Cursor ceiling cancellation
+fix: revalidate sealed agent capabilities
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Preserve pending resource-ceiling reconciliation when Cursor cancellation finishes after the controller timeout. Recovery now re-enters exact session load, rearms the lease, and dispatches one continuation instead of terminalizing the cancellation event.
-    
-    Extend the bounded cancellation race to recover the late Cursor session and assert a running disposition with one exact continuation.
+    Allow missing optional Codex Skill roots to remain degraded, keep thread-only Codex inventory acceptance unknown, and revalidate exact runtime-profile capabilities before Git materialization and binding persistence.
