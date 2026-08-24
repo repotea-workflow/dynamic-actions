@@ -1,10 +1,7 @@
-fix(codeon): keep live recover gaps running
+fix(cleanup): open Attention on receipt drift
 
-677081b7 classified dead Cursor as TWC but also reverted
-c3f49d21's recover-path deferral. Recover Unknown/StateUnavailable
-then opened runtime_outcome_unknown, owner-retried, and flashed
-FWN-1 revision/recovery_required while list_execution_attentions
-lagged.
-
-Restore recover-gap ObservedRunning. Cursor process-exited TWC
-still replaces.
+codeon:
+  version: 1
+  authority: FWN-47
+  description: |-
+    Persist typed, idempotent maintenance Attention atomically when cancellation recovery artifact cleanup seals ref drift or an unknown provider outcome. Preserve terminal Issue state and recovery audit evidence, and cover both outcomes through Issue-detail acceptance checks.
