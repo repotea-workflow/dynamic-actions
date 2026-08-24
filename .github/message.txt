@@ -1,9 +1,9 @@
-Enforce lifecycle cancellation timeouts
+fix(postgres): restore migration authority
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-51
   description: |-
-    Bound Codex cancellation inspection and readback with inspect_timeout_ms, and bound Codex, Cursor, and Grok exact cancellation with cancel_timeout_ms. Timed-out calls return OutcomeUnknown while Cursor and Grok retain exact session state for later recovery.
+    Restore the applied current-main 0135 and 0136 migration bytes, move runnable-lease integration and dispatch fencing to unused forward versions 0138 and 0139, and correct the forward cancellation-recovery constraint spelling required by that upgrade path.
     
-    Add focused fake-runtime regressions for all three providers and Codex cancellation readback.
+    Add PostgreSQL acceptance coverage that seeds the frozen through-0136 ledger and proves the production migrator upgrades it without checksum drift.
