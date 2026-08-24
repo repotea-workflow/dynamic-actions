@@ -1,7 +1,9 @@
-Fence cancellation recovery by lease generation
+fix(codeon): fence Codex plugin enablement drift
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Acquire the store-backed recovery claim and revalidate the current runnable lease before cancellation recovery reaches the Agent runner. Add a stale-generation regression and correct the runnable-lease integration migration references in the normative spec and OpenWiki architecture context.
+    Re-read the exact CODEX_HOME Plugin enablement set during capability revalidation so sealed bindings cannot gain ambient Plugins or lose required Plugins before dispatch.
+    
+    Return optional Plugin losses as degraded runtime availability and persist that evidence before provider mutation. Extend the capability regression to cover post-seal required disablement, ambient enablement, and optional disablement.
