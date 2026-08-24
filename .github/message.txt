@@ -1,7 +1,7 @@
-fix(pi): retain session on readback failure
+fix(codex): seal MCP inventory readback
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-62
   description: |-
-    Restore the removed Pi session owner when completion persistence readback fails during inspection. Cover both the post-event and post-settlement readback paths so the process, Extension, completion context, and capability remain available for retry and recovery.
+    Validate isolated Codex MCP readback even when the sealed manifest is empty. Reject paginated inventory responses before thread start because the first page cannot prove the complete authorized server set, and cover both cases with fake App Server regressions.
