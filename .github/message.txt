@@ -1,3 +1,1 @@
-fix(ci): harden generated client check
-
-Use a runner-provided search tool and ignore Melos IDE metadata already excluded by repository policy.
+fix(ci): clear Robin lint errors
