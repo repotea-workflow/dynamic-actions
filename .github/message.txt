@@ -1,7 +1,9 @@
-fix(postgres): restore migration 0132 authority
+fix(pi): preserve recovery completion authority
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-70
   description: |-
-    Restore the published undispatched-attempt cancellation migration at version 0132 so existing SQLx ledgers retain their checksum authority. Move cancellation recovery forward to version 0139 with constraint names adjusted for the intervening schema, and add frozen-ledger upgrade acceptance coverage.
+    Return terminal recovery whenever cleanup readback finds an accepted completion, and cover both same-daemon cleanup race branches.
+    
+    Restore the dependency-owned Pi protocol API and keep cancellation-only inspection coordination local to the Pi runner.
