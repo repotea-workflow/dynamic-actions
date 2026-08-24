@@ -25,8 +25,11 @@ jobs:
       # taiki-e/install-action just
       - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
 
-      - name: Install Bubblewrap
-        run: sudo apt-get update && sudo apt-get install --yes bubblewrap
+      - name: Configure Bubblewrap
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes bubblewrap
+          sudo sysctl --write kernel.apparmor_restrict_unprivileged_userns=0
 
       # pnpm/action-setup v6
       - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271
