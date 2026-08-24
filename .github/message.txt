@@ -1,11 +1,9 @@
-fix(runtime): reconcile exact expiry recovery
+fix(pi): recover completed orphan cleanup
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-70
   description: |-
-    Scope expiry replay to the latest unrearmed durable event, including fence and deadline identity.
+    Reuse validated Pi recovery evidence when accepted completion exists without an in-memory owner. Close completion authority and revoke the capability only when prompt, process, and temporary-resource cleanup proof is complete; otherwise retain controller decision authority.
     
-    Resume Codex resource-ceiling work on the exact thread and rearm its durable lease only after continuation authority is registered. Drive Grok expiry through integrated exact recovery/readback and classify proven continuations as running.
-    
-    Add regressions for stale multi-cycle expiry candidates, Codex exact-thread continuation, and Grok integrated recovery.
+    Add regression coverage for both proven and incomplete cleanup outcomes.
