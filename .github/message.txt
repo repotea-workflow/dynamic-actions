@@ -1,9 +1,9 @@
-fix(postgres): preserve migration authority
+Fix Pi lifecycle review findings
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Restore the applied cancellation recovery and final-cleanup migration files to their current-main checksums.
+    Clear the ambient environment for Pi version and RPC child processes while preserving only the explicit bootstrap allowlist.
     
-    Move the separately merged undispatched-cancellation constraint repair into unique forward migration 137, and extend the migration authority test through version 138.
+    Restore redacted provider failure categories so authentication and exhausted rate limits map correctly. Retain cancellation cleanup ownership when capability revocation fails so same-daemon recovery can retry finalization.
