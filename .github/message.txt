@@ -1,9 +1,9 @@
-fix(codeon): fence Codex plugin enablement drift
+Enforce lifecycle cancellation timeouts
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Re-read the exact CODEX_HOME Plugin enablement set during capability revalidation so sealed bindings cannot gain ambient Plugins or lose required Plugins before dispatch.
+    Bound Codex cancellation inspection and readback with inspect_timeout_ms, and bound Codex, Cursor, and Grok exact cancellation with cancel_timeout_ms. Timed-out calls return OutcomeUnknown while Cursor and Grok retain exact session state for later recovery.
     
-    Return optional Plugin losses as degraded runtime availability and persist that evidence before provider mutation. Extend the capability regression to cover post-seal required disablement, ambient enablement, and optional disablement.
+    Add focused fake-runtime regressions for all three providers and Codex cancellation readback.
