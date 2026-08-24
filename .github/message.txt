@@ -1,9 +1,18 @@
-merge(main): reconcile Pi runner authority
+Implement Pi operation runner lifecycle (#221)
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: fewensa-70
   description: |-
-    Merge the refreshed origin/main runnable-lease and send-permit contracts into the frozen Pi runner head.
+    ## Summary
     
-    Update Pi inspect and recovery to validate current runtime authority before provider I/O and cleanup transitions. Honor durable settlement and terminal provider evidence before transport-loss fallback, while preserving Unknown for active protocol loss. Add focused fake-Pi settlement-before-EOF coverage and update lifecycle fixtures for the current request contract.
+    - Add Pi as a full AgentOperationRunner with deterministic runtime/input references and operation-scoped completion authority.
+    - Enforce send-once prompt dispatch, durable checkpoint ordering, completion-first inspection, cancellation cleanup, and conservative recovery.
+    - Validate exact model/reasoning application and retain bounded, redacted runtime evidence.
+    
+    ## Verification
+    
+    - TMPDIR=/data/codeon/worktrees/fewensa/codeoo/FWN-70/attempt-1.codeon-tmp cargo test -p codeoo-agent-pi --test fake_pi (13 passed)
+    - TMPDIR=/data/codeon/worktrees/fewensa/codeoo/FWN-70/attempt-1.codeon-tmp cargo test -p codeon execution::agents::pi::tests --lib (6 passed)
+    - cargo fmt --all -- --check
+    - git diff HEAD^ HEAD --check
