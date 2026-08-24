@@ -1,7 +1,9 @@
-fix(pi): validate recovery dispatch authority
+fix(postgres): fence Agent-to-SCM lease release
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-51
   description: |-
-    Fail closed before Pi recovery cleanup when a supplied runtime or mapped input reference does not belong to the requested dispatch. Cover two retained sessions and remove runner-owned provider failure classification changes that belong to the Pi adapter dependency boundary.
+    Require the current source Agent dispatch to be terminal, bound to the held runnable-lease generation, and backed by canonical quiescent containment before an SCM handoff releases capacity.
+    
+    Cover Review handoffs to LandingPreflight and RejectClose for quiescent, live, unknown, and stale-generation runtime evidence.
