@@ -1,9 +1,7 @@
-merge(main): repair runnable lease integration
+Retain Pi cleanup authority on blocking failures
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Refresh the candidate from current main while preserving recovery cleanup and migration authority.
-    
-    Require a persisted confirmed reap plus independent quiescent containment before granting runtime_reaped lease-release authority.
+    Preserve Pi session or cleanup ownership when supervised blocking calls drain, panic, or fail to join. Keep completion context and operation capability active until process and temporary-resource cleanup are confirmed, and cover spawn, dispatch, inspection, cancellation, cleanup, and panic paths with focused fixtures.
