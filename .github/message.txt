@@ -1,7 +1,7 @@
-fix(runtime): keep terminal Grok idle expiry
+fix(grok): preserve unknown MCP acceptance
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Return terminal observations after terminal idle-cancellation readback instead of resuming the exact Grok prompt. Preserve exact continuation for resource-ceiling recovery and correct the attempt-cancellation recovery migration number in the runtime specification.
+    Require an independently observed exact Grok session MCP catalog digest before recording provider-accepted capability inventory. Keep acceptance unknown when session/read is unavailable or the readback is incomplete, and cover both exact-readback and generic-ready paths.
