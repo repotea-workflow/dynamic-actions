@@ -1,7 +1,7 @@
-Repair sealed capability runtime evidence
+test(codeoff): bound notification shutdown
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-35
   description: |-
-    Restore the Codex native-Goal incompatibility boundary for manifests with third-party MCP servers. Preserve provider-qualified Plugin, Skill, and MCP invocation provenance, and persist structured per-capability runtime degradation for optional MCP servers and Plugin drift. Revalidate optional Cursor and Grok Plugin trees before spawn, omit drifted optional Plugins, and deduplicate Codex optional MCP degradation.
+    Run the acceptance scenario in a joined Tokio task so panic and timeout failures become captured results. Consume the runtime with shutdown_timeout before propagating either failure.
