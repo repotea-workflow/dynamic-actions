@@ -1,9 +1,7 @@
-fix: seal capability evidence across restarts
+test(codeon): prove cancellation lifecycle
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-48
   description: |-
-    Keep MCP result receipts in a daemon-private sibling root and use directory-relative no-follow file operations so Agent-writable temporary roots cannot forge invocation evidence.
-    
-    Archive each sanitized, secret-free MCP and Codex plugin capability generation by sealed manifest digest. Runtime routing and Codex, Cursor, and Grok provisioning now replay the binding's archived generation after profile changes while continuing to fence executable, native profile, and account identity drift.
+    Add cross-repository cancellation fault isolation coverage and prove that cleanup requeue creates a fresh Attempt only after current direct and inherited Parent blockers complete. Document the cross-layer acceptance gate in the picker specification and owning OpenWiki page.
