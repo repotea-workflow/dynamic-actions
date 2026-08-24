@@ -1,9 +1,7 @@
-fix(pi): retain terminal cancellation readback
+Fence Agent I/O by runnable lease generation
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-51
   description: |-
-    Preserve confirmed cleanup as bounded terminal cancellation evidence so controller recovery can read back a natural abort/exit race without a retained process owner.
-    
-    Restore the Pi adapter protocol and Grok activity handling to the reviewed dependency baseline so FWN-70 owns only runner lifecycle behavior.
+    Revalidate the durable send permit against current dispatch and runnable-lease authority immediately before Codex, Cursor, and Grok runtime mutations. Reject delayed workers whose lease generation, dispatch fence, phase, request, state, or permit expiry is no longer current, and cover the stale-generation boundary with a zero-external-call regression test.
