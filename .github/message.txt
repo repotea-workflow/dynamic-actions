@@ -1,7 +1,7 @@
-fix(runtime): recover stale lease activations
+fix(capabilities): preserve runtime evidence
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Quarantine stale activation authority with owner diagnostics, then fail the runtime process before worker admission so startup reconciliation preserves held capacity and exposes recovery evidence.
+    Allow bounded unknown-result invocation evidence for authorized Plugins and Skills. Record exact Codex and Grok MCP inventory readback as provider-accepted while retaining unknown evidence for absent or degraded readback.
