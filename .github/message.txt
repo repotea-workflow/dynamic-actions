@@ -1,11 +1,9 @@
-fix(pi): preserve terminal failure authority
+Fix Grok expiry cancellation readback
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Classify structured Pi authentication failures separately from provider rejection without retaining provider diagnostics.
+    Perform a bounded exact provider event readback after Grok accepts an expiry cancellation request. Preserve and persist trusted activity, accept completion races, recover only after terminal evidence, and return Unknown when the exact outcome remains ambiguous.
     
-    Treat final assistant text as optional after proven settlement, and keep cleanup available while provider calls are draining.
-    
-    Add adapter and runner regressions for redaction, authentication mapping, and settled diagnostic-task failure.
+    Extend the existing Grok activity-expiry test to cover the accepted cancellation plus terminal readback path while retaining the already-terminal and unknown cancellation cases.
