@@ -1,7 +1,3 @@
-fix(runtime): repair recovery fence tests
+fix(codeon): harden Cursor self-recovery
 
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Move the Codex stale-generation rejection counter to the runtime lease validation callback that recovery invokes. Assert that Cursor recovery creates no fake-agent report when the generation fence prevents process launch.
+Count continuation limits across consecutive stalled turns, distinguish the provider leader from orphan workers, and migrate stale v2 terminal evidence once.
