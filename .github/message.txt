@@ -1,7 +1,7 @@
-fix(runtime): preserve Grok recovery expiry
+fix capability manifest revalidation
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Keep a durably recorded Grok lifecycle expiry intact when an exact session is loaded after restart. Reconcile the expired invocation through bounded inspect, cancellation, and readback; only re-arm after matched provider activity is observed, and return Unknown when safe continuation remains unproved. Update focused recovery/resource-ceiling regressions and OpenWiki lifecycle guidance.
+    Reject Codex runtime-home Skill drift against sealed empty inventories and bound third-party MCP HTTP and stdio responses before preflight decoding.
