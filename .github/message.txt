@@ -1,7 +1,7 @@
-fix(cleanup): open Attention on receipt drift
+Enforce sealed capability boundaries
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: FWN-62
   description: |-
-    Persist typed, idempotent maintenance Attention atomically when cancellation recovery artifact cleanup seals ref drift or an unknown provider outcome. Preserve terminal Issue state and recovery audit evidence, and cover both outcomes through Issue-detail acceptance checks.
+    Reject repository-local Codex capability sources before provider dispatch, bound paginated MCP catalog collection before retention, reject empty authorized MCP catalogs during manifest preflight, and preserve concurrent Cursor MCP configuration changes with compare-and-swap cleanup semantics.
