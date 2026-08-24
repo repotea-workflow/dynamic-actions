@@ -1,9 +1,1 @@
-fix(pi): fence cleanup and preserve auth failures
-
-codeon:
-  version: 1
-  authority: FWN-70
-  description: |-
-    Validate retained Pi dispatch ownership before cleanup can terminate a process or close completion resources.
-    
-    Carry a redacted typed Provider failure category from the Pi adapter so authentication failures remain distinct from Provider rejection, with focused lifecycle regressions.
+fix(codeon): park exhausted terminal retries
