@@ -1,7 +1,7 @@
-fix: seal capability preflight evidence
+Fix Codeoff notification test shutdown
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-35
   description: |-
-    Serve the verified MCP catalog snapshot instead of mutable upstream inventory. Validate Codex Plugins against the exact runtime home's enabled native configuration, reject unsupported required Codex Plugin directories, require discoverable Skill manifests, and degrade malformed optional trees. Advance the migration acceptance ledger through version 136.
+    Explicitly close the shared SQLite state after the notification-store clone is dropped so the acceptance task finishes without waiting on lingering pool ownership.
