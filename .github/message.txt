@@ -1,7 +1,9 @@
-fix: revalidate Codex plugins before mutation
+fix(pi): fence cleanup and preserve auth failures
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Apply the existing Codex plugin enablement check in the shared runtime-profile availability predicate so required profile drift fails before planning or materialization. Supply sealed profile snapshots and MCP config-path entries in the routing-health fixture to preserve the new fail-closed invariant.
+    Validate retained Pi dispatch ownership before cleanup can terminate a process or close completion resources.
+    
+    Carry a redacted typed Provider failure category from the Pi adapter so authentication failures remain distinct from Provider rejection, with focused lifecycle regressions.
