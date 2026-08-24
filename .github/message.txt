@@ -1,18 +1,9 @@
-Implement Pi operation runner lifecycle (#221)
+fix(runtime): bound lifecycle recovery
 
 codeon:
   version: 1
-  authority: fewensa-70
+  authority: FWN-18
   description: |-
-    ## Summary
+    Clear a reconciled resource ceiling from the current dispatch projection while preserving its original deadline in append-only lifecycle evidence.
     
-    - Add Pi as a full AgentOperationRunner with deterministic runtime/input references and operation-scoped completion authority.
-    - Enforce send-once prompt dispatch, durable checkpoint ordering, completion-first inspection, cancellation cleanup, and conservative recovery.
-    - Validate exact model/reasoning application and retain bounded, redacted runtime evidence.
-    
-    ## Verification
-    
-    - TMPDIR=/data/codeon/worktrees/fewensa/codeoo/FWN-70/attempt-1.codeon-tmp cargo test -p codeoo-agent-pi --test fake_pi (13 passed)
-    - TMPDIR=/data/codeon/worktrees/fewensa/codeoo/FWN-70/attempt-1.codeon-tmp cargo test -p codeon execution::agents::pi::tests --lib (6 passed)
-    - cargo fmt --all -- --check
-    - git diff HEAD^ HEAD --check
+    Apply the sealed recovery timeout to Grok exact load and Codex exact recovery and resource-ceiling continuation, returning unknown evidence while the blocking supervisor retains late-call ownership. Add PostgreSQL and provider regressions for rearm and stalled calls.
