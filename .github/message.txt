@@ -1,7 +1,7 @@
-fix(runtime): fence queued lease activations
+fix(postgres): order lease expiry by event sequence
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-18
   description: |-
-    Exclude Attempts with queued runnable-lease activations from the generic execution-runtime candidate query so bounded activation delivery remains the only path that can start resumed work. Extend the existing lease lifecycle integration scenario to verify the queued Attempt is not returned as a generic candidate.
+    Use the execution_dispatch_events.event_sequence column when reading the latest lifecycle-v2 expiry event. This restores PostgreSQL lease readback for idle-expiry and resource-ceiling reconciliation.
