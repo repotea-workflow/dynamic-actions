@@ -1,9 +1,1 @@
-fix(runtime): close Cursor expiry races
-
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Re-arm the retained Cursor resource-ceiling epoch after a successful continuation so later ceilings remain observable.
-    
-    Reread durable completion after resource-ceiling quiescence, after exact session readback, and after idle exact readback before continuing or returning a terminal recovery disposition. Add fake-runtime regressions for consecutive ceilings and both completion race windows.
+fix(codeon): retry legacy Cursor terminal once
