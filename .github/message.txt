@@ -1,9 +1,3 @@
-fix(codeon): isolate optional capabilities
+fix(codeon): recover terminal attention races
 
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Allow missing or malformed optional Codex Skill roots to remain sealed as degraded instead of aborting binding preparation.
-    
-    Use an invocation-scoped Codex App Server for every non-empty capability manifest so Plugin-only profiles cannot reuse stale capability authority. Add focused regressions for optional Skill degradation and Plugin-only isolation.
+Operator-cancel materialization can race canonical runtime-unknown opening and park an otherwise retryable operation.
