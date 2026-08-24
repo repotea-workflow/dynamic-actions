@@ -1,9 +1,1 @@
-merge(main): integrate runnable lease lifecycle
-
-codeon:
-  version: 1
-  authority: FWN-51
-  description: |-
-    Merge the refreshed main branch into the frozen revision head.
-    
-    Renumber the runnable-lease integration migrations after current migration authority and reconcile runtime, store, cancellation, Pi routing, startup recovery, tests, and generated documentation without dropping either branch's behavior.
+fix(codeon): recover pre-dispatch worker faults
