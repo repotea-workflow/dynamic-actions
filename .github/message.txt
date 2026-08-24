@@ -1,9 +1,7 @@
-fix(runtime): fence lease release and activation
+Fix Pi dispatch and inspection authority
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Require a durable confirmed interrupt receipt bound to the exact Attempt, Operation, and Dispatch before reaped closure can release runnable capacity.
-    
-    Hold admitted activation workers behind outbox delivery so failed delivery cannot race external execution.
+    Bind Pi prompt dispatch to the durable permit digest and serialize completion cleanup with the inspection lease. Restore prerequisite-owned Pi adapter files while keeping runner failure handling compatible with the accepted redacted protocol.
