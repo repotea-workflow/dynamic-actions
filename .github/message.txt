@@ -1,3 +1,203 @@
-fix(codeon): harden Cursor self-recovery
+Integrate runnable leases with Waiting, resume, and restart (#189)
 
-Count continuation limits across consecutive stalled turns, distinguish the provider leader from orphan workers, and migrate stale v2 terminal evidence once.
+codeon:
+  version: 1
+  authority: fewensa-51
+  description: |-
+    # Objective
+    
+    Integrate the durable runnable-lease state machine into actual Attempt, Operation, Agent/runtime, Waiting, Attention, activation, and startup reconciliation paths so Waiting can free execution capacity without permitting stale or possibly-live work to continue.
+    
+    # Dependency and handoff
+    
+    Blocked by the durable runnable-lease state-machine Task. Consume its store APIs and generation fence; do not bypass them with direct SQL.
+    
+    This PR must finish lease lifecycle integration before the daemon-owned Observer Task begins. It may use fake/manual observation inputs for integration tests, but it does not own the production auto-observation worker.
+    
+    # Owned scope
+    
+    - pure release/resume eligibility policy;
+    - runtime quiescence/reaping/not-applicable evidence binding;
+    - Waiting and Execution Attention open/resolution transaction participants;
+    - activation outbox and execution-runtime resume fencing;
+    - scheduler ordering between ready resumptions and new claims;
+    - startup reconciliation of held/released leases;
+    - daemon integration tests and operational diagnostics;
+    - owning normative docs/OpenWiki updates.
+    
+    # Release authority
+    
+    A runnable lease may be released only when one of these durable facts is available:
+    
+    1. the Agent/runtime reports terminal and independent containment/process readback proves quiescence;
+    2. Codeon successfully reaps the owned process tree and independently confirms it is gone;
+    3. the current Operation kind has an explicit not-applicable runtime-ownership contract;
+    4. the Attempt enters a receipt-backed terminal state.
+    
+    The following must hold the lease:
+    
+    - runtime outcome unknown;
+    - process/cgroup readback incomplete;
+    - possibly-live child process;
+    - provider or persistence ambiguity that does not prove runtime closure;
+    - stale dispatch/operation authority;
+    - Agent message text without structured completion and terminal evidence;
+    - daemon shutdown before quiescence is proven.
+    
+    Recovery Required does not automatically mean released. The runtime evidence decides.
+    
+    # Atomic Waiting/Attention open
+    
+    For an owner that enters Waiting or Recovery Required after runtime closure, one owner transaction must:
+    
+    ```text
+    lock Attempt + Operation + dispatch/runtime authority
+    validate quiescence evidence
+    open/update Waiting or Execution Attention
+    apply RuntimeLeaseDecision
+    release the runnable lease when authorized
+    persist activation/resume checkpoint and next_observe_at/operator action
+    commit all effects together
+    ```
+    
+    No observable state may say Waiting with a released lease unless the same transaction committed the owner checkpoint. No lease may be released while the runtime owner remains ambiguous.
+    
+    # Atomic resume and activation
+    
+    When owner policy says an Attempt may resume:
+    
+    1. validate current Attention/owner/Attempt/Operation versions and latest observation digest;
+    2. attempt runnable-lease reacquisition under global capacity authority;
+    3. if capacity is full, persist a stable `ready_to_resume_capacity_pending` state without busy retry;
+    4. if acquired, bind the new lease generation into the activation/dispatch authority;
+    5. enqueue activation in the same transaction;
+    6. only a worker presenting that exact generation may perform Agent start/resume or mutating provider I/O.
+    
+    A delayed worker with an older generation must fail before external I/O.
+    
+    # Resume fairness
+    
+    Already-active ready-to-resume Attempts must receive bounded priority over admitting new Issues:
+    
+    - durable ready-resume candidates ordered by ready timestamp and stable identity;
+    - each scheduler/runtime tick processes a bounded number first;
+    - remaining capacity may admit new Issues;
+    - fairness remains scoped and deterministic;
+    - no priority rule bypasses blockers, Profile authority, Repository verification, current owner evidence, or fences;
+    - capacity pending is not a hot loop.
+    
+    Avoid a broad scheduler rewrite. Add the smallest deterministic coordination needed to prevent starvation.
+    
+    # Startup reconciliation
+    
+    Before readiness:
+    
+    - held + confirmed runtime active: preserve held;
+    - held + confirmed quiescent with valid owner state: apply the legal release transition;
+    - held + unknown runtime: preserve held and enter/reaffirm Recovery Required;
+    - released + resume pending: keep released and queue bounded reacquisition;
+    - released + discovered live runtime: fail closed as authority conflict;
+    - terminal + held: idempotently complete terminal release;
+    - missing/corrupt lease projection: stop affected execution and expose bounded recovery evidence.
+    
+    Do not release capacity merely to make startup succeed.
+    
+    # Canonical A-E integration scenario
+    
+    Configure total-active 8 and runnable 4.
+    
+    A, B, C, and D run with held leases; E cannot start. A publishes a PR and waits for checks. Codeon independently proves A's process tree quiescent. The same transaction opens A's Waiting/Attention owner checkpoint and releases A's lease. A remains active, so total-active is still consumed. E then claims the free runnable slot and starts.
+    
+    A later receives a checks-passed observation through a fake/manual owner path. B, C, D, and E still occupy four slots, so A becomes `ready_to_resume_capacity_pending` and no Agent starts. When B terminally releases its lease, A is the oldest ready resume, atomically reacquires generation 2, enqueues activation, and resumes Review/Revision. At no point are more than four runnable leases held, and an old generation-1 worker cannot perform I/O.
+    
+    Also test the unsafe variant: if A's runtime readback is unknown, A enters Recovery Required but keeps its held lease; E remains unable to start. This proves recovery cannot manufacture capacity.
+    
+    # Observability
+    
+    Expose bounded fields sufficient to diagnose:
+    
+    ```text
+    total_active_count
+    total_active_capacity
+    runnable_held_count
+    runnable_capacity
+    runnable_resume_pending_count
+    lease_release_reason
+    lease_reacquire_outcome
+    lease_generation
+    ```
+    
+    Never log token material, prompts, Agent output, raw provider bodies, unbounded stdout/stderr, or worktree content.
+    
+    # Documentation and OpenWiki
+    
+    Update the lifecycle, Attention, scheduler, startup reconciliation, and capacity sections of `docs/spec/picker-runtime.md`, then run `openwiki code --update --print`. Preserve the complete A-E scenario in the owning architecture context. The final Observer Task will consolidate the final three-pool explanation in OpenWiki. Do not add a standalone plan/report.
+    
+    # Non-goals
+    
+    - No production automatic Observer loop.
+    - No new provider request limiter.
+    - No changing Issue workflow semantics.
+    - No automatic force-success or recovery bypass.
+    - No production capacity value change.
+    - No broad execution-runtime rewrite unrelated to lease fencing.
+    - No cleanup of unrelated legacy states.
+    
+    # Verification
+    
+    Cover:
+    
+    - all release-authority classifications;
+    - atomic Waiting open plus release;
+    - transaction rollback leaves both owner and lease unchanged;
+    - capacity-pending resume;
+    - reacquire plus activation atomicity;
+    - stale generation refusal before external I/O;
+    - resume priority and bounded fairness;
+    - unknown runtime retains held capacity;
+    - shutdown at each boundary;
+    - startup reconciliation matrix;
+    - daemon crash before/after commit;
+    - A-E safe and unsafe variants;
+    - fake Agent/runtime integration proving process concurrency never exceeds runnable capacity.
+    
+    Run focused domain, PostgreSQL, daemon integration, format, clippy, migration acceptance inherited from the blocker, and repository verification.
+    
+    # Definition of done
+    
+    Waiting genuinely frees runnable capacity only when runtime closure is proven; resumption cannot execute without a current lease generation; restart preserves the same authority; and the A-E scenario works end-to-end without a production Observer loop.
+    
+    ---
+    
+    # Post-creation review enrichment
+    
+    ## Exact orchestration
+    
+    - Parent: `fewensa-49`.
+    - Blocked by: `fewensa-53`.
+    - Blocks: `fewensa-52`.
+    - Do not start until `fewensa-53` is receipt-finalized and merged.
+    - Update local main and use only the merged store API; direct runnable-lease SQL is forbidden.
+    
+    ## Corrected runtime boundary
+    
+    A runnable lease is required before starting, resuming, steering, or otherwise granting execution authority to an Agent/runtime. It is not automatically required for every Codeon-owned SCM provider operation.
+    
+    For Publication, Merge, RejectClose, cleanup, or another non-Agent phase:
+    
+    - derive runtime ownership from the typed phase contract;
+    - when runtime is not applicable, release/classify the lease only through durable evidence;
+    - continue to fence SCM mutations with the phase's existing intent/checkpoint/readback/outcome-unknown contract;
+    - reacquire only when the next selected phase needs Agent/runtime capacity.
+    
+    The A-E scenario specifically resumes an Agent-backed Review/Revision phase, so A must reacquire there.
+    
+    ## Transaction ownership rule
+    
+    Do not introduce a cross-store pseudo-transaction assembled in daemon code. Extend the existing owner transaction-participant boundary so Attention/Waiting, lease release/reacquire, and activation outbox effects share one real PostgreSQL transaction.
+    
+    ## Fairness and safety gate
+    
+    Ready resumptions receive bounded priority, not unconditional starvation of new claims. Tests must cover multiple Profiles and repositories, persistent capacity pending without busy polling, and unknown runtime evidence retaining a held lease.
+    
+    Review must reject any path that releases solely because Attempt state is Waiting or RecoveryRequired.
