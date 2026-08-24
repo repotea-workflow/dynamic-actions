@@ -1,24 +1,7 @@
-Complete notification acceptance and rollout documentation (#219)
+Fence cancellation recovery by lease generation
 
 codeon:
   version: 1
-  authority: fewensa-35
+  authority: FWN-51
   description: |-
-    ## Summary
-    
-    - Add focused Codeon fake-provider acceptance and bounded Codeoff local Webhook coverage for Markdown and plaintext delivery.
-    - Document the shared architecture, full event catalogs, configuration, route semantics, provider extension, operational metrics, rollout, recovery, enablement, and rollback.
-    - Preserve frozen payload and evidence semantics while demonstrating provider substitution without producer changes.
-    
-    ## Verification
-    
-    - `cargo fmt --all -- --check` passed.
-    - Shared notification core and Webhook tests passed (31 tests).
-    - Codeoff mock Webhook acceptance passed, and Codeon activity catalog acceptance passed (19 tests).
-    - Codeoff notification/runtime regression surfaces passed; a broader scheduler-state run exposed unrelated existing concurrency failures and hangs.
-    - Required workspace Clippy is blocked by an untouched `clippy::while-let-loop` warning in `crates/agent/acp/src/transport.rs`.
-    - Required workspace tests are blocked by an untouched non-exhaustive `IgnoredLegacyPolicy` match in `codeon/crates/codeon/src/execution/agents/grok.rs`.
-    - PostgreSQL acceptance was not run because `CODEON_TEST_DATABASE_URL` is unavailable in this environment.
-    - OpenWiki regeneration was attempted but the tool cannot initialize read-only `/root/.openwiki`; authoritative checked-in documentation and links were reviewed directly.
-    
-    Closes #130
+    Acquire the store-backed recovery claim and revalidate the current runnable lease before cancellation recovery reaches the Agent runner. Add a stale-generation regression and correct the runnable-lease integration migration references in the normative spec and OpenWiki architecture context.
