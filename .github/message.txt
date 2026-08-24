@@ -1,9 +1,7 @@
-fix(pi): preserve recovery completion authority
+fix(review): restore migration and workflow authority
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Return terminal recovery whenever cleanup readback finds an accepted completion, and cover both same-daemon cleanup race branches.
-    
-    Restore the dependency-owned Pi protocol API and keep cancellation-only inspection coordination local to the Pi runner.
+    Restore the published migration 0135 checksum and add frozen-ledger regression coverage. Remove the unauthorized scheduled OpenWiki workflow and restore the repository's local-only OpenWiki authority guidance.
