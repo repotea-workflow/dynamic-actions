@@ -1,7 +1,9 @@
-Enforce sealed Codex MCP proxy limits
+merge(main): integrate runnable lease lifecycle
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Route every available sealed Codex MCP server through an invocation-scoped capability proxy, preserve exact catalog readback for required and optional servers, and keep secret values in the isolated child environment. Add focused coverage for proxy isolation, optional-server inclusion, and stdio binding validation.
+    Merge the refreshed main branch into the frozen revision head.
+    
+    Renumber the runnable-lease integration migrations after current migration authority and reconcile runtime, store, cancellation, Pi routing, startup recovery, tests, and generated documentation without dropping either branch's behavior.
