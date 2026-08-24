@@ -1,7 +1,9 @@
-fix capability invocation evidence
+Fix MCP evidence for read-only operations
 
 codeon:
   version: 1
   authority: FWN-62
   description: |-
-    Persist bounded MCP result digests and byte counts from the sealed proxy for Codex, Cursor, and Grok while preserving explicit unknown metadata for provider-only evidence. Apply one startup deadline across MCP transport initialization and catalog verification, and cover normalized replay evidence.
+    Prepare the daemon-owned operation temp root for every binding while granting it to the Agent only for writable operations. Derive MCP result observation storage from the sealed Worktree root so Planning and Review provisioning can retain evidence without expanding Agent authority.
+    
+    Cover both read-only operation kinds and preserve the existing mutation-capability assertions.
