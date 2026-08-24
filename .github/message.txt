@@ -1,3 +1,7 @@
-fix(codeon): wake opened attentions
+Fix nested Pi authentication classification
 
-Opening an Attention after its Attempt is already recovery-required may not change owner state. Persist a reconciliation wakeup in the same transaction so a contended inline retry is not stranded.
+codeon:
+  version: 1
+  authority: FWN-70
+  description: |-
+    Read authentication diagnostics from Pi message_end and agent_end nested message shapes without retaining provider text. Add regression assertions for both event forms.
