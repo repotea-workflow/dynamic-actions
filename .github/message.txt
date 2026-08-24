@@ -1,7 +1,7 @@
-fix(review): restore migration and workflow authority
+fix: degrade optional Codex Plugin drift
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Restore the published migration 0135 checksum and add frozen-ledger regression coverage. Remove the unauthorized scheduled OpenWiki workflow and restore the repository's local-only OpenWiki authority guidance.
+    Keep required Codex Plugins fail-closed while treating missing or changed optional Plugins as degraded runtime evidence. Disable degraded optional Plugins in the invocation-scoped Codex runtime so pre-mutation routing can continue without expanding sealed capability authority.
