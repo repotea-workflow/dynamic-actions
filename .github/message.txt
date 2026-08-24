@@ -1,7 +1,7 @@
-fix: fence authority-conflict activations
+Repair sealed capability runtime evidence
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Exclude attempts with authority-conflict activation rows from generic runtime admission. Add regression coverage that scans runtime candidates immediately after activation authority validation fails.
+    Restore the Codex native-Goal incompatibility boundary for manifests with third-party MCP servers. Preserve provider-qualified Plugin, Skill, and MCP invocation provenance, and persist structured per-capability runtime degradation for optional MCP servers and Plugin drift. Revalidate optional Cursor and Grok Plugin trees before spawn, omit drifted optional Plugins, and deduplicate Codex optional MCP degradation.
