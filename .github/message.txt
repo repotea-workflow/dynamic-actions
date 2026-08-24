@@ -1,1 +1,9 @@
-fix(codeon): recover pre-dispatch worker faults
+fix(runtime): rearm continued activity leases
+
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Atomically re-arm lifecycle v2 leases after exact Grok or Cursor continuation so durable provider activity remains writable without losing the original expiry and ceiling lineage.
+    
+    Select Grok's earliest overdue deadline and prevent recovered generations from replaying a reconciled expiry. Add migration 0135, PostgreSQL/provider regressions, observability classification, and OpenWiki lifecycle documentation.
