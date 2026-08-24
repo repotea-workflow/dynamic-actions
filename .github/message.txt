@@ -1,7 +1,9 @@
-fix(pi): preserve cleanup uncertainty
+fix(codex): isolate empty capability manifests
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-62
   description: |-
-    Do not treat a missing retained owner after an inspection wait as proof that Pi process and Extension cleanup completed. Require retained ownership or independent recovery evidence, and cover cancellation while inspection owns the session.
+    Require Codex runtime isolation for every sealed capability manifest, including an empty allowlist. Persist the canonical empty MCP inventory digest as provider-accepted evidence when exact readback succeeds without optional degradation.
+    
+    Add a regression covering empty-manifest isolation and ProviderAccepted readback.
