@@ -1,9 +1,9 @@
-Keep Pi lifecycle work within runner scope
+fix(runtime): close Cursor expiry races
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Supervise the settled final-text diagnostic through the provider blocking-call supervisor so a missing Pi response cannot block an async daemon worker.
+    Re-arm the retained Cursor resource-ceiling epoch after a successful continuation so later ceilings remain observable.
     
-    Restore the prerequisite Pi Adapter and Extension implementation unchanged, keeping cleanup retry behavior and redacted provider-failure handling local to the operation runner.
+    Reread durable completion after resource-ceiling quiescence, after exact session readback, and after idle exact readback before continuing or returning a terminal recovery disposition. Add fake-runtime regressions for consecutive ceilings and both completion race windows.
