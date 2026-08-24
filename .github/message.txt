@@ -1,7 +1,24 @@
-fix(api): expose cleanup attention reasons
+Delete recovery artifacts after Issue finalization (#218)
 
 codeon:
   version: 1
-  authority: FWN-47
+  authority: fewensa-47
   description: |-
-    Add ref_drift and provider_outcome_unknown to the closed V1 maintenance cleanup Attention reason enum. Exercise both values through the Issue detail projection and typed V1 deserialization.
+    ## Summary
+    
+    - enqueue exact cancellation recovery refs and snapshots only after receipt-backed Issue finalization or explicit Issue cancellation
+    - defer cleanup while an Attempt, cancellation, recovery, or Attention consumer remains active
+    - delete exact refs with OID compare-and-delete, read back absence, and retain preservation manifests and digests
+    - keep recovery cleanup idempotency separate from immediate post-terminal cleanup
+    
+    ## Verification
+    
+    - `cargo fmt --all -- --check`
+    - `cargo test -p codeon-postgres post_terminal_cleanup --lib` (3 passed)
+    - `cargo test -p codeon-tracker cleanup --lib` (22 passed)
+    - `cargo check -p codeon-api`
+    
+    ## Known baseline blockers
+    
+    - `cargo test -p codeon local_cleanup --lib` is blocked by the pre-existing non-exhaustive `ActivityRecordOutcome::IgnoredLegacyPolicy` match in `execution/agents/grok.rs`.
+    - migration acceptance is blocked by the baseline duplicate `0132` migration authority and its stale expected maximum version.
