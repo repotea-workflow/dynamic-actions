@@ -1,9 +1,11 @@
-fix(codeon): seal Codex capability isolation
+fix(pi): preserve terminal failure authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Isolate Codex HOME-based Skill discovery, preserve optional Plugin degradation, and fence capability drift across process spawn.
+    Classify structured Pi authentication failures separately from provider rejection without retaining provider diagnostics.
     
-    Restore durable preflight freshness in sanitized inventory projections and add PostgreSQL snapshot, observation, invocation, and restart round-trip coverage.
+    Treat final assistant text as optional after proven settlement, and keep cleanup available while provider calls are draining.
+    
+    Add adapter and runner regressions for redaction, authentication mapping, and settled diagnostic-task failure.
