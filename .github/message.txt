@@ -1,7 +1,7 @@
-fix(codeon): close capability sealing races
+fix(pi): validate recovery dispatch authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Fail a sealed Codex binding if a previously degraded Skill root becomes discoverable. Launch stdio MCP servers from the verified open executable handle and read back the running executable identity in both preflight and proxy paths.
+    Fail closed before Pi recovery cleanup when a supplied runtime or mapped input reference does not belong to the requested dispatch. Cover two retained sessions and remove runner-owned provider failure classification changes that belong to the Pi adapter dependency boundary.
