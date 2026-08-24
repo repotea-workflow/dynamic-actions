@@ -1,9 +1,9 @@
-Fix Pi lifecycle review findings
+Fix Pi lifecycle cleanup races
 
 codeon:
   version: 1
   authority: FWN-70
   description: |-
-    Clear the ambient environment for Pi version and RPC child processes while preserving only the explicit bootstrap allowlist.
+    Defer lease-contended completion observations until cleanup has an owner, keep active retryable provider failures running, and retain cleanup-only ownership when finalization must be retried.
     
-    Restore redacted provider failure categories so authentication and exhausted rate limits map correctly. Retain cancellation cleanup ownership when capability revocation fails so same-daemon recovery can retry finalization.
+    Add focused Pi runner coverage for completion contention, active provider failures, and cleanup-owner capability revocation retries.
