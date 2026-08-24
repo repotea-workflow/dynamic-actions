@@ -1,9 +1,9 @@
-Fence repository-local agent capabilities
+fix(pi): retain uncertain dispatch authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Reject unsealed Cursor and Grok repository capability sources at their provider spawn boundaries. Cursor preserves its guarded MCP replacement while failing before mutation for other local config, Plugin, or Skill sources; Grok applies repository isolation only to sealed binding launches, leaving operator-home startup preflight intact.
+    Retain the dispatch cancellation identity before the prompt write boundary so SentUnknown and InputAccepted checkpoint failures remain cancellable and recoverable without resend.
     
-    Add focused tests proving the rejected sources cannot spawn a provider process or mutate the guarded Cursor MCP configuration.
+    Treat genuine pre-send recovery as a controller decision, preserve unknown cancellation outcomes and cleanup ownership, and restore the Pi adapter files to the already-merged dependency contract.
