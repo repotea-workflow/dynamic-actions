@@ -1,9 +1,9 @@
-test(runtime): cover activation delivery restarts
+Fence repository-local agent capabilities
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Drive the canonical A-E resume scenario through the daemon activation consumer instead of invoking generation-2 recovery directly.
+    Reject unsealed Cursor and Grok repository capability sources at their provider spawn boundaries. Cursor preserves its guarded MCP replacement while failing before mutation for other local config, Plugin, or Skill sources; Grok applies repository isolation only to sealed binding launches, leaving operator-home startup preflight intact.
     
-    Verify queued activation survives a pre-delivery restart, delivery binds generation 2, stale generation 1 performs no I/O, and a post-delivery restart does not provision the Agent runtime twice.
+    Add focused tests proving the rejected sources cannot spawn a provider process or mutate the guarded Cursor MCP configuration.
