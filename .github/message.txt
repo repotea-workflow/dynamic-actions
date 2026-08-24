@@ -1,7 +1,7 @@
-Reject unexpected Codex MCP servers
+fix(runtime): preserve ambiguous startup leases
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Require Codex App Server MCP readback to match the sealed server identity set before dispatch. Add an integration regression proving an ambient server causes fail-closed rejection before a turn starts.
+    Require terminal Agent ownership evidence before startup treats a current SCM phase as runtime-not-applicable. Preserve the held lease and enter Recovery Required when the Agent dispatch for that generation is non-terminal, and cover the fresh-empty containment regression.
