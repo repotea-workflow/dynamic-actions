@@ -1,7 +1,9 @@
-Bound provider expiry reconciliation
+fix(pi): retain terminal cancellation readback
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-70
   description: |-
-    Apply the sealed cancellation deadline to Cursor idle/resource-ceiling expiry and Grok activity expiry. Preserve retained session authority for late blocking-call completion, return an Unknown observation when cancellation remains ambiguous, and cover provider-started stalls in both fake runtimes.
+    Preserve confirmed cleanup as bounded terminal cancellation evidence so controller recovery can read back a natural abort/exit race without a retained process owner.
+    
+    Restore the Pi adapter protocol and Grok activity handling to the reviewed dependency baseline so FWN-70 owns only runner lifecycle behavior.
