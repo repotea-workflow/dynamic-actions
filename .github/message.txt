@@ -1,1 +1,9 @@
-fix(codeon): stabilize operation progress persistence
+fix(runtime): fence lease release and activation
+
+codeon:
+  version: 1
+  authority: FWN-51
+  description: |-
+    Require a durable confirmed interrupt receipt bound to the exact Attempt, Operation, and Dispatch before reaped closure can release runnable capacity.
+    
+    Hold admitted activation workers behind outbox delivery so failed delivery cannot race external execution.
