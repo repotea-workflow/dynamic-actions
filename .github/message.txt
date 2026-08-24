@@ -1,7 +1,3 @@
-test(codeoff): bound notification shutdown
+fix(codeon): wake opened attentions
 
-codeon:
-  version: 1
-  authority: FWN-35
-  description: |-
-    Run the acceptance scenario in a joined Tokio task so panic and timeout failures become captured results. Consume the runtime with shutdown_timeout before propagating either failure.
+Opening an Attention after its Attempt is already recovery-required may not change owner state. Persist a reconciliation wakeup in the same transaction so a contended inline retry is not stranded.
