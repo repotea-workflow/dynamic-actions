@@ -1,3 +1,7 @@
-fix(codeon): recover terminal attention races
+fix(codeon): seal capability drift checks
 
-Operator-cancel materialization can race canonical runtime-unknown opening and park an otherwise retryable operation.
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Fail closed on ambiguous Codex plugin cache entries and degraded Codex skill roots, revalidate required Grok MCP capabilities during preflight and provisioning, and update the Codex direct-runtime test for capability provenance.
