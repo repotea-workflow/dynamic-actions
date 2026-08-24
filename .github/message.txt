@@ -1,9 +1,9 @@
-fix: isolate degraded Codex capabilities
+Fix startup resume lease reconciliation
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Fail Codex capability preparation when optional filesystem capabilities remain provider-discoverable but cannot be sealed, and revalidate sealed optional Plugin and Skill content before dispatch.
+    Classify released resume-pending leases for bounded reacquisition when runtime readback is unknown, while preserving the authority conflict for positively discovered live runtimes.
     
-    Force an invocation-scoped Codex App Server with an explicit MCP table whenever the sealed manifest contains MCP authority, including when every optional server degrades away.
+    Add policy coverage and a PostgreSQL restart regression that persists a real capacity-pending activation and exercises incomplete and missing containment readbacks.
