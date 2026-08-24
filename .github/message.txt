@@ -1,7 +1,9 @@
-fix(runtime): preserve lifecycle recovery authority
+merge(main): reconcile Pi runner authority
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-70
   description: |-
-    Keep the original resource ceiling unchanged when recovered activity re-arms an idle lease. Retain drained Grok activity and reconciliation state across transient acceptance failures so an empty follow-up inspection can safely retry the exact evidence.
+    Merge the refreshed origin/main runnable-lease and send-permit contracts into the frozen Pi runner head.
+    
+    Update Pi inspect and recovery to validate current runtime authority before provider I/O and cleanup transitions. Honor durable settlement and terminal provider evidence before transport-loss fallback, while preserving Unknown for active protocol loss. Add focused fake-Pi settlement-before-EOF coverage and update lifecycle fixtures for the current request contract.
