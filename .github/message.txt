@@ -1,7 +1,7 @@
-fix: revalidate sealed agent capabilities
+fix: revalidate Codex plugins before mutation
 
 codeon:
   version: 1
   authority: FWN-62
   description: |-
-    Allow missing optional Codex Skill roots to remain degraded, keep thread-only Codex inventory acceptance unknown, and revalidate exact runtime-profile capabilities before Git materialization and binding persistence.
+    Apply the existing Codex plugin enablement check in the shared runtime-profile availability predicate so required profile drift fails before planning or materialization. Supply sealed profile snapshots and MCP config-path entries in the routing-health fixture to preserve the new fail-closed invariant.
