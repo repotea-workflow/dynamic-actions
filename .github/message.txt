@@ -1,9 +1,9 @@
-fix(pi): retain uncertain dispatch authority
+fix(grok): stop ambiguous expiry recovery
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Retain the dispatch cancellation identity before the prompt write boundary so SentUnknown and InputAccepted checkpoint failures remain cancellable and recoverable without resend.
+    Classify Grok expiry cancellation through the exact cancellation outcome before closing the retained session. Requested, unknown, unsupported, and adapter-error outcomes now remain retained and return an unknown observation for controller Attention; only confirmed or already-terminal cancellation may proceed to close and exact recovery.
     
-    Treat genuine pre-send recovery as a controller decision, preserve unknown cancellation outcomes and cleanup ownership, and restore the Pi adapter files to the already-merged dependency contract.
+    Add fake-runtime coverage proving a provider `unknown` cancellation status does not close or resume the exact session.
