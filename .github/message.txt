@@ -1,7 +1,7 @@
-fix: enforce sealed capability boundaries
+fix(postgres): restore migration 0132 authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Reject reserved Plugin identities while preparing runtime-profile capability snapshots. Bound HTTP, SSE, and stdio MCP responses before JSON-RPC decoding while retaining post-decode result checks.
+    Restore the published undispatched-attempt cancellation migration at version 0132 so existing SQLx ledgers retain their checksum authority. Move cancellation recovery forward to version 0139 with constraint names adjusted for the intervening schema, and add frozen-ledger upgrade acceptance coverage.
