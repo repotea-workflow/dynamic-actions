@@ -1,9 +1,7 @@
-Fix Grok expiry cancellation readback
+fix(runtime): recover stale lease activations
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-51
   description: |-
-    Perform a bounded exact provider event readback after Grok accepts an expiry cancellation request. Preserve and persist trusted activity, accept completion races, recover only after terminal evidence, and return Unknown when the exact outcome remains ambiguous.
-    
-    Extend the existing Grok activity-expiry test to cover the accepted cancellation plus terminal readback path while retaining the already-terminal and unknown cancellation cases.
+    Quarantine stale activation authority with owner diagnostics, then fail the runtime process before worker admission so startup reconciliation preserves held capacity and exposes recovery evidence.
