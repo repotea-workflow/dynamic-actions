@@ -1,9 +1,9 @@
-fix(grok): stop ambiguous expiry recovery
+fix(codeon): seal Codex capability isolation
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Classify Grok expiry cancellation through the exact cancellation outcome before closing the retained session. Requested, unknown, unsupported, and adapter-error outcomes now remain retained and return an unknown observation for controller Attention; only confirmed or already-terminal cancellation may proceed to close and exact recovery.
+    Isolate Codex HOME-based Skill discovery, preserve optional Plugin degradation, and fence capability drift across process spawn.
     
-    Add fake-runtime coverage proving a provider `unknown` cancellation status does not close or resume the exact session.
+    Restore durable preflight freshness in sanitized inventory projections and add PostgreSQL snapshot, observation, invocation, and restart round-trip coverage.
