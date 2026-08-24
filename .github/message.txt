@@ -1,7 +1,3 @@
-fix(pi): preserve lifecycle cleanup authority
+fix(codeon): stabilize completion recovery
 
-codeon:
-  version: 1
-  authority: FWN-70
-  description: |-
-    Serialize accepted-completion inspection and recovery with the retained session owner. Classify authentication from real Pi failure payloads and retain partial Extension materialization ownership until cleanup is confirmed.
+Read durable completion by dispatch input authority and honor the frozen Cursor continuation budget. Version corrected terminal evidence so historical Cursor and Grok failures receive one compatibility retry without reopening the dispatch loop.
