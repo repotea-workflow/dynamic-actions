@@ -1,7 +1,7 @@
-fix(capabilities): preserve runtime evidence
+fix(pi): preserve lifecycle cleanup authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Allow bounded unknown-result invocation evidence for authorized Plugins and Skills. Record exact Codex and Grok MCP inventory readback as provider-accepted while retaining unknown evidence for absent or degraded readback.
+    Serialize accepted-completion inspection and recovery with the retained session owner. Classify authentication from real Pi failure payloads and retain partial Extension materialization ownership until cleanup is confirmed.
