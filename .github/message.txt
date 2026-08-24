@@ -1,3 +1,3 @@
-fix(ci): support fvm exec in check wrapper
+fix(ci): harden generated client check
 
-generate-check resolves Dart with fvm exec, which the dynamic CI shim treated as a Flutter SDK binary.
+Use a runner-provided search tool and ignore Melos IDE metadata already excluded by repository policy.
