@@ -1,11 +1,7 @@
-fix(runtime): fence ambiguous lifecycle recovery
+Enforce sealed Codex MCP proxy limits
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Treat requested Codex interrupts after lifecycle expiry as unknown so stalled turns enter Attention without polling-based renewal.
-    
-    Stop Cursor restart recovery from dispatching a continuation when exact session load cannot prove prior prompt state, while preserving completion-race acceptance and removing obsolete recovered-clock scaffolding.
-    
-    Reject profile-only lifecycle v2 canaries and document the safe Cursor restart boundary.
+    Route every available sealed Codex MCP server through an invocation-scoped capability proxy, preserve exact catalog readback for required and optional servers, and keep secret values in the isolated child environment. Add focused coverage for proxy isolation, optional-server inclusion, and stdio binding validation.
