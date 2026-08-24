@@ -1,33 +1,3 @@
-Add tenant-scoped account management (#38)
+chore: merge main into hardening branch
 
-* feat: add tenant-scoped account management
-
-Introduce multi-identifier identities and tenant-scoped administrator sessions without automatic account merging.
-
-Backfill protected tenant administrator roles for existing tenants without promoting historical members.
-
-* fix(ci): support fvm exec in check wrapper
-
-generate-check resolves Dart with fvm exec, which the dynamic CI shim treated as a Flutter SDK binary.
-
-* fix(ci): harden generated client check
-
-Use a runner-provided search tool and ignore Melos IDE metadata already excluded by repository policy.
-
-* fix(ci): clear Robin lint errors
-
-* style(swan): apply pinned Dart formatting
-
-* fix(ci): exclude generated Dart from format
-
-Osprey and API generation checks own generated output; formatting it makes their canonical output stale.
-
-* fix(ci): install Bubblewrap for DB tests
-
-* fix(ci): enable Bubblewrap user namespaces
-
-Ubuntu 24.04 AppArmor otherwise blocks loopback setup inside the isolated network namespace.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Preserve tenant-scoped account semantics while integrating local management validation and authorization hardening.
