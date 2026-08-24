@@ -1,7 +1,7 @@
-Bound Codeoff notification acceptance test
+fix(runtime): fence queued lease activations
 
 codeon:
   version: 1
-  authority: FWN-35
+  authority: FWN-51
   description: |-
-    Own the Tokio runtime in the shared Webhook acceptance test, cap the complete async scenario at 90 seconds, and cap runtime shutdown at five seconds. This prevents SQLite cleanup from holding CI indefinitely while preserving Markdown and plaintext delivery assertions.
+    Exclude Attempts with queued runnable-lease activations from the generic execution-runtime candidate query so bounded activation delivery remains the only path that can start resumed work. Extend the existing lease lifecycle integration scenario to verify the queued Attempt is not returned as a generic candidate.
