@@ -1,7 +1,11 @@
-fix(grok): preserve unknown MCP acceptance
+fix(pi): close lifecycle recovery gaps
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Require an independently observed exact Grok session MCP catalog digest before recording provider-accepted capability inventory. Keep acceptance unknown when session/read is unavailable or the readback is incomplete, and cover both exact-readback and generic-ready paths.
+    Clean up retained Pi resources when supervised model configuration fails.
+    
+    Track confirmed process cleanup separately so recovery can retry Extension deletion without inspecting an exited session. Preserve pending provider failures across cleanup activity until retry or successful-turn evidence supersedes them.
+    
+    Add focused regression coverage for all three lifecycle races.
