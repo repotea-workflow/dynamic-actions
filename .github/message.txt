@@ -1,9 +1,7 @@
-fix(runtime): fail closed on unknown lease owners
+fix: seal capability preflight evidence
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Treat released runnable leases with unknown or incomplete runtime readback as startup authority conflicts before any resume can reacquire capacity.
-    
-    Restore the first applied version-132 migration unchanged, renumber the later runnable-lease and cancellation-recovery migrations under unique versions, and cover the historical checksum upgrade path.
+    Serve the verified MCP catalog snapshot instead of mutable upstream inventory. Validate Codex Plugins against the exact runtime home's enabled native configuration, reject unsupported required Codex Plugin directories, require discoverable Skill manifests, and degrade malformed optional trees. Advance the migration acceptance ledger through version 136.
