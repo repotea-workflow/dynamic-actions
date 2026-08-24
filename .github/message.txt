@@ -1,7 +1,7 @@
-fix(pi): preserve provider failure categories
+fix(codeon): close capability sealing races
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-62
   description: |-
-    Restore the Grok legacy activity outcome match so the Codeon library compiles. Preserve redacted Pi provider failure kinds across the adapter boundary and map authentication failures to the dedicated runtime category.
+    Fail a sealed Codex binding if a previously degraded Skill root becomes discoverable. Launch stdio MCP servers from the verified open executable handle and read back the running executable identity in both preflight and proxy paths.
