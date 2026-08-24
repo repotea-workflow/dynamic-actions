@@ -1,9 +1,9 @@
-Fix startup resume lease reconciliation
+fix(codeon): isolate optional capabilities
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Classify released resume-pending leases for bounded reacquisition when runtime readback is unknown, while preserving the authority conflict for positively discovered live runtimes.
+    Allow missing or malformed optional Codex Skill roots to remain sealed as degraded instead of aborting binding preparation.
     
-    Add policy coverage and a PostgreSQL restart regression that persists a real capacity-pending activation and exercises incomplete and missing containment readbacks.
+    Use an invocation-scoped Codex App Server for every non-empty capability manifest so Plugin-only profiles cannot reuse stale capability authority. Add focused regressions for optional Skill degradation and Plugin-only isolation.
