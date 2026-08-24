@@ -1,11 +1,9 @@
-fix(pi): close lifecycle recovery gaps
+fix(runtime): rearm recovered activity leases
 
 codeon:
   version: 1
-  authority: FWN-70
+  authority: FWN-18
   description: |-
-    Clean up retained Pi resources when supervised model configuration fails.
+    Re-arm Cursor and Grok activity leases before returning trusted Running recovery observations, persist the matched provider activity, and fall back to Unknown when durable recovery writes cannot be proved.
     
-    Track confirmed process cleanup separately so recovery can retry Extension deletion without inspecting an exited session. Preserve pending provider failures across cleanup activity until retry or successful-turn evidence supersedes them.
-    
-    Add focused regression coverage for all three lifecycle races.
+    Bound Grok provider inspection with the sealed inspect timeout while retaining or asynchronously restoring the exact session. Add fake-runtime regressions for inspection timeout and trusted-running idle-expiry recovery.
