@@ -1,24 +1,11 @@
-Delete recovery artifacts after Issue finalization (#218)
+fix(runtime): fence ambiguous lifecycle recovery
 
 codeon:
   version: 1
-  authority: fewensa-47
+  authority: FWN-18
   description: |-
-    ## Summary
+    Treat requested Codex interrupts after lifecycle expiry as unknown so stalled turns enter Attention without polling-based renewal.
     
-    - enqueue exact cancellation recovery refs and snapshots only after receipt-backed Issue finalization or explicit Issue cancellation
-    - defer cleanup while an Attempt, cancellation, recovery, or Attention consumer remains active
-    - delete exact refs with OID compare-and-delete, read back absence, and retain preservation manifests and digests
-    - keep recovery cleanup idempotency separate from immediate post-terminal cleanup
+    Stop Cursor restart recovery from dispatching a continuation when exact session load cannot prove prior prompt state, while preserving completion-race acceptance and removing obsolete recovered-clock scaffolding.
     
-    ## Verification
-    
-    - `cargo fmt --all -- --check`
-    - `cargo test -p codeon-postgres post_terminal_cleanup --lib` (3 passed)
-    - `cargo test -p codeon-tracker cleanup --lib` (22 passed)
-    - `cargo check -p codeon-api`
-    
-    ## Known baseline blockers
-    
-    - `cargo test -p codeon local_cleanup --lib` is blocked by the pre-existing non-exhaustive `ActivityRecordOutcome::IgnoredLegacyPolicy` match in `execution/agents/grok.rs`.
-    - migration acceptance is blocked by the baseline duplicate `0132` migration authority and its stale expected maximum version.
+    Reject profile-only lifecycle v2 canaries and document the safe Cursor restart boundary.
