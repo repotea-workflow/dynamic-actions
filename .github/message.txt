@@ -1,9 +1,7 @@
-Fix MCP evidence for read-only operations
+fix(runtime): preserve lifecycle recovery authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Prepare the daemon-owned operation temp root for every binding while granting it to the Agent only for writable operations. Derive MCP result observation storage from the sealed Worktree root so Planning and Review provisioning can retain evidence without expanding Agent authority.
-    
-    Cover both read-only operation kinds and preserve the existing mutation-capability assertions.
+    Keep the original resource ceiling unchanged when recovered activity re-arms an idle lease. Retain drained Grok activity and reconciliation state across transient acceptance failures so an empty follow-up inspection can safely retry the exact evidence.
