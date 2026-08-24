@@ -1,3 +1,1 @@
-fix(ci): exclude generated Dart from format
-
-Osprey and API generation checks own generated output; formatting it makes their canonical output stale.
+fix(ci): install Bubblewrap for DB tests
