@@ -1,7 +1,9 @@
-Repair sealed MCP runtime boundaries
+merge(main): repair runnable lease integration
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-51
   description: |-
-    Reject native-goal dispatch when a sealed manifest requires third-party MCP isolation. Degrade optional MCP failures without dropping required bindings, bound terminal invocation retention, and repair the isolated-runtime fixture assertions.
+    Refresh the candidate from current main while preserving recovery cleanup and migration authority.
+    
+    Require a persisted confirmed reap plus independent quiescent containment before granting runtime_reaped lease-release authority.
