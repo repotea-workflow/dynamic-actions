@@ -1,7 +1,9 @@
-fix(runtime): fence recovery side effects
+fix(pi): retain successful cleanup proof
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Revalidate runnable lease generations immediately before Cursor completion capability issuance and Codex idle-expiry cancellation. Revoke Cursor completion authority when the final pre-provider lease fence fails, and cover both stale recovery races with focused regression tests.
+    Record a bounded cleanup-confirmed tombstone only after the Pi process, extension, completion context, capability, and input mapping are fully closed.
+    
+    Let concurrent inspect and recovery waiters return the accepted completion from that proof while preserving Unknown or controller-decision outcomes when the prior inspector was cancelled.
