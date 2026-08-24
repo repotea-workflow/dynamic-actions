@@ -1,7 +1,3 @@
-Merge origin/main and resolve Grok activity semantics
+fix(codeon): requeue timed-out materialization
 
-codeon:
-  version: 1
-  authority: FWN-35
-  description: |-
-    Synchronize the notification acceptance branch with the refreshed target branch while preserving both sides of the sole conflict. Keep the notification compatibility match arm and retain main's accepted/recorded semantics for ignored legacy Grok activity policy.
+Pre-operation Git timeout recovery has no runtime authority to resume and otherwise parks forever. Abandon the never-dispatched attempt and requeue its Issue atomically.
