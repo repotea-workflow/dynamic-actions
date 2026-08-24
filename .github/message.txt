@@ -1,3 +1,7 @@
-fix(codeon): requeue timed-out materialization
+Repair sealed MCP runtime boundaries
 
-Pre-operation Git timeout recovery has no runtime authority to resume and otherwise parks forever. Abandon the never-dispatched attempt and requeue its Issue atomically.
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Reject native-goal dispatch when a sealed manifest requires third-party MCP isolation. Degrade optional MCP failures without dropping required bindings, bound terminal invocation retention, and repair the isolated-runtime fixture assertions.
