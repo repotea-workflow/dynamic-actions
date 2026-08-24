@@ -1,9 +1,1 @@
-Fix Pi lifecycle cleanup races
-
-codeon:
-  version: 1
-  authority: FWN-70
-  description: |-
-    Defer lease-contended completion observations until cleanup has an owner, keep active retryable provider failures running, and retain cleanup-only ownership when finalization must be retried.
-    
-    Add focused Pi runner coverage for completion contention, active provider failures, and cleanup-owner capability revocation retries.
+fix(codeon): stabilize operation progress persistence
