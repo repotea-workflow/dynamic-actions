@@ -1,9 +1,7 @@
-fix(postgres): preserve ambiguous Agent lease ownership
+fix: enforce sealed capability boundaries
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Keep the latest generation-bound Agent dispatch as durable runnable-lease ownership across intervening SCM phases. SCM not-applicable Waiting evidence now holds capacity when Agent terminal or containment readback is ambiguous, while proven closure supplies the release authority.
-    
-    Block SCM-to-Agent handoff when the prior Agent owner is unresolved. When closure is proven, release the old generation before atomically reacquiring and queueing activation with a fresh generation. Add PostgreSQL regressions for SCM Waiting release and downstream Agent rollback, and align the lifecycle documentation.
+    Reject reserved Plugin identities while preparing runtime-profile capability snapshots. Bound HTTP, SSE, and stdio MCP responses before JSON-RPC decoding while retaining post-decode result checks.
