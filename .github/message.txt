@@ -1,7 +1,7 @@
-Fence Agent I/O by runnable lease generation
+fix: enforce sealed capability degradation
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-62
   description: |-
-    Revalidate the durable send permit against current dispatch and runnable-lease authority immediately before Codex, Cursor, and Grok runtime mutations. Reject delayed workers whose lease generation, dispatch fence, phase, request, state, or permit expiry is no longer current, and cover the stale-generation boundary with a zero-external-call regression test.
+    Allow unavailable optional Codex Skill roots to remain degraded while preserving valid-content drift checks and durable runtime observations. Reject duplicate third-party MCP tool names during preflight and proxy readback. Stabilize the Cursor forced-cancellation regression around bounded guarded startup and report the worker result on failure.
