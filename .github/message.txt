@@ -1,3 +1,7 @@
-chore: merge main into hardening branch
+fix(auth): harden management workflows (#39)
 
-Preserve tenant-scoped account semantics while integrating local management validation and authorization hardening.
+Reject inherited Platform Owner access and map unique database conflicts consistently.
+
+Add the cleanup migration, regression coverage, and matching Robin form validation.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
