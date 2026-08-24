@@ -1,7 +1,7 @@
-Enforce sealed capability boundaries
+Prevent Cursor restart continuation race
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Reject repository-local Codex capability sources before provider dispatch, bound paginated MCP catalog collection before retention, reject empty authorized MCP catalogs during manifest preflight, and preserve concurrent Cursor MCP configuration changes with compare-and-swap cleanup semantics.
+    Fail closed when a durable Cursor lifecycle expiry is recovered without a retained exact prompt cancellation target. Cover both idle and resource-ceiling restart paths with the shared fake-runtime no-resend test.
