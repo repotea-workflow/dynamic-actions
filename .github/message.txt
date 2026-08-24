@@ -1,7 +1,7 @@
-fix(runtime): atomically rearm Grok activity
+fix capability invocation evidence
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Persist recovered Grok activity evidence and lease re-arm in one PostgreSQL transaction so expiry cannot be cleared without durable continuation proof. Return Unknown when recovered activity persistence fails and cover the failure boundary with a focused regression.
+    Persist bounded MCP result digests and byte counts from the sealed proxy for Codex, Cursor, and Grok while preserving explicit unknown metadata for provider-only evidence. Apply one startup deadline across MCP transport initialization and catalog verification, and cover normalized replay evidence.
