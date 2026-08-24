@@ -1,7 +1,7 @@
-fix(runtime): preserve ambiguous startup leases
+fix(pi): retain session on readback failure
 
 codeon:
   version: 1
-  authority: FWN-51
+  authority: FWN-70
   description: |-
-    Require terminal Agent ownership evidence before startup treats a current SCM phase as runtime-not-applicable. Preserve the held lease and enter Recovery Required when the Agent dispatch for that generation is non-terminal, and cover the fresh-empty containment regression.
+    Restore the removed Pi session owner when completion persistence readback fails during inspection. Cover both the post-event and post-settlement readback paths so the process, Extension, completion context, and capability remain available for retry and recovery.
