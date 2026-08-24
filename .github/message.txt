@@ -1,9 +1,8 @@
-fix(codex): reject invalid MCP binding names
+fix(pi): enforce retained lifecycle authority
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-70
   description: |-
-    Reject Codex MCP server identities that cannot be represented by the native TurnMcpBinding grammar while loading the operator runtime profile. This keeps the broader provider-neutral identity grammar for other providers and ensures invalid required capabilities fail before picker repository materialization.
-    
-    Add configuration coverage for dotted and slashed Codex MCP identities.
+    Retain and verify Pi cancellation fences across dispatch and recovery.
+    Preserve active inspection state and map redacted authentication failures distinctly.
