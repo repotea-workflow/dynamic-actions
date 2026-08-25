@@ -1,9 +1,7 @@
-Merge main and harden capability evidence
+test(codeon): repair cancellation acceptance fixtures
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-48
   description: |-
-    Resolve the refreshed origin/main integration while preserving the sealed capability manifest behavior.
-    
-    Keep MCP result metadata unknown unless it has exact provider correlation, and cover stale singleton receipts. Bound optional Skill-root degradation references by digest while retaining canonical manifest paths, including runtime readback evidence.
+    Keep cancellation acceptance aligned with current durable authority: split multi-statement SQL setup, use current timestamps and Issue versions, reseal rewritten cleanup manifests, terminate active consumers through the cancellation lifecycle, and bound the cross-repository daemon test stack. This preserves exact provider isolation and cleanup/requeue evidence without changing product behavior.
