@@ -1,3 +1,7 @@
-fix(codeon): recover durable cursor generation
+test(runtime): cover Grok beyond four hours
 
-Retained sessions can lose their in-memory containment owner while the durable active generation remains. Read it back before applying the sealed continuation budget.
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Extend the deterministic Grok activity acceptance test through 4 hours 10 minutes of real activity. Exercise two resource-ceiling continuation and rearm cycles before verifying idle expiry cleanup.
