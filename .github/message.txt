@@ -1,9 +1,9 @@
-fix: enforce sealed capability evidence
+test(codeon): prove cancellation isolation cleanup
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-48
   description: |-
-    Apply the sealed Codex Plugin table to every isolated invocation so live runtime-home changes cannot expand or remove binding authority.
+    Add a PostgreSQL-backed daemon runtime regression with simultaneous Repository attempts, exact cancellation targeting, provider panic isolation, and continued dispatch in the unaffected Repository.
     
-    Keep concurrent same-tool MCP result metadata unknown without a provider-visible call identity, and reject malformed MCP transport, environment, and tool catalog definitions before required preflight while degrading optional entries.
+    Exercise immediate no-unique-code cleanup against a real Git repository and verify exact worktree, temporary root, and branch removal plus idempotent replay.
