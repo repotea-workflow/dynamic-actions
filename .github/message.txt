@@ -1,7 +1,1 @@
-test(runtime): cover Grok beyond four hours
-
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Extend the deterministic Grok activity acceptance test through 4 hours 10 minutes of real activity. Exercise two resource-ceiling continuation and rearm cycles before verifying idle expiry cleanup.
+fix(codeon): skip stale startup wakeups
