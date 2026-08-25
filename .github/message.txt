@@ -1,7 +1,7 @@
-fix smoke-e2e merge capability preflight against loopback GitHub
+fix: repair sealed capability evidence
 
 codeon:
   version: 1
-  authority: FWN-1
+  authority: FWN-62
   description: |-
-    Route GitHubRepositoryCapabilityProvider through CODEON_SMOKE_GITHUB_API_BASE during smoke-e2e and teach the fake GitHub GraphQL handler to answer RepositoryMergeCapabilities so environment admission can proceed without calling api.github.com.
+    Renumber the capability migrations after the existing catalog, correlate bounded MCP result receipts with exact provider call identifiers before acknowledgement, and bind Grok session MCP acceptance to server transport and endpoint identity.
