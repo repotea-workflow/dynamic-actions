@@ -1,1 +1,9 @@
-fix(codeon): skip stale startup wakeups
+fix: repair sealed capability evidence
+
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Carry an MCP proxy correlation digest through Codex, Cursor, and Grok result readback so provider call identifiers cannot misassociate bounded invocation evidence.
+    
+    Fence active validator-v2 bindings for explicit recovery instead of synthesizing an empty capability inventory, and correct the capability migration references.
