@@ -1,7 +1,9 @@
-fix: restore Cursor MCP recovery inventory
+fix(cursor): preserve recovery acceptance history
 
 codeon:
   version: 1
   authority: FWN-62
   description: |-
-    Rebuild Cursor restart recovery from the binding's archived capability generation so third-party MCP servers remain sealed across daemon restarts. Carry optional degradation into durable runtime availability and provider-acceptance evidence, while the runner appends the rotated Codeon completion server. Add a restart regression that verifies the approved third-party server reaches exact session load and retained recovery authority.
+    Scope Cursor capability acceptance evidence references to each observation so exact-session recovery appends a new durable history row instead of conflicting with initial provisioning evidence.
+    
+    Extend the PostgreSQL binding recovery coverage to persist two observations for the same Cursor session and verify both history rows and latest-observation readback.
