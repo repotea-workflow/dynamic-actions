@@ -1,1 +1,9 @@
-fix(codeon): schedule idle recovery
+fix(runtime): recover provider continuations safely
+
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Rotate and rebind operation MCP capabilities before Cursor and Grok resource-ceiling continuations so callbacks remain authorized after the original expiry.
+    
+    Require Grok exact-session recovery to send a real continuation with write-certainty handling, and classify ambiguous recovery for controller Attention instead of reporting synthetic running state. Add focused provider and PostgreSQL acceptance coverage and update lifecycle documentation.
