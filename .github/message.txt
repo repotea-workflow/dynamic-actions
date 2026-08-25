@@ -1,9 +1,1 @@
-Merge lifecycle v2 with capability foundations
-
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Integrate the refreshed target branch while preserving lifecycle v2 reconciliation and provider adapter behavior.
-    
-    Keep completion capabilities valid through the next resource ceiling and recovery grace, clear stale expiry projections after rearm, enable the fewensa/codeoo canary, and remove the unauthorized OpenWiki workflow. Renumber the merged capability migrations after lifecycle migrations to retain a contiguous history.
+test(runtime): await blocking execution exit
