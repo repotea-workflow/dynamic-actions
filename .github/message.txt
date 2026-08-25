@@ -1,1 +1,1 @@
-fix(omsk): validate imported quantities (#299)
+fix(omsk): paginate public products
