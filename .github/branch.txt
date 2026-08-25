@@ -1,1 +1,1 @@
-agt/fix-omsk-public-product-pagination
+main
