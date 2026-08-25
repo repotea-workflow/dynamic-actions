@@ -1,3 +1,1 @@
-fix(codeon): recover landed merge backoff
-
-Resume only owner-authorized historical Merge operations whose provider merge landed before Git readback completed.\n\nAdd roll-forward migrations for the production Operation and event constraints, and preserve the exact recovered version lineage through receipt sealing.
+fix(codex): recover expired idle turns
