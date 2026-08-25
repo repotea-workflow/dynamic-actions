@@ -1,3 +1,7 @@
-fix(codeon): bound repeated cursor recovery
+fix smoke-e2e merge capability preflight against loopback GitHub
 
-Reuse durable containment generations as the sealed continuation budget so repeated provider exits recover on the same dispatch without unbounded retries.
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Route GitHubRepositoryCapabilityProvider through CODEON_SMOKE_GITHUB_API_BASE during smoke-e2e and teach the fake GitHub GraphQL handler to answer RepositoryMergeCapabilities so environment admission can proceed without calling api.github.com.
