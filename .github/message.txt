@@ -1,5 +1,9 @@
-fix(codeon): authenticate PR review fetch
+fix(codex): persist continuation intent
 
-Use the selected profile token through the existing askpass path so private PR refs do not depend on ambient credential helpers.
-
-Refs FWN-8
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Record a fence- and expiry-scoped continuation-start marker before dispatching a replacement Codex turn. Restart recovery now treats a marker without an exact replacement reference as unknown, preventing both duplicate sends and fallback to the cancelled original turn.
+    
+    Add runner and PostgreSQL crash-boundary regressions for pre-send ordering, replay refusal, and exact-reference readback.
