@@ -1,9 +1,9 @@
-fix(runtime): persist Codex continuation
+Merge main and harden capability evidence
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Persist the exact replacement Codex invocation reference atomically with resource-ceiling lease rearm so daemon restart recovery inspects the running continuation instead of the cancelled turn.
+    Resolve the refreshed origin/main integration while preserving the sealed capability manifest behavior.
     
-    Restore completion authority from the durable continuation lineage and return Unknown when that lineage is unreadable or conflicts with the original thread.
+    Keep MCP result metadata unknown unless it has exact provider correlation, and cover stale singleton receipts. Bound optional Skill-root degradation references by digest while retaining canonical manifest paths, including runtime readback evidence.
