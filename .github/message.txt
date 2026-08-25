@@ -1,9 +1,9 @@
-test(codeon): prove cancellation isolation cleanup
+fix(runtime): retain continuation authority
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-18
   description: |-
-    Add a PostgreSQL-backed daemon runtime regression with simultaneous Repository attempts, exact cancellation targeting, provider panic isolation, and continued dispatch in the unaffected Repository.
+    Rearm lifecycle-v2 resource ceilings from the continuation resume time while preserving the expired deadline in durable lineage.
     
-    Exercise immediate no-unique-code cleanup against a real Git repository and verify exact worktree, temporary root, and branch removal plus idempotent replay.
+    Keep timed-out provider mutations supervisor-owned so late Codex turns are exactly interrupted and late Grok startup failures retain cleanup authority.
