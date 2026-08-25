@@ -1,7 +1,7 @@
-test(codeon): repair cancellation acceptance fixtures
+fix(runtime): fence Cursor recovery activity
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-18
   description: |-
-    Keep cancellation acceptance aligned with current durable authority: split multi-statement SQL setup, use current timestamps and Issue versions, reseal rewritten cleanup manifests, terminate active consumers through the cancellation lifecycle, and bound the cross-repository daemon test stack. This preserves exact provider isolation and cleanup/requeue evidence without changing product behavior.
+    Use only post-readback exact-prompt activity to classify a cancelled Cursor prompt as running. Persist accepted recovery activity and lease rearm atomically, and document the reconciliation boundary.
