@@ -1,7 +1,1 @@
-fix: degrade optional Codex Skill drift
-
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Disable drifted optional standalone Skills by exact manifest path in the invocation-scoped Codex runtime, preserve durable degraded availability evidence, and fence path-set changes across spawn.
+fix(codeon): close runtime before retry
