@@ -1,9 +1,32 @@
-fix(codeon): validate lifecycle canaries globally
+Integrate runtime lifecycle v2 recovery and rollout (#220)
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: fewensa-18
   description: |-
-    Restore the checked-in lifecycle v2 rollout example to the authorized fewensa/codeoo first canary.
+    ## Summary
     
-    Validate canary profile selectors against the complete configured profile catalog so selective daemon startup does not reject valid unselected profiles. Add regression coverage and align the runtime spec and OpenWiki.
+    - Add a temporary, default-off `runtime_lifecycle_v2` policy-generation gate while retaining v1/v2 reads and leaving active v1 policies untouched.
+    - Reconcile idle and resource-ceiling expiry through durable dispatch/fence authority and exact provider invocation cancellation/recovery.
+    - Keep provider-local failures isolated, preserve unrelated sessions, and route ambiguous continuation to Attention instead of redispatching input.
+    - Update the Picker specification and OpenWiki architecture for implemented rollout, rollback, and recovery behavior.
+    
+    ## Migration and compatibility
+    
+    The additive lifecycle-v2 PostgreSQL migration (`0116_runtime_lifecycle_v2_persistence`) is already present in the integrated foundation. This integration does not add or rewrite migration data. V1 policy rows and active dispatches remain unchanged. Rollback sets `[execution.preparation].runtime_lifecycle_v2 = false`, which stops new v2 policy generation without down-migrating v2 rows or interpreting them as v1.
+    
+    Rollout order is fewensa/codeoo first, followed by Grok, Cursor, and Codex canaries. `GROK_PROMPT_TIMEOUT` is absent, confirming removal of the former Grok fixed prompt-duration workaround.
+    
+    ## Verification
+    
+    - `cargo fmt --all --check` — passed.
+    - `cargo check --workspace --all-targets --all-features` — passed.
+    - `cargo test -p codeon-postgres --test migration_acceptance runtime_lifecycle_v2_migration_is_additive_guarded_and_content_free -- --test-threads=1` — passed (1 passed, 0 failed).
+    - Repository-wide `rg -n "GROK_PROMPT_TIMEOUT"` — no matches.
+    - Commit readback — signed commit, exactly one parent, clean worktree.
+    
+    ## Remaining acceptance evidence
+    
+    `CODEON_TEST_DATABASE_URL` and `CODEON_TEST_DATABASE_ISOLATED` were unavailable, so live PostgreSQL migration acceptance was not run. No authorized live provider canaries were available. The large `codeon` unit-test binary did not finish linking within a bounded 300-second attempt, so the full `just verify` suite must be rerun in CI or a normal build environment.
+    
+    OpenWiki regeneration was attempted but the installed tool tried to modify read-only `/root/.openwiki`; the normative spec and architecture page were updated directly, and generated workflow scaffolding was removed.
