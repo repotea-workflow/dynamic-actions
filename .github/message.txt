@@ -1,7 +1,9 @@
-fix(codex): contain plugin cache identities
+fix(runtime): integrate lifecycle v2 with main
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Reject absolute, traversal, and malformed Codex Plugin identities before binding preparation. Canonicalize the Plugin cache root and require resolved entries to remain beneath it so operator allowlists cannot escape CODEX_HOME.
+    Merge the frozen lifecycle v2 target with refreshed origin/main while preserving the published 0137-0139 migration ledger and moving activity lease continuation rearm to 0140.
+    
+    Keep Cursor resource-ceiling reconciliation pending before provider cancellation begins so late quiescence remains restart-safe and retryable.
