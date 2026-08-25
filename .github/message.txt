@@ -1,3 +1,9 @@
-fix(cursor): contain dispatch process trees
+fix: enforce sealed capability evidence
 
-Cursor tools can escape the provider process group with setsid. Bind MCP helpers, ACP, and all descendants to durable per-dispatch cgroups, then fence and prove them empty before recovery or closure.\n\nRoll terminal evidence to v4 so exhausted v3 attentions receive one bounded self-healing retry after deployment.
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Apply the sealed Codex Plugin table to every isolated invocation so live runtime-home changes cannot expand or remove binding authority.
+    
+    Keep concurrent same-tool MCP result metadata unknown without a provider-visible call identity, and reject malformed MCP transport, environment, and tool catalog definitions before required preflight while degrading optional entries.
