@@ -1,1 +1,7 @@
-fix(codeon): finish failed completion retry
+fix: seal capability execution boundaries
+
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Reject Plugins that contribute native Apps or MCP servers outside Codeon's sealed collision and limit enforcement, including default companion discovery. Require an exact Codex runtime home and emit an explicit isolated Skill configuration. Reserve MCP result-evidence capacity before upstream execution and delete acknowledged receipts after durable persistence so capacity remains reusable across restarts.
