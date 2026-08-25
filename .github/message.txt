@@ -1,7 +1,7 @@
-fix(codeon): finalize cancellation acceptance
+fix(codex): fence native goals on manifest drift
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-62
   description: |-
-    Use the already-held dispatch authority during cancellation recovery so restart handling does not create a competing recovery claim. Repair the PostgreSQL and daemon fixtures needed to exercise committed completion, runnable lease generations, repeated restart ticks, cleanup Attention, and migration checksum authority. Refresh OpenWiki against the frozen implementation head.
+    Prevent restarted native Goal bindings from reusing a Codex runtime when the operator capability manifest has changed. Standard turns continue to use sealed per-turn capability injection.
