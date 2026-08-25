@@ -1,7 +1,9 @@
-fix(postgres): restore migration 0135 authority
+fix(grok): preserve ceiling recovery ambiguity
 
 codeon:
   version: 1
   authority: FWN-18
   description: |-
-    Restore published migration 0135 byte-for-byte and reinstate its frozen SQLx checksum. Update the existing historical lifecycle fixture to seed the deployed 0135/0136 schema and ledger before verifying upgrade through the current migration boundary.
+    Keep terminal readback observed alongside trusted resource-ceiling recovery activity out of the generic completion-continuation budget. Return Unknown with the exact session retained so exhausted reminder attempts cannot terminalize the business operation.
+    
+    Add a focused two-ceiling regression with a continuation limit of one.
