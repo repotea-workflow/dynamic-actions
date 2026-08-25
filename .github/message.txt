@@ -1,7 +1,6 @@
-test(codeon): provision run-scoped test databases
+fix(codeon): bind MCP via port 0 without TOCTOU
 
-Support isolated external admin URLs and local temporary PostgreSQL with
-exact-name cleanup, so smoke-e2e no longer depends on a pre-shared recipe
-database requirement.
+Have the daemon publish the actual MCP SocketAddr after its single bind so
+smoke/live no longer pre-reserve and release a listener before startup.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
