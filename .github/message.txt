@@ -1,6 +1,6 @@
-test(codeon): inject fake git PATH per child only
+merge(main): resolve FWN-1 a4 conflicts with main
 
-Remove PATH_LOCK and process-global PATH mutation so smoke/live cleanup
-probes stay correct under default cargo test parallelism.
+Keep smoke-e2e runner overrides and MCP bound-address publishing while
+absorbing main's API server, checkpointed agent runners, and runtime profile work.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
