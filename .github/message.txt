@@ -1,6 +1,7 @@
-merge(main): resolve FWN-1 a4 conflicts with main
+fix(grok): rearm recovered continuations
 
-Keep smoke-e2e runner overrides and MCP bound-address publishing while
-absorbing main's API server, checkpointed agent runners, and runtime profile work.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Record a durable continuation-start marker before Grok resource-ceiling sends, then atomically persist the exact session and prompt lineage with the lease rearm. Recover ambiguous send-to-rearm restarts into Attention without sending a duplicate continuation. Add migration, fake-runtime, PostgreSQL restart, and lifecycle documentation coverage, while preserving the existing OpenWiki refresh wiring.
