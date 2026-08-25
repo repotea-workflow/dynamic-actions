@@ -1,1 +1,9 @@
-test(runtime): await blocking execution exit
+fix(postgres): preserve mainline migration ledger
+
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Restore the published capability migrations at versions 0140 through 0144 without changing their bytes, and move the lifecycle continuation migrations to 0145 and 0146.
+    
+    Freeze the published SQLx descriptions and checksums and cover upgrading that historical ledger to the current boundary.
