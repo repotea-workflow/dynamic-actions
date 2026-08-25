@@ -1,12 +1,38 @@
-Merge origin/main into FWN-8 authorization branch
+Complete authorization regression coverage and documentation (#222)
 
 codeon:
   version: 1
-  authority: FWN-8
+  authority: fewensa-8
   description: |-
-    Resolve the docs/log.md conflict by preserving both the notification
-    architecture entry from origin/main and the FWN-8 authorization regression
-    coverage entries from the candidate branch.
+    ## Objective
     
-    Apply minimal clippy fixes required for verification after integrating
-    origin/main agent-core and agent adapter changes.
+    Integrate the completed authorization slices, close cross-crate gaps, and update durable Codeoff documentation without adding new product scope.
+    
+    ## Scope
+    
+    - Add cross-crate behavior tests that exercise config → runtime grant → Turn/scheduled snapshot → MCP lease → provider call for both repository and organization scopes.
+    - Add the public-repository regression fixture proving alias order cannot select `0xfe10` over the authoritative `fewensa` route/member.
+    - Verify account-route ceilings, caller grants, access levels, tool annotations, query containment, returned-result containment, revocation, ambiguity, and legacy snapshot compatibility as one matrix.
+    - Update Codeoff runtime/channel documentation, sample TOML, deployment/runbook guidance, scheduled-authorization documentation, error/diagnostic expectations, and rollback notes.
+    - State the production migration sequence explicitly: deploy compatible code, update account/role routes, restart/health-check, explicitly update scheduled job, then run live acceptance.
+    - Update the owning source documents first, then run `openwiki code --update --print`; review generated `AGENTS.md`/OpenWiki changes against source authority. Do not introduce OpenWiki automation.
+    - Keep unrelated formatting, refactors, and stale-doc cleanup out of scope.
+    
+    ## Verification
+    
+    Run at minimum:
+    
+    ```bash
+    cargo fmt --all -- --check
+    cargo clippy -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-cli --all-targets -- -D warnings
+    cargo test -p codeoff-config -p codeoff-state -p codeoff-runtime -p codeoff-mcp -p codeoff-channel-slack -p codeoff-cli
+    ```
+    
+    Also run any repository-owned verification command discovered from current authority.
+    
+    ## Acceptance
+    
+    - The matrix is covered by behavior tests at owner boundaries, not only implementation-detail unit tests.
+    - Documentation examples use structured scope and canonical `destructive`.
+    - OpenWiki has no remaining drift for the changed behavior.
+    - Full narrow Codeoff verification is green.
