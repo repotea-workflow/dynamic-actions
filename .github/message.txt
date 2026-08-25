@@ -1,3 +1,7 @@
-fix(codeon): enforce Codex liveness
+fix(postgres): preserve migration 0135 checksum
 
-New operations use renewable v2 activity leases. Frozen v1 dispatches retain restart-safe fixed deadlines from durable start time.
+codeon:
+  version: 1
+  authority: FWN-48
+  description: |-
+    Restore migration 0135 to its published bytes and preserve its historical SQLx checksum. Repair clean-install constraint naming through forward migration 0140, and cover the origin/main checksum upgrade path with PostgreSQL acceptance evidence.
