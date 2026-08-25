@@ -1,7 +1,3 @@
-fix(grok): preserve recovered expiry kind
+fix(codeon): recover idle cancellations
 
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Retain the reconciled idle-lease or resource-ceiling kind with each Grok session so retry diagnostics and evidence report the actual expiry action. Cover terminal ambiguity after an idle-expiry activity persistence retry.
+Retry only when durable lease expiry and exact cancellation evidence prove the prior dispatch cannot still produce a result.
