@@ -1,7 +1,3 @@
-fix(runtime): fence Cursor recovery activity
+fix(codeon): bound repeated cursor recovery
 
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Use only post-readback exact-prompt activity to classify a cancelled Cursor prompt as running. Persist accepted recovery activity and lease rearm atomically, and document the reconciliation boundary.
+Reuse durable containment generations as the sealed continuation budget so repeated provider exits recover on the same dispatch without unbounded retries.
