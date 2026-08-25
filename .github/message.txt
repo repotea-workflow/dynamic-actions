@@ -1,9 +1,9 @@
-fix(runtime): integrate lifecycle v2 with main
+fix(codeon): distinguish cleanup state checks
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-48
   description: |-
-    Merge the frozen lifecycle v2 target with refreshed origin/main while preserving the published 0137-0139 migration ledger and moving activity lease continuation rearm to 0140.
+    Give the cancellation cleanup attention state-domain check its own explicit PostgreSQL constraint name so clean migration 0135 no longer collides with the state/resolution shape constraint.
     
-    Keep Cursor resource-ceiling reconciliation pending before provider cancellation begins so late quiescence remains restart-safe and retryable.
+    Update the migration checksum asserted by the historical runnable-lease acceptance fixture.
