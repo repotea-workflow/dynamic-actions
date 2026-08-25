@@ -1,7 +1,9 @@
-fix(grok): rearm recovered continuations
+Merge lifecycle v2 with capability foundations
 
 codeon:
   version: 1
   authority: FWN-18
   description: |-
-    Record a durable continuation-start marker before Grok resource-ceiling sends, then atomically persist the exact session and prompt lineage with the lease rearm. Recover ambiguous send-to-rearm restarts into Attention without sending a duplicate continuation. Add migration, fake-runtime, PostgreSQL restart, and lifecycle documentation coverage, while preserving the existing OpenWiki refresh wiring.
+    Integrate the refreshed target branch while preserving lifecycle v2 reconciliation and provider adapter behavior.
+    
+    Keep completion capabilities valid through the next resource ceiling and recovery grace, clear stale expiry projections after rearm, enable the fewensa/codeoo canary, and remove the unauthorized OpenWiki workflow. Renumber the merged capability migrations after lifecycle migrations to retain a contiguous history.
