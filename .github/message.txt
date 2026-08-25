@@ -1,7 +1,7 @@
-fix: preserve capability evidence strength
+Fix lifecycle v2 revision checks
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Keep Codex MCP acceptance unknown when the App Server provides no inventory readback. Carry skipped optional Cursor and Grok MCP identities into the existing durable degraded-capability observations.
+    Update migration acceptance expectations for migration 0140 and remove the candidate-owned Cursor and Grok Clippy violations.
