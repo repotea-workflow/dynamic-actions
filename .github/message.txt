@@ -1,9 +1,1 @@
-fix: restore capability policy test gates
-
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Prepare operation temp roots only for writable Agent policies so read-only Planning and Review snapshots remain service-free and do not materialize ungranted paths.
-    
-    Use a neutral MCP server identity in the Cursor provenance fixture to preserve the adapter boundary.
+fix(codeon): release parked runtime capacity
