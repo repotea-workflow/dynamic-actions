@@ -1,6 +1,6 @@
-fix(codeon): bind MCP via port 0 without TOCTOU
+test(codeon): inject fake git PATH per child only
 
-Have the daemon publish the actual MCP SocketAddr after its single bind so
-smoke/live no longer pre-reserve and release a listener before startup.
+Remove PATH_LOCK and process-global PATH mutation so smoke/live cleanup
+probes stay correct under default cargo test parallelism.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
