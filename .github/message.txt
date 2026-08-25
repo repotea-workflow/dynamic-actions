@@ -1,9 +1,3 @@
-fix: repair sealed capability evidence
+fix(codeon): resume parked recovery tasks
 
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Carry an MCP proxy correlation digest through Codex, Cursor, and Grok result readback so provider call identifiers cannot misassociate bounded invocation evidence.
-    
-    Fence active validator-v2 bindings for explicit recovery instead of synthesizing an empty capability inventory, and correct the capability migration references.
+Include runtime-state-unavailable attempts in candidate scans and give exhausted Cursor v6 history one bounded v7 rollout for the durable containment-generation repair.
