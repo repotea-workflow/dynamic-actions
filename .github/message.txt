@@ -1,7 +1,7 @@
-fix: seal capability execution boundaries
+fix(runtime): harden lifecycle v2 reconciliation
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-18
   description: |-
-    Reject Plugins that contribute native Apps or MCP servers outside Codeon's sealed collision and limit enforcement, including default companion discovery. Require an exact Codex runtime home and emit an explicit isolated Skill configuration. Reserve MCP result-evidence capacity before upstream execution and delete acknowledged receipts after durable persistence so capacity remains reusable across restarts.
+    Atomically preserve Grok completions that win idle-expiry cancellation races, and keep Pi dispatches on lifecycle v1 until a v2 adapter exists. Add focused regression coverage and document the rollout boundary.
