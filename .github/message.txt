@@ -1,7 +1,1 @@
-fix(codex): reject malformed optional skills
-
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Fail capability revalidation when an existing degraded Skill root cannot be fully enumerated. This prevents valid sibling Skills from leaking into the invocation-scoped Codex runtime while preserving degraded execution for a genuinely absent optional root.
+fix(codeon): roll out runtime cleanup retry
