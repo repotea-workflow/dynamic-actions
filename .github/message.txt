@@ -1,9 +1,7 @@
-fix(codeon): distinguish cleanup state checks
+fix: preserve capability evidence strength
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-62
   description: |-
-    Give the cancellation cleanup attention state-domain check its own explicit PostgreSQL constraint name so clean migration 0135 no longer collides with the state/resolution shape constraint.
-    
-    Update the migration checksum asserted by the historical runnable-lease acceptance fixture.
+    Keep Codex MCP acceptance unknown when the App Server provides no inventory readback. Carry skipped optional Cursor and Grok MCP identities into the existing durable degraded-capability observations.
