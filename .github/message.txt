@@ -1,1 +1,9 @@
-fix(codeon): recover dead cursor sessions
+fix(runtime): persist Codex continuation
+
+codeon:
+  version: 1
+  authority: FWN-18
+  description: |-
+    Persist the exact replacement Codex invocation reference atomically with resource-ceiling lease rearm so daemon restart recovery inspects the running continuation instead of the cancelled turn.
+    
+    Restore completion authority from the durable continuation lineage and return Unknown when that lineage is unreadable or conflicts with the original thread.
