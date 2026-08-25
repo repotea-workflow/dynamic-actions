@@ -1,7 +1,7 @@
-fix(codeon): scope Pi test session locks
+fix: degrade optional Codex Skill drift
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-62
   description: |-
-    End Pi runner test session-lock guards in lexical scopes before later await points so the warnings-denied workspace Clippy gate passes without changing test behavior.
+    Disable drifted optional standalone Skills by exact manifest path in the invocation-scoped Codex runtime, preserve durable degraded availability evidence, and fence path-set changes across spawn.
