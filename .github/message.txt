@@ -1,7 +1,9 @@
-fix(postgres): preserve migration 0135 checksum
+fix(runtime): close lifecycle acceptance gaps
 
 codeon:
   version: 1
-  authority: FWN-48
+  authority: FWN-18
   description: |-
-    Restore migration 0135 to its published bytes and preserve its historical SQLx checksum. Repair clean-install constraint naming through forward migration 0140, and cover the origin/main checksum upgrade path with PostgreSQL acceptance evidence.
+    Remove the unauthorized scheduled OpenWiki workflow and restore the repository's explicit manual-only refresh guidance.
+    
+    Replace mislabeled provider-level readiness coverage with a composed daemon acceptance test that exercises two repositories, worker panic isolation, active v2 dispatch recovery without duplicate input, and live Picker/MCP probes. Name the migration state-domain constraint and update its frozen checksum so fresh and historical migration acceptance can apply the lifecycle schema.
