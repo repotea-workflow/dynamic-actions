@@ -1,9 +1,7 @@
-fix(runtime): retain continuation authority
+fix(codeon): scope Pi test session locks
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-48
   description: |-
-    Rearm lifecycle-v2 resource ceilings from the continuation resume time while preserving the expired deadline in durable lineage.
-    
-    Keep timed-out provider mutations supervisor-owned so late Codex turns are exactly interrupted and late Grok startup failures retain cleanup authority.
+    End Pi runner test session-lock guards in lexical scopes before later await points so the warnings-denied workspace Clippy gate passes without changing test behavior.
