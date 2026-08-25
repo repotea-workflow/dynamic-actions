@@ -1,9 +1,7 @@
-fix(grok): preserve ceiling recovery ambiguity
+fix(grok): log terminal readback ambiguity
 
 codeon:
   version: 1
   authority: FWN-18
   description: |-
-    Keep terminal readback observed alongside trusted resource-ceiling recovery activity out of the generic completion-continuation budget. Return Unknown with the exact session retained so exhausted reminder attempts cannot terminalize the business operation.
-    
-    Add a focused two-ceiling regression with a continuation limit of one.
+    Emit the bounded runtime lifecycle reconciliation diagnostic when recovered resource-ceiling activity races with terminal provider readback. This preserves the existing Unknown/Attention outcome while making the rollout-critical path observable without provider payloads.
