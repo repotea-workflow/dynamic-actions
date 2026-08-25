@@ -1,7 +1,9 @@
-fix(runtime): harden lifecycle v2 reconciliation
+fix: restore capability policy test gates
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-62
   description: |-
-    Atomically preserve Grok completions that win idle-expiry cancellation races, and keep Pi dispatches on lifecycle v1 until a v2 adapter exists. Add focused regression coverage and document the rollout boundary.
+    Prepare operation temp roots only for writable Agent policies so read-only Planning and Review snapshots remain service-free and do not materialize ungranted paths.
+    
+    Use a neutral MCP server identity in the Cursor provenance fixture to preserve the adapter boundary.
