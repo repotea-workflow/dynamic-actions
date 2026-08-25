@@ -1,9 +1,7 @@
-fix(runtime): close lifecycle acceptance gaps
+fix(postgres): restore migration 0135 authority
 
 codeon:
   version: 1
   authority: FWN-18
   description: |-
-    Remove the unauthorized scheduled OpenWiki workflow and restore the repository's explicit manual-only refresh guidance.
-    
-    Replace mislabeled provider-level readiness coverage with a composed daemon acceptance test that exercises two repositories, worker panic isolation, active v2 dispatch recovery without duplicate input, and live Picker/MCP probes. Name the migration state-domain constraint and update its frozen checksum so fresh and historical migration acceptance can apply the lifecycle schema.
+    Restore published migration 0135 byte-for-byte and reinstate its frozen SQLx checksum. Update the existing historical lifecycle fixture to seed the deployed 0135/0136 schema and ledger before verifying upgrade through the current migration boundary.
