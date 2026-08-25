@@ -1,7 +1,3 @@
-fix: repair sealed capability evidence
+fix(codeon): recover durable cursor generation
 
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Renumber the capability migrations after the existing catalog, correlate bounded MCP result receipts with exact provider call identifiers before acknowledgement, and bind Grok session MCP acceptance to server transport and endpoint identity.
+Retained sessions can lose their in-memory containment owner while the durable active generation remains. Read it back before applying the sealed continuation budget.
