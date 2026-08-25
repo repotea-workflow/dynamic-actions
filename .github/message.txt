@@ -1,7 +1,1 @@
-fix: retain bounded capability evidence
-
-codeon:
-  version: 1
-  authority: FWN-62
-  description: |-
-    Persist bounded MCP result metadata before acknowledging unambiguous proxy receipts, while leaving ambiguous receipts available for later proof. Deduplicate optional capability degradation and record fixed-size count/digest summaries for Cursor and Grok acceptance evidence.
+fix(codeon): recover dead cursor sessions
