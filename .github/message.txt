@@ -1,9 +1,3 @@
-fix(codex): persist continuation intent
+fix(codex): preserve non-text activity
 
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Record a fence- and expiry-scoped continuation-start marker before dispatching a replacement Codex turn. Restart recovery now treats a marker without an exact replacement reference as unknown, preventing both duplicate sends and fallback to the cancelled original turn.
-    
-    Add runner and PostgreSQL crash-boundary regressions for pre-send ordering, replay refusal, and exact-reference readback.
+Route reasoning and item lifecycle events into invocation observers so renewable leases do not cancel active turns.
