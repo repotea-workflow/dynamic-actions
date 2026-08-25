@@ -1,9 +1,7 @@
-fix(cursor): preserve recovery acceptance history
+fix(codeon): finalize cancellation acceptance
 
 codeon:
   version: 1
-  authority: FWN-62
+  authority: FWN-48
   description: |-
-    Scope Cursor capability acceptance evidence references to each observation so exact-session recovery appends a new durable history row instead of conflicting with initial provisioning evidence.
-    
-    Extend the PostgreSQL binding recovery coverage to persist two observations for the same Cursor session and verify both history rows and latest-observation readback.
+    Use the already-held dispatch authority during cancellation recovery so restart handling does not create a competing recovery claim. Repair the PostgreSQL and daemon fixtures needed to exercise committed completion, runnable lease generations, repeated restart ticks, cleanup Attention, and migration checksum authority. Refresh OpenWiki against the frozen implementation head.
