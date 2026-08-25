@@ -1,1 +1,7 @@
-fix(codeon): roll out runtime cleanup retry
+fix(codex): contain plugin cache identities
+
+codeon:
+  version: 1
+  authority: FWN-62
+  description: |-
+    Reject absolute, traversal, and malformed Codex Plugin identities before binding preparation. Canonicalize the Plugin cache root and require resolved entries to remain beneath it so operator allowlists cannot escape CODEX_HOME.
