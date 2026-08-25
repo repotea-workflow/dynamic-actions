@@ -1,7 +1,1 @@
-Fix lifecycle v2 revision checks
-
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Update migration acceptance expectations for migration 0140 and remove the candidate-owned Cursor and Grok Clippy violations.
+fix(codeon): retry latest cursor cleanup
