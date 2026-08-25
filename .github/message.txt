@@ -1,7 +1,12 @@
-fix(runtime): close lifecycle v2 revision gaps
+Merge origin/main into FWN-8 authorization branch
 
 codeon:
   version: 1
-  authority: FWN-18
+  authority: FWN-8
   description: |-
-    Persist Cursor resource-ceiling continuation intent before provider send and return Unknown on replay or persistence ambiguity without resending. Validate lifecycle-v2 profile canaries against loaded profiles, align the checked-in rollout example, and update the runtime specification.
+    Resolve the docs/log.md conflict by preserving both the notification
+    architecture entry from origin/main and the FWN-8 authorization regression
+    coverage entries from the candidate branch.
+    
+    Apply minimal clippy fixes required for verification after integrating
+    origin/main agent-core and agent adapter changes.
