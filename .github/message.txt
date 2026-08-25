@@ -1,3 +1,1 @@
-fix(codeon): resume parked recovery tasks
-
-Include runtime-state-unavailable attempts in candidate scans and give exhausted Cursor v6 history one bounded v7 rollout for the durable containment-generation repair.
+fix(codeon): finish failed completion retry
