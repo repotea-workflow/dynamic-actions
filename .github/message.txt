@@ -1,7 +1,1 @@
-fix(grok): log terminal readback ambiguity
-
-codeon:
-  version: 1
-  authority: FWN-18
-  description: |-
-    Emit the bounded runtime lifecycle reconciliation diagnostic when recovered resource-ceiling activity races with terminal provider readback. This preserves the existing Unknown/Attention outcome while making the rollout-critical path observable without provider payloads.
+fix(codeon): ignore late Codex activity
