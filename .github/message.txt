@@ -1,3 +1,7 @@
-fix(codeon): restore convergence authority when rebuilding Review artifacts
+docs(codeon): include Pi probe in just test and drop stale adapter stubs
+
+Run the Pi RPC compatibility probe from just test / probe-pi-rpc, and stop
+claiming production executors wait for Codex/Cursor adapters that are already
+wired as System|Named complete-layer runners.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
