@@ -1,7 +1,1 @@
-fix(auth): harden management workflows (#39)
-
-Reject inherited Platform Owner access and map unique database conflicts consistently.
-
-Add the cleanup migration, regression coverage, and matching Robin form validation.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat(accounts): add configurable default avatars
