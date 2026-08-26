@@ -1,6 +1,1 @@
-fix(codeon): refuse Pi probe reports that echo token secrets
-
-Scan GITHUB_TOKEN, *_TOKEN, and PASSWORD env values in addition to
-SECRET/*_API_KEY so live-smoke evidence cannot contain those canaries.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(codex): classify authentication rejection
