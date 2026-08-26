@@ -1,8 +1,7 @@
-feat(codeon): expose System|Named runtime_source on issue API/MCP
+feat(codeon): emit runtime_source on MCP issue AgentBinding JSON
 
-HTTP issue projections and MCP create/replace now carry explicit
-runtime_source (system|named) with optional runtime_profile. Omitted
-source keeps the historical rule; inconsistent pairs fail closed.
-Named("default") is not rewritten to System. MCP required stays ["kind"].
+MCP issue get now serializes identity as kind, source, and optional key.
+HTTP projections reject inconsistent source+profile pairs. Named("default")
+is unchanged. FORMAT_VERSION stays 1 because digests do not hash this JSON.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
