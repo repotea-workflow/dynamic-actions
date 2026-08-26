@@ -1,7 +1,7 @@
-fix(codeon): preserve recovered cancel fence
+docs(codeon): refresh cancellation recovery
 
 codeon:
   version: 1
   authority: FWN-48
   description: |-
-    Use the live Dispatch fence returned by runtime recovery when constructing the exact provider cancellation request. Enforce recovered cancellation identity in the scripted runner so the daemon regression rejects the stale pre-fence request.
+    Record the successful OpenWiki refresh at the frozen cancellation acceptance HEAD and clarify that restart recovery interrupts with the live recovered Dispatch fence.
