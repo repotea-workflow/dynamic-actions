@@ -1,3 +1,7 @@
-fix(codeon): gate a drifted Review epoch behind its integration review
+docs(codeon): spell out ambient vs managed Agent capabilities
+
+Named Codex/Cursor/Grok may carry a managed [capabilities] manifest. System
+does not copy that inventory, and Pi has no managed capability table or
+per-profile HOME.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
