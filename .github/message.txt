@@ -1,1 +1,1 @@
-fix(codeon): retire finalized cancellation recovery
+fix(codeon): isolate recovery supersede commands
