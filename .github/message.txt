@@ -1,7 +1,7 @@
-fix(codeon): restore fmt and document smoke DB default
+fix(codeon): bind e2e configs to keyed agent runtimes
 
 codeon:
   version: 1
   authority: FWN-1
   description: |-
-    Apply rustfmt to the shared E2E test helper so fmt-check passes again, and document that smoke-e2e auto-provisions local PostgreSQL when CODEON_TEST_DATABASE_URL is unset, with the isolated URL as an override.
+    Smoke and live E2E helpers now emit keyed agent_runtime_profiles with a mandatory runtime_profile binding so DaemonConfigSet::load matches the closed execution schema. Replace retired singleton provider tables and keep non-ignored config-load regression coverage for both entry points.
