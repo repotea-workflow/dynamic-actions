@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): refresh cancellation closure version
+
+Dispatch and operation terminalization can advance the locked Attempt projection. Reload it in the same transaction and revalidate Cancelling authority before sealing the closure receipt.
