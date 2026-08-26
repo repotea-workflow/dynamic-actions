@@ -1,7 +1,3 @@
-fix(codeon): satisfy clippy and curate System|Named OpenWiki pages
-
-Keep `just verify` lintable after System|Named profiles, add a disabled
-System Pi secret canary, and path-curate generated OpenWiki so Pi is no
-longer documented as an unavailable-runtime stub.
+feat(codeon): route high-reasoning Review modes
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
