@@ -1,7 +1,6 @@
-docs(codeon): spell out ambient vs managed Agent capabilities
+docs(codeon): note Pi has no managed capability inventory
 
-Named Codex/Cursor/Grok may carry a managed [capabilities] manifest. System
-does not copy that inventory, and Pi has no managed capability table or
-per-profile HOME.
+Pi adapter contract and the docs log now match the System vs Named capability
+rule: no copied Named Plugin/MCP inventory and no per-profile HOME.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
