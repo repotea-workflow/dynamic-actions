@@ -1,7 +1,8 @@
-feat(codeon-api): close HTTP runtime_source as System|Named enum
+fix(codeon): bind HTTP issue routing to available runtimes
 
-Issue bindings and Operation agent projections now use AgentRuntimeSourceV1
-so OpenAPI matches MCP: system|named only. The string "default" stays a
-Named key, not a source.
+Issue create/replace now matches against preflighted System|Named identities
+instead of the TOML catalog that always named disabled System slots.
+Omitted runtime_profile can no longer select a System runtime the daemon
+cannot run.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
