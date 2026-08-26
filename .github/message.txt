@@ -1,3 +1,3 @@
-fix(codeon): recover legacy cancellation outcomes (#235)
+fix(codeon): reobserve legacy runtime closure
 
-Reobserve bounded legacy runtime-unknown cancellations, preserve fail-closed outcomes, and atomically supersede Attention once durable closure evidence proves the runtime quiescent.
+Route legacy closure inspection through the sole current provider profile and grant exhausted historical records one bounded v2 readback.
