@@ -1,32 +1,7 @@
-Add fast and live end-to-end test entry points (#159)
+Fix cancellation acceptance regressions
 
 codeon:
   version: 1
-  authority: fewensa-1
+  authority: FWN-48
   description: |-
-    Background
-    
-    CodeOn currently has a fast MCP protocol test and a PostgreSQL-backed foundation_e2e test. The foundation test starts the real daemon and HTTP MCP server and exercises registry and Issue operations, but it does not execute an Agent or cover Git/GitHub delivery. The ignored live_daemon_mcp tests are hard-coded to the legacy work profile and RTTP identifiers, mutate real state, and only create or queue Issues without asserting completion.
-    
-    Goal
-    
-    Provide a stable, simple E2E testing surface for CodeOn, including a fast deterministic smoke test and an explicitly invoked real-provider/GitHub acceptance test. The result must be reusable for CodeOn self-hosting development in fewensa/codeoo and must not depend on hard-coded profile, workspace, repository, or Issue identifiers.
-    
-    Required behavior
-    
-    1. Add a single-command fast smoke entry point named `just smoke-e2e`.
-    2. The fast smoke must be deterministic, isolated, and safe to rerun. It must not mutate GitHub or invoke paid/external Agents. It should automatically provision or select disposable test infrastructure, start the real CodeOn daemon and HTTP MCP endpoint, drive an Issue through the execution runtime using deterministic test doubles where external boundaries are required, assert terminal state, and verify owned worktree/branch cleanup.
-    3. Add an explicit live entry point named `just live-e2e` with parameters for profile, repository, and Agent kind. It must support at least `fewensa`, `codeoo`, and `codex` without source changes or hard-coded database UUIDs.
-    4. The live acceptance must observe and assert the complete production path: Issue creation and admission, Planning when enabled, Agent execution, branch/worktree preparation, PR publication, Review and Revision when required, LandingPreflight, squash merge, Issue Done, and cleanup.
-    5. The live test must use a unique run marker, bounded timeout, fail-fast preflight, machine-readable final report, and idempotent/recoverable behavior. It must clearly identify any external artifacts it creates.
-    6. GitHub assertions must cover current publication contracts: PR title contains no PR number suffix; resolved review conversations are actually closed; a resolution reply references the fixing commit when applicable; the squash commit contains exactly one `(#<PR number>)` suffix.
-    7. Replace or retire the hard-coded legacy RTTP live smoke tests so there is one maintained entry point rather than ad hoc ignored tests.
-    8. Keep the fast smoke suitable for routine local/CI execution. Keep the live test opt-in so normal verification never mutates GitHub or consumes an Agent accidentally.
-    9. Document prerequisites, exact commands, expected duration, side effects, cleanup behavior, and failure diagnostics.
-    
-    Acceptance evidence
-    
-    - `just smoke-e2e` passes twice consecutively from a clean checkout and leaves no owned database, daemon, worktree, local branch, or remote artifact behind.
-    - A scoped live run against `profile=fewensa repository=codeoo agent=codex` completes successfully and produces a report linking the CodeOn Issue, PR, merge commit, operation timeline, and cleanup result.
-    - Existing narrow tests and repository verification remain green.
-    - No production CodeOn data is used as disposable test data, and no existing Issue or PR is reused to hide a failed run.
+    Preserve runnable-lease fencing when replacing uncertain dispatches and emit the valid recovery event. Align activity payload handling and repair PostgreSQL/daemon acceptance fixtures so cancellation isolation, failure survival, restart recovery, cleanup, and requeue behavior execute against current invariants.
