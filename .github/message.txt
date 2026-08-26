@@ -1,7 +1,3 @@
-fix(codeon): isolate System vs Named Pi sealed snapshot digests
-
-Named Pi profiles no longer reuse System config, ambient, or runtime-reference
-digest strings when they share an executable env name. System encodings stay
-byte-identical.
+fix(codeon): never lower a declared Review blocker
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
