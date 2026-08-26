@@ -1,3 +1,7 @@
-fix(codeon): land FWN-1 isolated concurrent smoke stabilize on main (#225)
+test: stabilize cancellation attention timestamps
 
-Land stranded stabilize fixes after #159 merged an older tip. Renumber recovery_claim_released to 0147.
+codeon:
+  version: 1
+  authority: FWN-48
+  description: |-
+    Use PostgreSQL statement_timestamp() for both attention resolution timestamps so the fixture cannot violate its state-time constraint by observing two different volatile clock values.
