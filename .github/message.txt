@@ -1,7 +1,7 @@
-test: stabilize cancellation attention timestamps
+fix(codeon): preserve recovered cancel fence
 
 codeon:
   version: 1
   authority: FWN-48
   description: |-
-    Use PostgreSQL statement_timestamp() for both attention resolution timestamps so the fixture cannot violate its state-time constraint by observing two different volatile clock values.
+    Use the live Dispatch fence returned by runtime recovery when constructing the exact provider cancellation request. Enforce recovered cancellation identity in the scripted runner so the daemon regression rejects the stale pre-fence request.
