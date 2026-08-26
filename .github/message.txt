@@ -1,1 +1,3 @@
-Merge main back into Codeon stability branch
+fix(codeon): recover legacy capability fences
+
+Restore only the lease authority needed to close validator-v2 runtimes fenced by migration 0140. Keep ordinary dispatch fenced while cancellation preserves, cleans up, and requeues the attempt.
