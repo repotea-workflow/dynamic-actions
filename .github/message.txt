@@ -1,7 +1,1 @@
-feat(codeon): add Pi production runtime and System|Named profiles
-
-Wire System Pi into the daemon execution runner, persist runtime_source
-alongside optional runtime_profile keys, and treat omitted runtime_profile
-as System without rewriting Named("default").
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+docs: refresh OpenWiki runtime recovery
