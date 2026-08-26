@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): recover legacy cancellation outcomes (#235)
+
+Reobserve bounded legacy runtime-unknown cancellations, preserve fail-closed outcomes, and atomically supersede Attention once durable closure evidence proves the runtime quiescent.
