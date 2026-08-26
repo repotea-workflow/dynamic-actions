@@ -1,7 +1,7 @@
-fix(codeon): stabilize isolated concurrent smoke e2e
+fix(codeon): restore fmt and document smoke DB default
 
-Seal run-scoped smoke reports, fix Mode A unix-socket DB URLs, quarantine
-superseded lease activations without process-fatal, and complete
-publication/merge smoke paths so sequential and concurrent Mode A/E pass.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+codeon:
+  version: 1
+  authority: FWN-1
+  description: |-
+    Apply rustfmt to the shared E2E test helper so fmt-check passes again, and document that smoke-e2e auto-provisions local PostgreSQL when CODEON_TEST_DATABASE_URL is unset, with the isolated URL as an override.
