@@ -1,3 +1,7 @@
-fix(codeon): schedule rejected input recovery
+test(codeon): assert MCP issue get emits System Pi runtime_source
 
-Recovery support cannot run unless durable provider-rejected operations are included in runtime candidate selection.
+Omitted runtime_profile on a Pi implementation binding must round-trip as
+runtime_source=system with a null key, distinct from Named profiles on the
+same issue.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
