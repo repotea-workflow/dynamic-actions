@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): route legacy cancellation closure
+
+Legacy unsealed bindings have no runnable profile key. Route only cancellation recovery and interrupt through the sole available provider profile; ambiguity remains fail closed.
