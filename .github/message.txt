@@ -1,8 +1,3 @@
-feat(codeon): wire System Pi live-e2e preflight probe
-
-Add tools/pi-rpc-compatibility-probe.py --live-smoke so just live-e2e
-agent=pi no longer panics in agent_runtime_preflight. The probe env_clears,
-probes pi --version, and completes a bounded get_state handshake without
-sending a prompt. Document Named Pi as a separate complete layer.
+fix(codeon): finalize convergence failure without an Issue handoff
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
