@@ -1,3 +1,7 @@
-feat(codeon): route high-reasoning Review modes
+fix(codeon): isolate System/Named state dirs and clear Pi spawn env
+
+Keep System Codex/Cursor/Grok homes from overlapping Named profile
+directories, and spawn Pi with a cleared environment plus a small ambient
+allowlist so daemon secrets are not inherited.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
