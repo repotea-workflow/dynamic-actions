@@ -1,3 +1,3 @@
-feat(codeon): expose Review convergence statistics through the execution API
+fix(codeon): schedule rejected input recovery
 
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Recovery support cannot run unless durable provider-rejected operations are included in runtime candidate selection.
