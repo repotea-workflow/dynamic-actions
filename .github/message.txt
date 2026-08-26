@@ -1,8 +1,3 @@
-fix(codeon): bind HTTP issue routing to available runtimes
-
-Issue create/replace now matches against preflighted System|Named identities
-instead of the TOML catalog that always named disabled System slots.
-Omitted runtime_profile can no longer select a System runtime the daemon
-cannot run.
+fix(codeon): make deferred Issue publication and receipts attempt-exact
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
