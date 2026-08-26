@@ -1,1 +1,10 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+test(codeon): verify preferred authority in merged commits
+
+Pin the GitHub provider to forwarding the sealed authority byte for byte
+so a later change cannot re-derive it from the PR body or head branch,
+and assert the landed smoke squash commit authenticates with the Issue
+projection's preferred reference instead of the Workspace-key alias.
+
+Restoring the smoke assertion required the smoke-e2e runner arms in
+reconcile_unclosed_runtime_resources, which were gated on cfg(test)
+alone and left the match non-exhaustive under that feature.
