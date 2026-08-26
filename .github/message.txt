@@ -1,7 +1,3 @@
-docs(codeon): include Pi probe in just test and drop stale adapter stubs
-
-Run the Pi RPC compatibility probe from just test / probe-pi-rpc, and stop
-claiming production executors wait for Codex/Cursor adapters that are already
-wired as System|Named complete-layer runners.
+fix(codeon): gate a drifted Review epoch behind its integration review
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
