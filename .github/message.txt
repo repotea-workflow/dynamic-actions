@@ -1,7 +1,7 @@
-fix(codeon): bind e2e configs to keyed agent runtimes
+fix(codeon): seal smoke runtime authority and live Codex homes
 
 codeon:
   version: 1
   authority: FWN-1
   description: |-
-    Smoke and live E2E helpers now emit keyed agent_runtime_profiles with a mandatory runtime_profile binding so DaemonConfigSet::load matches the closed execution schema. Replace retired singleton provider tables and keep non-ignored config-load regression coverage for both entry points.
+    SmokeScripted now advertises the (Codex, smoke) identity and seals a synthetic runtime-profile snapshot so binding creation can enter Agent-owned Operations. Live preflight validates every generated Codex/Cursor/Grok runtime home or credential env before provider work, and the runbook documents the required exports. Also restore rustfmt on the smoke config assertion and unwrap the notification TestDatabase Result so lib tests compile.
