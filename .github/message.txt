@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+feat(codeon-api): close HTTP runtime_source as System|Named enum
+
+Issue bindings and Operation agent projections now use AgentRuntimeSourceV1
+so OpenAPI matches MCP: system|named only. The string "default" stays a
+Named key, not a source.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
