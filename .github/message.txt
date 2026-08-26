@@ -1,3 +1,8 @@
-fix(codeon): bind Final Confirmation to its Final Revision lineage
+feat(codeon): expose System|Named runtime_source on issue API/MCP
+
+HTTP issue projections and MCP create/replace now carry explicit
+runtime_source (system|named) with optional runtime_profile. Omitted
+source keeps the historical rule; inconsistent pairs fail closed.
+Named("default") is not rewritten to System. MCP required stays ["kind"].
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
