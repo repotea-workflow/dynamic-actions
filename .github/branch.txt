@@ -1,1 +1,1 @@
-agt/prefer-issue-prefix-merge-authority
+agt/allow-symlink-runtime-paths
