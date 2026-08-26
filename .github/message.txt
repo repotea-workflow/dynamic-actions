@@ -1,6 +1,3 @@
-docs(codeon): note Pi has no managed capability inventory
-
-Pi adapter contract and the docs log now match the System vs Named capability
-rule: no copied Named Plugin/MCP inventory and no per-profile HOME.
+fix(codeon): bind Final Confirmation to its Final Revision lineage
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
