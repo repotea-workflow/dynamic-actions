@@ -1,1 +1,7 @@
-fix(codex): recover expired idle turns
+fix(codeon): stabilize isolated concurrent smoke e2e
+
+Seal run-scoped smoke reports, fix Mode A unix-socket DB URLs, quarantine
+superseded lease activations without process-fatal, and complete
+publication/merge smoke paths so sequential and concurrent Mode A/E pass.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
