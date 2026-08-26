@@ -1,1 +1,1 @@
-fix(codeon): fence recovery supersede causality
+test(codeon): prove recovery supersede ordering
