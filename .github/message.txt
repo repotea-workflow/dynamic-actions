@@ -1,1 +1,5 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix: clear workspace clippy -D warnings for just verify
+
+Make `just lint` (`clippy --workspace --all-targets --all-features -D warnings`) pass so Gate 9 verification can complete.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
