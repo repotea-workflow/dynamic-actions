@@ -1,1 +1,1 @@
-feat(accounts): add configurable default avatars
+feat(robin): show avatars across user surfaces
