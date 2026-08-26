@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): detect legacy closure manifest
+
+Validator-v2 closure bindings retain their original runtime profile. Detect the loader-only legacy manifest instead of the reserved migration sentinel.
