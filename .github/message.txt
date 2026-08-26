@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): preserve cancellation on restart
+
+Keep held runnable leases under durable cancellation authority.\nRepair legacy startup state drift and reject competing recovery attentions.
