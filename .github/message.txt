@@ -1,5 +1,8 @@
-fix: clear workspace clippy -D warnings for just verify
+fix(codeon): keep Pi System bindings and git identity fail-closed
 
-Make `just lint` (`clippy --workspace --all-targets --all-features -D warnings`) pass so Gate 9 verification can complete.
+Pi Recommended fixtures require CapabilityUnsupported. Read stored remote
+URLs instead of insteadOf-rewritten get-url so identity checks do not
+ingest operator credential material. Isolate signing tests from global
+gitconfig and hold Grok idle-expiry completion misses until cancel.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
