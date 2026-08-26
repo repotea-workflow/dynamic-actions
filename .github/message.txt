@@ -1,7 +1,3 @@
-Fix cancellation acceptance regressions
+fix(codeon): point recovery_claim_released acceptance test at 0147
 
-codeon:
-  version: 1
-  authority: FWN-48
-  description: |-
-    Preserve runnable-lease fencing when replacing uncertain dispatches and emit the valid recovery event. Align activity payload handling and repair PostgreSQL/daemon acceptance fixtures so cancellation isolation, failure survival, restart recovery, cleanup, and requeue behavior execute against current invariants.
+Co-authored-by: Cursor <cursoragent@cursor.com>
