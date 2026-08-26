@@ -1,6 +1,7 @@
-fix(codeon): keep smoke-e2e compiling after System|Named profiles
+fix(codeon): satisfy clippy and curate System|Named OpenWiki pages
 
-Map smoke config assertions through named_key() and cover SmokeScripted
-and ScriptedFake in runtime-resource reconciliation under smoke-e2e.
+Keep `just verify` lintable after System|Named profiles, add a disabled
+System Pi secret canary, and path-curate generated OpenWiki so Pi is no
+longer documented as an unavailable-runtime stub.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
