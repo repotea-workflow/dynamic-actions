@@ -1,7 +1,3 @@
-fix: restore workspace check for Cursor/Codex/Codeoff matches
+fix(codeon): recover Codex threads after restart
 
-Cover CursorAdapterError::ContainmentUnavailable, restore the missing
-http_mcp_server test helper, and ignore new Codex tool-event fields so
-`cargo check --workspace --all-targets --all-features` succeeds.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Persist operation threads so replacement provider generations can resume them. Treat confirmed missing rollouts as terminal failures instead of permanent unknown outcomes.
