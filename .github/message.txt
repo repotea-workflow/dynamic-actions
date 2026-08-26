@@ -1,8 +1,1 @@
-fix(codeon): keep Pi System bindings and git identity fail-closed
-
-Pi Recommended fixtures require CapabilityUnsupported. Read stored remote
-URLs instead of insteadOf-rewritten get-url so identity checks do not
-ingest operator credential material. Isolate signing tests from global
-gitconfig and hold Grok idle-expiry completion misses until cancel.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(codeon): recover generated cleanup conflicts
