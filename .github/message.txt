@@ -1,7 +1,3 @@
-feat(codeon): emit runtime_source on MCP issue AgentBinding JSON
+fix(codeon): recover rejected agent input
 
-MCP issue get now serializes identity as kind, source, and optional key.
-HTTP projections reject inconsistent source+profile pairs. Named("default")
-is unchanged. FORMAT_VERSION stays 1 because digests do not hash this JSON.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Legacy input-rejected operations predate authentication classification and cannot re-enter runtime retry. Retry only the exact durable state within the existing budget, then release capacity once input non-acceptance is proven.
