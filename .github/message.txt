@@ -1,7 +1,1 @@
-docs(codeon): refresh cancellation recovery
-
-codeon:
-  version: 1
-  authority: FWN-48
-  description: |-
-    Record the successful OpenWiki refresh at the frozen cancellation acceptance HEAD and clarify that restart recovery interrupts with the live recovered Dispatch fence.
+Merge main into Codeon stability branch
