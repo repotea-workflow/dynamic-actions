@@ -1,3 +1,3 @@
-fix(codeon): fence cancellation recovery
+fix(codeon): recover legacy capability fences (#226)
 
-Reject ordinary runtime work once cancellation starts.\nBind recovery readback to the live claim and allow expired claim takeover.
+Restore legacy closure lease generations, automatically fence legacy bindings through durable cancellation, and make cancellation recovery restart-safe and fail closed.
