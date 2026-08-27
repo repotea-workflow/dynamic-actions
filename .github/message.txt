@@ -1,3 +1,1 @@
-fix(codeon): preserve runtime authentication failures (#265)
-
-Establish provider-neutral terminal readback and authentication failure handling, add strict Codex historical readback, isolate ambient Codex capabilities, and safely converge terminal input_sending dispatches without replay.
+ci: run image builder checks in parallel
