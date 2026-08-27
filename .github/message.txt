@@ -1,1 +1,1 @@
-feat(robin): show avatars across user surfaces
+feat(hawk): add encrypted storage credentials
