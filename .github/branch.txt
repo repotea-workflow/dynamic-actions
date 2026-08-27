@@ -1,1 +1,1 @@
-agt/rust-build-test-speed
+agt/postgres-acceptance-speed
