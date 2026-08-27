@@ -1,3 +1,1 @@
-Fix prepared dispatch recovery after restart (#254)
-
-Preserve prepared dispatches before provider send and recover the exact historical startup state through canonical Attention owner retry with a resolution receipt.
+Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
