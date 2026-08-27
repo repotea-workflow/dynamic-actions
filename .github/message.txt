@@ -1,8 +1,3 @@
-fix(codeon): isolate Named Pi runtime state directories
+fix(codeon): requeue compatible input rejects
 
-Named Pi profiles now require agent_dir_env and may set session_dir_env.
-Typed PiStateAuthority injects PI_CODING_AGENT_DIR after bootstrap so two
-Named keys cannot share ambient ~/.pi/agent while sealed evidence claims
-distinct runtimes.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Allow exhausted input-rejection recovery only when the selected runtime is compatible and prior automatic retries have canonical resolution receipts.
