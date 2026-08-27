@@ -1,3 +1,7 @@
-style(codeon): rustfmt Named Pi session-dir argv assertion
+docs(openwiki): path-check leftover 44-tool catalog claims to 46
+
+The daemon MCP catalog is TOOL_NAMES.len() == 46. Remaining generated
+wiki pages still said 44; this matches the path-curated pages already on
+this branch. It is not an OpenWiki generator run.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
