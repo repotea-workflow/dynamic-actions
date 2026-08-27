@@ -1,4 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/postgres-acceptance-speed
-
-# Conflicts:
-#	codeon/crates/codeon-postgres/src/migrations.rs
+fix(codeon): preserve acceptance fixture coverage
