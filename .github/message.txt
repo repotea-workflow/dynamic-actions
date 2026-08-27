@@ -1,1 +1,6 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): drop redundant PickerError conversion
+
+rustc 1.98 clippy::useless_conversion rejected map_err(Into::into) on
+exhausted input preflight backoff, which already returns PickerError.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
