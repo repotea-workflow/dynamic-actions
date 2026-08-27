@@ -1,1 +1,1 @@
-agt/prefer-issue-prefix-merge-authority
+agt/preferred-issue-prefix-squash-message
