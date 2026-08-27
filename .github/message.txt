@@ -1,1 +1,6 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): compare Pi session-dir argv without owned OsString
+
+Clippy -D warnings rejected OsString::from in the Named Pi isolation
+spawn test; compare the argv window to "--session-dir" directly.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
