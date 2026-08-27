@@ -1,1 +1,1 @@
-feat: add Pi runtime and unified agent profiles
+feat: Pi production runtime and System|Named Agent Runtime Profiles (#263)
