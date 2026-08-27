@@ -1,1 +1,5 @@
-Merge remote-tracking branch 'origin/main' into agt/postgres-acceptance-speed
+Speed up Codeon PostgreSQL acceptance fixtures (#269)
+
+* test(codeon): speed up PostgreSQL acceptance fixtures
+
+* fix(codeon): preserve acceptance fixture coverage
