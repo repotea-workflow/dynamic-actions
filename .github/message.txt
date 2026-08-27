@@ -1,1 +1,1 @@
-fix(codeon): prefer issue prefix in merge messages
+test(codeon): cover preferred squash authority
