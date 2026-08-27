@@ -1,7 +1,3 @@
-docs(log): record OpenWiki regen uses OpenRouter, not OpenAI
+fix(codeon): stop rejected input recovery loops
 
-The repository OpenWiki Update workflow sets OPENWIKI_PROVIDER=openrouter
-and OPENROUTER_API_KEY. Local default openwiki still asks for
-OPENAI_API_KEY; matching the workflow fails closed without OpenRouter.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Bound compatible recovery across fresh Attempts and classify asynchronous Codex authentication failures without persisting provider output.
