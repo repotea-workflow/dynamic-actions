@@ -1,1 +1,10 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): wrap Pi dispatch with provider completion prompt
+
+Pi was sending frozen canonical_text to prompt without render_provider_prompt,
+so dispatch_id and codeon_operation_complete tool names never reached the
+session. Match Codex/Cursor/Grok wrapping.
+
+Accept a clean AlreadyExited after Cursor stdin-EOF shutdown when the fake
+still reports stdin_eof, matching sequential workspace just verify races.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
