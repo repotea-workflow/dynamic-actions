@@ -1,7 +1,7 @@
-test(cursor): accept clean sibling AlreadyExited on recovery isolation
+fix(codex): classify fast generator exit as schema failure
 
-A sequential suite can leave the other Repository fake at exit 0 before
-shutdown_process; that is not a cancel leak. Keep non-zero and ambiguous
-exits fail-closed.
+When /proc/pid/exe disappears before the first try_wait, an immediate
+schema-generator failure was reported as ExecutableIdentity. Retry wait
+briefly so exit 7 stays SchemaGeneratorFailed.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
