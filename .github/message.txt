@@ -1,1 +1,1 @@
-feat(codeon): enforce review convergence flow (#262)
+fix(codeon): harden preferred authority recovery
