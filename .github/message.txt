@@ -1,1 +1,1 @@
-feat(hawk): add encrypted storage credentials
+test(hawk): rewrite key ring fixture portably
