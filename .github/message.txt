@@ -1,7 +1,1 @@
-fix(codex): classify fast generator exit as schema failure
-
-When /proc/pid/exe disappears before the first try_wait, an immediate
-schema-generator failure was reported as ExecutableIdentity. Retry wait
-briefly so exit 7 stays SchemaGeneratorFailed.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(codeon): classify dispatch authentication failures
