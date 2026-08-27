@@ -1,3 +1,1 @@
-test(codeon): accept migration 0161 as the schema head
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(codeon): migrate exhausted auth failures
