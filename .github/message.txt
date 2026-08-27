@@ -1,6 +1,7 @@
-fix(codeon-postgres): SELECT runtime_source when loading execution bindings
+fix(codeon-postgres): do not hide attempts behind quarantined lease activations
 
-Migration 0155 and insert already persist runtime_source, but load_binding_row
-omitted the column so sqlx failed closed before Implementation dispatch.
+Review handoff can race a queued activation for the previous operation. That
+row is quarantined as authority_conflict on purpose; excluding those rows from
+generic runtime candidates left Review pending with no dispatch path.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
