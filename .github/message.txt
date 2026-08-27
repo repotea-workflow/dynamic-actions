@@ -1,6 +1,3 @@
-fix(codeon): compare Pi session-dir argv without owned OsString
-
-Clippy -D warnings rejected OsString::from in the Named Pi isolation
-spawn test; compare the argv window to "--session-dir" directly.
+style(codeon): rustfmt Named Pi session-dir argv assertion
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
