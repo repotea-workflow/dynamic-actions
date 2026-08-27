@@ -1,4 +1,5 @@
-Merge remote-tracking branch 'origin/main' into cursor/review-convergence-flow-237d
+docs(log): record main #255–#257 recovery merge
 
-# Conflicts:
-#	codeon/crates/codeon-postgres/tests/migration_acceptance/schema_contracts.rs
+Keep Agent Runtime Profile selection on 0157; named default stays named.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
