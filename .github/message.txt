@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/cursor-2026-08-25-qualification
+Merge remote-tracking branch 'origin/main' into agt/postgres-acceptance-speed
