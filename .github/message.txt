@@ -1,6 +1,1 @@
-fix(codeon): drop redundant PickerError conversion
-
-rustc 1.98 clippy::useless_conversion rejected map_err(Into::into) on
-exhausted input preflight backoff, which already returns PickerError.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(codeon): recover pre-runtime cancellation
