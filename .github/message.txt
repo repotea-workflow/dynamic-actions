@@ -1,7 +1,6 @@
-docs(openwiki): path-check leftover 44-tool catalog claims to 46
+docs(log): record leftover 44-tool OpenWiki path-check
 
-The daemon MCP catalog is TOOL_NAMES.len() == 46. Remaining generated
-wiki pages still said 44; this matches the path-curated pages already on
-this branch. It is not an OpenWiki generator run.
+Note the path-curated catalog count fix on generated wiki pages. Generator
+regen still needs OPENAI_API_KEY.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
