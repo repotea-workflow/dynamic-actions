@@ -1,7 +1,3 @@
-docs(openwiki): path-check 46-tool catalog and Grok/Pi crate rows
+fix(codex): classify thread auth rejection
 
-Manual OpenWiki check on curated pages: MCP catalog is 46 tools, skeleton
-members include Grok and Pi, and the development guide names Grok plus
-agent=pi live-e2e. Generator regen still requires OPENAI_API_KEY.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+Codeon's explicit thread provisioning bypassed the shared rejection classifier, turning invalid credentials into provider retries.
