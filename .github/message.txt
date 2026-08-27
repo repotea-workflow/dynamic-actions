@@ -1,1 +1,1 @@
-feat(omsk): batch public product imports
+feat(omsk): batch public product imports (#302)
