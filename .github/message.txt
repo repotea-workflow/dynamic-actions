@@ -1,1 +1,8 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon): isolate Named Pi runtime state directories
+
+Named Pi profiles now require agent_dir_env and may set session_dir_env.
+Typed PiStateAuthority injects PI_CODING_AGENT_DIR after bootstrap so two
+Named keys cannot share ambient ~/.pi/agent while sealed evidence claims
+distinct runtimes.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
