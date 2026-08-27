@@ -1,1 +1,6 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(postgres): renumber System|Named profile selection to 0157
+
+Main occupied 0156 for input-rejected compatible owner requeue. Keep
+existing named keys including "default" and do not rewrite them to System.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
