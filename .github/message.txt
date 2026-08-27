@@ -1,8 +1,7 @@
-fix(codeon): bind MCP issue routing to available runtimes
+fix(codeon): encode MCP System|Named pairing in catalog schema
 
-MCP issue create/replace now require every present binding to be in the
-daemon available_runtime_profiles set, matching HTTP. Daemon MCP starts
-fail-closed until bootstrap writes the preflighted System|Named identities.
-Named("default") stays distinct from System.
+Issue create/replace bindings are catalog oneOf: omitted source, explicit
+system without a key, and explicit named with a key. Inconsistent pairs
+fail closed before dispatch. Named("default") stays Named.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
