@@ -1,10 +1,6 @@
-fix(codeon): wrap Pi dispatch with provider completion prompt
+fix(codeon): collapse Pi test prompt-capture if for Clippy
 
-Pi was sending frozen canonical_text to prompt without render_provider_prompt,
-so dispatch_id and codeon_operation_complete tool names never reached the
-session. Match Codex/Cursor/Grok wrapping.
-
-Accept a clean AlreadyExited after Cursor stdin-EOF shutdown when the fake
-still reports stdin_eof, matching sequential workspace just verify races.
+just verify on 55226b05 passed workspace tests and Python probes, then
+failed clippy::collapsible_if under -D warnings.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
