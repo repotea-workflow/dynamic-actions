@@ -1,1 +1,6 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+fix(codeon-postgres): SELECT runtime_source when loading execution bindings
+
+Migration 0155 and insert already persist runtime_source, but load_binding_row
+omitted the column so sqlx failed closed before Implementation dispatch.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
