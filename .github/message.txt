@@ -1,6 +1,7 @@
-docs(log): record leftover 44-tool OpenWiki path-check
+docs(log): record OpenWiki regen uses OpenRouter, not OpenAI
 
-Note the path-curated catalog count fix on generated wiki pages. Generator
-regen still needs OPENAI_API_KEY.
+The repository OpenWiki Update workflow sets OPENWIKI_PROVIDER=openrouter
+and OPENROUTER_API_KEY. Local default openwiki still asks for
+OPENAI_API_KEY; matching the workflow fails closed without OpenRouter.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
