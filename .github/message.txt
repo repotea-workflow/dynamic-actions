@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+merge origin/main into feat/pi-runtime-and-unified-profile
+
+Keep System|Named runtime_source as migration 0156 so it does not collide with
+main's 0155 input-rejected binding-drift requeue. Preserve 46-tool OpenWiki
+path-check text and main's scheduled OpenWiki workflow.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
