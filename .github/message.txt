@@ -1,1 +1,1 @@
-feat(omsk): batch public product imports (#302)
+perf(omsk): speed declaration exports
