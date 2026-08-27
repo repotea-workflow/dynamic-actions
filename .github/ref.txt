@@ -1,1 +1,1 @@
-agt/preferred-issue-prefix-squash-message
+main
