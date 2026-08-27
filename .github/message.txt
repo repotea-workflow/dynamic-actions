@@ -1,3 +1,8 @@
-fix(codeon): make deferred Issue publication and receipts attempt-exact
+fix(codeon): bind MCP issue routing to available runtimes
+
+MCP issue create/replace now require every present binding to be in the
+daemon available_runtime_profiles set, matching HTTP. Daemon MCP starts
+fail-closed until bootstrap writes the preflighted System|Named identities.
+Named("default") stays distinct from System.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
