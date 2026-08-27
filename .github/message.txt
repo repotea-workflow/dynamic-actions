@@ -1,7 +1,3 @@
-docs: close leftover Codex/Cursor-only Issue routing wording
-
-Issue-core and MCP catalog docs still described Agent bindings as Codex or
-Cursor only. Record grok_build/pi, System|Named runtime_profile pairing, and
-matching OpenWiki tracker/picker-runtime transport wording.
+docs: join leftover MCP routing sentence wrap
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
