@@ -1,1 +1,1 @@
-agt/codeon-legacy-0157-compat
+agt/rust-build-test-speed
