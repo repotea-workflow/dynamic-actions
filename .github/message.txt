@@ -1,7 +1,3 @@
-fix(codeon): encode MCP System|Named pairing in catalog schema
-
-Issue create/replace bindings are catalog oneOf: omitted source, explicit
-system without a key, and explicit named with a key. Inconsistent pairs
-fail closed before dispatch. Named("default") stays Named.
+docs(openwiki): describe the Review convergence runtime seams
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
