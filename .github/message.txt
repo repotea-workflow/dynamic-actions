@@ -1,1 +1,7 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+docs(openwiki): path-check leftover Pi no-runner Agent selection claim
+
+The picker-runtime Agent selection section still said Pi had no daemon
+runner or process transport. Align it with production System/Named Pi
+composition and name Pi JSONL RPC as a completion transport.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
