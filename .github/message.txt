@@ -1,1 +1,9 @@
-fix(codeon): preserve acceptance fixture coverage
+Speed up Rust build artifacts and Check critical path (#266)
+
+* build: reduce Rust debug artifact size
+
+* ci: run image builder checks in parallel
+
+* build: pin Rust 1.98 across build surfaces
+
+* ci: preserve isolated dynamic check runs
