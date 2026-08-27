@@ -1,6 +1,3 @@
-docs: name Grok and Pi on leftover Codex/Cursor-only runner wording
-
-Standard Agent Operation closure and package-dispatchability docs still
-named only Codex or Cursor. Record the closed Codex/Cursor/Grok/Pi set.
+docs: match README package-dispatchability to closed Agent set
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
