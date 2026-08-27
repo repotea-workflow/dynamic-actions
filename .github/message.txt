@@ -1,1 +1,6 @@
-Merge remote-tracking branch 'origin/main' into agt/allow-symlink-runtime-paths
+test(codeon-postgres): expect migration authority through 0156
+
+Renumbering System|Named runtime_source to 0156 made the contiguous
+version-directory contract fail: on-disk versions are 1..=156.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
