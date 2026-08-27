@@ -1,1 +1,3 @@
-fix(codeon): schedule prepared startup recovery
+Schedule prepared startup recovery (#255)
+
+Schedule the exact legacy prepared-dispatch startup state so existing canonical Attention owner retry can repair it.
