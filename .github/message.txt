@@ -1,7 +1,6 @@
-merge origin/main into feat/pi-runtime-and-unified-profile
+fix(codeon): borrow Pi inspect runtime_profile after main merge
 
-Keep System|Named runtime_source as migration 0156 so it does not collide with
-main's 0155 input-rejected binding-drift requeue. Preserve 46-tool OpenWiki
-path-check text and main's scheduled OpenWiki workflow.
+RoutedAgentOperationRunner::inspect owns the resolved profile; Codex/Cursor/Grok
+already passed a reference into BTreeMap::get. Pi still moved the value.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
