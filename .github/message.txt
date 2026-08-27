@@ -1,4 +1,1 @@
-Merge branch 'main' into agt/allow-symlink-runtime-paths
-
-# Conflicts:
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/smoke_runner.rs
+refactor: centralize operation result decoding
