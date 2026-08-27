@@ -1,1 +1,1 @@
-perf(omsk): speed declaration exports
+perf(omsk): speed declaration exports (#303)
