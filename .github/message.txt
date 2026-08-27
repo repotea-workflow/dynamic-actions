@@ -1,4 +1,101 @@
-Merge remote-tracking branch 'origin/main' into agt/codeon-console-shell
+Add Codeon Console frontend shell (#161)
 
-# Conflicts:
-#	codeon/Justfile
+* feat(codeon): add console shell
+
+* fix(console): allow preview proxy host
+
+* feat(console): add login flow and settings
+
+* feat(console): add routed operations prototype
+
+* feat(console): expand issue execution views
+
+* fix(console): restore issue card navigation
+
+* feat(console): organize localized issue details
+
+* feat(console): add attempt history selector
+
+* feat(console): enrich issue detail views
+
+* feat(console): add issue graph view
+
+* feat(console): paginate issue graph lanes
+
+* feat(console): route issue detail tabs
+
+* feat(console): add navigation loading states
+
+* feat(console): localize loading and review cycles
+
+* feat(console): add execution detail sheet
+
+* feat(console): adopt top navigation shell
+
+* fix(console): keep issue view switches instant
+
+* feat(console): reshape execution workspace
+
+* feat(console): split execution detail views
+
+* fix(console): complete interface translations
+
+* feat(console): show execution actors
+
+* feat(console): redesign execution history
+
+* style(console): simplify issue detail layout
+
+* fix(console): restore text selection highlight
+
+* feat(console): add issue activity timeline
+
+* style(console): balance issue overview columns
+
+* style(console): refine issue summary metadata
+
+* feat(console): switch issue planning documents
+
+* fix(console): align issue table group markers
+
+* feat(console): remember issues view
+
+* feat(console): reorganize runtime list
+
+* feat(console): add configuration management prototype
+
+* fix(console): make loading states opt-in
+
+* fix(console): keep issue view switching synchronous
+
+* fix(console): remove large navigation loading states
+
+* fix(console): unify issue view filters
+
+* fix(console): remove page-level loading states
+
+* fix(console): refine task filter and graph controls
+
+* fix(console): refine execution workspace layout
+
+* fix(console): size execution rail to viewport
+
+* feat(console): add grouped issue graph layout
+
+* fix(console): clarify issue graph routing
+
+* fix(console): simplify issue graph routing
+
+* feat(console): expand issue graph sample data
+
+* fix(console): tint state graph columns
+
+* feat(console): filter completed issues
+
+* fix(console): align issue filters
+
+* feat(console): refine triage and internal links
+
+* fix(console): improve review round navigation
+
+* fix(console): adapt review round controls
