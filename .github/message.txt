@@ -1,1 +1,1 @@
-refactor: centralize operation result decoding
+fix(codeon): generalize terminal readback contract
