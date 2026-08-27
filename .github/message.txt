@@ -1,6 +1,7 @@
-fix(codeon): satisfy 1.98 clippy on owner recovery kind
+test(cursor): accept clean sibling AlreadyExited on recovery isolation
 
-Rewrite the merged RecheckNow branch to unwrap_or instead of is_some plus
-expect, and assert Pi startup cancellation uses pi:session:v1.
+A sequential suite can leave the other Repository fake at exit 0 before
+shutdown_process; that is not a cancel leak. Keep non-zero and ambiguous
+exits fail-closed.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
