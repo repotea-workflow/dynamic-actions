@@ -1,5 +1,7 @@
-docs(log): record main #255–#257 recovery merge
+fix(codeon): cover smoke AuthenticationUnavailable dispatch
 
-Keep Agent Runtime Profile selection on 0157; named default stays named.
+Main #256 added FakeInputDispatchBehavior::AuthenticationUnavailable.
+Map it to AgentRuntimeErrorKind::AuthenticationUnavailable so just check
+is exhaustive.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
