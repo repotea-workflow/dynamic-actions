@@ -1,1 +1,9 @@
-test(hawk): rewrite key ring fixture portably
+feat(hawk): add encrypted storage credentials (#40)
+
+* feat(hawk): add encrypted storage credentials
+
+* test(hawk): rewrite key ring fixture portably
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
