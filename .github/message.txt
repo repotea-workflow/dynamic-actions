@@ -1,1 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/rust-build-test-speed
+fix(codeon): reconcile legacy migration 157 (#268)
+
+Atomically preserve the historical migration 157 authority while applying the current 157-164 sequence across restored databases with immutable historical Agent bindings.
