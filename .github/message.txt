@@ -1,1 +1,3 @@
 fix(omsk): identify invalid import addresses
+
+Report safe Excel row and field details for invalid order address formats while keeping unknown failures sanitized.
