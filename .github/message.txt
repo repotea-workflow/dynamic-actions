@@ -1,3 +1,4 @@
-fix(codeon): preserve runtime auth failures
+Merge branch 'main' into agt/allow-symlink-runtime-paths
 
-Persist provider-neutral authentication evidence and recover terminal Codex input without duplicating dispatches. Isolate ambient Codex capabilities and require authoritative single-turn readback.\n\nAdds the input-sending terminal readback migration.
+# Conflicts:
+#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/smoke_runner.rs
