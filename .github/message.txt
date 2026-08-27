@@ -1,7 +1,7 @@
-docs(openwiki): path-check leftover Pi no-runner Agent selection claim
+docs: close leftover Codex/Cursor-only Issue routing wording
 
-The picker-runtime Agent selection section still said Pi had no daemon
-runner or process transport. Align it with production System/Named Pi
-composition and name Pi JSONL RPC as a completion transport.
+Issue-core and MCP catalog docs still described Agent bindings as Codex or
+Cursor only. Record grok_build/pi, System|Named runtime_profile pairing, and
+matching OpenWiki tracker/picker-runtime transport wording.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
