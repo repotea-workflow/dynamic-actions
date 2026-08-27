@@ -1,7 +1,7 @@
-fix(codeon-postgres): do not hide attempts behind quarantined lease activations
+docs(openwiki): path-check 46-tool catalog and Grok/Pi crate rows
 
-Review handoff can race a queued activation for the previous operation. That
-row is quarantined as authority_conflict on purpose; excluding those rows from
-generic runtime candidates left Review pending with no dispatch path.
+Manual OpenWiki check on curated pages: MCP catalog is 46 tools, skeleton
+members include Grok and Pi, and the development guide names Grok plus
+agent=pi live-e2e. Generator regen still requires OPENAI_API_KEY.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
