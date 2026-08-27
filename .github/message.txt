@@ -1,6 +1,10 @@
-fix(codeon): borrow Pi inspect runtime_profile after main merge
+test(codeon): accept clean sibling Cursor exit in cancel isolation
 
-RoutedAgentOperationRunner::inspect owns the resolved profile; Codex/Cursor/Grok
-already passed a reference into BTreeMap::get. Pi still moved the value.
+Sequential just verify after the main merge consistently failed
+cancellation_identity_mismatch_is_fail_closed_and_exact_cancel_is_isolated
+with AlreadyExited exit_code=0, while the same test passed isolated 3/3.
+Treat a clean sibling exit as compatible with isolation; keep fail-closed
+on non-zero or ambiguous outcomes and still require no cancel_seen on the
+other workspace.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
