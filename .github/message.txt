@@ -1,1 +1,1 @@
-fix(landing): avoid automatic attention id collisions
+debug(landing): expose resume persistence failure
