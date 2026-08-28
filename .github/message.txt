@@ -1,1 +1,1 @@
-fix(landing): version automatic checks rechecks
+fix(landing): avoid automatic attention id collisions
