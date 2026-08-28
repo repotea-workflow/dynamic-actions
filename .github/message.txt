@@ -1,1 +1,1 @@
-debug(attention): log storage error cause
+fix(codeon): ignore stale checks attention after operation failure
