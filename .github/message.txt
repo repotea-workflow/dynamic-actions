@@ -1,1 +1,1 @@
-debug(landing): expose resume persistence failure
+debug(attention): log storage error cause
