@@ -1,1 +1,1 @@
-fix(codeon): separate Grok profiles from MCP config
+fix(codeon): make Pi terminal cleanup idempotent
