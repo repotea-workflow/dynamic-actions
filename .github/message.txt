@@ -1,1 +1,1 @@
-fix(runtime): resume waiting checks after restart
+fix(picker): balance runtime candidate query
