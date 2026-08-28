@@ -1,1 +1,1 @@
-fix(codeon): preserve operator cancellation attention
+fix(pi): use compact planning completion
