@@ -1,1 +1,1 @@
-preserve operation cwd in isolated Codex fallback
+keep review coverage authority server-owned
