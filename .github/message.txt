@@ -1,1 +1,5 @@
-Merge remote-tracking branch 'origin/agt/fwn73-input-rejected-cancel' into agt/codeon-console-admin-fix
+fix(console): harden admin loading and routing states (#278)
+
+* fix(console): harden admin loading and routing states
+
+* fix(console): preserve partial data uncertainty
