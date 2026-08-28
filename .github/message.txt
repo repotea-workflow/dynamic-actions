@@ -1,1 +1,1 @@
-fix(codeon): ignore stale checks attention after operation failure
+fix(pi): clarify review completion schema
