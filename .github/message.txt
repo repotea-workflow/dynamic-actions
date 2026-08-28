@@ -1,3 +1,1 @@
-test(hawk): prove secret envelope lifecycle end to end (#41)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(robin): dismiss developer dock on pointer leave
