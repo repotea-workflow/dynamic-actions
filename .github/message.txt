@@ -1,13 +1,1 @@
-Add typed application information management (#43)
-
-* feat(apps): add typed application information
-
-* fix(apps): align locale and loading state
-
-* fix(apps): harden application information updates
-
-* fix(apps): complete profile validation and audit
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(storage): address final review findings

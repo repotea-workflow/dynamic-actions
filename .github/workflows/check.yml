@@ -80,3 +80,17 @@ jobs:
           just migrate
           just test-db
           just smoke-backend
+
+      - name: Verify real Alibaba OSS acceptance
+        env:
+          AVIARY_OSS_E2E_ACCESS_KEY_ID: ${{ secrets.AVIARY_OSS_E2E_ACCESS_KEY_ID }}
+          AVIARY_OSS_E2E_ACCESS_KEY_SECRET: ${{ secrets.AVIARY_OSS_E2E_ACCESS_KEY_SECRET }}
+          AVIARY_OSS_E2E_SECURITY_TOKEN: ${{ secrets.AVIARY_OSS_E2E_SECURITY_TOKEN }}
+          AVIARY_OSS_E2E_BUCKET: ${{ secrets.AVIARY_OSS_E2E_BUCKET }}
+          AVIARY_OSS_E2E_REGION: ${{ secrets.AVIARY_OSS_E2E_REGION }}
+          AVIARY_OSS_E2E_CUSTOM_ENDPOINT: ${{ secrets.AVIARY_OSS_E2E_CUSTOM_ENDPOINT }}
+          AVIARY_OSS_E2E_PREFIX: ${{ secrets.AVIARY_OSS_E2E_PREFIX }}
+        run: |
+          trap 'just db-down' EXIT
+          just db-up
+          just e2e-oss
