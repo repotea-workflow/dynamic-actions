@@ -1,7 +1,1 @@
-Fix and validate generated Codeon OpenAPI semantics (#272)
-
-* fix(codeon-api): validate generated OpenAPI semantics
-
-* test(codeon-api): harden OpenAPI semantic checks
-
-* test(codeon-api): close semantic validator gaps
+preserve operation cwd in isolated Codex fallback
