@@ -1,3 +1,1 @@
-feat(codeon): restore Console UI with HTTP API integration (#274)
-
-Preserve the PR #274 Console UI while connecting supported workflows to the Codeon HTTP API, retaining tab-scoped authentication across refreshes, and disabling unsupported prototype actions. Includes authority-fenced writes, request cancellation, cache invalidation, UUID routing, and regression coverage.
+fix(grok): bind metadata prompt activity
