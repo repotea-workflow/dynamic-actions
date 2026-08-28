@@ -1,1 +1,1 @@
-chore(codeon): trace Codex dispatch failure
+fix(codex): accept sealed disabled MCP readback
