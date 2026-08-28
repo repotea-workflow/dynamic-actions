@@ -1,1 +1,1 @@
-start isolated Codex turn when rollout is missing
+fix(codeon-api): validate generated OpenAPI semantics
