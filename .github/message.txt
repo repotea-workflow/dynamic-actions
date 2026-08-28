@@ -1,1 +1,1 @@
-Embed Codeon Console and connect it to the HTTP API (#273)
+fix(codeon): admit terminal flow after lease release
