@@ -1,1 +1,3 @@
-fix(hawk): keep storage metadata readable without keys
+Keep storage metadata readable without a key ring (#47)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
