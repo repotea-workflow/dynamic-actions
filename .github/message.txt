@@ -1,1 +1,1 @@
-fix(codex): accept sealed disabled MCP readback
+fix(codeon): cancel pristine pre-dispatch recovery
