@@ -1,1 +1,1 @@
-fix(cursor): bound planning completion payload
+fix(console): preserve API authority across UI state
