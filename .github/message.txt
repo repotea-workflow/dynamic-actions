@@ -1,1 +1,1 @@
-fix(codeon): ignore legacy review coverage claims
+fix(codeon): make Console data loading resilient
