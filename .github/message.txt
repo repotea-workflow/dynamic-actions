@@ -1,1 +1,1 @@
-fix(codeon): park unrecoverable cancellation closure
+fix(codeon): classify cancellation recovery faults
