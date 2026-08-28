@@ -1,3 +1,1 @@
-Add regional object storage settings and avatar uploads (#44)
-
-Adds regional platform/tenant/application storage inheritance, provider-neutral Alibaba OSS profiles, Hawk envelope-encrypted credentials, Settings UI, and presigned management-avatar uploads. Real Alibaba OSS acceptance remains for owner-run follow-up per explicit approval.
+feat(robin): harden production app setup
