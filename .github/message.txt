@@ -1,1 +1,1 @@
-fix: address tenant access review findings
+fix: close tenant membership authorization bypasses
