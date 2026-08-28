@@ -1,1 +1,5 @@
-fix(console): preserve issue identity across profiles
+fix(console): align active Issue trees and identifiers (#277)
+
+* fix(console): align issue trees with tracker identifiers
+
+* fix(console): preserve issue identity across profiles
