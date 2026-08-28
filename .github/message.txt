@@ -1,1 +1,1 @@
-fix(pi): use authoritative completion digest
+fix(codeon): ignore legacy review coverage claims
