@@ -1,1 +1,1 @@
-fix(grok): clear acknowledgement deadline after activity
+fix(pi): use authoritative completion digest
