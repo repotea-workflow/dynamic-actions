@@ -1,3 +1,1 @@
-Make tenant membership and platform access explicit (#42)
-
-Implements explicit tenant administrator selection, hardened tenant membership management, precise platform/workspace authorization boundaries, Robin entry flows, generated API updates, audit reporting, and coverage across Hawk, PostgreSQL, Robin, and Chromium E2E.
+fix(apps): align locale and loading state
