@@ -1,1 +1,1 @@
-Qualify current Cursor startup compatibility (#270)
+fix cancellation after rejected agent input
