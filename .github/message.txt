@@ -1,1 +1,1 @@
-fix(codeon): recover startup running agent operations
+fix(console): preserve partial data uncertainty
