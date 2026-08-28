@@ -1,1 +1,1 @@
-log Codex turn rejection details
+start isolated Codex turn when rollout is missing
