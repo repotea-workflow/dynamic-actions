@@ -1,4 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/codeon-console-shell
-
-# Conflicts:
-#	codeon/Justfile
+fix(codeon): preserve operator cancellation attention
