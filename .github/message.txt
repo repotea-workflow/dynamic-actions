@@ -1,1 +1,1 @@
-test(codeon-api): harden OpenAPI semantic checks
+test(codeon-api): close semantic validator gaps
