@@ -1,1 +1,1 @@
-fix(apps): harden application information updates
+fix(apps): complete profile validation and audit
