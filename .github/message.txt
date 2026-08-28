@@ -1,11 +1,1 @@
-Harden Robin production setup and app creation (#45)
-
-* feat(robin): harden production app setup
-
-* fix(robin): address production setup review
-
-* docs(robin): align language input contract
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+dev: run local stack through compose
