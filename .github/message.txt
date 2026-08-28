@@ -1,1 +1,1 @@
-fix(pi): use compact planning completion
+fix(cursor): bound planning completion payload
