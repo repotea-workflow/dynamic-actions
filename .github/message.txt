@@ -1,1 +1,1 @@
-fix(picker): balance runtime candidate query
+fix(attention): allow checks pending owner recheck
