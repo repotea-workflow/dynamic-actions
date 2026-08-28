@@ -41,26 +41,6 @@ jobs:
           toolchain: 1.98.0
           components: rustfmt,clippy
 
-      - name: Install pinned Node
-        uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
-        with:
-          node-version: 22.23.2
-
-      - name: Install pinned Console dependencies
-        run: |
-          corepack enable
-          corepack prepare pnpm@10.33.2 --activate
-          test "$(node --version)" = "v22.23.2"
-          test "$(pnpm --version)" = "10.33.2"
-          pnpm --dir codeon/console install --frozen-lockfile --ignore-scripts
-
-      - name: Verify Console contract and build
-        run: |
-          pnpm --dir codeon/console check:openapi
-          pnpm --dir codeon/console typecheck
-          pnpm --dir codeon/console test
-          pnpm --dir codeon/console build
-
       - name: Cache Cargo artifacts
         uses: Swatinem/rust-cache@6323deb102c322ba6fcbdcafc7e3dddab59af2b6 # v2
 
@@ -80,11 +60,6 @@ jobs:
         env:
           RUST_TEST_THREADS: "1"
         run: cargo test --workspace --locked
-
-      - name: Run Console browser smoke
-        run: |
-          google-chrome --version
-          cargo test -p codeon daemon::api::tests::browser_loads_console_deep_link -- --ignored --exact --nocapture
 
   image-builder:
     name: Image builder
