@@ -1,1 +1,1 @@
-keep review coverage authority server-owned
+fix(cursor): deliver operation MCP through ACP
