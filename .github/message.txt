@@ -1,1 +1,1 @@
-fix(attention): allow checks pending owner recheck
+fix(landing): version automatic checks rechecks
