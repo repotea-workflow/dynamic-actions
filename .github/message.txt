@@ -1,5 +1,1 @@
-fix(console): preserve data across navigation (#276)
-
-* fix(console): preserve data across navigation
-
-* test(console): lock navigation callback identity
+fix(codeon): recheck cancellation repository recovery
