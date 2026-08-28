@@ -1,1 +1,1 @@
-chore(codeon): trace Codex runtime rejection
+fix(codex): handle unmaterialized thread readback
