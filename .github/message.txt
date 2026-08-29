@@ -1,15 +1,1 @@
-feat: unify localization workspaces (#57)
-
-* feat: add localization workspace API
-
-* feat: unify localization workspaces
-
-* chore: regenerate management API client
-
-* fix: enforce localization route and matrix status semantics
-
-* fix: preserve workspace focus and not-created status
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix: enforce reference pack read-only writes
