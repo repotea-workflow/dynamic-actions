@@ -1,1 +1,1 @@
-fix: enforce reference pack read-only writes
+fix: protect reference imports and platform locales
