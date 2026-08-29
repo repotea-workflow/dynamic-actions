@@ -1,9 +1,1 @@
-feat: add scoped font resources (#56)
-
-* feat: add scoped font resources
-
-* fix: enforce app font visibility and CAS
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat: unify localization workspaces
