@@ -1,1 +1,1 @@
-fix(codeon): accept fenced retry closure at startup
+fix(codeon): allow routing repair during recovery
