@@ -1,9 +1,1 @@
-fix: harden localization workspace invariants (#58)
-
-* fix: enforce reference pack read-only writes
-
-* fix: protect reference imports and platform locales
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix: add forward localization hardening migration
