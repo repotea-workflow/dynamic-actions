@@ -1,1 +1,1 @@
-Preserve Pi provider errors during model configuration
+Allow runtime permits during Pi model configuration
