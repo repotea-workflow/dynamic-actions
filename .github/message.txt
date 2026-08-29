@@ -1,1 +1,1 @@
-fix(codeon): route future attempts during execution
+fix(cancellation): trust completed dispatch closure
