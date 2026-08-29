@@ -1,4 +1,28 @@
-fix(regions): close review gaps for auth and re-enable
+feat: platform RegionCatalog and App region selection (#50)
+
+* feat(hawk): add platform region catalog and app region selection
+
+Elevate avr_storage_regions to avr_regions with a compatibility view, add
+RegionService plus App region settings APIs, and require regionKeys on CreateApp.
+
+* chore(api): regenerate region management client
+
+Expose ManagementRegionsApi and CreateApp.regionKeys from the updated Hawk OpenAPI contract.
+
+* feat(robin): manage platform and app regions
+
+Add the Regions settings page, App create/selection UI, and docs for the
+platform RegionCatalog while keeping object storage region CRUD read-only.
+
+* chore: format region catalog and clear lint leftovers
+
+Satisfy rustfmt/clippy gates and drop unused Robin access-tools imports.
+
+* fix(regions): close review gaps for auth and re-enable
 
 Allow apps.manage to list regions for CreateApp, require regions.manage on
 legacy storage-region mutations, and add an enable action for disabled regions.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
