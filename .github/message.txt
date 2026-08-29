@@ -1,1 +1,13 @@
-feat: complete locale editing workflows
+feat: separate platform and app language packs (#54)
+
+* feat: separate platform and app language packs
+
+* feat: connect localization management UI
+
+* fix: preserve compatible locale migration
+
+* feat: complete locale editing workflows
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
