@@ -1,1 +1,1 @@
-fix(codeon): preserve public-safe execution boundaries
+fix(codeon): keep review selection synchronized
