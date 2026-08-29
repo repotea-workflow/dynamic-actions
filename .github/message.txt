@@ -1,3 +1,1 @@
-fix(codeon): show Planning artifacts and bound review flow
-
-Preserve public-safe execution boundaries while making durable Planning artifact state visible and bounding large Review/Revision histories.
+fix(codeon): reconcile completed Pi runtime on restart
