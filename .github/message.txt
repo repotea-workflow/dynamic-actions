@@ -1,5 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/remove-hawk-builds
-
-# Conflicts:
-#	raptors/hawk/src/management_api/mod.rs
-#	raptors/hawk/src/management_api/tenants.rs
+Remove Hawk binary build subsystem (#51)
