@@ -1,4 +1,16 @@
-fix: keep language-pack summaries and ZIP commits accurate
+feat: manage Fluent language packs under existing regions (#52)
+
+* feat: manage Fluent language packs under existing regions
+
+Give platform operators key-level Fluent drafts, ZIP import/export, and
+immutable published versions on current logical regions without changing
+App releases or Swan language switching.
+
+* fix: keep language-pack summaries and ZIP commits accurate
 
 Count locales against the latest published version only, send preview
 revisions on ZIP import, and verify decompressed ZIP entry sizes.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
