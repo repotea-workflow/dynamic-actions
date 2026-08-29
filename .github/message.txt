@@ -1,1 +1,1 @@
-Prevent failed completion recovery replay loops
+fix: accept history-only conflict repairs
