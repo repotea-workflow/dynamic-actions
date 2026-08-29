@@ -1,1 +1,1 @@
-fix(cancellation): park user-paused unknown runtimes
+fix(cancellation): recognize explicit pause authority
