@@ -1,1 +1,11 @@
-fix: add forward localization hardening migration
+fix: add forward localization hardening migration (#59)
+
+* fix: enforce reference pack read-only writes
+
+* fix: protect reference imports and platform locales
+
+* fix: add forward localization hardening migration
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
