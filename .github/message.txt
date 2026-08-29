@@ -1,1 +1,1 @@
-feat: add scoped font resources
+fix: enforce app font visibility and CAS
