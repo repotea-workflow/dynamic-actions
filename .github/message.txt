@@ -1,1 +1,5 @@
-Remove Hawk binary build subsystem (#51)
+feat: manage Fluent language packs under existing regions
+
+Give platform operators key-level Fluent drafts, ZIP import/export, and
+immutable published versions on current logical regions without changing
+App releases or Swan language switching.
