@@ -1,1 +1,1 @@
-feat: unify localization workspaces
+fix: enforce localization route and matrix status semantics
