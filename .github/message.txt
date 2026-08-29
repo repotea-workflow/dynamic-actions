@@ -1,3 +1,1 @@
-fix: align localization UI copy (#55)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat: add scoped font resources
