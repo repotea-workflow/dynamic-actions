@@ -1,5 +1,4 @@
-feat: manage Fluent language packs under existing regions
+fix: keep language-pack summaries and ZIP commits accurate
 
-Give platform operators key-level Fluent drafts, ZIP import/export, and
-immutable published versions on current logical regions without changing
-App releases or Swan language switching.
+Count locales against the latest published version only, send preview
+revisions on ZIP import, and verify decompressed ZIP entry sizes.
