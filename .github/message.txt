@@ -1,1 +1,1 @@
-fix(codeon): accept compact review decision payloads
+fix(codeon): normalize review finding lineage
