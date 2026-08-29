@@ -1,4 +1,23 @@
-fix(ci): pass format and clippy gates
+feat(mobile): add printer status tips and continuous-paper advance (#126)
+
+* feat(mobile): add printer status tips and continuous-paper advance
+
+Listen after connect for paper-out and cover-open using framed DLE EOT
+replies, and show a dismissible top-right tip. Drive print feed from
+catalog paperModes, keep the selected protocol in sync, and advance
+continuous jobs about 20 mm after the raster. Restore bundled home
+banners when the public catalog is empty.
+
+* feat(mobile): fit print jobs to paper and unify companion flows
+
+Scale photos and scans down to A4 without stretching smaller images,
+fit web captures and notes to the selected media, keep scanner
+contrast local, and reconnect the last bonded printer on launch.
+
+Also unifies 1-bit threshold/dither on the shared print preview,
+adds Japanese locale, and generates AI print pages at printer size.
+
+* fix(ci): pass format and clippy gates
 
 Replace home-banner test expect() with panic mappings so clippy
 -D warnings succeeds, and format Dart/Prettier files the check
