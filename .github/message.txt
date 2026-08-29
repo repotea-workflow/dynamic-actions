@@ -1,1 +1,1 @@
-fix(cancellation): recognize explicit pause authority
+fix(attention): retry parked pause reconciliation
