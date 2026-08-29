@@ -1,1 +1,9 @@
-chore: refresh management API client
+feat: add scoped icon management (#61)
+
+* feat: add scoped icon management
+
+* chore: refresh management API client
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
