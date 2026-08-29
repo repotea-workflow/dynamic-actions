@@ -1,26 +1,11 @@
-feat(mobile): add printer status tips and continuous-paper advance (#126)
+fix(mobile): address GP printing test feedback
 
-* feat(mobile): add printer status tips and continuous-paper advance
+Map image brightness through identity at UI 0 so contrast-only edits no
+longer crush scans to black. Expose black-mark locate only when the
+catalog lists it, prefix schemeless web URLs with https://, keep
+learning type switches on the overlay stack, and send wrong-question
+retakes back to the camera.
 
-Listen after connect for paper-out and cover-open using framed DLE EOT
-replies, and show a dismissible top-right tip. Drive print feed from
-catalog paperModes, keep the selected protocol in sync, and advance
-continuous jobs about 20 mm after the raster. Restore bundled home
-banners when the public catalog is empty.
-
-* feat(mobile): fit print jobs to paper and unify companion flows
-
-Scale photos and scans down to A4 without stretching smaller images,
-fit web captures and notes to the selected media, keep scanner
-contrast local, and reconnect the last bonded printer on launch.
-
-Also unifies 1-bit threshold/dither on the shared print preview,
-adds Japanese locale, and generates AI print pages at printer size.
-
-* fix(ci): pass format and clippy gates
-
-Replace home-banner test expect() with panic mappings so clippy
--D warnings succeeds, and format Dart/Prettier files the check
-workflow requires.
-
-Also apply the 佳博打印机 display name and square G-mark icon.
+Also adds taller NIB test pages, a single connect-error banner, junior
+geography, delisted dead recommended sites, a Gprinter lockup, and
+style-specific AI prompts.
