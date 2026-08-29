@@ -1,3 +1,3 @@
-Pin Flutter toolchain to 3.47.2
+chore: format region catalog and clear lint leftovers
 
-Pin Swan and Mallard to Flutter 3.47.2, align CI and Hawk binary-build contracts, retain required analyzer migrations, and refresh SDK-driven Pub locks.
+Satisfy rustfmt/clippy gates and drop unused Robin access-tools imports.
