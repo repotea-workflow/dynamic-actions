@@ -1,4 +1,4 @@
-fix(mobile): close remaining non-physical GP test feedback
+fix(mobile): close remaining non-physical GP test feedback (#129)
 
 Bind print readiness to the model used at connect, record recent tool
 use on Home, keep empty-printer errors on one surface, and commit
