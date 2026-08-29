@@ -1,1 +1,1 @@
-fix(cancellation): accept legacy pause evidence
+Preserve Pi provider errors during model configuration
