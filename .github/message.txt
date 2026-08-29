@@ -1,1 +1,1 @@
-fix(picker): accept fenced prior runtime closure
+fix(cancellation): retry recovery after completion race
