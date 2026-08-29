@@ -1,3 +1,25 @@
-fix: project app region permissions into tenant sessions
+feat: canonical BCP 47 platform regions (#53)
+
+* feat(hawk): make Aviary regions canonical BCP 47 region tags
+
+Replace free-form region codes with an ICU-validated allowlist, expand/contract Postgres onto region_tag (mapping default to zh-CN and halting on unknown history), and bind object storage plus app regions to that key while leaving cloud providerRegion independent.
+
+* chore: regenerate OpenAPI clients for regionTag
+
+Refresh the generated management client so platform regions, storage profiles, and language packs speak regionTag and providerRegion instead of logicalRegion.
+
+* feat(robin): use fixed settings paths and BCP 47 region tags
+
+Split platform settings onto General, Developer, Regions, and Object storage URLs with no query-section compatibility, move App regions under the tenant workspace, and bind storage plus localization to regionTag.
+
+* docs: describe BCP 47 platform regions in OpenWiki
+
+Record that Aviary region identity is regionTag, object storage binds by that tag with an independent providerRegion, and Robin settings use fixed paths without section-query compatibility.
+
+* fix: project app region permissions into tenant sessions
 
 Tenant administrators already receive platform.app_regions grants, but Hawk omitted those keys from session probes and Robin ignored tenant-scoped copies, so the App regions page stayed inaccessible.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
