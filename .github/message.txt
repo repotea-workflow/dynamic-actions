@@ -1,4 +1,4 @@
-fix(mobile): address GP printing test feedback
+fix(mobile): address GP printing test feedback (#127)
 
 Map image brightness through identity at UI 0 so contrast-only edits no
 longer crush scans to black. Expose black-mark locate only when the
