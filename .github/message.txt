@@ -1,4 +1,4 @@
-fix(mobile): close GP test-feedback skeptic gaps
+fix(mobile): close GP test-feedback skeptic gaps (#128)
 
 Keep learning type switches in-place so the overlay can still pop home,
 loop wrong-question retakes through a callable coordinator, and block
