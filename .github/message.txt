@@ -1,3 +1,1 @@
-Complete Robin account and app management workflows (#48)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Pin Flutter toolchain to 3.47.2
