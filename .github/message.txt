@@ -1,1 +1,1 @@
-fix(cancellation): recheck unknown runtime closure
+fix(codeon): accept fenced retry closure at startup
