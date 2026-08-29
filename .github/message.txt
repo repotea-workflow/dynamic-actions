@@ -1,5 +1,5 @@
-fix(mobile): close GP test-feedback skeptic gaps (#128)
+fix(mobile): close remaining non-physical GP test feedback
 
-Keep learning type switches in-place so the overlay can still pop home,
-loop wrong-question retakes through a callable coordinator, and block
-connected-but-unprintable jobs instead of silently degrading paper modes.
+Bind print readiness to the model used at connect, record recent tool
+use on Home, keep empty-printer errors on one surface, and commit
+brightness/contrast only at the end of a slider gesture.
