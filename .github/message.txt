@@ -1,9 +1,1 @@
-Document Pi routing examples
-
-codeon:
-  version: 1
-  authority: FWN-71
-  description: |-
-    Update the maintained example config and agent-selection spec so Pi appears in the requested planning and implementation routing examples.
-    
-    Keep the existing runtime wiring unchanged; this is a documentation and sample-config alignment only.
+fix(codeon): normalize merge fallback description
