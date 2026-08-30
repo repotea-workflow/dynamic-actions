@@ -1,1 +1,9 @@
-fix(codeon): normalize merge fallback description
+Comment out Pi routing example in the sample config
+
+codeon:
+  version: 1
+  authority: FWN-71
+  description: |-
+    Keep the example configuration aligned with the default-disabled [execution.pi] table by moving the Pi planning and implementation routes into commented examples. This avoids advertising active Pi routing in the sample while preserving the requested snippets for operators who enable Pi explicitly.
+    
+    Verified the example TOML still parses and that the Pi route blocks are no longer active.
