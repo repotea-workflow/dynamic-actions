@@ -1,4 +1,8 @@
-fix(mobile): print a full A4 dummy page for test print (#164)
+fix(mobile): match Home layout proportions to the P0 replica
 
-The test raster was only 40 mm, so the printer ejected a short strip.
-Build a 297 mm image of Latin dummy copy so a test print covers A4.
+Replace GridView aspect-ratio stretching with P0 replica tokens so
+module cards stay short and wide, minor tools keep intrinsic height,
+the connect chip is dot+text+chevron, and banner/cards use palette
+radius plus replica shadow.
+
+Closes #133
