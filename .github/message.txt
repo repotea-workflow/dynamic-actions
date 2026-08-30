@@ -1,7 +1,3 @@
-fix(mobile): align P2 feature pages to the P0 replica (#175)
+test(mobile): assert P0 edit chips for vertical flip
 
-Match image-print actions, print-preview hierarchy, image-edit tools,
-AI print composer, exam materials, and wrong-question book to the
-frozen P0 HTML without dropping required print capabilities.
-
-Refs #135 #137 #140 #141 #142 #144 #151
+The image editor now uses GprinterEditToolChip instead of FilterChip.
