@@ -1,1 +1,1 @@
-feat: refine localization resource workflows
+fix: enable primary localization editing
