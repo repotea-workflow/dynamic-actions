@@ -1,4 +1,4 @@
-fix(mobile): use P0 replica glyphs instead of Material icons
+fix(mobile): use P0 replica glyphs instead of Material icons (#177)
 
 Delete/edit on image print and related tool chips now draw the
 prototype gp-ico paths (outline + accent), not Icons.delete_outline.
