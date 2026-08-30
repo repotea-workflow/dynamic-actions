@@ -1,9 +1,7 @@
-fix(mobile): attribute NIB disconnects and keep a single connect error (#170)
+fix(mobile): align P2 feature pages to the P0 replica
 
-Record a monotonic session log for discovery, connect, writes, lifecycle,
-and typed disconnect reasons so printer drops can be diagnosed from logs.
-Retry a write timeout once while the link still reports connected.
+Match image-print actions, print-preview hierarchy, image-edit tools,
+AI print composer, exam materials, and wrong-question book to the
+frozen P0 HTML without dropping required print capabilities.
 
-Bind print readiness to the model used at connect without falling back to
-the selected catalog, and suppress the empty-printers banner when a
-failure is already visible.
+Refs #135 #137 #140 #141 #142 #144 #151
