@@ -1,4 +1,4 @@
-fix(mobile): match P0 print preview controls and thumbnail border
+fix(mobile): match P0 print preview controls and thumbnail border (#178)
 
 Keep the image-print thumbnail's 2px mint/coral stroke outside the
 inner clip so rounded corners no longer eat the frame. Print preview
