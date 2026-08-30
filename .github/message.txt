@@ -1,4 +1,4 @@
-fix(mobile): use the Gprinter lockup on Home
+fix(mobile): use the Gprinter lockup on Home (#130)
 
 The prototype header is a single logo.png wordmark. Home was still
 composing logo_mark.png plus translated text, so the brand never
