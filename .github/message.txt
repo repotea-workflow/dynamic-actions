@@ -1,4 +1,4 @@
-fix(mobile): print a full A4 dummy page for test print
+fix(mobile): print a full A4 dummy page for test print (#164)
 
 The test raster was only 40 mm, so the printer ejected a short strip.
 Build a 297 mm image of Latin dummy copy so a test print covers A4.
