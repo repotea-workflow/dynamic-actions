@@ -1,3 +1,1 @@
-feat: add device management and multi-image assets
-
-Adds device model management, unified asset uploads, and multiple device model images with Robin management UI.
+feat: validate font metadata in browser uploads
