@@ -1,1 +1,1 @@
-feat: complete localization and app resource management
+feat: refine localization resource workflows
