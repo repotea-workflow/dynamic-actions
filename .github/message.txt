@@ -1,6 +1,6 @@
-fix(mobile): align image-edit chrome and AI print copy to P0 (#180)
+fix(mobile): align 错题本 to P0 mint and fix compose print
 
-Crop/erase app bars use brand 重置 text (erase keeps 撤销). Cancel is
-plain text without the tonal fill. AI print drops the thermal-line-art
-footer, uses prototype body/hint copy, and shows 卡通可爱 / 极简线稿 /
-水彩手绘.
+The capture banner uses the P0 mint teal gradient, not brand coral.
+Subject cards use replica glyphs, the list is selectable cards, and
+组卷打印 no longer treats saved images as camera captures (PNG was
+labeled .jpg and surfaced as 拍照失败).
