@@ -1,4 +1,4 @@
-fix(mobile): align image-edit chrome and AI print copy to P0
+fix(mobile): align image-edit chrome and AI print copy to P0 (#180)
 
 Crop/erase app bars use brand 重置 text (erase keeps 撤销). Cancel is
 plain text without the tonal fill. AI print drops the thermal-line-art
