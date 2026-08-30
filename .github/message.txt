@@ -1,6 +1,5 @@
-fix(mobile): match 错题本 subject marks and grade sheet to P0 (#182)
+fix(mobile): return to 错题本 after saving a capture
 
-Keep the mint teal capture banner from #181, and align the remaining
-error-book chrome to the P0 replica: calculator/italic/flask subject
-strokes, bottom-sheet grade tags, card thumbnails, and 组卷打印 as the
-compose preview title.
+Saving from the capture preview only showed a snackbar and left the
+photo page open. Pop the review with done so the library is visible
+again; retake still reopens the camera on the same preview.
