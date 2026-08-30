@@ -1,4 +1,4 @@
-fix(mobile): align 错题本 to P0 mint and fix compose print
+fix(mobile): align 错题本 to P0 mint and fix compose print (#181)
 
 The capture banner uses the P0 mint teal gradient, not brand coral.
 Subject cards use replica glyphs, the list is selectable cards, and
