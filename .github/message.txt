@@ -1,8 +1,5 @@
-fix(mobile): localize editor chrome and keep zh as Hans (#148, #149) (#174)
+fix(mobile): show Home recent use and page local records (#134) (#173)
 
-Move graphic/note editor chrome off zh/en _label helpers onto ARB-backed
-AppLocalizations. Plate can hide the app delegate, so the shell restores
-the ambient locale around the canvas.
-
-Rewrite app_zh.arb as a Simplified fallback matching Hans so generic zh
-no longer ships mixed Traditional copy. Runtime still maps zh to Hans.
+Keep a genuine empty recent section on a fresh install, show See more
+whenever tools or public templates were used, and page local print
+records 20 at a time instead of loading the whole JSON into the UI.
