@@ -1,1 +1,1 @@
-allow generic auth closure for all agents
+fix(codeon): park unchanged recovery candidates
