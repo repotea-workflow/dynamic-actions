@@ -1,1 +1,1 @@
-fix: harden banner distribution
+feat: add banner lifecycle operations
