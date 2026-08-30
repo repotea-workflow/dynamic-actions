@@ -1,6 +1,5 @@
-fix(mobile): keep exam-material Back, retake camera, junior geography
+fix(mobile): show Home recent use and page local records (#134)
 
-Switch learning types in place with an explicit overlay Back instead of
-GoRouter sibling replacement. After saving a wrong question, Retake
-reopens the camera on review rather than popping to the book list.
-Seed junior Geography into education_subjects and keep PG 80 / MySQL 84.
+Keep a genuine empty recent section on a fresh install, show See more
+whenever tools or public templates were used, and page local print
+records 20 at a time instead of loading the whole JSON into the UI.
