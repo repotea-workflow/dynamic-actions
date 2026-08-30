@@ -1,9 +1,5 @@
-fix(mobile): attribute NIB disconnects and keep a single connect error
+fix(mobile): add paged/black-mark paper and catalog size entry
 
-Record a monotonic session log for discovery, connect, writes, lifecycle,
-and typed disconnect reasons so printer drops can be diagnosed from logs.
-Retry a write timeout once while the link still reports connected.
-
-Bind print readiness to the model used at connect without falling back to
-the selected catalog, and suppress the empty-printers banner when a
-failure is already visible.
+Keep PrintFeedMode and PrintLocateMode independent so TSPL black_mark
+never camelCases or silent-degrades. Print preview is the paper-spec
+entry and only lists the selected printer's media profiles.
