@@ -1,4 +1,4 @@
-fix(mobile): match Home layout proportions to the P0 replica
+fix(mobile): match Home layout proportions to the P0 replica (#165)
 
 Replace GridView aspect-ratio stretching with P0 replica tokens so
 module cards stay short and wide, minor tools keep intrinsic height,
