@@ -1,4 +1,4 @@
-fix(mobile): match 错题本 subject marks and grade sheet to P0
+fix(mobile): match 错题本 subject marks and grade sheet to P0 (#182)
 
 Keep the mint teal capture banner from #181, and align the remaining
 error-book chrome to the P0 replica: calculator/italic/flask subject
