@@ -1,7 +1,6 @@
-fix(mobile): align P2 feature pages to the P0 replica
+fix(mobile): ship distinct AI print style prompts (#157) (#167)
 
-Match image-print actions, print-preview hierarchy, image-edit tools,
-AI print composer, exam materials, and wrong-question book to the
-frozen P0 HTML without dropping required print capabilities.
-
-Refs #135 #137 #140 #141 #142 #144 #151
+Server CreateAiGenerationJobRequest has no systemPrompt, so style only
+reached the model as a short user-prompt tag. Put versioned style
+directives into the shipped prompt and assert the request JSON prompt
+differs for each style.
