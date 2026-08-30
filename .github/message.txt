@@ -1,7 +1,5 @@
-fix(mobile): match P0 print preview controls and thumbnail border (#178)
+fix(mobile): add 黑标纸 paper type and lighten preview card stroke
 
-Keep the image-print thumbnail's 2px mint/coral stroke outside the
-inner clip so rounded corners no longer eat the frame. Print preview
-uses the P0 printer glyph, 分页纸/连续纸, always-visible 方向, keeps
-图像, drops 纸张尺寸, and paints the same brand stroke on the
-settings card.
+Print preview 纸张类型 is now 分页纸 / 连续纸 / 黑标纸 on one row.
+The settings card uses the P0 1px line stroke instead of a 2px brand
+frame. ESC maps 黑标纸 to sheet feed; TSPL still sends black_mark.
