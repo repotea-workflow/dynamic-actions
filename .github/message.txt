@@ -1,6 +1,8 @@
-fix(mobile): harden web print URL, back, and load errors (#169)
+fix(mobile): localize editor chrome and keep zh as Hans (#148, #149)
 
-Prefix schemeless addresses with https://, pop WebView history
-before leaving the feature, and replace blank main-frame failures
-with an honest retryable error page. Keep dead recommended remotes
-delisted rather than weakening TLS.
+Move graphic/note editor chrome off zh/en _label helpers onto ARB-backed
+AppLocalizations. Plate can hide the app delegate, so the shell restores
+the ambient locale around the canvas.
+
+Rewrite app_zh.arb as a Simplified fallback matching Hans so generic zh
+no longer ships mixed Traditional copy. Runtime still maps zh to Hans.
