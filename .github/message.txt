@@ -1,6 +1,6 @@
-fix(mobile): keep exam-material Back, retake camera, junior geography (#172)
+fix(mobile): keep image edits stacked, fast, and printable (#168)
 
-Switch learning types in place with an explicit overlay Back instead of
-GoRouter sibling replacement. After saving a wrong question, Retake
-reopens the camera on review rather than popping to the book list.
-Seed junior Geography into education_subjects and keep PG 80 / MySQL 84.
+Interactive previews downscale before tonal walks, scan look no longer
+drops handwriting variants, document B/W uses a paper-preserving
+threshold, and question preview handwriting uploads through the shared
+JPEG processing path.
