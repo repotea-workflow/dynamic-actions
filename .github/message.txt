@@ -1,6 +1,6 @@
-fix(mobile): harden web print URL, back, and load errors
+fix(mobile): keep image edits stacked, fast, and printable
 
-Prefix schemeless addresses with https://, pop WebView history
-before leaving the feature, and replace blank main-frame failures
-with an honest retryable error page. Keep dead recommended remotes
-delisted rather than weakening TLS.
+Interactive previews downscale before tonal walks, scan look no longer
+drops handwriting variants, document B/W uses a paper-preserving
+threshold, and question preview handwriting uploads through the shared
+JPEG processing path.
