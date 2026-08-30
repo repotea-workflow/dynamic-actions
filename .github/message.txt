@@ -1,1 +1,1 @@
-fix(codeon): close rejected auth dispatch cancellation
+fix(codeon): close terminal auth cancellation readback
