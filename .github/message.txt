@@ -1,1 +1,1 @@
-fix(codeon): recover auth failures after startup reconciliation
+fix(codeon): allow scoped auth recovery cancellation
