@@ -1,1 +1,1 @@
-fix(codeon): fence review completion replay to latest dispatch
+fix(codeon): recover authentication-rejected attempts
