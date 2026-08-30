@@ -1,4 +1,4 @@
-fix(mobile): return to 错题本 after saving a capture
+fix(mobile): return to 错题本 after saving a capture (#183)
 
 Saving from the capture preview only showed a snackbar and left the
 photo page open. Pop the review with done so the library is visible
