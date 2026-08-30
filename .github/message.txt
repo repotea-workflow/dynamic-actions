@@ -1,4 +1,4 @@
-fix(mobile): localize editor chrome and keep zh as Hans (#148, #149)
+fix(mobile): localize editor chrome and keep zh as Hans (#148, #149) (#174)
 
 Move graphic/note editor chrome off zh/en _label helpers onto ARB-backed
 AppLocalizations. Plate can hide the app delegate, so the shell restores
