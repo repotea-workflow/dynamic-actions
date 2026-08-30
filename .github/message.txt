@@ -1,1 +1,1 @@
-Use mbx for Cargo recipes when available
+Reject unsupported attention rechecks
