@@ -1,5 +1,9 @@
-fix(mobile): show Home recent use and page local records (#134)
+fix(mobile): attribute NIB disconnects and keep a single connect error
 
-Keep a genuine empty recent section on a fresh install, show See more
-whenever tools or public templates were used, and page local print
-records 20 at a time instead of loading the whole JSON into the UI.
+Record a monotonic session log for discovery, connect, writes, lifecycle,
+and typed disconnect reasons so printer drops can be diagnosed from logs.
+Retry a write timeout once while the link still reports connected.
+
+Bind print readiness to the model used at connect without falling back to
+the selected catalog, and suppress the empty-printers banner when a
+failure is already visible.
