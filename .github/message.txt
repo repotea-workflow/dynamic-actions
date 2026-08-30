@@ -1,4 +1,4 @@
-fix(mobile): add 黑标纸 paper type and lighten preview card stroke
+fix(mobile): add 黑标纸 paper type and lighten preview card stroke (#179)
 
 Print preview 纸张类型 is now 分页纸 / 连续纸 / 黑标纸 on one row.
 The settings card uses the P0 1px line stroke instead of a 2px brand
