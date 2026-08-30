@@ -1,5 +1,6 @@
-fix(mobile): print a sparse A4 test page with the lockup (#166)
+fix(mobile): ship distinct AI print style prompts (#157)
 
-Keep the test print at full A4 feed length, but only burn the
-Gprinter lockup and the caption "this is test page" so the rest of
-the sheet stays blank.
+Server CreateAiGenerationJobRequest has no systemPrompt, so style only
+reached the model as a short user-prompt tag. Put versioned style
+directives into the shipped prompt and assert the request JSON prompt
+differs for each style.
