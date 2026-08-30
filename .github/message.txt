@@ -1,6 +1,6 @@
-fix(mobile): ship distinct AI print style prompts (#157) (#167)
+fix(mobile): keep exam-material Back, retake camera, junior geography (#172)
 
-Server CreateAiGenerationJobRequest has no systemPrompt, so style only
-reached the model as a short user-prompt tag. Put versioned style
-directives into the shipped prompt and assert the request JSON prompt
-differs for each style.
+Switch learning types in place with an explicit overlay Back instead of
+GoRouter sibling replacement. After saving a wrong question, Retake
+reopens the camera on review rather than popping to the book list.
+Seed junior Geography into education_subjects and keep PG 80 / MySQL 84.
