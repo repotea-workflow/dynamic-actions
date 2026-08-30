@@ -1,4 +1,4 @@
-fix(mobile): align P2 feature pages to the P0 replica
+fix(mobile): align P2 feature pages to the P0 replica (#175)
 
 Match image-print actions, print-preview hierarchy, image-edit tools,
 AI print composer, exam materials, and wrong-question book to the
