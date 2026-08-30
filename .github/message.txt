@@ -1,5 +1,8 @@
-fix(mobile): add paged/black-mark paper and catalog size entry
+fix(mobile): localize editor chrome and keep zh as Hans (#148, #149)
 
-Keep PrintFeedMode and PrintLocateMode independent so TSPL black_mark
-never camelCases or silent-degrades. Print preview is the paper-spec
-entry and only lists the selected printer's media profiles.
+Move graphic/note editor chrome off zh/en _label helpers onto ARB-backed
+AppLocalizations. Plate can hide the app delegate, so the shell restores
+the ambient locale around the canvas.
+
+Rewrite app_zh.arb as a Simplified fallback matching Hans so generic zh
+no longer ships mixed Traditional copy. Runtime still maps zh to Hans.
