@@ -1,6 +1,6 @@
-fix(mobile): align 错题本 to P0 mint and fix compose print (#181)
+fix(mobile): match 错题本 subject marks and grade sheet to P0
 
-The capture banner uses the P0 mint teal gradient, not brand coral.
-Subject cards use replica glyphs, the list is selectable cards, and
-组卷打印 no longer treats saved images as camera captures (PNG was
-labeled .jpg and surfaced as 拍照失败).
+Keep the mint teal capture banner from #181, and align the remaining
+error-book chrome to the P0 replica: calculator/italic/flask subject
+strokes, bottom-sheet grade tags, card thumbnails, and 组卷打印 as the
+compose preview title.
