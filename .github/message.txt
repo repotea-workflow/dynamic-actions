@@ -1,1 +1,1 @@
-feat: add runtime banner management
+fix: harden banner distribution
