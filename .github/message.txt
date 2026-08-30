@@ -1,1 +1,1 @@
-Allow runtime permits during Pi model configuration
+Use mbx for Cargo recipes when available
