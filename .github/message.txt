@@ -1,1 +1,1 @@
-fix(codeon): recover authentication-rejected attempts
+fix(codeon): admit authentication recovery requeue
