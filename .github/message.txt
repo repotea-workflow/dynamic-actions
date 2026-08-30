@@ -1,1 +1,1 @@
-fix: harden banner uploads
+refactor: share app resource workspaces
