@@ -1,4 +1,4 @@
-fix(mobile): print a sparse A4 test page with the lockup
+fix(mobile): print a sparse A4 test page with the lockup (#166)
 
 Keep the test print at full A4 feed length, but only burn the
 Gprinter lockup and the caption "this is test page" so the rest of
