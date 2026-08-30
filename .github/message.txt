@@ -1,1 +1,1 @@
-fix: address banner review findings
+fix: harden banner uploads
