@@ -1,8 +1,5 @@
-fix(mobile): match Home layout proportions to the P0 replica (#165)
+fix(mobile): print a sparse A4 test page with the lockup
 
-Replace GridView aspect-ratio stretching with P0 replica tokens so
-module cards stay short and wide, minor tools keep intrinsic height,
-the connect chip is dot+text+chevron, and banner/cards use palette
-radius plus replica shadow.
-
-Closes #133
+Keep the test print at full A4 feed length, but only burn the
+Gprinter lockup and the caption "this is test page" so the rest of
+the sheet stays blank.
