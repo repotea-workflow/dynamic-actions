@@ -1,5 +1,6 @@
-fix(mobile): add 黑标纸 paper type and lighten preview card stroke (#179)
+fix(mobile): align image-edit chrome and AI print copy to P0
 
-Print preview 纸张类型 is now 分页纸 / 连续纸 / 黑标纸 on one row.
-The settings card uses the P0 1px line stroke instead of a 2px brand
-frame. ESC maps 黑标纸 to sheet feed; TSPL still sends black_mark.
+Crop/erase app bars use brand 重置 text (erase keeps 撤销). Cancel is
+plain text without the tonal fill. AI print drops the thermal-line-art
+footer, uses prototype body/hint copy, and shows 卡通可爱 / 极简线稿 /
+水彩手绘.
