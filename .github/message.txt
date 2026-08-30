@@ -1,1 +1,1 @@
-feat: redesign platform font and icon management
+feat: complete localization and app resource management
