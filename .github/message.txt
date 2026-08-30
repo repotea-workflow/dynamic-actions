@@ -1,3 +1,4 @@
-test(mobile): assert P0 edit chips for vertical flip (#176)
+fix(mobile): use P0 replica glyphs instead of Material icons
 
-The image editor now uses GprinterEditToolChip instead of FilterChip.
+Delete/edit on image print and related tool chips now draw the
+prototype gp-ico paths (outline + accent), not Icons.delete_outline.
