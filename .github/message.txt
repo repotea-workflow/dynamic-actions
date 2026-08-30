@@ -1,1 +1,1 @@
-Reject unsupported attention rechecks
+harden startup auth lease authority
