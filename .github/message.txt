@@ -1,5 +1,4 @@
-feat: redesign device management around active status and independent pages
+fix: split device model detail into model and attributes tabs
 
-Replace draft/publish with active/disabled/archived, move complex edits to
-dedicated routes, and migrate manuals/tutorials to multi-region and tag models
-while keeping consumable paper types on their #66 dictionary path.
+Default the detail page to the device-model tab so attributes no longer share
+the former overview surface.
