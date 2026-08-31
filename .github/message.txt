@@ -1,1 +1,1 @@
-fix(codeon): align completion capability lifetime
+fix(codeon): recover bounded unknown cancellations
