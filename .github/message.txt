@@ -1,1 +1,1 @@
-Classify Cursor cancellation send boundaries
+Treat missing Cursor sessions as unsent cancellation
