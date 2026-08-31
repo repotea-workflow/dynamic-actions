@@ -1,4 +1,6 @@
-fix: restore consumable paper types after dictionary reseed
+fix: restore consumable paper types after dictionary reseed (#67)
 
 Backfill paper_type_id cleared by the simplify migration when the remap
 restore step was missing, then tighten NOT NULL once rows are complete.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
