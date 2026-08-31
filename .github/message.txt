@@ -1,5 +1,4 @@
-feat: simplify consumable UI into paper types, categories, and list
+fix: remap consumable paper_type_ids across dictionary reseeding
 
-Move platform consumables to an independent menu with three pages, drop
-print/spec fields from the shared form, and keep App Studio selection-only
-paper types.
+Capture and restore consumable paper-type links when replacing free-form
+paper types with the seeded identifier catalog.
