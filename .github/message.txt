@@ -1,4 +1,3 @@
-refactor: split device material pages by manuals and tutorials
+fix: sticky schema list actions and Lucide overflow menu icon
 
-Keep the route entry as a thin re-export and move shared upload/lifecycle
-helpers into a dedicated module so the page file stays under the size limit.
+Align Attribute Schema table actions with the other device resource lists.
