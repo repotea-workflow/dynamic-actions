@@ -1,4 +1,5 @@
-feat: show which Apps selected a platform consumable
+fix: tighten consumable selection and purchase fallback rules
 
-Add a platform selections endpoint and surface active App selections in the
-shared consumable editor so operators can audit adoption without App edits.
+Block assigning disabled categories, keep App lists to owned plus selected
+platform rows, harden select upserts against inactive platform items, and stop
+purchase resolution from returning cross-region defaults.
