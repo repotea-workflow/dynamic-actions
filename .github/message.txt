@@ -1,4 +1,4 @@
-merge: reconcile consumable management with device lifecycle main
+fix: renumber consumable migration after device lifecycle series
 
-Keep consumable routes, permissions, and workspace wiring alongside the
-expanded device catalog navigation that landed on main.
+Avoid colliding with main's 202608310001-007 migrations by moving consumable
+schema to 202608310008.
