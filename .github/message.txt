@@ -1,4 +1,31 @@
-fix: remap consumable paper_type_ids across dictionary reseeding
+feat: simplify consumable catalog to paper type + category + list (#66)
+
+* feat: simplify consumable catalog and paper-type dictionary
+
+Reshape paper types to identifier/name/status with seeded catalog rows,
+slim categories to name/slug, and drop print/spec fields from consumables.
+
+* fix: sync legacy paper-type columns on create and update
+
+Keep key/display_name/enabled populated so inserts remain valid while the
+simplified identifier/name/status API is the source of truth.
+
+* chore: regenerate management client for simplified consumables
+
+Refresh generated TypeScript models for paper types, categories, and
+consumable create/update payloads after the catalog simplification.
+
+* feat: simplify consumable UI into paper types, categories, and list
+
+Move platform consumables to an independent menu with three pages, drop
+print/spec fields from the shared form, and keep App Studio selection-only
+paper types.
+
+* fix: remap consumable paper_type_ids across dictionary reseeding
 
 Capture and restore consumable paper-type links when replacing free-form
 paper types with the seeded identifier catalog.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
