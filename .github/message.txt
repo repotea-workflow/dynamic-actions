@@ -1,1 +1,7 @@
-fix(codeon): expose attempt cancellation fence
+Exclude transient Pi operation extension
+
+codeon:
+  version: 1
+  authority: FWN-72
+  description: |-
+    Remove the operation-scoped Pi extension materialized by the active Codeon runtime. It is transient execution state and is not a repository artifact.
