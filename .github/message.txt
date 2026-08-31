@@ -1,1 +1,5 @@
-fix: resolve management migration ordering
+feat: harden device publish lifecycle and resource statuses
+
+Keep published device-model image edits on a draft+snapshot path, normalize
+operational resource statuses across devices/fonts/icons/banners, and add
+live Playwright coverage for RU compose verification.
