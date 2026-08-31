@@ -1,6 +1,5 @@
-fix: restore consumable paper types after dictionary reseed (#67)
+feat: redesign device management around active status and independent pages
 
-Backfill paper_type_id cleared by the simplify migration when the remap
-restore step was missing, then tighten NOT NULL once rows are complete.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Replace draft/publish with active/disabled/archived, move complex edits to
+dedicated routes, and migrate manuals/tutorials to multi-region and tag models
+while keeping consumable paper types on their #66 dictionary path.
