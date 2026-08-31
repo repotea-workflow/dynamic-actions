@@ -1,1 +1,1 @@
-fix(codeon): extend legacy review timeout
+fix(codeon): bind Grok effort before session start
