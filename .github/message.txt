@@ -1,4 +1,4 @@
-fix(mobile): show print drafts and templates in 最近使用
+fix(mobile): show print drafts and templates in 最近使用 (#184)
 
 Home recent use recorded feature-menu taps, so AI 打印 and 错题本
 reopened empty tools. Stop recording those shortcuts. List actual
