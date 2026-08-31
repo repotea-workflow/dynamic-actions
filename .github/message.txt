@@ -1,1 +1,1 @@
-Make operator attempt cancellation terminal
+Classify Cursor cancellation send boundaries
