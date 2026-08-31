@@ -1,4 +1,4 @@
-fix(mobile): keep AI print paper white in prompt and raster
+fix(mobile): keep AI print paper white in prompt and raster (#185)
 
 Style prompts already differ for #157. Generated sheets still use
 paper-gray (~luma 246), which thermal dither turns into speckle.
