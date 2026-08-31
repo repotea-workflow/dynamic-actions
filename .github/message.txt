@@ -1,4 +1,36 @@
-fix: renumber consumable migration after device lifecycle series
+feat: consumable management for platform and App Studio (#65)
+
+* feat: add consumable ownership model and management APIs
+
+Introduce platform/App consumable tables with soft selection, categories,
+translations, assets, and purchase entries, plus shared management endpoints.
+
+* fix: register consumable lifecycle routes without path collisions
+
+Split enable/disable handlers onto distinct paths so OpenAPI routing no longer
+overlaps identical POST method trees.
+
+* feat: add shared consumable workspace for platform and App Studio
+
+Reuse one workspace component with scope capabilities, wire menus and
+permissions, and refresh the typed management client for the new APIs.
+
+* feat: show which Apps selected a platform consumable
+
+Add a platform selections endpoint and surface active App selections in the
+shared consumable editor so operators can audit adoption without App edits.
+
+* fix: tighten consumable selection and purchase fallback rules
+
+Block assigning disabled categories, keep App lists to owned plus selected
+platform rows, harden select upserts against inactive platform items, and stop
+purchase resolution from returning cross-region defaults.
+
+* fix: renumber consumable migration after device lifecycle series
 
 Avoid colliding with main's 202608310001-007 migrations by moving consumable
 schema to 202608310008.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
