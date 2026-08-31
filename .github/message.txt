@@ -1,1 +1,235 @@
-Merge origin/main into agt/fwn73-input-rejected-cancel
+Fix cancellation after rejected agent input (#271)
+
+* fix cancellation after rejected agent input
+
+* log Codex turn rejection details
+
+* start isolated Codex turn when rollout is missing
+
+* Fix review convergence candidate evidence
+
+* preserve operation cwd in isolated Codex fallback
+
+* keep review coverage authority server-owned
+
+* fix(cursor): deliver operation MCP through ACP
+
+* fix(codeon): preserve nonterminal recovery lease
+
+* fix(codeon): clear recovery projection before waiting
+
+* fix(codeon): clean generated Cargo lockfiles
+
+* fix(codeon): admit terminal flow after lease release
+
+* fix(codeon): separate Grok profiles from MCP config
+
+* fix(codeon): make Pi terminal cleanup idempotent
+
+* chore(codeon): trace Codex runtime rejection
+
+* fix(codex): handle unmaterialized thread readback
+
+* chore(codeon): trace Codex dispatch failure
+
+* fix(codex): accept sealed disabled MCP readback
+
+* fix(codeon): cancel pristine pre-dispatch recovery
+
+* fix(codeon): cancel selected pre-dispatch recovery
+
+* fix(codeon): preserve operator cancellation attention
+
+* fix(pi): use compact planning completion
+
+* fix(cursor): bound planning completion payload
+
+* fix(grok): bind metadata prompt activity
+
+* fix(grok): accept prompt-bound tool activity
+
+* fix(grok): clear acknowledgement deadline after activity
+
+* fix(pi): use authoritative completion digest
+
+* fix(codeon): ignore legacy review coverage claims
+
+* fix(codeon): recheck cancellation repository recovery
+
+* fix(codex): refresh recovered running invocations
+
+* fix(codeon): recover startup running agent operations
+
+* fix(console): harden admin loading and routing states (#278)
+
+* fix(console): harden admin loading and routing states
+
+* fix(console): preserve partial data uncertainty
+
+* fix(codeon): schedule startup running recovery
+
+* fix(codeon): bound startup running recovery
+
+* fix(codeon): resume landing checks after restart
+
+* fix(runtime): resume waiting checks after restart
+
+* fix(picker): balance runtime candidate query
+
+* fix(attention): allow checks pending owner recheck
+
+* fix(landing): version automatic checks rechecks
+
+* fix(landing): avoid automatic attention id collisions
+
+* debug(landing): expose resume persistence failure
+
+* debug(attention): log storage error cause
+
+* fix(codeon): ignore stale checks attention after operation failure
+
+* fix(pi): clarify review completion schema
+
+* fix(codeon): park unrecoverable cancellation closure
+
+* fix(codeon): classify cancellation recovery faults
+
+* fix(codeon): park interrupted cancellation requests
+
+* fix(codeon): cancel terminal unknown dispatch safely
+
+* fix(codeon): reconcile cancellation attention ownership
+
+* fix(codeon): show Planning artifacts and bound review flow
+
+Preserve public-safe execution boundaries while making durable Planning artifact state visible and bounding large Review/Revision histories.
+
+* fix(codeon): reconcile completed Pi runtime on restart
+
+* fix(console): keep review flow clear of downstream nodes (#281)
+
+* fix(picker): resume normal review handoffs
+
+* fix(picker): accept fenced prior runtime closure
+
+* fix(cancellation): retry recovery after completion race
+
+* fix(codeon): release replayed completion runtime leases
+
+* fix(cancellation): recheck unknown runtime closure
+
+* fix(codeon): accept fenced retry closure at startup
+
+* fix(codeon): allow routing repair during recovery
+
+* fix(codeon): route future attempts during execution
+
+* fix(cancellation): trust completed dispatch closure
+
+* fix(codeon): normalize review completion lineage
+
+* fix(execution): preserve released lease for SCM attention
+
+* fix(codeon): normalize compact review findings
+
+* fix(codeon): accept compact review decision payloads
+
+* fix(codeon): normalize review finding lineage
+
+* Prevent failed completion recovery replay loops
+
+* fix: accept history-only conflict repairs
+
+* fix: validate versioned cancellation cleanup receipts
+
+* Avoid replay conflicts for repeated landing checks
+
+* fix(cancellation): park user-paused unknown runtimes
+
+* fix(cancellation): recognize explicit pause authority
+
+* fix(attention): retry parked pause reconciliation
+
+* fix(cancellation): close paused stale runtime observations
+
+* fix(cancellation): accept legacy pause evidence
+
+* fix(worker): accept non-running fault recovery predecessors
+
+* test(worker): disable append-only trigger for fixture
+
+* test(worker): use valid operation predecessor
+
+* test(worker): preserve operation event history
+
+* fix(worker): honor causal abandonment during retry
+
+* test(worker): isolate causal recovery on large stack
+
+* Preserve Pi provider errors during model configuration
+
+* Allow runtime permits during Pi model configuration
+
+* Reject unsupported attention rechecks
+
+* fix startup auth terminal lease reconciliation
+
+* harden startup auth lease authority
+
+* allow generic auth closure for all agents
+
+* fix(codeon): park unchanged recovery candidates
+
+* fix(codeon): park recovery not-ready ticks
+
+* fix(codeon): bound downstream handoff recovery
+
+* fix(codeon): accept exact no-change review candidate
+
+* fix(codeon): persist exact no-change review artifacts
+
+* fix(codeon): fence review completion replay to latest dispatch
+
+* fix(codeon): recover authentication-rejected attempts
+
+* fix(codeon): admit authentication recovery requeue
+
+* fix(codeon): recover auth failures after startup reconciliation
+
+* fix(codeon): allow scoped auth recovery cancellation
+
+* fix(codeon): retire stale operation attention on cancellation recovery
+
+* fix(codeon): normalize cancellation attention ownership
+
+* fix(codeon): close rejected auth dispatch cancellation
+
+* fix(codeon): close terminal auth cancellation readback
+
+* fix(codeon): normalize merge fallback description
+
+* fix(codeon): renew Codex leases from command output
+
+* fix(codex): stabilize replayed output activity
+
+* fix(codeon): resume restored agent configuration
+
+* fix(codeon): expose attempt cancellation fence
+
+* fix(codeon): extend review activity lifecycle window
+
+* fix(codeon): give review operations lifecycle v2 policy
+
+* fix(codeon): extend legacy review timeout
+
+* fix(codeon): bind Grok effort before session start
+
+* fix(codeon): align completion capability lifetime
+
+* fix(codeon): recover bounded unknown cancellations
+
+* fix(grok): run non-interactive agent with approval
+
+---------
+
+Co-authored-by: Codex <codex@openai.com>
