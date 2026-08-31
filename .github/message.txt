@@ -1,5 +1,4 @@
-fix: tighten consumable selection and purchase fallback rules
+merge: reconcile consumable management with device lifecycle main
 
-Block assigning disabled categories, keep App lists to owned plus selected
-platform rows, harden select upserts against inactive platform items, and stop
-purchase resolution from returning cross-region defaults.
+Keep consumable routes, permissions, and workspace wiring alongside the
+expanded device catalog navigation that landed on main.
