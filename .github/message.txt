@@ -1,4 +1,4 @@
-fix: split device model detail into model and attributes tabs
+refactor: split device material pages by manuals and tutorials
 
-Default the detail page to the device-model tab so attributes no longer share
-the former overview surface.
+Keep the route entry as a thin re-export and move shared upload/lifecycle
+helpers into a dedicated module so the page file stays under the size limit.
