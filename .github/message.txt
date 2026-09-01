@@ -1,3 +1,1 @@
-fix: sticky schema list actions and Lucide overflow menu icon
-
-Align Attribute Schema table actions with the other device resource lists.
+feat: consolidate management resources and workspace UI
