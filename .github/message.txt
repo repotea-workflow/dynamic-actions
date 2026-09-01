@@ -1,1 +1,1 @@
-docs: clarify admin UI prototype guidance
+feat(robin): standardize platform resource management
