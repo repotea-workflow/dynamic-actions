@@ -1,1 +1,1 @@
-fix(swan): preserve account navigation state
+feat(swan): expose release diagnostics
