@@ -1,1 +1,1 @@
-feat(swan): polish app navigation and server settings
+fix(swan): preserve home route on account back
