@@ -1,1 +1,1 @@
-fix(swan): preserve home route on account back
+fix(swan): preserve account navigation state
