@@ -1,1 +1,1 @@
-feat: consolidate management resources and workspace UI
+docs: clarify admin UI prototype guidance
