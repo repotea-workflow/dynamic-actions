@@ -1,1 +1,1 @@
-feat(swan): expose release diagnostics
+feat: complete cross-platform app and device updates
