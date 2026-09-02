@@ -1,1 +1,1 @@
-refactor: move osprey contract generator to baya
+feat: add runtime composition foundation

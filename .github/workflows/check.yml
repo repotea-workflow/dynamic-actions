@@ -59,8 +59,8 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd waterfowl/swan && fvm dart pub get && fvm dart run melos bootstrap
-          cd ../..
+          cd waterfowl && fvm dart pub get && fvm dart run melos bootstrap
+          cd ..
           pnpm --dir songbirds install --frozen-lockfile
           cargo install cargo-audit --version 0.22.2 --locked
 
@@ -70,12 +70,12 @@ jobs:
       - name: Verify repository
         run: |
           trap 'just db-down' EXIT
-          just -f waterfowl/swan/Justfile test
+          just -f waterfowl/Justfile test
           just check
           pnpm --dir songbirds lint
           pnpm --dir songbirds test
           pnpm --dir songbirds build
-          just -f waterfowl/swan/Justfile format-check
+          just -f waterfowl/Justfile format-check
           just db-up
           just migrate
           just test-db
