@@ -1,1 +1,1 @@
-fix: validate localized notice payloads
+feat: complete feature style editor lifecycle
