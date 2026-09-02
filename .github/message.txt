@@ -1,1 +1,17 @@
-fix(hawk): share canonical digest implementation
+feat: complete Definition-to-Runtime feature style flow (#87)
+
+* feat: persist compiled style requirements and rebuild fixtures
+
+* fix: preserve style data and align runtime contract validation
+
+* fix: protect custom style fixtures and canonicalize digests
+
+* fix: preserve edited seeded styles during fixture migration
+
+* fix: use verified fixture digests and edit markers
+
+* fix(hawk): share canonical digest implementation
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
