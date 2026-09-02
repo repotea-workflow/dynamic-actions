@@ -1,3 +1,1 @@
-fix: expose app features in tenant navigation
-
-Navigation gap fixed; typecheck and 157 Robin tests pass.
+feat: add app icon group assignments
