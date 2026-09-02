@@ -1,1 +1,3 @@
-fix(hawk): persist stable feature style digests
+fix(hawk): persist stable feature style digests (#79)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
