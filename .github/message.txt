@@ -1,1 +1,1 @@
-chore: refresh feature runtime api clients
+fix: validate localized notice payloads
