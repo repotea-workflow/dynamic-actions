@@ -1,1 +1,9 @@
-fix(robin): keep preview input as composition definition
+feat(robin): save feature styles from composition definitions (#77)
+
+* feat(robin): save feature styles from composition definitions
+
+* fix(robin): keep preview input as composition definition
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
