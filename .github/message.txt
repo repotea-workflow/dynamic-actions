@@ -1,1 +1,1 @@
-fix(robin): describe Tern preview configuration
+fix: harden runtime scope and expose document action
