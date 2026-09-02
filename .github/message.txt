@@ -1,1 +1,1 @@
-fix(robin): keep API failures in unified error toast
+feat: add App region catalog selection
