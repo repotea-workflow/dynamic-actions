@@ -1,1 +1,1 @@
-fix: protect custom style fixtures and canonicalize digests
+fix: preserve edited seeded styles during fixture migration
