@@ -1,1 +1,1 @@
-feat: add runtime composition foundation
+fix: harden feature assignment lifecycle
