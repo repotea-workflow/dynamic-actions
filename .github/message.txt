@@ -1,1 +1,1 @@
-fix(hawk): serialize feature dependency writes
+fix(hawk): serialize feature dependency graph updates
