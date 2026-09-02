@@ -1,1 +1,1 @@
-fix(robin): localize feature dependency controls
+fix: count direct feature assignments only
