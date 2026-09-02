@@ -1,3 +1,1 @@
-feat(swan): verify runtime feature style payload digest (#78)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(hawk): persist stable feature style digests
