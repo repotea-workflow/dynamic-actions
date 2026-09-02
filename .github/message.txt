@@ -1,1 +1,1 @@
-fix: enforce globally unique app slugs
+feat(swan): validate runtime style requirements and openFeature
