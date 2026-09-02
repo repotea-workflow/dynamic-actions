@@ -1,9 +1,1 @@
-fix(swan): fail closed on unsupported style requirements (#82)
-
-* feat(swan): validate runtime style requirements and openFeature
-
-* fix(swan): fail closed on unsupported style requirements
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(hawk): backfill feature style digests in migration
