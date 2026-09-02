@@ -1,1 +1,1 @@
-feat: persist compiled style requirements and rebuild fixtures
+fix: preserve style data and align runtime contract validation
