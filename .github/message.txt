@@ -1,1 +1,1 @@
-feat: paginate icon group management
+fix(robin): unify API error feedback
