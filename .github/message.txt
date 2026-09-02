@@ -1,1 +1,1 @@
-fix(robin): reject invalid container conversions
+fix(swan): enforce runtime feature requirements
