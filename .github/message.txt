@@ -1,1 +1,9 @@
-fix: accept tenant and app slugs for feature management
+fix: support app feature pages with slug routes (#72)
+
+* fix: use resource names in feature page titles
+
+* fix: accept tenant and app slugs for feature management
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
