@@ -1,11 +1,1 @@
-feat: compile feature style definitions for runtime (#73)
-
-* feat(osprey): add localized text and feature navigation contracts
-
-* feat: compile feature style definitions for runtime
-
-* fix: preserve legacy feature style data during migration
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat: add feature style compilation preview endpoint
