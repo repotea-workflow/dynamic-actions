@@ -1,1 +1,1 @@
-fix(hawk): serialize feature dependency graph updates
+fix(hawk): normalize app translation locales
