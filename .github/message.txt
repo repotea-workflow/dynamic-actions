@@ -1,1 +1,1 @@
-fix(robin): keep dependency assignments read-only
+fix(robin): localize feature dependency controls
