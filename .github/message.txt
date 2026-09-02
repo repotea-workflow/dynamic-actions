@@ -1,1 +1,1 @@
-fix: keep dependency grants in sync
+fix(robin): keep dependency assignments read-only
