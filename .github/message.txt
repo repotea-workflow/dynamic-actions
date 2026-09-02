@@ -1,1 +1,1 @@
-feat(swan): validate runtime style requirements and openFeature
+fix(hawk): compile definitions and refresh style digests on update

@@ -1,1 +1,1 @@
-agt/swan-requirements-open-feature
+agt/hawk-style-update-integrity
