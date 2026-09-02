@@ -1,1 +1,3 @@
-feat(swan): select dynamic renderer by style format
+feat(swan): select dynamic renderer by style format (#75)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
