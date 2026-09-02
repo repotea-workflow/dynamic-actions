@@ -1,1 +1,1 @@
-agt/regenerate-style-api-clients
+main
