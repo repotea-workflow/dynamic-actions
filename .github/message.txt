@@ -1,1 +1,1 @@
-fix: harden runtime scope and expose document action
+fix(robin): enforce container child cardinality
