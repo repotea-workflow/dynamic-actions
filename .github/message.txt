@@ -1,1 +1,1 @@
-fix(hawk): normalize app translation locales
+test(hawk): use current paper type columns
