@@ -1,1 +1,1 @@
-feat(robin): save feature styles from composition definitions
+fix(robin): keep preview input as composition definition
