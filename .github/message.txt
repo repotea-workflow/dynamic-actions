@@ -1,1 +1,1 @@
-fix(hawk): allow selecting app feature styles
+fix(robin): keep API failures in unified error toast
