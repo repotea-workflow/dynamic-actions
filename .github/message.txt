@@ -1,1 +1,1 @@
-fix(runtime): tolerate missing feature styles
+fix: grant feature dependency table access
