@@ -1,8 +1,4 @@
-fix(editor): keep viewport zoom when keyboard text editing starts (#195)
+feat(editor): add optional frame safe-area guide
 
-Wrapping the canvas in PopScope only after an external edit session
-starts remounted PlateEditor and re-fit the template to the default
-size. Keep PopScope in the tree so adding text no longer resets pinch
-zoom.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Draw a dashed inset rectangle on the active frame when hosts opt in.
+The overlay is presentation-only and stays out of SVG and print rasters.
