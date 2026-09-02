@@ -1,1 +1,3 @@
-feat: add feature style compilation preview endpoint
+feat: add feature style compilation preview endpoint (#74)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
