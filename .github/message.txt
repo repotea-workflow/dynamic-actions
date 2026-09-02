@@ -1,1 +1,3 @@
-fix(api): align feature style DTO with Definition contract
+fix(api): align feature style DTO with Definition contract (#85)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
