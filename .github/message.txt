@@ -1,1 +1,1 @@
-fix: harden feature style review findings
+fix: close review concurrency and migration gaps
