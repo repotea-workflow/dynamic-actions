@@ -1,1 +1,1 @@
-test(robin): narrow document print action arguments
+test(hawk): use current component contract digest
