@@ -1,1 +1,1 @@
-test(swan): verify authenticated feature navigation
+test(robin): narrow document print action arguments
