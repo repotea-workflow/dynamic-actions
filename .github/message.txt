@@ -1,1 +1,1 @@
-fix: localize app feature source and guard style selection
+fix: allow tenant admins to select app feature styles
