@@ -1,1 +1,1 @@
-fix(swan): enforce runtime feature requirements
+fix(hawk): serialize feature dependency writes
