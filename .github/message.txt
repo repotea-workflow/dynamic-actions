@@ -1,1 +1,3 @@
-fix(hawk): backfill feature style digests in migration
+fix(hawk): backfill feature style digests in migration (#83)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
