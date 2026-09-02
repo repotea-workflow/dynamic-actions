@@ -1,1 +1,1 @@
-fix(hawk): validate compiled payload on definition updates
+fix(hawk): include style revision in update query
