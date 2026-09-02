@@ -1,1 +1,1 @@
-feat: show direct and dependency feature assignments
+fix: keep dependency grants in sync
