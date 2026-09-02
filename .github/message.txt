@@ -1,1 +1,1 @@
-fix(village): validate bridge message payloads
+feat(hawk): enforce feature style dependencies
