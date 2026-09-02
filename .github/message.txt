@@ -1,1 +1,1 @@
-feat: add app icon group assignments
+fix: group app features under feature management
