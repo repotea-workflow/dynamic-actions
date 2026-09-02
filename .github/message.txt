@@ -1,3 +1,1 @@
-fix: harden app feature style review findings
-
-All independent-review P0/P1/P2 findings resolved; Trigger Branch CI passed.
+fix: expose app features in tenant navigation
