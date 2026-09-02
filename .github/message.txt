@@ -1,1 +1,1 @@
-test(hawk): use current component contract digest
+fix(robin): describe Tern preview configuration
