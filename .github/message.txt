@@ -1,3 +1,1 @@
-feat(api): regenerate style definition management and runtime clients (#84)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(api): align feature style DTO with Definition contract
