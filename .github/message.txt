@@ -1,1 +1,1 @@
-fix: allow tenant admins to select app feature styles
+feat: paginate icon group management
