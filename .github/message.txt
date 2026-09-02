@@ -1,1 +1,1 @@
-fix(robin): enforce container child cardinality
+fix(runtime): reject dangling page navigation
