@@ -1,1 +1,1 @@
-fix: harden feature assignment lifecycle
+chore: refresh feature runtime api clients
