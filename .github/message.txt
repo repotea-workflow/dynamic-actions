@@ -1,1 +1,1 @@
-stabilize staged execution testing
+stabilize Codeon execution lifecycle
