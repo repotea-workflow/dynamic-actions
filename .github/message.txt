@@ -1,1 +1,1 @@
-fix: preserve style data and align runtime contract validation
+fix: protect custom style fixtures and canonicalize digests
