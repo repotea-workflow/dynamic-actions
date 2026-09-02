@@ -1,1 +1,1 @@
-feat: add App region catalog selection
+feat: add app feature dependencies and print flow
