@@ -1,1 +1,1 @@
-stabilize Codeon execution lifecycle
+fix agent completion contract regressions
