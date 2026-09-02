@@ -1,1 +1,1 @@
-feat: compile feature style definitions for runtime
+fix: preserve legacy feature style data during migration
