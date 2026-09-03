@@ -1,1 +1,1 @@
-feat(codeon): add compact operation prompt v3
+feat(codeon): add on-demand prompt context and review modes
