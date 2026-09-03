@@ -1,1 +1,1 @@
-feat(codeon): add on-demand prompt context and review modes
+docs(codeon): describe prompt v3 runtime contracts
