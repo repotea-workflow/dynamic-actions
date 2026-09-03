@@ -1,1 +1,1 @@
-feat: add responsive feature style layout controls
+feat: refine responsive component sizing
