@@ -1,1 +1,1 @@
-refactor(swan): preserve optional feature modules
+refactor(robin): simplify feature style editor
