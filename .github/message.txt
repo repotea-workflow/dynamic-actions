@@ -1,1 +1,1 @@
-refactor(waterfowl): unify feature modules
+refactor: rename Osprey contracts to Baya
