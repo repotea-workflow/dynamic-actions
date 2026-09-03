@@ -1,1 +1,1 @@
-fix: restore Flutter feature style preview
+fix: harden feature style composer interactions
