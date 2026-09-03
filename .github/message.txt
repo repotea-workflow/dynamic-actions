@@ -1,1 +1,1 @@
-fix agent completion contract regressions
+fix(codeon): refresh Grok activity fence on input dispatch
