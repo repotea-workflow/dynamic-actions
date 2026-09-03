@@ -1,1 +1,1 @@
-feat: unify feature localization workflow
+fix(renderer): avoid failure flash while loading
