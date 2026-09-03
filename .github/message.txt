@@ -1,1 +1,1 @@
-refactor: rename Osprey contracts to Baya
+feat(swan): persist runtime configuration
