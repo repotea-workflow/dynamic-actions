@@ -1,1 +1,3 @@
-fix(omsk): surface declaration export results (#306)
+feat(product): add CHIEF product cleanup
+
+Register Liquibase access nodes for the protected cleanup endpoints.
