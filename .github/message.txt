@@ -1,1 +1,1 @@
-refactor(swan): remove static feature pages
+refactor(swan): preserve optional feature modules
