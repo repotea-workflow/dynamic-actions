@@ -1,1 +1,5 @@
-test(codeon): validate Grok planning example
+fix(codeon): guide Grok planning completion (#288)
+
+* fix(codeon): guide Grok planning completion
+
+* test(codeon): validate Grok planning example
