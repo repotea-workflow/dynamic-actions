@@ -1,3 +1,1 @@
-feat(codeon): add operation prompt v3 (#284)
-
-Introduce the compact four-section Prompt v3 contract, on-demand operation context, provider-accurate prompt cost observations, and full/delta/integration review modes. Preserve v1/v2 compatibility and server-side safety enforcement.
+fix(codeon): replay late review completions
