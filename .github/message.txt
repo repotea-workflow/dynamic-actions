@@ -1,1 +1,1 @@
-fix: explain incompatible legacy styles
+fix: send STAC envelopes to preview
