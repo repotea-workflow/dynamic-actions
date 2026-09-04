@@ -1,1 +1,1 @@
-Require task context before agent review
+Preserve signing in isolated agent profiles
