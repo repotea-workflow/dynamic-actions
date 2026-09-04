@@ -1,1 +1,1 @@
-fix: guard malformed legacy style data
+test: align Swan router fixture with STAC runtime
