@@ -1,1 +1,1 @@
-fix: hard cut over tern and migration to stac payloads
+fix: preserve incompatible style definitions in editor
