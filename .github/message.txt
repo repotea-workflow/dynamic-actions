@@ -1,1 +1,1 @@
-test: align Swan router fixture with STAC runtime
+fix: explain incompatible legacy styles
