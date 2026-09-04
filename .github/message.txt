@@ -1,1 +1,1 @@
-fix: preserve stac editor and envelope semantics
+feat(robin): expose banner drafts through WebMCP
