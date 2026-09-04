@@ -1,1 +1,1 @@
-Handle no-change review recovery explicitly
+Support isolated agent profile credentials
