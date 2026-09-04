@@ -1,1 +1,1 @@
-fix(prompts): require structured Codex tool calls
+fix(prompts): expose sealed result contract digest
