@@ -1,1 +1,1 @@
-test: cover stac visual editor round trip
+fix: preserve stac editor and envelope semantics
