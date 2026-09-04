@@ -1,1 +1,1 @@
-Clarify operation progress callback contract
+Provide writable temp roots for read-only Codex work
