@@ -1,1 +1,1 @@
-feat: route styles through the stac provider
+fix: validate stac style lists
