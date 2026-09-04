@@ -1,3 +1,1 @@
-feat: complete provider-native STAC composition hard cutover
-
-Squash merge of the complete STAC/Baya envelope hard-cutover implementation. Targeted provider, Hawk, Dart, build, and migration checks passed; known pre-existing router/E2E harness gaps remain documented in review.
+fix: close STAC validation and dependency gaps
