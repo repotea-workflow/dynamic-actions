@@ -1,3 +1,1 @@
-feat(robin): expose feature distribution and release navigation
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+align feature distribution with release snapshots
