@@ -1,1 +1,3 @@
 fix(robin): serve production modules with JavaScript MIME type
+
+Unblocks production-preview browser execution and completes STAC browser acceptance.
