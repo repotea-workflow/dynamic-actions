@@ -1,1 +1,1 @@
-Preserve implementation closeout across compaction
+Constrain full review to candidate changes
