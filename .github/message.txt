@@ -1,1 +1,1 @@
-fix(prompts): expose sealed result contract digest
+fix(review): clarify current finding completion schema
