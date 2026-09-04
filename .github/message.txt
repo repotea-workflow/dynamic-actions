@@ -1,4 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/fix-omsk-specified-declaration-export
+chore(omsk): use golang-migrate for v4
 
-# Conflicts:
-#	archive/omsk-java-liquibase/liquibase/changelog/20260903090000_changelog.xml
+Archive legacy Liquibase and move product cleanup access to migration 000009.
