@@ -1,1 +1,1 @@
-Bound planning inspection context growth
+Preserve implementation closeout across compaction
