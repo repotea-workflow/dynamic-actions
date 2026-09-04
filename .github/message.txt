@@ -1,1 +1,1 @@
-Support isolated agent profile credentials
+Clarify operation progress callback contract
