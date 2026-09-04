@@ -1,3 +1,1 @@
-Align feature distribution with release snapshots
-
-Release alignment implementation reviewed and validated locally; CI Trigger passed.
+refine feature editor preview interactions
