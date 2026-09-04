@@ -1,5 +1,3 @@
-Merge remote-tracking branch 'origin/main' into agt/fix-omsk-specified-declaration-export
+fix: shorten OMSK access grant ids
 
-# Conflicts:
-#	migrations/v4/omsk/000009_grant_product_cleanup_access.down.sql
-#	migrations/v4/omsk/000009_grant_product_cleanup_access.up.sql
+Prevent migration 000009 from failing on t_access_template.id varchar(50).
