@@ -1,1 +1,1 @@
-feat: enforce STAC composition envelope
+fix: hard cut over tern and migration to stac payloads
