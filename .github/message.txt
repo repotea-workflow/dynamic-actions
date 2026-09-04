@@ -1,1 +1,3 @@
-fix: honor runtime style selections for platform releases
+fix: complete platform release follow-up review
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
