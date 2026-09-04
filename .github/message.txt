@@ -1,1 +1,1 @@
-fix: preserve incompatible style definitions in editor
+feat: harden stac payload validation and migration status
