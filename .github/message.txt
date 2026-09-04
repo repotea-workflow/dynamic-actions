@@ -1,1 +1,1 @@
-fix(codeon): clarify Grok planning bounds (#289)
+fix(tracker): scope cleanup conflict to active attempt
