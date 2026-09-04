@@ -1,1 +1,1 @@
-fix(tracker): prefer matching terminal cleanup lineage
+fix(prompts): require structured Codex tool calls
