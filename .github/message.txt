@@ -1,1 +1,1 @@
-Provide writable temp roots for read-only Codex work
+Require task context before agent review
