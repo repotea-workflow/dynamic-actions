@@ -1,1 +1,1 @@
-feat: complete provider-backed stac cutover
+fix: enforce runtime stac requirements
