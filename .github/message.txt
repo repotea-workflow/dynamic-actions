@@ -1,1 +1,3 @@
 fix: complete strict STAC editor flow
+
+Reject legacy composition roots at the Robin boundary, preserve page-entry actions through the STAC provider, and expose page-entry editing in the visual composer.
