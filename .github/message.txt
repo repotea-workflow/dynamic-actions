@@ -1,1 +1,1 @@
-feat: harden stac payload validation and migration status
+feat: route styles through the stac provider
