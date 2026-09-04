@@ -1,3 +1,1 @@
-feat: add platform feature releases
-
-Adds platform feature Release management, runtime manifest delivery, immutable published style snapshots, target selection, and deferred App package placeholders.
+polish feature style property panel
