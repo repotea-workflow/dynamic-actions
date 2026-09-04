@@ -1,3 +1,1 @@
-feat(robin): expose banner drafts through WebMCP
-
-Expose Banner draft read, update, validation, and consequential save tools through WebMCP while preserving existing auth and preview flows.
+feat: complete provider-backed stac cutover
