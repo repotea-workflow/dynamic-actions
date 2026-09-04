@@ -1,1 +1,39 @@
-fix: send STAC envelopes to preview
+feat: enforce STAC composition envelope
+
+* feat: enforce STAC composition envelope
+
+* fix: hard cut over tern and migration to stac payloads
+
+* fix: preserve incompatible style definitions in editor
+
+* feat: harden stac payload validation and migration status
+
+* feat: route styles through the stac provider
+
+* fix: validate stac style lists
+
+* test: cover stac visual editor round trip
+
+* fix: preserve stac editor and envelope semantics
+
+* feat: complete provider-backed stac cutover
+
+* fix: enforce runtime stac requirements
+
+* fix: mark all unowned legacy definitions for migration
+
+* fix: isolate incompatible legacy styles
+
+* fix: harden STAC envelope migration
+
+* fix: guard malformed legacy style data
+
+* test: align Swan router fixture with STAC runtime
+
+* fix: explain incompatible legacy styles
+
+* fix: send STAC envelopes to preview
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
