@@ -1,1 +1,1 @@
-Preserve signing in isolated agent profiles
+Keep Pi selection errors dispatch-local
