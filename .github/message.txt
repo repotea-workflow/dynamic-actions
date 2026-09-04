@@ -1,1 +1,1 @@
-polish feature style property panel
+fix: complete strict STAC editor flow
