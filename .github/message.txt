@@ -1,3 +1,1 @@
-chore(omsk): use golang-migrate for v4
-
-Archive legacy Liquibase and move product cleanup access to migration 000009.
+fix: shorten OMSK access grant ids
