@@ -1,1 +1,1 @@
-fix: validate stac style lists
+test: cover stac visual editor round trip
