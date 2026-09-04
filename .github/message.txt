@@ -1,1 +1,1 @@
-fix: mark all unowned legacy definitions for migration
+fix: isolate incompatible legacy styles
