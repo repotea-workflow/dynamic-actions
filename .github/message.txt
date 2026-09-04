@@ -1,3 +1,4 @@
-chore(omsk): archive legacy liquibase
+Merge remote-tracking branch 'origin/main' into agt/fix-omsk-specified-declaration-export
 
-Use the v4 golang-migrate path for product cleanup access and keep the Java changelog only as explicitly archived history.
+# Conflicts:
+#	archive/omsk-java-liquibase/liquibase/changelog/20260903090000_changelog.xml
