@@ -1,1 +1,3 @@
-fix: close STAC validation and dependency gaps
+fix: close STAC acceptance gaps
+
+Closes the remaining strict validation, dependency metadata, and tenant releases route gaps from the full STAC plan.

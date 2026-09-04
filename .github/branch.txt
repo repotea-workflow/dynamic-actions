@@ -1,1 +1,1 @@
-agt/full-stac-acceptance
+main
