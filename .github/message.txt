@@ -1,1 +1,1 @@
-Constrain full review to candidate changes
+Accept legacy PR content digests during publication
