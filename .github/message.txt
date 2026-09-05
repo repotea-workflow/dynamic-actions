@@ -1,1 +1,1 @@
-refactor(server): unify control plane listener
+refactor(server): own profile bootstrap
