@@ -1,1 +1,1 @@
-feat(worker): fetch assigned repositories
+feat(material): add durable registry schema
