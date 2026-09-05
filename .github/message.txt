@@ -1,1 +1,1 @@
-refactor(execution): extract local execution services
+refactor(scm): extract git and github execution
