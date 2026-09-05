@@ -1,1 +1,1 @@
-feat(server): compose remote execution stores
+feat(worker): accept fenced operation commands
