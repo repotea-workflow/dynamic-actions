@@ -1,1 +1,1 @@
-feat(codeon): converge cancellation and terminal cleanup
+Converge cancellation and terminal cleanup (#295)
