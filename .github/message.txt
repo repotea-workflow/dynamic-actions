@@ -1,1 +1,1 @@
-feat(postgres): record worker command and event receipts
+feat(worker): persist command and event submissions
