@@ -1,1 +1,1 @@
-feat: add release preflight validation
+fix: reconcile known STAC migration history
