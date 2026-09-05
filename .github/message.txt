@@ -1,1 +1,1 @@
-feat(worker): add generation fenced heartbeats
+feat(postgres): add durable worker assignment outbox
