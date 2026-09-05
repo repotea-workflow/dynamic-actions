@@ -1,1 +1,1 @@
-agt/simplify-operation-prompt-title
+agt/follow-authoritative-planning-schema
