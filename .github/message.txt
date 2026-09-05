@@ -1,1 +1,1 @@
-refactor(server): own profile bootstrap
+refactor(server): retire combined api lifecycle
