@@ -1,1 +1,1 @@
-feat(worker): collect remote repository evidence
+feat(server): own repository package policy
