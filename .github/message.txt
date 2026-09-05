@@ -1,1 +1,1 @@
-fix(robin): standardize feature style actions
+fix: keep feature styles provider-native STAC
