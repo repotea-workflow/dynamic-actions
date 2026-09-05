@@ -1,17 +1,1 @@
-fix(codeon): stabilize runtime profiles and operation recovery (#294)
-
-* Handle no-change review recovery explicitly
-
-* Support isolated agent profile credentials
-
-* Clarify operation progress callback contract
-
-* Provide writable temp roots for read-only Codex work
-
-* Require task context before agent review
-
-* Preserve signing in isolated agent profiles
-
-* Keep Pi selection errors dispatch-local
-
-* Support Cursor API-key profile preflight
+fix(codeon): follow authoritative planning schema (#293)
