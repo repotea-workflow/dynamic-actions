@@ -1,1 +1,1 @@
-feat(server): fence runtime evidence by assignment
+feat(execution): support worker policy coordinates
