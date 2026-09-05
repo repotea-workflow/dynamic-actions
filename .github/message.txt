@@ -1,1 +1,1 @@
-feat(server): derive agent availability from workers
+feat(server): configure picker placement
