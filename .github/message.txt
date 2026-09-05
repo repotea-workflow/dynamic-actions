@@ -1,3 +1,1 @@
-fix(product): clarify cleanup confirmation
-
-Reject deletion when related products or orders changed after preview.
+feat(finance): add chief billflow export task
