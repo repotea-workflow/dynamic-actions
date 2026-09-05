@@ -1,1 +1,1 @@
-feat(worker): long poll durable commands over http
+feat(worker): persist assignment command journal
