@@ -1,1 +1,1 @@
-feat(worker): materialize assigned worktrees
+feat(worker): fetch assigned repositories
