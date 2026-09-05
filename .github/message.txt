@@ -1,1 +1,1 @@
-fix(codeon): follow authoritative planning schema (#293)
+Simplify operation prompt titles (#292)
