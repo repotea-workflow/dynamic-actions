@@ -1,1 +1,1 @@
-refactor(server): move console asset ownership
+refactor(mcp): stop serving public tracker endpoint
