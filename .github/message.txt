@@ -1,1 +1,3 @@
 fix(ui): improve billflow task navigation
+
+Merged after frontend build and focused review.
