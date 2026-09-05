@@ -1,1 +1,1 @@
-feat(protocol): use json rpc worker handshakes
+feat(postgres): add durable worker registry store
