@@ -1,1 +1,1 @@
-feat(worker): persist command and event submissions
+feat(server): deliver durable commands over websocket
