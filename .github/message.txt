@@ -1,1 +1,1 @@
-feat(protocol): publish runtime profile evidence
+feat(server): fence runtime evidence by assignment
