@@ -1,1 +1,3 @@
 fix(worker): handle null billflow waybills
+
+Merged after regression coverage, focused review, and passing worker tests.
