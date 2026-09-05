@@ -1,1 +1,1 @@
-feat(postgres): fence worker heartbeats
+feat(server): wire durable worker registry transport
