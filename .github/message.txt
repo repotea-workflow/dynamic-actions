@@ -1,1 +1,1 @@
-refactor(execution): expose local repository materializer
+feat(worker): materialize assigned worktrees
