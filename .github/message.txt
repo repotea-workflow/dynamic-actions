@@ -1,1 +1,1 @@
-feat(worker): publish durable capabilities
+feat(server): place prepared attempts on workers
