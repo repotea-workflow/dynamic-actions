@@ -1,1 +1,1 @@
-feat(server): add worker enrollment lifecycle
+build(server): record sha2 dependency
