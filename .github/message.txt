@@ -1,1 +1,1 @@
-refactor(cli): retire legacy combined binary
+feat(server): serve worker rpc sessions over http
