@@ -1,1 +1,1 @@
-refactor(server): own tracker API
+refactor(server): own OpenAPI host policy
