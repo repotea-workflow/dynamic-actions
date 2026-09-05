@@ -1,1 +1,1 @@
-refactor(protocol): extract worker protocol contracts
+refactor(material): extract runtime material contracts
