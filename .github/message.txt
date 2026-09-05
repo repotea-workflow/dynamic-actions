@@ -1,1 +1,153 @@
-feat(server): seal remote operation contracts
+Split Codeon Server and Worker execution (#296)
+
+* refactor(protocol): extract worker protocol contracts
+
+* refactor(material): extract runtime material contracts
+
+* refactor(execution): extract local execution services
+
+* refactor(scm): extract git and github execution
+
+* refactor(server): add control-plane library boundary
+
+* refactor(worker): add execution-plane library boundary
+
+* feat(server): add worker registry and transport persistence
+
+* feat(protocol): add shared worker rpc gateway seam
+
+* feat(server): add worker enrollment lifecycle
+
+* build(server): record sha2 dependency
+
+* refactor(cli): add unified server and worker command
+
+* refactor(cli): retire legacy combined binary
+
+* feat(server): serve worker rpc sessions over http
+
+* chore(lockfile): record server http dependencies
+
+* feat(server): add worker websocket handshake
+
+* feat(worker): add http enrollment and session client
+
+* fix(server): borrow registry transport errors
+
+* feat(protocol): use json rpc worker handshakes
+
+* feat(postgres): add durable worker registry store
+
+* feat(server): own postgres runtime lifecycle
+
+* feat(postgres): fence worker heartbeats
+
+* feat(server): wire durable worker registry transport
+
+* feat(worker): add generation fenced heartbeats
+
+* feat(postgres): add durable worker assignment outbox
+
+* feat(postgres): record worker command and event receipts
+
+* feat(worker): persist command and event submissions
+
+* feat(server): deliver durable commands over websocket
+
+* feat(worker): long poll durable commands over http
+
+* feat(worker): persist assignment command journal
+
+* feat(worker): bootstrap durable identity and session
+
+* feat(worker): authenticate sessions with issued identity
+
+* feat(worker): durably dispatch assignment acceptance
+
+* feat(server): apply worker assignment acknowledgements
+
+* refactor(execution): expose local repository materializer
+
+* feat(worker): materialize assigned worktrees
+
+* feat(worker): fetch assigned repositories
+
+* feat(material): add durable registry schema
+
+* feat(material): authorize worker leases
+
+* feat(material): register frozen binding authority
+
+* fix(protocol): authenticate worker HTTP RPC
+
+* feat(material): deliver and revoke worker credentials
+
+* feat(worker): publish durable capabilities
+
+* feat(server): place prepared attempts on workers
+
+* feat(worker): persist assignment projections
+
+* feat(codeon): freeze worker placement target at admission
+
+* feat(codeon): schedule never-assigned prepared attempts
+
+* refactor(server): move console asset ownership
+
+* refactor(mcp): stop serving public tracker endpoint
+
+* refactor(server): own API problem responses
+
+* refactor(server): own API request authority
+
+* refactor(server): own API session projection
+
+* refactor(server): own execution API projection
+
+* refactor(server): own attention API
+
+* refactor(server): own tracker API
+
+* refactor(server): own OpenAPI host policy
+
+* refactor(server): unify control plane listener
+
+* refactor(server): own profile bootstrap
+
+* refactor(server): retire combined api lifecycle
+
+* test(server): own api host acceptance
+
+* test(server): own api attention acceptance
+
+* refactor(server): retire combined api config
+
+* feat(server): derive agent availability from workers
+
+* feat(server): configure picker placement
+
+* feat(server): own claim scheduling
+
+* feat(worker): derive remote preparation commit
+
+* feat(worker): collect remote repository evidence
+
+* feat(server): own repository package policy
+
+* feat(server): finalize remote execution packages
+
+* feat(server): advance remote operation flow
+
+* feat(protocol): publish runtime profile evidence
+
+* feat(server): fence runtime evidence by assignment
+
+* feat(execution): support worker policy coordinates
+
+* feat(tracker): build remote worker policies
+
+* feat(server): compose remote execution stores
+
+* feat(worker): accept fenced operation commands
+
+* feat(server): seal remote operation contracts
