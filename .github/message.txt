@@ -1,1 +1,1 @@
-Support Cursor API-key profile preflight
+fix(codeon): follow authoritative planning schema
