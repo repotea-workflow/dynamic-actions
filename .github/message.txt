@@ -1,1 +1,1 @@
-feat(server): serve worker rpc sessions over http
+chore(lockfile): record server http dependencies
