@@ -1,1 +1,1 @@
-test(server): own api host acceptance
+test(server): own api attention acceptance
