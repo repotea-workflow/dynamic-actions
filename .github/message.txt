@@ -1,1 +1,1 @@
-build(server): record sha2 dependency
+refactor(cli): add unified server and worker command
