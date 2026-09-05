@@ -1,1 +1,1 @@
-chore(lockfile): record server http dependencies
+feat(server): add worker websocket handshake
