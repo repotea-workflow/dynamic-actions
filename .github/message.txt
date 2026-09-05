@@ -1,1 +1,1 @@
-refactor(server): own API problem responses
+refactor(server): own API request authority
