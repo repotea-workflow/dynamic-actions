@@ -1,1 +1,1 @@
-refactor(cli): add unified server and worker command
+refactor(cli): retire legacy combined binary
