@@ -1,1 +1,1 @@
-feat(postgres): add durable worker assignment outbox
+feat(postgres): record worker command and event receipts
