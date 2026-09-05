@@ -1,1 +1,1 @@
-feat(server): advance remote operation flow
+feat(protocol): publish runtime profile evidence
