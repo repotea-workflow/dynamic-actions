@@ -1,1 +1,1 @@
-refactor(worker): add execution-plane library boundary
+feat(server): add worker registry and transport persistence
