@@ -1,1 +1,1 @@
-refactor(material): extract runtime material contracts
+refactor(execution): extract local execution services
