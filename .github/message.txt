@@ -1,1 +1,1 @@
-feat(material): add durable registry schema
+feat(material): authorize worker leases
