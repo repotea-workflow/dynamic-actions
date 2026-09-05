@@ -1,1 +1,1 @@
-feat(server): add worker registry and transport persistence
+feat(protocol): add shared worker rpc gateway seam
