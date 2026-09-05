@@ -1,1 +1,1 @@
-test(server): own api attention acceptance
+refactor(server): retire combined api config
