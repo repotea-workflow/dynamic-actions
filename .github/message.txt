@@ -1,1 +1,1 @@
-feat(server): wire durable worker registry transport
+feat(worker): add generation fenced heartbeats
