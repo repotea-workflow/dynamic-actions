@@ -1,1 +1,1 @@
-feat(worker): bootstrap durable identity and session
+feat(worker): authenticate sessions with issued identity
