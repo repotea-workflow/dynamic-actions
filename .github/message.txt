@@ -1,1 +1,1 @@
-feat(server): add worker websocket handshake
+feat(worker): add http enrollment and session client
