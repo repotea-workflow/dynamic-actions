@@ -1,1 +1,1 @@
-Simplify operation prompt titles (#292)
+feat(codeon): converge cancellation and terminal cleanup
