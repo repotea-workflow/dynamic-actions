@@ -1,1 +1,1 @@
-feat(worker): authenticate sessions with issued identity
+feat(worker): durably dispatch assignment acceptance
