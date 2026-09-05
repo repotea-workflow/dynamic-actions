@@ -1,1 +1,1 @@
-feat(server): deliver durable commands over websocket
+feat(worker): long poll durable commands over http
