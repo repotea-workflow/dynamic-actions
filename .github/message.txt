@@ -1,1 +1,1 @@
-feat(server): apply worker assignment acknowledgements
+refactor(execution): expose local repository materializer
