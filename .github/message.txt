@@ -1,1 +1,1 @@
-refactor(server): own API request authority
+refactor(server): own API session projection
