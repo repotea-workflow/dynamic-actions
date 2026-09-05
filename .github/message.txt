@@ -1,1 +1,3 @@
 fix: publish features to releases reliably
+
+Fix omitted feature version handling and improve publish dialog layout.
