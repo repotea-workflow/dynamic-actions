@@ -1,1 +1,1 @@
-refactor(server): retire combined api lifecycle
+test(server): own api host acceptance
