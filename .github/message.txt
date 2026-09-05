@@ -1,1 +1,1 @@
-refactor(server): retire combined api config
+feat(server): derive agent availability from workers
