@@ -1,1 +1,1 @@
-Keep Pi selection errors dispatch-local
+Support Cursor API-key profile preflight
