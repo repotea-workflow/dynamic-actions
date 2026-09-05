@@ -1,1 +1,1 @@
-refactor(server): own API session projection
+refactor(server): own execution API projection
