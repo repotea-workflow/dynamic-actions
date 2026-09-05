@@ -1,1 +1,1 @@
-feat(material): register frozen binding authority
+fix(protocol): authenticate worker HTTP RPC
