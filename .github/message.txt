@@ -1,1 +1,1 @@
-feat(material): deliver and revoke worker credentials
+feat(worker): publish durable capabilities
