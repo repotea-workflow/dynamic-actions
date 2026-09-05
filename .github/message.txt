@@ -1,1 +1,1 @@
-feat(worker): persist assignment projections
+feat(codeon): freeze worker placement target at admission
