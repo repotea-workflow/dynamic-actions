@@ -1,1 +1,1 @@
-feat(worker): derive remote preparation commit
+feat(worker): collect remote repository evidence
