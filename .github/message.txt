@@ -1,1 +1,1 @@
-fix(protocol): authenticate worker HTTP RPC
+feat(material): deliver and revoke worker credentials
