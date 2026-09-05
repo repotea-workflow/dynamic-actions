@@ -1,1 +1,1 @@
-feat(worker): persist assignment command journal
+feat(worker): bootstrap durable identity and session
