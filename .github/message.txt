@@ -1,1 +1,1 @@
-fix: keep feature styles provider-native STAC
+feat: add release preflight validation
