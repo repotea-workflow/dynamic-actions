@@ -1,1 +1,1 @@
-feat(worker): accept fenced operation commands
+feat(server): seal remote operation contracts
