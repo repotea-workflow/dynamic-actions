@@ -1,1 +1,1 @@
-feat(protocol): add shared worker rpc gateway seam
+feat(server): add worker enrollment lifecycle
