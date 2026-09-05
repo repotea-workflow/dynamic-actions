@@ -1,1 +1,1 @@
-feat(server): place prepared attempts on workers
+feat(worker): persist assignment projections
