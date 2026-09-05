@@ -1,1 +1,1 @@
-Converge cancellation and terminal cleanup (#295)
+refactor(protocol): extract worker protocol contracts
