@@ -1,1 +1,1 @@
-fix(server): allow remote binding without local environment row
+fix(worker): accept MCP completion with Codex JSON output
