@@ -1,1 +1,1 @@
-deploy codeon server through dynamic CI
+install corepack for Node 26 image build
