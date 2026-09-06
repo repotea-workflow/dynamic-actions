@@ -1,1 +1,1 @@
-agt/stac-action-reference-only
+main
