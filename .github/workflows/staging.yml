@@ -216,3 +216,59 @@ jobs:
                 "imagePullSecrets": [{"name": "dockercfg-0xfe10"}]
               }
             }
+
+  deploy-codeon-server:
+    name: Deploy Codeon Server
+    needs:
+      - build-image
+      - verify-deployment-source
+    runs-on: ubuntu-latest
+    concurrency:
+      group: codeoo-infra-production-codeon-de0
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+
+      - name: Checkout source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@e265ebca9b4a93aaf804be57c2687554dcc49dc7
+        with:
+          repository: fewensa/codeoo
+          token: "${{ secrets.GH_TOKEN_FEWENSA }}"
+          ref_file: .github/ref.txt
+
+      - name: Recheck main head
+        env:
+          IMAGE_TAG: ${{ needs.build-image.outputs.image_tag }}
+        run: |
+          image_sha="${IMAGE_TAG#sha-}"
+          actual_full="$(git rev-parse HEAD)"
+          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
+          test "$actual_full" = "$image_sha"
+          test "$actual_full" = "$remote_main"
+
+      - name: Checkout GitOps repository
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
+        with:
+          repository: repotea-workflow/gitops-fes
+          ssh-key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          path: gitops-repo
+          fetch-depth: 0
+
+      - name: Deploy
+        uses: repotea-workspace/kangumi/github-actions/gitops-deploy@e265ebca9b4a93aaf804be57c2687554dcc49dc7
+        with:
+          repository: repotea-workflow/gitops-fes
+          deploy_key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
+          argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
+          app_name: infra-production-codeon-de0
+          wait_health: "true"
+          changes: |
+            {
+              "argocd/infra/codeon-de0/overlays/production/codeon/values.yaml": {
+                "image.repository": "${{ needs.build-image.outputs.image_repository }}",
+                "image.tag": "${{ needs.build-image.outputs.image_tag }}",
+                "image.digest": "${{ needs.build-image.outputs.image_digest }}",
+                "imagePullSecrets": [{"name": "dockercfg-0xfe10"}]
+              }
+            }
