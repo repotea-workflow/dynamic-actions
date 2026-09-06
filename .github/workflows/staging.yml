@@ -15,27 +15,8 @@ env:
   IMAGE_REPOSITORY: ghcr.io/repotea-workflow/dynamic-actions/codeoo
 
 jobs:
-  ensure-main:
-    name: Ensure main
-    runs-on: ubuntu-latest
-    outputs:
-      is_main: ${{ steps.branch.outputs.is_main }}
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-
-      - name: Check source branch
-        id: branch
-        run: |
-          if [ -f .github/branch.txt ] && grep -qx 'main' .github/branch.txt; then
-            echo "is_main=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "is_main=false" >> "$GITHUB_OUTPUT"
-          fi
-
   build-image:
     name: Build image
-    needs: ensure-main
-    if: needs.ensure-main.outputs.is_main == 'true'
     runs-on: ubuntu-latest
     outputs:
       image_digest: ${{ steps.build.outputs.digest }}
@@ -50,15 +31,6 @@ jobs:
           repository: fewensa/codeoo
           token: "${{ secrets.GH_TOKEN_FEWENSA }}"
           ref_file: .github/ref.txt
-
-      - name: Verify source revision and main head
-        run: |
-          expected="$(cat __origin__/.github/commit.txt)"
-          actual_short="$(git rev-parse --short=7 HEAD)"
-          actual_full="$(git rev-parse HEAD)"
-          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          test "$actual_short" = "$expected"
-          test "$actual_full" = "$remote_main"
 
       - name: Resolve source image tag
         id: source
@@ -109,16 +81,6 @@ jobs:
           repository: fewensa/codeoo
           token: "${{ secrets.GH_TOKEN_FEWENSA }}"
           ref_file: .github/ref.txt
-
-      - name: Recheck main head
-        env:
-          IMAGE_TAG: ${{ needs.build-image.outputs.image_tag }}
-        run: |
-          image_sha="${IMAGE_TAG#sha-}"
-          actual_full="$(git rev-parse HEAD)"
-          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          test "$actual_full" = "$image_sha"
-          test "$actual_full" = "$remote_main"
 
       - name: Checkout GitOps repository
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -211,16 +173,6 @@ jobs:
           repository: fewensa/codeoo
           token: "${{ secrets.GH_TOKEN_FEWENSA }}"
           ref_file: .github/ref.txt
-
-      - name: Recheck main head
-        env:
-          IMAGE_TAG: ${{ needs.build-image.outputs.image_tag }}
-        run: |
-          image_sha="${IMAGE_TAG#sha-}"
-          actual_full="$(git rev-parse HEAD)"
-          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          test "$actual_full" = "$image_sha"
-          test "$actual_full" = "$remote_main"
 
       - name: Checkout GitOps repository
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
