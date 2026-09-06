@@ -1,1 +1,1 @@
-feat: add inherited feature style distribution
+feat: align feature styles with official stac
