@@ -1,1 +1,1 @@
-install corepack for Node 26 image build
+fix worker enrollment pem validation
