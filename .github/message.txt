@@ -1,1 +1,1 @@
-ci(codeon): deploy staging image directly
+feat(codeon): secure worker operation callbacks
