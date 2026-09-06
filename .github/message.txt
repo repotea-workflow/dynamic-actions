@@ -1,1 +1,1 @@
-feat(codeon): secure worker operation callbacks
+refactor(codeon): extract shared agent runner kernel
