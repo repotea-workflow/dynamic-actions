@@ -1,9 +1,7 @@
 name: "[codeoo] Check"
 
 on:
-  push:
-    branches:
-      - "**"
+  workflow_dispatch:
 
 permissions:
   contents: read

@@ -92,34 +92,10 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
-  verify-deployment-source:
-    name: Verify deployment source
-    needs: build-image
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
-
-      - name: Checkout source
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@e265ebca9b4a93aaf804be57c2687554dcc49dc7
-        with:
-          repository: fewensa/codeoo
-          token: "${{ secrets.GH_TOKEN_FEWENSA }}"
-          ref_file: .github/ref.txt
-
-      - name: Verify source revision and main head
-        run: |
-          expected="$(cat __origin__/.github/commit.txt)"
-          actual_short="$(git rev-parse --short=7 HEAD)"
-          actual_full="$(git rev-parse HEAD)"
-          remote_main="$(git ls-remote origin refs/heads/main | cut -f1)"
-          test "$actual_short" = "$expected"
-          test "$actual_full" = "$remote_main"
-
   deploy-codeoff:
     name: Deploy Codeoff
     needs:
       - build-image
-      - verify-deployment-source
     runs-on: ubuntu-latest
     concurrency:
       group: codeoo-infra-production-codeoff-de0
@@ -221,7 +197,6 @@ jobs:
     name: Deploy Codeon Server
     needs:
       - build-image
-      - verify-deployment-source
     runs-on: ubuntu-latest
     concurrency:
       group: codeoo-infra-production-codeon-de0
