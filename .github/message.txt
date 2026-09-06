@@ -1,1 +1,1 @@
-ci: deploy staging image without redundant checks
+fix(server): allow remote binding without local environment row
