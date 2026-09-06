@@ -1,1 +1,1 @@
-fix: render official stac previews
+fix: default official stac widget versions
