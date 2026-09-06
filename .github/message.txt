@@ -1,1 +1,1 @@
-feat: align feature styles with official stac
+fix: finish stac widget migration
