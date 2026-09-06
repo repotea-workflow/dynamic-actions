@@ -1,1 +1,1 @@
-fix: default official stac widget versions
+feat: support official STAC widgets end to end
