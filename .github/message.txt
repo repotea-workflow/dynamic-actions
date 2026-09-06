@@ -1,1 +1,1 @@
-fix: finish stac widget migration
+fix: validate stac runtime envelopes directly
