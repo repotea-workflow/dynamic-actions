@@ -197,7 +197,6 @@ jobs:
     name: Deploy Codeon Server
     needs:
       - build-image
-      - deploy-codeoff
     if: ${{ always() && needs.build-image.result == 'success' }}
     runs-on: ubuntu-latest
     concurrency:
