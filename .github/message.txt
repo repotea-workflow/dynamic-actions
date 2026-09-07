@@ -1,1 +1,3 @@
-merge origin/main into account password fix
+fix(migration): restore account access migration
+
+Fixes the production dirty migration caused by an oversized node remark and supports outlet member search.
