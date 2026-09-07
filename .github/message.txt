@@ -1,1 +1,1 @@
-fix(server): reconcile configured repository authority
+fix(worker): report missing agent routing authority
