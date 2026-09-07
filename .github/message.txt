@@ -1,1 +1,1 @@
-fix: complete STAC component picker interactions
+fix: harden STAC editor component interactions
