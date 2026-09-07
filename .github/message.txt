@@ -1,1 +1,1 @@
-test(worker): keep recovery assignments out of capacity
+fix(worker): replay closure recovery without attention
