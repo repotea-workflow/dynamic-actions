@@ -1,1 +1,1 @@
-fix(worker): replay closure recovery without attention
+fix(worker): make closure replay idempotent
