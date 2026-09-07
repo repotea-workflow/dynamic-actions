@@ -1,1 +1,1 @@
-test: exercise STAC color picker interaction
+fix: proxy feature image uploads through Hawk
