@@ -1,1 +1,1 @@
-fix(server): close cancellations for terminal operations
+fix(server): reject unsigned remote commits
