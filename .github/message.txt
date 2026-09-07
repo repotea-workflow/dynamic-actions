@@ -1,1 +1,1 @@
-fix(worker): preserve SQL replay query boundaries
+fix(worker): separate replay mutation SQL tokens
