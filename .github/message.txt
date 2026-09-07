@@ -1,1 +1,1 @@
-fix(worker): report missing agent routing authority
+feat(server): expose safe issue stop API
