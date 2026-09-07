@@ -1,1 +1,15 @@
-fix: version immutable build configuration
+feat: add external app distribution builds (#107)
+
+* feat: add external app distribution builds
+
+* test: configure buildbox token for production harness
+
+* fix: harden external distribution builds
+
+* fix: bind and validate distribution build attempts
+
+* fix: version immutable build configuration
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
