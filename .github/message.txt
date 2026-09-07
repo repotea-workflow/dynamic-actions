@@ -1,1 +1,1 @@
-feat: complete STAC editor property controls
+test: verify complete STAC editor interactions
