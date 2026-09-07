@@ -1,1 +1,1 @@
-fix(server): fail closed runtime without completion
+refactor(server): isolate remote closure fencing
