@@ -1,1 +1,1 @@
-fix(protocol): require signing for SCM publication
+fix(server): capture final review snapshot for remote flow
