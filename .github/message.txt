@@ -1,1 +1,1 @@
-fix(server): bind review readiness to candidate head
+fix(codeon): preserve review candidate evidence
