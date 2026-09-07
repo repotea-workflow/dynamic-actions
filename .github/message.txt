@@ -1,1 +1,1 @@
-feat(codeon): complete signed remote worker execution
+fix(server): reconcile configured repository authority
