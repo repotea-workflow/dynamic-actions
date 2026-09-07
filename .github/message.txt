@@ -1,1 +1,1 @@
-fix(worker): make closure replay idempotent
+fix(worker): preserve SQL replay query boundaries
