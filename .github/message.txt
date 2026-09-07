@@ -1,3 +1,1 @@
-feat: complete official stac editor boundaries (#105)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix: include STAC catalog in Robin image build
