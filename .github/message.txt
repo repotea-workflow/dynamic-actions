@@ -1,1 +1,1 @@
-test: configure buildbox token for production harness
+fix: harden external distribution builds
