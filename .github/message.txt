@@ -1,3 +1,1 @@
-Revert "fix: proxy feature image uploads through Hawk"
-
-This reverts commit d8683e7aa16f3d7d0368cbc578a8c569511fd4b9.
+feat: add STAC feature style bundles
