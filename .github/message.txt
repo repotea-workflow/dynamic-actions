@@ -1,1 +1,1 @@
-chore(worker): remove stale test import
+fix(protocol): require signing for SCM publication
