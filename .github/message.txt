@@ -1,1 +1,1 @@
-refactor(server): isolate remote closure fencing
+fix(server): allow configured operation MCP hosts
