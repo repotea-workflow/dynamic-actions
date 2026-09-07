@@ -1,1 +1,1 @@
-fix(codeon): collect review completion readiness
+fix(server): bind review readiness to candidate head
