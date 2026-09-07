@@ -1,1 +1,1 @@
-fix(server): capture final review snapshot for remote flow
+fix(server): close cancellations for terminal operations
