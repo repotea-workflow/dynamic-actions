@@ -1,1 +1,1 @@
-fix(server): allow configured operation MCP hosts
+fix(worker): release capacity after runtime closure
