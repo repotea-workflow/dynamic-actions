@@ -1,3 +1,1 @@
-feat(account): add password reset management
-
-Adds the restricted account password management page, API, CHIEF permission migration, and audit logging.
+fix(migration): shorten account access remark
