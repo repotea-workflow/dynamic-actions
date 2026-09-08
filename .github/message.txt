@@ -1,1 +1,1 @@
-fix(worker): accept late terminal closure replay
+fix(cancellation): verify canonical worker event digest
