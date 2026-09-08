@@ -1,1 +1,1 @@
-fix(cleanup): prune empty worktree containers
+fix(cleanup): validate worker recovery digest exactly
