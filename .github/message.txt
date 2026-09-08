@@ -1,1 +1,1 @@
-refactor: simplify feature styles around versioned stac
+fix: fail closed on incompatible runtime style contracts
