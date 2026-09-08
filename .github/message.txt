@@ -1,1 +1,1 @@
-fix(worker): reconcile durable event sequences on restart
+fix(cancellation): complete remote cleanup recovery
