@@ -1,1 +1,1 @@
-fix(ci): decouple codeon and codeoff staging deploys
+test(worker): cover SCM controller capability publication
