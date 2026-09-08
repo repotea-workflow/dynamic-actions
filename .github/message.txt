@@ -1,1 +1,1 @@
-test(cancellation): import materialization state
+fix(cancellation): retry recovery on worker reconnect
