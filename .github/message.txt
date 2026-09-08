@@ -1,1 +1,1 @@
-fix(worker): allow SCM controller commands
+fix(worker): accept SCM controller observations
