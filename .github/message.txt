@@ -1,1 +1,1 @@
-fix(server): route merge through remote worker
+fix(worker): preserve canonical landed commit message
