@@ -1,1 +1,1 @@
-fix(cancellation): replay terminal assignment release
+fix(cancellation): avoid cleanup after environment retirement
