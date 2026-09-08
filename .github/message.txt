@@ -1,1 +1,1 @@
-fix: fail closed on incompatible runtime style contracts
+fix: preserve legacy baya envelope compatibility
