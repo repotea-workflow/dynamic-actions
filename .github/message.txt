@@ -1,1 +1,1 @@
-fix(worker): accept SCM controller observations
+fix(server): complete passed landing preflight
