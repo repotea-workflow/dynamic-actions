@@ -1,1 +1,1 @@
-feat(releases): add package build controls
+feat: expand feature style authoring and examples
