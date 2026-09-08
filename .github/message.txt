@@ -1,1 +1,11 @@
-fix: preserve legacy baya envelope compatibility
+refactor: simplify feature styles around versioned STAC (#111)
+
+* refactor: simplify feature styles around versioned stac
+
+* fix: fail closed on incompatible runtime style contracts
+
+* fix: preserve legacy baya envelope compatibility
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>

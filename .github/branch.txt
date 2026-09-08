@@ -1,1 +1,1 @@
-agt/stac-format-contract
+main
