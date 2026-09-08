@@ -1,1 +1,1 @@
-fix(agents): keep internal contract digests out of provider prompts
+feat(remote-flow): route SCM operations through worker
