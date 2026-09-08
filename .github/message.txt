@@ -1,1 +1,1 @@
-fix(cancellation): recover expired material and isolate follow-ups
+fix(cleanup): prune empty worktree containers
