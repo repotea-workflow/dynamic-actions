@@ -70,7 +70,7 @@ jobs:
       - build-image
     runs-on: ubuntu-latest
     concurrency:
-      group: codeoo-gitops-fes-production
+      group: codeoo-gitops-fes-production-codeoff
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
@@ -162,7 +162,7 @@ jobs:
     if: ${{ always() && needs.build-image.result == 'success' }}
     runs-on: ubuntu-latest
     concurrency:
-      group: codeoo-gitops-fes-production
+      group: codeoo-gitops-fes-production-codeon
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
