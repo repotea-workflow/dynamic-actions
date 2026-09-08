@@ -1,1 +1,1 @@
-fix(cancellation): retry recovery on worker reconnect
+fix(cancellation): recover expired material and isolate follow-ups
