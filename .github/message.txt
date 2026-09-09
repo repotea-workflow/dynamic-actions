@@ -1,1 +1,1 @@
-fix(hawk): allow styleless release dependencies
+fix(releases): explain missing publish styles
