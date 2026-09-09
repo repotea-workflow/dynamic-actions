@@ -1,1 +1,1 @@
-fix: reset complete runtime scope on app changes
+test: cover same-app scope reset
