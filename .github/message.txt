@@ -1,1 +1,1 @@
-fix(worker): persist cleanup authorization failures
+fix(worker): rebind pending commands after session restart
