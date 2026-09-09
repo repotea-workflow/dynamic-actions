@@ -1,1 +1,3 @@
-fix: decouple app style selection from releases
+fix: decouple app style selection from releases (#121)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
