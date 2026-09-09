@@ -1,1 +1,1 @@
-fix: make runtime app switching transactional
+fix: isolate credentials and localization on app switch
