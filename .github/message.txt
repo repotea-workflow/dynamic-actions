@@ -1,1 +1,1 @@
-fix(swan): trust development release root
+fix(hawk): validate and republish STAC feature styles
