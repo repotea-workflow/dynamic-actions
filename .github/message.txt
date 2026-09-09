@@ -1,1 +1,1 @@
-fix(worker): shorten Grok operation MCP alias
+fix(mcp): require Grok pull request drafts
