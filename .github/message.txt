@@ -1,1 +1,1 @@
-fix: complete canonical runtime scope isolation
+fix: make runtime app switching transactional
