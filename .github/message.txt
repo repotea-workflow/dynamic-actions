@@ -1,1 +1,1 @@
-fix(server): observe Grok planning language requirements
+fix(mcp): expose language requirements to Grok
