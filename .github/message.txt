@@ -1,1 +1,3 @@
 fix(migration): fit account access id column
+
+Shortens the generated access-template ID so migration 000010 fits varchar(50).
