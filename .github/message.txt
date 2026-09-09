@@ -1,1 +1,1 @@
-fix(worker): deliver agent endpoint as secret material
+fix(server): bind completion runtime to selected agent
