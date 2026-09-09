@@ -1,1 +1,11 @@
-chore: merge main before follow-up
+fix: stabilize release trust rotation (#126)
+
+* feat(release): add dynamic app trust bundles
+
+* chore: preserve existing test formatting
+
+* fix(release): stabilize trust bundle rotation
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
