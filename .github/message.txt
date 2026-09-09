@@ -1,1 +1,1 @@
-fix: detach active credentials before scope commit
+fix(robin): restore detail page back navigation
