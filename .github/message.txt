@@ -1,1 +1,1 @@
-fix(server): make cancellation recovery fair and durable
+fix(worker): recover expired cancellation material safely
