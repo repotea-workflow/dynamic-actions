@@ -1,1 +1,1 @@
-fix(worker): rebind pending commands after session restart
+fix(worker): publish system runtime preflight evidence
