@@ -1,1 +1,1 @@
-fix(worker): finish grok continuation before output check
+fix(server): accept cancellation-fenced closure replay
