@@ -1,1 +1,3 @@
-fix: parse manifest shell version comparison
+fix: parse manifest shell version comparison (#120)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
