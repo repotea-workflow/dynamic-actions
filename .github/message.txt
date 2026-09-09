@@ -1,1 +1,23 @@
-fix: refresh release and features after app switch
+Use canonical App identity for runtime scope (#124)
+
+* feat: derive runtime scope from manifest identity
+
+* fix: isolate runtime state during app switching
+
+* fix: complete canonical runtime scope isolation
+
+* fix: make runtime app switching transactional
+
+* fix: isolate credentials and localization on app switch
+
+* fix: reset complete runtime scope on app changes
+
+* test: cover same-app scope reset
+
+* fix: detach active credentials before scope commit
+
+* fix: refresh release and features after app switch
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
