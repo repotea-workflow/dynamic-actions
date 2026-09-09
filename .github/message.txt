@@ -1,1 +1,1 @@
-fix(cleanup): support split worker authority
+fix(worker): resume cleanup resource follow-ups
