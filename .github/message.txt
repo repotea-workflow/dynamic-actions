@@ -1,1 +1,1 @@
-test: cover same-app scope reset
+fix: detach active credentials before scope commit
