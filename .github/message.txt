@@ -1,3 +1,1 @@
-feat: bind runtime manifests to canonical apps (#122)
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+refactor: resolve release resources by app
