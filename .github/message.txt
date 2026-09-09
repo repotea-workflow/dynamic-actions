@@ -1,3 +1,1 @@
-refactor: resolve runtime release scope from app
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat: derive runtime scope from manifest identity
