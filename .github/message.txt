@@ -1,9 +1,1 @@
-test: migrate runtime feature coverage to manifest
-
-* refactor: remove legacy runtime feature endpoints
-
-* test: migrate runtime feature coverage to manifest
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+test: exercise runtime sessions through manifest
