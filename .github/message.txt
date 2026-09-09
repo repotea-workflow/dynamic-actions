@@ -1,1 +1,1 @@
-feat: derive runtime scope from manifest identity
+fix: isolate runtime state during app switching
