@@ -1,1 +1,3 @@
-fix(migrations): use unique trust migration version
+fix(migrations): use unique trust migration version (#127)
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
