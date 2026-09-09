@@ -1,1 +1,11 @@
 test: exercise runtime sessions through manifest
+
+* refactor: remove legacy runtime feature endpoints
+
+* test: migrate runtime feature coverage to manifest
+
+* test: exercise runtime sessions through manifest
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
