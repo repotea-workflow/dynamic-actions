@@ -1,1 +1,1 @@
-fix(robin): restore detail page back navigation
+fix: refresh release and features after app switch
