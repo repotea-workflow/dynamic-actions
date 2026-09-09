@@ -1,1 +1,1 @@
-fix(swan): preserve runtime feature navigation history
+fix: decouple app style selection from releases
