@@ -1,1 +1,1 @@
-fix(server): retry denied cleanup material safely
+fix(worker): preserve operations across reconnects
