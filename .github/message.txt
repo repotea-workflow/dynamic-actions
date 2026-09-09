@@ -1,1 +1,1 @@
-fix(server): accept cleanup evidence for early assignments
+fix(worker): finish grok continuation before output check
