@@ -1,1 +1,9 @@
-chore: preserve existing test formatting
+feat: add dynamic App release trust bundles (#125)
+
+* feat(release): add dynamic app trust bundles
+
+* chore: preserve existing test formatting
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
