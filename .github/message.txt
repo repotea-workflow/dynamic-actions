@@ -1,1 +1,3 @@
-feat: deliver platform release manifests to swan
+feat: deliver platform release manifests to Swan
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
