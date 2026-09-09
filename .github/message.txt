@@ -1,1 +1,3 @@
 fix(order-import): show validation details
+
+Expose safe, actionable row and field details for invalid order import quantities.
