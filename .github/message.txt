@@ -1,1 +1,3 @@
-fix(hawk): preserve release style assignments
+feat: add Release revisions and Dev/Canary/Stable channels
+
+Keep Releases as long-lived containers and create immutable Revisions from Dev style import, so Canary and Stable move only by Promote or rollback instead of draft/published/revoked.
