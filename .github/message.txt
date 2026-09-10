@@ -1,6 +1,4 @@
-fix(hawk): refresh stale compiled styles before a Dev snapshot (#133)
+fix(hawk): refresh stale compiled styles before a Dev snapshot
 
 Bundle import was rolling back when an unchanged style's compiled
 payload lagged the current compiler, so no styles or Revisions landed.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
