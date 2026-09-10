@@ -1,5 +1,1 @@
-feat: add Release revisions and Dev/Canary/Stable channels (#128)
-
-Keep Releases as long-lived containers and create immutable Revisions from Dev style import, so Canary and Stable move only by Promote or rollback instead of draft/published/revoked.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(robin): align release status with page title
