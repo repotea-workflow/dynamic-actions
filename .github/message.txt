@@ -1,1 +1,1 @@
-fix(scheduler): prevent terminal work starvation
+fix(cancellation): bind recovery handoff owner
