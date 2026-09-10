@@ -1,3 +1,5 @@
-feat(waterfowl): polish CLARITY feature styles to v2
+feat(waterfowl): polish CLARITY feature styles to v2 (#135)
 
 Raise hierarchy, accent, and list density across home, personal center, print, and device screens while keeping the paper-light Operate language.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
