@@ -1,16 +1,12 @@
-feat(swan): print home tiles, image print, and account units (#130)
+feat(robin): own Promote from the source revision (#129)
 
-* feat(baya): add image select action to the runtime catalog
+* fix(robin): drop unused catalog style-bundle import
 
-Swan print styles need a native image picker distinct from document.select, and preview openPage must be allowlisted from the compiled bundle.
+Features listed Import bundle, which writes catalog styles instead of Release revisions. Operators already import styles from the Dev channel.
 
-* feat(waterfowl): share print selection state for document and image print
+* feat(robin): own Promote from the source revision
 
-Both print features need a named pick result before preview, and IMAGE_PRINT needs importable STAC styles with an in-feature preview page.
-
-* feat(swan): ship native print home tiles and account language units
-
-Home and account stay native chrome so print features can be opened without catalog HOME/ACCOUNT styles, and print CEL can read persisted length units from feature.state.
+Promote belongs on the Dev or Canary head that can move, not on the destination card. Confirm sends the offer command so the UI cannot rebuild a skip to Stable.
 
 ---------
 
