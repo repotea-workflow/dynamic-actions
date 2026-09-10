@@ -1,5 +1,7 @@
-fix(editor): keep raster photographs out of runtime document JSON
+fix(editor): keep raster photographs out of runtime document JSON (#197)
 
 Raster data URLs stall drag and rebuild when inlined into element JSON
 and the committed SVG. Import them through the asset store so the canvas
 only holds a short asset URI, a remote URL, or a small SVG data URL.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
