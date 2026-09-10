@@ -1,1 +1,1 @@
-fix(cancellation): bind legacy closure evidence window
+fix(scheduler): prevent terminal work starvation
