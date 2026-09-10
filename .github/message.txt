@@ -1,1 +1,3 @@
-fix(robin): align release status with page title
+feat(robin): own Promote from the source revision
+
+Promote belongs on the Dev or Canary head that can move, not on the destination card. Confirm sends the offer command so the UI cannot rebuild a skip to Stable.
