@@ -1,3 +1,3 @@
-feat(robin): own Promote from the source revision
+feat(swan): ship native print home tiles and account language units
 
-Promote belongs on the Dev or Canary head that can move, not on the destination card. Confirm sends the offer command so the UI cannot rebuild a skip to Stable.
+Home and account stay native chrome so print features can be opened without catalog HOME/ACCOUNT styles, and print CEL can read persisted length units from feature.state.
