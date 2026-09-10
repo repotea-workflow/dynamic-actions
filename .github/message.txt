@@ -1,13 +1,3 @@
-feat(robin): own Promote from the source revision (#129)
+feat(waterfowl): ship a single CLARITY feature style
 
-* fix(robin): drop unused catalog style-bundle import
-
-Features listed Import bundle, which writes catalog styles instead of Release revisions. Operators already import styles from the Dev channel.
-
-* feat(robin): own Promote from the source revision
-
-Promote belongs on the Dev or Canary head that can move, not on the destination card. Confirm sends the offer command so the UI cannot rebuild a skip to Stable.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Drop STYLE_A/STYLE_B so document print, image print, and device management share one named look instead of ranked variants.
