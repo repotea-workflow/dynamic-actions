@@ -1,1 +1,1 @@
-fix(worker): route Grok through compatible transport
+fix(worker): clean completed provider runtimes
