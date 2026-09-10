@@ -1,6 +1,5 @@
-feat(editor): add optional frame safe-area guide (#196)
+fix(editor): keep raster photographs out of runtime document JSON
 
-Draw a dashed inset rectangle on the active frame when hosts opt in.
-The overlay is presentation-only and stays out of SVG and print rasters.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Raster data URLs stall drag and rebuild when inlined into element JSON
+and the committed SVG. Import them through the asset store so the canvas
+only holds a short asset URI, a remote URL, or a small SVG data URL.
