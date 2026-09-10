@@ -1,1 +1,1 @@
-fix(worker): decode bounded Pi completion streams
+fix(worker): route Grok through compatible transport
