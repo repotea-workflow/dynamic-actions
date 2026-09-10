@@ -1,4 +1,3 @@
-fix(hawk): refresh stale compiled styles before a Dev snapshot
+feat(robin): inspect Release revisions on dedicated pages
 
-Bundle import was rolling back when an unchanged style's compiled
-payload lagged the current compiler, so no styles or Revisions landed.
+View content belongs in a JSON editor route, not a clipped dialog. Summary stays a short parsed dialog, and compare uses a line diff instead of dumping JSON.
