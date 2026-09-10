@@ -1,3 +1,17 @@
-feat(swan): ship native print home tiles and account language units
+feat(swan): print home tiles, image print, and account units (#130)
+
+* feat(baya): add image select action to the runtime catalog
+
+Swan print styles need a native image picker distinct from document.select, and preview openPage must be allowlisted from the compiled bundle.
+
+* feat(waterfowl): share print selection state for document and image print
+
+Both print features need a named pick result before preview, and IMAGE_PRINT needs importable STAC styles with an in-feature preview page.
+
+* feat(swan): ship native print home tiles and account language units
 
 Home and account stay native chrome so print features can be opened without catalog HOME/ACCOUNT styles, and print CEL can read persisted length units from feature.state.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
