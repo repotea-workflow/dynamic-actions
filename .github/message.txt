@@ -1,1 +1,1 @@
-fix(cleanup): consume released material grants safely
+fix(worker): decode bounded Pi completion streams
