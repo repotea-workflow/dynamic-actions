@@ -1,1 +1,1 @@
-fix(cancellation): fence replay by cancellation owner
+fix(cancellation): accept completed frozen fence
