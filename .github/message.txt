@@ -1,3 +1,5 @@
-feat(waterfowl): ship a single CLARITY feature style
+feat(waterfowl): ship a single CLARITY feature style (#131)
 
 Drop STYLE_A/STYLE_B so document print, image print, and device management share one named look instead of ranked variants.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
