@@ -1,5 +1,4 @@
-feat(waterfowl): ship a single CLARITY feature style (#131)
+fix(robin): treat removed catalog import as not found
 
-Drop STYLE_A/STYLE_B so document print, image print, and device management share one named look instead of ranked variants.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+The Features list no longer hosts catalog bundle import, so the page
+title should not keep advertising that route.
