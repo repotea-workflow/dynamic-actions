@@ -1,3 +1,5 @@
-feat(robin): inspect Release revisions on dedicated pages
+feat(robin): inspect Release revisions on dedicated pages (#134)
 
 View content belongs in a JSON editor route, not a clipped dialog. Summary stays a short parsed dialog, and compare uses a line diff instead of dumping JSON.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
