@@ -1,4 +1,12 @@
-fix(robin): treat removed catalog import as not found
+feat(robin): import style bundles on a dedicated Release page (#132)
+
+* checkpoint before checking out feat/robin-promote-source-actions
+
+* fix(robin): treat removed catalog import as not found
 
 The Features list no longer hosts catalog bundle import, so the page
 title should not keep advertising that route.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
