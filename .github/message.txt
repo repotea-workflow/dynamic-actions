@@ -1,3 +1,5 @@
-feat(robin): share one tenant and App distribution picker
+feat(robin): share one tenant and App distribution picker (#138)
 
 Give Releases, banners, features, styles, and device models the same DistributionTargetEditor and copy so operators pick all tenants or selected tenants and Apps in one way.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
