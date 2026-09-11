@@ -1,6 +1,1 @@
-Merge remote-tracking branch 'origin/main' into refactor/codeline-file-splits
-
-# Conflicts:
-#	codeon/crates/codeon-postgres/src/agent_dispatch_store/activity_lifecycle.rs
-#	codeon/crates/codeon-server/src/remote_flow_scheduler.rs
-#	codeon/crates/codeon/src/daemon/execution_runtime/implementation/review_completion.rs
+fix(git): preserve signed commit authorship
