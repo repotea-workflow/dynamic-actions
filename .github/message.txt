@@ -1,6 +1,6 @@
-feat(robin): add searchable feature picker on shell studio (#153)
+feat: add account settings features with configurable entry actions
 
-Use Astryx Selector with hasSearch so operators can filter app features
-when configuring shell surfaces.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Register eight personal-center app features (language, units, tutorials,
+manual, help, rating, feedback, about) with STAC styles and Swan modules.
+Shell targets may optionally set a feature entry action to trigger native
+behavior without opening a page, configured from Robin shell studio.
