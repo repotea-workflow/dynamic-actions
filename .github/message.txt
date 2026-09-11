@@ -1,1 +1,1 @@
-fix(execution): preserve cancelled work across remote collisions
+fix(cancellation): recover superseded worker commands safely
