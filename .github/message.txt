@@ -1,4 +1,6 @@
-fix(robin): remove shell studio section grid whitespace
+fix(robin): remove shell studio section grid whitespace (#149)
 
 Stack section headings above full-width table and add controls so the
 settings layout no longer leaves a large gap between labels and content.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
