@@ -1,5 +1,7 @@
-refactor(robin): align shell studio with settings layout and i18n
+refactor(robin): align shell studio with settings layout and i18n (#148)
 
 Use the Astryx settings pattern with side navigation, table-based item
 editing, and bottom save/reset actions. Complete en/zh-CN/zh-TW coverage
 including localized built-in action labels.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
