@@ -1,3 +1,5 @@
-feat(waterfowl): add developer settings entry to personal center CLARITY
+feat(waterfowl): add developer settings entry to personal center CLARITY (#141)
 
 Register device.openDeveloperSettings in the Baya catalog so Hawk accepts the personal center import, wire the Swan shell action to /developer, and add the CLARITY list tile.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
