@@ -1,3 +1,5 @@
-fix: compile release styles with registered actions
+fix: compile release styles with registered actions (#158)
 
 Release publish recompiled selected styles using only the built-in catalog, so bundle imports with DB-registered actions failed at dev revision publish.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
