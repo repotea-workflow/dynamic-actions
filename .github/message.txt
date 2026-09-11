@@ -1,6 +1,4 @@
-fix(robin): repair AppShellApi type-only imports for Vite build (#145)
+fix(robin): show shell settings under feature management nav
 
-Use type-only ProblemDetails-style imports in the hand-written AppShellApi
-client so production Robin builds succeed under rolldown.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Register shell studio in tenant navigation so App Studio exposes a
+separate 壳设置 entry for APP_BAR and personal-center configuration.
