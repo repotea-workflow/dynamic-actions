@@ -1,6 +1,4 @@
-fix(robin): show shell settings under feature management nav (#146)
+fix(hawk): accept tenant and app slugs on shell management API
 
-Register shell studio in tenant navigation so App Studio exposes a
-separate 壳设置 entry for APP_BAR and personal-center configuration.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Resolve shell configuration paths through scope::resolve_app so Robin
+slug-based App Studio URLs work like other app feature endpoints.
