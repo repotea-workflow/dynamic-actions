@@ -1,4 +1,6 @@
-fix(hawk): surface real STAC errors on style import
+fix(hawk): surface real STAC errors on style import (#142)
 
 Import was guessing error codes and Robin overwrote them with a generic
 fallback, so an unregistered action looked like a vague validation failure.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
