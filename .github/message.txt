@@ -1,5 +1,3 @@
-feat(waterfowl): add PRINT_PREVIEW CLARITY style (#137)
+feat(robin): share one tenant and App distribution picker
 
-Ship an importable print-preview feature style and register the key-only runtime module in Swan.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Give Releases, banners, features, styles, and device models the same DistributionTargetEditor and copy so operators pick all tenants or selected tenants and Apps in one way.
