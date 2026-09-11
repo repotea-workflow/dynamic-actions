@@ -1,1 +1,1 @@
-fix(cancellation): recover superseded worker commands safely
+fix(landing): wait for external review approval
