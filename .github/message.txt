@@ -1,4 +1,6 @@
-fix: restore shell config automated test regressions
+fix: restore shell config automated test regressions (#144)
 
 Align Robin shell studio with Button and Layout APIs, and parse runtime
 manifest shellSurfaces without breaking built_value deserialization.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
