@@ -1,5 +1,4 @@
-feat(waterfowl): add developer settings entry to personal center CLARITY (#141)
+fix(hawk): surface real STAC errors on style import
 
-Register device.openDeveloperSettings in the Baya catalog so Hawk accepts the personal center import, wire the Swan shell action to /developer, and add the CLARITY list tile.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Import was guessing error codes and Robin overwrote them with a generic
+fallback, so an unregistered action looked like a vague validation failure.
