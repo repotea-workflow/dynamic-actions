@@ -1,3 +1,5 @@
-feat(waterfowl): add PRINT_PREVIEW CLARITY style
+feat(waterfowl): add PRINT_PREVIEW CLARITY style (#137)
 
 Ship an importable print-preview feature style and register the key-only runtime module in Swan.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
