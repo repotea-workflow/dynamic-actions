@@ -1,8 +1,5 @@
-fix: restore shell studio save authorization (#151)
+refactor: remove shell builtin actions in favor of app features
 
-Expose app-scoped feature manage permission in session projections,
-check app permissions in Robin shell studio, align manage permission
-tenant scope in Hawk, and recreate Hawk on dev-restart-api so
-MANAGEMENT_ORIGIN picks up .env changes.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Shell configuration now only accepts feature targets so language, units,
+logout, and similar capabilities are modeled as independent app features
+instead of shell-native handlers.
