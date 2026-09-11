@@ -1,6 +1,4 @@
-fix(hawk): surface real STAC errors on style import (#142)
+feat: add APP_BAR and PERSONAL_CENTER shell configuration
 
-Import was guessing error codes and Robin overwrote them with a generic
-fallback, so an unregistered action looked like a vague validation failure.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Let operators configure bottom navigation and personal-center menus in Robin,
+persist items in Hawk, and render them dynamically from runtime manifests in Swan.
