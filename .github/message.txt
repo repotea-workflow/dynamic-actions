@@ -1,4 +1,6 @@
-fix(robin): dedupe shell entries and hide icon column
+fix(robin): dedupe shell entries and hide icon column (#150)
 
 Filter configured features and built-ins out of add selectors, toast on
 duplicate attempts, and drop the icon column from the shell studio table.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
