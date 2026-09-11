@@ -1,5 +1,3 @@
-feat: register dynamic actions for feature style bundle import (#156)
+fix: grant runtime access to action registry tables
 
-Allow bundle preview to surface missing STAC actions and register them via the catalog API before import, with clearer validation errors and codeline-friendly module splits.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Bundle preview failed with 503 because aviary_runtime could not read the new action catalog tables.
