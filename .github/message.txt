@@ -1,3 +1,5 @@
-feat(robin): split Release detail into features and distribution tabs
+feat(robin): split Release detail into features and distribution tabs (#136)
 
 Keep Release metadata on its own tab. Features and styles move to a dedicated list, and distribution uses the same all-tenants / selected tenants and apps editor as other catalog resources.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
