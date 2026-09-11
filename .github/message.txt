@@ -1,5 +1,3 @@
-fix: grant runtime access to action registry tables (#157)
+fix: compile release styles with registered actions
 
-Bundle preview failed with 503 because aviary_runtime could not read the new action catalog tables.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Release publish recompiled selected styles using only the built-in catalog, so bundle imports with DB-registered actions failed at dev revision publish.
