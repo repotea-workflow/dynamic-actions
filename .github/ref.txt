@@ -1,1 +1,1 @@
-shell-studio-searchable-feature-picker
+main

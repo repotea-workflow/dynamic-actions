@@ -1,4 +1,6 @@
-feat(robin): add searchable feature picker on shell studio
+feat(robin): add searchable feature picker on shell studio (#153)
 
 Use Astryx Selector with hasSearch so operators can filter app features
 when configuring shell surfaces.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
