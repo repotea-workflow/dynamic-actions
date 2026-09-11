@@ -1,7 +1,4 @@
-refactor: remove shell builtin actions in favor of app features (#152)
+feat(robin): add searchable feature picker on shell studio
 
-Shell configuration now only accepts feature targets so language, units,
-logout, and similar capabilities are modeled as independent app features
-instead of shell-native handlers.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use Astryx Selector with hasSearch so operators can filter app features
+when configuring shell surfaces.
