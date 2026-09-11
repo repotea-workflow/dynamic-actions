@@ -1,4 +1,6 @@
-fix(robin): repair AppShellApi type-only imports for Vite build
+fix(robin): repair AppShellApi type-only imports for Vite build (#145)
 
 Use type-only ProblemDetails-style imports in the hand-written AppShellApi
 client so production Robin builds succeed under rolldown.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
