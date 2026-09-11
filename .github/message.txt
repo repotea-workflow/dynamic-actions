@@ -1,3 +1,5 @@
-feat(hawk): honor live App Studio style picks on runtime manifests
+feat(hawk): honor live App Studio style picks on runtime manifests (#139)
 
 App Studio style selection should take effect immediately when the current Revision already contains that style, without publishing another Revision.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
