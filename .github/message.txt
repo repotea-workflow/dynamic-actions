@@ -1,1 +1,1 @@
-fix(cleanup): prune empty worktree ancestors
+fix(execution): scope environments by attempt identity
