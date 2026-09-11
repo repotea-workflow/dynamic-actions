@@ -1,8 +1,4 @@
-feat: add account settings features with configurable entry actions (#154)
+fix(waterfowl): unblock app_bar STAC package for feature style bundle build
 
-Register eight personal-center app features (language, units, tutorials,
-manual, help, rating, feedback, about) with STAC styles and Swan modules.
-Shell targets may optionally set a feature entry action to trigger native
-behavior without opening a page, configured from Robin shell studio.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Add missing app_bar_styles package metadata and replace unsupported
+StacSizedBox.shrink so just build-feature-styles completes successfully.
