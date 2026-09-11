@@ -1,4 +1,6 @@
-fix(waterfowl): unblock app_bar STAC package for feature style bundle build
+fix(waterfowl): unblock app_bar STAC package for feature style bundle build (#155)
 
 Add missing app_bar_styles package metadata and replace unsupported
 StacSizedBox.shrink so just build-feature-styles completes successfully.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
