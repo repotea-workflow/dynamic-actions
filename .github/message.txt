@@ -1,3 +1,5 @@
-feat(waterfowl): enable official STAC CEL envelopes and CLARITY conditional UI
+feat(waterfowl): enable official STAC CEL envelopes and CLARITY conditional UI (#140)
 
 Allow CEL visibility envelopes on official STAC widgets, strip hidden nodes after resolve, and add aviary_stac.withCel so CLARITY print styles can branch on feature.state. Split stac_adapter into focused modules for codeline compliance and polish Swan developer release channel switching and navigation.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
