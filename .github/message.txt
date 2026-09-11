@@ -1,6 +1,4 @@
-fix: restore shell config automated test regressions (#144)
+fix(robin): repair AppShellApi type-only imports for Vite build
 
-Align Robin shell studio with Button and Layout APIs, and parse runtime
-manifest shellSurfaces without breaking built_value deserialization.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use type-only ProblemDetails-style imports in the hand-written AppShellApi
+client so production Robin builds succeed under rolldown.
