@@ -1,6 +1,5 @@
-fix(hawk): accept tenant and app slugs on shell management API (#147)
+refactor(robin): align shell studio with settings layout and i18n
 
-Resolve shell configuration paths through scope::resolve_app so Robin
-slug-based App Studio URLs work like other app feature endpoints.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use the Astryx settings pattern with side navigation, table-based item
+editing, and bottom save/reset actions. Complete en/zh-CN/zh-TW coverage
+including localized built-in action labels.
