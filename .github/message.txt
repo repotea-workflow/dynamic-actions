@@ -1,4 +1,6 @@
-fix(robin): show shell settings under feature management nav
+fix(robin): show shell settings under feature management nav (#146)
 
 Register shell studio in tenant navigation so App Studio exposes a
 separate 壳设置 entry for APP_BAR and personal-center configuration.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
