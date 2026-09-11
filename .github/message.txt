@@ -1,3 +1,5 @@
-fix: grant runtime access to action registry tables
+fix: grant runtime access to action registry tables (#157)
 
 Bundle preview failed with 503 because aviary_runtime could not read the new action catalog tables.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
