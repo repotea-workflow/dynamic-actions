@@ -1,7 +1,4 @@
-refactor(robin): align shell studio with settings layout and i18n (#148)
+fix(robin): remove shell studio section grid whitespace
 
-Use the Astryx settings pattern with side navigation, table-based item
-editing, and bottom save/reset actions. Complete en/zh-CN/zh-TW coverage
-including localized built-in action labels.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Stack section headings above full-width table and add controls so the
+settings layout no longer leaves a large gap between labels and content.
