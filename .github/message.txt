@@ -1,4 +1,5 @@
-feat: add APP_BAR and PERSONAL_CENTER shell configuration
+fix: address shell config review findings before merge
 
-Let operators configure bottom navigation and personal-center menus in Robin,
-persist items in Hawk, and render them dynamically from runtime manifests in Swan.
+Include styled features in runtime shell manifests without requiring App
+Studio style selections, keep account STAC flows on /account, and restore
+cached shell surfaces after offline bootstrap.
