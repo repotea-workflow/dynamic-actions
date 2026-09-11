@@ -1,5 +1,3 @@
-feat(robin): split Release detail into features and distribution tabs (#136)
+feat(waterfowl): add PRINT_PREVIEW CLARITY style
 
-Keep Release metadata on its own tab. Features and styles move to a dedicated list, and distribution uses the same all-tenants / selected tenants and apps editor as other catalog resources.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Ship an importable print-preview feature style and register the key-only runtime module in Swan.
