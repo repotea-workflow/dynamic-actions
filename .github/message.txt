@@ -1,6 +1,4 @@
-fix(robin): remove shell studio section grid whitespace (#149)
+fix(robin): dedupe shell entries and hide icon column
 
-Stack section headings above full-width table and add controls so the
-settings layout no longer leaves a large gap between labels and content.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Filter configured features and built-ins out of add selectors, toast on
+duplicate attempts, and drop the icon column from the shell studio table.
