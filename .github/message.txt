@@ -1,5 +1,3 @@
-feat(waterfowl): enable official STAC CEL envelopes and CLARITY conditional UI (#140)
+feat(waterfowl): add developer settings entry to personal center CLARITY
 
-Allow CEL visibility envelopes on official STAC widgets, strip hidden nodes after resolve, and add aviary_stac.withCel so CLARITY print styles can branch on feature.state. Split stac_adapter into focused modules for codeline compliance and polish Swan developer release channel switching and navigation.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Register device.openDeveloperSettings in the Baya catalog so Hawk accepts the personal center import, wire the Swan shell action to /developer, and add the CLARITY list tile.
