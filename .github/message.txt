@@ -1,1 +1,7 @@
-fix: harden runtime cleanup and recovery
+refactor(codeon-postgres): split dispatch and execution store modules
+
+Extract activity lifecycle, worker operation command, execution binding,
+and read store operations into named submodules (prepare_activity_lease,
+load_capability_manifest, review_convergence_statistics).
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
