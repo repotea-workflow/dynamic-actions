@@ -1,3 +1,11 @@
-fix: resolve visibility and module wiring for codeline splits
+refactor: split agent and notification files over 800 lines by responsibility
+
+Complete the codeline file-size splits across agent and notification crates:
+- cursor session, project_mcp_config, process_supervision tests
+- pi session, grok protocol/runtime, codex event_routing/thread client
+- core tests, codex direct_runtime tests
+- notification lib into focused sibling modules
+
+Entry mod.rs/lib.rs files are wiring-only. No business logic changes.
 
 Co-authored-by: fewensa <fewensa@users.noreply.github.com>
