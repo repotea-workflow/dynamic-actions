@@ -1,8 +1,1 @@
-refactor: split oversized files with function-based module names
-
-Replace PR #297 mechanical _2/_3 splits across 19 scoped source files
-in codeoff and codeon. Split boundaries follow business responsibility;
-entry modules remain wiring-only. No behavior changes.
-
-Renames use descriptive module names (e.g. prepare_call, repository_classification,
-constructor) instead of type-name dumps or test-title filenames.
+fix(worker): allow bounded multi-megabyte agent output
