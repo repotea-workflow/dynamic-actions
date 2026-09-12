@@ -1,1 +1,5 @@
-fix(execution): make remote revision publication durable
+Make remote revision publication durable (#308)
+
+* fix(worker): trust durable Codex completion callbacks
+
+* fix(execution): make remote revision publication durable
