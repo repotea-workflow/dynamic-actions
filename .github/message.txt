@@ -6,5 +6,3 @@ entry modules remain wiring-only. No behavior changes.
 
 Renames use descriptive module names (e.g. prepare_call, repository_classification,
 constructor) instead of type-name dumps or test-title filenames.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
