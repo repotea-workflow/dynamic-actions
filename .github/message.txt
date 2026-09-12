@@ -1,12 +1,1 @@
-refactor(codeon-postgres): split remaining oversized src modules
-
-Split eight source files over 800 lines into function-based submodules
-matching existing crate patterns (worker_assignment_store,
-execution_attention_store). Entry files are wiring-only (mod + pub use).
-
-Fix borrowed-transaction sqlx executor calls (&mut **tx) and restore
-process_startup_reconciliation_row from the original loop body.
-
-cargo check -p codeon-postgres passes.
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+refactor(codeon-postgres): rename modules and split remaining oversized files
