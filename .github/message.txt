@@ -1,11 +1,1 @@
-refactor(codeoff): split remaining source files over 800 lines by responsibility
-
-Split twelve oversized codeoff modules into focused submodules with
-wiring-only entry files (mod.rs, lib.rs, or #[path=...] for integration
-tests). No business logic changes; visibility adjusted only where module
-nesting required it for compile.
-
-All split files are now under 800 lines. Verified with:
-cargo check/test -p codeoff-runtime -p codeoff-mcp -p codeoff-cli --lib
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(cancellation): dispatch completion-first running attempts
