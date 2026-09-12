@@ -1,5 +1,6 @@
-fix: enforce App Studio style selection in runtime manifest (#160)
+fix(swan): keep personal center stable when returning from feature pages
 
-Runtime manifest now requires tenant+app style selections instead of falling back to assignments or all_tenants defaults. Swan shows developer-facing config errors for unconfigured features, and personal center CLARITY no longer hardcodes shell menu entries.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use a dedicated shell tab with cached runtimeShellStyleProvider instead of
+FeaturePage FutureBuilder reloads, pad single-tab app bars for NavigationBar,
+and defer feature page activation to postFrameCallback. Split app_router into
+focused modules to stay within codeline limits.
