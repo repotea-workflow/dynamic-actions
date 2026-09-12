@@ -1,1 +1,3 @@
-refactor(codeon-postgres): rename modules and split remaining oversized files
+fix: resolve visibility and module wiring for codeline splits
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
