@@ -1,1 +1,5 @@
-fix(worker): allow bounded multi-megabyte agent output
+refactor(codeon): lightweight integration tests under codeline limit
+
+Split common test harness and agent runtime config tests by responsibility.
+Extract shared MCP acceptance fixtures and golden catalog contract data.
+Refactor mcp_issue_core into scenario modules with a shared harness.
