@@ -68,6 +68,8 @@ jobs:
     name: Deploy Codeoff
     needs:
       - build-image
+      - deploy-codeon-server
+    if: ${{ always() && needs.build-image.result == 'success' }}
     runs-on: ubuntu-latest
     concurrency:
       group: codeoo-gitops-fes-production
