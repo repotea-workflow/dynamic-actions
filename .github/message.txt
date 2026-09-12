@@ -1,3 +1,5 @@
-fix: enforce App Studio style selection in runtime manifest
+fix: enforce App Studio style selection in runtime manifest (#160)
 
 Runtime manifest now requires tenant+app style selections instead of falling back to assignments or all_tenants defaults. Swan shows developer-facing config errors for unconfigured features, and personal center CLARITY no longer hardcodes shell menu entries.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
