@@ -1,3 +1,1 @@
-refactor: split oversized files with function-based module names (#306)
-
-Recreate the complete Codeon and Codeoff codeline split from PR #305 as a signed commit. Preserve the original PR tree while keeping module entrypoints focused and wiring-only.
+fix(smoke): follow language requirements wire contract
