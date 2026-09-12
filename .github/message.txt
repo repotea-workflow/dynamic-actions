@@ -1,5 +1,3 @@
-fix: compile release styles with registered actions (#158)
+feat: enrich CLARITY feature style screens with real UI content
 
-Release publish recompiled selected styles using only the built-in catalog, so bundle imports with DB-registered actions failed at dev revision publish.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Replace placeholder title-and-body screens with structured Operate layouts using shared clarity helpers, icons, cards, and localized copy across account and settings features.
