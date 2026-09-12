@@ -1,11 +1,3 @@
-fix: recover orphaned runtimes and seal worker signing (#304)
+refactor: split oversized files with function-based module names
 
-* fix(worker): seal git commit identity for signed operations
-
-* fix(cancellation): resume completion-first runtime closure
-
-* fix(mcp): bind active callbacks to runtime authority
-
-* fix(worker): allow bounded multi-megabyte agent output
-
-* fix: recover orphaned runtimes and seal worker signing
+Recreate the complete Codeon and Codeoff codeline split from PR #305 as a signed commit. Preserve the original PR tree while keeping module entrypoints focused and wiring-only.
