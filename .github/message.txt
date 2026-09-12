@@ -1,6 +1,7 @@
-fix(swan): keep personal center stable when returning from feature pages
+feat: bind shell menus to STAC data sources and register selectShellTab
 
-Use a dedicated shell tab with cached runtimeShellStyleProvider instead of
-FeaturePage FutureBuilder reloads, pad single-tab app bars for NavigationBar,
-and defer feature page activation to postFrameCallback. Split app_router into
-focused modules to stay within codeline limits.
+Personal center and app bar styles now render Shell Studio items through
+aviary.shell.menuList instead of hardcoded Flutter menus. Swan reads platform
+shell data sources from the runtime manifest, and selectShellTab is added to
+the BAYA catalog so APP_BAR CLARITY imports validate. Developer settings are
+reachable via a 10-tap unlock on the personal center tab within 5 seconds.
