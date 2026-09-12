@@ -1,5 +1,3 @@
-feat: enrich CLARITY feature style screens with real UI content (#159)
+fix: enforce App Studio style selection in runtime manifest
 
-Replace placeholder title-and-body screens with structured Operate layouts using shared clarity helpers, icons, cards, and localized copy across account and settings features.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Runtime manifest now requires tenant+app style selections instead of falling back to assignments or all_tenants defaults. Swan shows developer-facing config errors for unconfigured features, and personal center CLARITY no longer hardcodes shell menu entries.
