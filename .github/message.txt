@@ -1,1 +1,9 @@
-fix(smoke): follow language requirements wire contract
+fix: restore runnable baseline after broken codeline split (#307)
+
+* Revert "refactor: split oversized files with function-based module names (#306)"
+
+This reverts commit 5c4736fb55ca02481cd508b15b3b177295742ee6.
+
+* fix(codeon): refresh generated OpenAPI source identity
+
+* fix(smoke): follow language requirements wire contract
