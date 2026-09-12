@@ -1,1 +1,8 @@
-fix(cancellation): dispatch completion-first running attempts
+refactor: split source files over 800 lines under codeoff/ and crates/
+
+Split 25 oversized Rust source files into focused submodules by business
+responsibility. Entry mod.rs/lib.rs files are wiring-only. Inline tests
+extracted to sibling test modules. No business logic changes.
+
+Verified: zero remaining .rs files over 800 lines in scope; cargo check
+and cargo test --lib pass for all affected crates.
