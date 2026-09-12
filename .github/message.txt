@@ -1,1 +1,11 @@
-Merge origin/main into agt/git-signing-initialization
+fix: recover orphaned runtimes and seal worker signing (#304)
+
+* fix(worker): seal git commit identity for signed operations
+
+* fix(cancellation): resume completion-first runtime closure
+
+* fix(mcp): bind active callbacks to runtime authority
+
+* fix(worker): allow bounded multi-megabyte agent output
+
+* fix: recover orphaned runtimes and seal worker signing
