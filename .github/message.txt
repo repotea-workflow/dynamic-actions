@@ -1,9 +1,5 @@
-feat: bind shell menus to STAC data sources and register selectShellTab (#161)
+fix(swan): make personal center developer unlock tappable on header
 
-Personal center and app bar styles now render Shell Studio items through
-aviary.shell.menuList instead of hardcoded Flutter menus. Swan reads platform
-shell data sources from the runtime manifest, and selectShellTab is added to
-the BAYA catalog so APP_BAR CLARITY imports validate. Developer settings are
-reachable via a 10-tap unlock on the personal center tab within 5 seconds.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Count taps on the personal center title region within one 8-second window
+instead of requiring rapid full-screen pointer events that STAC menus could
+swallow.
