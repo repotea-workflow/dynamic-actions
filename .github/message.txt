@@ -1,11 +1,1 @@
-Split nine oversized Rust modules into wiring-only parents
-
-Pure-move refactors split nine files over the 800-line limit into
-function-named submodules with wiring-only parents. AgentOperationRunner
-methods use statement macros; review completion persistence is extracted
-to finalize_review_completion_persistence.
-
-cargo check: codeon OK, codeon-tracker agent_selection OK.
-codeon-server blocked by console build.rs (missing node TS deps).
-
-Co-authored-by: fewensa <fewensa@users.noreply.github.com>
+fix(cancellation): scope completion request predicate
