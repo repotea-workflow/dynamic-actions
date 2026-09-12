@@ -1,3 +1,5 @@
-feat: enrich CLARITY feature style screens with real UI content
+feat: enrich CLARITY feature style screens with real UI content (#159)
 
 Replace placeholder title-and-body screens with structured Operate layouts using shared clarity helpers, icons, cards, and localized copy across account and settings features.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
