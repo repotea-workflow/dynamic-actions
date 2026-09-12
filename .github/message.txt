@@ -1,1 +1,6 @@
-fix: harden runtime cleanup and recovery
+Split agent_runners and grok operation_runner into submodules under 800 lines
+
+Wire-only parent mod.rs / operation_runner.rs files delegate to function-named
+child modules. No logic changes. cargo check -p codeon passes.
+
+Co-authored-by: fewensa <fewensa@users.noreply.github.com>
