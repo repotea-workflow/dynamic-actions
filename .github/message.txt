@@ -1,3 +1,3 @@
-fix(swan): make personal center manifest-driven and hide empty CLARITY sections.
+fix(stac): allow conditional official sections and remove invalid material widget.
 
-Remove hardcoded settings menu from RuntimeAccountPage, show FeatureFallback when CLARITY fails to load, and wrap section titles with conditional dataRepeat blocks in CLARITY v10.
+Personal center CLARITY v11 sections bind dataSource+condition on official columns; strip dataSource before STAC parse and drop unsupported material wrapper that blocked rendering.
