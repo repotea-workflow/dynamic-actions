@@ -1,3 +1,5 @@
-Enforce platform vs feature action boundary in BAYA and personal center.
+Enforce platform vs feature action boundary in BAYA and personal center. (#166)
 
 Remove personal_center.openMenuItem and device.openDeveloperSettings from the platform catalog; CLARITY v8 uses aviary.navigation.selectShellTab/openFeature and dynamic feature entry actions.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
