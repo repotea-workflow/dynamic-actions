@@ -1,3 +1,3 @@
-Add CEL filter examples to personal center CLARITY v9 and bump FVM to 3.47.4.
+chore: simplify dev restart and upgrade just recipes
 
-Replace filterGroup with per-item CEL filters and demonstrate withCel block visibility on dataRepeat, plus celFilter helper for shared CEL envelopes.
+Replace split Hawk/Robin restart and rebuild commands with dev-restart and dev-upgrade so local dev workflows stay consistent.
