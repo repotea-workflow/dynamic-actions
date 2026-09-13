@@ -1,1 +1,12 @@
-fix(migrations): normalize recheck migration EOF
+Merge origin/main into agt/fix-remote-revision-input
+
+# Conflicts:
+#	codeon/crates/codeon-postgres/src/worker_assignment_store.rs
+#	codeon/crates/codeon-postgres/src/worker_capability_store.rs
+#	codeon/crates/codeon-postgres/tests/execution_attempt_store/worker_operation_authority.rs
+#	codeon/crates/codeon-server/src/remote_flow_scheduler.rs
+#	codeon/crates/codeon-server/src/remote_operation_completion.rs
+#	codeon/crates/codeon-server/src/remote_operation_completion/tests.rs
+#	codeon/crates/codeon-worker-protocol/src/capabilities.rs
+#	codeon/crates/codeon-worker/src/operation_runner.rs
+#	codeon/crates/codeon-worker/src/runtime.rs
