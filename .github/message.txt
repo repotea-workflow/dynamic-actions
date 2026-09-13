@@ -1,3 +1,5 @@
-fix(stac): allow conditional official sections and remove invalid material widget.
+feat(shell): bind APP_BAR and personal center menus to manifest data sources
 
-Personal center CLARITY v11 sections bind dataSource+condition on official columns; strip dataSource before STAC parse and drop unsupported material wrapper that blocked rendering.
+Drive bottom navigation and personal center sections through shell dataRepeat
+bindings, fix post-expansion CEL conditions for tab selection, and align menu
+grouping with Robin shell entry actions versus feature pages.
