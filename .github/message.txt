@@ -1,23 +1,3 @@
-fix(preview): render shell dataRepeat styles and remove dead Hawk compile path (#168)
+refactor(shell): drop filterGroup and move CLARITY grouping to style CEL
 
-* fix(preview): render shell dataRepeat styles in Robin dashboard
-
-Extend Tern with preview-only shell fixtures and dataSourceLoader, send
-set-snapshot dataSources from Robin, and allow template action types during
-STAC validation so personal center and APP_BAR styles preview without
-breaking Swan production rendering.
-
-* chore(hawk): remove unused STAC catalog node validator
-
-Delete validate_stac_catalog_node and its private helpers after STAC
-envelopes switched to provider-native validate_stac_node validation.
-
-* chore(hawk): remove dead Baya compile path and orphaned helpers
-
-Production feature-style compilation is STAC-only; drop the unused
-compile_provider/Baya envelope pipeline, its tests, and test-only
-validation helpers that no longer have callers.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Shell data sources stay neutral; personal center sections filter via ClarityShellItemFilters instead of item.group or filterGroup.
