@@ -1,3 +1,5 @@
-chore(hawk): drop static app data source catalog tables
+chore(hawk): drop static app data source catalog tables (#171)
 
 Remove avr_app_data_sources and avr_data_sources with their management permissions and stale generated management-api client artifacts so the abandoned catalog cannot be mistaken for active infrastructure.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
