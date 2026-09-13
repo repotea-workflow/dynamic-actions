@@ -1,8 +1,3 @@
-refactor(data-sources): add registry, remote invoke, and remove static catalog (#169)
+feat(data-sources): add aviary.app.* registry path for app-local handlers
 
-Introduce aviary_data_sources as the single id/prefix source of truth, rename
-STAC helpers to withDataSource/dataRepeat, unify Swan resolution, replace the
-deprecated Robin static data source API with POST /runtime/data-sources/invoke
-(v0 echo), and remove management catalog wiring from Robin Studio.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Introduce the fourth reserved data source namespace so Swan can register OpenAPI-backed handlers at startup while bare ids fail closed across runtime, preview, and conformance fixtures.
