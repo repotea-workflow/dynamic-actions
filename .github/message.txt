@@ -1,3 +1,3 @@
-fix(shell): make app bar tabs instant and type shell STAC styles
+refactor(styles): split CLARITY shared package from feature shell UI
 
-Use a manifest-driven Flutter app bar for immediate tab feedback, skip runtime revision bumps on shell tab changes, and centralize shell authoring in typed aviary_stac helpers.
+Move CLARITY palette and page helpers into clarity_styles, keep generic shell authoring in aviary_stac, and colocate app bar and personal center shell widgets in their feature packages.
