@@ -1,7 +1,5 @@
-fix(swan): make personal center developer unlock tappable on header (#162)
+refactor: trim personal center CLARITY and colocate shell menuList contract
 
-Count taps on the personal center title region within one 8-second window
-instead of requiring rapid full-screen pointer events that STAC menus could
-swallow.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Drop unused login, language, and units STAC pages so personal center is a
+single main screen bound to Shell Studio. Move shell data source IDs and the
+menuList STAC payload helper into aviary_core next to the BAYA catalog.
