@@ -1,3 +1,1 @@
-fix(codeon): validate revision commits from reviewed head (#310)
-
-Use the sealed preceding Review/PR HEAD as the Revision repository baseline and retain fail-closed signed first-parent validation.
+fix(codeon): close terminal runnable leases
