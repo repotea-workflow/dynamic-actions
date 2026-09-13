@@ -1,3 +1,13 @@
-Fix style sync error mapping and refresh coverage after sync.
+Complete language pack follow-up: style sync, coverage, release FTL deprecation (#176)
+
+* Add style fallback sync and complete language pack follow-up.
+
+Wire Hawk style import to app language pack drafts, expose coverage/sync endpoints for Robin, stop activating release-embedded FTL in Swan, and resolve dotted message IDs at runtime lookup.
+
+* Fix style sync error mapping and refresh coverage after sync.
 
 Return a dedicated conflict issue when feature styles disagree on fallback text, and invalidate the Robin coverage query after a successful sync.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
