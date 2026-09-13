@@ -1,5 +1,5 @@
-refactor(swan): use OpenAPI models in app data source payloads (#173)
+Add runtime language pack delivery decoupled from Release.
 
-Keep payload classes only for STAC envelope conversion and serialize RuntimeProfile, RuntimeBanner, and RuntimeManifestFeature via standardSerializers instead of duplicating field models.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Compile STAC localizations as {messageId, fallback}, expose i18n manifest
+and ZIP bundle/locale endpoints on Hawk, and teach Swan to cache and refresh
+remote Fluent packs alongside manifest updates.
