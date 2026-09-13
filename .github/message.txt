@@ -1,5 +1,3 @@
-feat(swan): register typed app data sources by feature domain (#172)
+refactor(swan): use OpenAPI models in app data source payloads
 
-Organize OpenAPI-backed handlers under registrations/ with concrete payload types, and add canonical ids for user profile, features, and home hero banners.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Keep payload classes only for STAC envelope conversion and serialize RuntimeProfile, RuntimeBanner, and RuntimeManifestFeature via standardSerializers instead of duplicating field models.
