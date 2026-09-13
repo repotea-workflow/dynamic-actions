@@ -1,3 +1,3 @@
-refactor(shell): drop filterGroup and move CLARITY grouping to style CEL
+refactor(features): reorganize packages into modules, styles, and families
 
-Shell data sources stay neutral; personal center sections filter via ClarityShellItemFilters instead of item.group or filterGroup.
+Move runtime features under features/modules, STAC authoring under features/styles, and CLARITY under features/families so style families are not mistaken for feature keys.
