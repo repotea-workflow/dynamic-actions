@@ -1,3 +1,13 @@
-Preserve print-preview and document-print preview STAC layout.
+Split STAC style authoring into style_kit and clarity_styles (#175)
+
+* Split STAC style authoring into style_kit and clarity_styles layers.
+
+Extract family-neutral shells into style_kit, move CLARITY shell compositions out of page packages, and migrate remaining features to clarity_styles so bundle output stays equivalent.
+
+* Preserve print-preview and document-print preview STAC layout.
 
 Keep the original list-tile typography and summary-card padding so the rebuilt feature-style bundle stays equivalent to main.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
