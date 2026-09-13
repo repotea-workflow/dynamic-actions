@@ -1,3 +1,5 @@
-Replace shell menuList with dataRepeat and feature-owned menu actions.
+Replace shell menuList with dataRepeat and feature-owned menu actions. (#165)
 
 Move personal center navigation into personal_center.openMenuItem, add aviary.basic.dataRepeat with CEL/filterGroup expansion, and migrate CLARITY v7 to style-driven menu composition.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
