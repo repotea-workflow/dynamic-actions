@@ -1,3 +1,5 @@
-feat(data-sources): add aviary.app.* registry path for app-local handlers
+feat(data-sources): add aviary.app.* registry path for app-local handlers (#170)
 
 Introduce the fourth reserved data source namespace so Swan can register OpenAPI-backed handlers at startup while bare ids fail closed across runtime, preview, and conformance fixtures.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
