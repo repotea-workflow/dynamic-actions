@@ -1,3 +1,5 @@
-refactor(swan): use OpenAPI models in app data source payloads
+refactor(swan): use OpenAPI models in app data source payloads (#173)
 
 Keep payload classes only for STAC envelope conversion and serialize RuntimeProfile, RuntimeBanner, and RuntimeManifestFeature via standardSerializers instead of duplicating field models.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
