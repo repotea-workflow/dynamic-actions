@@ -1,3 +1,3 @@
-fix(hawk): skip interpolated featureKey when collecting style dependencies.
+fix(swan): make personal center manifest-driven and hide empty CLARITY sections.
 
-dataRepeat templates bind openFeature at runtime via ${item.target.featureKey}; compile-time feature reference checks must ignore those placeholders.
+Remove hardcoded settings menu from RuntimeAccountPage, show FeatureFallback when CLARITY fails to load, and wrap section titles with conditional dataRepeat blocks in CLARITY v10.
