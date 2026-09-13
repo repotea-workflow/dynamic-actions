@@ -1,3 +1,5 @@
-feat(swan): register typed app data sources by feature domain
+feat(swan): register typed app data sources by feature domain (#172)
 
 Organize OpenAPI-backed handlers under registrations/ with concrete payload types, and add canonical ids for user profile, features, and home hero banners.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
