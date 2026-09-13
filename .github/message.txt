@@ -1,3 +1,6 @@
-refactor(features): reorganize packages into modules, styles, and families
+refactor(data-sources): add registry, remote invoke, and remove static catalog
 
-Move runtime features under features/modules, STAC authoring under features/styles, and CLARITY under features/families so style families are not mistaken for feature keys.
+Introduce aviary_data_sources as the single id/prefix source of truth, rename
+STAC helpers to withDataSource/dataRepeat, unify Swan resolution, replace the
+deprecated Robin static data source API with POST /runtime/data-sources/invoke
+(v0 echo), and remove management catalog wiring from Robin Studio.
