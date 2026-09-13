@@ -1,5 +1,7 @@
-refactor: trim personal center CLARITY and colocate shell menuList contract
+refactor: trim personal center CLARITY and colocate shell menuList contract (#163)
 
 Drop unused login, language, and units STAC pages so personal center is a
 single main screen bound to Shell Studio. Move shell data source IDs and the
 menuList STAC payload helper into aviary_core next to the BAYA catalog.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
