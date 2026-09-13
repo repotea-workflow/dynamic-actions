@@ -1,5 +1,7 @@
-Add runtime language pack delivery decoupled from Release.
+Add runtime language pack delivery decoupled from Release. (#174)
 
 Compile STAC localizations as {messageId, fallback}, expose i18n manifest
 and ZIP bundle/locale endpoints on Hawk, and teach Swan to cache and refresh
 remote Fluent packs alongside manifest updates.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
