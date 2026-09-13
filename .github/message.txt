@@ -1,5 +1,7 @@
-fix(swan): make personal center developer unlock tappable on header
+fix(swan): make personal center developer unlock tappable on header (#162)
 
 Count taps on the personal center title region within one 8-second window
 instead of requiring rapid full-screen pointer events that STAC menus could
 swallow.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
