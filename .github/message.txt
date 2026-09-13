@@ -1,3 +1,1 @@
-fix(codeon): close terminal runnable leases (#311)
-
-Release terminal runnable capacity safely across cancellation closure and split Server restart.
+fix(codeon): complete terminal runtime cleanup
