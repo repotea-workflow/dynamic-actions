@@ -1,1 +1,1 @@
-fix(codeon): adopt legacy cancellation closure receipts (#313)
+fix(codeon): recover stale cancellation attention
