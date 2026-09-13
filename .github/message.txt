@@ -1,6 +1,3 @@
-refactor: type shell menuList STAC authoring as ShellMenuListStacNode (#164)
+Replace shell menuList with dataRepeat and feature-owned menu actions.
 
-Replace the hand-written Map helper with explicit node and data-source types
-so style authors see the component contract before JSON serialization.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Move personal center navigation into personal_center.openMenuItem, add aviary.basic.dataRepeat with CEL/filterGroup expansion, and migrate CLARITY v7 to style-driven menu composition.
