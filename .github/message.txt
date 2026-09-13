@@ -1,4 +1,6 @@
-refactor: type shell menuList STAC authoring as ShellMenuListStacNode
+refactor: type shell menuList STAC authoring as ShellMenuListStacNode (#164)
 
 Replace the hand-written Map helper with explicit node and data-source types
 so style authors see the component contract before JSON serialization.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
