@@ -1,3 +1,5 @@
-refactor(styles): split CLARITY shared package from feature shell UI
+refactor(styles): split CLARITY shared package from feature shell UI (#167)
 
 Move CLARITY palette and page helpers into clarity_styles, keep generic shell authoring in aviary_stac, and colocate app bar and personal center shell widgets in their feature packages.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
