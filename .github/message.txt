@@ -1,5 +1,3 @@
-chore(hawk): drop static app data source catalog tables (#171)
+feat(swan): register typed app data sources by feature domain
 
-Remove avr_app_data_sources and avr_data_sources with their management permissions and stale generated management-api client artifacts so the abandoned catalog cannot be mistaken for active infrastructure.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Organize OpenAPI-backed handlers under registrations/ with concrete payload types, and add canonical ids for user profile, features, and home hero banners.
