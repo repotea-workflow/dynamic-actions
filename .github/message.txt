@@ -1,6 +1,1 @@
-Make remote execution recovery durable (#309)
-
-- make runtime closure and SCM reconciliation restart-safe
-- add durable wakeup claim, lease, retry, and delivery migrations
-- make merge observations content-addressed and idempotent
-- preserve cleanup, signing, and completion authority across recovery
+fix(codeon): validate revision commits from reviewed head
