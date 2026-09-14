@@ -1,21 +1,4 @@
-refactor(styles): group CLARITY styles by family and harden Swan shell runtime (#177)
+refactor(styles): rename clarity package to clarity_stac and flatten screens
 
-* refactor(styles): group CLARITY styles by family and harden Swan shell runtime
-
-Move feature styles from per-feature packages to clarity/{feature} with a
-single clarity_feature_styles workspace package, and teach the bundle
-builder and STAC CLI to compile per-feature artifacts under that package.
-
-Prefer bundled shell host styles, gate bottom navigation until shell
-surfaces hydrate, and allow releaseTrust TTL refresh when signing keys are
-unchanged.
-
-* fix(swan): keep cached trust and rehydrate shell on manifest cache hits
-
-Fall back to persisted releaseTrust when inline manifest trust fails instead
-of discarding the last verified bundle, and mark shell surfaces hydrated when
-serving an in-memory manifest for the active scope.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use clarity_stac as the STAC template package name and colocate main.dart
+and preview.dart directly under each feature directory instead of stac/.
