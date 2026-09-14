@@ -1,1 +1,1 @@
-fix(codeon): recover stale cancellation attention (#314)
+fix(codeon): complete terminal cleanup recovery
