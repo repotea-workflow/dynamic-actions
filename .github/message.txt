@@ -1,1 +1,1 @@
-fix(omsk): speed specified declaration export (#318)
+fix(omsk): grant batch order inspection access
