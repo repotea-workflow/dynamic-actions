@@ -1,1 +1,1 @@
-fix(cancellation): accept terminal inspection during cancellation
+fix: close terminal cleanup and cancellation races
