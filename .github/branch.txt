@@ -1,1 +1,1 @@
-agt/declaration-inspect-batch-query
+main
