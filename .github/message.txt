@@ -1,1 +1,1 @@
-fix(codeon): complete completion-first recovery (#324)
+fix(codeon): retire terminal cancellation attentions
