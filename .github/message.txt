@@ -1,6 +1,6 @@
-refactor(styles): rename clarity package to clarity_stac and flatten screens (#178)
+refactor(i18n): standardize Fluent message IDs on hyphens only
 
-Use clarity_stac as the STAC template package name and colocate main.dart
-and preview.dart directly under each feature directory instead of stac/.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Replace dotted localization keys across clarity_stac manifests, Dart
+authoring, bundled shell assets, and tests with hyphenated IDs such as
+home-title. Reject dots in aviaryLocalized and composition schemas, and
+remove runtime dot-to-hyphen fallback in Swan and basic components.
