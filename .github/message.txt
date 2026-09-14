@@ -1,1 +1,7 @@
-fix(omsk): preserve referenced access node
+fix(omsk): grant batch order inspection access (#319)
+
+* fix(omsk): grant batch order inspection access
+
+* fix(omsk): scope batch access rollback
+
+* fix(omsk): preserve referenced access node
