@@ -1,1 +1,1 @@
-fix(omsk): speed specified declaration export
+fix(omsk): speed specified declaration export (#318)
