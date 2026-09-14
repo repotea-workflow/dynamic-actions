@@ -1,1 +1,1 @@
-fix(codeon): resume drifted terminal cleanup (#323)
+fix(codeon): complete completion-first recovery
