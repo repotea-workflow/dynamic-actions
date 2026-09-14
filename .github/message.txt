@@ -1,6 +1,8 @@
-refactor(i18n): standardize Fluent message IDs on hyphens only
+refactor(i18n): standardize Fluent message IDs on hyphens only (#179)
 
 Replace dotted localization keys across clarity_stac manifests, Dart
 authoring, bundled shell assets, and tests with hyphenated IDs such as
 home-title. Reject dots in aviaryLocalized and composition schemas, and
 remove runtime dot-to-hyphen fallback in Swan and basic components.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
