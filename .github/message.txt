@@ -1,8 +1,7 @@
-refactor(i18n): standardize Fluent message IDs on hyphens only (#179)
+fix(swan): render shell chrome from Release STAC only
 
-Replace dotted localization keys across clarity_stac manifests, Dart
-authoring, bundled shell assets, and tests with hyphenated IDs such as
-home-title. Reject dots in aviaryLocalized and composition schemas, and
-remove runtime dot-to-hyphen fallback in Swan and basic components.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Remove the Flutter-drawn APP_BAR fallback and unused shell icon widgets so
+bottom navigation always comes from the live Release style. Prefer Manifest
+styles over bundled copies, register selectShellTab without duplicate
+actions, and accept compiled dataRepeat filterGroup plus item.group so
+personal-center sections stay visible.
