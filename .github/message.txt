@@ -1,1 +1,1 @@
-fix(codeon): recover terminal cleanup commands (#321)
+fix(codeon): allow profile-scoped maintenance credentials
