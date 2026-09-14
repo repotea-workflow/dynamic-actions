@@ -1,6 +1,1 @@
-fix(runtime): restore releaseTrust flow and backend shell surfaces.
-
-Issue fresh Hawk releaseTrust on each manifest response, resolve shell
-surfaces from effective feature keys when manifest features are empty,
-and stop Swan from injecting personal-center items or bypassing trust for
-signed releases while keeping manifest refresh resilient to network errors.
+fix(swan): hoist trustFailureMessage for Dart forward reference.
