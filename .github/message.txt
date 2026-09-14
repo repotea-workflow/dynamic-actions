@@ -1,1 +1,1 @@
-fix(worker): handle cursor stream-json completion
+fix(cancellation): accept terminal inspection during cancellation
