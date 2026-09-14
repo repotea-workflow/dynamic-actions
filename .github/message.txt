@@ -1,1 +1,1 @@
-fix(omsk): grant batch order inspection access
+fix(omsk): scope batch access rollback
