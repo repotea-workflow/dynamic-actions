@@ -1,3 +1,1 @@
-fix(migration): fit account access id column
-
-Shortens the generated access-template ID so migration 000010 fits varchar(50).
+fix(omsk): speed specified declaration export
