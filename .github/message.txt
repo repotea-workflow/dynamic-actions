@@ -1,1 +1,1 @@
-perf(omsk): optimize batch order lookup
+fix(omsk): fail closed on empty outlet scope
