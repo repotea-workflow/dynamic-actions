@@ -1,1 +1,1 @@
-main
+agt/shared-maintenance-root
