@@ -1,1 +1,1 @@
-fix(omsk): scope batch access rollback
+fix(omsk): preserve referenced access node
