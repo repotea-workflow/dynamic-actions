@@ -1,1 +1,1 @@
-agt/maintenance-intent-reseal
+main
