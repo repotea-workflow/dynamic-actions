@@ -1,9 +1,5 @@
-refactor(styles): group CLARITY styles by family and harden Swan shell runtime
+fix(swan): keep cached trust and rehydrate shell on manifest cache hits
 
-Move feature styles from per-feature packages to clarity/{feature} with a
-single clarity_feature_styles workspace package, and teach the bundle
-builder and STAC CLI to compile per-feature artifacts under that package.
-
-Prefer bundled shell host styles, gate bottom navigation until shell
-surfaces hydrate, and allow releaseTrust TTL refresh when signing keys are
-unchanged.
+Fall back to persisted releaseTrust when inline manifest trust fails instead
+of discarding the last verified bundle, and mark shell surfaces hydrated when
+serving an in-memory manifest for the active scope.
