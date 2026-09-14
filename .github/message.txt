@@ -1,4 +1,6 @@
-refactor(styles): rename clarity package to clarity_stac and flatten screens
+refactor(styles): rename clarity package to clarity_stac and flatten screens (#178)
 
 Use clarity_stac as the STAC template package name and colocate main.dart
 and preview.dart directly under each feature directory instead of stac/.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
