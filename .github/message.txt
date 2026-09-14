@@ -1,1 +1,1 @@
-fix(codeon): authenticate maintenance results (#318)
+fix(codeon): reseal maintenance cleanup intents
