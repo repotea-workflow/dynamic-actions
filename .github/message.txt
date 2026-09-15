@@ -1,1 +1,1 @@
-fix(swan): isolate app releases and retire legacy shell slots
+feat: enforce page-scoped CEL runtime limits
