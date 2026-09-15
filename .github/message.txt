@@ -1,1 +1,1 @@
-refactor(swan): make app bar release optional
+refactor(waterfowl): remove built-in app bar module
