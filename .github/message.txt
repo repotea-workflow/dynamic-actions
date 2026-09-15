@@ -1,7 +1,1 @@
-fix(swan): render shell chrome from Release STAC only
-
-Remove the Flutter-drawn APP_BAR fallback and unused shell icon widgets so
-bottom navigation always comes from the live Release style. Prefer Manifest
-styles over bundled copies, register selectShellTab without duplicate
-actions, and accept compiled dataRepeat filterGroup plus item.group so
-personal-center sections stay visible.
+refactor(swan): render navigation from release features
