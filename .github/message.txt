@@ -1,1 +1,1 @@
-refactor(waterfowl): remove built-in app bar module
+fix(swan): isolate app releases and retire legacy shell slots
