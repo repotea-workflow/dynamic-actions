@@ -1,1 +1,1 @@
-refactor(swan): render navigation from release features
+refactor(swan): make app bar release optional
