@@ -1,1 +1,8 @@
-chore(runtime): upgrade cel-bridge to 0.7.3
+feat: map shell chrome glyphs from Clarity slots and App files
+
+Compile APP_BAR and PERSONAL_CENTER icons from a Clarity slot table
+instead of shell-item icon strings. Restore personal-center authoring,
+stop Swan from guessing Material names, and add an App file library on
+existing Hawk object storage with Robin management and runtime fetch by
+id or alias. Studio still accepts the icon field but always writes empty
+so old clients can roll back without a column drop.
