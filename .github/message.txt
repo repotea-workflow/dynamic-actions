@@ -1,6 +1,3 @@
-fix(mobile): keep AI print paper white in prompt and raster (#185)
+docs(runbook): add GP printing test-feedback repair plan
 
-Style prompts already differ for #157. Generated sheets still use
-paper-gray (~luma 246), which thermal dither turns into speckle.
-Ask for solid #FFFFFF with no grain, and flatten near-white on
-download so the shown/printed image is actually white.
+Check in the assignment-ready plan for the 33 佳博测试问题反馈 items and route it from the docs index.
