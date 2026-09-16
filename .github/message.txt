@@ -1,4 +1,10 @@
-docs(runbook): mark the GP test-feedback plan as a 2026-08-29 snapshot
+docs(runbook): add GP printing test-feedback repair plan (#186)
+
+* docs(runbook): add GP printing test-feedback repair plan
+
+Check in the assignment-ready plan for the 33 佳博测试问题反馈 items and route it from the docs index.
+
+* docs(runbook): mark the GP test-feedback plan as a 2026-08-29 snapshot
 
 The original writeup was assignment-ready against that day's main. Later
 PRs landed most of the confirmed defects, so keep the investigation and
