@@ -1,1 +1,3 @@
-fix(omsk): batch large declaration lookups (#321)
+feat(product): upload public product delete list
+
+Let chief outlets delete audited public products from an exported spreadsheet instead of paging through thousands of rows to tick them.
