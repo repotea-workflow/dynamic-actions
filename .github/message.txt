@@ -1,19 +1,6 @@
-feat: map shell chrome glyphs from Clarity slots and App files (#180)
+fix(swan): load Clarity slot files through the App file library
 
-* feat: map shell chrome glyphs from Clarity slots and App files
-
-Compile APP_BAR and PERSONAL_CENTER icons from a Clarity slot table
-instead of shell-item icon strings. Restore personal-center authoring,
-stop Swan from guessing Material names, and add an App file library on
-existing Hawk object storage with Robin management and runtime fetch by
-id or alias. Studio still accepts the icon field but always writes empty
-so old clients can roll back without a column drop.
-
-* feat(robin): upload App files from the file library page
-
-Wire PNG/JPEG uploads through the Hawk files presign/finalize API so
-Robin can populate the App file library instead of only listing aliases.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Compile slot.file as a managed STAC image with a Material icon underneath
+so missing files still show a glyph. Wire AppFileLibrary into Swan
+bootstrap and RuntimeContext.loadAsset, and make Hawk file-library tests
+exercise list/alias/archive plus runtime GET without a style snapshot.
