@@ -1,6 +1,8 @@
-fix(swan): load Clarity slot files through the App file library
+fix(swan): load Clarity slot files through the App file library (#181)
 
 Compile slot.file as a managed STAC image with a Material icon underneath
 so missing files still show a glyph. Wire AppFileLibrary into Swan
 bootstrap and RuntimeContext.loadAsset, and make Hawk file-library tests
 exercise list/alias/archive plus runtime GET without a style snapshot.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
