@@ -1,8 +1,3 @@
-test: add missingCatalog E2E script and Hawk integration coverage (#199)
+Unify STAC runtime limits with component-depth semantics.
 
-Add a dev API E2E script that exercises preview, register-catalog, and
-re-preview with unique probe IDs, and expand dynamic_app_db tests for
-action and component missingCatalog registration without requiring the
-release compiler fixture.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Introduce a single Baya manifest for payload, envelope, and depth limits, then align Hawk, stac_adapter, and release validation on generated constants with separate component and JSON depth checks.
