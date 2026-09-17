@@ -1,7 +1,3 @@
-feat(swan): wire Fluent-backed locale switching and i18n locales (#203)
+fix(swan): resolve i18n merge conflicts and add Tern preview locale parity
 
-Add aviary.app.i18n-locales data source, pack-driven shell labels, and
-language.setLocale so the Language STAC page lists manifest locales with
-readable labels and switches locale through the existing Fluent pipeline.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Remove conflict markers left on main, restore English shared locale/shell fallbacks, and wire Tern preview with aviary.app.i18n-locales fixtures plus locale snapshot fields so Language page previews match Swan runtime behavior.
