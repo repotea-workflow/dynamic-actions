@@ -1,3 +1,5 @@
-feat(robin): add drive context menus and split platform resources i18n.
+feat(robin): add drive context menus and split platform resources i18n. (#192)
 
 Replace toolbar folder actions with right-click drive interactions, unify cancel labels, and extract platformResources translations to satisfy codeline limits.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
