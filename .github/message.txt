@@ -1,6 +1,8 @@
-test: add missingCatalog E2E script and Hawk integration coverage
+test: add missingCatalog E2E script and Hawk integration coverage (#199)
 
 Add a dev API E2E script that exercises preview, register-catalog, and
 re-preview with unique probe IDs, and expand dynamic_app_db tests for
 action and component missingCatalog registration without requiring the
 release compiler fixture.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
