@@ -1,3 +1,7 @@
-merge: resolve main conflicts for i18n locale switching
+feat(swan): wire Fluent-backed locale switching and i18n locales (#203)
 
-Keep English shared fallbacks from main and retain dynamic Language page copy.
+Add aviary.app.i18n-locales data source, pack-driven shell labels, and
+language.setLocale so the Language STAC page lists manifest locales with
+readable labels and switches locale through the existing Fluent pipeline.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
