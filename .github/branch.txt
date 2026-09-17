@@ -1,1 +1,1 @@
-main
+test/missing-catalog-e2e-verification
