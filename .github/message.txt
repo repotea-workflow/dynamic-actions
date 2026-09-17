@@ -1,3 +1,5 @@
-feat(robin): redesign platform resources as drive-style grid with drag upload
+feat(robin): redesign platform resources as drive-style grid with drag upload (#191)
 
 Use a Google Drive-like folder grid, page-wide drop targets, directory uploads, and a toolbar max file size limit stored in localStorage (default 5 MB).
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
