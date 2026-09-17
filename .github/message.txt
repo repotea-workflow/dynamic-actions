@@ -1,3 +1,3 @@
-feat: wire Clarity icons to platform resources and improve app i18n studio
+refactor(waterfowl): centralize runtime capability ids like Cosmos RuntimeService
 
-Replace hardcoded Material icons across Clarity styles with platform resource aliases, add a Koboyo seed script, and extend the app translation studio with manage-languages/archive support while splitting Hawk app_service for maintainability.
+Introduce RuntimeCapability enum aligned with the Baya catalog so binary bundles and native actions share one typed source of truth instead of scattered string literals.
