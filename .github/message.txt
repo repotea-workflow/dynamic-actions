@@ -1,3 +1,5 @@
-fix(robin): add editable scope tag fields in platform resource properties.
+fix(robin): add editable scope tag fields in platform resource properties. (#195)
 
 Users could add scope tags but had no inputs for tenant, app, or note; the panel now renders a proper editor aligned with backend validation.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
