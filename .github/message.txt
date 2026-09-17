@@ -1,7 +1,4 @@
-refactor(waterfowl): standardize clarity_stac style fallbacks to English (#201)
+chore(waterfowl): ignore generated feature_styles build output
 
-Use English for shared localization fallbacks, style metadata, preview
-fixtures, and all clarity_stac localization defaults so dev fallbacks
-align with the platform language pack workflow.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Exclude packages/feature_styles/ from version control; it is produced by
+feature-styles-build and should not be committed alongside source manifests.
