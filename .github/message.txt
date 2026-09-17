@@ -1,6 +1,8 @@
-fix(swan): skip blank STAC icons from missing shell item.icon
+fix(swan): skip blank STAC icons from missing shell item.icon (#183)
 
 After Swan stopped putting icon on shell data, older templates that still
 read `${item.icon}` interpolate to an empty name. Official STAC then logs
 "The Icon  does not exist." Replace those widgets with an empty sized box
 before parse.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
