@@ -1,6 +1,5 @@
-chore(waterfowl): ignore generated feature_styles build output (#202)
+feat(swan): wire Fluent-backed locale switching and i18n locales
 
-Exclude packages/feature_styles/ from version control; it is produced by
-feature-styles-build and should not be committed alongside source manifests.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Add aviary.app.i18n-locales data source, pack-driven shell labels, and
+language.setLocale so the Language STAC page lists manifest locales with
+readable labels and switches locale through the existing Fluent pipeline.
