@@ -1,11 +1,6 @@
-docs(runbook): add GP printing test-feedback repair plan (#186)
+fix(mobile): address GP printing feedback issues #187-#216
 
-* docs(runbook): add GP printing test-feedback repair plan
-
-Check in the assignment-ready plan for the 33 佳博测试问题反馈 items and route it from the docs index.
-
-* docs(runbook): mark the GP test-feedback plan as a 2026-08-29 snapshot
-
-The original writeup was assignment-ready against that day's main. Later
-PRs landed most of the confirmed defects, so keep the investigation and
-point readers at regression instead of re-implementation.
+Implement fixes for the September GP文印 test feedback batch: image crop
+and import, graphic editor controls, print pipeline, auth validation,
+learning catalog, quick text, web print navigation, localization/branding,
+and related regression tests.
