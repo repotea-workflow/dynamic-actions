@@ -1,3 +1,5 @@
-fix(robin): overlay platform resource properties without reflowing grid.
+fix(robin): overlay platform resource properties without reflowing grid. (#194)
 
 Keep the drive grid at full width when a file is selected by floating the properties panel over the right edge instead of sharing horizontal flex space.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
