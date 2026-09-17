@@ -1,3 +1,5 @@
-feat(hawk,robin): replace app file library with platform resources catalog
+feat(hawk,robin): replace app file library with platform resources catalog (#188)
 
 Move file storage to a platform-owned directory tree under /platform/resources, resolve runtime file refs from the platform catalog only, and remove the per-app file library UI and APIs.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
