@@ -1,3 +1,3 @@
-feat(swan): align language switching with Rigel and repair platform styles
+feat: wire Clarity icons to platform resources and improve app i18n studio
 
-Register language.setLocale in the Baya catalog, switch CLARITY language rows to inline locale changes, and patch legacy platform bundles at runtime until feature styles can be re-imported.
+Replace hardcoded Material icons across Clarity styles with platform resource aliases, add a Koboyo seed script, and extend the app translation studio with manage-languages/archive support while splitting Hawk app_service for maintainability.
