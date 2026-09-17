@@ -1,5 +1,7 @@
-feat(swan): refresh Release with a three-finger hold
+feat(swan): refresh Release with a three-finger hold (#184)
 
 Keep the 10-tap developer unlock and add a three-finger 5s hold on the
 same global pointer listener. Holding three fingers refreshes the
 current-channel Manifest/Release and shows a short 已更新 snackbar.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
