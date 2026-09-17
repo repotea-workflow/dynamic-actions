@@ -1,6 +1,4 @@
-feat(swan): refresh Release with a two-finger hold (#185)
+feat(swan): shorten two-finger Release refresh hold to 3s
 
-Keep the 5s hold, but trigger on two fingers instead of three so the
-debug refresh is easier to perform on a phone.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Keep two fingers; trigger the debug Release refresh after 3 seconds
+instead of 5.
