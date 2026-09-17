@@ -1,3 +1,5 @@
-fix(swan): resolve i18n merge conflicts and add Tern preview locale parity
+fix(swan): resolve i18n merge conflicts and add Tern preview locale parity (#204)
 
 Remove conflict markers left on main, restore English shared locale/shell fallbacks, and wire Tern preview with aviary.app.i18n-locales fixtures plus locale snapshot fields so Language page previews match Swan runtime behavior.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
