@@ -1,4 +1,6 @@
-feat(swan): refresh Release with a two-finger hold
+feat(swan): refresh Release with a two-finger hold (#185)
 
 Keep the 5s hold, but trigger on two fingers instead of three so the
 debug refresh is easier to perform on a phone.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
