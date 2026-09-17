@@ -1,5 +1,4 @@
-fix(robin): simplify file context menu and stop nested menu overlap. (#196)
+feat(waterfowl): merge shared localizations from feature-styles.yaml
 
-File tiles now show only Open and Delete, and item menus no longer bubble to the blank-area New Folder menu that caused the floating duplicate.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Compile-time merge injects repository-wide message IDs into every style
+definition so common strings like confirm and cancel are authored once.
