@@ -1,6 +1,3 @@
-fix(mobile): address GP printing feedback issues #187-#216
+fix(mobile): address GP printing feedback #187-#216 (#217)
 
-Implement fixes for the September GP文印 test feedback batch: image crop
-and import, graphic editor controls, print pipeline, auth validation,
-learning catalog, quick text, web print navigation, localization/branding,
-and related regression tests.
+Fixes #187, #188, #189, #190, #191, #192, #193, #194, #195, #196, #197, #198, #199, #200, #201, #202, #203, #204, #205, #206, #207, #208, #209, #210, #211, #212, #213, #214, #215, #216.
