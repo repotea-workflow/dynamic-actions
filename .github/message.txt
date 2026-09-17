@@ -1,4 +1,6 @@
-feat(waterfowl): merge shared localizations from feature-styles.yaml
+feat(waterfowl): merge shared localizations from feature-styles.yaml (#197)
 
 Compile-time merge injects repository-wide message IDs into every style
 definition so common strings like confirm and cancel are authored once.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
