@@ -1,6 +1,3 @@
-fix(swan): keep two-finger Release refresh while fingers move (#187)
+feat(hawk,robin): replace app file library with platform resources catalog
 
-The hold already listens globally like the 10-tap unlock. Do not cancel
-it on movement, so two fingers anywhere on screen for 3s still refresh.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Move file storage to a platform-owned directory tree under /platform/resources, resolve runtime file refs from the platform catalog only, and remove the per-app file library UI and APIs.
