@@ -1,5 +1,5 @@
-feat(waterfowl): add feature-styles-publish with release version targeting (#189)
+feat(swan): shorten two-finger Release refresh hold to 2s (#190)
 
-One command builds, uploads, and updates a Release dev channel when AVIARY_RELEASE or --release is set.
+Make the developer gesture trigger release refresh a bit sooner.
 
 Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
