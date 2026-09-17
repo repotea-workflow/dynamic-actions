@@ -1,6 +1,8 @@
-feat: replace missingActions with missingCatalog for bundle import
+feat: replace missingActions with missingCatalog for bundle import (#198)
 
 Align feature-style bundle preview and registration with Cosmos: unified
 missingCatalog entries for actions and components, register-catalog API,
 Robin import UI updates, and CLI confirmation before auto-registration.
 Split management catalog module to satisfy codeline limits.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
