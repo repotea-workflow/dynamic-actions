@@ -1,4 +1,6 @@
-chore(waterfowl): ignore generated feature_styles build output
+chore(waterfowl): ignore generated feature_styles build output (#202)
 
 Exclude packages/feature_styles/ from version control; it is produced by
 feature-styles-build and should not be committed alongside source manifests.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
