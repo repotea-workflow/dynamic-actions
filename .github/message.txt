@@ -1,3 +1,5 @@
-feat(robin): add image previews to platform resource drive tiles.
+feat(robin): add image previews to platform resource drive tiles. (#193)
 
 Load presigned URLs for raster images in the grid and properties panel, unify tile sizing with fixed thumbnails, and fall back to type icons for non-previewable files.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
