@@ -1,6 +1,6 @@
-feat(waterfowl): merge shared localizations from feature-styles.yaml (#197)
+feat: replace missingActions with missingCatalog for bundle import
 
-Compile-time merge injects repository-wide message IDs into every style
-definition so common strings like confirm and cancel are authored once.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Align feature-style bundle preview and registration with Cosmos: unified
+missingCatalog entries for actions and components, register-catalog API,
+Robin import UI updates, and CLI confirmation before auto-registration.
+Split management catalog module to satisfy codeline limits.
