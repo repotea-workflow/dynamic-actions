@@ -1,8 +1,5 @@
-fix(mobile): round 1 deep review for #187-#216 (#218)
+fix(mobile): round 2 deep review for #207 #212
 
-- #187: free crop UI now calls withRatio(free) instead of reusing bounds
-- #189: restrict passwords to 12-128 ASCII letters/digits
-- #191: shared decodeBitmapImage for image and document import paths
-- #192: add junior HISTORY/POLITICS DB migrations
-- #207/#212: locale-aware support bodies; stop zh fallback for en/ja CMS
-- #212: translate core zh-Hant nav labels
+- Expand zh-Hant ARB with traditional conversions for 74 UI strings
+- Filter remote support catalog items by user locale; fall back to localized defaults
+- Strengthen locale regression test for zh-Hant shell labels
