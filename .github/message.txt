@@ -1,3 +1,5 @@
-fix(robin): simplify file context menu and stop nested menu overlap.
+fix(robin): simplify file context menu and stop nested menu overlap. (#196)
 
 File tiles now show only Open and Delete, and item menus no longer bubble to the blank-area New Folder menu that caused the floating duplicate.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
