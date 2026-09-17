@@ -1,5 +1,6 @@
-feat(hawk,robin): add platform personal API keys (#182)
+fix(swan): skip blank STAC icons from missing shell item.icon
 
-Introduce avk_* bearer auth equivalent to browser sessions for management APIs, with Robin Settings → API management and a feature-styles-import CLI helper.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+After Swan stopped putting icon on shell data, older templates that still
+read `${item.icon}` interpolate to an empty name. Official STAC then logs
+"The Icon  does not exist." Replace those widgets with an empty sized box
+before parse.
