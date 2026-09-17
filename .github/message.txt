@@ -1,5 +1,7 @@
-refactor(waterfowl): standardize clarity_stac style fallbacks to English
+refactor(waterfowl): standardize clarity_stac style fallbacks to English (#201)
 
 Use English for shared localization fallbacks, style metadata, preview
 fixtures, and all clarity_stac localization defaults so dev fallbacks
 align with the platform language pack workflow.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
