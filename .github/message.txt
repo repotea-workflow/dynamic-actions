@@ -1,5 +1,3 @@
-fix(robin): overlay platform resource properties without reflowing grid. (#194)
+fix(robin): add editable scope tag fields in platform resource properties.
 
-Keep the drive grid at full width when a file is selected by floating the properties panel over the right edge instead of sharing horizontal flex space.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Users could add scope tags but had no inputs for tenant, app, or note; the panel now renders a proper editor aligned with backend validation.
