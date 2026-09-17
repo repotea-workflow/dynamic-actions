@@ -1,4 +1,4 @@
-fix(mobile): round 1 deep review fixes for #187-#216
+fix(mobile): round 1 deep review for #187-#216 (#218)
 
 - #187: free crop UI now calls withRatio(free) instead of reusing bounds
 - #189: restrict passwords to 12-128 ASCII letters/digits
