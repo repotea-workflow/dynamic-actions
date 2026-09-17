@@ -1,4 +1,6 @@
-fix(swan): keep two-finger Release refresh while fingers move
+fix(swan): keep two-finger Release refresh while fingers move (#187)
 
 The hold already listens globally like the 10-tap unlock. Do not cancel
 it on movement, so two fingers anywhere on screen for 3s still refresh.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
