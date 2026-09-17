@@ -1,4 +1,3 @@
-fix(robin): expose App files in the App workspace
+feat(hawk,robin): add platform personal API keys
 
-Place the file library in App management, drop the resources entitlement
-gate, and project app.resources permissions onto the management session.
+Introduce avk_* bearer auth equivalent to browser sessions for management APIs, with Robin Settings → API management and a feature-styles-import CLI helper.
