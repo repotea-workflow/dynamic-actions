@@ -1,5 +1,5 @@
-Unify STAC runtime limits with component-depth semantics. (#200)
+refactor(waterfowl): standardize clarity_stac style fallbacks to English
 
-Introduce a single Baya manifest for payload, envelope, and depth limits, then align Hawk, stac_adapter, and release validation on generated constants with separate component and JSON depth checks.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Use English for shared localization fallbacks, style metadata, preview
+fixtures, and all clarity_stac localization defaults so dev fallbacks
+align with the platform language pack workflow.
