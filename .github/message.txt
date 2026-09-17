@@ -1,5 +1,3 @@
-fix(mobile): round 2 deep review for #207 #212 (#219)
+test(mobile): round 3 audit coverage for support locale filtering
 
-- Expand zh-Hant ARB with traditional conversions for 74 UI strings
-- Filter remote support catalog items by user locale; fall back to localized defaults
-- Strengthen locale regression test for zh-Hant shell labels
+Add unit tests for resolveSupportCatalogItems to lock #207 locale behavior.
