@@ -1,3 +1,6 @@
-test(mobile): round 3 audit for #207 locale filtering (#220)
+fix: final audit for GP feedback issues #187-#216
 
-Add unit tests for resolveSupportCatalogItems to lock #207 locale behavior.
+Register junior history/politics migrations against education_subjects,
+merge missing catalog subjects from bundled fallback, keep free-crop at
+original image ratio when opening the crop tool, and reject support detail
+responses whose locale does not match the active app locale.
