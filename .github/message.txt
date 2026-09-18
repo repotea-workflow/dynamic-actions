@@ -1,3 +1,13 @@
-merge: reconcile release refresh with main shell fingerprint logic
+feat(swan): developer floating tools overlay (#215)
 
-Keep shared refreshDeveloperRelease helper aligned with the latest manifest refresh behavior from main.
+* feat(swan): add persistent developer floating tools overlay
+
+Introduce a draggable flutter_floating entry with modal action sheet for release refresh and logs, gated by a secure-storage toggle under Developer settings → Runtime tools.
+
+* fix(swan): mount developer overlay below MaterialApp builder
+
+Use MaterialApp.builder so flutter_floating and the tools dialog resolve a valid overlay context.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
