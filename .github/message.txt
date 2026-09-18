@@ -1,3 +1,5 @@
-refactor(swan): align bundled Fluent with Rigel remote i18n model.
+refactor(swan): align bundled Fluent with Rigel remote i18n model. (#220)
 
 Stop checking in runtime FTL under assets/i18n, keep the directory for pack builds, and rely on manifest-driven language pack downloads at runtime.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
