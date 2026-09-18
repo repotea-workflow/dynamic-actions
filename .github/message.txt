@@ -1,3 +1,13 @@
-fix: refresh pack revisions during manage-languages archive loop
+feat: wire Clarity icons to platform resources and improve app i18n studio (#205)
+
+* feat: wire Clarity icons to platform resources and improve app i18n studio
+
+Replace hardcoded Material icons across Clarity styles with platform resource aliases, add a Koboyo seed script, and extend the app translation studio with manage-languages/archive support while splitting Hawk app_service for maintainability.
+
+* fix: refresh pack revisions during manage-languages archive loop
 
 Refetch pack list before each archive to avoid revision conflicts, and fail fast in the clarity icon seed script when upload API calls error.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
