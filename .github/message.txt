@@ -1,4 +1,3 @@
-fix(waterfowl): align feature-styles import with Rigel publish flow
+feat(swan): add persistent developer floating tools overlay
 
-Match Rigel Justfile passthrough and always-on preview with interactive
-catalog registration, and register account/auth screens in the STAC export test.
+Introduce a draggable flutter_floating entry with modal action sheet for release refresh and logs, gated by a secure-storage toggle under Developer settings → Runtime tools.
