@@ -1,3 +1,4 @@
-test(account): mark avatar upload module test async (#218)
+refactor(swan): move developer floating tools copy to shared localizations
 
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Load overlay, runtime tools, and refresh snackbar strings from
+feature-styles.yaml shared.localizations via FluentPackCatalog.
