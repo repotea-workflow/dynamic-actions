@@ -1,3 +1,1 @@
-refactor(baya): unify contract manifests behind registry.yaml
-
-Move catalog and CEL environment into contracts/, add a baya-contract-registry entry point, and resolve generator inputs from registry includes instead of hardcoded paths.
+fix(swan): restore personal center and reuse CEL programs
