@@ -1,3 +1,3 @@
-fix(swan): align crypto dependency with cel_bridge
+fix(waterfowl): restore language switching and clarity feature pages on Swan.
 
-Unblocks workspace pub get for feature style publish.
+Align locale delivery with Rigel via manifest-driven pack sync, periodic i18n refresh, and release-triggered updates; fix STAC tap handling, glyph rendering, and device management lifecycle.
