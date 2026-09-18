@@ -1,3 +1,3 @@
-fix(swan): mount developer overlay below MaterialApp builder
+merge: reconcile release refresh with main shell fingerprint logic
 
-Use MaterialApp.builder so flutter_floating and the tools dialog resolve a valid overlay context.
+Keep shared refreshDeveloperRelease helper aligned with the latest manifest refresh behavior from main.
