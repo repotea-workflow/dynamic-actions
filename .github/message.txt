@@ -1,5 +1,3 @@
-refactor(swan): align bundled Fluent with Rigel remote i18n model. (#220)
+Add banner component and pull-to-refresh for STAC pages.
 
-Stop checking in runtime FTL under assets/i18n, keep the directory for pack builds, and rely on manifest-driven language pack downloads at runtime.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Introduce aviary.banner and aviary.layout.refreshableScroll with page-level refresh control so HOME, feedback, language, and device management pages can reload app data sources on pull.
