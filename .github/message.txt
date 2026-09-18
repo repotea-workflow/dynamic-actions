@@ -1,3 +1,5 @@
-fix(swan): remove merge conflict markers from app.dart
+fix(swan): remove merge conflict markers from app.dart (#216)
 
 Restore the shared refreshDeveloperRelease helper after the floating tools merge.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
