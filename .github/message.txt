@@ -1,3 +1,3 @@
-refactor(waterfowl): centralize runtime capability ids like Cosmos RuntimeService
+fix: refresh pack revisions during manage-languages archive loop
 
-Introduce RuntimeCapability enum aligned with the Baya catalog so binary bundles and native actions share one typed source of truth instead of scattered string literals.
+Refetch pack list before each archive to avoid revision conflicts, and fail fast in the clarity icon seed script when upload API calls error.
