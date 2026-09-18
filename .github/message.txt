@@ -1,3 +1,13 @@
-fix(swan): preserve authenticated snapshot on failed re-login
+feat(swan): AUTH and ACCOUNT STAC features (#212)
+
+* feat(swan): add AUTH and ACCOUNT STAC features with session actions
+
+Replace native login/register/account routes with platform features, native auth sheets, and session snapshot fields for CEL gating across feedback and account pages.
+
+* fix(swan): preserve authenticated snapshot on failed re-login
 
 Do not overwrite session.authenticated when login or register fails while an existing runtime session is still valid.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
