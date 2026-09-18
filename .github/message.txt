@@ -1,3 +1,13 @@
-Fix refresh action parsing and short-page pull gestures.
+Add banner component and pull-to-refresh for STAC pages (#221)
+
+* Add banner component and pull-to-refresh for STAC pages.
+
+Introduce aviary.banner and aviary.layout.refreshableScroll with page-level refresh control so HOME, feedback, language, and device management pages can reload app data sources on pull.
+
+* Fix refresh action parsing and short-page pull gestures.
 
 Read dataSourceId from action arguments, guard refresh controller after dispose, and make refreshable pages always scrollable without nesting scroll views.
+
+---------
+
+Co-authored-by: Cursor Agent <agent@cursor.com>
