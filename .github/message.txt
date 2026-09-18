@@ -1,5 +1,6 @@
-chore: remove local feature style preview CLI workbench (#213)
+feat(waterfowl): align feature-styles publish with Orion and unify shell icons
 
-Drop just preview-feature-style, the loopback workbench server, preview.yaml fixtures, and related aviary_stac code. Robin/Tern admin preview is unchanged.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Replace the broken pure-Dart STAC build with a Flutter test harness, add an
+Orion-style import CLI and just recipes, and wire AppBar/Personal Center tabs
+to platform asset glyphs. Shrink DEVICE_MANAGEMENT STAC to fit payload limits
+and publish 14 styles to release 1.0.6 dev (DEVICE_MANAGEMENT pending Hawk deploy).
