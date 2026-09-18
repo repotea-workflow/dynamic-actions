@@ -1,5 +1,6 @@
-fix(swan): remove merge conflict markers from app.dart (#216)
+feat(account): runtime app-user avatar upload and ACCOUNT UI (#217)
 
-Restore the shared refreshDeveloperRelease helper after the floating tools merge.
+Add Hawk runtime avatar upload intents for app users, extend profile with avatar
+metadata, and wire Swan ACCOUNT STAC with display + change-avatar action.
 
 Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
