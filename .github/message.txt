@@ -1,3 +1,3 @@
-fix(swan): unlock developer settings from any page via pointer downs
+refactor(swan): align bundled Fluent with Rigel remote i18n model.
 
-Align hidden unlock with Cosmos by counting pointer downs in MaterialApp.builder instead of requiring strict global tap detection that failed on scrollable home content.
+Stop checking in runtime FTL under assets/i18n, keep the directory for pack builds, and rely on manifest-driven language pack downloads at runtime.
