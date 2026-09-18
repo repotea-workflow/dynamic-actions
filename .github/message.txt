@@ -1,3 +1,4 @@
-fix: remove merge conflict markers from root Justfile
+fix(waterfowl): align feature-styles import with Rigel publish flow
 
-The squash merge left unresolved conflict markers that broke just recipes.
+Match Rigel Justfile passthrough and always-on preview with interactive
+catalog registration, and register account/auth screens in the STAC export test.
