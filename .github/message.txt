@@ -1,3 +1,3 @@
-refactor(baya): complete contract registry phases P1-P4
+fix(swan): render platform SVG icons and warm Clarity aliases at bootstrap
 
-Declare CEL runtime and renderer contracts in YAML, generate Rust/Dart constants, wire Swan/Tern/Hawk consumers, replace the orphan compiled_capabilities.json with a generated Dart manifest, and document hawk/contracts as generated-only output.
+Use SvgPicture for managed file assets, preload platform icon aliases before first paint, and refresh the runtime snapshot so tab and menu glyphs display without a session.
