@@ -1,1 +1,3 @@
-fix(swan): remove leftover merge conflict markers in app.dart
+fix(swan): remove merge conflict markers from app.dart
+
+Restore the shared refreshDeveloperRelease helper after the floating tools merge.
