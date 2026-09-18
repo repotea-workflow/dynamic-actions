@@ -1,5 +1,3 @@
-fix: allow anonymous read of unscoped platform resources (#207)
+refactor(baya): unify contract manifests behind registry.yaml
 
-Platform icons and other global app files should load before login, matching runtime i18n behavior. Scoped resources still require authentication.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Move catalog and CEL environment into contracts/, add a baya-contract-registry entry point, and resolve generator inputs from registry includes instead of hardcoded paths.
