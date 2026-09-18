@@ -1,3 +1,3 @@
-fix(feature-styles): unblock bundle import for account avatar and device connect
+fix(styles): pass feature style validation for account and device management.
 
-Use managed account avatar assets in ACCOUNT STAC and repair stale deviceManagement.connect catalog schemas via migration.
+Use HTTPS-prefixed avatar URL templates and declare connect deviceId in STAC actions so bundles import cleanly.
