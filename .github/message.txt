@@ -1,6 +1,3 @@
-refactor(swan): move developer floating tools copy to shared localizations (#219)
+fix(swan): align crypto dependency with cel_bridge
 
-Load overlay, runtime tools, and refresh snackbar strings from
-feature-styles.yaml shared.localizations via FluentPackCatalog.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Unblocks workspace pub get for feature style publish.
