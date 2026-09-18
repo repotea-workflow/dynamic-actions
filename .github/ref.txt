@@ -1,1 +1,1 @@
-main
+fix/platform-resource-svg-preview-sticky-panel
