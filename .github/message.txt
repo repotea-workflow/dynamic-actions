@@ -1,3 +1,5 @@
-fix: allow anonymous read of unscoped platform resources
+fix: allow anonymous read of unscoped platform resources (#207)
 
 Platform icons and other global app files should load before login, matching runtime i18n behavior. Scoped resources still require authentication.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
