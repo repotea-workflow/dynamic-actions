@@ -1,6 +1,1 @@
-feat(account): runtime app-user avatar upload and ACCOUNT UI (#217)
-
-Add Hawk runtime avatar upload intents for app users, extend profile with avatar
-metadata, and wire Swan ACCOUNT STAC with display + change-avatar action.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+test(account): mark avatar upload module test async
