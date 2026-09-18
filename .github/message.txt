@@ -1,3 +1,5 @@
-feat(swan): add NIB-backed Bluetooth device management for printers.
+feat(hawk): replace platform resource content on same-name upload
 
-Wire aviary.deviceManagement actions, Clarity STAC discovery UI, and Swan lifecycle so users can scan and connect nearby printers over NIB.
+Add replaceIfExists to upload intents so finalize updates the existing
+file row (alias, scope tags, id) instead of conflicting. Robin exposes a
+persistent checkbox to opt into replace mode.
