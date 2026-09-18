@@ -1,21 +1,3 @@
-feat(hawk): replace platform resource content on same-name upload (#211)
+feat(swan): add AUTH and ACCOUNT STAC features with session actions
 
-* fix(hawk): use unique migration versions for app feedback
-
-Avoid collision with 202609190001_platform_resources.sql so migrate
-can apply feedback schema in dev.
-
-* feat(hawk): replace platform resource content on same-name upload
-
-Add replaceIfExists to upload intents so finalize updates the existing
-file row (alias, scope tags, id) instead of conflicting. Robin exposes a
-persistent checkbox to opt into replace mode.
-
-* fix(hawk): allow platform_resource_replaced cleanup reason
-
-Replace uploads queue OSS cleanup jobs; extend the shared reason check
-constraint so finalize does not fail after copying the new object.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Replace native login/register/account routes with platform features, native auth sheets, and session snapshot fields for CEL gating across feedback and account pages.
