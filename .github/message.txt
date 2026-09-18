@@ -1,4 +1,6 @@
-refactor(swan): move developer floating tools copy to shared localizations
+refactor(swan): move developer floating tools copy to shared localizations (#219)
 
 Load overlay, runtime tools, and refresh snackbar strings from
 feature-styles.yaml shared.localizations via FluentPackCatalog.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
