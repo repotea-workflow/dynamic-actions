@@ -1,3 +1,6 @@
-fix: final audit for GP feedback #187-#216 (#221)
+fix: address device QA feedback on crop, auth, and learning UX
 
-Fixes #187, #192, #207, #212.
+Clarify free crop as unconstrained ratio with visible handles, fix fixed-ratio
+crop dragging, restore case-insensitive username registration, center learning
+subject chips, sync learning type navigation, and show connected printer model
+in preview.
