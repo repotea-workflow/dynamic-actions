@@ -1,4 +1,4 @@
-fix: address device QA feedback on crop, auth, and learning UX
+fix: device QA feedback on crop, auth, and learning UX (#222)
 
 Clarify free crop as unconstrained ratio with visible handles, fix fixed-ratio
 crop dragging, restore case-insensitive username registration, center learning
