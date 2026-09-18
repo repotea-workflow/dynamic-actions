@@ -1,5 +1,4 @@
-feat(hawk): replace platform resource content on same-name upload
+fix(hawk): allow platform_resource_replaced cleanup reason
 
-Add replaceIfExists to upload intents so finalize updates the existing
-file row (alias, scope tags, id) instead of conflicting. Robin exposes a
-persistent checkbox to opt into replace mode.
+Replace uploads queue OSS cleanup jobs; extend the shared reason check
+constraint so finalize does not fail after copying the new object.
