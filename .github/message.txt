@@ -1,3 +1,5 @@
-chore: remove local feature style preview CLI workbench
+chore: remove local feature style preview CLI workbench (#213)
 
 Drop just preview-feature-style, the loopback workbench server, preview.yaml fixtures, and related aviary_stac code. Robin/Tern admin preview is unchanged.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
