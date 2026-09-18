@@ -1,3 +1,3 @@
-fix(swan): apply locale switches across the whole app.
+fix(swan): unlock developer settings from any page via pointer downs
 
-Sync manifest locales and language packs before setLocale, advance runtime scope revision, and watch locale generation in feature views.
+Align hidden unlock with Cosmos by counting pointer downs in MaterialApp.builder instead of requiring strict global tap detection that failed on scrollable home content.
