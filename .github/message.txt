@@ -1,13 +1,3 @@
-fix(robin): SVG preview and sticky platform resource properties panel (#206)
+fix: allow anonymous read of unscoped platform resources
 
-* fix(robin): preview SVG resources and keep properties panel sticky
-
-Allow image/svg+xml in platform resource previews and lay out the drive beside a sticky properties sidebar so file metadata stays visible while scrolling.
-
-* fix(robin): scroll properties panel content within workspace viewport
-
-Keep the sticky shell within the visible page area and scroll only the panel body so save/delete actions stay reachable below the shell header.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Platform icons and other global app files should load before login, matching runtime i18n behavior. Scoped resources still require authentication.
