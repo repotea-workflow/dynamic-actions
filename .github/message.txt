@@ -1,6 +1,3 @@
-feat(waterfowl): align feature-styles publish with Orion and unify shell icons
+Merge branch 'main' into align-feature-styles-publish-with-orion
 
-Replace the broken pure-Dart STAC build with a Flutter test harness, add an
-Orion-style import CLI and just recipes, and wire AppBar/Personal Center tabs
-to platform asset glyphs. Shrink DEVICE_MANAGEMENT STAC to fit payload limits
-and publish 14 styles to release 1.0.6 dev (DEVICE_MANAGEMENT pending Hawk deploy).
+Resolve Justfile conflict by keeping feature-styles-check and preview recipes.
