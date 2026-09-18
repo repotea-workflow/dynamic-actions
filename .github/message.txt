@@ -1,11 +1,1 @@
-refactor(baya): complete contract registry phases P1-P4 (#209)
-
-* refactor(baya): complete contract registry phases P1-P4
-
-Declare CEL runtime and renderer contracts in YAML, generate Rust/Dart constants, wire Swan/Tern/Hawk consumers, replace the orphan compiled_capabilities.json with a generated Dart manifest, and document hawk/contracts as generated-only output.
-
-* fix(baya): wire CEL validation defaults from contract YAML
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(baya): wire CEL validation defaults from contract YAML
