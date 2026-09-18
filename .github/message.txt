@@ -1,11 +1,3 @@
-refactor(baya): unify contract manifests behind registry.yaml (#208)
+refactor(baya): complete contract registry phases P1-P4
 
-* refactor(baya): unify contract manifests behind registry.yaml
-
-Move catalog and CEL environment into contracts/, add a baya-contract-registry entry point, and resolve generator inputs from registry includes instead of hardcoded paths.
-
-* fix(baya): require catalog schemaVersion in parser
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Declare CEL runtime and renderer contracts in YAML, generate Rust/Dart constants, wire Swan/Tern/Hawk consumers, replace the orphan compiled_capabilities.json with a generated Dart manifest, and document hawk/contracts as generated-only output.
