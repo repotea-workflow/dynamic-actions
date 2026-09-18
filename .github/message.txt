@@ -1,5 +1,17 @@
-fix: address feedback review findings
+feat: app feedback tickets (Scheme A) (#210)
+
+* feat: implement app feedback tickets end-to-end (Scheme A)
+
+Add Hawk storage and runtime/management APIs for in-app feedback threads,
+wire Swan DataSources and feature actions with Clarity list/compose/thread
+pages, and expose Robin app feedback workspace for staff replies.
+
+* fix: address feedback review findings
 
 Correct Robin management API calls, validate Unicode character limits,
 return 403 for closed-ticket staff replies, and hide user reply when
 tickets are resolved or closed.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
