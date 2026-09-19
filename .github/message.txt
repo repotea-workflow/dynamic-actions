@@ -1,3 +1,5 @@
-Align style family pages with Robin admin design system.
+Align style family pages with Robin admin design system. (#227)
 
 Add the missing nav icon, translate status labels, replace text action buttons with icon tooltips, fix i18n keys, and split theme editing into basic and distribution tabs.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
