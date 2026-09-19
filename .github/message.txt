@@ -1,3 +1,13 @@
-Fix theme error color and default accent initializer.
+Enable full CLARITY style theme tokens end-to-end (#232)
+
+* Enable full CLARITY style theme tokens across Hawk, Robin, and Swan.
+
+Validate 13 theme tokens on save, add Platform editors and clarity-red seed, merge tokens at runtime with theme-aware Plate and CLARITY STAC color refs.
+
+* Fix theme error color and default accent initializer.
 
 Use a dedicated error color in styleThemeData and make defaultClarityThemeTokens accent optional for the edit page.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
