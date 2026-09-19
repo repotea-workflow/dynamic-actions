@@ -1,1 +1,1 @@
-main
+fix/swan-locale-switch-app-wide
