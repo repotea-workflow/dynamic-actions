@@ -1,1 +1,1 @@
-fix: render WeChat login with TigerVNC
+fix(wechatdb): read shielded Linux SQLCipher keys
