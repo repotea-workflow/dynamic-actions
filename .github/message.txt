@@ -1,5 +1,3 @@
-Fix feedback.openReply ticketId for full style bundle import. (#229)
+Extend runtime access token lifetime to 10 days.
 
-Pass thread ticketId from STAC so Hawk catalog validation passes, while keeping runtime fallback to the thread context callback.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Align Hawk runtime sessions with Mercury so local and cosmos testing are not cut off by short-lived tokens.
