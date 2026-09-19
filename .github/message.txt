@@ -1,3 +1,13 @@
-Fix style theme runtime isolation and family consistency.
+Style Family + Style Theme (T0-T8) (#223)
+
+* Add Style Family and Style Theme platform model (T0-T8).
+
+Introduce avr_style_families/themes tables with import auto-upsert, management APIs, release styleThemes payload, runtime manifest delivery, CEL theme.*, Swan Theme wrapping, and Robin style families UI.
+
+* Fix style theme runtime isolation and family consistency.
 
 Drop cross-tenant compiled_payload fallback, upsert families on manual style create, and enforce optimistic revision locking on theme updates.
+
+---------
+
+Co-authored-by: Cursor Agent <agent@cursor.com>
