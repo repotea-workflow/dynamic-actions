@@ -1,3 +1,5 @@
-Fix feedback.openReply ticketId for full style bundle import.
+Fix feedback.openReply ticketId for full style bundle import. (#229)
 
 Pass thread ticketId from STAC so Hawk catalog validation passes, while keeping runtime fallback to the thread context callback.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
