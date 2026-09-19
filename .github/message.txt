@@ -1,5 +1,3 @@
-Extend runtime access token lifetime to 10 days. (#230)
+Enable app user avatar upload end-to-end across Hawk and Swan.
 
-Align Hawk runtime sessions with Mercury so local and cosmos testing are not cut off by short-lived tokens.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Auto-bind profile permissions on register, harden upload flow with clearer errors and mobile picker/crop support, and refresh the personal center after avatar changes.
