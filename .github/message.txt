@@ -1,3 +1,5 @@
-feat(platform): sync style fallbacks into primary language pack on import.
+feat(platform): sync style fallbacks into primary language pack on import. (#225)
 
 Align Aviary feature style import with Cosmos by defaulting missing localization keys into the primary platform pack draft, and expose the same opt-out in Robin and the import CLI.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
