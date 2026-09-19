@@ -1,5 +1,3 @@
-Refactor personal center to flat shell menu with account header. (#228)
+Fix feedback.openReply ticketId for full style bundle import.
 
-Move sign-in and profile entry to a built-in account header, flatten CLARITY personal center menus, slim ACCOUNT to signed-in profile with a deep-link fallback, and guide Shell Studio away from redundant ACCOUNT/AUTH list items.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Pass thread ticketId from STAC so Hawk catalog validation passes, while keeping runtime fallback to the thread context callback.
