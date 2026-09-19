@@ -1,5 +1,3 @@
-feat(platform): sync style fallbacks into primary language pack on import. (#225)
+Fix style family nav visibility and rename menu to 样式家族.
 
-Align Aviary feature style import with Cosmos by defaulting missing localization keys into the primary platform pack draft, and expose the same opt-out in Robin and the import CLI.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Gate the sidebar entry on platform.style_families.read and align Chinese labels with the expected 样式家族 naming.
