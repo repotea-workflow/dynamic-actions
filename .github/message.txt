@@ -1,1 +1,1 @@
-fix: restore supported Linux identity for WeChat
+fix: render WeChat login with TigerVNC
