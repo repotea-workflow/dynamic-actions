@@ -1,3 +1,5 @@
-Extend runtime access token lifetime to 10 days.
+Extend runtime access token lifetime to 10 days. (#230)
 
 Align Hawk runtime sessions with Mercury so local and cosmos testing are not cut off by short-lived tokens.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
