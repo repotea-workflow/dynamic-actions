@@ -1,5 +1,3 @@
-fix(swan): apply locale switches across all shell and feature views. (#222)
+Add Style Family and Style Theme platform model (T0-T8).
 
-Warm the Fluent pack before setLocale, resolve STAC strings from the catalog, and ensure remote-only fallback locales can boot without bundled FTL.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Introduce avr_style_families/themes tables with import auto-upsert, management APIs, release styleThemes payload, runtime manifest delivery, CEL theme.*, Swan Theme wrapping, and Robin style families UI.
