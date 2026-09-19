@@ -1,3 +1,5 @@
-Refactor personal center to flat shell menu with account header.
+Refactor personal center to flat shell menu with account header. (#228)
 
 Move sign-in and profile entry to a built-in account header, flatten CLARITY personal center menus, slim ACCOUNT to signed-in profile with a deep-link fallback, and guide Shell Studio away from redundant ACCOUNT/AUTH list items.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
