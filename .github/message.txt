@@ -1,3 +1,3 @@
-Add Style Family and Style Theme platform model (T0-T8).
+Fix style theme runtime isolation and family consistency.
 
-Introduce avr_style_families/themes tables with import auto-upsert, management APIs, release styleThemes payload, runtime manifest delivery, CEL theme.*, Swan Theme wrapping, and Robin style families UI.
+Drop cross-tenant compiled_payload fallback, upsert families on manual style create, and enforce optimistic revision locking on theme updates.
