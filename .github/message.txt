@@ -1,3 +1,5 @@
-fix(swan): apply locale switches across all shell and feature views.
+fix(swan): apply locale switches across all shell and feature views. (#222)
 
 Warm the Fluent pack before setLocale, resolve STAC strings from the catalog, and ensure remote-only fallback locales can boot without bundled FTL.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
