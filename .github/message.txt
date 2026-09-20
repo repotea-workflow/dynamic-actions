@@ -1,1 +1,1 @@
-fix: freeze app style themes in releases
+fix: address style theme release review
