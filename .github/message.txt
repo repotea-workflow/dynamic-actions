@@ -1,6 +1,3 @@
-fix(mobile): apply locale changes reliably across UI and banners (#212)
+fix(mobile): apply locale changes reliably (#212) (#225)
 
-Wait for pending locale writes before restoring preferences, refresh home
-banners when the active locale changes, follow the platform locale for system
-default, allow Japanese in account preference import, and fill remaining
-zh-Hant ARB gaps.
+Fixes #212.
