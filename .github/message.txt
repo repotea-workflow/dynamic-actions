@@ -1,4 +1,3 @@
-fix(mobile): scope quick text Large formatting to selection only
+fix(mobile): scope quick text Large formatting to selection (#214) (#224)
 
-Stop the collapsed-caret toolbar path from applying inlineCode to the entire
-document, and preserve the user's selection when tapping Large.
+Fixes #214.
