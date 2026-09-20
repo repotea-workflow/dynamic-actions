@@ -1,7 +1,4 @@
-feat(editor): auto-promote runtime images and expose insertImageImport (#198)
+feat(plate): add barcode labelPosition for text above bars
 
-Bind asset stores with a runtime JSON normalizer so raster data URLs are
-promoted before they hit live document JSON, add insertImageImport for
-custom layouts, and expose PlateHostController.insertImage.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Expose labelPosition on barcode content and inspector bindings, render
+labels above bars when requested, and cover the layout with tests.
