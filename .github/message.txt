@@ -1,1 +1,3 @@
-fix: address style theme release review
+Fix Release-frozen App style themes (#234)
+
+Freeze App-specific theme selections into Releases, cache them atomically in Swan, and make Theme authorization and mutations consistent.
