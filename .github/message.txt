@@ -1,4 +1,4 @@
-fix(mobile): make image Fit tool resize to label frame (#215)
+fix(mobile): make image Fit tool resize to label frame (#215) (#223)
 
 The Fit action now applies proportional contain sizing and repositions the
 selected image to fill the active frame, matching template editor expectations.
