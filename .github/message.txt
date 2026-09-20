@@ -1,3 +1,3 @@
-fix(mobile): apply locale changes reliably (#212) (#225)
+Fix quick text bold losing selection on toolbar tap (#208)
 
-Fixes #212.
+Capture the text selection on pointer down before the toolbar steals focus, and apply bold only to the selected range—matching the existing large-text fix.
