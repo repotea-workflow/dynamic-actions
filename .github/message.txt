@@ -1,6 +1,5 @@
-fix: device QA feedback on crop, auth, and learning UX (#222)
+fix(mobile): make image Fit tool resize to label frame (#215)
 
-Clarify free crop as unconstrained ratio with visible handles, fix fixed-ratio
-crop dragging, restore case-insensitive username registration, center learning
-subject chips, sync learning type navigation, and show connected printer model
-in preview.
+The Fit action now applies proportional contain sizing and repositions the
+selected image to fill the active frame, matching template editor expectations.
+Split the mobile editor shell into focused modules to satisfy codeline limits.
