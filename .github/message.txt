@@ -1,4 +1,6 @@
-feat(plate): add barcode labelPosition for text above bars
+feat(plate): barcode labelPosition for text above bars (#206)
 
 Expose labelPosition on barcode content and inspector bindings, render
 labels above bars when requested, and cover the layout with tests.
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
