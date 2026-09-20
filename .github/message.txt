@@ -1,5 +1,4 @@
-fix(mobile): make image Fit tool resize to label frame (#215) (#223)
+fix(mobile): scope quick text Large formatting to selection only
 
-The Fit action now applies proportional contain sizing and repositions the
-selected image to fill the active frame, matching template editor expectations.
-Split the mobile editor shell into focused modules to satisfy codeline limits.
+Stop the collapsed-caret toolbar path from applying inlineCode to the entire
+document, and preserve the user's selection when tapping Large.
