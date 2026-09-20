@@ -1,3 +1,13 @@
-Apply CLARITY theme asset overrides at runtime and seed five themes.
+CLARITY theme runtime assets and five color variants (#233)
+
+* Remove spacing and radius from style theme platform configuration.
+
+Drop the Robin editor section and require only nine color tokens on save, while stripping legacy size keys from existing themes via migration.
+
+* Apply CLARITY theme asset overrides at runtime and seed five themes.
 
 Resolve shell and STAC icons through style-theme assetOverrides, add red/green/purple/orange variants with koboyo icons, and split runtime_app_repository for codeline limits.
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
