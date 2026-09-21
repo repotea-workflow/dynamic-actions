@@ -1,3 +1,4 @@
-Fix quick text bold losing selection on toolbar tap (#208) (#226)
+fix(mobile): wire barcode labelPosition UI for #206
 
-Capture the text selection on pointer down before the toolbar steals focus, and apply bold only to the selected range—matching the existing large-text fix.
+Import gprinterPlatePlugins in the mobile editor shell and bump plate
+dependency to include barcode labelPosition support.
