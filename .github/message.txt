@@ -1,3 +1,5 @@
-fix(mobile): barcode labelPosition for text above bars (#206)
+fix(mobile): align zh-Hant paper width l10n placeholders
 
-Fixes #206.
+The zh-Hant devicesPaperWidthValue string used {value} while other
+locales use {dots}/{millimeters}, which broke release builds after
+gen-l10n required three positional arguments.
