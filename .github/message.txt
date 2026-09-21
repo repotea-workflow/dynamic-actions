@@ -1,5 +1,3 @@
-Convention-based CLARITY theme icon paths (#235)
+Apply CLARITY accent tokens to card borders and shell chrome.
 
-Replace per-theme assetOverrides with path-based lookup in Hawk runtime and Swan STAC loading, drop the theme assets API/table, and update Robin and seed scripts accordingly.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Wire style theme tokens through Material outline, plate rendering, and shell scaffold so theme variants are visibly distinct in the app.
