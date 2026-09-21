@@ -1,4 +1,3 @@
-fix(mobile): wire barcode labelPosition UI for #206
+fix(mobile): barcode labelPosition for text above bars (#206)
 
-Import gprinterPlatePlugins in the mobile editor shell and bump plate
-dependency to include barcode labelPosition support.
+Fixes #206.
