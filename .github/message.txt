@@ -1,9 +1,1 @@
-feat(product): upload public product delete list (#322)
-
-* feat(product): upload public product delete list
-
-Let chief outlets delete audited public products from an exported spreadsheet instead of paging through thousands of rows to tick them.
-
-* fix(product): skip empty upload deletes
-
-Do not open confirm when resolve finds zero deletable rows, suppress axios toasts on batch confirm, and re-resolve each 100-id chunk so a blocked sibling cannot fail the rest.
+fix(omsk): stabilize bulk declaration lookup
