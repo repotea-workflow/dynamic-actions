@@ -1,11 +1,1 @@
-fix: reconcile terminal cancellation cleanup (#326)
-
-* fix(codeon): retire terminal cancellation attentions
-
-* fix: reconcile terminal cancellation cleanup
-
-* fix(worker): handle cursor stream-json completion
-
-* fix(cancellation): accept terminal inspection during cancellation
-
-* fix: close terminal cleanup and cancellation races
+fix(worker): reject stale repository readbacks
