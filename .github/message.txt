@@ -1,1 +1,1 @@
-fix(postgres): reconcile repository observation wakeups
+fix(postgres): reconcile repository observation wakeups (#329)
