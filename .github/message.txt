@@ -1,1 +1,1 @@
-fix(product): preserve orders when removing registrations
+fix(product): preserve orders when removing registrations (#324)
