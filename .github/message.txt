@@ -1,1 +1,1 @@
-fix(omsk): stabilize bulk declaration lookup (#323)
+fix(product): preserve orders when removing registrations
