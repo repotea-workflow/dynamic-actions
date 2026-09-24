@@ -1,1 +1,1 @@
-test: align no-change artifact expectations
+fix(lifecycle): fence review head and cleanup authority
