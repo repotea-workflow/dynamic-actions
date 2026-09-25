@@ -1,1 +1,5 @@
-fix(codeon): preserve accepted agent completions
+Preserve accepted agent completions after runtime exit (#338)
+
+* fix(pi): show valid planning completion payload
+
+* fix(codeon): preserve accepted agent completions
