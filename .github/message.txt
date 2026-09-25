@@ -1,1 +1,1 @@
-fix(server): fall back for legacy cleanup authority
+fix(server): fall back for legacy cleanup authority (#333)
