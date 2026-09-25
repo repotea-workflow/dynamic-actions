@@ -1,1 +1,1 @@
-fix(sender): avoid logout shortcut
+feat(webox): add media uploads and sticker groundwork
