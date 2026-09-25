@@ -1,1 +1,1 @@
-fix(postgres): reconcile repository observation wakeups (#329)
+fix(codeon): converge runtime recovery authority
