@@ -1,1 +1,1 @@
-feat(webox): add media uploads and sticker groundwork
+fix(webox): fail closed before sticker calibration
