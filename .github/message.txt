@@ -1,5 +1,1 @@
-Stabilize terminal cleanup and Pi completion recovery (#334)
-
-* fix(server): fall back for legacy cleanup authority
-
-* fix(pi): clarify implementation completion field levels
+fix(pi): provide valid implementation completion example
