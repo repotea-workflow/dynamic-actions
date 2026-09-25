@@ -1,1 +1,1 @@
-fix(worker): migrate legacy command ack journal state (#331)
+fix(server): isolate invalid terminal cleanup candidates
