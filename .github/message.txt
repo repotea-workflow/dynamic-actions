@@ -1,1 +1,1 @@
-feat(webox): send searched stickers safely
+fix(webox): recover safe UI state before sending
