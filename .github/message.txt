@@ -1,1 +1,1 @@
-fix(server): isolate invalid terminal cleanup candidates
+fix(server): isolate invalid terminal cleanup candidates (#332)
