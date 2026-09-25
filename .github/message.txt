@@ -1,1 +1,1 @@
-fix(pi): show valid planning completion payload
+fix(pi): show valid planning completion payload (#337)
