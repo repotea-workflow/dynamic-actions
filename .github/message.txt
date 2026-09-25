@@ -1,1 +1,1 @@
-fix(sender): resolve unique unremarked contacts
+fix(sender): avoid logout shortcut
