@@ -1,1 +1,1 @@
-fix(webox): fail closed before sticker calibration
+feat(media): download remote objects
