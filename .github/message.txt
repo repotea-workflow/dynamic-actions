@@ -1,1 +1,1 @@
-fix(pi): provide valid implementation completion example (#335)
+fix(review): recognize no-change candidates
