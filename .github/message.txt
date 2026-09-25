@@ -1,1 +1,7 @@
-fix(codeon): converge runtime recovery authority
+fix(codeon): converge remote runtime lifecycle recovery (#330)
+
+* fix(codeon): reconcile remote execution lifecycle authority
+
+* fix(postgres): persist revision review candidate identity
+
+* fix(codeon): converge runtime recovery authority
