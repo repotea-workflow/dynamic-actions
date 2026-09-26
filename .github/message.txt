@@ -1,1 +1,1 @@
-fix(api): isolate RPC resources and cancellation
+fix(api): drain active sends during shutdown
