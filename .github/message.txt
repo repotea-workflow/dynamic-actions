@@ -1,1 +1,1 @@
-fix(api): bound RPC resources and queue shutdown
+fix(api): make send start atomic with shutdown
