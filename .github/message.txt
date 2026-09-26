@@ -1,1 +1,1 @@
-fix(api): drain active sends during shutdown
+fix(api): page messages without skipping ties
