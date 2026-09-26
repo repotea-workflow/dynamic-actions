@@ -1,1 +1,3 @@
-fix(api): overlap message watermarks safely
+Merge pull request #1 from 0xfe10/agt/jsonrpc-core
+
+feat(api): replace legacy HTTP API with JSON-RPC
