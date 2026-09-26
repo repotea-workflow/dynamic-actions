@@ -1,3 +1,1 @@
-Apply CLARITY accent tokens to card borders and shell chrome.
-
-Wire style theme tokens through Material outline, plate rendering, and shell scaffold so theme variants are visibly distinct in the app.
+feat(swan): add Plume and Keel style families
