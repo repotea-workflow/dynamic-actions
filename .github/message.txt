@@ -1,1 +1,1 @@
-feat(api): replace legacy HTTP API with JSON-RPC
+fix(api): keep WebSocket control path responsive
