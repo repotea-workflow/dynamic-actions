@@ -1,1 +1,1 @@
-fix(api): preserve cursor and bound media decoding
+fix(api): isolate RPC resources and cancellation
