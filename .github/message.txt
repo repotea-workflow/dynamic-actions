@@ -1,1 +1,1 @@
-fix(api): make send start atomic with shutdown
+fix(api): preserve cursor and bound media decoding
