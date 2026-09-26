@@ -1,1 +1,1 @@
-fix(api): keep WebSocket control path responsive
+fix(api): bound RPC resources and queue shutdown
