@@ -1,1 +1,1 @@
-fix(api): page messages without skipping ties
+fix(api): preserve delayed messages and query access
