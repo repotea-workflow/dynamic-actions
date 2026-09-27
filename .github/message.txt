@@ -1,1 +1,3 @@
-fix(swan): give style cards material layout
+fix(swan): align style families and upgrade rustls
+
+Reviewed locally and verified feature bundle/source checks plus Android emulator smoke test.
