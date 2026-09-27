@@ -1,1 +1,1 @@
-fix(worker): send grok operation bearer header
+fix(worker): ignore non-secret grok profile settings
