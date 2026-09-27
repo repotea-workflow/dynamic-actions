@@ -1,1 +1,3 @@
-fix(build): include embedded API schema
+Merge pull request #1 from 0xfe10/agt/concord-hardening
+
+feat(harbor): persist delivery jobs and expose MCP
