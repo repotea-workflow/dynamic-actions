@@ -1,1 +1,1 @@
-fix(worker): configure grok api base url for custom models
+fix(worker): tolerate stale command ack conflicts
