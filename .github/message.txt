@@ -1,1 +1,1 @@
-fix(worker): tolerate stale event conflicts
+fix(publication): recheck branch after uncertain push
