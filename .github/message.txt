@@ -1,1 +1,1 @@
-test(swan): render account style variants
+fix(stac): preserve empty repeat widget shape
