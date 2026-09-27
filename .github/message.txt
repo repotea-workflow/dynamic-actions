@@ -1,1 +1,1 @@
-fix(swan): honor configured development release channel
+test(swan): render account style variants
