@@ -1,1 +1,1 @@
-fix(worker): disable interactive Grok questions
+fix(worker): pass cursor subscription api key to child
