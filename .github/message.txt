@@ -1,1 +1,1 @@
-fix(worker): pass cursor subscription api key to child
+fix(worker): configure grok api base url for custom models
