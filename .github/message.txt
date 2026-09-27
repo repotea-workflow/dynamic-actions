@@ -1,11 +1,1 @@
-fix(stac): keep empty repeats renderable (#243)
-
-* test(swan): render account style variants
-
-* fix(stac): preserve empty repeat widget shape
-
-* chore: preserve data repeat formatting
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(stac): compile account data conditions
