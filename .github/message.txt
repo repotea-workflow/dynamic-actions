@@ -1,1 +1,11 @@
-fix(swan): follow active feature style in shell
+fix(swan): align shell with Plume and Keel styles (#239)
+
+* fix(raptors): upgrade rustls for TLS advisory
+
+* fix(swan): give style cards material layout
+
+* fix(swan): follow active feature style in shell
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
