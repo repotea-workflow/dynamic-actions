@@ -1,1 +1,1 @@
-fix(worker): forward grok operation capability header
+fix(worker): send grok operation bearer header
