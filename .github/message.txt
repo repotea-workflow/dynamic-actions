@@ -1,1 +1,1 @@
-fix(auth): retire bootstrap token after owner setup
+fix(harbor): isolate Pilot delivery and proxy credentials
