@@ -1,1 +1,1 @@
-feat(concord): add Harbor auth and controller ownership
+fix(auth): gate first owner setup
