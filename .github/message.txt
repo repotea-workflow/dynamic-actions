@@ -1,1 +1,1 @@
-fix(controller): default incomplete Pilots to paused
+fix(harbor): gate every database migration version
