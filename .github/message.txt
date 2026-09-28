@@ -1,1 +1,1 @@
-fix(controller): default managed Pilot resources
+fix(controller): bind generated storage to Pilot UID
