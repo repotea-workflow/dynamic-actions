@@ -1,1 +1,1 @@
-feat(harbor): manage and route multiple Pilots
+fix(controller): default incomplete Pilots to paused
