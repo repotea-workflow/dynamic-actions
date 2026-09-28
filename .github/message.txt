@@ -1,1 +1,1 @@
-fix(control-plane): retain Pilot storage and restrict tokens
+fix(controller): use least-privilege owner references
