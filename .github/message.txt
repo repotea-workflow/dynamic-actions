@@ -1,1 +1,1 @@
-fix(mcp): bind completion identity to capability
+fix(publication): preserve uncertain push outcomes
