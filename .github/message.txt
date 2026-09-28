@@ -1,3 +1,1 @@
-Merge pull request #2 from 0xfe10/agt/harbor-capability
-
-fix(runtime): isolate Pilot ptrace capability
+Merge remote-tracking branch 'origin/main' into agt/multi-pilot-control-plane
