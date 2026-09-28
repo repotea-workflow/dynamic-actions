@@ -1,1 +1,1 @@
-fix(runtime): run controller without ptrace capability
+feat(concord): add Harbor auth and controller ownership
