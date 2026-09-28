@@ -1,1 +1,1 @@
-fix(harbor): scope cached operations by Pilot
+fix(controller): reconcile isolated Pilot runtime contract
