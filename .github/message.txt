@@ -1,1 +1,1 @@
-fix(controller): use least-privilege owner references
+fix(harbor): make GitOps Pilots read-only
