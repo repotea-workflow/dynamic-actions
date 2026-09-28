@@ -1,1 +1,1 @@
-fix(harbor): make GitOps Pilots read-only
+fix(controller): default managed Pilot resources
