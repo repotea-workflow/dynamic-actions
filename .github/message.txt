@@ -1,1 +1,1 @@
-fix(harbor): gate every database migration version
+fix(auth): retire bootstrap token after owner setup
