@@ -1,1 +1,1 @@
-fix(controller): reconcile isolated Pilot runtime contract
+feat(dashboard): build Astryx UI with pnpm
