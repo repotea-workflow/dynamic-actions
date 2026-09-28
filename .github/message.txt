@@ -1,3 +1,1 @@
-Merge pull request #3 from 0xfe10/agt/multi-pilot-control-plane
-
-feat(concord): add multi-Pilot control plane
+feat(dashboard): add localization themes and embedded preview
