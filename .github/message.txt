@@ -1,1 +1,1 @@
-fix(dashboard): package brand assets in image
+fix(harbor): accept message poll filters
