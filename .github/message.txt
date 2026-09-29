@@ -1,1 +1,1 @@
-fix(dashboard): simplify auth layout on small screens
+refine(dashboard): tighten workspace layout and preferences
