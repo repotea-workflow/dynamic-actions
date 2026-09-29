@@ -1,1 +1,9 @@
-fix(swan): honor runtime asset overrides
+feat(swan): embed feature styles in Flutter views (#245)
+
+* feat(swan): embed feature styles in Flutter views
+
+* fix(swan): honor runtime asset overrides
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
