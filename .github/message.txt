@@ -1,1 +1,1 @@
-feat(dashboard): add concord brand mark and favicon
+fix(dashboard): package brand assets in image
