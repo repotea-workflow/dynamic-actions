@@ -1,1 +1,1 @@
-polish(dashboard): refine layout and fullscreen preview
+fix(dashboard): simplify auth layout on small screens
