@@ -1,1 +1,1 @@
-fix(harbor): accept message poll filters
+fix(harbor): accept message poll filters (#5)
