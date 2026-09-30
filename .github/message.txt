@@ -1,1 +1,1 @@
-feat(dashboard): adopt Astryx top navigation shell
+feat(dashboard): adopt Astryx top navigation shell (#6)
