@@ -1,3 +1,1 @@
-refactor(swan): move embedded styles into shared components
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+feat: complete Lanhu PLUME and KEEL parity
