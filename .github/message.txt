@@ -1,1 +1,1 @@
-feat(dashboard): adopt Astryx top navigation shell (#6)
+fix(dashboard): prevent stale embedded assets
