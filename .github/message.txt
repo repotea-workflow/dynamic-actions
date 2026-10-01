@@ -1,1 +1,5 @@
-fix(codeon): refresh generated OpenAPI source identity
+fix(codeon): preserve repository reconciliation wakeups (#343)
+
+* fix(codeon): wake repository reconciliation safely
+
+* test(codeon): update reconciliation fixtures for current protocol
