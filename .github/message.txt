@@ -1,1 +1,1 @@
-feat(dashboard): use Astryx login card and mobile nav
+feat(dashboard): use Astryx login card and mobile nav (#8)
