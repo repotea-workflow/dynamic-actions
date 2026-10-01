@@ -1,1 +1,1 @@
-feat(dashboard): split accounts and devices pages (#10)
+fix(dashboard): tighten account and device layouts
