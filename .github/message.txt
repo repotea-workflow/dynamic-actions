@@ -1,1 +1,1 @@
-fix(dashboard): simplify theme control and alignment
+fix(dashboard): simplify theme control and alignment (#12)
