@@ -1,1 +1,1 @@
-feat(dashboard): split accounts and devices pages
+feat(dashboard): split accounts and devices pages (#10)
