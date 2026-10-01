@@ -1,1 +1,1 @@
-fix(dashboard): simplify language menu (#15)
+refactor(dashboard): merge accounts and devices into pilots
