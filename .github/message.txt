@@ -1,1 +1,1 @@
-refactor(dashboard): merge accounts and devices into pilots
+refactor(dashboard): merge accounts and devices into pilots (#16)
