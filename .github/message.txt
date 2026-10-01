@@ -1,1 +1,33 @@
-fix(publication): preserve uncertain push outcomes
+fix(execution): harden agent completion and recovery (#340)
+
+* fix(pi): show valid planning completion payload
+
+* fix(codeon): preserve accepted agent completions
+
+* fix(worker): isolate cursor subscription profile
+
+* fix(worker): disable interactive Grok questions
+
+* fix(worker): pass cursor subscription api key to child
+
+* fix(worker): configure grok api base url for custom models
+
+* fix(worker): tolerate stale command ack conflicts
+
+* fix(worker): forward grok operation capability header
+
+* fix(worker): send grok operation bearer header
+
+* fix(worker): ignore non-secret grok profile settings
+
+* fix(worker): tolerate stale event conflicts
+
+* fix(publication): recheck branch after uncertain push
+
+* fix(execution): freeze default agent routing authority
+
+* fix(postgres): accept remote knowledge identities
+
+* fix(mcp): bind completion identity to capability
+
+* fix(publication): preserve uncertain push outcomes
