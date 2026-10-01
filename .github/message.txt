@@ -1,3 +1,1 @@
-refactor: align Aviary style kit with Cosmos components
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix: use Aviary names in Swan style kit
