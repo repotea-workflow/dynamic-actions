@@ -1,1 +1,1 @@
-chore(codeon): remove local placeholder entrypoint
+fix(codeon): complete runtime lifecycle recovery
