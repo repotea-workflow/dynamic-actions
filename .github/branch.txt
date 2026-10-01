@@ -1,1 +1,1 @@
-main
+agt/compact-language-menu
