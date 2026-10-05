@@ -1,5 +1,1 @@
-fix(mobile): align zh-Hant paper width l10n placeholders (#228)
-
-The zh-Hant devicesPaperWidthValue string used {value} while other
-locales use {dots}/{millimeters}, which broke release builds after
-gen-l10n required three positional arguments.
+ci: add isolated production image builds for gprinter
