@@ -261,6 +261,4 @@ jobs:
       - name: Verify backend
         run: just check-backend
 
-      - name: Verify MySQL migrations
-        run: just test-migrations-mysql
 

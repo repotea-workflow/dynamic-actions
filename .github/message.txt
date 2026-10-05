@@ -1,1 +1,1 @@
-test: filter banner fixtures before cloning
+ci: reuse MySQL migration checks from backend gate
