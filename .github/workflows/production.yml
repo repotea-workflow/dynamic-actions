@@ -5,6 +5,10 @@ on:
     branches:
       - "**"
 
+concurrency:
+  group: gprinter-production-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   DOCKER_REGISTRY: ghcr.io
   DOCKER_REGISTRY_ALI: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
@@ -260,5 +264,3 @@ jobs:
 
       - name: Verify backend
         run: just check-backend
-
-

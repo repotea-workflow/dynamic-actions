@@ -1,1 +1,1 @@
-ci: reuse MySQL migration checks from backend gate
+ci: format production workflow and supersede obsolete builds
