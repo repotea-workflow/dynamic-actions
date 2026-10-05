@@ -1,1 +1,1 @@
-ci: add isolated production image builds for gprinter
+style: fix backend formatting for production validation
