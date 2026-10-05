@@ -1,1 +1,1 @@
-ci: format production workflow and supersede obsolete builds
+test: assert device catalog bumps relative to migrated baseline
