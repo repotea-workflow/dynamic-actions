@@ -1,1 +1,19 @@
-test: update migration registry tail expectations
+ci: build gprinter production images for Faro (#229)
+
+* ci: add isolated production image builds for gprinter
+
+* style: fix backend formatting for production validation
+
+* test: filter banner fixtures before cloning
+
+* ci: reuse MySQL migration checks from backend gate
+
+* ci: format production workflow and supersede obsolete builds
+
+* test: assert device catalog bumps relative to migrated baseline
+
+* test: align registration fixtures with app password policy
+
+* test: align MySQL registration fixtures with app password policy
+
+* test: update migration registry tail expectations
