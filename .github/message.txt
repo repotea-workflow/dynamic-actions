@@ -1,1 +1,1 @@
-style: fix backend formatting for production validation
+test: filter banner fixtures before cloning
