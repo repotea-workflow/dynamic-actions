@@ -1,1 +1,1 @@
-test: align MySQL registration fixtures with app password policy
+test: update migration registry tail expectations
