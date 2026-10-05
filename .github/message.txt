@@ -1,1 +1,1 @@
-test: align registration fixtures with app password policy
+test: align MySQL registration fixtures with app password policy
