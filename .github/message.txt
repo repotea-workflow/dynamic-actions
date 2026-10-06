@@ -1,3 +1,5 @@
-Speed up Swan shell startup with on-demand theme asset warm.
+Merge origin/main into feat/swan-shell-performance
 
-Replace blocking full Clarity icon preload with shell- and page-scoped alias collection, shared file cache with bundled asset support, style parse caching, and skeleton loading UX while manifest and payloads resolve.
+Resolve conflicts in shell perf work with PLUME/KEEL shell themes, feature_style
+refactor, and AppFileLibrary generation-safe invalidation. Fix feature asset warm
+scheduling and restore manifest retry while shell surfaces hydrate.
