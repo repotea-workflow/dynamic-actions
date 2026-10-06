@@ -1,3 +1,3 @@
-fix: make resource image previews visible (#250)
+Speed up Swan shell startup with on-demand theme asset warm.
 
-Add visible thumbnail states, online full-size previews, retry handling, and localized resource preview controls.
+Replace blocking full Clarity icon preload with shell- and page-scoped alias collection, shared file cache with bundled asset support, style parse caching, and skeleton loading UX while manifest and payloads resolve.
