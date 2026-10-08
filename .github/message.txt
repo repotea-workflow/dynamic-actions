@@ -1,1 +1,1 @@
-fix(mobile): render Android PDFs through owned temporary files
+fix: isolate Office uploads and require staging proof for promotion

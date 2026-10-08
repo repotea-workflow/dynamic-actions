@@ -5,6 +5,10 @@ on:
     branches:
       - "**"
 
+concurrency:
+  group: gprinter-staging
+  cancel-in-progress: false
+
 env:
   DOCKER_REGISTRY: ghcr.io
   DOCKER_REGISTRY_ALI: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
@@ -31,7 +35,7 @@ jobs:
       - name: Ensure main
         id: ensure_main
         run: |
-          if grep -q 'main' .github/branch.txt; then
+          if [ -f .github/branch.txt ] && [ "$(cat .github/branch.txt)" = main ]; then
             echo "ENSURE_MAIN=true" >> "$GITHUB_OUTPUT"
           else
             echo "ENSURE_MAIN=false" >> "$GITHUB_OUTPUT"
@@ -44,6 +48,7 @@ jobs:
     if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     outputs:
       digest: ${{ steps.office.outputs.digest }}
+      source_sha: ${{ steps.office-source.outputs.sha }}
     steps:
       - uses: actions/checkout@v6
       - name: Checkout source repository
@@ -77,6 +82,9 @@ jobs:
   build-api:
     name: Build API image
     runs-on: ubuntu-latest
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+      digest: ${{ steps.published.outputs.digest }}
     needs:
       - ensure-main
     if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
@@ -94,6 +102,10 @@ jobs:
           repository: repotea-workspace/gprinter
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
+
+      - name: Record source revision
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
@@ -146,9 +158,19 @@ jobs:
             docker push ${{ steps.tags.outputs.ali_sha }}
             docker push ${{ steps.tags.outputs.ali_staging }}
 
+      - name: Resolve published immutable image
+        id: published
+        run: |
+          digest="$(docker buildx imagetools inspect '${{ steps.tags.outputs.ali_sha }}' --format '{{.Manifest.Digest}}')"
+          [[ "$digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+
   build-admin:
     name: Build Admin image
     runs-on: ubuntu-latest
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
+      digest: ${{ steps.published.outputs.digest }}
     needs:
       - ensure-main
     if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
@@ -166,6 +188,10 @@ jobs:
           repository: repotea-workspace/gprinter
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
           ref_file: .github/ref.txt
+
+      - name: Record source revision
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
 
       - name: Checkout Plate editor host
         uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
@@ -252,6 +278,13 @@ jobs:
             docker push ${{ steps.tags.outputs.ali_sha }}
             docker push ${{ steps.tags.outputs.ali_staging }}
 
+      - name: Resolve published immutable image
+        id: published
+        run: |
+          digest="$(docker buildx imagetools inspect '${{ steps.tags.outputs.ali_sha }}' --format '{{.Manifest.Digest}}')"
+          [[ "$digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
+
   deploy:
     name: Deploy staging
     runs-on: ubuntu-latest
@@ -260,6 +293,15 @@ jobs:
       - build-admin
       - build-office
     steps:
+      - name: Verify matching source revisions
+        env:
+          API_SHA: ${{ needs.build-api.outputs.source_sha }}
+          ADMIN_SHA: ${{ needs.build-admin.outputs.source_sha }}
+          OFFICE_SHA: ${{ needs.build-office.outputs.source_sha }}
+        run: |
+          test "$API_SHA" = "$ADMIN_SHA"
+          test "$API_SHA" = "$OFFICE_SHA"
+
       - uses: actions/checkout@v6
 
       - uses: benjlevesque/short-sha@v3.0
@@ -277,13 +319,43 @@ jobs:
           argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
           argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
           app_name: work-staging-gprinter-qshz
+          wait_health: true
           changes: |
             {
               "argocd/work/gprinter-qshz/overlays/staging/gprinter/values.yaml": {
                 "images.api.repository": "${{ env.DOCKER_REGISTRY_ALI }}/${{ env.DOCKER_NAMESPACE_ALI }}/${{ env.REPO_NAME }}_gprinter-api",
                 "images.api.tag": "sha-${{ env.SHA }}",
+                "images.api.digest": "${{ needs.build-api.outputs.digest }}",
                 "images.admin.repository": "${{ env.DOCKER_REGISTRY_ALI }}/${{ env.DOCKER_NAMESPACE_ALI }}/${{ env.REPO_NAME }}_gprinter-admin",
                 "images.admin.tag": "sha-${{ env.SHA }}",
+                "images.admin.digest": "${{ needs.build-admin.outputs.digest }}",
                 "officeConverter.image": "${{ env.DOCKER_REGISTRY_ALI }}/${{ env.DOCKER_NAMESPACE_ALI }}/repotea-workspace_gprinter_office-converter@${{ needs.build-office.outputs.digest }}"
               }
             }
+
+      - name: Checkout verified source for staging smoke
+        uses: actions/checkout@v6
+        with:
+          repository: repotea-workspace/gprinter
+          ref: ${{ needs.build-api.outputs.source_sha }}
+          path: staging-source
+          persist-credentials: false
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+
+      - name: Verify deployed revision and real Office conversion
+        env:
+          SOURCE_SHA: ${{ needs.build-api.outputs.source_sha }}
+          API_DIGEST: ${{ needs.build-api.outputs.digest }}
+          ADMIN_DIGEST: ${{ needs.build-admin.outputs.digest }}
+          OFFICE_DIGEST: ${{ needs.build-office.outputs.digest }}
+          ARGOCD_SERVER: ${{ secrets.ARGOCD_FES_SERVER }}
+          ARGOCD_AUTH_TOKEN: ${{ secrets.ARGOCD_FES_API_TOKEN }}
+        run: python3 -B staging-source/infra/ci/staging_smoke.py
+
+      - name: Save staging rollout and conversion evidence
+        uses: actions/upload-artifact@b7c566a772e6b6bfb58ed0dc250532a479d7789f # v6, Node 24
+        with:
+          name: gprinter-staging-evidence-${{ needs.build-api.outputs.source_sha }}
+          path: staging-evidence/evidence.json
+          if-no-files-found: error
+          retention-days: 30
