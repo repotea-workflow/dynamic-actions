@@ -1,1 +1,1 @@
-fix: isolate Office uploads and require staging proof for promotion
+fix(mobile): suspend banner and SMS timers in background
