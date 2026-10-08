@@ -1,1 +1,1 @@
-refactor(dashboard): merge accounts and devices into pilots (#16)
+feat(bot): add native Concord WeChat channel and image build

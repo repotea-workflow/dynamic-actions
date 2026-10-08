@@ -1,0 +1,74 @@
+name: "[concord] Bot channel image"
+
+on:
+  push:
+    branches: ["**"]
+
+concurrency:
+  group: concord-bot-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord-bot
+
+jobs:
+  build:
+    name: Build and validate Concord Bot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - name: Read source metadata
+        id: source
+        run: |
+          echo "sha=$(cut -c1-7 .github/commit.txt)" >> "$GITHUB_OUTPUT"
+          if grep -qx main .github/branch.txt; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "publish=false" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out Concord source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/concord
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref_file: .github/ref.txt
+      - name: Assemble pinned Bot and Concord channel
+        run: python3 docker/nanobot/prepare-source.py /tmp/concord-bot-source
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v4
+      - name: Build candidate
+        uses: docker/build-push-action@v7
+        with:
+          context: /tmp/concord-bot-source
+          file: /tmp/concord-bot-source/Dockerfile
+          load: true
+          tags: concord-bot:candidate
+          build-args: NANOBOT_CHANNELS=slack,discord,telegram
+          cache-from: type=gha,scope=concord-bot
+          cache-to: type=gha,mode=max,scope=concord-bot
+      - name: Test channel contracts and recovery
+        run: |
+          docker run --rm --entrypoint python \
+            -v "$PWD/integrations/nanobot/tests:/tests:ro" \
+            concord-bot:candidate -m unittest discover -s /tests -v
+          docker run --rm --entrypoint python concord-bot:candidate -c \
+            'from nanobot.channels.registry import load_channel_plugin; p=load_channel_plugin("concord"); assert p.display_name=="Concord"; assert "apiKey" in p.setup.secrets; p.load_channel_class()'
+      - name: Log in to GHCR
+        if: steps.source.outputs.publish == 'true'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish verified image
+        if: steps.source.outputs.publish == 'true'
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        run: |
+          docker tag concord-bot:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
+          docker push "${IMAGE_NAME}:sha-${SOURCE_SHA}"
