@@ -1,1 +1,1 @@
-fix(bot): batch continuous WeChat attachment uploads
+feat(bot): support native Aliyun OSS attachment links
