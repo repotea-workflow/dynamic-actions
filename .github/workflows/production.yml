@@ -1,13 +1,15 @@
-name: "[gprinter] Production images"
+name: "[gprinter] Production release"
 
 on:
   push:
     branches:
       - "**"
+    tags:
+      - "v*-gprinter"
 
 concurrency:
-  group: gprinter-production-${{ github.ref }}
-  cancel-in-progress: true
+  group: gprinter-production
+  cancel-in-progress: false
 
 env:
   DOCKER_REGISTRY: ghcr.io
@@ -35,7 +37,7 @@ jobs:
       - name: Ensure production
         id: ensure_main
         run: |
-          if [ "$(cat .github/branch.txt)" = 'agt/gprinter-production' ]; then
+          if { [ -f .github/tag.txt ] && grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+([.-][A-Za-z0-9.-]+)?$' .github/tag.txt; } || { [ -f .github/branch.txt ] && [ "$(cat .github/branch.txt)" = 'agt/gprinter-production' ]; }; then
             echo "ENSURE_PRODUCTION=true" >> "$GITHUB_OUTPUT"
           else
             echo "ENSURE_PRODUCTION=false" >> "$GITHUB_OUTPUT"
@@ -43,6 +45,8 @@ jobs:
 
   build-api:
     name: Build API image
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
     runs-on: ubuntu-latest
     needs:
       - ensure-production
@@ -78,7 +82,11 @@ jobs:
           registry: ${{ env.DOCKER_REGISTRY_ALI }}
 
       - name: Bind source revision
-        run: echo "SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+        id: source
+        run: |
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          echo "SHA=$SOURCE_SHA" >> "$GITHUB_ENV"
+          echo "sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Set image tags
         id: tags
@@ -117,6 +125,8 @@ jobs:
 
   build-admin:
     name: Build Admin image
+    outputs:
+      source_sha: ${{ steps.source.outputs.sha }}
     runs-on: ubuntu-latest
     needs:
       - ensure-production
@@ -198,7 +208,11 @@ jobs:
           registry: ${{ env.DOCKER_REGISTRY_ALI }}
 
       - name: Bind source revision
-        run: echo "SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+        id: source
+        run: |
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          echo "SHA=$SOURCE_SHA" >> "$GITHUB_ENV"
+          echo "sha=$SOURCE_SHA" >> "$GITHUB_OUTPUT"
 
       - name: Set image tags
         id: tags
@@ -264,3 +278,89 @@ jobs:
 
       - name: Verify backend
         run: just check-backend
+
+  deploy:
+    name: Deploy production through Flux
+    runs-on: ubuntu-latest
+    needs: [build-api, build-admin]
+    steps:
+      - name: Check matching revisions
+        env:
+          API_SHA: ${{ needs.build-api.outputs.source_sha }}
+          ADMIN_SHA: ${{ needs.build-admin.outputs.source_sha }}
+        run: test "$API_SHA" = "$ADMIN_SHA"
+
+      - name: Checkout production GitOps source
+        uses: actions/checkout@v6
+        with:
+          repository: repotea-workflow/gitops-faro
+          ref: main
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+
+      - name: Checkout source history for promotion guard
+        uses: actions/checkout@v6
+        with:
+          repository: repotea-workspace/gprinter
+          ref: ${{ needs.build-api.outputs.source_sha }}
+          path: release-source
+          fetch-depth: 0
+          persist-credentials: false
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+
+      - name: Reject stale or divergent source promotion
+        env:
+          SOURCE_SHA: ${{ needs.build-api.outputs.source_sha }}
+        run: |
+          CURRENT_SHA="$(python3 - <<'PYCODE'
+          import re
+          from pathlib import Path
+          text = Path('applications/gprinter/overlays/gprinter-cn-hz-01/production-values.yaml').read_text()
+          tags = re.findall(r'^    tag: sha-([0-9a-f]{40})$', text, re.MULTILINE)
+          if len(tags) != 2 or tags[0] != tags[1]:
+              raise SystemExit('Production source revision missing or inconsistent')
+          print(tags[0])
+          PYCODE
+          )"
+          git -C release-source merge-base --is-ancestor "$CURRENT_SHA" "$SOURCE_SHA"
+
+      - name: Docker login (Aliyun Shenzhen)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: ${{ env.DOCKER_REGISTRY_ALI }}
+
+      - name: Resolve published immutable images
+        env:
+          SOURCE_SHA: ${{ needs.build-api.outputs.source_sha }}
+        run: |
+          IMAGE_BASE="${DOCKER_REGISTRY_ALI}/${DOCKER_NAMESPACE_ALI}/repotea-workspace_gprinter_gprinter"
+          for component in api admin; do
+            digest="$(docker buildx imagetools inspect "$IMAGE_BASE-$component:sha-$SOURCE_SHA" --format '{{.Manifest.Digest}}')"
+            [[ "$digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+            echo "${component^^}_DIGEST=$digest" >> "$GITHUB_ENV"
+          done
+
+      - name: Promote exact image digests
+        env:
+          SOURCE_SHA: ${{ needs.build-api.outputs.source_sha }}
+        run: |
+          python3 - <<'PYCODE'
+          import os, re
+          from pathlib import Path
+          path = Path('applications/gprinter/overlays/gprinter-cn-hz-01/production-values.yaml')
+          text = path.read_text()
+          for component in ('api', 'admin'):
+              pattern = rf'(  {component}:\n    repository: [^\n]+\n    tag: )[^\n]+(\n    digest: )[^\n]+'
+              text, count = re.subn(pattern, lambda m: m[1] + 'sha-' + os.environ['SOURCE_SHA'] + m[2] + os.environ[component.upper() + '_DIGEST'], text)
+              if count != 1:
+                  raise SystemExit('Production image declaration missing or ambiguous')
+          path.write_text(text)
+          PYCODE
+          git config user.name 'gprinter-release'
+          git config user.email 'gprinter-release@users.noreply.github.com'
+          git add applications/gprinter/overlays/gprinter-cn-hz-01/production-values.yaml
+          if ! git diff --cached --quiet; then
+            git commit -m "deploy(gprinter): release ${SOURCE_SHA}"
+            git push origin HEAD:main
+          fi
