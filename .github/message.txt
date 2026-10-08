@@ -1,1 +1,1 @@
-fix(android): bound document provider reads and cancel stale requests
+fix(android): resolve document MIME when picker intent omits it
