@@ -1,1 +1,1 @@
-fix(pilot): exclude WeChat browser helper from app selection
+feat(bot): support WeChat mentions stickers and attachments
