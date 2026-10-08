@@ -1,1 +1,1 @@
-feat(bot): support native Aliyun OSS attachment links
+feat(workbot): add authenticated bot directory portal
