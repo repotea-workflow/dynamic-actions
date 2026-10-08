@@ -1,1 +1,3 @@
-feat(workbot): display deployment-owned instance names in Dashboard
+Merge pull request #17 from 0xfe10/agt/reuse-current-wechat-chat
+
+feat(pilot): reuse active chats and support native quoted replies
