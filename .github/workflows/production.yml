@@ -44,7 +44,7 @@ jobs:
           fi
 
   build-office:
-    name: Publish Office converter to Aliyun
+    name: Resolve verified Office converter
     runs-on: ubuntu-latest
     needs: [ensure-production]
     if: needs.ensure-production.outputs.ENSURE_PRODUCTION == 'true'
@@ -65,15 +65,29 @@ jobs:
           password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
           registry: ${{ env.DOCKER_REGISTRY_ALI }}
       - uses: docker/setup-buildx-action@v3
-      - name: Publish pinned Office image
-        id: office
-        uses: docker/build-push-action@v6
+      - name: Read verified staging GitOps source
+        uses: actions/checkout@v6
         with:
-          context: .
-          file: docker/office-converter.Dockerfile
-          platforms: linux/amd64
-          push: true
-          tags: ${{ env.DOCKER_REGISTRY_ALI }}/${{ env.DOCKER_NAMESPACE_ALI }}/repotea-workspace_gprinter_office-converter:gotenberg-8.37.0
+          repository: repotea-workflow/gitops-fes
+          ref: main
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          path: staging-gitops
+      - name: Resolve the verified Office image
+        id: office
+        run: |
+          SOURCE_SHA="$(git rev-parse HEAD)"
+          IMAGE_BASE="${DOCKER_REGISTRY_ALI}/${DOCKER_NAMESPACE_ALI}/repotea-workspace_gprinter_office-converter"
+          digest="$(docker buildx imagetools inspect "$IMAGE_BASE:sha-$SOURCE_SHA" --format '{{.Manifest.Digest}}')"
+          [[ "$digest" =~ ^sha256:[0-9a-f]{64}$ ]]
+          export OFFICE_VERIFIED_IMAGE="$IMAGE_BASE@$digest"
+          python3 - <<'PYCODE'
+          import os
+          from pathlib import Path
+          text = Path('staging-gitops/argocd/work/gprinter-qshz/overlays/staging/gprinter/values.yaml').read_text()
+          if os.environ['OFFICE_VERIFIED_IMAGE'] not in text:
+              raise SystemExit('Office image must be deployed and verified in staging before promotion')
+          PYCODE
+          echo "digest=$digest" >> "$GITHUB_OUTPUT"
 
   build-api:
     name: Build API image

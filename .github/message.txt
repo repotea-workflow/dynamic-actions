@@ -1,1 +1,1 @@
-feat: support authenticated Office import and bounded Android large files
+fix(ci): publish compatible Office image and promote staging digest
