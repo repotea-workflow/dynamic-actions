@@ -1,1 +1,1 @@
-fix(android): resolve document MIME when picker intent omits it
+fix(mobile): render Android PDFs through owned temporary files
