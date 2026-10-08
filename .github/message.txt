@@ -1,3 +1,1 @@
-Merge pull request #17 from 0xfe10/agt/reuse-current-wechat-chat
-
-feat(pilot): reuse active chats and support native quoted replies
+fix(workbot): preserve same-origin form login headers
