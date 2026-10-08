@@ -77,6 +77,7 @@ jobs:
         run: |
           bash -n docker/scripts/entrypoint.sh docker/scripts/concord-identity.sh
           docker/scripts/entrypoint_test.sh
+          python3 -m unittest discover -s docker/scripts/tests -v
 
   build:
     name: Build ${{ matrix.platform }}

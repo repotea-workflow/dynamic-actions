@@ -1,1 +1,1 @@
-feat(bot): add native Concord WeChat channel and image build
+fix(pilot): exclude WeChat browser helper from app selection
