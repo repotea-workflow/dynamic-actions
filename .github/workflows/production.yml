@@ -43,6 +43,38 @@ jobs:
             echo "ENSURE_PRODUCTION=false" >> "$GITHUB_OUTPUT"
           fi
 
+  build-office:
+    name: Publish Office converter to Aliyun
+    runs-on: ubuntu-latest
+    needs: [ensure-production]
+    if: needs.ensure-production.outputs.ENSURE_PRODUCTION == 'true'
+    outputs:
+      digest: ${{ steps.office.outputs.digest }}
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref_file: .github/ref.txt
+      - name: Docker login (Aliyun Shenzhen)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: ${{ env.DOCKER_REGISTRY_ALI }}
+      - uses: docker/setup-buildx-action@v3
+      - name: Publish pinned Office image
+        id: office
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/office-converter.Dockerfile
+          platforms: linux/amd64
+          push: true
+          tags: ${{ env.DOCKER_REGISTRY_ALI }}/${{ env.DOCKER_NAMESPACE_ALI }}/repotea-workspace_gprinter_office-converter:gotenberg-8.37.0
+
   build-api:
     name: Build API image
     outputs:
@@ -282,7 +314,7 @@ jobs:
   deploy:
     name: Deploy production through Flux
     runs-on: ubuntu-latest
-    needs: [build-api, build-admin]
+    needs: [build-api, build-admin, build-office]
     steps:
       - name: Check matching revisions
         env:
@@ -343,6 +375,7 @@ jobs:
 
       - name: Promote exact image digests
         env:
+          OFFICE_DIGEST: ${{ needs.build-office.outputs.digest }}
           SOURCE_SHA: ${{ needs.build-api.outputs.source_sha }}
         run: |
           python3 - <<'PYCODE'
@@ -355,6 +388,16 @@ jobs:
               text, count = re.subn(pattern, lambda m: m[1] + 'sha-' + os.environ['SOURCE_SHA'] + m[2] + os.environ[component.upper() + '_DIGEST'], text)
               if count != 1:
                   raise SystemExit('Production image declaration missing or ambiguous')
+          office_digest = os.environ['OFFICE_DIGEST']
+          if not re.fullmatch(r'sha256:[0-9a-f]{64}', office_digest):
+              raise SystemExit('Invalid Office converter digest')
+          office_image = 'crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com/coohub/repotea-workspace_gprinter_office-converter@' + office_digest
+          if re.search(r'(?m)^officeConverter:', text):
+              text, count = re.subn(r'(?m)^(officeConverter:\n  enabled: true)(?:\n  image: [^\n]+)?', lambda m: m[1] + '\n  image: ' + office_image, text)
+              if count != 1:
+                  raise SystemExit('Office converter configuration missing or ambiguous')
+          else:
+              raise SystemExit('Office converter configuration missing')
           path.write_text(text)
           PYCODE
           git config user.name 'gprinter-release'

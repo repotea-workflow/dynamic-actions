@@ -1,1 +1,1 @@
-fix(mobile): adapt home and profile to large system fonts
+feat: support authenticated Office import and bounded Android large files
