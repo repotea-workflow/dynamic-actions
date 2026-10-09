@@ -1,1 +1,1 @@
-feat: manage Aliyun SMS credentials in external service settings
+fix: make SMS configuration change reason optional
