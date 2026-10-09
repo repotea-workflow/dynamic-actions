@@ -1,1 +1,1 @@
-feat(workbot): add native Concord quotes and conversation history
+feat(workbot): install release CLIs with per-Bot authorization
