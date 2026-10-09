@@ -1,1 +1,1 @@
-style: format cloud OCR tests with pinned Dart SDK
+test: provide OCR settings scope in screen fixture
