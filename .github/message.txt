@@ -1,1 +1,1 @@
-fix: make SMS configuration change reason optional
+feat: add selectable Aliyun OCR and handwriting removal
