@@ -1,1 +1,1 @@
-feat: add selectable Aliyun OCR and handwriting removal
+style: format cloud OCR tests with pinned Dart SDK
