@@ -1,1 +1,1 @@
-feat(nanobot): load unified botstar as native agent plugin
+fix(bots): update WeChat formatting rules to botstar 1.1.1
