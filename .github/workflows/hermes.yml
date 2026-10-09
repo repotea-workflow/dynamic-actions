@@ -35,6 +35,10 @@ jobs:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+      - name: Stage pinned CLI plugin
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: python3 docker/hermes/prepare-plugin-source.py
       - name: Test portal authorization
         run: python3 -m unittest discover -s integrations/workbot -v
       - uses: docker/setup-buildx-action@v4

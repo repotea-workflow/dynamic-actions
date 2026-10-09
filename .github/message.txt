@@ -1,1 +1,1 @@
-fix(workbot): resume login through portal page before cross-origin navigation
+feat(hermes): provision repotea CLI tools and portable itsaplan plugin
