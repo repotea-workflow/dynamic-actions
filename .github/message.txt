@@ -1,1 +1,1 @@
-feat(workbot): scope Concord credentials and share portal login
+fix(concord): bind delivery reads to the authorized Pilot
