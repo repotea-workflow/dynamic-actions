@@ -1,1 +1,1 @@
-feat(botstar): load shared guidance and retire hardcoded channel prompts
+feat(hermes): consume unified botstar with selected skills
