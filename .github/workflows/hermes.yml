@@ -1,0 +1,69 @@
+name: "[concord] Hermes Bot image"
+
+on:
+  push:
+    branches: ["**"]
+
+concurrency:
+  group: concord-hermes-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord-hermes
+
+jobs:
+  build:
+    name: Build and validate Hermes Concord Bot
+    runs-on: ubuntu-24.04
+    timeout-minutes: 40
+    steps:
+      - uses: actions/checkout@v7
+      - name: Read source metadata
+        id: source
+        run: |
+          echo "sha=$(cut -c1-7 .github/commit.txt)" >> "$GITHUB_OUTPUT"
+          if grep -qx main .github/branch.txt; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out Concord source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/concord
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref_file: .github/ref.txt
+      - name: Test portal authorization
+        run: python3 -m unittest discover -s integrations/workbot -v
+      - uses: docker/setup-buildx-action@v4
+      - name: Build candidate
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: docker/hermes/Dockerfile
+          load: true
+          tags: concord-hermes:candidate
+          cache-from: type=gha,scope=concord-hermes
+          cache-to: type=gha,mode=max,scope=concord-hermes
+      - name: Verify Hermes platform and authentication contracts
+        run: |
+          docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
+            -v "$PWD/integrations/hermes:/tests:ro" \
+            -v "$PWD/integrations/workbot:/workbot:ro" \
+            -e PYTHONPATH=/tests:/workbot \
+            concord-hermes:candidate -m unittest discover -s /tests -v
+      - uses: docker/login-action@v4
+        if: steps.source.outputs.publish == 'true'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Publish verified image
+        if: steps.source.outputs.publish == 'true'
+        env:
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        run: |
+          docker tag concord-hermes:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
+          docker push "${IMAGE_NAME}:sha-${SOURCE_SHA}"

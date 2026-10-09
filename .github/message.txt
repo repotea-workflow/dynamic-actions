@@ -1,1 +1,1 @@
-chore(workbot): remove unused aicli umbrella executable
+feat(workbot): add native Hermes Concord bot and portal authentication
