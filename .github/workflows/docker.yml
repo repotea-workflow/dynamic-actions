@@ -51,6 +51,22 @@ jobs:
     name: Test Concord
     runs-on: ubuntu-24.04
     timeout-minutes: 15
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_USER: concord_test
+          POSTGRES_DB: concord_scope_test
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U concord_test"
+          --health-interval 5s
+          --health-timeout 5s
+          --health-retries 12
+    env:
+      CONCORD_TEST_DATABASE_URL: postgres://concord_test@localhost:5432/concord_scope_test?sslmode=disable
     steps:
       - uses: actions/checkout@v7
 

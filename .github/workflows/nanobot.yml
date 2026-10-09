@@ -39,6 +39,8 @@ jobs:
           ref_file: .github/ref.txt
       - name: Assemble pinned Bot and Concord channel
         run: python3 docker/nanobot/prepare-source.py /tmp/concord-bot-source
+      - name: Test Workbot login tickets
+        run: python3 -m unittest discover -s integrations/workbot -v
       - uses: actions/setup-node@v6
         with:
           node-version: "24"
@@ -48,7 +50,7 @@ jobs:
           NODE_OPTIONS: --no-experimental-webstorage
         run: |
           npm ci
-          npx vitest run src/tests/workbot-instance-name.test.ts
+          npx vitest run src/tests/workbot-instance-name.test.ts src/tests/workbot-login.test.ts
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v4
       - name: Build candidate
