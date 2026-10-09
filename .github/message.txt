@@ -1,1 +1,1 @@
-feat(workbot): install release CLIs with per-Bot authorization
+fix(workbot): install PingCode 0.7.2 and bootstrap both Bot launchers

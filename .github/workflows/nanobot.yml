@@ -69,6 +69,9 @@ jobs:
         run: |
           docker run --rm --entrypoint sh concord-bot:candidate -c 'git --version && gh --version && aicli --help && itsaplan --version && lanhu --version && pingcode --version'
           docker run --rm --entrypoint python \
+            -v "$PWD/docker/nanobot/tests/verify_cli_launcher.py:/verify_cli_launcher.py:ro" \
+            concord-bot:candidate /verify_cli_launcher.py
+          docker run --rm --entrypoint python \
             -v "$PWD/integrations/nanobot/tests:/tests:ro" \
             concord-bot:candidate -m unittest discover -s /tests -v
           docker run --rm --entrypoint python concord-bot:candidate -c \
