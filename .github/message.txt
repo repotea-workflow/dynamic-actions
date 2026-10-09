@@ -1,1 +1,1 @@
-fix(product): preserve orders when removing registrations (#324)
+fix(omsk): export partial declarations and keep bulk toolkit responsive
