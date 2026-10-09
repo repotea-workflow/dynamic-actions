@@ -1,1 +1,1 @@
-feat(hermes): provision repotea CLI tools and portable itsaplan plugin
+feat(botstar): load shared guidance and retire hardcoded channel prompts

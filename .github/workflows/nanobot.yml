@@ -37,6 +37,10 @@ jobs:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+      - name: Stage pinned Botstar guidance
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: python3 docker/hermes/prepare-plugin-source.py
       - name: Assemble pinned Bot and Concord channel
         run: python3 docker/nanobot/prepare-source.py /tmp/concord-bot-source
       - name: Test Workbot login tickets
