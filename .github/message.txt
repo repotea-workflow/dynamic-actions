@@ -1,1 +1,3 @@
-Fix logout prompt during native quote side fallback
+Merge pull request #18 from 0xfe10/agt/quote-recover-logout
+
+Fix native quote fallback blocked by logout confirmation
