@@ -69,7 +69,7 @@ jobs:
             -v "$PWD/integrations/nanobot/tests:/tests:ro" \
             concord-bot:candidate -m unittest discover -s /tests -v
           docker run --rm --entrypoint python concord-bot:candidate -c \
-            'from nanobot.channels.registry import load_channel_plugin; p=load_channel_plugin("concord"); assert p.display_name=="Concord"; assert {"apiKey", "s3AccessKey", "s3SecretKey"} <= p.setup.secrets; p.load_channel_class(); from nanobot.agent.tools.loader import ToolLoader; assert any(t.__name__ == "ConcordStickerTool" for t in ToolLoader().discover()); from nanobot.command.builtin import build_help_text; assert build_help_text().startswith("Bot commands:")'
+            'from nanobot.channels.registry import load_channel_plugin; p=load_channel_plugin("concord"); assert p.display_name=="Concord"; assert {"apiKey", "s3AccessKey", "s3SecretKey"} <= p.setup.secrets; p.load_channel_class(); from nanobot.agent.tools.loader import ToolLoader; assert {"ConcordStickerTool", "ConcordHistoryTool", "ConcordReplyTool"} <= {t.__name__ for t in ToolLoader().discover()}; from nanobot.command.builtin import build_help_text; assert build_help_text().startswith("Bot commands:")'
       - name: Log in to GHCR
         if: steps.source.outputs.publish == 'true'
         uses: docker/login-action@v4

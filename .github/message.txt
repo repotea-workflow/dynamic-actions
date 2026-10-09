@@ -1,1 +1,1 @@
-fix(concord): bind delivery reads to the authorized Pilot
+feat(workbot): add native Concord quotes and conversation history
