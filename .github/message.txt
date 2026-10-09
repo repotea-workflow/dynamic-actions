@@ -1,1 +1,1 @@
-fix(workbot): preserve same-origin form login headers
+Fix logout prompt during native quote side fallback
