@@ -319,7 +319,8 @@ jobs:
           argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
           argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
           app_name: work-staging-gprinter-qshz
-          wait_health: true
+          # The following smoke gate polls fresh Argo snapshots and verifies the exact rollout.
+          wait_health: false
           changes: |
             {
               "argocd/work/gprinter-qshz/overlays/staging/gprinter/values.yaml": {

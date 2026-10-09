@@ -1,1 +1,1 @@
-test: provide OCR settings scope in screen fixture
+fix: verify staging rollout with fresh Argo snapshots
