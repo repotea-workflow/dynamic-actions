@@ -1,1 +1,1 @@
-fix(workbot): link portal cards directly to dashboard domains
+fix(workbot): send unauthenticated dashboards to portal login and resume bot
