@@ -1,1 +1,1 @@
-fix(omsk): export partial declarations and keep bulk toolkit responsive
+fix(omsk): export partial declarations and keep bulk toolkit responsive (#325)
