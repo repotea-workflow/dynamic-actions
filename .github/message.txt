@@ -1,1 +1,1 @@
-feat(hermes): consume unified botstar with selected skills
+feat(nanobot): load unified botstar as native agent plugin
