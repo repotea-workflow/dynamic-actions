@@ -1,1 +1,1 @@
-fix(workbot): send unauthenticated dashboards to portal login and resume bot
+fix(workbot): resume login through portal page before cross-origin navigation
