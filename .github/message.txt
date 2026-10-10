@@ -1,1 +1,1 @@
-Resolve registered icon refs inside STAC repeat templates
+Recognize SVG doctypes in shared asset detection
