@@ -1,5 +1,1 @@
-Speed up feature-styles-publish by skipping optional gates. (#252)
-
-Publish compiles the bundle and imports with language-pack sync off by default, leaving Bellatrix check and full import options on feature-styles-build for pre-merge validation.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Share registered style icon resolution across native Flutter and STAC
