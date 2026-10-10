@@ -1,1 +1,1 @@
-test(workbot): validate renamed core and native subject activation
+feat: name long reply documents from content and update botstar
