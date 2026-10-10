@@ -1,1 +1,1 @@
-build(workbot): pin shared credential safety guidance
+build(workbot): pin budget-safe credential safeguards
