@@ -1,1 +1,1 @@
-fix(hermes): resolve pinned uv through the upstream package manager
+fix(hermes): use the installed uv launcher for provider dependencies
