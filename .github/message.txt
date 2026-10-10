@@ -1,1 +1,1 @@
-fix(hermes): allow the explicitly pinned Hindsight client release
+feat(bot): integrate scoped Hindsight memory hooks and tools
