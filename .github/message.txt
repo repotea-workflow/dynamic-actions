@@ -1,1 +1,1 @@
-fix(hermes): use the installed uv launcher for provider dependencies
+fix(hermes): allow the explicitly pinned Hindsight client release
