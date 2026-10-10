@@ -1,1 +1,1 @@
-feat(workbot): package subject profiles and isolated cluster access
+test(workbot): validate renamed core and native subject activation
