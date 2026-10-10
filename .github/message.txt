@@ -1,1 +1,1 @@
-fix: recognize Qt native mention chips in composer
+fix: retry Concord session unavailability without rejecting credentials
