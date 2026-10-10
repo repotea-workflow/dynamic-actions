@@ -1,1 +1,1 @@
-test: cover both native WeChat channels in turn delivery
+fix: require explicit attachment intent for native WeChat
