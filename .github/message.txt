@@ -1,1 +1,1 @@
-fix: require explicit attachment intent for native WeChat
+build(workbot): pin Botstar application routing policy
