@@ -35,6 +35,10 @@ jobs:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+      - name: Stage pinned native WeAuto channels
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: python3 docker/weauto/prepare-source.py
       - name: Stage pinned CLI plugin
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -60,6 +64,11 @@ jobs:
             -v "$PWD/integrations/workbot:/workbot:ro" \
             -e PYTHONPATH=/tests:/workbot \
             concord-hermes:candidate -m unittest discover -s /tests -v
+      - name: Verify native WeAuto channel logic
+        run: |
+          docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
+            -v "$PWD/docker/weauto/.source/tests:/weauto-tests:ro" \
+            concord-hermes:candidate -m unittest discover -s /weauto-tests -v
       - uses: docker/login-action@v4
         if: steps.source.outputs.publish == 'true'
         with:

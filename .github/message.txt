@@ -1,1 +1,1 @@
-feat: name long reply documents from content and update botstar
+feat: package pinned native WeAuto channels in Bot images
