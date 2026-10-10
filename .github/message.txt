@@ -1,3 +1,1 @@
-Unify registered icon resolution for native Flutter and STAC (#253)
-
-Share registered icon refs, theme candidates, SVG detection and native update behavior through style_assets while preserving STAC and family APIs. Validated with 73 focused tests and independent current-SHA review.
+refactor: centralize public action and feature identifiers
