@@ -1,1 +1,1 @@
-build(workbot): pin Botstar application routing policy
+build(workbot): pin shared credential safety guidance
