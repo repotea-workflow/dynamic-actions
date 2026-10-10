@@ -1,1 +1,1 @@
-test: require native group tools in bot image
+fix: declare native group tools in Hermes plugin
