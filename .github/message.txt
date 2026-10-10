@@ -1,1 +1,1 @@
-fix(hermes): make external memory retrieval deadline configurable
+feat(aynbot): install pinned Aliyun CLI and native authorization
