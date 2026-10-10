@@ -1,1 +1,1 @@
-feat: package pinned native WeAuto channels in Bot images
+test: cover both native WeChat channels in turn delivery
