@@ -1,1 +1,1 @@
-feat(aynbot): install pinned Aliyun CLI and native authorization
+feat: support native WeChat group mentions
