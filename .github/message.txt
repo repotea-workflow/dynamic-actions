@@ -1,1 +1,1 @@
-Share registered style icon resolution across native Flutter and STAC
+Resolve registered icon refs inside STAC repeat templates
