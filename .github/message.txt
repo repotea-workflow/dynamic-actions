@@ -1,1 +1,1 @@
-fix(memory): include recalled facts in the current bot turn
+fix(hermes): make external memory retrieval deadline configurable
