@@ -1,1 +1,1 @@
-chore(weauto): pin native UI language and delivery diagnostics
+chore(weauto): pin reviewed locale and attachment fixes
