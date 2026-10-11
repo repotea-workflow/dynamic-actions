@@ -1,7 +1,1 @@
-ci: move deployment checks and images to dynamic workflows (#3)
-
-* ci: move heavy checks and builds to dynamic public runners
-
-* fix(ci): route dynamic workflows through repotea-workflow
-
-* chore(ci): keep checks and on-demand deployment images only
+Merge remote-tracking branch 'origin/main' into agt/weauto-native-send-stability
