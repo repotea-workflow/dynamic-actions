@@ -1,1 +1,1 @@
-main
+agt/weauto-preserve-login-on-unknown-ui

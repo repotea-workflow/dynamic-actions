@@ -1,1 +1,1 @@
-fix: restore native quotes across English menus and duplicate chats (#5)
+fix: preserve WeChat login when UI state is unrecognized
