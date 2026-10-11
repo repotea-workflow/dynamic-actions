@@ -1,1 +1,1 @@
-fix: reconnect Hermes WeAuto after temporary access loss
+fix: reconnect Hermes WeAuto after temporary access loss (#7)
