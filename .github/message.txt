@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main' into agt/weauto-native-send-stability
+fix(wechat): fall back to history for virtualized quote targets
