@@ -73,8 +73,8 @@ jobs:
     - uses: docker/login-action@v4
       with:
         registry: ghcr.io
-        username: '0xfe10'
-        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Build and push by digest
       id: build
       uses: docker/build-push-action@v6
@@ -82,7 +82,7 @@ jobs:
         context: docker
         platforms: ${{ matrix.platform }}
         no-cache: ${{ env.WEAUTO_NO_CACHE == 'true' }}
-        outputs: type=image,name=ghcr.io/0xfe10/weauto,push-by-digest=true,name-canonical=true,push=true
+        outputs: type=image,name=ghcr.io/repotea-workflow/dynamic-actions/weauto,push-by-digest=true,name-canonical=true,push=true
         cache-from: type=gha,scope=${{ matrix.arch }}
         cache-to: type=gha,scope=${{ matrix.arch }},mode=max
     - name: Export digest
@@ -115,11 +115,11 @@ jobs:
     - uses: docker/login-action@v4
       with:
         registry: ghcr.io
-        username: '0xfe10'
-        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
     - name: Create multi-arch manifest
       run: |
-        IMAGE="ghcr.io/0xfe10/weauto"
+        IMAGE="ghcr.io/repotea-workflow/dynamic-actions/weauto"
         docker buildx imagetools create \
           -t "${IMAGE}:${{ env.WEAUTO_BUILD_VERSION }}" \
           -t "${IMAGE}:latest" \
@@ -130,6 +130,6 @@ jobs:
     branches:
     - 0xfe10/weauto
 env:
-  WEAUTO_BUILD_VERSION: "sha-adcb3e3"
+  WEAUTO_BUILD_VERSION: ""
   WEAUTO_NO_CACHE: "false"
-  IMAGE_NAME: ghcr.io/0xfe10/weauto
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/weauto
