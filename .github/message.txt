@@ -1,9 +1,3 @@
-Centralize public action and feature identifiers (#254)
+Add shared runtime_identifiers catalog for Aviary feature and action IDs.
 
-* fix: make resource image previews visible
-
-* refactor: centralize public action and feature identifiers
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Centralize 18 feature keys and 28 action IDs (aviary.* and module-scoped strings), migrate module and Swan shell tests to the catalog, and deprecate module-level aliases pointing at FeatureKeys and *Actions.
