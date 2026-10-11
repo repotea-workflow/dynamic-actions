@@ -1,1 +1,1 @@
-chore(weauto): pin reviewed locale and attachment fixes
+fix(weauto): pin Hermes reconnect after login recovery
