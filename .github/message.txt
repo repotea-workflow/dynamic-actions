@@ -1,1 +1,9 @@
-refactor: centralize public action and feature identifiers
+Centralize public action and feature identifiers (#254)
+
+* fix: make resource image previews visible
+
+* refactor: centralize public action and feature identifiers
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
