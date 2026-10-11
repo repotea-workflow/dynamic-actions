@@ -1,1 +1,1 @@
-fix(hermes): include WeAuto attachment reply metadata
+chore(weauto): pin native UI language and delivery diagnostics
