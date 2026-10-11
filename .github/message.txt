@@ -1,1 +1,1 @@
-fix: preserve WeChat login when UI state is unrecognized (#6)
+fix: reconnect Hermes WeAuto after temporary access loss
