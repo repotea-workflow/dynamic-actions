@@ -1,1 +1,1 @@
-fix(hermes): pin WeAuto final reply origin correction
+fix(hermes): include WeAuto attachment reply metadata
