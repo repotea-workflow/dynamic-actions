@@ -1,7 +1,1 @@
-fix(wechat): align sticker sending and recover quote candidates (#4)
-
-* fix(wechat): align native sticker readiness and cleanup with Concord
-
-* fix(wechat): fall back to history for virtualized quote targets
-
-* fix(ci): publish images with dynamic-actions repository token
+fix: restore native quotes across English menus and duplicate chats
