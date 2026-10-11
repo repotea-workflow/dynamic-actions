@@ -1,1 +1,1 @@
-build(workbot): pin budget-safe credential safeguards
+fix: verify image-managed Hindsight readiness in Dashboard
