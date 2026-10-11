@@ -1,0 +1,184 @@
+name: '[weauto] Checks'
+permissions:
+  contents: read
+jobs:
+  source:
+    name: Resolve exact source revision
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+      branch: ${{ steps.source.outputs.branch }}
+    steps:
+    - uses: actions/checkout@v4
+    - id: source
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+      shell: bash
+      run: |-
+        set -euo pipefail
+        test "$(cat .github/repository.txt)" = "0xfe10/weauto"
+        source_ref="$(cat .github/commit.txt)"
+        [[ "$source_ref" =~ ^[0-9a-f]{7,40}$ ]]
+        source_sha="$(gh api "repos/0xfe10/weauto/commits/$source_ref" --jq .sha)"
+        [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+        echo "sha=$source_sha" >> "$GITHUB_OUTPUT"
+        if [ -f .github/branch.txt ]; then
+          echo "branch=$(cat .github/branch.txt)" >> "$GITHUB_OUTPUT"
+        fi
+  native-channels:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Test shared native channel behavior
+      env:
+        PYTHONPATH: integrations/common
+        PYTHONDONTWRITEBYTECODE: '1'
+      run: python3 -m unittest discover -s integrations/tests -v
+    needs: source
+    timeout-minutes: 15
+  release-tools:
+    needs: source
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: pnpm/action-setup@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - run: bash -n scripts/install-ci-npm.sh
+    - run: bash scripts/install-ci-npm.sh
+    - run: |
+        test "$(npm --version)" = "11.12.1"
+        node --test scripts/verify-ci-publisher.test.mjs scripts/pending-release-packages.test.mjs
+        node scripts/verify-ci-publisher.mjs
+  ts:
+    needs: source
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: pnpm
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile
+    - name: Build
+      run: pnpm build
+    - name: Typecheck
+      run: pnpm typecheck
+    - name: Test (all packages)
+      run: pnpm -r --if-present test
+  rust:
+    needs: source
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Setup Rust
+      uses: dtolnay/rust-toolchain@stable
+    - name: Cargo check
+      run: cargo check --manifest-path packages/agent-server-rust/Cargo.toml
+    - name: Cargo test
+      run: cargo test --manifest-path packages/agent-server-rust/Cargo.toml
+  docs:
+    needs: source
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Setup pnpm
+      uses: pnpm/action-setup@v4
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: pnpm
+    - name: Install dependencies
+      run: pnpm install --frozen-lockfile --filter @agent-wechat/docs
+    - name: Build docs
+      run: pnpm --filter @agent-wechat/docs build
+  python:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: actions/setup-python@v5
+      with:
+        python-version: '3.12'
+    - run: python3 -m pip install PyYAML==6.0.3
+    - run: python3 -m unittest discover -s tests -v
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+    - run: node --test tests/media-download.test.cjs
+    needs: source
+    timeout-minutes: 10
+  report:
+    if: ${{ always() && needs.source.result == 'success' }}
+    needs:
+    - source
+    - native-channels
+    - release-tools
+    - ts
+    - rust
+    - docs
+    - python
+    runs-on: ubuntu-latest
+    steps:
+    - env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        SOURCE_SHA: ${{ needs.source.outputs.sha }}
+        RESULTS: ${{ toJSON(needs) }}
+      run: |-
+        set -euo pipefail
+        state=success
+        if ! jq -e 'all(.[]; .result == "success")' <<< "$RESULTS" >/dev/null; then state=failure; fi
+        jq -n --arg state "$state" --arg url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" '{state:$state,context:"weauto/dynamic-checks",description:"WeAuto checks in public execution repository",target_url:$url}' | gh api "repos/0xfe10/weauto/statuses/$SOURCE_SHA" --input -
+        test "$state" = success
+'on':
+  push:
+    branches:
+    - 0xfe10/weauto
+concurrency:
+  group: weauto-checks-${{ github.ref }}
+  cancel-in-progress: true

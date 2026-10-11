@@ -1,0 +1,1 @@
+fix(ci): route dynamic workflows through repotea-workflow

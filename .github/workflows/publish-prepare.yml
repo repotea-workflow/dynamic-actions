@@ -1,0 +1,95 @@
+name: '[weauto] Prepare publication'
+'on':
+  push:
+    branches:
+    - 0xfe10/weauto
+permissions:
+  contents: read
+concurrency:
+  group: weauto-publish-prepare
+  cancel-in-progress: false
+jobs:
+  source:
+    name: Resolve exact source revision
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+      branch: ${{ steps.source.outputs.branch }}
+    steps:
+    - uses: actions/checkout@v4
+    - id: source
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+      shell: bash
+      run: |-
+        set -euo pipefail
+        test "$(cat .github/repository.txt)" = "0xfe10/weauto"
+        source_ref="$(cat .github/commit.txt)"
+        [[ "$source_ref" =~ ^[0-9a-f]{7,40}$ ]]
+        source_sha="$(gh api "repos/0xfe10/weauto/commits/$source_ref" --jq .sha)"
+        [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+        echo "sha=$source_sha" >> "$GITHUB_OUTPUT"
+        if [ -f .github/branch.txt ]; then
+          echo "branch=$(cat .github/branch.txt)" >> "$GITHUB_OUTPUT"
+        fi
+  build:
+    needs: source
+    if: needs.source.outputs.branch == 'main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: pnpm/action-setup@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 22
+        cache: pnpm
+    - run: pnpm install --frozen-lockfile
+    - run: pnpm build
+    - name: Package only generated release output
+      env:
+        SOURCE_SHA: ${{ needs.source.outputs.sha }}
+      run: |-
+        python3 <<'PYCODE'
+        import json, os, pathlib, tarfile
+        pathlib.Path('release-manifest.json').write_text(json.dumps({'repository':'0xfe10/weauto','sha':os.environ['SOURCE_SHA'],'branch':'main'}))
+        with tarfile.open('weauto-release-build.tar.gz','w:gz') as bundle:
+            bundle.add('release-manifest.json')
+            for package in sorted(pathlib.Path('packages').iterdir()):
+                output=package/'dist'
+                if output.is_dir(): bundle.add(output,arcname=str(output))
+        PYCODE
+    - uses: actions/upload-artifact@v4
+      with:
+        name: weauto-source-manifest
+        path: release-manifest.json
+        retention-days: 3
+        if-no-files-found: error
+    - uses: actions/upload-artifact@v4
+      with:
+        name: weauto-release-build
+        path: weauto-release-build.tar.gz
+        retention-days: 3
+        if-no-files-found: error
+    - uses: actions/upload-artifact@v4
+      with:
+        name: weauto-pages
+        path: docs/dist
+        retention-days: 3
+        if-no-files-found: error
+    - name: Request source publisher and Pages deployment
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        SOURCE_SHA: ${{ needs.source.outputs.sha }}
+      run: |-
+        set -euo pipefail
+        gh workflow run release.yml --repo 0xfe10/weauto --ref main -f source_sha="$SOURCE_SHA" -f artifact_run="$GITHUB_RUN_ID"
+        if git diff --name-only HEAD^ HEAD -- docs .github/workflows/deploy-docs.yml .github/dyn-workflows/publish-prepare.yml | grep -q .; then
+         gh workflow run deploy-docs.yml --repo 0xfe10/weauto --ref main -f source_sha="$SOURCE_SHA" -f artifact_run="$GITHUB_RUN_ID"
+        fi

@@ -1,0 +1,305 @@
+name: '[weauto] Release assets'
+'on':
+  push:
+    tags:
+    - v*-weauto
+permissions:
+  contents: read
+  packages: write
+concurrency:
+  group: weauto-release-assets-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  source:
+    name: Resolve exact source revision
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+      branch: ${{ steps.source.outputs.branch }}
+      version: ${{ steps.version.outputs.version }}
+    steps:
+    - uses: actions/checkout@v4
+    - id: source
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+      shell: bash
+      run: |-
+        set -euo pipefail
+        test "$(cat .github/repository.txt)" = "0xfe10/weauto"
+        source_ref="$(cat .github/commit.txt)"
+        [[ "$source_ref" =~ ^[0-9a-f]{7,40}$ ]]
+        source_sha="$(gh api "repos/0xfe10/weauto/commits/$source_ref" --jq .sha)"
+        [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
+        echo "sha=$source_sha" >> "$GITHUB_OUTPUT"
+        if [ -f .github/branch.txt ]; then
+          echo "branch=$(cat .github/branch.txt)" >> "$GITHUB_OUTPUT"
+        fi
+    - id: version
+      run: |-
+        set -euo pipefail
+        tag="$(cat .github/tag.txt)"
+        [[ "$tag" =~ ^v([0-9]+\.[0-9]+\.[0-9]+)$ ]]
+        echo "version=${tag#v}" >> "$GITHUB_OUTPUT"
+  publish-binary:
+    name: Binary (${{ matrix.arch }})
+    needs:
+    - source
+    strategy:
+      matrix:
+        include:
+        - runner: ubuntu-latest
+          arch: amd64
+          platform: linux/amd64
+        - runner: ubuntu-24.04-arm
+          arch: arm64
+          platform: linux/arm64
+    runs-on: ${{ matrix.runner }}
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Extract version
+      id: version
+      run: echo "version=${{ needs.source.outputs.version }}" >> "$GITHUB_OUTPUT"
+    - name: Build binary in Docker
+      run: |
+        RUST_DIR="packages/agent-server-rust"
+        BUILDER_IMAGE="rust:1.93-bookworm"
+
+        docker run --rm \
+          --platform ${{ matrix.platform }} \
+          -v "$PWD/$RUST_DIR:/build" \
+          -v "agent-wechat-cargo-cache-${{ matrix.arch }}:/build/target" \
+          -v "agent-wechat-cargo-registry-${{ matrix.arch }}:/usr/local/cargo/registry" \
+          -w /build \
+          "$BUILDER_IMAGE" \
+          cargo build --release
+
+        # Extract binary from cache volume
+        TMP_CT=$(docker create \
+          -v "agent-wechat-cargo-cache-${{ matrix.arch }}:/target:ro" \
+          "$BUILDER_IMAGE")
+        docker cp "$TMP_CT:/target/release/agent-server" ./agent-server
+        docker rm "$TMP_CT" > /dev/null
+    - name: Upload release asset
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        ASSET="agent-server-${VERSION}-linux-${{ matrix.arch }}"
+        mv agent-server "$ASSET"
+        chmod +x "$ASSET"
+        gh release create --repo 0xfe10/weauto "v${VERSION}" --title "v${VERSION}" --notes "Release v${VERSION}" 2>/dev/null || true
+        gh release upload --repo 0xfe10/weauto "v${VERSION}" "$ASSET" --clobber
+    timeout-minutes: 30
+  publish-tools:
+    name: Docker Tools
+    needs:
+    - source
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Extract version
+      id: version
+      run: echo "version=${{ needs.source.outputs.version }}" >> "$GITHUB_OUTPUT"
+    - name: Package tools
+      run: |
+        tar -czf "docker-tools-${{ steps.version.outputs.version }}.tar.gz" -C docker tools
+    - name: Upload release asset
+      env:
+        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+      run: |
+        VERSION="${{ steps.version.outputs.version }}"
+        gh release create --repo 0xfe10/weauto "v${VERSION}" --title "v${VERSION}" --notes "Release v${VERSION}" 2>/dev/null || true
+        gh release upload --repo 0xfe10/weauto "v${VERSION}" "docker-tools-${VERSION}.tar.gz" --clobber
+    timeout-minutes: 30
+  publish-docker:
+    name: Docker (${{ matrix.arch }})
+    needs:
+    - source
+    strategy:
+      matrix:
+        include:
+        - runner: ubuntu-latest
+          arch: amd64
+          platform: linux/amd64
+        - runner: ubuntu-24.04-arm
+          arch: arm64
+          platform: linux/arm64
+    runs-on: ${{ matrix.runner }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - name: Prepare Docker context
+      run: |
+        rm -rf docker/agent-server-rust
+        mkdir -p docker/agent-server-rust
+        cp packages/agent-server-rust/Cargo.toml docker/agent-server-rust/
+        [ -f packages/agent-server-rust/Cargo.lock ] && cp packages/agent-server-rust/Cargo.lock docker/agent-server-rust/
+        cp -r packages/agent-server-rust/src docker/agent-server-rust/
+        cp -r packages/agent-server-rust/migrations docker/agent-server-rust/
+    - uses: docker/setup-buildx-action@v4
+    - uses: docker/login-action@v4
+      with:
+        registry: ghcr.io
+        username: '0xfe10'
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+    - name: Extract version
+      id: version
+      run: echo "version=${{ needs.source.outputs.version }}" >> "$GITHUB_OUTPUT"
+    - name: Build and push by digest
+      id: build
+      uses: docker/build-push-action@v6
+      with:
+        context: docker
+        platforms: ${{ matrix.platform }}
+        outputs: type=image,name=ghcr.io/0xfe10/weauto,push-by-digest=true,name-canonical=true,push=true
+        cache-from: type=gha,scope=${{ matrix.arch }}
+        cache-to: type=gha,scope=${{ matrix.arch }},mode=max
+    - name: Export digest
+      run: |
+        mkdir -p /tmp/digests
+        DIGEST="${{ steps.build.outputs.digest }}"
+        touch "/tmp/digests/${DIGEST#sha256:}"
+    - uses: actions/upload-artifact@v4
+      with:
+        name: digest-${{ matrix.arch }}
+        path: /tmp/digests/*
+        if-no-files-found: error
+        retention-days: 1
+    timeout-minutes: 30
+  merge-docker-manifest:
+    name: Docker Manifest
+    needs:
+    - source
+    - publish-docker
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        path: /tmp/digests
+        pattern: digest-*
+        merge-multiple: true
+    - uses: docker/setup-buildx-action@v4
+    - uses: docker/login-action@v4
+      with:
+        registry: ghcr.io
+        username: '0xfe10'
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+    - name: Extract version
+      id: version
+      run: echo "version=${{ needs.source.outputs.version }}" >> "$GITHUB_OUTPUT"
+    - name: Create multi-arch manifest
+      run: |
+        IMAGE="ghcr.io/0xfe10/weauto"
+        docker buildx imagetools create \
+          -t "${IMAGE}:${{ steps.version.outputs.version }}" \
+          -t "${IMAGE}:latest" \
+          $(printf "${IMAGE}@sha256:%s " $(ls /tmp/digests/))
+    timeout-minutes: 30
+  publish-wechaty-gateway:
+    name: Wechaty Gateway (${{ matrix.arch }})
+    needs:
+    - source
+    strategy:
+      matrix:
+        include:
+        - runner: ubuntu-latest
+          arch: amd64
+          platform: linux/amd64
+        - runner: ubuntu-24.04-arm
+          arch: arm64
+          platform: linux/arm64
+    runs-on: ${{ matrix.runner }}
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: docker/setup-buildx-action@v4
+    - uses: docker/login-action@v4
+      with:
+        registry: ghcr.io
+        username: '0xfe10'
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+    - name: Build and push by digest
+      id: build
+      uses: docker/build-push-action@v6
+      with:
+        context: .
+        file: packages/wechaty-gateway/Dockerfile
+        platforms: ${{ matrix.platform }}
+        outputs: type=image,name=ghcr.io/0xfe10/weauto-wechaty-gateway,push-by-digest=true,name-canonical=true,push=true
+        cache-from: type=gha,scope=wechaty-gateway-${{ matrix.arch }}
+        cache-to: type=gha,scope=wechaty-gateway-${{ matrix.arch }},mode=max
+    - name: Export digest
+      run: |
+        mkdir -p /tmp/digests
+        DIGEST="${{ steps.build.outputs.digest }}"
+        touch "/tmp/digests/${DIGEST#sha256:}"
+    - uses: actions/upload-artifact@v4
+      with:
+        name: wechaty-gateway-digest-${{ matrix.arch }}
+        path: /tmp/digests/*
+        if-no-files-found: error
+        retention-days: 1
+    timeout-minutes: 30
+  merge-wechaty-gateway-manifest:
+    name: Wechaty Gateway Manifest
+    needs:
+    - source
+    - publish-wechaty-gateway
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+    - uses: actions/download-artifact@v4
+      with:
+        path: /tmp/digests
+        pattern: wechaty-gateway-digest-*
+        merge-multiple: true
+    - uses: docker/setup-buildx-action@v4
+    - uses: docker/login-action@v4
+      with:
+        registry: ghcr.io
+        username: '0xfe10'
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
+    - name: Extract version
+      id: version
+      run: echo "version=${{ needs.source.outputs.version }}" >> "$GITHUB_OUTPUT"
+    - name: Create multi-arch manifest
+      run: |
+        IMAGE="ghcr.io/0xfe10/weauto-wechaty-gateway"
+        docker buildx imagetools create \
+          -t "${IMAGE}:${{ steps.version.outputs.version }}" \
+          -t "${IMAGE}:latest" \
+          $(printf "${IMAGE}@sha256:%s " $(ls /tmp/digests/))
+    timeout-minutes: 30
