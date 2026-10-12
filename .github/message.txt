@@ -1,6 +1,6 @@
-Replace outbound whitelist with control-account tools for cross-conversation ops.
+Add scoped chat discovery API and weauto_control_find tool.
 
-Control accounts can send, read history with attachment hints, and fetch media
-to any chat the WeAuto API exposes, without Hermes allow-list checks on destination.
+Control accounts can search contact.db for group chat_ids without a prior
+session row; bot keys need allowDiscover enabled separately from send scope.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
