@@ -1,6 +1,8 @@
-docs(weauto): clarify Hermes image is built as workbot-hermes
+fix(weauto): retry group quote replies as plain text on delivery failure
 
-Document that native Hermes channel sources are consumed through the workbot-hermes
-image assembled in the concord repository, separate from the OpenClaw extension.
+Try native quoted replies first with a longer confirmation window, then fall
+back to plain group text when WeAuto cannot confirm the quote path so content
+still reaches the chat. Extend native-reply draft and outgoing verification
+polls on the agent server.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
