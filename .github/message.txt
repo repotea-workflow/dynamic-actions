@@ -1,1 +1,9 @@
-fix(hermes): reject stale credentials from another CLI profile
+fix(hermes): deliver long Concord replies as file before summary text
+
+Group long replies previously sent a native quote reply first, which often
+timed out at the Pilot UI layer and prevented the Markdown attachment from
+ever being sent. Send attachments first, skip quote replies for long
+documents, and extend the Harbor confirmation window via
+CONCORD_DELIVERY_WAIT_SECONDS.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
