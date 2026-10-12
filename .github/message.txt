@@ -1,9 +1,6 @@
-fix(hermes): deliver long Concord replies as file before summary text
+chore(weauto): pin WeAuto long-reply attachment-first delivery fix
 
-Group long replies previously sent a native quote reply first, which often
-timed out at the Pilot UI layer and prevented the Markdown attachment from
-ever being sent. Send attachments first, skip quote replies for long
-documents, and extend the Harbor confirmation window via
-CONCORD_DELIVERY_WAIT_SECONDS.
+Update the Hermes/ayn image staging lock to cc1698b so long Markdown
+reports send the file before the summary and skip group quote replies.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
