@@ -1,1 +1,8 @@
-fix: bind composer checks to independently resolved exact recipient
+fix(weauto): send long-reply attachments before summary text
+
+Group long replies previously queued the Markdown file after a native
+quote/text step that often ended in delivery_unconfirmed, leaving users
+with only the summary line. Deliver the file first and skip replyTo for
+long document sends in groups.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
