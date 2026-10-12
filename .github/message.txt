@@ -1,6 +1,7 @@
-chore(hermes): publish Workbot Hermes image as workbot-hermes
+fix(hermes): fall back to plain text when Concord quote delivery fails
 
-Rename the derived Hermes runtime image from concord-hermes to workbot-hermes
-so the name reflects the multi-platform Workbot bundle rather than Concord alone.
+Try native WeChat quote replies first with a longer Harbor wait window, then
+retry once as plain text when confirmation times out. Extend Pilot native-reply
+UI verification polls to improve quoted delivery reliability in busy groups.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
