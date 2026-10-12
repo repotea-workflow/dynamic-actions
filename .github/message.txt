@@ -1,5 +1,3 @@
-chore(weauto): pin control-account tools for cross-conversation ops
-
-Replace outbound whitelist with weauto_control_send/history/fetch_media.
+chore(weauto): pin chat discovery API and control_find tool
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
