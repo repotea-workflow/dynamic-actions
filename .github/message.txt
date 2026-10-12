@@ -1,7 +1,6 @@
-fix: recognize English composer hint during safe sends (#9)
+docs: document multi-version WeChat build support policy.
 
-* fix: recognize localized composer hint without weakening chat identity
+Clarify that each new Linux WeChat build adds profiles alongside older ones
+so mixed deployments (e.g. ayn on 4.1.13.23, penny on 4.1.13.26) keep working.
 
-* fix: align Rust language validation with composer templates
-
-* fix: bind composer checks to independently resolved exact recipient
+Co-authored-by: Cursor <cursoragent@cursor.com>
