@@ -1,3 +1,6 @@
-test(weauto): adjust group quote expectations for long-reply ordering
+docs(weauto): clarify Hermes image is built as workbot-hermes
+
+Document that native Hermes channel sources are consumed through the workbot-hermes
+image assembled in the concord repository, separate from the OpenClaw extension.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
