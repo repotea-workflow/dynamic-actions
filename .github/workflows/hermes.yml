@@ -20,6 +20,12 @@ jobs:
     name: Build and validate Hermes Concord Bot
     runs-on: ubuntu-24.04
     timeout-minutes: 40
+    strategy:
+      fail-fast: false
+      matrix:
+        profile: [repotea, ayn]
+    env:
+      IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
     steps:
       - uses: actions/checkout@v7
       - name: Read source metadata
@@ -54,9 +60,10 @@ jobs:
           context: .
           file: docker/hermes/Dockerfile
           load: true
+          build-args: WORKBOT_CLI_PROFILE=${{ matrix.profile }}
           tags: concord-hermes:candidate
-          cache-from: type=gha,scope=concord-hermes
-          cache-to: type=gha,mode=max,scope=concord-hermes
+          cache-from: type=gha,scope=concord-hermes-${{ matrix.profile }}
+          cache-to: type=gha,mode=max,scope=concord-hermes-${{ matrix.profile }}
       - name: Verify Hermes platform and authentication contracts
         run: |
           docker run --rm --entrypoint /opt/hermes/.venv/bin/python \

@@ -1,1 +1,1 @@
-fix(bot): pin WeAuto compaction notice suppression
+feat(hermes): preserve ayn CLI capabilities with isolated image profile
