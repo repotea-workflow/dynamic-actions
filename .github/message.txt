@@ -1,5 +1,5 @@
-feat(hermes): add whitelisted cross-session outbound send for Concord and WeAuto
+fix(hermes): authorize Concord outbound groups by conversation type
 
-Expose concord_outbound_send and pin WeAuto outbound tool support so whitelisted users can manually send to other authorized chats.
+Group destinations without @chatroom suffix were incorrectly checked against allow_from.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
