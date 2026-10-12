@@ -1,3 +1,5 @@
-test(hermes): record RPC calls in Concord quote fallback fixture
+feat(hermes): add whitelisted cross-session outbound send for Concord and WeAuto
+
+Expose concord_outbound_send and pin WeAuto outbound tool support so whitelisted users can manually send to other authorized chats.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
