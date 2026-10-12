@@ -1,1 +1,1 @@
-
+fix: align Rust language validation with composer templates
