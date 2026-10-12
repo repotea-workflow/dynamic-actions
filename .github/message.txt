@@ -1,5 +1,3 @@
-feat(weauto): add whitelisted cross-session outbound send tool
-
-Allow explicitly whitelisted users to send plain text to other authorized conversations via weauto_outbound_send.
+test(weauto): expect weauto_outbound_send in Hermes tool registration
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
