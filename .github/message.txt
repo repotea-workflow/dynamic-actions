@@ -1,6 +1,1 @@
-Add scoped chat discovery API and weauto_control_find tool.
 
-Control accounts can search contact.db for group chat_ids without a prior
-session row; bot keys need allowDiscover enabled separately from send scope.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
