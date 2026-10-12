@@ -1,6 +1,1 @@
-Add WeChat 4.1.13.26 support alongside existing 4.1.13.23 profiles.
 
-New build profiles are selected by BuildID so ayn and other instances on
-4.1.13.23 keep working unchanged; also fix frida cleanup PermissionError.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
