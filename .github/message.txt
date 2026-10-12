@@ -1,3 +1,5 @@
-chore(botstar): pin wechat skill under guidance size limit
+chore(weauto): pin control-account tools for cross-conversation ops
+
+Replace outbound whitelist with weauto_control_send/history/fetch_media.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
