@@ -1,1 +1,1 @@
-main
+agt/weauto-compaction-notices

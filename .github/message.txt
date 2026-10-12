@@ -1,1 +1,1 @@
-fix: reconnect Hermes WeAuto after temporary access loss (#7)
+fix(nanobot): respect compaction notice visibility
