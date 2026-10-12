@@ -1,1 +1,1 @@
-
+fix(nanobot): respect compaction notice visibility (#8)
