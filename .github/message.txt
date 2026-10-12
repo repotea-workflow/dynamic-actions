@@ -1,1 +1,1 @@
-fix(nanobot): honor compaction notice settings in Concord
+fix(bot): pin WeAuto compaction notice suppression
