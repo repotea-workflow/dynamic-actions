@@ -1,3 +1,3 @@
-chore(botstar): pin wechat skill with concord_outbound_send guidance
+chore(botstar): pin wechat skill under guidance size limit
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
