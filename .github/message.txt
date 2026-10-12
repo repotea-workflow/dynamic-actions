@@ -1,1 +1,1 @@
-fix(weauto): pin Hermes reconnect after login recovery
+fix(hermes): classify session lease chatter as diagnostics
