@@ -1,5 +1,3 @@
-fix(hermes): authorize Concord outbound groups by conversation type
-
-Group destinations without @chatroom suffix were incorrectly checked against allow_from.
+chore(weauto): pin outbound send test fix for Hermes CI
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
