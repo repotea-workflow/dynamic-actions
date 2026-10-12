@@ -1,8 +1,5 @@
-fix(weauto): retry group quote replies as plain text on delivery failure
+feat(weauto): add whitelisted cross-session outbound send tool
 
-Try native quoted replies first with a longer confirmation window, then fall
-back to plain group text when WeAuto cannot confirm the quote path so content
-still reaches the chat. Extend native-reply draft and outgoing verification
-polls on the agent server.
+Allow explicitly whitelisted users to send plain text to other authorized conversations via weauto_outbound_send.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
