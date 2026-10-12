@@ -1,1 +1,1 @@
-agt/weauto-compaction-notices
+agt/ayn-chat-editor

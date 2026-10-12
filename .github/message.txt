@@ -1,1 +1,1 @@
-fix(nanobot): respect compaction notice visibility
+fix: recognize localized composer hint without weakening chat identity
