@@ -1,3 +1,3 @@
-chore(weauto): pin quote-reply fallback delivery fix
+test(hermes): record RPC calls in Concord quote fallback fixture
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
