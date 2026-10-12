@@ -1,11 +1,11 @@
-name: "[concord] Hermes Bot image"
+name: "[concord] Workbot Hermes image"
 
 on:
   push:
     branches: ["**"]
 
 concurrency:
-  group: concord-hermes-${{ github.ref }}
+  group: workbot-hermes-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
@@ -13,11 +13,11 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord-hermes
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes
 
 jobs:
   build:
-    name: Build and validate Hermes Concord Bot
+    name: Build and validate Workbot Hermes Bot
     runs-on: ubuntu-24.04
     timeout-minutes: 40
     strategy:
@@ -25,7 +25,7 @@ jobs:
       matrix:
         profile: [repotea, ayn]
     env:
-      IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
+      IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
     steps:
       - uses: actions/checkout@v7
       - name: Read source metadata
@@ -61,21 +61,21 @@ jobs:
           file: docker/hermes/Dockerfile
           load: true
           build-args: WORKBOT_CLI_PROFILE=${{ matrix.profile }}
-          tags: concord-hermes:candidate
-          cache-from: type=gha,scope=concord-hermes-${{ matrix.profile }}
-          cache-to: type=gha,mode=max,scope=concord-hermes-${{ matrix.profile }}
+          tags: workbot-hermes:candidate
+          cache-from: type=gha,scope=workbot-hermes-${{ matrix.profile }}
+          cache-to: type=gha,mode=max,scope=workbot-hermes-${{ matrix.profile }}
       - name: Verify Hermes platform and authentication contracts
         run: |
           docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
             -v "$PWD/integrations/hermes:/tests:ro" \
             -v "$PWD/integrations/workbot:/workbot:ro" \
             -e PYTHONPATH=/tests:/workbot \
-            concord-hermes:candidate -m unittest discover -s /tests -v
+            workbot-hermes:candidate -m unittest discover -s /tests -v
       - name: Verify native WeAuto channel logic
         run: |
           docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
             -v "$PWD/docker/weauto/.source/tests:/weauto-tests:ro" \
-            concord-hermes:candidate -m unittest discover -s /weauto-tests -v
+            workbot-hermes:candidate -m unittest discover -s /weauto-tests -v
       - uses: docker/login-action@v4
         if: steps.source.outputs.publish == 'true'
         with:
@@ -87,5 +87,5 @@ jobs:
         env:
           SOURCE_SHA: ${{ steps.source.outputs.sha }}
         run: |
-          docker tag concord-hermes:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
+          docker tag workbot-hermes:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
           docker push "${IMAGE_NAME}:sha-${SOURCE_SHA}"

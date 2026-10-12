@@ -1,6 +1,6 @@
-chore(weauto): pin WeAuto long-reply attachment-first delivery fix
+chore(hermes): publish Workbot Hermes image as workbot-hermes
 
-Update the Hermes/ayn image staging lock to cc1698b so long Markdown
-reports send the file before the summary and skip group quote replies.
+Rename the derived Hermes runtime image from concord-hermes to workbot-hermes
+so the name reflects the multi-platform Workbot bundle rather than Concord alone.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
