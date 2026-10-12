@@ -1,1 +1,1 @@
-feat(hermes): preserve ayn CLI capabilities with isolated image profile
+fix(hermes): honor platform suppression for setup notices
