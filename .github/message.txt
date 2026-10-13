@@ -1,7 +1,6 @@
-Fix group @ detection using native WeChat mention wxids.
+Fix concord mention follow-up test sender and timestamps.
 
-Harbor now exports atuserlist from message source and Hermes accepts
-group triggers when the current account wxid is mentioned, with a
-60s follow-up window for same-sender context.
+Grace window is keyed by sender; the test now reuses the same sender
+within 60s of the native wxid mention.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
