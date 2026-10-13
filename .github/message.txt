@@ -1,6 +1,6 @@
-Accept group follow-ups within 3 minutes of a native @ mention.
+Support Hermes cron proactive delivery on WeAuto.
 
-WeAuto already resolves mentions from atuserlist wxids; this aligns
-follow-up text and attachments with Concord's same-sender grace window.
+Cron jobs carry job_id metadata but no inbound WeChat origin; route those
+sends through allowlist-checked proactive delivery keyed by execution id.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
