@@ -1,6 +1,3 @@
-Pin weauto integration for group mention follow-up grace window.
-
-Bump source-lock to weauto 289c640 so Hermes picks up native wxid
-mention handling plus a 3-minute same-sender follow-up window.
+Bump pinned WeAuto source for cron proactive delivery support.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
