@@ -1,1 +1,1 @@
-test: cover numeric language region length boundary
+docs: explain focused Robin test paths and prerequisites
