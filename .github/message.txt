@@ -1,1 +1,1 @@
-docs: explain offline database probe syntax check
+test: cover active region fallback when preferred region is disabled
