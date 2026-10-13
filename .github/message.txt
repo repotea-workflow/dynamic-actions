@@ -1,5 +1,7 @@
-fix(weauto): correct pinned WeAuto revision in source-lock.
+Fix group @ detection using native WeChat mention wxids.
 
-The placeholder revision broke Hermes CI tarball download.
+Harbor now exports atuserlist from message source and Hermes accepts
+group triggers when the current account wxid is mentioned, with a
+60s follow-up window for same-sender context.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
