@@ -1,1 +1,9 @@
-docs: document minimal Robin unit test prerequisites
+test: cover line diff size limit boundary (#256)
+
+* fix: make resource image previews visible
+
+* test: cover line diff size limit boundary
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
