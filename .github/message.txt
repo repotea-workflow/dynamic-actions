@@ -1,1 +1,1 @@
-test(shared): reject malformed six-digit hex color channels
+test(shared): reject malformed six-digit hex color channels (#328)
