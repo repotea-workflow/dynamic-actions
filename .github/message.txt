@@ -1,1 +1,1 @@
-fix(hermes): preserve final delivery when trackers stop
+fix(hermes): validate complete Botstar guidance for all bot profiles
