@@ -1,3 +1,1 @@
-docs: document minimal Robin unit test prerequisites (#257)
-
-Document the minimal Robin unit test, Node and pnpm prerequisites, and the boundary between local unit and integration checks.
+test: cover numeric language region length boundary
