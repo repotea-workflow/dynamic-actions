@@ -1,1 +1,1 @@
-docs: explain offline external smoke readiness checks
+test(shared): preserve malformed eleven-character phone values
