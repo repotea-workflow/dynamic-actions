@@ -1,3 +1,1 @@
-Fix WeAuto source-lock revision typo for cron delivery pin.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+Support authorized webhook delivery to Concord and WeAuto
