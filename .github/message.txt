@@ -1,3 +1,5 @@
-Retrigger Hermes image build after WeAuto cron delivery pin.
+Fix WeAuto source staging to download via GitHub API directly.
+
+Avoid relying on the gh CLI in CI runners when pinning integration sources.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
