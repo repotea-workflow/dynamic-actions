@@ -1,1 +1,1 @@
-docs: document offline golden comparison unit check
+test(shared): reject malformed six-digit hex color channels
