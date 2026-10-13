@@ -1,6 +1,6 @@
-Fix concord mention follow-up test sender and timestamps.
+Fix group burst handling when only the first @ carries mention wxids.
 
-Grace window is keyed by sender; the test now reuses the same sender
-within 60s of the native wxid mention.
+Keep the first text as the bundle anchor, merge native mentions across
+the burst, and widen the same-sender follow-up window to three minutes.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
