@@ -1,1 +1,1 @@
-Support authorized webhook delivery to Concord and WeAuto
+fix(hermes): reconcile original webhook payload on retries
