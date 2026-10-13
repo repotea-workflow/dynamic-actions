@@ -1,1 +1,1 @@
-fix(hermes): reconcile original webhook payload on retries
+fix(hermes): allow native webhook silence and bind distinct origins
