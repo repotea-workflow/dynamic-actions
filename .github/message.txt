@@ -1,1 +1,1 @@
-docs: document offline golden comparison unit check (#327)
+docs: explain offline external smoke readiness checks
