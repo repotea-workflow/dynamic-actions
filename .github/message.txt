@@ -1,1 +1,1 @@
-Support authorized Hermes webhook notifications in WeAuto (#10)
+fix(integrations): persist first webhook delivery across retries
