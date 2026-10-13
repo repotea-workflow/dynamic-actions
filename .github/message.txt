@@ -1,5 +1,3 @@
-Fix WeAuto source staging to download via GitHub API directly.
-
-Avoid relying on the gh CLI in CI runners when pinning integration sources.
+Fix WeAuto source-lock revision typo for cron delivery pin.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
