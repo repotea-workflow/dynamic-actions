@@ -1,1 +1,1 @@
-test: cover line diff size limit boundary
+docs: document minimal Robin unit test prerequisites
