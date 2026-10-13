@@ -1,3 +1,5 @@
-chore(weauto): pin control_send attachments and WeChat 4.1.13.26 support.
+fix(weauto): correct pinned WeAuto revision in source-lock.
+
+The placeholder revision broke Hermes CI tarball download.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
