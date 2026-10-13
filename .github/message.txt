@@ -1,8 +1,8 @@
-docs: explain focused Robin test paths and prerequisites (#259)
+test: cover numeric language region length boundary (#258)
 
 * fix: make resource image previews visible
 
-* docs: explain focused Robin test paths and prerequisites
+* test: cover numeric language region length boundary
 
 ---------
 
