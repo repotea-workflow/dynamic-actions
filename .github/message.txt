@@ -1,7 +1,6 @@
-feat(weauto): allow control_send to deliver images and files cross-chat.
+Accept group follow-ups within 3 minutes of a native @ mention.
 
-Control accounts can attach workspace paths or HTTPS URLs alongside optional
-caption text; reuses the existing Delivery attachment pipeline with allowlist
-bypass for authorized cross-session sends.
+WeAuto already resolves mentions from atuserlist wxids; this aligns
+follow-up text and attachments with Concord's same-sender grace window.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
