@@ -1,1 +1,9 @@
-test: cover active region fallback when preferred region is disabled
+test: cover active region fallback when preferred region is disabled (#261)
+
+* fix: make resource image previews visible
+
+* test: cover active region fallback when preferred region is disabled
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
