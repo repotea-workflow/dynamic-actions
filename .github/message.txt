@@ -1,1 +1,5 @@
-fix(hermes): separate webhook routes and media operation identity
+fix: reuse persisted Webhook deliveries across Bot retries (#11)
+
+* fix(integrations): persist first webhook delivery across retries
+
+* fix(hermes): separate webhook routes and media operation identity
