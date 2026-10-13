@@ -1,9 +1,3 @@
-test: cover line diff size limit boundary (#256)
+docs: document minimal Robin unit test prerequisites (#257)
 
-* fix: make resource image previews visible
-
-* test: cover line diff size limit boundary
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Document the minimal Robin unit test, Node and pnpm prerequisites, and the boundary between local unit and integration checks.
