@@ -1,1 +1,1 @@
-Support authorized Hermes webhook notifications in WeAuto
+Support authorized Hermes webhook notifications in WeAuto (#10)
