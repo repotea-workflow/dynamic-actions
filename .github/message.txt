@@ -1,6 +1,6 @@
-Fix group burst handling when only the first @ carries mention wxids.
+Pin weauto integration for group mention follow-up grace window.
 
-Keep the first text as the bundle anchor, merge native mentions across
-the burst, and widen the same-sender follow-up window to three minutes.
+Bump source-lock to weauto 289c640 so Hermes picks up native wxid
+mention handling plus a 3-minute same-sender follow-up window.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
