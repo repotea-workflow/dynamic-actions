@@ -1,3 +1,1 @@
-Add shared runtime_identifiers catalog for Aviary feature and action IDs.
-
-Centralize 18 feature keys and 28 action IDs (aviary.* and module-scoped strings), migrate module and Swan shell tests to the catalog, and deprecate module-level aliases pointing at FeatureKeys and *Actions.
+test: cover line diff size limit boundary
