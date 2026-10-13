@@ -1,1 +1,1 @@
-test(config): cover duplicate and empty worker task entries
+docs: explain scoped offline golden replay preview
