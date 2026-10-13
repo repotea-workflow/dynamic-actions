@@ -1,1 +1,1 @@
-docs: explain offline external smoke readiness checks (#329)
+test(config): cover duplicate and empty worker task entries
