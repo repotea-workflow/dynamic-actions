@@ -1,1 +1,1 @@
-fix(hermes): allow native webhook silence and bind distinct origins
+fix(hermes): preserve final delivery when trackers stop
