@@ -1,6 +1,1 @@
-Support Hermes cron proactive delivery on WeAuto.
-
-Cron jobs carry job_id metadata but no inbound WeChat origin; route those
-sends through allowlist-checked proactive delivery keyed by execution id.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+Support authorized Hermes webhook notifications in WeAuto
