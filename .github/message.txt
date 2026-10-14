@@ -1,1 +1,1 @@
-fix: restore native quote drafts and verify rendered emoji text
+fix: align Pilot send transport timeout and locate ambiguous quotes
