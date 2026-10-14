@@ -1,7 +1,3 @@
-Add control delegation for admin-only cross-conversation sends.
-
-Introduce signed /api/messages/control-jobs so Hermes can deliver to
-non-allowlisted chats without widening scoped API keys or exposing the
-delegation secret to the model.
+test: fix client call tuple unpacking after control headers change.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
