@@ -1,1 +1,7 @@
+fix: allow control send/read for in-session private chats.
 
+chat_exists now checks session.db for all chats, not only groups.
+Scoped reads accept signed control proofs on GET /api/messages/*.
+Hermes control_history sends delegation headers for non-allowlisted chats.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
