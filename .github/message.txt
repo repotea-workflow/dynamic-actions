@@ -1,3 +1,6 @@
-chore: pin WeAuto integration at control-jobs test fix.
+fix: apply control delegation migration on Harbor startup.
+
+Include 005_control_delegation.sql in the embedded migration list so
+CI and production databases pick up scoped control account columns.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
