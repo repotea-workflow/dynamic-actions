@@ -1,3 +1,1 @@
-test: isolate control-jobs mock client from discover override.
 
-Co-authored-by: Cursor <cursoragent@cursor.com>
