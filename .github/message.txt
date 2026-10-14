@@ -1,3 +1,3 @@
-test: fix client call tuple unpacking after control headers change.
+test: isolate control-jobs mock client from discover override.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
