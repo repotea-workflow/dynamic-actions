@@ -1,1 +1,1 @@
-chore(sync): resolve merge conflicts on main
+fix: correct native quote preparation and delivery failure states
