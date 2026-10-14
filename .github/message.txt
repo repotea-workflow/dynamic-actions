@@ -1,6 +1,5 @@
-fix: recognize Enter Weixin login button in English locale
+Add optional outbound timestamp suffix for WeAuto delivery.
 
-WeChat Linux shows Enter Weixin on the saved-account screen; map it to
-log_in so login_account is identified and the login plan can proceed.
+Support a master switch plus allow-from/allow-groups whitelist and configurable timezone (default Asia/Shanghai) in weauto_common before messages are submitted.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
