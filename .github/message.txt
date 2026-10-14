@@ -1,1 +1,1 @@
-test: respect shared Itsaplan context in Boxliy CLI profile
+fix: restore native quote drafts and verify rendered emoji text
