@@ -1,1 +1,1 @@
-Merge remote-tracking branch 'origin/main'
+test: respect shared Itsaplan context in Boxliy CLI profile
