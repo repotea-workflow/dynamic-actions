@@ -1,5 +1,7 @@
-Add optional outbound timestamp suffix for Concord delivery.
+Add control delegation for Harbor and Hermes cross-session sends.
 
-Mirror WeAuto with a master switch, allow-from/allow-groups whitelist, and Asia/Shanghai default timezone; bump pinned WeAuto source for shared weauto_common logic.
+Harbor accepts signed message.control_send for admin accounts while
+scoped tokens stay conversation-bound; Hermes mirrors WeAuto with
+concord_control_send/find and bumps the pinned WeAuto integration.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
