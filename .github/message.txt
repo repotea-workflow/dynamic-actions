@@ -1,7 +1,6 @@
-fix: unblock sends before WeChat opens DB handles
+fix: recognize Enter Weixin login button in English locale
 
-Use on-disk account fallback in execution and job workers, stop holding
-the send worker lock while waiting for live identity, and spawn WeChat on
-first boot when the process was never observed running.
+WeChat Linux shows Enter Weixin on the saved-account screen; map it to
+log_in so login_account is identified and the login plan can proceed.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
