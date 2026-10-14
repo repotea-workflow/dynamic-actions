@@ -1,1 +1,1 @@
-fix: reconcile delayed bot delivery confirmations without resending
+chore(sync): resolve merge conflicts on main
