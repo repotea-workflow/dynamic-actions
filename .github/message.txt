@@ -1,6 +1,1 @@
-fix: load WeChat DB keys under the active session id for control jobs.
 
-control_jobs and control read auth used session id "default" while discover
-and other routes use the live session id, so chat_exists always failed.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
