@@ -1,1 +1,3 @@
-fix: reconcile unconfirmed Concord and WeAuto bot replies
+Add boxliy CLI profile with 0x128bit git credential paths.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
