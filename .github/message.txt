@@ -1,7 +1,3 @@
-Add control delegation for Harbor and Hermes cross-session sends.
-
-Harbor accepts signed message.control_send for admin accounts while
-scoped tokens stay conversation-bound; Hermes mirrors WeAuto with
-concord_control_send/find and bumps the pinned WeAuto integration.
+fix: use full weauto revision in source-lock for Hermes CI.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
