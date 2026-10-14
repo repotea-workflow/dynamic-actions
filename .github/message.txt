@@ -1,1 +1,1 @@
-fix: never resend unconfirmed quoted bot replies
+fix: reconcile delayed bot delivery confirmations without resending
