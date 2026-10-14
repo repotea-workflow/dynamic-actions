@@ -1,1 +1,7 @@
+fix: recover account identity before WeChat opens DB handles
 
+After pod restart scoped bot keys were rejected while WeChat was logged
+in but had not yet opened account databases. Fall back to the sole on-disk
+account directory and stop treating an unverified live handle as denial.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
