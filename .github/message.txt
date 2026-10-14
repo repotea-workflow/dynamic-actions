@@ -1,6 +1,3 @@
-fix: apply control delegation migration on Harbor startup.
-
-Include 005_control_delegation.sql in the embedded migration list so
-CI and production databases pick up scoped control account columns.
+fix: Harbor token insert and migration test for control delegation.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
