@@ -1,6 +1,15 @@
-fix: align key verification with live WAL-backed DB reads
+fix: native quote delivery without resend workarounds
 
-Use short read-only SQLCipher connections for key verification instead of
-immutable snapshots, matching query_wechat_db and native reply DB access.
+* fix: never resend unconfirmed quoted bot replies
 
-Co-authored-by: Cursor <cursoragent@cursor.com>
+* fix: reconcile delayed bot delivery confirmations without resending
+
+* fix: correct native quote preparation and delivery failure states
+
+* fix: activate verified WeChat window before native quote actions
+
+* fix: select visible chat rows and reveal verified native selection
+
+* fix: preserve quoted drafts across viewport and emoji rendering
+
+* fix: locate ambiguous quote sources through native history
