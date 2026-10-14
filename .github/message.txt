@@ -1,1 +1,5 @@
-fix: align Pilot send transport timeout and locate ambiguous quotes
+chore: pin weauto source-lock to quote-reply fix revision
+
+Align Hermes/workbot builds with merged WeAuto native quote and WAL read fixes.
+
+Co-authored-by: Cursor <cursoragent@cursor.com>
