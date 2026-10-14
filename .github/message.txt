@@ -1,3 +1,1 @@
-Add boxliy CLI profile with 0x128bit git credential paths.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+Merge remote-tracking branch 'origin/main'
