@@ -1,5 +1,7 @@
-Add optional outbound timestamp suffix for WeAuto delivery.
+Add control delegation for admin-only cross-conversation sends.
 
-Support a master switch plus allow-from/allow-groups whitelist and configurable timezone (default Asia/Shanghai) in weauto_common before messages are submitted.
+Introduce signed /api/messages/control-jobs so Hermes can deliver to
+non-allowlisted chats without widening scoped API keys or exposing the
+delegation secret to the model.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
