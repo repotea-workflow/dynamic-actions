@@ -1,5 +1,5 @@
-chore: pin weauto source-lock to quote-reply fix revision
+fix: use full weauto revision in source-lock
 
-Align Hermes/workbot builds with merged WeAuto native quote and WAL read fixes.
+Hermes staging requires a 40-character commit hash for tarball download.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
