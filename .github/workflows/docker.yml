@@ -130,6 +130,6 @@ jobs:
     branches:
     - 0xfe10/weauto
 env:
-  WEAUTO_BUILD_VERSION: ""
+  WEAUTO_BUILD_VERSION: "sha-2f8ec0e"
   WEAUTO_NO_CACHE: "false"
   IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/weauto

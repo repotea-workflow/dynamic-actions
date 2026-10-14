@@ -1,6 +1,1 @@
-fix: align key verification with live WAL-backed DB reads
 
-Use short read-only SQLCipher connections for key verification instead of
-immutable snapshots, matching query_wechat_db and native reply DB access.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
