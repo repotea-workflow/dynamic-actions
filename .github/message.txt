@@ -1,3 +1,3 @@
-chore: pin WeAuto integration for forward rules and control_find fix.
+chore: pin WeAuto integration after forward-rules test fixes.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
