@@ -1,5 +1,5 @@
-fix: use full weauto revision in source-lock
+Add optional outbound timestamp suffix for Concord delivery.
 
-Hermes staging requires a 40-character commit hash for tarball download.
+Mirror WeAuto with a master switch, allow-from/allow-groups whitelist, and Asia/Shanghai default timezone; bump pinned WeAuto source for shared weauto_common logic.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
