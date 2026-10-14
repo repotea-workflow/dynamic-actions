@@ -1,1 +1,1 @@
-fix(workbot): prevent duplicate WeAuto group replies
+fix: reconcile unconfirmed Concord and WeAuto bot replies
