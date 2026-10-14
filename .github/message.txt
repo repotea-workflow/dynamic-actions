@@ -1,1 +1,1 @@
-fix: activate verified WeChat window before native quote actions
+fix: select visible chat rows and reveal verified native selection
