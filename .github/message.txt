@@ -1,3 +1,3 @@
-test: update ConcordSettings fixtures for control delegation fields.
+chore: bump pinned WeAuto integration for control delegation tests.
 
 Co-authored-by: Cursor <cursoragent@cursor.com>
