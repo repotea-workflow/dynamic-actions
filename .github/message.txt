@@ -1,1 +1,1 @@
-Unify build readiness and freeze Spec metadata from one snapshot
+Add immutable build batches with atomic prepared attempts
