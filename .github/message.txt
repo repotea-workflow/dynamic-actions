@@ -1,1 +1,1 @@
-Add bounded gzip transport for feature-style bundle imports
+test: extend bundle transport business parity coverage
