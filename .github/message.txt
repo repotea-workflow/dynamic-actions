@@ -1,1 +1,1 @@
-fix(builds): isolate callbacks from the latest attempt projection
+Freeze release revision in platform-specific Build Spec v1 identity
