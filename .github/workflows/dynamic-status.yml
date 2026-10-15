@@ -1,0 +1,51 @@
+name: Reconcile dynamic CI status
+on:
+  workflow_run:
+    workflows: ['Dynamic CI receipt', '[weauto] Checks', '[aviary] Check']
+    types: [requested, in_progress, completed]
+  schedule:
+    - cron: '*/10 * * * *'
+  workflow_dispatch:
+    inputs:
+      execution_sha:
+        description: Optional full execution SHA to reconcile outside the 48-hour window
+        required: false
+        type: string
+permissions:
+  contents: read
+  actions: read
+jobs:
+  weauto:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: dynamic-status-weauto
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: repotea-workspace/kangumi/github-actions/dyn-status@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+        with:
+          config: .github/dynamic-status.json
+          source: weauto
+          execution-token: ${{ github.token }}
+          source-token: ${{ secrets.GH_TOKEN_0XFE10 }}
+  aviary:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    concurrency:
+      group: dynamic-status-aviary
+      cancel-in-progress: false
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+      - uses: repotea-workspace/kangumi/github-actions/dyn-status@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+        with:
+          config: .github/dynamic-status.json
+          source: aviary
+          execution-token: ${{ github.token }}
+          source-token: ${{ secrets.GH_TOKEN_0X128BIT }}
