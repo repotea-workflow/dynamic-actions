@@ -1,1 +1,5 @@
-Merge main and preserve build API validation
+Fail closed on buildbox OIDC exchange without a dispatch binding.
+
+Register POST /api/v1/buildbox/auth/exchange so an unconfigured trust
+store or an unbound attempt cannot mint a stage credential. The shared
+service bearer is not accepted as a substitute.
