@@ -1,1 +1,1 @@
-fix(runtime): align release compilation and resource routing contracts
+fix(catalog): validate generated localized message identifiers
