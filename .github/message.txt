@@ -1,1 +1,1 @@
-Require frozen source inputs for build specs and preparation
+Unify build readiness and freeze Spec metadata from one snapshot
