@@ -1,13 +1,1 @@
-App Studio: bulk feature style selection (Vega-aligned) (#262)
-
-* Add bulk feature style selection in App Studio features page.
-
-Align Robin with Vega: one style key applies to all supporting features, with per-feature overrides under advanced settings.
-
-* Fix uniform style detection and per-feature style load errors.
-
-Require every feature with styles to have a selection before treating keys as uniform; show unavailable when a style query fails.
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+fix(builds): isolate callbacks from the latest attempt projection
