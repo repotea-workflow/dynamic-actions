@@ -1,1 +1,1 @@
-Fix concurrent Spec reuse and gate unverified artifact downloads
+Add prepared build attempts and run-scoped simulation
