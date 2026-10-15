@@ -1,1 +1,3 @@
-Freeze release revision in platform-specific Build Spec v1 identity
+Speed up feature style STAC compile with one workspace test.
+
+Replace per-package flutter test loops with a generated workspace compile test, mtime payload cache, compact bundle JSON, and shared screen registries aligned with Orion.
