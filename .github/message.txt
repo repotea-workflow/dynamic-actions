@@ -1,1 +1,1 @@
-Add immutable build batches with atomic prepared attempts
+fix(ci): repair shared validation baseline for Swan stability

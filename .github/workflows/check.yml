@@ -9,18 +9,32 @@ permissions:
   contents: read
 
 jobs:
+  source:
+    name: Resolve exact source revision
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: source
+        uses: repotea-workspace/kangumi/github-actions/dyn-source@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+
   check:
+    needs: source
     name: Check repository
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout source repository
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
         with:
           repository: boxliy/aviary
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
-          ref_file: .github/ref.txt
+          ref: ${{ needs.source.outputs.sha }}
 
       # taiki-e/install-action just
       - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
@@ -70,6 +84,7 @@ jobs:
       - name: Verify repository
         run: |
           trap 'just db-down' EXIT
+          just -f waterfowl/Justfile build-feature-styles
           just -f waterfowl/Justfile test
           just check
           pnpm --dir songbirds lint
