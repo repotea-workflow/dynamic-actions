@@ -1,4 +1,1 @@
-Add GitHub Actions OIDC verification for build stages
-
-Verify pinned ES256 Actions tokens and issue short-lived stage credentials
-without accepting the shared buildbox bearer as a substitute.
+fix(ci): resolve isolated STAC CLI dependencies
