@@ -1,9 +1,3 @@
-docs: explain offline database probe syntax check (#260)
+Add bulk feature style selection in App Studio features page.
 
-* fix: make resource image previews visible
-
-* docs: explain offline database probe syntax check
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Align Robin with Vega: one style key applies to all supporting features, with per-feature overrides under advanced settings.
