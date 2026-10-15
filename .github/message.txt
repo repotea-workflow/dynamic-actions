@@ -1,1 +1,1 @@
-test(hawk): assert build spec IDs remain decimal strings
+ci: install failed dynamic dispatch observer
