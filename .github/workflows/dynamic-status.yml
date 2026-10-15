@@ -1,7 +1,11 @@
 name: Reconcile dynamic CI status
 on:
   workflow_run:
-    workflows: ['Dynamic CI receipt', '\[weauto\] Checks', '\[aviary\] Check']
+    # Workflow IDs/names are shared by file path across execution branches.
+    # Route by source execution branch; exclude main so the receiver cannot
+    # recursively trigger itself when its own runs finish.
+    workflows: ['**']
+    branches: ['0xfe10/weauto', 'boxliy/aviary']
     types: [requested, in_progress, completed]
   schedule:
     - cron: '*/10 * * * *'
@@ -16,6 +20,7 @@ permissions:
   actions: read
 jobs:
   weauto:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == '0xfe10/weauto'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     concurrency:
@@ -33,6 +38,7 @@ jobs:
           execution-token: ${{ github.token }}
           source-token: ${{ secrets.GH_TOKEN_0XFE10 }}
   aviary:
+    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'boxliy/aviary'
     runs-on: ubuntu-latest
     timeout-minutes: 15
     concurrency:
