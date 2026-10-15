@@ -1,5 +1,1 @@
-Restrict build Spec reads and upload grants to stage credentials.
-
-Prepare may read a dispatched Spec without an upload URL. Finalize alone
-can request an artifact upload, and the shared service bearer cannot take
-either path.
+test(releases): use app-addressed runtime delivery routes
