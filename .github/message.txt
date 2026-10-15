@@ -1,1 +1,5 @@
-fix(releases): authorize signed artifacts with platform permissions
+Bind buildbox OIDC exchange to a dispatched attempt.
+
+Verify the Actions token against the fixed JWKS cache and record the
+GitHub run on the platform attempt. Prepared runs and GitHub reruns
+fail closed instead of minting a stage credential.
