@@ -1,1 +1,1 @@
-test: extend bundle transport business parity coverage
+fix(swan): stabilize dynamic page and asset lifecycles
