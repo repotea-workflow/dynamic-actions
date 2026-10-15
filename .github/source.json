@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "0xfe10/weauto",
+    "repository_id": 1412184208,
+    "sha": "cddbfafb092b5bc18d4158f4d62804ef927529ad",
+    "ref_type": "branch",
+    "ref_name": "agt/dyn-ci-status-enable",
+    "run_id": 38725058933,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": "checks-v1"
+}

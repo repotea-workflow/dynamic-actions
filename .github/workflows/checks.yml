@@ -11,26 +11,16 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - id: source
-      env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
-      shell: bash
-      run: |-
-        set -euo pipefail
-        test "$(cat .github/repository.txt)" = "0xfe10/weauto"
-        source_ref="$(cat .github/commit.txt)"
-        [[ "$source_ref" =~ ^[0-9a-f]{7,40}$ ]]
-        source_sha="$(gh api "repos/0xfe10/weauto/commits/$source_ref" --jq .sha)"
-        [[ "$source_sha" =~ ^[0-9a-f]{40}$ ]]
-        echo "sha=$source_sha" >> "$GITHUB_OUTPUT"
-        if [ -f .github/branch.txt ]; then
-          echo "branch=$(cat .github/branch.txt)" >> "$GITHUB_OUTPUT"
-        fi
+      uses: repotea-workspace/kangumi/github-actions/dyn-source@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
   native-channels:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v4
     - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
       with:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -49,7 +39,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
       with:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -76,7 +66,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
       with:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -92,7 +82,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
       with:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -108,30 +98,10 @@ jobs:
     - run: node --test tests/media-download.test.cjs
     needs: source
     timeout-minutes: 10
-  report:
-    if: ${{ always() && needs.source.result == 'success' }}
-    needs:
-    - source
-    - native-channels
-    - ts
-    - rust
-    - python
-    runs-on: ubuntu-latest
-    steps:
-    - env:
-        GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
-        SOURCE_SHA: ${{ needs.source.outputs.sha }}
-        RESULTS: ${{ toJSON(needs) }}
-      run: |-
-        set -euo pipefail
-        state=success
-        if ! jq -e 'all(.[]; .result == "success")' <<< "$RESULTS" >/dev/null; then state=failure; fi
-        jq -n --arg state "$state" --arg url "$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" '{state:$state,context:"weauto/dynamic-checks",description:"WeAuto checks in public execution repository",target_url:$url}' | gh api "repos/0xfe10/weauto/statuses/$SOURCE_SHA" --input -
-        test "$state" = success
 'on':
   push:
     branches:
     - 0xfe10/weauto
 concurrency:
-  group: weauto-checks-${{ github.ref }}
+  group: weauto-checks-${{ github.sha }}
   cancel-in-progress: true
