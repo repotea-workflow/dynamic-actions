@@ -1,3 +1,3 @@
-Add bulk feature style selection in App Studio features page.
+Fix uniform style detection and per-feature style load errors.
 
-Align Robin with Vega: one style key applies to all supporting features, with per-feature overrides under advanced settings.
+Require every feature with styles to have a selection before treating keys as uniform; show unavailable when a style query fails.
