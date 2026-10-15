@@ -1,5 +1,5 @@
-Bind buildbox OIDC exchange to a dispatched attempt.
+Restrict build Spec reads and upload grants to stage credentials.
 
-Verify the Actions token against the fixed JWKS cache and record the
-GitHub run on the platform attempt. Prepared runs and GitHub reruns
-fail closed instead of minting a stage credential.
+Prepare may read a dispatched Spec without an upload URL. Finalize alone
+can request an artifact upload, and the shared service bearer cannot take
+either path.
