@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "boxliy/aviary",
+    "repository_id": 1329498206,
+    "sha": "99c0be9e5deee8dc443fd7824084f9e48467ff90",
+    "ref_type": "branch",
+    "ref_name": "agt/dyn-ci-status-enable",
+    "run_id": 38725061497,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": "checks-v1"
+}
