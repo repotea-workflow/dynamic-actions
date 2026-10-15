@@ -1,5 +1,1 @@
-Speed up feature style STAC compile with one workspace test. (#264)
-
-Replace per-package flutter test loops with a generated workspace compile test, mtime payload cache, compact bundle JSON, and shared screen registries aligned with Orion.
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+Add bounded gzip transport for feature-style bundle imports
