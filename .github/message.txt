@@ -1,1 +1,4 @@
-fix(ci): resolve isolated STAC CLI dependencies
+Match GitHub OIDC workflow claims before issuing stage credentials
+
+Accept workflow_ref and job_workflow_ref as owner/repo/path@ref, and refuse
+a credential when the verified job workflow is not the requested stage.
