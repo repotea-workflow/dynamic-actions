@@ -1,1 +1,1 @@
-fix: verify staging rollout with fresh Argo snapshots
+fix(mobile): hide developer tools behind session-only unlock
