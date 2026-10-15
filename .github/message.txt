@@ -1,1 +1,1 @@
-Add prepared build attempts and run-scoped simulation
+Isolate build preparation locks and verify simulator authorization
