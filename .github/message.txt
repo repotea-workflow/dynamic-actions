@@ -1,1 +1,1 @@
-Isolate build preparation locks and verify simulator authorization
+Add build snapshot history and attempt log links
