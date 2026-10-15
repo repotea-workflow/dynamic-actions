@@ -1,57 +1,47 @@
 name: Reconcile dynamic CI status
 on:
   workflow_run:
-    # Workflow IDs/names are shared by file path across execution branches.
-    # Route by source execution branch; exclude main so the receiver cannot
-    # recursively trigger itself when its own runs finish.
     workflows: ['**']
-    branches: ['0xfe10/weauto', 'boxliy/aviary']
+    # Source branches and forwarded tags are discovered from source-owned run
+    # artifacts. Never react to this receiver's own default-branch runs.
+    branches-ignore: ['main']
     types: [requested, in_progress, completed]
   schedule:
     - cron: '*/10 * * * *'
   workflow_dispatch:
     inputs:
       execution_sha:
-        description: Optional full execution SHA to reconcile outside the 48-hour window
+        description: Optional full execution SHA; empty scans the last 48 hours
         required: false
         type: string
 permissions:
   contents: read
   actions: read
 jobs:
-  weauto:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == '0xfe10/weauto'
+  reconcile:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - group: repotea
+            token: GH_TOKEN_0XFE10
+          - group: boxliy
+            token: GH_TOKEN_0X128BIT
+          - group: fewensa
+            token: GH_TOKEN_FEWENSA
     runs-on: ubuntu-latest
     timeout-minutes: 15
     concurrency:
-      group: dynamic-status-weauto
+      group: dynamic-status-${{ matrix.group }}
       cancel-in-progress: false
     steps:
       - uses: actions/checkout@v4
         with:
           ref: ${{ github.event.repository.default_branch }}
           persist-credentials: false
-      - uses: repotea-workspace/kangumi/github-actions/dyn-status@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+      - uses: repotea-workspace/kangumi/github-actions/dyn-status@5f475b17868960dc5727a778d50d5875d8380a5f
         with:
           config: .github/dynamic-status.json
-          source: weauto
+          credential-group: ${{ matrix.group }}
           execution-token: ${{ github.token }}
-          source-token: ${{ secrets.GH_TOKEN_0XFE10 }}
-  aviary:
-    if: github.event_name != 'workflow_run' || github.event.workflow_run.head_branch == 'boxliy/aviary'
-    runs-on: ubuntu-latest
-    timeout-minutes: 15
-    concurrency:
-      group: dynamic-status-aviary
-      cancel-in-progress: false
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.repository.default_branch }}
-          persist-credentials: false
-      - uses: repotea-workspace/kangumi/github-actions/dyn-status@b3d7f5fc3ec2c003cf061349d52f8c741da754db
-        with:
-          config: .github/dynamic-status.json
-          source: aviary
-          execution-token: ${{ github.token }}
-          source-token: ${{ secrets.GH_TOKEN_0X128BIT }}
+          source-token: ${{ secrets[matrix.token] }}
