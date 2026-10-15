@@ -3,10 +3,10 @@
   "source": {
     "repository": "boxliy/aviary",
     "repository_id": 1329498206,
-    "sha": "25cfc23951d6c26194eb798ddf7e852591bef7f7",
+    "sha": "2ed1f96f051460a2b6cb43205190153835c831e5",
     "ref_type": "branch",
-    "ref_name": "agt/swan-runtime-stability",
-    "run_id": 38790978773,
+    "ref_name": "0x128bit/aviary-4826",
+    "run_id": 38791474027,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

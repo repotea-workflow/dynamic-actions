@@ -1,1 +1,4 @@
-fix(api): repair OpenAPI contracts and refresh generated clients
+Add GitHub Actions OIDC verification for build stages
+
+Verify pinned ES256 Actions tokens and issue short-lived stage credentials
+without accepting the shared buildbox bearer as a substitute.
