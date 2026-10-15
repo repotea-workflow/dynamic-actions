@@ -1,1 +1,1 @@
-fix(mobile): hide developer tools behind session-only unlock
+fix(mobile): hide developer tools behind session-only unlock (#250)
