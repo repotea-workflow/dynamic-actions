@@ -1,1 +1,1 @@
-Add build snapshot history and attempt log links
+Add paginated Release platform build target discovery
