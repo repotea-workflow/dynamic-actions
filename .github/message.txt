@@ -1,1 +1,1 @@
-Add paginated Release platform build target discovery
+Require frozen source inputs for build specs and preparation
