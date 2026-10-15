@@ -1,1 +1,1 @@
-ci: install failed dynamic dispatch observer
+ci: install failed dynamic dispatch observer (#13)
