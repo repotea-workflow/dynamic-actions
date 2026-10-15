@@ -1,1 +1,1 @@
-fix(robin): preserve feedback table row activation
+fix(ci): authenticate private Flutter dependency resolution
