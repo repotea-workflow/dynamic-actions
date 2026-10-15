@@ -42,5 +42,23 @@
         }
       }
     }
+  },
+  "credential_groups": {
+    "repotea": {
+      "owners": [
+        "0xfe10",
+        "repotea-workspace"
+      ]
+    },
+    "boxliy": {
+      "owners": [
+        "boxliy"
+      ]
+    },
+    "fewensa": {
+      "owners": [
+        "fewensa"
+      ]
+    }
   }
 }
