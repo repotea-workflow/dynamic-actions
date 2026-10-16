@@ -1,4 +1,1 @@
-style: format the feature-style client transport test
-
-The repository format check rejects the unwrapped header expectation
-and CLI argument list in feature_style_platform_client_test.dart.
+Fix build lint findings and isolate reconciliation fixture
