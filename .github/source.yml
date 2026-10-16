@@ -3,15 +3,15 @@ source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
   sha: "a9acccf69bda7a4077ab465f24d170a523b306c8"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 38883734089
+  ref_type: "tag"
+  ref_name: "v0.0.134-ztoms"
+  run_id: 38883760445
   run_attempt: 1
-  workflow: ".github/workflows/trigger-branch.yml"
+  workflow: ".github/workflows/trigger-tag.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
   message: "fix(omsk): index product cleanup history and allow bounded batch requests (#337)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T09:55:15Z"
+  created_at: "2026-10-16T09:55:29Z"
