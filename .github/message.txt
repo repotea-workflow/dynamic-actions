@@ -1,1 +1,5 @@
-Declare explicit dynamic checks with version 1
+Declare dynamic checks with version 1 (#16)
+
+* ci: enable shared dynamic source status reporting
+
+* Declare explicit dynamic checks with version 1
