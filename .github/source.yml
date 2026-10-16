@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "2ff69427ed823197a05e29693d0dd3cff5f2a452"
-  ref_type: "tag"
-  ref_name: "v0.0.135-ztoms"
-  run_id: 38889312026
+  sha: "d4afa71595431f6b1ccf8721d96395fc8b16f83e"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38892298483
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): show cleanup preview progress and compress large JSON (#338)"
+  message: "Enable source pending status and failed dispatch recovery"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T10:45:36Z"
+  created_at: "2026-10-16T11:13:09Z"
