@@ -1,0 +1,43 @@
+schema_version: 1
+execution_repository: repotea-workflow/dynamic-actions
+sources:
+  weauto:
+    repository: 0xfe10/weauto
+    repository_id: 1412184208
+    dispatch_context: weauto/dynamic-dispatch
+    status_context: weauto/dynamic-checks
+    trigger_workflows:
+    - .github/workflows/trigger-branch.yml
+    policies:
+      checks-v1:
+        workflows:
+        - path: checks.yml
+          name: '[weauto] Checks'
+        missing_after_seconds: 600
+  aviary:
+    repository: boxliy/aviary
+    repository_id: 1329498206
+    dispatch_context: aviary/dynamic-dispatch
+    status_context: aviary/dynamic-checks
+    trigger_workflows:
+    - .github/workflows/trigger-branch.yml
+    policies:
+      checks-v1:
+        workflows:
+        - path: check.yml
+          name: '[aviary] Check'
+        missing_after_seconds: 600
+credential_groups:
+  repotea:
+    owners:
+    - '0xfe10'
+    - repotea-workspace
+    secret_name: GH_TOKEN_0XFE10
+  boxliy:
+    owners:
+    - boxliy
+    secret_name: GH_TOKEN_0X128BIT
+  fewensa:
+    owners:
+    - fewensa
+    secret_name: GH_TOKEN_FEWENSA
