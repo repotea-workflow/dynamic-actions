@@ -1,1 +1,1 @@
-Preserve silent success for legacy scheduled scripts
+Preserve legacy workspace data and scoped reply timestamps
