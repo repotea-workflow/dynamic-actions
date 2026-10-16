@@ -17,7 +17,7 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - id: source
-        uses: repotea-workspace/kangumi/github-actions/dyn-source@6342e5b00d730c134699b734cdb100988af58ee0
+        uses: repotea-workspace/kangumi/github-actions/dyn-source@main
         with:
           repository: boxliy/aviary
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
@@ -30,7 +30,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout source repository
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@6342e5b00d730c134699b734cdb100988af58ee0
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: boxliy/aviary
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
