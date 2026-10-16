@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "2853e92e6e1228b997d3431d9c3ed413748a6df0"
+  sha: "2ff69427ed823197a05e29693d0dd3cff5f2a452"
   ref_type: "branch"
-  ref_name: "agt/omsk-product-cleanup-upload-feedback"
-  run_id: 38888186729
+  ref_name: "main"
+  run_id: 38889268824
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): show cleanup preview progress and compress large JSON"
+  message: "fix(omsk): show cleanup preview progress and compress large JSON (#338)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T10:35:15Z"
+  created_at: "2026-10-16T10:45:10Z"
