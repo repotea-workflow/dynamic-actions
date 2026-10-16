@@ -3,13 +3,13 @@
   "source": {
     "repository": "boxliy/aviary",
     "repository_id": 1329498206,
-    "sha": "e6ebfd0267ffbec58bb50f71cca4eca2264ced07",
+    "sha": "05fce2f65328bcbb665d068eb47dc4b96109f0b3",
     "ref_type": "branch",
-    "ref_name": "0x128bit/aviary-4292",
-    "run_id": 38839759250,
+    "ref_name": "main",
+    "run_id": 38839836727,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
-  "policy": null
+  "policy": "checks-v1"
 }
