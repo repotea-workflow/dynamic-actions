@@ -1,1 +1,0 @@
-docs: explain scoped offline golden replay preview (#332)

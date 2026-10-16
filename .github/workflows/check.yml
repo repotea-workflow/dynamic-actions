@@ -15,11 +15,10 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          ref_file: .github/ref.txt
 
       - name: Set up Java
         uses: actions/setup-java@v5
@@ -54,11 +53,10 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          ref_file: .github/ref.txt
 
       - name: Set up pnpm
         run: corepack enable && corepack prepare pnpm@10.33.2 --activate
@@ -87,11 +85,10 @@ jobs:
           fetch-depth: 0
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          ref_file: .github/ref.txt
 
       - name: Set up Go
         uses: actions/setup-go@v6
