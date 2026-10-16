@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/nib"
   repository_id: 1306519586
-  sha: "4555273ac17ae49ea79f317851cec1cb1d053d57"
+  sha: "24d1c018047bcb7243b8099c7ba0ecca94fadbae"
   ref_type: "branch"
   ref_name: "agt/dyn-source-v2"
-  run_id: 38864671438
+  run_id: 38866393439
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: include Windows source metadata compatibility fix"
+  message: "ci: track Kangumi actions on main"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T07:02:22Z"
+  created_at: "2026-10-16T07:18:43Z"
