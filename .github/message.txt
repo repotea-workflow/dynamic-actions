@@ -1,1 +1,1 @@
-feat(workbot): preserve remote browser capabilities and resumable content upgrades
+Preserve legacy controls forwarding and isolated notification delivery
