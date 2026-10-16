@@ -1,0 +1,17 @@
+schema_version: 2
+source:
+  repository: "boxliy/plate"
+  repository_id: 1306519625
+  sha: "ec960275024367a45bdbf3a544486c3a697098d8"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38863310474
+  run_attempt: 1
+  workflow: ".github/workflows/trigger-branch.yml"
+execution_repository: "repotea-workflow/dynamic-actions"
+policy: null
+commit:
+  message: "ci: migrate dynamic workflows to source metadata outputs"
+  authors: ["0x128bit"]
+dispatch:
+  created_at: "2026-10-16T06:48:44Z"

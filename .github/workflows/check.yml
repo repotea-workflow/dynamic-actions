@@ -19,41 +19,35 @@ jobs:
     name: Resolve Plate Source
     runs-on: ubuntu-latest
     outputs:
-      source_commit_full: ${{ steps.source.outputs.source_commit_full }}
-      source_branch: ${{ steps.source.outputs.source_branch }}
-      source_repository: ${{ steps.source.outputs.source_repository }}
+      source_commit_full: ${{ steps.source.outputs.sha }}
+      source_branch: ${{ steps.source.outputs.branch }}
+      source_repository: ${{ steps.source.outputs.repository }}
     steps:
       - uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803 # v6
 
-      - name: Read source metadata
+      - name: Resolve source metadata
         id: source
-        working-directory: .
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
-        run: |
-          set -euo pipefail
-          branch="$(cat .github/branch.txt)"
-          commit="$(cat .github/commit.txt)"
-          repository="$(cat .github/repository.txt)"
-          commit_full="$(gh api "repos/${repository}/commits/${commit}" --jq .sha)"
-          echo "source_branch=${branch}" >> "$GITHUB_OUTPUT"
-          echo "source_commit_full=${commit_full}" >> "$GITHUB_OUTPUT"
-          echo "source_repository=${repository}" >> "$GITHUB_OUTPUT"
+        uses: repotea-workspace/kangumi/github-actions/dyn-source@bd03662daf08b16ba6382a951d04614e0754219d
+        with:
+          repository: boxliy/plate
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
 
       - name: Checkout dynamic source
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@e265ebca9b4a93aaf804be57c2687554dcc49dc7 # main verified 2026-08-05
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/plate
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Verify checked-out source matches this trigger
         working-directory: .
+        env:
+          EXPECTED_SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          EXPECTED_SOURCE_BRANCH: ${{ steps.source.outputs.branch }}
         run: |
           set -euo pipefail
           actual="$(git rev-parse HEAD)"
-          expected="${{ steps.source.outputs.source_commit_full }}"
-          branch="${{ steps.source.outputs.source_branch }}"
+          expected="$EXPECTED_SOURCE_SHA"
+          branch="$EXPECTED_SOURCE_BRANCH"
           if [ "$actual" != "$expected" ]; then
             echo "dynamic-branch race: checked out ${actual} but trigger recorded ${expected} (${branch})" >&2
             exit 1
