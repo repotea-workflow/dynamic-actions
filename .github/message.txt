@@ -1,1 +1,1 @@
-test: align native UI fixtures with remote input boundary
+refactor: separate session console transport handlers
