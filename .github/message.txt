@@ -1,1 +1,1 @@
-Preserve legacy controls forwarding and isolated notification delivery
+Preserve silent success for legacy scheduled scripts
