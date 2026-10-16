@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "repotea-workspace/ztoms",
+    "repository_id": 1220708612,
+    "sha": "e13a7ef80a0da9be27e17262b856bd198eccadad",
+    "ref_type": "branch",
+    "ref_name": "0xfe10/ztoms-5914",
+    "run_id": 38866506216,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": null
+}
