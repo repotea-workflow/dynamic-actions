@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "d11b528aee8dd6f78a2e87c13b2862f593ab52c3"
+  sha: "d10c901aecaa98d54ea8fcaeb1569120916f2a79"
   ref_type: "branch"
   ref_name: "agt/dyn-source-v2"
-  run_id: 38864682628
+  run_id: 38866438639
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: include Windows source metadata compatibility fix"
+  message: "ci: track Kangumi actions on main"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T07:02:29Z"
+  created_at: "2026-10-16T07:19:17Z"
