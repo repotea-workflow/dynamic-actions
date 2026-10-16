@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/centralis"
   repository_id: 1306519839
-  sha: "ab0fbfea4b3608781df7b189ba377cc68b4a77f1"
+  sha: "a5fbe23a3806e6957a8011f29f653f0f6a4e46ab"
   ref_type: "branch"
-  ref_name: "agt/dyn-source-v2"
-  run_id: 38864678820
+  ref_name: "main"
+  run_id: 38865637647
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: include Windows source metadata compatibility fix"
+  message: "ci: migrate dynamic workflows to source metadata outputs (#1)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T07:02:25Z"
+  created_at: "2026-10-16T07:11:35Z"
