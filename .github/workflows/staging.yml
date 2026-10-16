@@ -20,16 +20,18 @@ jobs:
     name: Ensure main
     runs-on: ubuntu-latest
     outputs:
-      ENSURE_MAIN: ${{ steps.ensure_main.outputs.matches }}
+      ENSURE_MAIN: ${{ steps.ensure_main.outputs.ENSURE_MAIN }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Ensure main
         id: ensure_main
-        uses: repotea-workspace/kangumi/github-actions/dyn-source@main
-        with:
-          repository: boxliy/aviary
-          branches: main
+        run: |
+          if grep -q '^main$' .github/branch.txt; then
+            echo "ENSURE_MAIN=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ENSURE_MAIN=false" >> "$GITHUB_OUTPUT"
+          fi
 
   build-hawk:
     name: Build Hawk image
@@ -45,6 +47,7 @@ jobs:
         with:
           repository: boxliy/aviary
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
@@ -105,6 +108,7 @@ jobs:
         with:
           repository: boxliy/aviary
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
+          ref_file: .github/ref.txt
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3

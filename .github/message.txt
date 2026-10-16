@@ -1,0 +1,1 @@
+test: preserve literal percent escapes in catalog audit reasons

@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "boxliy/aviary",
+    "repository_id": 1329498206,
+    "sha": "c820d85203d4e2403f96b09193c7411f233ffe73",
+    "ref_type": "branch",
+    "ref_name": "0x128bit/aviary-5916",
+    "run_id": 38867249862,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": "checks-v1"
+}
