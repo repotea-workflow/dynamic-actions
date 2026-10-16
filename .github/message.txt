@@ -1,1 +1,1 @@
-Preserve legacy workspace data and scoped reply timestamps
+Preserve dashboard automation and durable attachment delivery at cutover
