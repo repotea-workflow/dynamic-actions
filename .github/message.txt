@@ -1,3 +1,0 @@
-Complete Windows virtual printer runtime integration (#8)
-
-Completes the macOS and Windows Desktop virtual printer workflows, runtime bootstrap hardening, diagnostics, printer capabilities, and installer lifecycle fixes.

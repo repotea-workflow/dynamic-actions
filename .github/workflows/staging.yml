@@ -23,11 +23,10 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
         shell: bash
@@ -93,11 +92,10 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
         shell: bash
@@ -190,11 +188,10 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
         shell: bash
@@ -309,11 +306,10 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
         shell: bash
@@ -433,11 +429,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
       - name: Authorize private Git dependencies
         shell: bash
         env:
@@ -497,11 +492,10 @@ jobs:
     steps:
       - uses: actions/checkout@v6
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
       - name: Authorize private Git dependencies
         shell: bash
         env:
@@ -846,11 +840,10 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@bd03662daf08b16ba6382a951d04614e0754219d
         with:
           repository: boxliy/spoolix
           token: "${{ secrets.GH_TOKEN_0X128BIT }}"
-          ref_file: .github/ref.txt
 
       - name: Authorize private Git dependencies
         shell: bash

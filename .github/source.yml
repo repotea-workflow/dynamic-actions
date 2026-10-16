@@ -1,0 +1,17 @@
+schema_version: 2
+source:
+  repository: "boxliy/spoolix"
+  repository_id: 1306519725
+  sha: "2ac618a0d15e07457f259e18a845607924fb407c"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38863312979
+  run_attempt: 1
+  workflow: ".github/workflows/trigger-branch.yml"
+execution_repository: "repotea-workflow/dynamic-actions"
+policy: null
+commit:
+  message: "ci: migrate dynamic workflows to source metadata outputs"
+  authors: ["0x128bit"]
+dispatch:
+  created_at: "2026-10-16T06:48:41Z"
