@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "41bedb6722f81ed040ff021f54f698ec41d85bf7"
-  ref_type: "tag"
-  ref_name: "v0.0.132-ztoms"
-  run_id: 38879349336
+  sha: "cced48e33bce57a4a1ec80a2c3db841eb1556bdd"
+  ref_type: "branch"
+  ref_name: "agt/omsk-product-remove-preview-batch"
+  run_id: 38881148658
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): unblock public product upload removal (#335)"
+  message: "fix(omsk): batch historical order previews for product cleanup"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T09:16:53Z"
+  created_at: "2026-10-16T09:32:34Z"
