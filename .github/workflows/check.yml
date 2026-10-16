@@ -71,9 +71,23 @@ jobs:
           chmod +x "$RUNNER_TEMP/bin/fvm"
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
 
+      - name: Resolve Flutter dependencies
+        working-directory: waterfowl
+        env:
+          AVIARY_DEPENDENCY_GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+          GIT_CONFIG_COUNT: "2"
+          GIT_CONFIG_KEY_0: credential.https://github.com.useHttpPath
+          GIT_CONFIG_VALUE_0: "true"
+          GIT_CONFIG_KEY_1: credential.https://github.com/boxliy/nib.git.helper
+          GIT_CONFIG_VALUE_1: '!f() { test "$1" = get && printf "username=x-access-token\npassword=%s\n" "$AVIARY_DEPENDENCY_GH_TOKEN"; }; f'
+        run: fvm dart pub get
+
       - name: Install dependencies
         run: |
-          cd waterfowl && fvm dart pub get && fvm dart run melos bootstrap
+          cd waterfowl
+          fvm dart run melos bootstrap
+          # This runner is deliberately outside the Flutter pub workspace.
+          (cd tools/stac_cli && fvm dart pub get --enforce-lockfile)
           cd ..
           pnpm --dir songbirds install --frozen-lockfile
           cargo install cargo-audit --version 0.22.2 --locked
@@ -84,6 +98,7 @@ jobs:
       - name: Verify repository
         run: |
           trap 'just db-down' EXIT
+          just -f waterfowl/Justfile build-feature-styles
           just -f waterfowl/Justfile test
           just check
           pnpm --dir songbirds lint
