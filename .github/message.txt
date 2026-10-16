@@ -1,1 +1,13 @@
-Dynamic workflow dispatch
+feat: isolate protected WeChat sessions from agent workers (#15)
+
+* fix: read native WeChat WAL through protected snapshots
+
+* feat: persist evidence-gated quote recovery and isolate image targets
+
+* feat: isolate WeChat session host from external agent workers
+
+* test: align native UI fixtures with remote input boundary
+
+* refactor: separate session console transport handlers
+
+* chore: scope console test export to test builds

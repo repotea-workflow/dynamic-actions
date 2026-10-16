@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "28ce7f53ab6deb9b1d4fd2514b23f241a24997cc",
+    "sha": "924a6df78ff8a88e0f34c4ef436a9ff2d3f0327f",
     "ref_type": "branch",
-    "ref_name": "agt/session-host-isolation",
-    "run_id": 38838284734,
+    "ref_name": "main",
+    "run_id": 38838723782,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
