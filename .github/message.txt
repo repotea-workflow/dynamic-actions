@@ -1,5 +1,1 @@
-test: run feature-style CLI checks with the Dart VM
-
-flutter test resolves Platform.resolvedExecutable to flutter_tester, so the
-CLI process waited until the 30s timeout. Spawn the Dart SDK beside that
-engine and run from the package root.
+Complete immutable mobile packaging and isolated signing orchestration
