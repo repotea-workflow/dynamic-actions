@@ -1,1 +1,1 @@
-test(omsk): cover the final partial order toolkit page
+test(omsk): cover the final partial order toolkit page (#334)
