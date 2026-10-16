@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "92772d432d5e07b8b460e76ebbcf755399107ff8"
+  sha: "df993d38999c34f295fac978c8ea6f0b1377d71c"
   ref_type: "branch"
-  ref_name: "agt/dyn-source-v2"
-  run_id: 38892231901
+  ref_name: "main"
+  run_id: 38892750059
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Enable source pending status and failed dispatch recovery"
+  message: "Enable source pending status and failed dispatch recovery (#201)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T11:12:31Z"
+  created_at: "2026-10-16T11:17:20Z"
