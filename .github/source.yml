@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "7b9160299a9421a04332dc7df7ee185a84de6fee"
+  sha: "5bdd9bbed84e3ef5987b8e11407bee29195db516"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 38867090024
+  ref_name: "agt/omsk-product-remove-upload"
+  run_id: 38878388630
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: migrate dynamic workflows to source metadata outputs (#333)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main"
+  message: "fix(omsk): unblock public product upload removal"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T07:25:22Z"
+  created_at: "2026-10-16T09:08:28Z"
