@@ -1,3 +1,4 @@
-Dispatch a prepared GitHub attempt with only the platform run id.
+Add recoverable verification jobs for distribution artifacts.
 
-A missing token, repository id, or approved SHA leaves dispatch closed. An accepted workflow_dispatch records dispatched without inventing a run URL, and an unknown network result stays dispatching so a retry does not send a second event.
+Callbacks still only declare size and digest. A leased job records each
+target, and downloads point at the protected copy once verification passes.
