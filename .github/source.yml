@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "cedad36eac54688b195f45fa1e42f196128a98aa"
+  sha: "4d7098f835b0fb898ec65f0e04f0581b1a1d244f"
   ref_type: "branch"
-  ref_name: "agt/omsk-product-cleanup-upload-feedback"
-  run_id: 38899965489
+  ref_name: "main"
+  run_id: 38900648502
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): execute uploaded product cleanup as persistent tasks"
+  message: "fix(omsk): run uploaded product cleanup in persistent background tasks (#340)\n\n* fix(omsk): show cleanup preview progress and compress large JSON\n\n* fix(omsk): execute uploaded product cleanup as persistent tasks"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T12:21:55Z"
+  created_at: "2026-10-16T12:27:48Z"
