@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "0xfe10/concord",
+    "repository_id": 1391292435,
+    "sha": "a61d62786677b149158d337f9e3d1258f7ba4df6",
+    "ref_type": "branch",
+    "ref_name": "agt/session-host-isolation",
+    "run_id": 38837321495,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": null
+}
