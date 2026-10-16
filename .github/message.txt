@@ -1,3 +1,4 @@
-Hash verified distribution artifacts from the protected object copy.
+fix: compile the release compiler without the Flutter barrel
 
-Decrypt the published storage credential, copy the attempt-scoped upload, and stream its SHA-256 before promotion. Downloads require the recorded protected key.
+Import the pure Dart compiler modules directly so the native executable
+no longer loads aviary_renderer through the core library barrel.
