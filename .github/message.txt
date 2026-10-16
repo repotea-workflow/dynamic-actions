@@ -1,1 +1,1 @@
-Persist Tools browser state without breaking official Hermes file sync
+Harden browser workspace locking and non-root smoke cleanup
