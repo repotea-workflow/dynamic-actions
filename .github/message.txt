@@ -1,1 +1,29 @@
-Harden browser workspace locking and non-root smoke cleanup
+Preserve browser state and official Hermes SSH sync (#24)
+
+* feat: prepare official Hermes with isolated bridge and tools
+
+* ci: verify bridge with official Hermes MCP SDK
+
+* fix(bridge): preserve legacy history and quarantine unresolved cutovers
+
+* feat(workbot): isolate upstream Hermes execution and prepare preserved history cutover
+
+* feat(bridge): preserve scoped automation native replies and attested handoff
+
+* fix(workbot): preserve authenticated execution and publish isolated artifacts
+
+* feat(workbot): preserve remote browser capabilities and resumable content upgrades
+
+* Preserve legacy controls forwarding and isolated notification delivery
+
+* Preserve silent success for legacy scheduled scripts
+
+* Preserve legacy workspace data and scoped reply timestamps
+
+* Preserve dashboard automation and durable attachment delivery at cutover
+
+* Fix SSH StrictModes with Kubernetes runtime volume permissions
+
+* Persist Tools browser state without breaking official Hermes file sync
+
+* Harden browser workspace locking and non-root smoke cleanup
