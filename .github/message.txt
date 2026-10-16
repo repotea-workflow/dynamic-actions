@@ -1,1 +1,4 @@
-Scope foreign-key migration preservation test to its exact migration
+fix: allow the catalog registration audit helper eight arguments
+
+Clippy rejects record_registration after the decoded change reason was
+added. Match the existing audit helpers and keep the reason on that call.
