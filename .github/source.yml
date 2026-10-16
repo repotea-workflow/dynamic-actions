@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "125a7da9724d29171dc92a3aa0814c6f713e3d67"
+  sha: "a9acccf69bda7a4077ab465f24d170a523b306c8"
   ref_type: "branch"
-  ref_name: "agt/omsk-product-remove-batch-timeout"
-  run_id: 38883060299
+  ref_name: "main"
+  run_id: 38883734089
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): index product cleanup history and allow bounded batch requests"
+  message: "fix(omsk): index product cleanup history and allow bounded batch requests (#337)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T09:49:27Z"
+  created_at: "2026-10-16T09:55:15Z"
