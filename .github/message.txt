@@ -1,1 +1,5 @@
-ci: verify bridge with official Hermes MCP SDK
+feat: prepare official Hermes with external Workbot services (#20)
+
+* feat: prepare official Hermes with isolated bridge and tools
+
+* ci: verify bridge with official Hermes MCP SDK
