@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "09153c63c29038f8dc1eed6594d32d2488bd254f"
+  sha: "9a201be09a24f878881bf8a491439d6f6c7e5874"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 38866677408
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38892282390
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: migrate dynamic workflows to source metadata outputs (#251)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main"
+  message: "Enable source pending status and failed dispatch recovery"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T07:21:31Z"
+  created_at: "2026-10-16T11:12:58Z"
