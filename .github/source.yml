@@ -1,0 +1,17 @@
+schema_version: 2
+source:
+  repository: "repotea-workspace/gprinter"
+  repository_id: 1285168798
+  sha: "e70a52f3d6962cf003fb28b9b96aec78a52bd43c"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38863325789
+  run_attempt: 1
+  workflow: ".github/workflows/trigger-branch.yaml"
+execution_repository: "repotea-workflow/dynamic-actions"
+policy: null
+commit:
+  message: "ci: migrate dynamic workflows to source metadata outputs"
+  authors: ["0xfe10"]
+dispatch:
+  created_at: "2026-10-16T06:48:51Z"
