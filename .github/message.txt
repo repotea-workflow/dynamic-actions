@@ -1,4 +1,6 @@
-docs: record that the release compiler failure is historical
+Merge origin/main into the feature-style bundle transport branch
 
-The transport handoff still described the current head as failing on dart:ui.
-That failure predates the standalone compiler and catalog fixes.
+Keep bounded gzip and the percent-utf8 change-reason contract while
+taking main's build and catalog history. Accept omitted properties only
+for object schemas, preserve invalid_component_payload wrapping, and
+regenerate the Management client headers from Hawk OpenAPI.
