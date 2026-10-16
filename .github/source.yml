@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f9782acc31fc2f028715c2870c1116fa1a07b911"
+  sha: "af8ab0f9ee455926b8bc0a3861e2e698002429af"
   ref_type: "branch"
   ref_name: "agt/dyn-source-v2"
-  run_id: 38863319179
+  run_id: 38864680334
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: "checks-v1"
 commit:
-  message: "ci: migrate dynamic workflows to source metadata outputs"
+  message: "ci: include Windows source metadata compatibility fix"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T06:48:47Z"
+  created_at: "2026-10-16T07:02:24Z"
