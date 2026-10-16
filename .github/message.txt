@@ -1,1 +1,5 @@
-perf(swan): scope runtime updates and reuse refresh results
+fix: accept object schemas that omit properties
+
+The generated Baya catalog includes object schemas with no properties map.
+Treat that omission as no named fields, and reject a non-map properties
+value instead of failing every compiler request or dropping the catalog.
