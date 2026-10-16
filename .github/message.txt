@@ -1,6 +1,3 @@
-Enqueue artifact verification and reject GitHub shared-bearer callbacks.
+Hash verified distribution artifacts from the protected object copy.
 
-A succeeded callback queues one verification job per declared target in the
-same transaction. A GitHub attempt requires a finalize stage credential even
-when the trusted repository id is still empty, so the shared bearer cannot
-complete it.
+Decrypt the published storage credential, copy the attempt-scoped upload, and stream its SHA-256 before promotion. Downloads require the recorded protected key.
