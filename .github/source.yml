@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2cb204f10500ae8c3598582934b8683562ec80c7"
+  sha: "adbdcfdde47fa26b0a11ded41c71cd2fd784d90f"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 38872209408
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38892274813
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: "checks-v1"
 commit:
-  message: "test: preserve literal percent escapes in catalog audit reasons (#272)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Enable source pending status and failed dispatch recovery"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T08:13:10Z"
+  created_at: "2026-10-16T11:12:58Z"
