@@ -1,31 +1,4 @@
-fix(swan): stabilize runtime caching and restore CI validation (#266)
+docs: record that the release compiler failure is historical
 
-* fix(swan): stabilize dynamic page and asset lifecycles
-
-* fix(ci): repair shared validation baseline for Swan stability
-
-* fix(robin): preserve feedback table row activation
-
-* fix(ci): authenticate private Flutter dependency resolution
-
-* fix(api): repair OpenAPI contracts and refresh generated clients
-
-* fix(ci): resolve isolated STAC CLI dependencies
-
-* fix(compiler): keep release CLI imports free of Flutter
-
-* fix(db): restore schema and STAC migration invariants
-
-* fix(runtime): align release compilation and resource routing contracts
-
-* fix(catalog): validate generated localized message identifiers
-
-* fix(releases): authorize signed artifacts with platform permissions
-
-* test(releases): use app-addressed runtime delivery routes
-
-* perf(swan): scope runtime updates and reuse refresh results
-
----------
-
-Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>
+The transport handoff still described the current head as failing on dart:ui.
+That failure predates the standalone compiler and catalog fixes.
