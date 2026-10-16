@@ -1,1 +1,7 @@
-fix(bridge): preserve legacy history and quarantine unresolved cutovers
+Preserve legacy sender history and block unsafe cutovers (#21)
+
+* feat: prepare official Hermes with isolated bridge and tools
+
+* ci: verify bridge with official Hermes MCP SDK
+
+* fix(bridge): preserve legacy history and quarantine unresolved cutovers
