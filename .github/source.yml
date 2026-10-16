@@ -1,0 +1,17 @@
+schema_version: 2
+source:
+  repository: "boxliy/centralis"
+  repository_id: 1306519839
+  sha: "ebea6d1e063799ec078ffeef7f5421c9690c97fc"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38863318915
+  run_attempt: 1
+  workflow: ".github/workflows/trigger-branch.yml"
+execution_repository: "repotea-workflow/dynamic-actions"
+policy: null
+commit:
+  message: "ci: migrate dynamic workflows to source metadata outputs"
+  authors: ["0x128bit"]
+dispatch:
+  created_at: "2026-10-16T06:48:49Z"
