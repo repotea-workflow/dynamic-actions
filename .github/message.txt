@@ -1,6 +1,1 @@
-fix(weauto): fall back to plain group send when quote prepare fails
-
-Retry delivery without replyTo when the agent returns reply_prepare_* errors,
-so Hermes bots still deliver responses while native quote UI is broken.
-
-Co-authored-by: Cursor <cursoragent@cursor.com>
+feat: isolate WeChat session host from external agent workers
