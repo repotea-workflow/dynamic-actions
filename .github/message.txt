@@ -1,4 +1,1 @@
-fix: allow the catalog registration audit helper eight arguments
-
-Clippy rejects record_registration after the decoded change reason was
-added. Match the existing audit helpers and keep the reason on that call.
+Use AWS-LC JWT backend to remove vulnerable RSA dependency
