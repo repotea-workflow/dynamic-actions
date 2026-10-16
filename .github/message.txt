@@ -1,1 +1,61 @@
-Fix build lint findings and isolate reconciliation fixture
+Complete immutable mobile packaging, signing, and verified delivery (#270)
+
+* Add GitHub Actions OIDC verification for build stages
+
+Verify pinned ES256 Actions tokens and issue short-lived stage credentials
+without accepting the shared buildbox bearer as a substitute.
+
+* Match GitHub OIDC workflow claims before issuing stage credentials
+
+Accept workflow_ref and job_workflow_ref as owner/repo/path@ref, and refuse
+a credential when the verified job workflow is not the requested stage.
+
+* Fail closed on buildbox OIDC exchange without a dispatch binding.
+
+Register POST /api/v1/buildbox/auth/exchange so an unconfigured trust
+store or an unbound attempt cannot mint a stage credential. The shared
+service bearer is not accepted as a substitute.
+
+* Bind buildbox OIDC exchange to a dispatched attempt.
+
+Verify the Actions token against the fixed JWKS cache and record the
+GitHub run on the platform attempt. Prepared runs and GitHub reruns
+fail closed instead of minting a stage credential.
+
+* Restrict build Spec reads and upload grants to stage credentials.
+
+Prepare may read a dispatched Spec without an upload URL. Finalize alone
+can request an artifact upload, and the shared service bearer cannot take
+either path.
+
+* Dispatch a prepared GitHub attempt with only the platform run id.
+
+A missing token, repository id, or approved SHA leaves dispatch closed. An accepted workflow_dispatch records dispatched without inventing a run URL, and an unknown network result stays dispatching so a retry does not send a second event.
+
+* Add recoverable verification jobs for distribution artifacts.
+
+Callbacks still only declare size and digest. A leased job records each
+target, and downloads point at the protected copy once verification passes.
+
+* Enqueue artifact verification and reject GitHub shared-bearer callbacks.
+
+A succeeded callback queues one verification job per declared target in the
+same transaction. A GitHub attempt requires a finalize stage credential even
+when the trusted repository id is still empty, so the shared bearer cannot
+complete it.
+
+* Hash verified distribution artifacts from the protected object copy.
+
+Decrypt the published storage credential, copy the attempt-scoped upload, and stream its SHA-256 before promotion. Downloads require the recorded protected key.
+
+* Complete immutable mobile packaging and isolated signing orchestration
+
+* Scope foreign-key migration preservation test to its exact migration
+
+* Use AWS-LC JWT backend to remove vulnerable RSA dependency
+
+* Fix build lint findings and isolate reconciliation fixture
+
+---------
+
+Co-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>

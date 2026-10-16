@@ -3,10 +3,10 @@
   "source": {
     "repository": "boxliy/aviary",
     "repository_id": 1329498206,
-    "sha": "30af1aa3517d26d3466239c2319ce6c2e0e248cd",
+    "sha": "5e48dc7f2374c004e782392d1ad8b88d14fa40ce",
     "ref_type": "branch",
-    "ref_name": "0x128bit/aviary-4946",
-    "run_id": 38849773506,
+    "ref_name": "main",
+    "run_id": 38851373071,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
