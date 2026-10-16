@@ -1,1 +1,1 @@
-feat(workbot): isolate upstream Hermes execution and prepare preserved history cutover
+fix(workbot): preserve authenticated execution and publish isolated artifacts
