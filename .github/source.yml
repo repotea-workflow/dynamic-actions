@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "ca761b8169079f310c6ce395018d36d0bdb189bc"
+  sha: "fe7b1ac954db3b0f9703e61ed47561b48d312417"
   ref_type: "branch"
   ref_name: "agt/dyn-source-v2"
-  run_id: 38864684403
+  run_id: 38866452037
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: include Windows source metadata compatibility fix"
+  message: "ci: track Kangumi actions on main"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T07:02:31Z"
+  created_at: "2026-10-16T07:19:21Z"
