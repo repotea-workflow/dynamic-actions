@@ -1,4 +1,6 @@
-Add recoverable verification jobs for distribution artifacts.
+Enqueue artifact verification and reject GitHub shared-bearer callbacks.
 
-Callbacks still only declare size and digest. A leased job records each
-target, and downloads point at the protected copy once verification passes.
+A succeeded callback queues one verification job per declared target in the
+same transaction. A GitHub attempt requires a finalize stage credential even
+when the trusted repository id is still empty, so the shared bearer cannot
+complete it.
