@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "0551017bad9974e21d49de3abac8664d0e43f0a4"
+  sha: "f87bfbe7c2be3de5cfd6a655e0815422a3806970"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 38896769055
+  ref_name: "agt/dyn-source-v2"
+  run_id: 38897247810
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
-policy: "checks-v1"
+policy: null
 commit:
-  message: "Declare dynamic checks with version 1 (#274)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n* Declare explicit dynamic checks with version 1\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Use automatic workflow status reporting for Aviary"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T11:53:33Z"
+  created_at: "2026-10-16T11:57:56Z"
