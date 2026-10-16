@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/pxlab"
   repository_id: 1306519696
-  sha: "2822c4a1dfb5f88dd68447185c63522e8297a91f"
+  sha: "2e0e38feea928ca2f90047b8c17ed71e7dddddb9"
   ref_type: "branch"
-  ref_name: "3/merge"
-  run_id: 38892248141
+  ref_name: "main"
+  run_id: 38892760650
   run_attempt: 1
   workflow: ".github/workflows/check.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Dynamic workflow dispatch"
+  message: "Enable source pending status and failed dispatch recovery (#3)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T11:12:39Z"
+  created_at: "2026-10-16T11:17:21Z"
