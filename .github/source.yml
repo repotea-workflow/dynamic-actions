@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/spoolix"
   repository_id: 1306519725
-  sha: "9a1f8af1719f52d43c1a49ff27c81040435c7235"
+  sha: "6c33c4a65f7fb97aa1423567728903be1d877f2f"
   ref_type: "branch"
   ref_name: "agt/dyn-source-v2"
-  run_id: 38864675482
+  run_id: 38866411038
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: include Windows source metadata compatibility fix"
+  message: "ci: track Kangumi actions on main"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-16T07:02:22Z"
+  created_at: "2026-10-16T07:19:01Z"
