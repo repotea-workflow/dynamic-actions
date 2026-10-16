@@ -1,1 +1,1 @@
-refactor: separate session console transport handlers
+chore: scope console test export to test builds
