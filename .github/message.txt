@@ -1,5 +1,5 @@
-fix: accept object schemas that omit properties
+fix: preserve encoded feature-style change reasons
 
-The generated Baya catalog includes object schemas with no properties map.
-Treat that omission as no named fields, and reject a non-map properties
-value instead of failing every compiler request or dropping the catalog.
+Percent-decode X-Change-Reason once only when the percent-utf8 marker is
+present, and store the decoded reason on the existing import and catalog
+audit details.
