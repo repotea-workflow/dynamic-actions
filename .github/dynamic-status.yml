@@ -14,19 +14,6 @@ sources:
       - path: checks.yml
         name: '[weauto] Checks'
       missing_after_seconds: 600
-  aviary:
-    repository: boxliy/aviary
-    repository_id: 1329498206
-    dispatch_context: aviary/dynamic-dispatch
-    status_context: aviary/dynamic-checks
-    trigger_workflows:
-    - .github/workflows/trigger-branch.yml
-    checks:
-      version: 1
-      workflows:
-      - path: check.yml
-        name: '[aviary] Check'
-      missing_after_seconds: 600
 credential_groups:
   repotea:
     owners:
