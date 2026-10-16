@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/concord",
     "repository_id": 1391292435,
-    "sha": "a61d62786677b149158d337f9e3d1258f7ba4df6",
+    "sha": "fed6c952c925459122c2f929ba4e2cea4f85cff1",
     "ref_type": "branch",
     "ref_name": "agt/session-host-isolation",
-    "run_id": 38837321495,
+    "run_id": 38838017997,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
