@@ -45,6 +45,11 @@ jobs:
           docker run --rm --network none --entrypoint /opt/hermes/.venv/bin/python \
             -e PYTHONPATH=/tests -v "$PWD/integrations/tools:/tests:ro" \
             "$HERMES_IMAGE" -m unittest discover -s /tests -v
+      - name: Verify bridge against official MCP SDK
+        run: |
+          docker run --rm --network none --entrypoint /opt/hermes/.venv/bin/python \
+            -e PYTHONPATH=/tests -v "$PWD/integrations/bridge:/tests:ro" \
+            "$HERMES_IMAGE" -m unittest test_mcp_sdk -v
       - name: Verify content packaging
         run: python3 -m unittest discover -s docker/hermes/tests -v
       - name: Verify supported pinned memory plugin preparation
