@@ -1,91 +1,68 @@
-name: "[concord] Workbot Hermes image"
+name: "[concord] Official Hermes compatibility"
 
 on:
   push:
     branches: ["**"]
 
 concurrency:
-  group: workbot-hermes-${{ github.ref }}
+  group: workbot-official-hermes-${{ github.ref }}
   cancel-in-progress: true
 
 permissions:
   contents: read
-  packages: write
-
-env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes
 
 jobs:
-  build:
-    name: Build and validate Workbot Hermes Bot
+  verify:
     runs-on: ubuntu-24.04
-    timeout-minutes: 40
-    strategy:
-      fail-fast: false
-      matrix:
-        profile: [repotea, ayn]
-    env:
-      IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v7
-      - name: Read source metadata
-        id: source
-        run: |
-          echo "sha=$(cut -c1-7 .github/commit.txt)" >> "$GITHUB_OUTPUT"
-          if grep -qx main .github/branch.txt; then
-            echo "publish=true" >> "$GITHUB_OUTPUT"
-          fi
       - name: Check out Concord source
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
-      - name: Stage pinned native WeAuto channels
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
-        run: python3 docker/weauto/prepare-source.py
-      - name: Stage pinned CLI plugin
+      - name: Resolve unchanged official image
+        run: |
+          python3 - <<'PYIMAGE' >> "$GITHUB_ENV"
+          import json
+          lock = json.load(open("docker/hermes/upstream-image.json"))
+          print(f"HERMES_IMAGE={lock['repository']}@{lock['digest']}")
+          PYIMAGE
+      - name: Pull official image
+        run: docker pull "$HERMES_IMAGE"
+      - name: Verify real gateway and durable replay without external network
+        run: |
+          docker run --rm --network none --user 10000:10000 \
+            --entrypoint /opt/hermes/.venv/bin/python \
+            -v "$PWD/docker/hermes/smoke-upstream.py:/tests/smoke.py:ro" \
+            -v "$PWD/integrations/bridge:/bridge:ro" \
+            -v "$PWD/integrations/tools:/tools:ro" \
+            "$HERMES_IMAGE" /tests/smoke.py
+      - name: Verify external tools against official MCP SDK
+        run: |
+          docker run --rm --network none --entrypoint /opt/hermes/.venv/bin/python \
+            -e PYTHONPATH=/tests -v "$PWD/integrations/tools:/tests:ro" \
+            "$HERMES_IMAGE" -m unittest discover -s /tests -v
+      - name: Verify content packaging
+        run: python3 -m unittest discover -s docker/hermes/tests -v
+      - name: Verify supported pinned memory plugin preparation
+        run: |
+          docker run --rm --init --user 10000:10000 \
+            --tmpfs /opt/data:uid=10000,gid=10000,mode=0700 \
+            --entrypoint /opt/hermes/.venv/bin/python \
+            -v "$PWD/docker/hermes:/preparation:ro" "$HERMES_IMAGE" \
+            /preparation/prepare-memory.py --home /opt/data \
+            --lock /preparation/hindsight-lock.json --api-url https://memory.invalid --bank-id isolated-smoke
+      - name: Stage checksum-verified content sources
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
         run: python3 docker/hermes/prepare-plugin-source.py
-      - name: Stage pinned Hindsight memory provider
-        run: python3 docker/hermes/prepare-hindsight-source.py
-      - name: Test portal authorization
-        run: python3 -m unittest discover -s integrations/workbot -v
-      - uses: docker/setup-buildx-action@v4
-      - name: Build candidate
-        uses: docker/build-push-action@v7
-        with:
-          context: .
-          file: docker/hermes/Dockerfile
-          load: true
-          build-args: WORKBOT_CLI_PROFILE=${{ matrix.profile }}
-          tags: workbot-hermes:candidate
-          cache-from: type=gha,scope=workbot-hermes-${{ matrix.profile }}
-          cache-to: type=gha,mode=max,scope=workbot-hermes-${{ matrix.profile }}
-      - name: Verify Hermes platform and authentication contracts
+      - name: Prepare versioned data-only Bot content
         run: |
-          docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
-            -v "$PWD/integrations/hermes:/tests:ro" \
-            -v "$PWD/integrations/workbot:/workbot:ro" \
-            -e PYTHONPATH=/tests:/workbot \
-            workbot-hermes:candidate -m unittest discover -s /tests -v
-      - name: Verify native WeAuto channel logic
-        run: |
-          docker run --rm --entrypoint /opt/hermes/.venv/bin/python \
-            -v "$PWD/docker/weauto/.source/tests:/weauto-tests:ro" \
-            workbot-hermes:candidate -m unittest discover -s /weauto-tests -v
-      - uses: docker/login-action@v4
-        if: steps.source.outputs.publish == 'true'
-        with:
-          registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-      - name: Publish verified image
-        if: steps.source.outputs.publish == 'true'
-        env:
-          SOURCE_SHA: ${{ steps.source.outputs.sha }}
-        run: |
-          docker tag workbot-hermes:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
-          docker push "${IMAGE_NAME}:sha-${SOURCE_SHA}"
+          python3 docker/hermes/prepare-content.py --profile ayn --output output/content-ayn.tar
+          python3 docker/hermes/prepare-content.py --profile repotea --output output/content-repotea.tar
+          python3 docker/hermes/prepare-content.py --profile boxliy --output output/content-boxliy.tar
+      # Content can contain private business policy. Do not publish it in public artifacts.
+      # No Dockerfile, docker build, package write permission, or Hermes image push.

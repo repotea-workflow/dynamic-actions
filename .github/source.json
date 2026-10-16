@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/concord",
     "repository_id": 1391292435,
-    "sha": "d4d70ebc218f89483326463052bc860feec4ea00",
+    "sha": "835709363a51cb7c93531ea8b85b687d51702954",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 38838558107,
+    "ref_name": "agt/official-hermes-bridge",
+    "run_id": 38845054029,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

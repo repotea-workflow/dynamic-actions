@@ -1,7 +1,1 @@
-feat: isolate Concord workers and persist safe quote fallback (#19)
-
-* fix: isolate native database reads in validated snapshots
-
-* feat: run Concord pilot outside protected WeChat sessions
-
-* refactor: separate Harbor outbound delivery execution
+feat: prepare official Hermes with isolated bridge and tools
