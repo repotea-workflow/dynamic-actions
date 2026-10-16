@@ -1,4 +1,1 @@
-fix: compile the release compiler without the Flutter barrel
-
-Import the pure Dart compiler modules directly so the native executable
-no longer loads aviary_renderer through the core library barrel.
+perf(swan): scope runtime updates and reuse refresh results

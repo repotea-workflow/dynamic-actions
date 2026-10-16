@@ -3,13 +3,13 @@
   "source": {
     "repository": "boxliy/aviary",
     "repository_id": 1329498206,
-    "sha": "bf27d0f190378cd79996092fcac739ae49e8a690",
+    "sha": "d88d87359c2cf6474a944cb24adf31686ad741ec",
     "ref_type": "branch",
-    "ref_name": "0x128bit/aviary-4292",
-    "run_id": 38836445582,
+    "ref_name": "agt/swan-runtime-stability",
+    "run_id": 38836785607,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
-  "policy": null
+  "policy": "checks-v1"
 }
