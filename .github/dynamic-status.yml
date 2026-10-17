@@ -28,3 +28,5 @@ credential_groups:
     owners:
     - fewensa
     secret_name: GH_TOKEN_FEWENSA
+source_reporting:
+  - repotea-workspace/kangumi
