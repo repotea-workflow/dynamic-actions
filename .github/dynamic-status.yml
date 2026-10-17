@@ -29,4 +29,15 @@ credential_groups:
     - fewensa
     secret_name: GH_TOKEN_FEWENSA
 source_reporting:
+  - 0xfe10/concord
+  - 0xfe10/weauto
+  - 0xfe10/workbot
+  - boxliy/aviary
+  - boxliy/centralis
+  - boxliy/nib
+  - boxliy/plate
+  - boxliy/pxlab
+  - boxliy/spoolix
+  - repotea-workspace/gprinter
   - repotea-workspace/kangumi
+  - repotea-workspace/ztoms
