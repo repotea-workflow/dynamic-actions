@@ -1,1 +1,1 @@
-Transfer Workbot image publishing to its dedicated repository
+Report successful retirement of former Workbot publishers

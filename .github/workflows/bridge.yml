@@ -13,6 +13,11 @@ permissions:
   packages: write
 
 jobs:
+  retired:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Confirm release ownership
+        run: echo 'Publishing is owned by https://github.com/0xfe10/workbot; Concord publishes no Workbot service image.'
   build:
     # Publishing moved to the private 0xfe10/workbot repository.
     # Retained for historical builds; Concord must not publish these images.
