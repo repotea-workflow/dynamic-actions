@@ -1,0 +1,51 @@
+name: "[workbot] Official Hermes contract"
+on:
+  push:
+    branches: ["**"]
+concurrency:
+  group: workbot-upstream-${{ github.ref }}
+  cancel-in-progress: true
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - name: Resolve immutable Workbot source
+        id: source
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: |
+          test "$(cat .github/repository.txt)" = "0xfe10/workbot"
+          source_ref=$(cat .github/commit.txt)
+          revision=$(gh api "repos/0xfe10/workbot/commits/$source_ref" --jq .sha)
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/workbot
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ steps.source.outputs.revision }}
+      - name: Resolve pinned official image
+        run: |
+          python3 - <<'PYIMAGE' >> "$GITHUB_ENV"
+          import json
+          lock = json.load(open("docker/hermes/upstream-image.json"))
+          print(f"HERMES_IMAGE={lock['repository']}@{lock['digest']}")
+          PYIMAGE
+      - name: Test real gateway, source compatibility and durable replay
+        run: |
+          docker run --rm --network none --user 10000:10000 \
+            --entrypoint /opt/hermes/.venv/bin/python \
+            -v "$PWD/docker/hermes/smoke-upstream.py:/tests/smoke.py:ro" \
+            -v "$PWD/integrations/bridge:/bridge:ro" \
+            -v "$PWD/integrations/tools:/tools:ro" \
+            "$HERMES_IMAGE" /tests/smoke.py
+      - name: Test Bridge and Tools with the upstream MCP SDK
+        run: |
+          for component in bridge tools; do
+            docker run --rm --network none --entrypoint /opt/hermes/.venv/bin/python \
+              -e PYTHONPATH=/tests -v "$PWD/integrations/$component:/tests:ro" \
+              "$HERMES_IMAGE" -m unittest test_mcp_sdk -v
+          done

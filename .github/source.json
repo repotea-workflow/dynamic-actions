@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "0xfe10/workbot",
+    "repository_id": 1422856046,
+    "sha": "33243b7e25857167d9ca659ae6c9013f1efa6313",
+    "ref_type": "branch",
+    "ref_name": "agt/extract-services",
+    "run_id": 38993823561,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": null
+}
