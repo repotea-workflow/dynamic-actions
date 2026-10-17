@@ -1,1 +1,5 @@
-Use supplied SSH credential directly for dynamic forwarding
+Extract Workbot services and independent dynamic image releases (#1)
+
+* Extract Bridge Tools and Portal with independent dynamic CI
+
+* Use supplied SSH credential directly for dynamic forwarding
