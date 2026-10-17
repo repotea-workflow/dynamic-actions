@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "962c12aa1bf8d392ca64a85b234461e34b22fb93",
+    "sha": "774c273a16bef05558727c557e6600fb4e5f79ed",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 38896777270,
+    "ref_name": "agt/dyn-ci-status-enable",
+    "run_id": 39000513997,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
