@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d15e39d612bbd9c5180c9052cb478df78a268c29"
+  sha: "513566cf811facd142d26583ad417a5fbcd2c5dc"
   ref_type: "branch"
-  ref_name: "agt/dyn-source-v2"
-  run_id: 39000471819
+  ref_name: "main"
+  run_id: 39000783246
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Report dynamic CI results with source GitHub Actions identity"
+  message: "Keep dynamic CI status icons under GitHub Actions (#202)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n* Report dynamic CI results with source GitHub Actions identity\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-17T03:53:09Z"
+  created_at: "2026-10-17T03:58:15Z"
