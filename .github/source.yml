@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "4d7098f835b0fb898ec65f0e04f0581b1a1d244f"
-  ref_type: "tag"
-  ref_name: "v0.0.136-ztoms"
-  run_id: 38900670508
+  sha: "ff9444564591467f217a6065ba822486d4e15eb7"
+  ref_type: "branch"
+  ref_name: "agt/dyn-source-v2"
+  run_id: 39000499560
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): run uploaded product cleanup in persistent background tasks (#340)\n\n* fix(omsk): show cleanup preview progress and compress large JSON\n\n* fix(omsk): execute uploaded product cleanup as persistent tasks"
+  message: "Report dynamic CI results with source GitHub Actions identity"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-16T12:27:56Z"
+  created_at: "2026-10-17T03:53:35Z"
