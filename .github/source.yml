@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "18befc2ace3ef687aeac26ff8c5087a7296853ca"
+  sha: "1207f4a6831d68047afb2b9c7e463979937e2888"
   ref_type: "branch"
   ref_name: "agt/cosmos-feature-parity"
-  run_id: 39153751946
+  run_id: 39153864818
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify PLUME fixed navigation and custom shortcuts across session states"
+  message: "Apply required Rust and pinned-Dart formatting gates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:21:09Z"
+  created_at: "2026-10-18T18:22:39Z"
