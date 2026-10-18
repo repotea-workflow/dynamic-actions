@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "fbd75bc3af068cd85f51e6434703c72b82e3105d"
+  sha: "5cc82bdbdc1a814e336504bd76d9b9a844bf6af2"
   ref_type: "branch"
-  ref_name: "agt/cosmos-feature-parity"
-  run_id: 39157334029
+  ref_name: "agt/feedback-attachments"
+  run_id: 39158629543
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Drain shared verification jobs in the signing contract test"
+  message: "Fix hawk formatting and clippy for feedback attachments."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T19:07:59Z"
+  created_at: "2026-10-18T19:24:41Z"
