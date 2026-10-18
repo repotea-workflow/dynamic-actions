@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e9a892dde27d3c1c84936201d2c9c79708582e30"
+  sha: "ad17ff8a89d56c1a0be036c48ffb9cccdfce7b8f"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-9869"
-  run_id: 39105911627
+  run_id: 39107176436
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix signing validation availability and legacy import authorization"
+  message: "Restore imported signing material readiness for Spec creation"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T06:58:18Z"
+  created_at: "2026-10-18T07:18:47Z"
