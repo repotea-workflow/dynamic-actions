@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e00a017fda256df039a0c53e21dc90d88a3591cc"
+  sha: "d6e9d7838775dcaf36954674313e4d3702650907"
   ref_type: "branch"
   ref_name: "agt/feedback-attachments"
-  run_id: 39143387423
+  run_id: 39145045015
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Address review feedback for feedback attachment uploads.\n\nCap pending upload intents, validate finalize expiry and byte size, presign reply threads, and expose attachment links in STAC threads."
+  message: "Upgrade zip dependencies for cargo audit compliance.\n\nPatch cel-bridge v0.7.3 to build against zip 9.x and bump hawk workspace zip to 9.0.5."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T16:05:17Z"
+  created_at: "2026-10-18T16:27:16Z"
