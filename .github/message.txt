@@ -1,7 +1,1 @@
-Keep dynamic CI status icons under GitHub Actions (#17)
-
-* ci: enable shared dynamic source status reporting
-
-* Declare explicit dynamic checks with version 1
-
-* Report dynamic CI results with source GitHub Actions identity
+Resolve native quote history controls across Qt search rebuilds
