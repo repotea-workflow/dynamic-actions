@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "dc1bad71bb1c0c883cc42c8644ac0791e18c4450"
+  sha: "47a755de1089b77d3ea34e89600c701d7ad665c1"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39090105991
+  ref_name: "0x128bit/aviary-9869"
+  run_id: 39104499628
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix durable App dispatch and private executor contracts (#277)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Add tenant signing assets and seal native app identities"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T02:26:56Z"
+  created_at: "2026-10-18T06:34:17Z"
