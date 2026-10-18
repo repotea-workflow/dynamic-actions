@@ -1,1 +1,1 @@
-Document native history lookup patch release
+Fix native quote body search and context menu targeting
