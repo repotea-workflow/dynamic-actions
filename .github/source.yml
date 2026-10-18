@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c426a283cabc5c1dd1c2b2712e05da6e3864fa8b"
+  sha: "13fb429fae34ac204f78cec334c5a4bbe9d04370"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-10155"
-  run_id: 39114870896
+  ref_name: "main"
+  run_id: 39115829128
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Complete app-scoped branding and signing asset pagination"
+  message: "Complete app-scoped branding and signing asset pagination (#283)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T09:19:30Z"
+  created_at: "2026-10-18T09:34:06Z"
