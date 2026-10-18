@@ -95,7 +95,18 @@ jobs:
       - name: Audit Rust dependencies
         run: cargo audit --file raptors/Cargo.lock
 
+      - name: Checkout verified buildbox contract consumer
+        uses: actions/checkout@v6
+        with:
+          repository: boxliy/buildbox
+          ref: c45e32d445b9772b9dd008e3f940042aee5fdcd6
+          path: .contract-buildbox
+          persist-credentials: false
+
       - name: Verify repository
+        env:
+          BUILDBOX_CONTRACT_CONSUMER: ${{ github.workspace }}/.contract-buildbox/tests/consume_hawk_contract.py
+          PYTHONDONTWRITEBYTECODE: "1"
         run: |
           trap 'just db-down' EXIT
           just -f waterfowl/Justfile build-feature-styles

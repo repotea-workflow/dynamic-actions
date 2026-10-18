@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5bb280ccb2b218cd04413722fb22d400e52f857d"
+  sha: "9006f76f987a9b4f968221f76b032a4c4aac3d97"
   ref_type: "branch"
-  ref_name: "agt/feedback-attachments"
-  run_id: 39156459505
+  ref_name: "agt/cosmos-feature-parity"
+  run_id: 39156861006
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Regenerate runtime Dart client for feedback attachments.\n\nSync OpenAPI models and runtime feedback API with Hawk attachment upload endpoints."
+  message: "Provide the pinned buildbox consumer to complete CI contract tests"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:56:41Z"
+  created_at: "2026-10-18T19:01:56Z"
