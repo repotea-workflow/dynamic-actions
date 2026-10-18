@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4a4e8d21c702df778f15107a6952d34d14ac45db"
+  sha: "d18cbb2d7429a56ece4aa275a63ba54b2caf83dc"
   ref_type: "branch"
   ref_name: "agt/cosmos-feature-parity"
-  run_id: 39159196314
+  run_id: 39160125346
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Resolve final workspace analysis warnings in activation tests"
+  message: "Merge the final feedback client and lint handoff"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T19:32:12Z"
+  created_at: "2026-10-18T19:44:27Z"
