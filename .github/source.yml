@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ff0e692c2b0ee7fee4f4a905661ca1162a7b7055"
+  sha: "450900e4161c44039bc7d72673aac579ab738a5a"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-10306"
-  run_id: 39122167261
+  run_id: 39123773968
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Integrate frozen tenant signing with verified build delivery"
+  message: "Document corrected unsigned iOS executor trust pins"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T11:10:40Z"
+  created_at: "2026-10-18T11:34:27Z"
