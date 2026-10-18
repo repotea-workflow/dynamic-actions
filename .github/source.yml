@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "13fb429fae34ac204f78cec334c5a4bbe9d04370"
+  sha: "ff0e692c2b0ee7fee4f4a905661ca1162a7b7055"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39115829128
+  ref_name: "0x128bit/aviary-10306"
+  run_id: 39122167261
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Complete app-scoped branding and signing asset pagination (#283)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Integrate frozen tenant signing with verified build delivery"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T09:34:06Z"
+  created_at: "2026-10-18T11:10:40Z"
