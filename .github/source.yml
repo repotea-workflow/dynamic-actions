@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d6e9d7838775dcaf36954674313e4d3702650907"
+  sha: "234da0a28a6361e9bc6fb0a8407070bd7e154982"
   ref_type: "branch"
   ref_name: "agt/feedback-attachments"
-  run_id: 39145045015
+  run_id: 39146717426
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Upgrade zip dependencies for cargo audit compliance.\n\nPatch cel-bridge v0.7.3 to build against zip 9.x and bump hawk workspace zip to 9.0.5."
+  message: "Fix aviary_core identifier tests after catalog digest drift.\n\nUse FeatureKeys.imagePrint in module activation validation and align the baya digest expectation."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T16:27:16Z"
+  created_at: "2026-10-18T16:49:06Z"
