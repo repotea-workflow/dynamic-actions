@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e1d71bd4332216310ac52b2eaec836a960346820"
+  sha: "1c175d9a58e8536ad9da3a51b876acd86f362d31"
   ref_type: "branch"
   ref_name: "fix/feature-styles-publish-compile-args"
-  run_id: 39105502806
+  run_id: 39105695874
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Stop forwarding import flags to feature-styles compile.\n\nPublish only needs compile with default STAC base ref; import-only options were breaking flutter test dart-defines."
+  message: "Route base-ref args to compile and keep import flags import-only.\n\nFilter transport and import CLI options before feature-styles-compile while still forwarding positional base refs."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T06:51:19Z"
+  created_at: "2026-10-18T06:54:32Z"
