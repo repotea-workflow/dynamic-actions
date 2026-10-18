@@ -1,1 +1,1 @@
-Fix native quote body search and context menu targeting
+Preserve attested workflows for checks-only dynamic dispatch
