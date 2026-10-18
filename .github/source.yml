@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7350b7eb9f188abfc7b61518f55ee131883e5e2e"
+  sha: "e1f3edd0c4bc7b403cc463b2f0c376fa2be9c42f"
   ref_type: "branch"
   ref_name: "agt/feedback-attachments"
-  run_id: 39148539039
+  run_id: 39149007423
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix hawk build for feedback attachments and zip 9.\n\nExport attachment modules publicly, adapt ZIP entry names for zip 9.x, and map sqlx errors in ticket creation."
+  message: "Remove unused hawk feedback attachment import."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T17:13:11Z"
+  created_at: "2026-10-18T17:19:11Z"
