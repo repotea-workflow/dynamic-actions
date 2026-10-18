@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9e5516e8c76e5ef525be99f1661a18c92b207285"
+  sha: "7146bb4a4307bf491fe81e8395bdf924d9785d51"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-10084"
-  run_id: 39111588327
+  ref_name: "main"
+  run_id: 39112434367
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add tenant signing assets and App packaging configuration"
+  message: "Add tenant signing assets and App packaging configuration (#282)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T08:28:51Z"
+  created_at: "2026-10-18T08:41:57Z"
