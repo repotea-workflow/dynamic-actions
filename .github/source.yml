@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ad17ff8a89d56c1a0be036c48ffb9cccdfce7b8f"
+  sha: "581ee37c8f33650dc4e64055c654a83722c40aa5"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-9869"
-  run_id: 39107176436
+  ref_name: "main"
+  run_id: 39108037568
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Restore imported signing material readiness for Spec creation"
+  message: "Add tenant signing assets and immutable native app identities (#278)\n\n* Add tenant signing assets and seal native app identities\n\n* Verify validation requests and material tokens remain scoped\n\n* Add composition module activation for native feature entry. (#279)\n\nIntroduce FeatureOpener, aviary.image.launchEditor, Hawk activation passthrough, and KEEL IMAGE_PRINT PoC with a stub native editor\u2014no styleKey branching.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>\n\n* Fix feature-styles-publish forwarding import flags to compile (#280)\n\n* Stop forwarding import flags to feature-styles compile.\n\nPublish only needs compile with default STAC base ref; import-only options were breaking flutter test dart-defines.\n\n* Route base-ref args to compile and keep import flags import-only.\n\nFilter transport and import CLI options before feature-styles-compile while still forwarding positional base refs.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>\n\n* Fix feature-styles-publish when compile receives no args. (#281)\n\nWith set -u, expanding an empty compile_args array failed; cover import-only publish flags in routing test.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>\n\n* Fix signing validation availability and legacy import authorization\n\n* Restore imported signing material readiness for Spec creation\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T07:18:47Z"
+  created_at: "2026-10-18T07:32:28Z"
