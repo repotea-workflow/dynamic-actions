@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "38322360b6393366d3ffade0fcd0c924b22bd91b"
+  sha: "5aab005baffb7239c9875b4674873adac7cb4410"
   ref_type: "branch"
-  ref_name: "feat/module-activation-image-print"
-  run_id: 39104904321
+  ref_name: "main"
+  run_id: 39104915376
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add composition module activation for native feature entry.\n\nIntroduce FeatureOpener, aviary.image.launchEditor, Hawk activation passthrough, and KEEL IMAGE_PRINT PoC with a stub native editor\u2014no styleKey branching."
+  message: "Add composition module activation for native feature entry. (#279)\n\nIntroduce FeatureOpener, aviary.image.launchEditor, Hawk activation passthrough, and KEEL IMAGE_PRINT PoC with a stub native editor\u2014no styleKey branching.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T06:41:07Z"
+  created_at: "2026-10-18T06:41:21Z"
