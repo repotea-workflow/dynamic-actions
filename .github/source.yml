@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "24c188c1d17ed473457effe57004b841ea5abb24"
+  sha: "9dd8afbae6be925ba1946159e433192048780056"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39105705811
+  ref_name: "fix/feature-styles-publish-empty-compile-args"
+  run_id: 39105774138
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix feature-styles-publish forwarding import flags to compile (#280)\n\n* Stop forwarding import flags to feature-styles compile.\n\nPublish only needs compile with default STAC base ref; import-only options were breaking flutter test dart-defines.\n\n* Route base-ref args to compile and keep import flags import-only.\n\nFilter transport and import CLI options before feature-styles-compile while still forwarding positional base refs.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Fix feature-styles-publish when compile receives no args.\n\nWith set -u, expanding an empty compile_args array failed; cover import-only publish flags in routing test."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T06:54:41Z"
+  created_at: "2026-10-18T06:55:50Z"
