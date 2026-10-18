@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9572790f94044933f323a4a1e6d452a66237538b"
+  sha: "a5c9f6e77ac08a4bd1d2934c0672194aca6584c6"
   ref_type: "branch"
-  ref_name: "agt/feedback-attachments"
-  run_id: 39154515636
+  ref_name: "agt/cosmos-feature-parity"
+  run_id: 39155210308
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align FeedbackAttachmentView generated types with OpenAPI nullability."
+  message: "Regenerate feedback clients with nullable attachment URLs"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:31:18Z"
+  created_at: "2026-10-18T18:40:21Z"
