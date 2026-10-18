@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e412f14b87e6e62ec3d110df0a6796b85c26803b"
+  sha: "9a0cf8d6afc34110e1d7c1741481d05bc9fc64ed"
   ref_type: "branch"
   ref_name: "agt/cosmos-feature-parity"
-  run_id: 39152669260
+  run_id: 39152961026
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Bundle authentic Lanhu artwork for PLUME with theme isolation"
+  message: "Integrate the committed feedback attachment API client handoff"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:07:05Z"
+  created_at: "2026-10-18T18:10:53Z"
