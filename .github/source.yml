@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e1f3edd0c4bc7b403cc463b2f0c376fa2be9c42f"
+  sha: "c40991b55f2def4dd79552e585e216a029f15726"
   ref_type: "branch"
   ref_name: "agt/feedback-attachments"
-  run_id: 39149007423
+  run_id: 39152523984
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Remove unused hawk feedback attachment import."
+  message: "Regenerate management API models for feedback attachments.\n\nAdd FeedbackAttachmentView, extend FeedbackMessageView, and sync FrozenBuildInputs schema docs with Hawk OpenAPI."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T17:19:11Z"
+  created_at: "2026-10-18T18:05:17Z"
