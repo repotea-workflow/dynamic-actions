@@ -1,1 +1,1 @@
-Resolve native quote history controls across Qt search rebuilds
+Document native history lookup patch release
