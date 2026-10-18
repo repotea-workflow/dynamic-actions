@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3348aad0d6483c01497838f18ffb4d74d632a5f0"
+  sha: "c5a28d164a5fa3fc4df6f51eb77b5a0a01737ed5"
   ref_type: "branch"
   ref_name: "agt/cosmos-feature-parity"
-  run_id: 39155419281
+  run_id: 39156110316
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Regenerate runtime feedback attachment endpoints and serializers"
+  message: "Keep feedback database coverage in the isolated suite and satisfy Rust gates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:43:04Z"
+  created_at: "2026-10-18T18:52:00Z"
