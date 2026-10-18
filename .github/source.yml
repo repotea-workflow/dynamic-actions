@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9a0cf8d6afc34110e1d7c1741481d05bc9fc64ed"
+  sha: "18befc2ace3ef687aeac26ff8c5087a7296853ca"
   ref_type: "branch"
   ref_name: "agt/cosmos-feature-parity"
-  run_id: 39152961026
+  run_id: 39153751946
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Integrate the committed feedback attachment API client handoff"
+  message: "Verify PLUME fixed navigation and custom shortcuts across session states"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:10:53Z"
+  created_at: "2026-10-18T18:21:09Z"
