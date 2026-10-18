@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "47a755de1089b77d3ea34e89600c701d7ad665c1"
+  sha: "c10c4e226a3420b973c80cc0fd2698d2ab15afb9"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-9869"
-  run_id: 39104499628
+  run_id: 39104649520
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add tenant signing assets and seal native app identities"
+  message: "Verify validation requests and material tokens remain scoped"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T06:34:17Z"
+  created_at: "2026-10-18T06:36:49Z"
