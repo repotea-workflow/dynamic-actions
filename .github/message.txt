@@ -1,1 +1,1 @@
-Prefer message language when locating quote history
+Select history search terms across the complete message body
