@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f276bee87d30c7b6a3f3cc167cd36e34afdec521"
+  sha: "ece0c57df555e6a97a0fafab47ce1f01fb6eb833"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39124557818
+  ref_name: "agt/feedback-attachments"
+  run_id: 39143010195
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Integrate tenant signing snapshots and verified build delivery (#284)\n\n* Integrate frozen tenant signing with verified build delivery\n\n* Document corrected unsigned iOS executor trust pins\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Add feedback image attachments across Hawk, Swan, and Robin.\n\nSupport presigned upload and bind on ticket create, with STAC compose flows and staff thread URLs in management."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T11:46:11Z"
+  created_at: "2026-10-18T16:00:25Z"
