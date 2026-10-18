@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5cc82bdbdc1a814e336504bd76d9b9a844bf6af2"
+  sha: "4a4e8d21c702df778f15107a6952d34d14ac45db"
   ref_type: "branch"
-  ref_name: "agt/feedback-attachments"
-  run_id: 39158629543
+  ref_name: "agt/cosmos-feature-parity"
+  run_id: 39159196314
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix hawk formatting and clippy for feedback attachments."
+  message: "Resolve final workspace analysis warnings in activation tests"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T19:24:41Z"
+  created_at: "2026-10-18T19:32:12Z"
