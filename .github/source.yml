@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c40991b55f2def4dd79552e585e216a029f15726"
+  sha: "e412f14b87e6e62ec3d110df0a6796b85c26803b"
   ref_type: "branch"
-  ref_name: "agt/feedback-attachments"
-  run_id: 39152523984
+  ref_name: "agt/cosmos-feature-parity"
+  run_id: 39152669260
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Regenerate management API models for feedback attachments.\n\nAdd FeedbackAttachmentView, extend FeedbackMessageView, and sync FrozenBuildInputs schema docs with Hawk OpenAPI."
+  message: "Bundle authentic Lanhu artwork for PLUME with theme isolation"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T18:05:17Z"
+  created_at: "2026-10-18T18:07:05Z"
