@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f84afae241399ba47d3a32f66f5f558a2b6daedb"
+  sha: "5c3cbdfd5e3bee1f3f9bdb15ba16051a973464df"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39336127089
+  run_id: 39337569160
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Restore native crop selection and historical PLUME editor controls"
+  message: "Verify native avatar and feedback uploads over HTTPS"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T22:36:34Z"
+  created_at: "2026-10-19T22:49:22Z"
