@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "34b2c90d5e157a9211e69a3fe486c583108a0ec7"
+  sha: "be66b136bfa2032a15c9ddaf47cac7566e451cdb"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39320078621
+  run_id: 39320552609
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(swan): preserve corner actions and authenticate pinned CI dependencies"
+  message: "style(swan): satisfy final workspace formatting gate"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T20:32:03Z"
+  created_at: "2026-10-19T20:35:27Z"
