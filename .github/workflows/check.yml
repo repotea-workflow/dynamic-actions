@@ -164,3 +164,35 @@ jobs:
       - name: Verify native foundation
         working-directory: waterfowl
         run: just check
+      - name: Compile Android development host
+        working-directory: waterfowl/apps/swan
+        run: fvm flutter build apk --debug --no-pub
+
+  native-ios-foundation:
+    needs: source
+    name: Native iOS foundation
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+          ref: ${{ needs.source.outputs.sha }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.47.4
+          channel: stable
+      - name: Configure FVM command
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          chmod +x "$RUNNER_TEMP/bin/fvm"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Resolve locked dependencies
+        working-directory: waterfowl
+        run: fvm flutter pub get --enforce-lockfile
+      - name: Compile iOS simulator host
+        working-directory: waterfowl/apps/swan
+        run: fvm flutter build ios --simulator --debug --no-pub

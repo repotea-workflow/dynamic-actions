@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "6b8c4176dcdd71f73276b207b3c5967c1f554735"
+  sha: "3b1e727575ceae2ea9d5948e5da6d81d0dcc091e"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39275310851
+  run_id: 39275631948
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Reset Waterfowl as a native Swan foundation"
+  message: "Compile native Swan hosts in foundation CI"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T15:08:43Z"
+  created_at: "2026-10-19T15:11:10Z"
