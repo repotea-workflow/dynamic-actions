@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3b1e727575ceae2ea9d5948e5da6d81d0dcc091e"
+  sha: "5b691daa68601d320eea2c525fb7ed2b53c5b837"
   ref_type: "branch"
-  ref_name: "agt/swan-native-foundation"
-  run_id: 39275631948
+  ref_name: "agt/plume-stable-editor"
+  run_id: 39276294268
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Compile native Swan hosts in foundation CI"
+  message: "Type feedback attachment maps for strict analysis"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T15:11:10Z"
+  created_at: "2026-10-19T15:15:12Z"
