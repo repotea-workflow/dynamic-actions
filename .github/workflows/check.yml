@@ -39,12 +39,6 @@ jobs:
       # taiki-e/install-action just
       - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
 
-      - name: Configure Bubblewrap
-        run: |
-          sudo apt-get update
-          sudo apt-get install --yes bubblewrap
-          sudo sysctl --write kernel.apparmor_restrict_unprivileged_userns=0
-
       # pnpm/action-setup v6
       - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271
         with:
@@ -73,22 +67,10 @@ jobs:
 
       - name: Resolve Flutter dependencies
         working-directory: waterfowl
-        env:
-          AVIARY_DEPENDENCY_GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
-          GIT_CONFIG_COUNT: "2"
-          GIT_CONFIG_KEY_0: credential.https://github.com.useHttpPath
-          GIT_CONFIG_VALUE_0: "true"
-          GIT_CONFIG_KEY_1: credential.https://github.com/boxliy/nib.git.helper
-          GIT_CONFIG_VALUE_1: '!f() { test "$1" = get && printf "username=x-access-token\npassword=%s\n" "$AVIARY_DEPENDENCY_GH_TOKEN"; }; f'
-        run: fvm dart pub get
+        run: fvm dart pub get --enforce-lockfile
 
       - name: Install dependencies
         run: |
-          cd waterfowl
-          fvm dart run melos bootstrap
-          # This runner is deliberately outside the Flutter pub workspace.
-          (cd tools/stac_cli && fvm dart pub get --enforce-lockfile)
-          cd ..
           pnpm --dir songbirds install --frozen-lockfile
           cargo install cargo-audit --version 0.22.2 --locked
 
@@ -99,7 +81,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: boxliy/buildbox
-          ref: c45e32d445b9772b9dd008e3f940042aee5fdcd6
+          ref: f8232228b490205fbf37f3a43eb41699afaeef13
           path: .contract-buildbox
           persist-credentials: false
 
@@ -109,7 +91,7 @@ jobs:
           PYTHONDONTWRITEBYTECODE: "1"
         run: |
           trap 'just db-down' EXIT
-          just -f waterfowl/Justfile build-feature-styles
+          PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s waterfowl/tools/app_assembler
           just -f waterfowl/Justfile test
           just check
           pnpm --dir songbirds lint
@@ -134,3 +116,65 @@ jobs:
           trap 'just db-down' EXIT
           just db-up
           just e2e-oss
+
+  native-foundation:
+    needs: source
+    name: Native Flutter foundation
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+          ref: ${{ needs.source.outputs.sha }}
+      - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.47.4
+          channel: stable
+      - name: Configure FVM command
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          chmod +x "$RUNNER_TEMP/bin/fvm"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Resolve locked dependencies
+        working-directory: waterfowl
+        run: fvm flutter pub get --enforce-lockfile
+      - name: Verify native foundation
+        working-directory: waterfowl
+        run: just check
+      - name: Compile Android development host
+        working-directory: waterfowl/apps/swan
+        run: fvm flutter build apk --debug --no-pub
+
+  native-ios-foundation:
+    needs: source
+    name: Native iOS foundation
+    runs-on: macos-15
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+          ref: ${{ needs.source.outputs.sha }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.47.4
+          channel: stable
+      - name: Configure FVM command
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          chmod +x "$RUNNER_TEMP/bin/fvm"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Resolve locked dependencies
+        working-directory: waterfowl
+        run: fvm flutter pub get --enforce-lockfile
+      - name: Compile iOS simulator host
+        working-directory: waterfowl/apps/swan
+        run: fvm flutter build ios --simulator --debug --no-pub
