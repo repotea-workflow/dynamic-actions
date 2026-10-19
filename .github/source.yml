@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "95d699a9471bc0b02af7e55f2f76f688a772e60b"
+  sha: "d7c44c2ca5544f29ccdca1ab0bd41ea5d4ddd6a8"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39341582877
+  run_id: 39342154572
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): provide English bundled fallback messages"
+  message: "fix(waterfowl): preserve historical editor demo states"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T23:26:40Z"
+  created_at: "2026-10-19T23:32:11Z"
