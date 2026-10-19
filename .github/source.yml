@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "415bf53a5b657ae325bb2acc45dcdfd40dd2b99b"
+  sha: "f6ae0744b9fabf6a5457018eda1746e7124ff651"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39280976691
+  ref_name: "agt/plume-editor-prototype-parity"
+  run_id: 39281115100
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Complete stable PLUME image editing and refresh feedback photos (#289)\n\n* Complete stable PLUME image editing and refresh feedback attachments\n\n* Align catalog and feedback rendering contract assertions\n\n* Type feedback attachment maps for strict analysis\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Merge remote-tracking branch 'origin/main' into agt/plume-editor-prototype-parity\n\n# Conflicts:\n#\twaterfowl/apps/swan/assets/bundled/bundled_theme_assets.json\n#\twaterfowl/packages/features/modules/account_settings/lib/src/feedback.dart\n#\twaterfowl/packages/features/styles/plume_stac/image_print/editor.dart\n#\twaterfowl/packages/features/styles/plume_stac/image_print/style.yaml\n#\twaterfowl/packages/features/styles/plume_stac/stac_screen_builders.dart\n#\twaterfowl/packages/features/styles/plume_stac/test/export_stac_screens_for_build_test.dart"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T15:51:14Z"
+  created_at: "2026-10-19T15:51:53Z"
