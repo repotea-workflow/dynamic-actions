@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "99fa29e97f771b6af2a5b2f4d49da3251815efea"
+  sha: "feb22e00f93e6fc2ebf771584d73af2ca07c499d"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39342881075
+  run_id: 39344444658
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): align historical editor demo layouts"
+  message: "fix(plume): restore historical settings and account layout"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T23:39:21Z"
+  created_at: "2026-10-19T23:54:51Z"
