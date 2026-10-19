@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "355ae46515522bfddb3856ebb10eb4c4f1d56ef3"
+  sha: "6b8c4176dcdd71f73276b207b3c5967c1f554735"
   ref_type: "branch"
-  ref_name: "agt/plume-stable-editor"
-  run_id: 39271821456
+  ref_name: "agt/swan-native-foundation"
+  run_id: 39275310851
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align catalog and feedback rendering contract assertions"
+  message: "Reset Waterfowl as a native Swan foundation"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T14:45:34Z"
+  created_at: "2026-10-19T15:08:43Z"
