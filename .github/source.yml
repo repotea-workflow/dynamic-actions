@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "70f6c5883081b153b9c2039b889ba382c75e111c"
+  sha: "75c6c12d2db72256cc0fbe7528b7a5c539e5bfa5"
   ref_type: "branch"
   ref_name: "agt/plume-settings-parity"
-  run_id: 39248246393
+  run_id: 39249304234
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(swan): authenticate account and private asset requests"
+  message: "fix(feedback): authenticate attachment control requests"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T11:56:22Z"
+  created_at: "2026-10-19T12:05:15Z"
