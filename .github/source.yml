@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "daf66c4d82f4684cba989c2dc44febf051641758"
+  sha: "2be3408d314e1459d12dda7407b169f829c659a7"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39324953974
+  run_id: 39328690752
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align PLUME navigation assets and top-level system chrome"
+  message: "Restore historical CLARITY account and information layouts"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T21:07:25Z"
+  created_at: "2026-10-19T21:35:39Z"
