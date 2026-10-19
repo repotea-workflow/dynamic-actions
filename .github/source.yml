@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "231fd17bd9eab034802c27b2b2fa7c6a1f993c05"
+  sha: "76aef7c16296b114c4348e719867c898d8869174"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39339903253
+  run_id: 39340214582
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): reflect printer connection on Plume home"
+  message: "fix(waterfowl): preserve historical printer status spacing"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T23:10:47Z"
+  created_at: "2026-10-19T23:13:43Z"
