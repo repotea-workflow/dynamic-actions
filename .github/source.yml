@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "53ecf11abcc52dcbeb8ea1f718014663cc229f3e"
+  sha: "0cd1fd72abbccd99c5df0db1c2da2b6ded752ad0"
   ref_type: "branch"
   ref_name: "agt/plume-settings-parity"
-  run_id: 39235460026
+  run_id: 39240136790
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align PLUME feedback conversation bubbles and session gates"
+  message: "Align PLUME conversation history and bound dynamic rendering"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T10:10:10Z"
+  created_at: "2026-10-19T10:49:05Z"
