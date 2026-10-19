@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5c3cbdfd5e3bee1f3f9bdb15ba16051a973464df"
+  sha: "231fd17bd9eab034802c27b2b2fa7c6a1f993c05"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39337569160
+  run_id: 39339903253
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify native avatar and feedback uploads over HTTPS"
+  message: "fix(waterfowl): reflect printer connection on Plume home"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T22:49:22Z"
+  created_at: "2026-10-19T23:10:47Z"
