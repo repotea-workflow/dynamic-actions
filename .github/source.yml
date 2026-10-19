@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4b0f7949eb3185dead23451d715d775850d5fa1f"
+  sha: "f84afae241399ba47d3a32f66f5f558a2b6daedb"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39333748003
+  run_id: 39336127089
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Preserve image geometry across adjustment sequences"
+  message: "Restore native crop selection and historical PLUME editor controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T22:16:30Z"
+  created_at: "2026-10-19T22:36:34Z"
