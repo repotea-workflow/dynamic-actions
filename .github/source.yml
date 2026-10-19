@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "11325391d9540b812ee20352e09f89f2dba354a2"
+  sha: "9e86ebe4e992ad056f01587feb79aaa1a454af7e"
   ref_type: "branch"
   ref_name: "agt/plume-bundled-chrome"
-  run_id: 39210909127
+  run_id: 39211518775
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(plume): bundle runtime chrome glyphs and preserve selection artwork"
+  message: "fix(assets): reject linked extension candidates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T06:36:47Z"
+  created_at: "2026-10-19T06:43:19Z"
