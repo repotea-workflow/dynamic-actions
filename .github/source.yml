@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bd37cf01666b2dec71a50c06b6b0baf507f6d6e9"
+  sha: "3c0d7b64dcb6c181ad00d1d60aea7b1e18ce3226"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39312055558
+  run_id: 39318875913
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): restore native foundations and plume clarity assemblies"
+  message: "fix(swan): align native plume flows and retire scope operations safely"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T19:34:14Z"
+  created_at: "2026-10-19T20:23:34Z"
