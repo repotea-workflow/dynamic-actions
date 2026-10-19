@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ac9db5f6d4d2accf7c026040f589e6c5d12f9ff9"
+  sha: "e3804a0ed41f7b0a60739e6e7a3b5fabb5399546"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39329924816
+  run_id: 39332186770
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Document completed native foundation and acceptance boundaries"
+  message: "Isolate registry resource size-limit cancellation per request"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T21:45:19Z"
+  created_at: "2026-10-19T22:03:36Z"
