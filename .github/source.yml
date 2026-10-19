@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7b9cd224b110be6fe2ae6093ea791d134390502a"
+  sha: "daf66c4d82f4684cba989c2dc44febf051641758"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39322921688
+  run_id: 39324953974
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Restore native unit display and installed app store navigation"
+  message: "Align PLUME navigation assets and top-level system chrome"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T20:52:36Z"
+  created_at: "2026-10-19T21:07:25Z"
