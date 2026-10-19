@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "333d81d1d81b6c532d9dab01338e1aefe6abbdf1"
+  sha: "c9bb326a48a6079dbe8e74ec81c46a68348f1ddb"
   ref_type: "branch"
-  ref_name: "agt/feedback-attachments"
-  run_id: 39160711157
+  ref_name: "agt/cosmos-feature-parity"
+  run_id: 39184509519
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix dart analyze warnings blocking CI check."
+  message: "feat(robin): expose style theme lifecycle controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-18T19:52:15Z"
+  created_at: "2026-10-19T01:15:26Z"
