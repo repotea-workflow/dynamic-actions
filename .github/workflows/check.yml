@@ -67,6 +67,12 @@ jobs:
 
       - name: Resolve Flutter dependencies
         working-directory: waterfowl
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+          GIT_TERMINAL_PROMPT: "0"
+          GIT_CONFIG_COUNT: "1"
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: fvm dart pub get --enforce-lockfile
 
       - name: Install dependencies
@@ -81,6 +87,7 @@ jobs:
         uses: actions/checkout@v6
         with:
           repository: boxliy/buildbox
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
           ref: f8232228b490205fbf37f3a43eb41699afaeef13
           path: .contract-buildbox
           persist-credentials: false
@@ -142,6 +149,12 @@ jobs:
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
       - name: Resolve locked dependencies
         working-directory: waterfowl
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+          GIT_TERMINAL_PROMPT: "0"
+          GIT_CONFIG_COUNT: "1"
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: fvm flutter pub get --enforce-lockfile
       - name: Verify native foundation
         working-directory: waterfowl
@@ -174,6 +187,12 @@ jobs:
           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
       - name: Resolve locked dependencies
         working-directory: waterfowl
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+          GIT_TERMINAL_PROMPT: "0"
+          GIT_CONFIG_COUNT: "1"
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: fvm flutter pub get --enforce-lockfile
       - name: Compile iOS simulator host
         working-directory: waterfowl/apps/swan

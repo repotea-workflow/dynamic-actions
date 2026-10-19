@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3c0d7b64dcb6c181ad00d1d60aea7b1e18ce3226"
+  sha: "34b2c90d5e157a9211e69a3fe486c583108a0ec7"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39318875913
+  run_id: 39320078621
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(swan): align native plume flows and retire scope operations safely"
+  message: "fix(swan): preserve corner actions and authenticate pinned CI dependencies"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T20:23:34Z"
+  created_at: "2026-10-19T20:32:03Z"
