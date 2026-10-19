@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "747c70bf629a5f9c940c14a344051d6a4a47d419"
+  sha: "2475a5cb1005ba160a19295259c6ce2db96a655a"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39256851188
+  ref_name: "agt/plume-stable-editor"
+  run_id: 39268947266
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align Release packaging and PLUME account and feedback parity (#288)\n\n* fix(plume): bundle runtime chrome glyphs and preserve selection artwork\n\n* fix(assets): reject linked extension candidates\n\n* fix(plume): align stable reference pages and preserve form workflows\n\n* fix(plume): render auth forms for signed-out runtime snapshots\n\n* fix(runtime): resolve compiled input decoration localizations\n\n* fix(session): notify pending mutations of authorization identity changes\n\n* fix(plume): invalidate shared style cache and align reference assets\n\n* Align Release build sections, profile gates and content revisions\n\n* Align PLUME feedback conversation bubbles and session gates\n\n* Align PLUME conversation history and bound dynamic rendering\n\n* fix: preserve feedback drafts and authenticate runtime requests\n\n* fix(swan): authenticate account and private asset requests\n\n* fix(feedback): authenticate attachment control requests\n\n* fix(feedback): show photo upload failures inside composer\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Complete stable PLUME image editing and refresh feedback attachments"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T13:03:06Z"
+  created_at: "2026-10-19T14:26:38Z"
