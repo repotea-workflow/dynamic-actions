@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f6ae0744b9fabf6a5457018eda1746e7124ff651"
+  sha: "72ec652d4c7fbfab0f3a7e8ee99f4bb407977869"
   ref_type: "branch"
-  ref_name: "agt/plume-editor-prototype-parity"
-  run_id: 39281115100
+  ref_name: "main"
+  run_id: 39281218253
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge remote-tracking branch 'origin/main' into agt/plume-editor-prototype-parity\n\n# Conflicts:\n#\twaterfowl/apps/swan/assets/bundled/bundled_theme_assets.json\n#\twaterfowl/packages/features/modules/account_settings/lib/src/feedback.dart\n#\twaterfowl/packages/features/styles/plume_stac/image_print/editor.dart\n#\twaterfowl/packages/features/styles/plume_stac/image_print/style.yaml\n#\twaterfowl/packages/features/styles/plume_stac/stac_screen_builders.dart\n#\twaterfowl/packages/features/styles/plume_stac/test/export_stac_screens_for_build_test.dart"
+  message: "Complete PLUME editor routes and original artwork (#291)\n\n* Complete stable PLUME image editing and refresh feedback attachments\n\n* Complete PLUME editor prototype routes and original artwork\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T15:51:53Z"
+  created_at: "2026-10-19T15:52:45Z"
