@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c309dcbd72cde7848627be76ab6ce9627373a33f"
+  sha: "11325391d9540b812ee20352e09f89f2dba354a2"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39208808721
+  ref_name: "agt/plume-bundled-chrome"
+  run_id: 39210909127
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align Release builds, stable PLUME styles, and feedback lifecycle (#286)\n\n* Add feedback image attachments across Hawk, Swan, and Robin.\n\nSupport presigned upload and bind on ticket create, with STAC compose flows and staff thread URLs in management.\n\n* Address review feedback for feedback attachment uploads.\n\nCap pending upload intents, validate finalize expiry and byte size, presign reply threads, and expose attachment links in STAC threads.\n\n* Align style family lifecycle and Release build navigation\n\n* Upgrade zip dependencies for cargo audit compliance.\n\nPatch cel-bridge v0.7.3 to build against zip 9.x and bump hawk workspace zip to 9.0.5.\n\n* Respect platform build permissions and verify compilation navigation\n\n* Fix aviary_core identifier tests after catalog digest drift.\n\nUse FeatureKeys.imagePrint in module activation validation and align the baya digest expectation.\n\n* Validate inert STAC notifications and back navigation across style exports\n\n* Select and display frozen Release revisions per build target\n\n* Align PLUME with stable Mellow screens and runtime actions\n\n* Freeze explicit or App-assigned channel revisions in build batches\n\n* Verify legacy build batch revision migration integrity\n\n* Isolate feedback drafts and render every attachment safely\n\n* Fix hawk build for feedback attachments and zip 9.\n\nExport attachment modules publicly, adapt ZIP entry names for zip 9.x, and map sqlx errors in ticket creation.\n\n* Remove unused hawk feedback attachment import.\n\n* Harden feedback attachment publication and cleanup lifecycle\n\n* Resolve compiled tooltips and avoid duplicate feature page toolbars\n\n* Exercise current Hawk outputs across buildbox and Dart boundaries\n\n* Bundle authentic Lanhu artwork for PLUME with theme isolation\n\n* Regenerate management API models for feedback attachments.\n\nAdd FeedbackAttachmentView, extend FeedbackMessageView, and sync FrozenBuildInputs schema docs with Hawk OpenAPI.\n\n* Verify PLUME fixed navigation and custom shortcuts across session states\n\n* Apply required Rust and pinned-Dart formatting gates\n\n* Align FeedbackAttachmentView generated types with OpenAPI nullability.\n\n* Regenerate feedback clients with nullable attachment URLs\n\n* Regenerate runtime feedback attachment endpoints and serializers\n\n* Keep feedback database coverage in the isolated suite and satisfy Rust gates\n\n* Regenerate runtime Dart client for feedback attachments.\n\nSync OpenAPI models and runtime feedback API with Hawk attachment upload endpoints.\n\n* Provide the pinned buildbox consumer to complete CI contract tests\n\n* Drain shared verification jobs in the signing contract test\n\n* Fix hawk formatting and clippy for feedback attachments.\n\n* Resolve final workspace analysis warnings in activation tests\n\n* feat(robin): expose style theme lifecycle controls\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "fix(plume): bundle runtime chrome glyphs and preserve selection artwork"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T06:15:09Z"
+  created_at: "2026-10-19T06:36:47Z"
