@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5b691daa68601d320eea2c525fb7ed2b53c5b837"
+  sha: "415bf53a5b657ae325bb2acc45dcdfd40dd2b99b"
   ref_type: "branch"
-  ref_name: "agt/plume-stable-editor"
-  run_id: 39276294268
+  ref_name: "main"
+  run_id: 39280976691
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Type feedback attachment maps for strict analysis"
+  message: "Complete stable PLUME image editing and refresh feedback photos (#289)\n\n* Complete stable PLUME image editing and refresh feedback attachments\n\n* Align catalog and feedback rendering contract assertions\n\n* Type feedback attachment maps for strict analysis\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T15:15:12Z"
+  created_at: "2026-10-19T15:51:14Z"
