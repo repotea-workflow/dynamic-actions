@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "6fab4527b1b24cde49fa9c7ee834670cda38cb0c"
+  sha: "61ee758dd8fd3d82c844acc2943b45473b132e72"
   ref_type: "branch"
   ref_name: "agt/plume-settings-parity"
-  run_id: 39230400588
+  run_id: 39233331623
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(plume): invalidate shared style cache and align reference assets"
+  message: "Align Release build sections, profile gates and content revisions"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T09:29:17Z"
+  created_at: "2026-10-19T09:52:55Z"
