@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "704221e5ada6c2908d3a7f18f0e823c2e6def132"
+  sha: "34da11291ede6cf91264269658301f4120a752b4"
   ref_type: "branch"
   ref_name: "agt/plume-settings-parity"
-  run_id: 39225729403
+  run_id: 39226710155
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(runtime): resolve compiled input decoration localizations"
+  message: "fix(session): notify pending mutations of authorization identity changes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T08:51:23Z"
+  created_at: "2026-10-19T08:59:39Z"
