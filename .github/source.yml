@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d132a29dcbb38f0ef6096fa948d3cdff010423e8"
+  sha: "4b66b072ac64d239cce4e6ccf631c3bb7a8a4d86"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39366999765
+  run_id: 39368734855
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(plume): align native help with Lanhu accordion layout"
+  message: "fix(waterfowl): align PLUME account cards with Lanhu"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T03:57:43Z"
+  created_at: "2026-10-20T04:17:03Z"
