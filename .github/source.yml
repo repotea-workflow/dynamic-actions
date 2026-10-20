@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "bf110be0715bc88b894f2e09652d6ce306882d70"
+  sha: "faa3403a0581f29b0867d6d296fdbf67b1cad9db"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39514758939
+  run_id: 39516762768
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): preserve exact text in idle selection snapshots"
+  message: "feat: add plugin-owned vertical text layout and rendering"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T23:24:18Z"
+  created_at: "2026-10-20T23:42:38Z"
