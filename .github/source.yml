@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "206a215bfd5a5e3117dd707f80d243b596696fbc"
+  sha: "a58dc97a1b49dbe57184c3956b3c22e91007af2a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39473032650
+  run_id: 39474600672
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: align barcode controls and viewport zoom interactions"
+  message: "feat: share indexed serial previews across text and barcode plugins"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T18:14:44Z"
+  created_at: "2026-10-20T18:25:41Z"
