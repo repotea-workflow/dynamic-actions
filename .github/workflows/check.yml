@@ -88,7 +88,7 @@ jobs:
         with:
           repository: boxliy/buildbox
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
-          ref: f8232228b490205fbf37f3a43eb41699afaeef13
+          ref: 4b481c284bde4b416798794830640ba07ffab951
           path: .contract-buildbox
           persist-credentials: false
 

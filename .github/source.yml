@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "22e82d2614aea0d1d4b2a0b98b455dcd3787e47c"
+  sha: "06949a7a24c26116bf0e2fa2d05759673e37a4a6"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39376987530
+  run_id: 39380538300
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(plume): align About artwork and layout with Lanhu"
+  message: "fix(native): freeze logical Bluetooth capabilities across platforms"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T05:50:04Z"
+  created_at: "2026-10-20T06:28:26Z"
