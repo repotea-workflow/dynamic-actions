@@ -1,3 +1,1 @@
-Merge pull request #2 from 0xfe10/agt/extract-services
-
-Keep dynamic CI status icons under GitHub Actions
+Verify Convoy native webhook signatures before notification admission

@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "45d21ffd925932a03851b4b3a6e4939b56895036",
+    "sha": "affd9717ba719faba7aa8d2be1ac3865880d6e10",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 39000835446,
+    "ref_name": "agt/extract-services",
+    "run_id": 39362719259,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
