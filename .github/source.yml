@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8bc841ba7849cd8731134aff222203ad9b476978"
+  sha: "2585fb97429a508fdce44b7264a30c34c8874ba8"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39350099180
+  run_id: 39354275377
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): restore PLUME print preview summary panels"
+  message: "fix(waterfowl): guard app retirement and verify native uploads"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T00:51:30Z"
+  created_at: "2026-10-20T01:35:38Z"
