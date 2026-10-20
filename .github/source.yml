@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "53cfc7f389a0d85de6aa59ef7e8f225042eec6b7"
+  sha: "4a545dc040e05cabfe1d6b9b5942f74999e9616a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39498458159
+  run_id: 39499705219
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(table): apply whole-table typography with inherited cell defaults"
+  message: "feat(table): center cell text and support configurable line height"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T21:12:36Z"
+  created_at: "2026-10-20T21:21:48Z"
