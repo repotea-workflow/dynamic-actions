@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2a59db971f5c2ac1c94496e0729e2d8f50f7ff0f"
+  sha: "671572a90508c0c7cd36f63b568639be9166c39b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39491309589
+  run_id: 39493388598
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(table): insert and remove rows and columns without losing cell styles"
+  message: "feat(table): support independent row heights and column widths"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T20:21:54Z"
+  created_at: "2026-10-20T20:36:26Z"
