@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "77690ef40662484e225d1b005650242635574527"
+  sha: "dd3409fc0a9374f65a17ecdb00eefe2ab2eaa025"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39505918370
+  run_id: 39507582323
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(text): align paragraph indentation through text plugins"
+  message: "feat(text-engine): add grapheme tracking to native paragraph layout"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T22:08:58Z"
+  created_at: "2026-10-20T22:22:15Z"
