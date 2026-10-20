@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d2af98f927cb4a648364530bfb669a19058e6513"
+  sha: "2928de9d6afbf5129ceac6c0c1fb6b88cc60ed6a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39502230731
+  run_id: 39504166052
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(table): add plugin-owned selected-cell structure actions"
+  message: "style(template): brace background picker guard"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T21:40:29Z"
+  created_at: "2026-10-20T21:55:15Z"
