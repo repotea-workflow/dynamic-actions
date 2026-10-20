@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "258c8bfa12ac559039d41fde04932e7839065aee"
+  sha: "ef95b1164e0f35a1e478d054ddac5c7d82382bf6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39481537030
+  run_id: 39483965262
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve resolved multiline placement in text exports"
+  message: "fix(sdk): expose selection layout command enums"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T19:13:15Z"
+  created_at: "2026-10-20T19:30:09Z"
