@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d58d7bc5ec682c025603bc51dfdb42336fcb6b2f"
+  sha: "38076154602a7617caf4e6c21a6704b1953efbb7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39494533447
+  run_id: 39496671468
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(canvas): honor stretched reference background fit"
+  message: "feat(table): keep automatic frame width through edits and drag previews"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T20:44:30Z"
+  created_at: "2026-10-20T20:59:45Z"
