@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "a58dc97a1b49dbe57184c3956b3c22e91007af2a"
+  sha: "36470c3184c94d3cee346be5bd40db656939b393"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39474600672
+  run_id: 39474950888
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: share indexed serial previews across text and barcode plugins"
+  message: "feat: align date formatting across layout and export"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T18:25:41Z"
+  created_at: "2026-10-20T18:28:03Z"
