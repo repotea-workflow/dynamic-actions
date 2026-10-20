@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "07929b695101ef381cfca2fe47efdce24127a5a5"
+  sha: "caa1e287f9d2e564356ba0cdb235589314d11ab4"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39364611126
+  run_id: 39366189962
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(swan): restore Word document selection and safe previews"
+  message: "fix(clarity): reflect selected files in print entry status"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T03:30:17Z"
+  created_at: "2026-10-20T03:48:21Z"
