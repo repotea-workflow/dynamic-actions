@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "caa1e287f9d2e564356ba0cdb235589314d11ab4"
+  sha: "d132a29dcbb38f0ef6096fa948d3cdff010423e8"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39366189962
+  run_id: 39366999765
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(clarity): reflect selected files in print entry status"
+  message: "feat(plume): align native help with Lanhu accordion layout"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T03:48:21Z"
+  created_at: "2026-10-20T03:57:43Z"
