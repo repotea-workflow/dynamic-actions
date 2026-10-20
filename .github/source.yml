@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "ef95b1164e0f35a1e478d054ddac5c7d82382bf6"
+  sha: "b4ba842578ac136f355818a7bab6dd20b8a34769"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39483965262
+  run_id: 39486733161
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(sdk): expose selection layout command enums"
+  message: "feat(image): add reversible threshold and dither effects"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T19:30:09Z"
+  created_at: "2026-10-20T19:49:43Z"
