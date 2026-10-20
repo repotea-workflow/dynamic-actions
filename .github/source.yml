@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "06949a7a24c26116bf0e2fa2d05759673e37a4a6"
+  sha: "0d9d9fb6639f0f1ab9477d750d5a04bf889106e8"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39380538300
+  run_id: 39380763132
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(native): freeze logical Bluetooth capabilities across platforms"
+  message: "fix(plume): register original Lanhu feedback camera artwork"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T06:28:26Z"
+  created_at: "2026-10-20T06:30:40Z"
