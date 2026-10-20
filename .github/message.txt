@@ -1,1 +1,1 @@
-Verify Convoy native webhook signatures before notification admission
+Authenticate Convoy delivery metadata and preserve distinct event identities
