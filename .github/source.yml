@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4fee50cfb15d276e5840b37919a910cd843ad7b7"
+  sha: "e08089717cf7f9ac435528367b9a3c96e9e8fefe"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39357074820
+  run_id: 39362060580
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): restore avatars from scoped object storage"
+  message: "feat(feedback): complete native Lanhu feedback flow and metadata"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T02:06:18Z"
+  created_at: "2026-10-20T03:01:28Z"
