@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2928de9d6afbf5129ceac6c0c1fb6b88cc60ed6a"
+  sha: "724bcdc161002c84fe62cdb176d15a448d823426"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39504166052
+  run_id: 39504804375
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "style(template): brace background picker guard"
+  message: "feat(template): align circular frame clipping across preview and export"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T21:55:15Z"
+  created_at: "2026-10-20T22:00:20Z"
