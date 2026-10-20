@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "ebc2ea51797eaed240942ed41c08216df752a553"
+  sha: "695ba8b59d945a34127796b6eadf60fcf810e325"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39512522552
+  run_id: 39513867851
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): add plugin-owned text tracking and exact preview integration"
+  message: "feat(editor): align plugin-owned text justification with labeledit"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T23:04:28Z"
+  created_at: "2026-10-20T23:16:16Z"
