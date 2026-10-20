@@ -1,0 +1,109 @@
+name: "[aviary] Android Checks"
+
+on:
+  push:
+    branches:
+      - "**"
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    name: Resolve exact source revision
+    runs-on: ubuntu-latest
+    outputs:
+      sha: ${{ steps.source.outputs.sha }}
+    steps:
+      - uses: actions/checkout@v6
+      - id: source
+        uses: repotea-workspace/kangumi/github-actions/dyn-source@main
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+
+  android:
+    needs: source
+    name: Android Checks
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: boxliy/aviary
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+          ref: ${{ needs.source.outputs.sha }}
+      - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.47.4
+          channel: stable
+      - name: Configure FVM command
+        run: |
+          mkdir -p "$RUNNER_TEMP/bin"
+          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+          chmod +x "$RUNNER_TEMP/bin/fvm"
+          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+      - name: Resolve locked dependencies
+        working-directory: waterfowl
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+          GIT_TERMINAL_PROMPT: "0"
+          GIT_CONFIG_COUNT: "1"
+          GIT_CONFIG_KEY_0: credential.https://github.com.helper
+          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
+        run: fvm flutter pub get --enforce-lockfile
+      - name: Test app assembly and resource selection
+        env:
+          PYTHONDONTWRITEBYTECODE: "1"
+        run: python3 -m unittest discover -s waterfowl/tools/app_assembler
+      - name: Check Dart formatting
+        working-directory: waterfowl
+        run: just format-check
+      - name: Analyze Flutter workspace
+        working-directory: waterfowl
+        run: just analyze
+      - name: Run Flutter tests
+        working-directory: waterfowl
+        run: just test
+      - name: Build Android APK
+        working-directory: waterfowl/apps/swan
+        run: fvm flutter build apk --debug --no-pub
+
+# iOS Checks are disabled until a macOS runner is available.
+# Restore this job in a dedicated iOS Checks workflow when re-enabling.
+#   ios:
+#     needs: source
+#     name: iOS Checks
+#     runs-on: macos-15
+#     steps:
+#       - uses: actions/checkout@v6
+#       - name: Checkout source repository
+#         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+#         with:
+#           repository: boxliy/aviary
+#           token: ${{ secrets.GH_TOKEN_0X128BIT }}
+#           ref: ${{ needs.source.outputs.sha }}
+#       - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+#         with:
+#           flutter-version: 3.47.4
+#           channel: stable
+#       - name: Configure FVM command
+#         run: |
+#           mkdir -p "$RUNNER_TEMP/bin"
+#           printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
+#           chmod +x "$RUNNER_TEMP/bin/fvm"
+#           echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
+#       - name: Resolve locked dependencies
+#         working-directory: waterfowl
+#         env:
+#           GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
+#           GIT_TERMINAL_PROMPT: "0"
+#           GIT_CONFIG_COUNT: "1"
+#           GIT_CONFIG_KEY_0: credential.https://github.com.helper
+#           GIT_CONFIG_VALUE_0: "!gh auth git-credential"
+#         run: fvm flutter pub get --enforce-lockfile
+#       - name: Build iOS simulator app
+#         working-directory: waterfowl/apps/swan
+#         run: fvm flutter build ios --simulator --debug --no-pub

@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "eb4335c4fecf4f1a9834a2d41b03f812a2820af6"
+  sha: "1b58c22b8f0028062506d0ce40edeaea3f52a996"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39387736414
+  run_id: 39447343514
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: temporarily skip native iOS foundation checks"
+  message: "ci: separate admin API and Android checks"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T07:37:40Z"
+  created_at: "2026-10-20T15:19:56Z"

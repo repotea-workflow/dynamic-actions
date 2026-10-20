@@ -1,4 +1,4 @@
-name: "[aviary] Check"
+name: "[aviary] API Checks"
 
 on:
   push:
@@ -22,9 +22,9 @@ jobs:
           repository: boxliy/aviary
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
 
-  check:
+  api:
     needs: source
-    name: Check repository
+    name: API Checks
     runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
@@ -75,10 +75,11 @@ jobs:
           GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: fvm dart pub get --enforce-lockfile
 
-      - name: Install dependencies
-        run: |
-          pnpm --dir songbirds install --frozen-lockfile
-          cargo install cargo-audit --version 0.22.2 --locked
+      - name: Install OpenAPI TypeScript tooling
+        run: pnpm --dir songbirds install --frozen-lockfile
+
+      - name: Install Rust dependency auditor
+        run: cargo install cargo-audit --version 0.22.2 --locked
 
       - name: Audit Rust dependencies
         run: cargo audit --file raptors/Cargo.lock
@@ -92,19 +93,21 @@ jobs:
           path: .contract-buildbox
           persist-credentials: false
 
-      - name: Verify repository
+      - name: Check Rust and build API binaries
+        run: just check-rust
+
+      - name: Run API unit tests
+        run: just test-rust
+
+      - name: Verify OpenAPI and generated clients
+        run: just generate-check
+
+      - name: Verify database migrations and API integration
         env:
           BUILDBOX_CONTRACT_CONSUMER: ${{ github.workspace }}/.contract-buildbox/tests/consume_hawk_contract.py
           PYTHONDONTWRITEBYTECODE: "1"
         run: |
           trap 'just db-down' EXIT
-          PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s waterfowl/tools/app_assembler
-          just -f waterfowl/Justfile test
-          just check
-          pnpm --dir songbirds lint
-          pnpm --dir songbirds test
-          pnpm --dir songbirds build
-          just -f waterfowl/Justfile format-check
           just db-up
           just migrate
           just test-db
@@ -123,79 +126,3 @@ jobs:
           trap 'just db-down' EXIT
           just db-up
           just e2e-oss
-
-  native-foundation:
-    needs: source
-    name: Native Flutter foundation
-    runs-on: ubuntu-24.04
-    steps:
-      - uses: actions/checkout@v6
-      - name: Checkout source repository
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/aviary
-          token: ${{ secrets.GH_TOKEN_0X128BIT }}
-          ref: ${{ needs.source.outputs.sha }}
-      - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
-      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
-        with:
-          flutter-version: 3.47.4
-          channel: stable
-      - name: Configure FVM command
-        run: |
-          mkdir -p "$RUNNER_TEMP/bin"
-          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
-          chmod +x "$RUNNER_TEMP/bin/fvm"
-          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
-      - name: Resolve locked dependencies
-        working-directory: waterfowl
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
-          GIT_TERMINAL_PROMPT: "0"
-          GIT_CONFIG_COUNT: "1"
-          GIT_CONFIG_KEY_0: credential.https://github.com.helper
-          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
-        run: fvm flutter pub get --enforce-lockfile
-      - name: Verify native foundation
-        working-directory: waterfowl
-        run: just check
-      - name: Compile Android development host
-        working-directory: waterfowl/apps/swan
-        run: fvm flutter build apk --debug --no-pub
-
-  native-ios-foundation:
-    # Temporarily disabled until a macOS runner is available.
-    if: ${{ false }}
-    needs: source
-    name: Native iOS foundation
-    runs-on: macos-15
-    steps:
-      - uses: actions/checkout@v6
-      - name: Checkout source repository
-        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-        with:
-          repository: boxliy/aviary
-          token: ${{ secrets.GH_TOKEN_0X128BIT }}
-          ref: ${{ needs.source.outputs.sha }}
-      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
-        with:
-          flutter-version: 3.47.4
-          channel: stable
-      - name: Configure FVM command
-        run: |
-          mkdir -p "$RUNNER_TEMP/bin"
-          printf '#!/bin/sh\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
-          chmod +x "$RUNNER_TEMP/bin/fvm"
-          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
-      - name: Resolve locked dependencies
-        working-directory: waterfowl
-        env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN_0X128BIT }}
-          GIT_TERMINAL_PROMPT: "0"
-          GIT_CONFIG_COUNT: "1"
-          GIT_CONFIG_KEY_0: credential.https://github.com.helper
-          GIT_CONFIG_VALUE_0: "!gh auth git-credential"
-        run: fvm flutter pub get --enforce-lockfile
-      - name: Compile iOS simulator host
-        working-directory: waterfowl/apps/swan
-        run: fvm flutter build ios --simulator --debug --no-pub
