@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0bbf29237f79d4926de1c5a22c30e462d134b13a"
+  sha: "a49eda3dd86d3836ace7b73854bacdd847d1f8a0"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39479932769
+  run_id: 39480774073
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: align image fitting and background across editor previews"
+  message: "feat: align single elements to frames and distribute selection centers"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T19:02:09Z"
+  created_at: "2026-10-20T19:07:54Z"
