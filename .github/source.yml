@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5f0aaf947a785e68f0a7e934ed2f2756217e3400"
+  sha: "22e82d2614aea0d1d4b2a0b98b455dcd3787e47c"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39376476864
+  run_id: 39376987530
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): constrain registry artwork to requested dimensions"
+  message: "fix(plume): align About artwork and layout with Lanhu"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T05:44:21Z"
+  created_at: "2026-10-20T05:50:04Z"
