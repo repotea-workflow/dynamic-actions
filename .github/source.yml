@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2d2cfae36fb02d0e8c651c6ea3523138276295e3"
+  sha: "07929b695101ef381cfca2fe47efdce24127a5a5"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39363009074
+  run_id: 39364611126
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(feedback): align contact validation with backend"
+  message: "fix(swan): restore Word document selection and safe previews"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T03:11:56Z"
+  created_at: "2026-10-20T03:30:17Z"
