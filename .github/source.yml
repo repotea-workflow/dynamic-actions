@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2377e6ec530ef57df81a1cbf46f91bbdb09b2450"
+  sha: "53cfc7f389a0d85de6aa59ef7e8f225042eec6b7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39497252452
+  run_id: 39498458159
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(table): prepare per-cell font faces for preview and export"
+  message: "feat(table): apply whole-table typography with inherited cell defaults"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T21:03:49Z"
+  created_at: "2026-10-20T21:12:36Z"
