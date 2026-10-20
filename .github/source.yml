@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b4ba842578ac136f355818a7bab6dd20b8a34769"
+  sha: "d87b79b9be91e76d2b0baa86b4a6c9a2bb76105f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39486733161
+  run_id: 39489018158
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(image): add reversible threshold and dither effects"
+  message: "feat(image): add reversible crop rotation and flip editing"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T19:49:43Z"
+  created_at: "2026-10-20T20:05:49Z"
