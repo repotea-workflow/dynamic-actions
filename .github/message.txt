@@ -1,1 +1,1 @@
-Authenticate Convoy delivery metadata and preserve distinct event identities
+Reject shared Convoy signing and delivery credentials
