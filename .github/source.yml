@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "feb22e00f93e6fc2ebf771584d73af2ca07c499d"
+  sha: "3b41d72d89a6b6d229e7ccc003a7188a95fd278e"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39344444658
+  run_id: 39345872739
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(plume): restore historical settings and account layout"
+  message: "fix(registry): enforce app scope and verify refreshed resource bytes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-19T23:54:51Z"
+  created_at: "2026-10-20T00:08:53Z"
