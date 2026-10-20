@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d3fd4ff784cb1f070d5a993611ea5da88ca9df0d"
+  sha: "69a7ca2c5ce1d3017f176815e815ec06e6a3c033"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39349029708
+  run_id: 39349575764
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(waterfowl): restore native PLUME feedback layout and safe retries"
+  message: "fix(waterfowl): align PLUME image entry with historical panels"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T00:40:36Z"
+  created_at: "2026-10-20T00:46:07Z"
