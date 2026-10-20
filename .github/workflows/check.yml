@@ -164,6 +164,8 @@ jobs:
         run: fvm flutter build apk --debug --no-pub
 
   native-ios-foundation:
+    # Temporarily disabled until a macOS runner is available.
+    if: ${{ false }}
     needs: source
     name: Native iOS foundation
     runs-on: macos-15

@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "6e6067777c1478d4ed0b3e07bf2c737e93cb9aa9"
+  sha: "eb4335c4fecf4f1a9834a2d41b03f812a2820af6"
   ref_type: "branch"
   ref_name: "agt/swan-native-foundation"
-  run_id: 39386345786
+  run_id: 39387736414
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: freeze native camera privacy and restore print dependencies"
+  message: "ci: temporarily skip native iOS foundation checks"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T07:25:05Z"
+  created_at: "2026-10-20T07:37:40Z"
