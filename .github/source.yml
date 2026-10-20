@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "671572a90508c0c7cd36f63b568639be9166c39b"
+  sha: "094d875dc0a205082bbbd0f069d2a8bac4681a0c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39493388598
+  run_id: 39494317131
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(table): support independent row heights and column widths"
+  message: "feat(table): honor cell typography across preview editing and export"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T20:36:26Z"
+  created_at: "2026-10-20T20:42:59Z"
