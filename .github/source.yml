@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d87b79b9be91e76d2b0baa86b4a6c9a2bb76105f"
+  sha: "5599ec79c9ed1354d06f276113dffd6bc1f7251e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39489018158
+  run_id: 39489835006
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(image): add reversible crop rotation and flip editing"
+  message: "feat(geometry): add quarter-turn and directional quick actions"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T20:05:49Z"
+  created_at: "2026-10-20T20:11:31Z"
