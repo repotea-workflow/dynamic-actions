@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "38076154602a7617caf4e6c21a6704b1953efbb7"
+  sha: "2377e6ec530ef57df81a1cbf46f91bbdb09b2450"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39496671468
+  run_id: 39497252452
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(table): keep automatic frame width through edits and drag previews"
+  message: "fix(table): prepare per-cell font faces for preview and export"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T20:59:45Z"
+  created_at: "2026-10-20T21:03:49Z"
