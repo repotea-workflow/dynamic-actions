@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4ee65b455e839a894a0fcc1b3cd7cf4457f00c00"
+  sha: "773aed43d139cd0a85c89a02acb473d188cc8cf3"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17384"
-  run_id: 39603252032
+  ref_name: "0x128bit/aviary-17543"
+  run_id: 39604998695
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix native release freeze and retry replay identity"
+  message: "Let App settings routes follow section action permissions.\n\nplatform.apps.manage and the signing, release, feature, and storage grants can open their sections without platform.apps.read. The no-permission browser check asserts the empty state instead of a read-only sentence that is never rendered."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:53:34Z"
+  created_at: "2026-10-21T13:05:57Z"
