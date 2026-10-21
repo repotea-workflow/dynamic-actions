@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b627d54a5347e5ffd568dd1a2369f8cf426494fd"
+  sha: "31b2843f8852394df095fa0f9b9b9b4de6ea1895"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18357"
-  run_id: 39674068859
+  ref_name: "main"
+  run_id: 39675044124
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Pin API checks to the appConfiguration contract consumer.\n\nThe signing integration spec now includes appConfiguration, which the previous Buildbox pin rejects as an unknown field."
+  message: "Retire tenant feature, theme, and shell editors\n\nRetire tenant feature, theme, and shell editors and redirect historical links by platform section access before the tenant membership guard.\n\nIndependent review of 8bbc664c49f25a2c7f705e70567198caed0fc0f8 found no blocking issues. The squash includes current main, whose only overlap is an unrelated release-detail route in router.ts."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:52:41Z"
+  created_at: "2026-10-21T20:59:42Z"
