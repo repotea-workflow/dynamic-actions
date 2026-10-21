@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e64e86c21ddb5ec7bf619c9fe94c108c78777932"
+  sha: "32b2c1390f992ee33c74a6113cb47206e4b2e903"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39523010428
+  run_id: 39523922470
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: preview border drafts and catalog artwork"
+  message: "feat: align physical paper background candidates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T00:43:26Z"
+  created_at: "2026-10-21T00:52:31Z"
