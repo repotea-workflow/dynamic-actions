@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "ae76be78bea200bc6cf783fb42e7febb204e080f"
+  sha: "e816839834fa759a8da40d8e1e59184bfb2e821c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39603308171
+  run_id: 39604551710
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add table spacing adjustment buttons"
+  message: "feat: add grouped table cell font size sliders"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:53:56Z"
+  created_at: "2026-10-21T13:02:55Z"
