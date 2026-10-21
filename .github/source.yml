@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1fdd555b2e933e64f3d221f5b95bbd24c891686f"
+  sha: "529511713d80677cb37cdd4e603622f312119170"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17384"
-  run_id: 39608020717
+  ref_name: "main"
+  run_id: 39609543898
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Reject management callbacks that claim success from running.\n\nMap LATE_CALLBACK to a conflict response so native_release_freeze_db\nmatches the A2 idempotency contract."
+  message: "Add the platform App settings navigation shell (#300)\n\n* Add the platform App settings navigation shell\n\nGive platform App settings one navigation for profile, install identifiers, brand assets, server-resolved features, theme, and shell, native capabilities, signing, storage, and Release drafts. Reuse the existing forms and show tenant context, save state, and the frozen Release note without changing Studio routes.\n\n* Let App settings routes follow section action permissions.\n\nplatform.apps.manage and the signing, release, feature, and storage grants can open their sections without platform.apps.read. The no-permission browser check asserts the empty state instead of a read-only sentence that is never rendered.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:26:45Z"
+  created_at: "2026-10-21T13:37:08Z"
