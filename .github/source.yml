@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "572a1f0fa4ab324bb8257612f72bbfc44a6180b2"
+  sha: "cc8f66e79a288b349a46e904ea3bafcc53d2c785"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39576051468
+  run_id: 39576402735
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(barcode): show persistent encoder input guidance"
+  message: "fix(serial): measure config edits in the active presentation"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:19:44Z"
+  created_at: "2026-10-21T09:22:17Z"
