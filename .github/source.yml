@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "141415acaee1203233d43adaaca7dcfe92e839c9"
+  sha: "c8a207eaf7867c7a9228a7030bd8171758a2d260"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39616844638
+  run_id: 39617335611
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: respect browser editing policy and image probe lifetime"
+  message: "test: preload frame border pixels before mounting web preview"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T14:26:54Z"
+  created_at: "2026-10-21T14:30:21Z"
