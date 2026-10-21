@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "bd17aa537ae04a81841a315f0e0cd0c038f310d4"
+  sha: "c3b14cb8f86f42ccc9ce817e1849ddf962add679"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39569802461
+  run_id: 39574337655
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(text): preserve live canvas layout during specialized text input"
+  message: "fix(drawing): preserve double-tap, undo and preview semantics"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T08:30:50Z"
+  created_at: "2026-10-21T09:06:21Z"
