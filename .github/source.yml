@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b01a65db3ffa09ffde343c544045d758004e8132"
+  sha: "5c5fdcec34ae97d17107b95f2bf74faf7c00b46a"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-16586"
-  run_id: 39546089658
+  run_id: 39548281758
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix native freezing to consume platform build intent"
+  message: "Update legacy shell tests for retired configuration writes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T04:49:04Z"
+  created_at: "2026-10-21T05:13:01Z"
