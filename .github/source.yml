@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4cd2b599163d982186df81fc4e31d87c4b801ccc"
+  sha: "2b5609ad92f804ce0ff05d8f36acb18c0d40c3b2"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39631607674
+  run_id: 39634070174
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: retain independent material group scroll positions"
+  message: "feat(emoji): retain material catalog group when reopening picker"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:05:39Z"
+  created_at: "2026-10-21T16:21:55Z"
