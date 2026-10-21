@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "11e0d5346c5e86b6a8436e3d7cc8235aeecbf5ec"
+  sha: "175dfd19d043d70dd2ec42ff9bde3c4d6966ff31"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39594216903
+  run_id: 39596345386
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add command-backed shape fill toggle"
+  message: "feat: preview image thresholds during grouped slider edits"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:44:50Z"
+  created_at: "2026-10-21T12:01:44Z"
