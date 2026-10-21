@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b950f49dbf756eb036ff932d5a1f515e27c59caa"
+  sha: "880b05a0055456df42d24d5d35eac22e84d5cfb1"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39579153486
+  ref_name: "0x128bit/aviary-17228"
+  run_id: 39580600071
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Lock online resource consumers out of Release freeze (#295)\n\nClassify online catalogs separately from Release freeze so live edits stay online and banners are not rebuilt.\n\nA new native Build Spec rejects online catalogs. Freeze pins only packaging brand bytes, confirmed permissions, and the storage-binding revision. Identical freeze input replays the stored Spec digest, including storageBuildCreatedAt, without allocating another build number or writing native_build.freeze.\n\nStudio users, roles, permissions, feedback, and device/business routes stay in place."
+  message: "chore(raptors): bump rustls-webpki and webpki-roots for cargo audit\n\nAddress RUSTSEC-2026-0382 and RUSTSEC-2026-0381 so API Checks pass on PR #298."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:43:35Z"
+  created_at: "2026-10-21T09:54:52Z"
