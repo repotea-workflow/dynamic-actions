@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "cc46e86a78ad7c1b59026a39206c5b23a62e9aeb"
+  sha: "c2feb0775f6f51f5e9c54db396b9de5ae87b6f18"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39544003384
+  run_id: 39544828612
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: support growing multiline table cell input"
+  message: "feat: align table character tracking across Dart editing and rendering"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T04:26:12Z"
+  created_at: "2026-10-21T04:35:14Z"
