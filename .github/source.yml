@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "a9c131920b3f20eded0e50578012558afcc7e5e0"
+  sha: "4220f3094b290c6c1d48d870febfbad8ecc1a95a"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39689462930
+  ref_name: "0x128bit/aviary-18710"
+  run_id: 39691290243
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Consume resolved native assemblies and support startup without HOME (#314)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Add recoverable native Release batch fan-out"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:51:29Z"
+  created_at: "2026-10-21T23:07:29Z"
