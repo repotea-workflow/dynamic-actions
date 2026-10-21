@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c091dd70473c70f7c89de49f72680e2ea69cd53a"
+  sha: "9f9fd3884477ae130a93e9fba44297ed1fe41ada"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18239"
-  run_id: 39666851111
+  ref_name: "0x128bit/aviary-18376"
+  run_id: 39667012407
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge branch 'main' into 0x128bit/aviary-18239"
+  message: "Add platform shell editing and startup entry guidance"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:02:47Z"
+  created_at: "2026-10-21T20:03:52Z"
