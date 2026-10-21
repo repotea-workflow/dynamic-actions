@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8275524ab8feb184fd630148489e930837b66f99"
+  sha: "5eb54428ce9749ff120ab6e4e62856612618fabe"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39641083878
+  run_id: 39643575235
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(materials): isolate picker grid scrolling from host"
+  message: "feat(materials): link vertical group paging with grid scrolling"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T17:08:25Z"
+  created_at: "2026-10-21T17:25:06Z"
