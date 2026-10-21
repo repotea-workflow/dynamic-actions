@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5f1d625b9cd0e8164a9ad7f4c02578c3ab4f9099"
+  sha: "f5a0cdda2bfff124064f71da2e41dba721237a15"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18166"
-  run_id: 39657618472
+  ref_name: "0x128bit/aviary-18239"
+  run_id: 39658464618
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge main and preserve HOME-only app bar capability fixture"
+  message: "Show frozen Release history with per-platform attempts\n\nExpose a read-only Release history so Robin can show the frozen configuration digest, every Android and iOS attempt, CI links, failure reasons, and published artifacts without inventing missing values."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T18:59:25Z"
+  created_at: "2026-10-21T19:05:03Z"
