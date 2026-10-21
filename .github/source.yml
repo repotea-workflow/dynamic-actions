@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "00d700e8971ae4f1355f7aae5f98a383011040a4"
+  sha: "d942e13294810dd44c568c3cd18d4d359cfc0330"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39637238570
+  run_id: 39638597651
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(fonts): retain independent group list scroll positions"
+  message: "feat(fonts): support swiping between catalog groups"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:43:09Z"
+  created_at: "2026-10-21T16:52:07Z"
