@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2cb0fc0b8fd697bfd1a60dbb7d8ca488640e7c0d"
+  sha: "1de325bd9f8537d361010db1f8a32f37d33c98f7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39552595017
+  run_id: 39556434158
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): align overlapping selection and modifier gestures"
+  message: "feat(editor): add plugin-owned grid position snapping"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T05:58:36Z"
+  created_at: "2026-10-21T06:36:26Z"
