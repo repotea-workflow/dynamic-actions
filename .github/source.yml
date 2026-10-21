@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "cec72efd8719ddb3ecc55ac32ba23a6a99263230"
+  sha: "8ae379f5ca2b61a80a8e528fd9f9d7ef4c40bda6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39688911193
+  run_id: 39690881462
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: duplicate selected elements through an optional plugin"
+  message: "fix: open plugin inspector when activating non-inline elements"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:46:46Z"
+  created_at: "2026-10-21T23:04:01Z"
