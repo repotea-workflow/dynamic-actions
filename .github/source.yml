@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "035a1317ba712164e17e06beb7bc9df34fbbd832"
+  sha: "e44cec86859034d443f1e18825e6fa81ae264d77"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39619614176
+  ref_name: "0x128bit/aviary-17844"
+  run_id: 39625570295
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Freeze native releases and keep platform attempts idempotent (#299)\n\nAtomically freeze a draft once readiness passes, share one snapshot across targets, and advance platform attempts through retry, cancel, late callback, and reconcile without repeating dispatch or rolling state backward."
+  message: "Show server feature resolution and explicit App selection\n\nThe platform feature page lists available, explicit, dependency-added,\nand resolved features with readiness from the unified build API.\nCheckboxes start from the explicit set, so availability, including\nall-tenant distribution, is not enabled automatically. Saves change\nonly that set and surface dependency or revision failures from the server."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T14:45:28Z"
+  created_at: "2026-10-21T15:25:52Z"
