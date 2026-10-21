@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3d44247dd24606ae80f0caabcfdc40970238fe9a"
+  sha: "0b85ce859c6cbda2567441abe35762b2a7cbc0ed"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-16865"
-  run_id: 39568867937
+  ref_name: "0x128bit/aviary-17230"
+  run_id: 39578078053
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: replay a native freeze only when its digest matches\n\nDo not allocate a build number or record native_build.freeze when the\nstored Spec digest, including storageBuildCreatedAt, matches. A second\ncreate of the same inputs keeps one Spec, one build number, and one clock."
+  message: "Pin each App to an attested source commit.\n\nNew Apps take the current trusted default once. Existing pins stay put when the trusted map moves, and an upgrade records the previous commit. Freeze rejects a snapshot that does not match the pin and reports capability mismatches before dispatch."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T08:23:22Z"
+  created_at: "2026-10-21T09:35:18Z"
