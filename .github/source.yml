@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f1db05779def74267e300f52c7fb6ea36549ae61"
+  sha: "19c056a29b5e7c913f52dca0fc58555c193ea478"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39579798520
+  run_id: 39582504671
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(inspector): retire stale multi-selection actions"
+  message: "fix(inspector): group continuous barcode input undo"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:48:36Z"
+  created_at: "2026-10-21T10:09:44Z"
