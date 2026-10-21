@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e1a36bdb14595359ad7bb911a79725fca720b609"
+  sha: "9d3f15da674b868aa76049dff2910eb5d1635bea"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39661164250
+  ref_name: "0x128bit/aviary-18239"
+  run_id: 39663406043
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Freeze resolved Release configuration and shared native inputs (#304)\n\n* Freeze resolved Release configuration and shared native inputs\n\n* Fix native build source and resource integration fixtures\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Show frozen Presentation and theme from resolved selections\n\nThe Release detail summary read presentation and theme fields that the frozen AppInterfaceConfiguration snapshot does not store, so a valid PLUME and Blue selection rendered as empty. Read effective resolved selections, including builtin, managed, and feature overrides."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:23:21Z"
+  created_at: "2026-10-21T19:38:43Z"
