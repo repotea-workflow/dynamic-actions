@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "880b05a0055456df42d24d5d35eac22e84d5cfb1"
+  sha: "398b5c657e08fa9a1a4b64b788eaba35e61a45bd"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-17228"
-  run_id: 39580600071
+  run_id: 39584740462
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(raptors): bump rustls-webpki and webpki-roots for cargo audit\n\nAddress RUSTSEC-2026-0382 and RUSTSEC-2026-0381 so API Checks pass on PR #298."
+  message: "test(hawk): assert signing grants do not mutate packaging drafts\n\nDocument AVIARY-111 boundary that grant enable/disable leaves app packaging\ndraft revision and configuration unchanged after tenant signing operations."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:54:52Z"
+  created_at: "2026-10-21T10:27:51Z"
