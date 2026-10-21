@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "025c0d52c0abb432659de3e7939690d86af7e46c"
+  sha: "491b96489687a650c4514d64056f14d5d96b3e68"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-16865"
-  run_id: 39554899483
+  ref_name: "0x128bit/aviary-16864"
+  run_id: 39555308604
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: lock online resource consumers out of Release freeze\n\nKeep catalog authorities and App references for translations, fonts, icons, regions, banners, device models, consumables, and object storage. New native specs pin only brand, permissions, and storage binding."
+  message: "fix(native): align catalog attestation and committed capability metadata"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T06:21:34Z"
+  created_at: "2026-10-21T06:25:39Z"
