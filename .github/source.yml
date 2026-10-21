@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "647837b7262aa658809d5e0f174e45bb5896d774"
+  sha: "fa47b3040e84b533e12d751432ae5c0be468c426"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39517883770
+  run_id: 39520354778
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: align calendar time offsets through the time plugin"
+  message: "feat: align paper margins and output direction"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-20T23:53:28Z"
+  created_at: "2026-10-21T00:16:59Z"
