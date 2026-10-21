@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b33c9614e0a816ca54fc35f39c68ba492660300d"
+  sha: "0ed17714ec0c42b83af51ba6f5535c60c171722f"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17230"
-  run_id: 39594733566
+  ref_name: "0x128bit/aviary-17384"
+  run_id: 39597263643
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Format App source pin code and satisfy hawk clippy."
+  message: "Regenerate native Release clients and persist cancel keys.\n\nRecord each cancel idempotency key so a replay returns the cancelled attempt and a conflicting platform fails. Refresh the management TypeScript client for freeze, retry, cancel, callback, and reconcile."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:49:00Z"
+  created_at: "2026-10-21T12:08:48Z"
