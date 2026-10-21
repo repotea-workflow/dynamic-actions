@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "05ed941a8dea9bb903e54d33ab740532707724c8"
+  sha: "2cb0fc0b8fd697bfd1a60dbb7d8ca488640e7c0d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39551178770
+  run_id: 39552595017
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(selection): align multi-select taps and Shift gestures"
+  message: "fix(editor): align overlapping selection and modifier gestures"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T05:43:43Z"
+  created_at: "2026-10-21T05:58:36Z"
