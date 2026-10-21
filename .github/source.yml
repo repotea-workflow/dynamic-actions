@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "59da0993d2cb31c0539f859f5f3443689909c5e1"
+  sha: "11e0d5346c5e86b6a8436e3d7cc8235aeecbf5ec"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39593394083
+  run_id: 39594216903
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add two-dot dash presets to shape and line inspectors"
+  message: "feat: add command-backed shape fill toggle"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:38:15Z"
+  created_at: "2026-10-21T11:44:50Z"
