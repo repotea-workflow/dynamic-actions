@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "31b2843f8852394df095fa0f9b9b9b4de6ea1895"
+  sha: "246f73a2caa84b6ca6eddf5c0ccfa0c0eabbdc3e"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39675044124
+  ref_name: "0x128bit/aviary-18516"
+  run_id: 39676416735
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Retire tenant feature, theme, and shell editors\n\nRetire tenant feature, theme, and shell editors and redirect historical links by platform section access before the tenant membership guard.\n\nIndependent review of 8bbc664c49f25a2c7f705e70567198caed0fc0f8 found no blocking issues. The squash includes current main, whose only overlap is an unrelated release-detail route in router.ts."
+  message: "Retire Studio packaging editors and retain delivery summary"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:59:42Z"
+  created_at: "2026-10-21T21:09:22Z"
