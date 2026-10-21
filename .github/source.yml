@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "962d3ae7bf29bfaf6abcce0165a2c34feecf5550"
+  sha: "bc17230eda6a92b8092ba29df9e1d4b02a17335b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39565309940
+  run_id: 39567806547
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): show mouse hover candidate outlines"
+  message: "feat(drawing): add independent board viewport controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T07:54:41Z"
+  created_at: "2026-10-21T08:14:56Z"
