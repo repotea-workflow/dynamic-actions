@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "799e2d506b622e2095c74551a273de469138f387"
+  sha: "1cd3fdc2a1db031d5de0cc5055d78fdcb5f16664"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39669569477
+  run_id: 39670328562
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): toggle active slant choices and honor disabled styles"
+  message: "fix(editor): honor host availability in time and dash choices"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:21:27Z"
+  created_at: "2026-10-21T20:26:45Z"
