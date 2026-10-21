@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "77c02741b0f8aa21d06b5040916d1942e95dc338"
+  sha: "303601d3bc08cb6ad3364af13bdffc1bcd1740b3"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18166"
-  run_id: 39651526861
+  ref_name: "main"
+  run_id: 39652012336
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Freeze resolved Release configuration and shared native inputs"
+  message: "Add platform App Release list, drafts and configuration readiness (#303)\n\n* Add platform App Release draft routes and configuration readiness\n\n* Expose persisted Release times and latest platform attempt states\n\n* Align native consumer fixture with source pin validation\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T18:18:40Z"
+  created_at: "2026-10-21T18:21:55Z"
