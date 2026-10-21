@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "516b45c475062669ece8f31917096208e2ecac1b"
+  sha: "2cd379867b611ce723b5b545d629ba99a911326c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39597837165
+  run_id: 39598774450
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add primary text spacing draft steppers"
+  message: "feat: add primary text indent draft actions"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:13:17Z"
+  created_at: "2026-10-21T12:20:27Z"
