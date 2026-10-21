@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "35ba85c733d4ef54ffc975ba97184fa107f2c96a"
+  sha: "c45fa29ccd6d53a734b17b5ac5bbd7bedb6c3584"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39532503010
+  run_id: 39533792841
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add plugin-owned primary text editing in Dart"
+  message: "feat(editor): animate continuous paper viewport following"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T02:21:02Z"
+  created_at: "2026-10-21T02:34:53Z"
