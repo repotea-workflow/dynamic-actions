@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "fa4ce2bb2b4cf98a133213674a693fb96eca106e"
+  sha: "b32b9f29545bc265826dc2d416722b43ce6b3d03"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39627996723
+  ref_name: "0x128bit/aviary-17900"
+  run_id: 39630812024
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Show server feature resolution and explicit App selection (#301)\n\nThe platform feature page lists available, explicit, dependency-added,\nand resolved features with readiness from the unified build API.\nCheckboxes start from the explicit set, so availability, including\nall-tenant distribution, is not enabled automatically. Saves change\nonly that set and surface dependency or revision failures from the server.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Publish native Releases against the exact verified artifact\n\nBind each required target to one verified object on the highest succeeded\nattempt, and keep that selection immutable across later retries. Separate\npublish and artifact-read permissions, audit the first publish, and move the\nduplicate freeze migration to 202610210005 without rewriting applied history."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T15:41:54Z"
+  created_at: "2026-10-21T16:00:28Z"
