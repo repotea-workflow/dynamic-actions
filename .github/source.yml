@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "0b85ce859c6cbda2567441abe35762b2a7cbc0ed"
+  sha: "a06753742ea15423e08423316fcf21ed54f03fd4"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17230"
-  run_id: 39578078053
+  ref_name: "0x128bit/aviary-17228"
+  run_id: 39578801916
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Pin each App to an attested source commit.\n\nNew Apps take the current trusted default once. Existing pins stay put when the trusted map moves, and an upgrade records the previous commit. Freeze rejects a snapshot that does not match the pin and reports capability mismatches before dispatch."
+  message: "test(hawk): assert signing grants do not mutate packaging drafts\n\nDocument AVIARY-111 boundary that grant enable/disable leaves app packaging\ndraft revision and configuration unchanged after tenant signing operations."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:35:18Z"
+  created_at: "2026-10-21T09:40:50Z"
