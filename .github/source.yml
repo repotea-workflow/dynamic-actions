@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9f2d8c172e51101794214522b9eadae288f01f7b"
+  sha: "3ab721f3b1bdebbd417823640a3807638037a8da"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39611566709
+  ref_name: "0x128bit/aviary-17384"
+  run_id: 39615437818
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Pin App source commits and match capabilities before freeze (#297)\n\nPin new Apps to a registered trusted source commit, keep existing pins stable, and require an explicit upgrade with the expected revision, attested digest, change reason, and app_source.upgrade audit.\n\nBefore freeze, compare the pin with the snapshot and reject feature, presentation, platform, dependency, and shell placement mismatches. Main catalog updates do not silently rebind an App."
+  message: "Map terminal native release refusals to stable conflicts.\n\nA second cancel key and other stable attempt state errors were returned as 503. Cancel now rejects an unknown platform the same way retry does, and those refusals stay 409 or 400."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:50:57Z"
+  created_at: "2026-10-21T14:16:40Z"
