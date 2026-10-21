@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9f100607b84cebb308d4b343db52b4f432a1c63f"
+  sha: "903bd866b3653d9bdb0c3f8d5cf58eb3a24c978c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39609782031
+  run_id: 39610782395
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve primary text italic styles during edits"
+  message: "test: refresh inspector interactions after control updates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:38:50Z"
+  created_at: "2026-10-21T13:45:39Z"
