@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9d3f15da674b868aa76049dff2910eb5d1635bea"
+  sha: "73ae41cfa311ad8f4bff9da4bca975d1b2abd11d"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18239"
-  run_id: 39663406043
+  ref_name: "main"
+  run_id: 39664394239
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Show frozen Presentation and theme from resolved selections\n\nThe Release detail summary read presentation and theme fields that the frozen AppInterfaceConfiguration snapshot does not store, so a valid PLUME and Blue selection rendered as empty. Read effective resolved selections, including builtin, managed, and feature overrides."
+  message: "Add the platform theme editor for default and per-feature overrides\n\n* Add the platform theme editor for default and per-feature overrides.\n\nShow presentation coverage, resolved source and problems, and save a complete presentation/theme group through the shared build revision.\n\n* Keep one settings draft pinned to the revision that started the edit.\n\nPreserve migrated feature overrides that have no theme, and save feature and interface edits from either settings section with that original expectedRevision.\n\n* Keep newer settings edits when a delayed save response arrives.\n\nA shared in-flight save blocks section changes and ignores a late clear unless the draft still matches the submitted snapshot. The theme override fixture no longer assigns null to an optional theme ref.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:38:43Z"
+  created_at: "2026-10-21T19:45:34Z"
