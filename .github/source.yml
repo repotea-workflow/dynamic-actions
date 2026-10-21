@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "5f0b15ea41fb01b1777864ac33b794a73fab5173"
+  sha: "799e2d506b622e2095c74551a273de469138f387"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39668380599
+  run_id: 39669569477
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): preserve tenth-step zoom labels\n\nVerify mounted canvas labels and check emoji resource registration without depending on the global asset ID sequence."
+  message: "fix(editor): toggle active slant choices and honor disabled styles"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:13:21Z"
+  created_at: "2026-10-21T20:21:27Z"
