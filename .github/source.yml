@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "a5c712eaea0eafb347f8c79bdeef5167ea656360"
+  sha: "8bbc664c49f25a2c7f705e70567198caed0fc0f8"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39672597187
+  ref_name: "0x128bit/aviary-18454"
+  run_id: 39673252544
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Show frozen Release history with per-platform attempts (#306)\n\n* Show frozen Release history with per-platform attempts\n\nExpose a read-only Release history so Robin can show the frozen configuration digest, every Android and iOS attempt, CI links, failure reasons, and published artifacts without inventing missing values.\n\n* Show frozen Presentation and theme from resolved selections\n\nThe Release detail summary read presentation and theme fields that the frozen AppInterfaceConfiguration snapshot does not store, so a valid PLUME and Blue selection rendered as empty. Read effective resolved selections, including builtin, managed, and feature overrides.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Redirect retired studio links before the tenant membership guard.\n\nHistorical feature, theme, and shell URLs now decide platform access on their own, so a platform reader without tenant membership reaches the matching settings page."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:42:28Z"
+  created_at: "2026-10-21T20:47:02Z"
