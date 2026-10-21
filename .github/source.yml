@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "63d638053b839e67a3fb899b1706be77788c7563"
+  sha: "bb4e528439fbebbd65061b4cbb3f34514406378e"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18593"
-  run_id: 39684733722
+  ref_name: "main"
+  run_id: 39685812805
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Avoid nested pool acquisition in release selection gates"
+  message: "Add Release retry, cancel, download, and publish actions (#311)\n\n* Add Release retry, cancel, download, and publish actions.\n\nShow state-driven platform operations with pending protection and request IDs, and retire the old build, catalog, and packaging version entries as Not Found.\n\n* Serve verified Release downloads before publish.\n\nDownload the latest verified artifact on a frozen Release before a publication exists, and stop packaging from authoring its own version name.\n\n* Format native publish imports for rustfmt.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:12:16Z"
+  created_at: "2026-10-21T22:21:01Z"
