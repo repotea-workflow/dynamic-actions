@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d3811587b930266225463fab41ec8664b6597c42"
+  sha: "e04efed99ea3689f299aa1ac695e2233fb4b2791"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39687196692
+  ref_name: "0x128bit/aviary-18681"
+  run_id: 39687321172
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add immutable Release batch target selections and preflight (#313)\n\n* Add Release selection preflight and immutable target freezing\n\n* Avoid nested pool acquisition in release selection gates\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Consume resolved native assemblies and support startup without HOME"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:32:21Z"
+  created_at: "2026-10-21T22:33:22Z"
