@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "819cc953694abfe21042b72ff46e16289fc8bc8a"
+  sha: "ff31e302fe89c47243f818316f7589a3cadc51c9"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39526393020
+  run_id: 39528577766
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add plugin-based photo frames to Dart rendering"
+  message: "feat: add plugin-driven continuous paper layout in Dart"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T01:17:09Z"
+  created_at: "2026-10-21T01:39:32Z"
