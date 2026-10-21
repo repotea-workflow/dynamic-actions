@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "246f73a2caa84b6ca6eddf5c0ccfa0c0eabbdc3e"
+  sha: "988c75a20a6312c8947d6c12831bcf4afe6aabf6"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18516"
-  run_id: 39676416735
+  ref_name: "0x128bit/aviary-18506"
+  run_id: 39676622837
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Retire Studio packaging editors and retain delivery summary"
+  message: "Add Release retry, cancel, download, and publish actions.\n\nShow state-driven platform operations with pending protection and request IDs, and retire the old build, catalog, and packaging version entries as Not Found."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:09:22Z"
+  created_at: "2026-10-21T21:10:50Z"
