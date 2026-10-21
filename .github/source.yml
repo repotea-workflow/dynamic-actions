@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "30f8248c26bad0c51cfbf48f9e1c80ad928bae32"
+  sha: "aa1a48eb046f4fffac7fc68af4ebd300837e84f8"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17384"
-  run_id: 39591016087
+  ref_name: "main"
+  run_id: 39593937876
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Freeze native Releases into one snapshot and per-platform attempts.\n\nThe first build checks readiness once, stores a shared snapshot, and starts one prepared attempt per platform. Retry, cancel, late callback and reconcile reuse that snapshot and refuse backward status moves."
+  message: "test(hawk): signing grants must not mutate packaging drafts (AVIARY-111) (#298)\n\n* test(hawk): assert signing grants do not mutate packaging drafts\n\nDocument AVIARY-111 boundary that grant enable/disable leaves app packaging\ndraft revision and configuration unchanged after tenant signing operations.\n\n* test(hawk): drop redundant platform_owner bindings in tenant_signing\n\nFixture::from_state already binds platform_owner; duplicate inserts\nviolated avr_role_bindings_active_unique_idx in dynamic_app_db CI.\n\n* test(hawk): re-bind platform_owner after tenant_role for draft setup\n\ntenant_role revokes all role bindings for the fixture identity, so\nplatform packaging draft writes need a single bind_platform_owner call\nbefore seeding the shared app draft. Avoids duplicate inserts while\nkeeping platform-only PUT paths authorized.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:19:00Z"
+  created_at: "2026-10-21T11:42:37Z"
