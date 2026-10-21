@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e648f2e980067bcc73a1165c10e6dfbe091da5fc"
+  sha: "f05432b034fad66a749097ebceb6a4339f843652"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39545348356
+  run_id: 39546563014
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: make font catalog loading stable and retryable"
+  message: "feat: add lazy font groups and download selection"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T04:40:51Z"
+  created_at: "2026-10-21T04:54:20Z"
