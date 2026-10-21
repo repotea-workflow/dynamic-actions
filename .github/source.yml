@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8b5009bbd693658fc46a8993bcedc025ea688978"
+  sha: "67478bd73b47f57bb8354795cd4e9ffc2349c732"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39536424031
+  run_id: 39536523047
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(canvas): align zoom indicator tap cycle with reference editor"
+  message: "fix(serial): preserve configured width for hexadecimal sequences"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:03:28Z"
+  created_at: "2026-10-21T03:04:31Z"
