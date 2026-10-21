@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3d8d22240e210b35ed119616c6921ba9e1afd749"
+  sha: "122cc8cfbc3556daa8182277dcd6c37745cff3ef"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39652255124
+  run_id: 39654619457
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): separate material thumbnails from print content"
+  message: "feat(editor): resolve material resources before picker insertion"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T18:23:30Z"
+  created_at: "2026-10-21T18:39:10Z"
