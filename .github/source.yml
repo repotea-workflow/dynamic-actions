@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e4db2c84e98f1ae8b03e17e0baecdef790161952"
+  sha: "d3af8ea9d190be908deddbe079aeafe2e7896134"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39538825485
+  run_id: 39539139068
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: expose barcode resize mode in plugin inspector"
+  message: "fix: enable growing multiline text inspector input"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:29:20Z"
+  created_at: "2026-10-21T03:32:37Z"
