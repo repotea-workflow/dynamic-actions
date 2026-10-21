@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "398b5c657e08fa9a1a4b64b788eaba35e61a45bd"
+  sha: "347832714e297409084e12d366de7ad53a4dfe3e"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-17228"
-  run_id: 39584740462
+  run_id: 39587764715
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(hawk): assert signing grants do not mutate packaging drafts\n\nDocument AVIARY-111 boundary that grant enable/disable leaves app packaging\ndraft revision and configuration unchanged after tenant signing operations."
+  message: "test(hawk): drop redundant platform_owner bindings in tenant_signing\n\nFixture::from_state already binds platform_owner; duplicate inserts\nviolated avr_role_bindings_active_unique_idx in dynamic_app_db CI."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T10:27:51Z"
+  created_at: "2026-10-21T10:52:39Z"
