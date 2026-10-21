@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0e078f700cd0cf1b2d3a4e45853b4bcf7aab0d25"
+  sha: "79cee3794581619066bbafd3fb02892f83b6541b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39680542457
+  run_id: 39685660662
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: align Dart line endpoints and dash gaps with reference"
+  message: "feat: add linked open-label fields through editor plugins"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:39:33Z"
+  created_at: "2026-10-21T22:19:46Z"
