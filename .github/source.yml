@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "420c53fb9da7c942de8f33cc7e3400739b958437"
+  sha: "2e7aae91bbba1e81df5ca5812ceb2eb53b6f21cd"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18575"
-  run_id: 39683140196
+  ref_name: "0x128bit/aviary-18506"
+  run_id: 39683329634
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Preserve frozen themes and verify configuration digests.\n\nGenerated theme bindings now keep the complete frozen theme, and assembly rejects stale capability, resource, and source digests, including an extra permission that still grants every catalog permission."
+  message: "Format native publish imports for rustfmt."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:59:51Z"
+  created_at: "2026-10-21T22:01:14Z"
