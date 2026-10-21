@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8d3258912cf841fb3f87d319d5e3d317a44fc9b5"
+  sha: "8b5009bbd693658fc46a8993bcedc025ea688978"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39536180602
+  run_id: 39536424031
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): add plugin-based text and time variable bindings"
+  message: "fix(canvas): align zoom indicator tap cycle with reference editor"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:00:49Z"
+  created_at: "2026-10-21T03:03:28Z"
