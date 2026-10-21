@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "46d57cfa81b4106c4698043c94a622f12dff0335"
+  sha: "2e49e411c5825109bacdfe82a5c702a591c1ef91"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39679200319
+  ref_name: "0x128bit/aviary-18516"
+  run_id: 39680079062
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add the Build Spec v2 appConfiguration contract (#308)\n\n* Add the Build Spec v2 appConfiguration contract.\n\nProject explicit, dependency, and resolved features, presentation bindings,\nfrozen themes, shell, and digests from one common snapshot. Android and iOS\ncite that snapshot, retries do not reload live configuration, and secrets stay\nout of the spec.\n\n* Share one live appConfiguration snapshot across platforms.\n\nKeep platform targets, signing, and frozen inputs out of the live resource digest so Android and iOS cite the same common snapshot when their frozen themes match.\n\n* Pin API checks to the appConfiguration contract consumer.\n\nThe signing integration spec now includes appConfiguration, which the previous Buildbox pin rejects as an unknown field.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Keep authenticated access denials on the inaccessible page"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:29:40Z"
+  created_at: "2026-10-21T21:36:01Z"
