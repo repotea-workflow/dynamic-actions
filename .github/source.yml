@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "534be1653692ba77ee85c680de0b6efe15faeff3"
+  sha: "1d0e640740ae6c8c313e02e5d3b747464fedf7f5"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-16586"
-  run_id: 39541016545
+  run_id: 39544227063
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(hawk): add App-owned interface configuration"
+  message: "feat(hawk): unify platform-owned App build configuration"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:53:22Z"
+  created_at: "2026-10-21T04:28:38Z"
