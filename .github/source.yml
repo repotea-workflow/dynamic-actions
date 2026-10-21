@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4badbd413d20c0e67d2f28e6dfb6f4e8a80de18d"
+  sha: "0aefa46c0b76bc0e81649493b87a707ecf7aa8fb"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39607411131
+  run_id: 39608169576
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add direct slider adjustment buttons"
+  message: "feat: add primary text draft font adjustment buttons"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:22:30Z"
+  created_at: "2026-10-21T13:27:43Z"
