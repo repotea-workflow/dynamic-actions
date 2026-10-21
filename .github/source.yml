@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ede1b49c0077c296cd9677eb1c113032e9ccb188"
+  sha: "d3811587b930266225463fab41ec8664b6597c42"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 39686074407
+  run_id: 39687196692
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Assemble products from resolved configuration without requiring HOME (#312)\n\n* Assemble products from resolved configuration without requiring HOME.\n\nThe assembler now consumes frozen appConfiguration for selected implementations, dependency routes, shell items, and theme bindings, and rejects tampered digests, placements, permissions, and runtime expansion.\n\n* Preserve frozen themes and verify configuration digests.\n\nGenerated theme bindings now keep the complete frozen theme, and assembly rejects stale capability, resource, and source digests, including an extra permission that still grants every catalog permission.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Add immutable Release batch target selections and preflight (#313)\n\n* Add Release selection preflight and immutable target freezing\n\n* Avoid nested pool acquisition in release selection gates\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:23:08Z"
+  created_at: "2026-10-21T22:32:21Z"
