@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "92c27d09c1562b9e8e2005bbc278217002b4a668"
+  sha: "420c53fb9da7c942de8f33cc7e3400739b958437"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18593"
-  run_id: 39682248589
+  ref_name: "0x128bit/aviary-18575"
+  run_id: 39683140196
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add Release selection preflight and immutable target freezing"
+  message: "Preserve frozen themes and verify configuration digests.\n\nGenerated theme bindings now keep the complete frozen theme, and assembly rejects stale capability, resource, and source digests, including an extra permission that still grants every catalog permission."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:52:47Z"
+  created_at: "2026-10-21T21:59:51Z"
