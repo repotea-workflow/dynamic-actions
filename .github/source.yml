@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c3e8b2b2ea804160e08f7ef3ed17275236199080"
+  sha: "92c27d09c1562b9e8e2005bbc278217002b4a668"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18506"
-  run_id: 39682052061
+  ref_name: "0x128bit/aviary-18593"
+  run_id: 39682248589
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Serve verified Release downloads before publish.\n\nDownload the latest verified artifact on a frozen Release before a publication exists, and stop packaging from authoring its own version name."
+  message: "Add Release selection preflight and immutable target freezing"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T21:51:17Z"
+  created_at: "2026-10-21T21:52:47Z"
