@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9d477d3a84c45deb8262bffe0587e760ffef4091"
+  sha: "1b949f068022bd2369694953246401edcb189a2d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39585431281
+  run_id: 39587070834
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(inspector): group continuous numeric style input undo"
+  message: "feat(text): add guarded spacing step controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T10:33:25Z"
+  created_at: "2026-10-21T10:46:55Z"
