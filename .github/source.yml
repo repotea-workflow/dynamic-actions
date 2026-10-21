@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "330acbaed60e431ee3a09c1bc6f59b7260cf3647"
+  sha: "9740c18ebaa926473b5eddbc38e4a23c0d57abfa"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39599764445
+  run_id: 39600797619
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add atomic time offset draft pickers"
+  message: "feat: align serial affix input limits"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:27:54Z"
+  created_at: "2026-10-21T12:35:27Z"
