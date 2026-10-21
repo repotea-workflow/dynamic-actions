@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3e6b901b312fc09923a567fb10457096f6654543"
+  sha: "71df3b3af0e6a57707ba59047b356149896072e1"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-16874"
-  run_id: 39557113511
+  ref_name: "main"
+  run_id: 39557407215
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Reject native Release create replay after deletion"
+  message: "Export trusted capability catalog placements and routes (#293)\n\n* Export trusted shell placement and route capabilities.\n\nRead shell placement and route templates from the exact source commit, attest the catalog digest, and reject duplicate or unsafe placement metadata during registration.\n\n* fix(native): align catalog attestation and committed capability metadata\n\n* Fix native presentation fixture capability fields\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T06:42:49Z"
+  created_at: "2026-10-21T06:45:34Z"
