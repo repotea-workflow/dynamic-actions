@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1f16fac759f6a021da5bcd2b662b23ae578e2683"
+  sha: "fc6a675a9d0b6aa49c3a7399473cd2f0e74ed77b"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39559045659
+  ref_name: "0x128bit/aviary-16865"
+  run_id: 39560981891
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add native Release drafts and atomic platform build numbers (#294)\n\n* Add native Release draft identity and atomic build numbers\n\n* Reject native Release create replay after deletion\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Merge origin/main into the online consumer freeze boundary\n\nKeep AppBuildConfiguration and source catalogs as the native freeze path.\nRecord storage clocks inside the accepted app profile and reject nested\nonline catalogs against that current builder."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T07:00:50Z"
+  created_at: "2026-10-21T07:17:56Z"
