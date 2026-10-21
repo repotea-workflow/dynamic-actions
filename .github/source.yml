@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4486670446a1d3817fa1c93028946496cb4c7724"
+  sha: "30f8248c26bad0c51cfbf48f9e1c80ad928bae32"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17228"
-  run_id: 39590336796
+  ref_name: "0x128bit/aviary-17384"
+  run_id: 39591016087
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(hawk): re-bind platform_owner after tenant_role for draft setup\n\ntenant_role revokes all role bindings for the fixture identity, so\nplatform packaging draft writes need a single bind_platform_owner call\nbefore seeding the shared app draft. Avoids duplicate inserts while\nkeeping platform-only PUT paths authorized."
+  message: "Freeze native Releases into one snapshot and per-platform attempts.\n\nThe first build checks readiness once, stores a shared snapshot, and starts one prepared attempt per platform. Retry, cancel, late callback and reconcile reuse that snapshot and refuse backward status moves."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:13:34Z"
+  created_at: "2026-10-21T11:19:00Z"
