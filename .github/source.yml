@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "45178b71f4a193720cd9bcd78d6612a76a1805cc"
+  sha: "3d8d22240e210b35ed119616c6921ba9e1afd749"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39651655624
+  run_id: 39652255124
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): support material group navigation icons"
+  message: "feat(editor): separate material thumbnails from print content"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T18:19:33Z"
+  created_at: "2026-10-21T18:23:30Z"
