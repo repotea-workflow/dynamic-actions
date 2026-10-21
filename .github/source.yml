@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f13332c32f7f76e2d8077dc19161bf7b6f8e81a3"
+  sha: "00d700e8971ae4f1355f7aae5f98a383011040a4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39636475462
+  run_id: 39637238570
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(fonts): open grouped picker at the selected font family"
+  message: "fix(fonts): retain independent group list scroll positions"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:37:55Z"
+  created_at: "2026-10-21T16:43:09Z"
