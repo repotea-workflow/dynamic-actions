@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "53e0db7146068e23262084994aadd018f6aae60a"
+  sha: "9d477d3a84c45deb8262bffe0587e760ffef4091"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39584686061
+  run_id: 39585431281
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(inspector): group text and table content input undo"
+  message: "fix(inspector): group continuous numeric style input undo"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T10:27:22Z"
+  created_at: "2026-10-21T10:33:25Z"
