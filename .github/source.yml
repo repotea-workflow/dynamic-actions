@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f3a9d3dcdc0f1bb2ea24db46c0a6484854704dc8"
+  sha: "77c02741b0f8aa21d06b5040916d1942e95dc338"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17990"
-  run_id: 39647572836
+  ref_name: "0x128bit/aviary-18166"
+  run_id: 39651526861
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align native consumer fixture with source pin validation"
+  message: "Freeze resolved Release configuration and shared native inputs"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T17:52:09Z"
+  created_at: "2026-10-21T18:18:40Z"
