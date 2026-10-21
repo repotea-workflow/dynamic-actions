@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "12d68101c2e2a4f09aa51f036fccae029a7b41b8"
+  sha: "e1a36bdb14595359ad7bb911a79725fca720b609"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18192"
-  run_id: 39660121962
+  ref_name: "main"
+  run_id: 39661164250
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep newer settings edits when a delayed save response arrives.\n\nA shared in-flight save blocks section changes and ignores a late clear unless the draft still matches the submitted snapshot. The theme override fixture no longer assigns null to an optional theme ref."
+  message: "Freeze resolved Release configuration and shared native inputs (#304)\n\n* Freeze resolved Release configuration and shared native inputs\n\n* Fix native build source and resource integration fixtures\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:16:15Z"
+  created_at: "2026-10-21T19:23:21Z"
