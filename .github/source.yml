@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "33ea964ae146a34e97aad59a727e5a5c07730a41"
+  sha: "3202128e41cf354eb673ce35e4f412b3190ef27c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39541435031
+  run_id: 39541595763
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: support optional scan before barcode insertion"
+  message: "feat: add fixed date and second precision time pickers"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:58:06Z"
+  created_at: "2026-10-21T04:00:00Z"
