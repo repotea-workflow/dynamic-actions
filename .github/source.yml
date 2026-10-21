@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9405951d19a59b52234562bc9e3ebd39560bcc15"
+  sha: "d74b378928bba3a26038a3d035a631544f044a54"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39589278798
+  run_id: 39591221233
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(inspector): add live font size sliders with grouped undo"
+  message: "feat(inspector): add unit-aware geometry sliders"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T11:04:59Z"
+  created_at: "2026-10-21T11:20:37Z"
