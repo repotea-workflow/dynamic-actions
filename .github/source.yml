@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d713dda64a4aef3f868c65de8ccf1cc736231e00"
+  sha: "db42eef5df75cd7163512f94845eca78a8347f56"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17230"
-  run_id: 39600092612
+  ref_name: "0x128bit/aviary-17543"
+  run_id: 39602883520
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Generate the App source pin management client"
+  message: "Add the platform App settings navigation shell\n\nGive platform App settings one navigation for profile, install identifiers, brand assets, server-resolved features, theme, and shell, native capabilities, signing, storage, and Release drafts. Reuse the existing forms and show tenant context, save state, and the frozen Release note without changing Studio routes."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:30:17Z"
+  created_at: "2026-10-21T12:50:54Z"
