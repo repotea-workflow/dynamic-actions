@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "903bd866b3653d9bdb0c3f8d5cf58eb3a24c978c"
+  sha: "58413a95ab9fb261595aee9a02540f6aa108f70b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39610782395
+  run_id: 39611798763
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: refresh inspector interactions after control updates"
+  message: "fix: composite image effect pixels on white paper"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:45:39Z"
+  created_at: "2026-10-21T13:52:33Z"
