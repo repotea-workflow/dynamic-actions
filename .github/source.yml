@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "07737aeb7b964e081164d4ee8daf86faabdda52a"
+  sha: "b5b3b16e42b4393c89b198e8b510d5b1587ee1fd"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17990"
-  run_id: 39637036467
+  ref_name: "main"
+  run_id: 39640766409
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add platform App Release draft routes and configuration readiness"
+  message: "Publish native Releases against the exact verified artifact (#302)\n\n* Publish native Releases against the exact verified artifact\n\nBind each required target to one verified object on the highest succeeded\nattempt, and keep that selection immutable across later retries. Separate\npublish and artifact-read permissions, audit the first publish, and move the\nduplicate freeze migration to 202610210005 without rewriting applied history.\n\n* Keep published downloads bound to current signing and the original key.\n\nReplay a stored publish key before later attempts change the selection, and withhold a GitHub artifact URL after its signing grant is revoked.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:41:42Z"
+  created_at: "2026-10-21T17:06:20Z"
