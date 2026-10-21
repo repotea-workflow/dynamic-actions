@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0cbe1e68bf41a13e7da5c898543f1ffb85af0b45"
+  sha: "1c728058a2cbd9e309ce91b06fa8daa0606d0dc0"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39549850611
+  run_id: 39550750297
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): align select-all and verify Dart Web font flow"
+  message: "feat(primary-text): align font selection and decoration controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T05:29:45Z"
+  created_at: "2026-10-21T05:39:13Z"
