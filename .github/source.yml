@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8210068407c845dd651b5d4f7dc7378ec4a5f5a8"
+  sha: "5f0b15ea41fb01b1777864ac33b794a73fab5173"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39665142123
+  run_id: 39668380599
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): add direct inspector indentation actions"
+  message: "fix(editor): preserve tenth-step zoom labels\n\nVerify mounted canvas labels and check emoji resource registration without depending on the global asset ID sequence."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:50:48Z"
+  created_at: "2026-10-21T20:13:21Z"
