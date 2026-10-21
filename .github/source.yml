@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "544443ec7b75a6930b85663d305ce379e1da3683"
+  sha: "26954fedb4243bff7d6b2915300c08ca2c4d300d"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18357"
-  run_id: 39667612758
+  ref_name: "0x128bit/aviary-18376"
+  run_id: 39669211414
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add the Build Spec v2 appConfiguration contract.\n\nProject explicit, dependency, and resolved features, presentation bindings,\nfrozen themes, shell, and digests from one common snapshot. Android and iOS\ncite that snapshot, retries do not reload live configuration, and secrets stay\nout of the spec."
+  message: "test(robin): cover shell save translations and UTF-8 limits"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:08:02Z"
+  created_at: "2026-10-21T20:19:04Z"
