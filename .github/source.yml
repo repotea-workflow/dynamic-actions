@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "70ac8da8f7d086dc307391e7dfa71dc5ad6cfca6"
+  sha: "db751ad801bce730ee9bc403d8fddd26a177ce10"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39647346929
+  run_id: 39649951717
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): load border catalog groups on demand"
+  message: "feat(editor): resolve border preset images as owned drafts"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T17:50:34Z"
+  created_at: "2026-10-21T18:08:08Z"
