@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "db42eef5df75cd7163512f94845eca78a8347f56"
+  sha: "4ee65b455e839a894a0fcc1b3cd7cf4457f00c00"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17543"
-  run_id: 39602883520
+  ref_name: "0x128bit/aviary-17384"
+  run_id: 39603252032
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add the platform App settings navigation shell\n\nGive platform App settings one navigation for profile, install identifiers, brand assets, server-resolved features, theme, and shell, native capabilities, signing, storage, and Release drafts. Reuse the existing forms and show tenant context, save state, and the frozen Release note without changing Studio routes."
+  message: "Fix native release freeze and retry replay identity"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:50:54Z"
+  created_at: "2026-10-21T12:53:34Z"
