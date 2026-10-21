@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e516263b956d902d57ff612836055beda61e8d19"
+  sha: "4badbd413d20c0e67d2f28e6dfb6f4e8a80de18d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39605892602
+  run_id: 39607411131
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add table row and column count buttons"
+  message: "feat: add direct slider adjustment buttons"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:12:11Z"
+  created_at: "2026-10-21T13:22:30Z"
