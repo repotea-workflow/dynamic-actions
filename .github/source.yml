@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2cd379867b611ce723b5b545d629ba99a911326c"
+  sha: "330acbaed60e431ee3a09c1bc6f59b7260cf3647"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39598774450
+  run_id: 39599764445
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add primary text indent draft actions"
+  message: "feat: add atomic time offset draft pickers"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:20:27Z"
+  created_at: "2026-10-21T12:27:54Z"
