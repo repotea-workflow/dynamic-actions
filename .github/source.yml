@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "6fa12ccfa8630a1ae9b0cdc4eecd66889b1dd3d4"
+  sha: "1f16fac759f6a021da5bcd2b662b23ae578e2683"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-16865"
-  run_id: 39558652206
+  ref_name: "main"
+  run_id: 39559045659
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: prove native freeze rejects nested online catalogs\n\nCall native create and record storage online and build clocks inside the\naccepted app profile, while nested banners and translations stay out."
+  message: "Add native Release drafts and atomic platform build numbers (#294)\n\n* Add native Release draft identity and atomic build numbers\n\n* Reject native Release create replay after deletion\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T06:57:22Z"
+  created_at: "2026-10-21T07:00:50Z"
