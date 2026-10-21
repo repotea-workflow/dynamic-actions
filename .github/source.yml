@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d5e36e0c9ffc53890b9d3d6c40c9337654e49dfe"
+  sha: "07737aeb7b964e081164d4ee8daf86faabdda52a"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17900"
-  run_id: 39634836605
+  ref_name: "0x128bit/aviary-17990"
+  run_id: 39637036467
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep published downloads bound to current signing and the original key.\n\nReplay a stored publish key before later attempts change the selection, and withhold a GitHub artifact URL after its signing grant is revoked."
+  message: "Add platform App Release draft routes and configuration readiness"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:26:57Z"
+  created_at: "2026-10-21T16:41:42Z"
