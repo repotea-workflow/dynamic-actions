@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "7891146d08d9b573d4c6b96d762967356aacef5c"
+  sha: "e64e86c21ddb5ec7bf619c9fe94c108c78777932"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39522479890
+  run_id: 39523010428
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add composable three-slice printable borders"
+  message: "feat: preview border drafts and catalog artwork"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T00:38:07Z"
+  created_at: "2026-10-21T00:43:26Z"
