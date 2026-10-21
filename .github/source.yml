@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b08aa7da41f93a45caf10b02792ac2f5b570c3dc"
+  sha: "b1933fbeaa65a8296f6d6ea7e58f701054140208"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39658105077
+  run_id: 39659098994
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): expose image effects as direct choices"
+  message: "feat(editor): expose shape kinds as direct choices"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:02:35Z"
+  created_at: "2026-10-21T19:09:23Z"
