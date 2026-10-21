@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3202128e41cf354eb673ce35e4f412b3190ef27c"
+  sha: "64b6abfe21cff10eeed9c184b826a78ea2317293"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39541595763
+  run_id: 39543418752
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add fixed date and second precision time pickers"
+  message: "feat: import frame elements with atomic history and assets"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T04:00:00Z"
+  created_at: "2026-10-21T04:19:49Z"
