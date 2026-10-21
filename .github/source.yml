@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "fe5bc19505acb464265d08d836634ffe27783336"
+  sha: "819cc953694abfe21042b72ff46e16289fc8bc8a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39524121573
+  run_id: 39526393020
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: retain SVG background dimensions and release stale imports"
+  message: "feat: add plugin-based photo frames to Dart rendering"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T00:54:30Z"
+  created_at: "2026-10-21T01:17:09Z"
