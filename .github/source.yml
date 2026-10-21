@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "26913a30034a0979093668759c65f43191acd3aa"
+  sha: "bd91870a419695342f74db5fcdb3338a74f4b30b"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-16864"
-  run_id: 39553955639
+  ref_name: "0x128bit/aviary-16874"
+  run_id: 39554795094
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Export trusted shell placement and route capabilities.\n\nRead shell placement and route templates from the exact source commit, attest the catalog digest, and reject duplicate or unsafe placement metadata during registration."
+  message: "Add native Release draft identity and atomic build numbers"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T06:12:10Z"
+  created_at: "2026-10-21T06:20:38Z"
