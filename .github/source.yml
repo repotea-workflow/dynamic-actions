@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2e7aae91bbba1e81df5ca5812ceb2eb53b6f21cd"
+  sha: "63d638053b839e67a3fb899b1706be77788c7563"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18506"
-  run_id: 39683329634
+  ref_name: "0x128bit/aviary-18593"
+  run_id: 39684733722
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Format native publish imports for rustfmt."
+  message: "Avoid nested pool acquisition in release selection gates"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:01:14Z"
+  created_at: "2026-10-21T22:12:16Z"
