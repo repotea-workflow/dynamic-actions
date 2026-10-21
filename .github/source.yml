@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bb4e528439fbebbd65061b4cbb3f34514406378e"
+  sha: "ede1b49c0077c296cd9677eb1c113032e9ccb188"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 39685812805
+  run_id: 39686074407
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add Release retry, cancel, download, and publish actions (#311)\n\n* Add Release retry, cancel, download, and publish actions.\n\nShow state-driven platform operations with pending protection and request IDs, and retire the old build, catalog, and packaging version entries as Not Found.\n\n* Serve verified Release downloads before publish.\n\nDownload the latest verified artifact on a frozen Release before a publication exists, and stop packaging from authoring its own version name.\n\n* Format native publish imports for rustfmt.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Assemble products from resolved configuration without requiring HOME (#312)\n\n* Assemble products from resolved configuration without requiring HOME.\n\nThe assembler now consumes frozen appConfiguration for selected implementations, dependency routes, shell items, and theme bindings, and rejects tampered digests, placements, permissions, and runtime expansion.\n\n* Preserve frozen themes and verify configuration digests.\n\nGenerated theme bindings now keep the complete frozen theme, and assembly rejects stale capability, resource, and source digests, including an extra permission that still grants every catalog permission.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:21:01Z"
+  created_at: "2026-10-21T22:23:08Z"
