@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3535c6cd348e54eec677e76304cedfab715d158b"
+  sha: "1c75a0959b46b392069d507f98d0ee0773acffef"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39540091738
+  run_id: 39540553021
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: support multiline barcode and QR payload input"
+  message: "feat: add optional host barcode scanning plugin"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:43:14Z"
+  created_at: "2026-10-21T03:48:12Z"
