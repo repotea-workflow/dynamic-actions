@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "303601d3bc08cb6ad3364af13bdffc1bcd1740b3"
+  sha: "c36d63c97444b62e4b7d7fa8bac2ff379ed50fee"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39652012336
+  ref_name: "0x128bit/aviary-18192"
+  run_id: 39652870963
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add platform App Release list, drafts and configuration readiness (#303)\n\n* Add platform App Release draft routes and configuration readiness\n\n* Expose persisted Release times and latest platform attempt states\n\n* Align native consumer fixture with source pin validation\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Add the platform theme editor for default and per-feature overrides.\n\nShow presentation coverage, resolved source and problems, and save a complete presentation/theme group through the shared build revision."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T18:21:55Z"
+  created_at: "2026-10-21T18:27:36Z"
