@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "5598ec4219604224865d70e4cc7954dc2fbc372e"
+  sha: "35ba85c733d4ef54ffc975ba97184fa107f2c96a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39529897695
+  run_id: 39532503010
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: preserve viewport while appending continuous paper content"
+  message: "feat: add plugin-owned primary text editing in Dart"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T01:53:40Z"
+  created_at: "2026-10-21T02:21:02Z"
