@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "1f26bf509556ab2c6c326bdbf20fc869b66da529"
+  sha: "360ae9ae1d80af5320865dca8aa9e903a2035f35"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39661768451
+  run_id: 39662465041
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(editor): align serial radix controls and step limits"
+  message: "feat(editor): match fixed clock fields to time presets"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T19:27:31Z"
+  created_at: "2026-10-21T19:32:13Z"
