@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "18d62a508491cd690df94fc2df81eefa3ffdec96"
+  sha: "4cd2b599163d982186df81fc4e31d87c4b801ccc"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39630643817
+  run_id: 39631607674
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: align drawing brush widths and narrow toolbar hit targets"
+  message: "fix: retain independent material group scroll positions"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T15:59:24Z"
+  created_at: "2026-10-21T16:05:39Z"
