@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8ae379f5ca2b61a80a8e528fd9f9d7ef4c40bda6"
+  sha: "8734309f36a0fc63cb83a47a046bc64f1e398f9c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39690881462
+  run_id: 39692573361
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: open plugin inspector when activating non-inline elements"
+  message: "feat: add plugin-owned selection copy handle"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T23:04:01Z"
+  created_at: "2026-10-21T23:18:47Z"
