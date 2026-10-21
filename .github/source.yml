@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "10fc4c08ccc43ca241c8a590a5af7c9365ebda2c"
+  sha: "77aa0bb04ecdae277979a750f8ac8fa3e809b3e5"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39670467888
+  ref_name: "0x128bit/aviary-18454"
+  run_id: 39672017848
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add platform App shell editing and startup entry rules (#307)\n\n* Add platform shell editing and startup entry guidance\n\n* test(robin): cover shell save translations and UTF-8 limits\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Retire tenant feature, theme, and shell editors.\n\nHistorical App Studio links now open the platform settings pages for operators who can read them, and show inaccessible otherwise."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:27:43Z"
+  created_at: "2026-10-21T20:38:28Z"
