@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "54e552c23a22e193fa9cd7123cf129dce097620e"
+  sha: "03125e3cc3c90eb68449fb6e6aa05d77429f4c7f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39671370484
+  run_id: 39673352105
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(editor): refresh reviewed parity UI baselines"
+  message: "fix(render): preserve retail barcode guards and digit zones"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T20:33:59Z"
+  created_at: "2026-10-21T20:47:44Z"
