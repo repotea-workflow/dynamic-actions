@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ba2ae6189840e7784bb0d74d0c87a4062e890fa5"
+  sha: "898b9b2fcde9595b9ea93afa36c8f87f52ee26dc"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39564825828
+  ref_name: "0x128bit/aviary-16865"
+  run_id: 39564935946
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Restrict App packaging configuration writes to platform managers (#296)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "fix: replay identical native freezes that differ only by build clock\n\nConcurrent creates put clock_timestamp into the hashed Spec, so both\nreturned 201 and the shared platform-resource fixture leaked into later\ntests. Reuse a stored Spec with the same inputs and delete that fixture."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T07:50:36Z"
+  created_at: "2026-10-21T07:51:30Z"
