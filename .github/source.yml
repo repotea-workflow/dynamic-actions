@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d3af8ea9d190be908deddbe079aeafe2e7896134"
+  sha: "e54d5a15575b4797e5016ef281e26e6e7b468017"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39539139068
+  run_id: 39539789399
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: enable growing multiline text inspector input"
+  message: "feat: add date and time format preset picker"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T03:32:37Z"
+  created_at: "2026-10-21T03:39:49Z"
