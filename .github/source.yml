@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "773aed43d139cd0a85c89a02acb473d188cc8cf3"
+  sha: "fb51182ae15cfcbaddc15f41c52950f06f115c5d"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17543"
-  run_id: 39604998695
+  ref_name: "0x128bit/aviary-17230"
+  run_id: 39606242031
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Let App settings routes follow section action permissions.\n\nplatform.apps.manage and the signing, release, feature, and storage grants can open their sections without platform.apps.read. The no-permission browser check asserts the empty state instead of a read-only sentence that is never rendered."
+  message: "Fix source pin freeze fixtures and preserve catalog conflicts"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T13:05:57Z"
+  created_at: "2026-10-21T13:14:33Z"
