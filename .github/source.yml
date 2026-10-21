@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "be15a9fbaa2a7c1619590348a8512fa5dc7839ce"
+  sha: "f13332c32f7f76e2d8077dc19161bf7b6f8e81a3"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39635193874
+  run_id: 39636475462
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(emoji): reveal the selected material catalog tab"
+  message: "fix(fonts): open grouped picker at the selected font family"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:29:29Z"
+  created_at: "2026-10-21T16:37:55Z"
