@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "175dfd19d043d70dd2ec42ff9bde3c4d6966ff31"
+  sha: "111380e5768c18e015394e48ac9e86b8eb887eaa"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39596345386
+  run_id: 39597121764
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: preview image thresholds during grouped slider edits"
+  message: "feat: add primary text draft font size slider"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T12:01:44Z"
+  created_at: "2026-10-21T12:07:45Z"
