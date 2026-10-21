@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e04efed99ea3689f299aa1ac695e2233fb4b2791"
+  sha: "a9c131920b3f20eded0e50578012558afcc7e5e0"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18681"
-  run_id: 39687321172
+  ref_name: "main"
+  run_id: 39689462930
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Consume resolved native assemblies and support startup without HOME"
+  message: "Consume resolved native assemblies and support startup without HOME (#314)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T22:33:22Z"
+  created_at: "2026-10-21T22:51:29Z"
