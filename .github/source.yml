@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "ff8fee7d5de9d133c87a473a14172b737458a089"
+  sha: "5c1b8d155d64c0900b1b95d0e0d2a960aefff7fb"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39577427462
+  run_id: 39578462491
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(serial): add guarded interval step controls"
+  message: "fix(inspector): synchronize focused inputs with undo history"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T09:30:12Z"
+  created_at: "2026-10-21T09:38:06Z"
