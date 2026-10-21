@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3ab721f3b1bdebbd417823640a3807638037a8da"
+  sha: "035a1317ba712164e17e06beb7bc9df34fbbd832"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-17384"
-  run_id: 39615437818
+  ref_name: "main"
+  run_id: 39619614176
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Map terminal native release refusals to stable conflicts.\n\nA second cancel key and other stable attempt state errors were returned as 503. Cancel now rejects an unknown platform the same way retry does, and those refusals stay 409 or 400."
+  message: "Freeze native releases and keep platform attempts idempotent (#299)\n\nAtomically freeze a draft once readiness passes, share one snapshot across targets, and advance platform attempts through retry, cancel, late callback, and reconcile without repeating dispatch or rolling state backward."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T14:16:40Z"
+  created_at: "2026-10-21T14:45:28Z"
