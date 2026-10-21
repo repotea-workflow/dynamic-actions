@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b32b9f29545bc265826dc2d416722b43ce6b3d03"
+  sha: "d5e36e0c9ffc53890b9d3d6c40c9337654e49dfe"
   ref_type: "branch"
   ref_name: "0x128bit/aviary-17900"
-  run_id: 39630812024
+  run_id: 39634836605
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Publish native Releases against the exact verified artifact\n\nBind each required target to one verified object on the highest succeeded\nattempt, and keep that selection immutable across later retries. Separate\npublish and artifact-read permissions, audit the first publish, and move the\nduplicate freeze migration to 202610210005 without rewriting applied history."
+  message: "Keep published downloads bound to current signing and the original key.\n\nReplay a stored publish key before later attempts change the selection, and withhold a GitHub artifact URL after its signing grant is revoked."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T16:00:28Z"
+  created_at: "2026-10-21T16:26:57Z"
