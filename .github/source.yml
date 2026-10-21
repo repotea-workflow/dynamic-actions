@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2ca18fd256a9b0b0517a62fe853a83e2b035fcdd"
+  sha: "ed1bea817015c88939c82505abbbb82db4017b5d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39614323829
+  run_id: 39616301104
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep small barcode labels within element height"
+  message: "fix: normalize SVG namespace for browser PNG export"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T14:09:29Z"
+  created_at: "2026-10-21T14:22:47Z"
