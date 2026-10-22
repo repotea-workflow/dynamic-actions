@@ -1,1 +1,3 @@
-Forbid whole-sequence retries after partial delivery
+Merge pull request #4 from 0xfe10/agt/extract-services
+
+Unblock chats after proven unsubmitted quote failures
