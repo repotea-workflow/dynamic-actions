@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "648c748bdef3ce93fe09ce1948a640a838b3584e"
+  sha: "f8310c8adb77ea03ea40b4b38f6bfbe8ec4781df"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19286"
-  run_id: 39720006734
+  ref_name: "0x128bit/aviary-19140"
+  run_id: 39720627437
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add scoped App operations to release batches"
+  message: "test(hawk): fix A1 migration fixture default collapse and revoked grant\n\nStop promoting ACCOUNT to all_tenants in the seed so effective features match\nassembly overrides and consistent-default rows can collapse. Expect null PLUME\ntheme on revoked-grant after grant revocation."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T04:01:14Z"
+  created_at: "2026-10-22T04:08:00Z"
