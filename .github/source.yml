@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "303515996830634085b97c346efe3c5cba68ae6f"
+  sha: "8f9dfa5ec161681db601e1e054b5bf3e2f92f54f"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39717043455
+  ref_name: "0x128bit/aviary-19140"
+  run_id: 39717796427
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Show Batch Release readiness and per-target progress (#323)\n\n* Show Batch Release readiness and per-target progress\n\nKeep configuration, source capability, and signing blockers visible, and report Android/iOS and APK/AAB/IPA outcomes separately so partial success is not shown as overall success or failure.\n\n* Show serialized source capability blockers in Batch readiness\n\nMap source problems' feature and presentation fields, and classify native catalog attestation failures as source capability instead of configuration.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Merge branch 'main' into 0x128bit/aviary-19140"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T03:28:50Z"
+  created_at: "2026-10-22T03:37:00Z"
