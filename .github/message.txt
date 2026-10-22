@@ -1,1 +1,1 @@
-Fix quoted message lookup using proven WeAuto behavior
+Fix quoted message lookup using proven WeAuto behavior (#29)
