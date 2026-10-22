@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "56b3b139291aeaf7e84a8dcb1c9960fc147e1ef2"
+  sha: "b2d084b9bf880b66c8e083b3fc32a806d67973d3"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39695197958
+  run_id: 39697081192
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add history toolbar and retire drawing drafts on restore"
+  message: "fix: reject retired photo frame tool callbacks"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T23:43:10Z"
+  created_at: "2026-10-22T00:01:17Z"
