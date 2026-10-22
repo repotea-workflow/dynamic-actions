@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3bb97724ad724bafa1a252fa75400755e574b4e7"
+  sha: "20ccdc3dbf10f955f408b4ce154be8a5cc9bbf1b"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39715711169
+  ref_name: "0x128bit/aviary-19180"
+  run_id: 39716043497
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix duplicate retired packaging route after integration (#322)\n\n* test(hawk): verify settings changes preserve frozen releases\n\n* fix(robin): keep retired packaging version route inaccessible\n\n* test(hawk): compare persisted attempts across freeze replays\n\n* test(hawk): read persisted freeze attempts from release history\n\n* Fix duplicate retired packaging route after integration\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Show serialized source capability blockers in Batch readiness\n\nMap source problems' feature and presentation fields, and classify native catalog attestation failures as source capability instead of configuration."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T03:14:17Z"
+  created_at: "2026-10-22T03:17:51Z"
