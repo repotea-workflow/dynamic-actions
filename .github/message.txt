@@ -1,1 +1,1 @@
-Release chat after proven unsubmitted quote failures
+Forbid whole-sequence retries after partial delivery
