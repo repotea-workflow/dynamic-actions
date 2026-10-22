@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ed05a5fb36bc419a5b405569bc27212691cf1fbf"
+  sha: "1be1fc97ab0b627328db58aba987e5a6aeb968a1"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19140"
-  run_id: 39723317534
+  ref_name: "main"
+  run_id: 39723594848
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix A1 migration fixtures and preserve historical theme references"
+  message: "Add per-App batch retry, cancel, and exact Release publication (#324)\n\nAdd permission-scoped retry and cancel actions, explicit publication for one exact App Release with artifact checks and named confirmation, and navigation to App Release details. Keep compilation and publication separate, preserve idempotency through ambiguous failures, and expose localized dispatch failures with request IDs."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T04:36:41Z"
+  created_at: "2026-10-22T04:39:45Z"
