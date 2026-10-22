@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "479bdeb720b4fda43415529733177aeccc1ce1c6"
+  sha: "c9aa58fc45455bde4ea2c2111290929672ada7a1"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39709844533
+  run_id: 39711252817
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): follow host direction when inserting text"
+  message: "feat(editor): align primary text line-height controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T02:10:01Z"
+  created_at: "2026-10-22T02:25:15Z"
