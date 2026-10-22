@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "045452eccbe8bf33213e9f1289ece52a63c0d3cf"
+  sha: "6ebc0f9256f6f83c584229edb002754db9e245b5"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-20259"
-  run_id: 39813530597
+  ref_name: "0x128bit/aviary-20287"
+  run_id: 39815566555
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Format native release freeze integration tests"
+  message: "Consume frozen feature palettes throughout PLUME and CLARITY"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T16:22:54Z"
+  created_at: "2026-10-22T16:37:55Z"
