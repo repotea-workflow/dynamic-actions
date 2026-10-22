@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "62d69cc5e0942efdd0df016a2cace9e00eac0edb"
+  sha: "f4efa899806b9a3f92d7f8920fb589956ee11a5a"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-20262"
-  run_id: 39808125277
+  ref_name: "0x128bit/aviary-20258"
+  run_id: 39808349902
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix Release summary parsing for frozen snapshot v1"
+  message: "Require platform authority for Release mutations and explicit source defaults"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T15:47:43Z"
+  created_at: "2026-10-22T15:49:09Z"
