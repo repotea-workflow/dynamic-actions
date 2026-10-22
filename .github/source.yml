@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "79a5661a65658b0e67515974781a05ddd3e9549e"
+  sha: "ed05a5fb36bc419a5b405569bc27212691cf1fbf"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19286"
-  run_id: 39721368481
+  ref_name: "0x128bit/aviary-19140"
+  run_id: 39723317534
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix batch cancellation gates and retry dispatch diagnostics"
+  message: "Fix A1 migration fixtures and preserve historical theme references"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T04:15:43Z"
+  created_at: "2026-10-22T04:36:41Z"
