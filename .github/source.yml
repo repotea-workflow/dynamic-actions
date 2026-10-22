@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "bb056259f7e13582bbbaaace912acde672c3496e"
+  sha: "acbaa9c58776713a9208a46222a25c7f5bbb90ec"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39699727804
+  run_id: 39700941844
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: add plugin-owned photo frame canvas actions"
+  message: "feat: add optional paper artwork canvas chooser"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T00:27:00Z"
+  created_at: "2026-10-22T00:39:08Z"
