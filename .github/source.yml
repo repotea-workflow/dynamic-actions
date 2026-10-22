@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "97d4ed9d8a860252c7a2bfdb7c41bec8a12ffae7"
+  sha: "28e5ff004d5fda1ed7d06fd380045a1195f5254f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39834624227
+  run_id: 39838374110
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: hide ineffective label controls for matrix codes"
+  message: "fix: restore imported image rendering and default editing controls"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T18:48:48Z"
+  created_at: "2026-10-22T19:14:50Z"
