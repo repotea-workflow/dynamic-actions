@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "cf93d80e4fa4fb11682a361e0e6a09b60f7652b5"
+  sha: "f072647c848cbace580847d53a9abd119d275661"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39701827820
+  run_id: 39702803225
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat: show plugin-owned empty photo frame hints"
+  message: "fix: retire image edits when asset ownership changes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T00:47:51Z"
+  created_at: "2026-10-22T00:57:30Z"
