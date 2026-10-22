@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "90e0f145a31663a942e6c6f8a658b5a106a37fdc"
+  sha: "447bf798b46bdab5aac60447647f46cd033185ad"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39707813973
+  run_id: 39708929445
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep compact canvas status controls clear of table editing"
+  message: "fix: retire continuous paper follow requests across restored owners"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T01:48:51Z"
+  created_at: "2026-10-22T02:00:31Z"
