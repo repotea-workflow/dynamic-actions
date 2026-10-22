@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "eaa98967d0daa4976b0183ddd411f3dc25fbf50a"
+  sha: "e31ad4e25c46d14e9b9ce0557206d5dce258f5ac"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39711244934
+  ref_name: "0x128bit/aviary-19092"
+  run_id: 39712110632
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Apply a frozen theme scope to each feature route\n\nProduct feature routes, including print preview and feedback threads, apply the frozen theme for that feature. Switching or returning does not reuse another feature's theme or asset overrides.\n\nStyleAssetIcon reads the current feature theme key and asset overrides. A product widget without a theme scope fails. Explicit development compositions may keep their presentation fallback keys, and isolated PLUME widget tests install that development scope.\n\nThe assembler passes parsed frozen theme bindings into AppAssembly.resolved."
+  message: "Block batch creation when a preview candidate is not ready"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T02:25:08Z"
+  created_at: "2026-10-22T02:34:28Z"
