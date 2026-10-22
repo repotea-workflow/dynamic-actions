@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2b84f50bcc94153d7b8ab06de6dc742070d0d05f"
+  sha: "fc91dbba3d2ac09b9fd31aad3836bfa95404f291"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-20259"
-  run_id: 39811254860
+  ref_name: "main"
+  run_id: 39812083171
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Cover concurrent cancel/reconcile and recovery reconcile in tests\n\nExercise parallel reconcile and cancel on a prepared iOS attempt and assert\na follow-up reconcile after terminal state stays idempotent."
+  message: "Require platform authority for Release mutations and explicit source defaults (#327)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T16:07:45Z"
+  created_at: "2026-10-22T16:13:14Z"
