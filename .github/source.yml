@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "97ff1d162e563bfc614b42ae7a0946d5e8328d41"
+  sha: "d1dabd93b19c27e58a11157bf64ca5375b5c608e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39826076044
+  run_id: 39827023328
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: reuse identical engine font registrations across plugin lifetimes"
+  message: "fix: keep automatic text sizing in the insertion undo step"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T17:49:57Z"
+  created_at: "2026-10-22T17:56:36Z"
