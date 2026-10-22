@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0eef0bdbd4c370a88cf66f881fb98a899f58c2b3"
+  sha: "97d4ed9d8a860252c7a2bfdb7c41bec8a12ffae7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39829491498
+  run_id: 39834624227
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: hide floating point drift in custom zoom input"
+  message: "fix: hide ineffective label controls for matrix codes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T18:13:56Z"
+  created_at: "2026-10-22T18:48:48Z"
