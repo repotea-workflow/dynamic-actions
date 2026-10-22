@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "8bc777927cbde1081cd12770cdc77e9905525d2f"
+  sha: "c896a19309a4466b7f7da9e0fc9600452e60db56"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39704181080
+  run_id: 39705136109
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep picked image inserts with their owning plugins"
+  message: "fix: retain image replacement ownership through import"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T01:11:05Z"
+  created_at: "2026-10-22T01:20:57Z"
