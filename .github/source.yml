@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "92a366014c537bae70db0c663b0edd245d046210"
+  sha: "6d21110aeb8bdd8e2d320a0e335ae05f2fec7010"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19037"
-  run_id: 39707630141
+  ref_name: "0x128bit/aviary-19027"
+  run_id: 39708084417
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): keep retired packaging version route inaccessible"
+  message: "Apply a frozen theme scope to each feature route.\n\nProduct routes fail closed without a frozen theme, child routes keep the owning feature theme, and StyleAssetIcon reads that theme's key and asset overrides."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T01:46:55Z"
+  created_at: "2026-10-22T01:51:43Z"
