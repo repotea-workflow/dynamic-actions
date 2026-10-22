@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "447bf798b46bdab5aac60447647f46cd033185ad"
+  sha: "479bdeb720b4fda43415529733177aeccc1ce1c6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39708929445
+  run_id: 39709844533
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: retire continuous paper follow requests across restored owners"
+  message: "fix(editor): follow host direction when inserting text"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T02:00:31Z"
+  created_at: "2026-10-22T02:10:01Z"
