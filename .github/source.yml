@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8fd86bdf79084f1ea50d3868eac12474e4564efa"
+  sha: "ac92ba9931419ccdff57bbca6c175459b4dab3ee"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18710"
-  run_id: 39696550582
+  ref_name: "0x128bit/aviary-18810"
+  run_id: 39697112783
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Allow frozen Batch members to retry and cancel after App disablement"
+  message: "Fix shell contract order and development menu consumption.\n\nSort visible APP_BAR and PERSONAL_CENTER entries by order, seed development assemblies from the shared allowlist, and render PLUME settings only from the personal-center contract."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-21T23:56:08Z"
+  created_at: "2026-10-22T00:01:35Z"
