@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f4efa899806b9a3f92d7f8920fb589956ee11a5a"
+  sha: "33d400bf8be32c338620dc02cbe42e800ed8226f"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-20258"
-  run_id: 39808349902
+  ref_name: "0x128bit/aviary-20260"
+  run_id: 39808797275
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Require platform authority for Release mutations and explicit source defaults"
+  message: "fix(shell): retain frozen navigation across top-level routes"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T15:49:09Z"
+  created_at: "2026-10-22T15:52:01Z"
