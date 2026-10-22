@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "49946faf7ebfd63a8d64964aceeb797d5297361e"
+  sha: "ed4f7676f177d762f31f845afe3ce1883d23c961"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19140"
-  run_id: 39713168582
+  ref_name: "main"
+  run_id: 39713340316
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add A1 forward migration samples for AppBuildConfiguration\n\nDocument acceptance scenarios for disabled theme selections, all_tenants\nfeatures without assembly evidence, and shell surface copy without\nrewriting release or build history."
+  message: "Add Batch Release scope preview and creation (#320)\n\n* Add release Batch scope preview and creation UI\n\n* Block batch creation when a preview candidate is not ready\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T02:46:35Z"
+  created_at: "2026-10-22T02:48:02Z"
