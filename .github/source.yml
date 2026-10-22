@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e6792f20586395d935318e6dcbf230d99f0e61ab"
+  sha: "31603faa3394cee38a91ecf318a7954fba1401c5"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-19140"
-  run_id: 39724194722
+  ref_name: "main"
+  run_id: 39726504961
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Format all-tenants migration assertion"
+  message: "Add A1 AppBuildConfiguration forward migration acceptance samples (#321)\n\n* Add A1 forward migration samples for AppBuildConfiguration\n\nDocument acceptance scenarios for disabled theme selections, all_tenants\nfeatures without assembly evidence, and shell surface copy without\nrewriting release or build history.\n\n* Fix A1 migration sample: add assembly for shell fixture app\n\nShell surface copy is tested together with assembly-derived enabled_features.\n\n* test(hawk): complete A1 AppBuildConfiguration migration acceptance samples\n\nCopy interface default_selection and overrides into build configurations during\n202610210002, and extend migration fixtures for consistent default, mixed\noverrides, missing theme, revoked grants, shell boundaries, and history snapshots.\n\n* test(hawk): fix mixed override theme id in A1 migration fixture\n\n* test(hawk): fix A1 migration fixture default collapse and revoked grant\n\nStop promoting ACCOUNT to all_tenants in the seed so effective features match\nassembly overrides and consistent-default rows can collapse. Expect null PLUME\ntheme on revoked-grant after grant revocation.\n\n* Fix A1 migration fixtures and preserve historical theme references\n\n* Format all-tenants migration assertion\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T04:46:06Z"
+  created_at: "2026-10-22T05:10:39Z"
