@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0247814ac23168bcd07ca29e90a1be907073eac0"
+  sha: "90e0f145a31663a942e6c6f8a658b5a106a37fdc"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39706560276
+  run_id: 39707813973
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep session image imports with their original editing context"
+  message: "fix: keep compact canvas status controls clear of table editing"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T01:35:34Z"
+  created_at: "2026-10-22T01:48:51Z"
