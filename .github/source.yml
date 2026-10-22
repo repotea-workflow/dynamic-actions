@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ac92ba9931419ccdff57bbca6c175459b4dab3ee"
+  sha: "4813228e89712c2bac661c0d70f4eedd3d79b59a"
   ref_type: "branch"
-  ref_name: "0x128bit/aviary-18810"
-  run_id: 39697112783
+  ref_name: "main"
+  run_id: 39698949755
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix shell contract order and development menu consumption.\n\nSort visible APP_BAR and PERSONAL_CENTER entries by order, seed development assemblies from the shared allowlist, and render PLUME settings only from the personal-center contract."
+  message: "Add recoverable per-App native Release batches (#315)\n\n* Add recoverable native Release batch fan-out\n\n* Cover frozen brand bytes in native Release batch recovery\n\n* Preserve batch member readiness without bypassing authorization\n\n* Allow frozen Batch members to retry and cancel after App disablement\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T00:01:35Z"
+  created_at: "2026-10-22T00:19:06Z"
