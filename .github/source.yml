@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "40f5b04b55e2c549fa43eee7140a9d80b6d1e155"
+  sha: "e28705322e373ab84624b7899e7839d3a1b1a4fa"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39862634479
+  run_id: 39862688619
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: align table decorations and synthetic italic rendering"
+  message: "fix: serve example startup resources from the local build"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T22:07:58Z"
+  created_at: "2026-10-22T22:08:30Z"
