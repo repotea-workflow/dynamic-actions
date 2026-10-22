@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f5ed839fe37fb3e585296b215fe76eb1842ea821"
+  sha: "abe9e52ccaa40bb990c264baeeda326df253d1f4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 39853172749
+  run_id: 39856903164
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep inspector nudges at a fixed physical distance"
+  message: "fix: commit table counts without truncating cell data"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T20:56:56Z"
+  created_at: "2026-10-22T21:23:55Z"
