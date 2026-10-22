@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1f6e5ad71c36faa5e8994a1a97590bff94518143"
+  sha: "62d69cc5e0942efdd0df016a2cace9e00eac0edb"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39734617614
+  ref_name: "0x128bit/aviary-20262"
+  run_id: 39808125277
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Align Buildbox executor trust pins with merged buildbox main (#325)\n\nUpdate operator documentation to match boxliy/buildbox reusable workflow\nand script SHAs from the resolved App configuration delivery.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Fix Release summary parsing for frozen snapshot v1"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T06:33:02Z"
+  created_at: "2026-10-22T15:47:43Z"
