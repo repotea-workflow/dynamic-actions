@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4813228e89712c2bac661c0d70f4eedd3d79b59a"
+  sha: "1356f189fbef44a0b4a63e23f064b6563b578fdc"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39698949755
+  ref_name: "0x128bit/aviary-18810"
+  run_id: 39699645483
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add recoverable per-App native Release batches (#315)\n\n* Add recoverable native Release batch fan-out\n\n* Cover frozen brand bytes in native Release batch recovery\n\n* Preserve batch member readiness without bypassing authorization\n\n* Allow frozen Batch members to retry and cancel after App disablement\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Format shell consumers and keep development menus on the home shell.\n\nA missing personal-center presentation now follows the home allowlist, and the mixed development fixture keeps every compiled contract entry."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T00:19:06Z"
+  created_at: "2026-10-22T00:26:08Z"
