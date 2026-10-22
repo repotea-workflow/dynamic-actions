@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "3f76a2256c19e70a23591ef94eb64ccb310c0106"
+  sha: "1925804487199959eb609bd92a4acca2f86ea1d5"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39000817609
+  ref_name: "0xfe10/ztoms-19468"
+  run_id: 39727814073
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep dynamic CI status icons under GitHub Actions (#341)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n* Report dynamic CI results with source GitHub Actions identity"
+  message: "fix(omsk): normalize historical Datong urban district"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-17T03:58:51Z"
+  created_at: "2026-10-22T05:24:18Z"
