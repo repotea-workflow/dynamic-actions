@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1e4a636403a8afd1d19a5e043b7f42ebd6e305b3"
+  sha: "b2e1c70cb8fb59f8f2860418d457f094a6b291f1"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 39704894260
+  run_id: 39705827568
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add exact per-App batch publication and aggregate release status (#317)\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Consume frozen PLUME and CLARITY shell contracts (#316)\n\n* Consume frozen shell contracts in PLUME and CLARITY.\n\nDrop hardcoded app-bar and personal-center placeholders so both shells render only the shared APP_BAR and PERSONAL_CENTER contract.\n\n* Fix shell contract order and development menu consumption.\n\nSort visible APP_BAR and PERSONAL_CENTER entries by order, seed development assemblies from the shared allowlist, and render PLUME settings only from the personal-center contract.\n\n* Format shell consumers and keep development menus on the home shell.\n\nA missing personal-center presentation now follows the home allowlist, and the mixed development fixture keeps every compiled contract entry.\n\n* Fix shell analyze errors in the const development seed.\n\nSpell the development shell lists as const AppShellItem entries, move feature-key lookup next to AppFeature, and drop the unused Clarity personal import.\n\n* Format the development shell seed and feature-key lookup.\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T01:18:26Z"
+  created_at: "2026-10-22T01:28:12Z"
