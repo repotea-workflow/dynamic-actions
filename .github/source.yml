@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ed4f7676f177d762f31f845afe3ce1883d23c961"
+  sha: "7c0779712ac7febfcbc66e09378568bbed91fb55"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39713340316
+  ref_name: "0x128bit/aviary-19140"
+  run_id: 39713468045
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add Batch Release scope preview and creation (#320)\n\n* Add release Batch scope preview and creation UI\n\n* Block batch creation when a preview candidate is not ready\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
+  message: "Fix A1 migration sample: add assembly for shell fixture app\n\nShell surface copy is tested together with assembly-derived enabled_features."
   authors: ["0x128bit"]
 dispatch:
-  created_at: "2026-10-22T02:48:02Z"
+  created_at: "2026-10-22T02:49:29Z"
