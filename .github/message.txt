@@ -1,5 +1,1 @@
-fix: resolve Desktop v1 quote identities and deep history (#22)
-
-* fix: resolve desktop quote sources through exact message identities
-
-* fix: order same-timestamp desktop messages by local identity
+feat: search Native stickers in scoped local history
