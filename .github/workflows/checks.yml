@@ -15,54 +15,10 @@ jobs:
       with:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
-  native-channels:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
-      with:
-        repository: 0xfe10/weauto
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        ref: ${{ needs.source.outputs.sha }}
-    - name: Test shared native channel behavior
-      env:
-        PYTHONPATH: integrations/common
-        PYTHONDONTWRITEBYTECODE: '1'
-      run: python3 -m unittest discover -s integrations/tests -v
-    needs: source
-    timeout-minutes: 15
-  ts:
-    needs: source
-    runs-on: ubuntu-latest
-    timeout-minutes: 30
-    steps:
-    - uses: actions/checkout@v4
-    - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
-      with:
-        repository: 0xfe10/weauto
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        ref: ${{ needs.source.outputs.sha }}
-    - name: Setup pnpm
-      uses: pnpm/action-setup@v4
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: 24
-        cache: pnpm
-    - name: Install dependencies
-      run: pnpm install --frozen-lockfile
-    - name: Build
-      run: pnpm build
-    - name: Typecheck
-      run: pnpm typecheck
-    - name: Test (all packages)
-      run: pnpm -r --if-present test
   rust:
     needs: source
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 60
     steps:
     - uses: actions/checkout@v4
     - name: Check out immutable WeAuto source
@@ -71,37 +27,43 @@ jobs:
         repository: 0xfe10/weauto
         token: ${{ secrets.GH_TOKEN_0XFE10 }}
         ref: ${{ needs.source.outputs.sha }}
-    - name: Setup Rust
-      uses: dtolnay/rust-toolchain@stable
-    - name: Cargo check
-      run: cargo check --manifest-path packages/agent-server-rust/Cargo.toml
-    - name: Cargo test
-      run: cargo test --manifest-path packages/agent-server-rust/Cargo.toml
-  python:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v4
-    - name: Check out immutable WeAuto source
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+    - uses: dtolnay/rust-toolchain@1.93.1
       with:
-        repository: 0xfe10/weauto
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        ref: ${{ needs.source.outputs.sha }}
-    - uses: actions/setup-python@v5
-      with:
-        python-version: '3.12'
-    - run: python3 -m pip install PyYAML==6.0.3
-    - run: python3 -m unittest discover -s tests -v
+        components: rustfmt, clippy
     - uses: actions/setup-node@v4
       with:
         node-version: 24
-    - run: node --test tests/media-download.test.cjs
+    - uses: Swatinem/rust-cache@v2
+    - run: cargo fmt --all -- --check
+    - run: cargo check --workspace --locked
+    - run: node clients/sdk/generate.mjs --check
+    - run: cargo test --workspace --locked
+    - run: cargo build --locked --bins
+    - run: python3 -m unittest discover -s tests/processes -v
+  sdk:
     needs: source
-    timeout-minutes: 10
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: pnpm/action-setup@v4
+    - uses: actions/setup-node@v4
+      with:
+        node-version: 24
+        cache: pnpm
+    - run: pnpm install --frozen-lockfile --ignore-scripts
+    - run: pnpm build
+    - run: pnpm typecheck
+    - run: pnpm test
 'on':
   push:
-    branches:
-    - 0xfe10/weauto
+    branches: [0xfe10/weauto]
 concurrency:
   group: weauto-checks-${{ github.sha }}
   cancel-in-progress: true
