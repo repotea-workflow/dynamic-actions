@@ -1,1 +1,1 @@
-feat: add isolated desktop runtime and leased console alongside native
+fix: preserve executable permissions for desktop host primitives
