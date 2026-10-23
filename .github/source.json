@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "9143f632706c7a22efa1525b31de8a150fa46fc3",
+    "sha": "3e61005eb26d4728d7ba49731d2ad3715b2acb09",
     "ref_type": "branch",
-    "ref_name": "agt/native-session-control",
-    "run_id": 39930038751,
+    "ref_name": "main",
+    "run_id": 39931837021,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
