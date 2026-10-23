@@ -1,1 +1,1 @@
-refactor: rebuild WeAuto as native Session and Control services
+ci: provision FFmpeg for native media tests
