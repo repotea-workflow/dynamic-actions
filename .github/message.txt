@@ -1,1 +1,7 @@
-fix: allow issuing narrowly scoped desktop console credentials
+feat: restore isolated Desktop runtime alongside Native with leased console (#21)
+
+* feat: add isolated desktop runtime and leased console alongside native
+
+* fix: preserve executable permissions for desktop host primitives
+
+* fix: allow issuing narrowly scoped desktop console credentials

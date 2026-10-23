@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "147ce12a010010e804df761c777372e41a384abb",
+    "sha": "ec30a5bd2622491ae84910182d25ad45a16bfe54",
     "ref_type": "branch",
-    "ref_name": "agt/multi-runtime-desktop",
-    "run_id": 39945047470,
+    "ref_name": "main",
+    "run_id": 39946429643,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
