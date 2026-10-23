@@ -1,0 +1,54 @@
+name: "[workbot] WeAuto v1 contract"
+
+on:
+  push:
+    branches: ["**"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: workbot-weauto-contract-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  contract:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - name: Resolve immutable Workbot source
+        id: source
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: |
+          test "$(cat .github/repository.txt)" = "0xfe10/workbot"
+          source_ref=$(cat .github/commit.txt)
+          revision=$(gh api "repos/0xfe10/workbot/commits/$source_ref" --jq .sha)
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+      - name: Check out Workbot source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/workbot
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ steps.source.outputs.revision }}
+      - name: Check out reviewed WeAuto contract source
+        uses: actions/checkout@v7
+        with:
+          repository: 0xfe10/weauto
+          ref: c6bf192dda26eb19083f8db33b83a0a0d1f49bc9
+          path: weauto-contract-source
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          persist-credentials: false
+      - uses: dtolnay/rust-toolchain@1.93.1
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: weauto-contract-source
+      - name: Build actual WeAuto services
+        working-directory: weauto-contract-source
+        run: cargo build --locked --bins
+      - name: Verify actual Native and Desktop API contracts
+        env:
+          PYTHONPATH: integrations/bridge
+          WEAUTO_TEST_BIN_DIR: ${{ github.workspace }}/weauto-contract-source/target/debug
+        run: python3 -m unittest discover -s integrations/bridge -p test_weauto_v1_process.py -v

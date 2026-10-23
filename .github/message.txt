@@ -1,3 +1,1 @@
-Merge pull request #4 from 0xfe10/agt/extract-services
-
-Unblock chats after proven unsubmitted quote failures
+feat: adapt Workbot to account-scoped WeAuto v1 runtimes
