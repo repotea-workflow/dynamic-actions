@@ -1,1 +1,1 @@
-fix: preserve executable permissions for desktop host primitives
+fix: allow issuing narrowly scoped desktop console credentials
