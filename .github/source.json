@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "81f6e96551d8d4ae6dd299725cc36b8207867ccf",
+    "sha": "69876cc58c590db93920f4a1754918eb3ce9e806",
     "ref_type": "branch",
-    "ref_name": "agt/native-local-stickers",
-    "run_id": 39988206740,
+    "ref_name": "main",
+    "run_id": 39989375412,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
