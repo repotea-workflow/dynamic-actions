@@ -1,3 +1,1 @@
-Merge pull request #5 from 0xfe10/agt/extract-services
-
-feat: adapt Workbot to account-scoped WeAuto v1 runtimes
+feat: expose durable Native local sticker search tools
