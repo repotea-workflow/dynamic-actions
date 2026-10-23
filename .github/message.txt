@@ -1,1 +1,1 @@
-feat: adapt Workbot to account-scoped WeAuto v1 runtimes
+ci: pin merged WeAuto quote and history fixes
