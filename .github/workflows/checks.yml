@@ -36,7 +36,7 @@ jobs:
     - name: Install media test prerequisites
       run: |
         sudo apt-get update
-        sudo apt-get install -y --no-install-recommends ffmpeg
+        sudo apt-get install -y --no-install-recommends ffmpeg python3-yaml
     - name: Verify media test prerequisites
       run: |
         ffmpeg -version
@@ -48,6 +48,8 @@ jobs:
     - run: cargo test --workspace --locked
     - run: cargo build --locked --bins
     - run: python3 -m unittest discover -s tests/processes -v
+    - run: python3 -m unittest discover -s tests/desktop -v
+    - run: node --test tests/desktop/*.test.cjs
   sdk:
     needs: source
     runs-on: ubuntu-latest

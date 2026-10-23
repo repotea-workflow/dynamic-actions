@@ -45,7 +45,7 @@ jobs:
     name: Build ${{ matrix.target }} (${{ matrix.arch }})
     strategy:
       matrix:
-        target: [session, control]
+        target: [session, control, desktop-host, desktop-worker]
         arch: [amd64, arm64]
         include:
         - runner: ubuntu-latest
@@ -98,7 +98,7 @@ jobs:
     name: Manifest ${{ matrix.target }}
     strategy:
       matrix:
-        target: [session, control]
+        target: [session, control, desktop-host, desktop-worker]
     needs:
     - source
     - build

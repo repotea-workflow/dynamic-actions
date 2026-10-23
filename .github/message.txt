@@ -1,5 +1,1 @@
-refactor: rebuild WeAuto as native Session and Control services
-
-Rebuild WeAuto around native Session and Control ownership, generic clients and root runtime examples. Preserve upstream source attribution and adapted reliability/security capabilities.
-
-Independent review findings fixed and re-reviewed. Exact-source CI passes 524 Rust tests, 41 SDK tests, generated contracts and process isolation checks; both local images and container replacement smoke tests pass. No deployment or production WeChat operations performed.
+feat: add isolated desktop runtime and leased console alongside native
