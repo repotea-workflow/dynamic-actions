@@ -3,7 +3,7 @@ execution_repository: repotea-workflow/dynamic-actions
 sources:
   weauto:
     repository: 0xfe10/weauto
-    repository_id: 1412184208
+    repository_id: 1432097120
     dispatch_context: weauto/dynamic-dispatch
     status_context: weauto/dynamic-checks
     trigger_workflows:
