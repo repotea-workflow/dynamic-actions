@@ -1,1 +1,1 @@
-feat: adapt upstream Native groups, sync controls, quotes and recalls
+feat: adapt upstream Native groups, sync controls, quotes and recalls (#28)
