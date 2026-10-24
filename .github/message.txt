@@ -1,1 +1,1 @@
-feat: adapt upstream Native groups, sync controls, quotes and recalls (#28)
+fix(native): bound authentication and preserve saved session identity

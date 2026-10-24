@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1412184208,
-    "sha": "85f88119c79c2744e28bbdb456ba26f91fbede32",
+    "sha": "7d90b08bf27603856dc5559c2fdc9eb2dfdf284d",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40056986863,
+    "ref_name": "agt/native-auth-guard",
+    "run_id": 40059406284,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
