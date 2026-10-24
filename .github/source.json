@@ -2,11 +2,11 @@
   "schema_version": 1,
   "source": {
     "repository": "0xfe10/weauto",
-    "repository_id": 1412184208,
-    "sha": "28a99be9d51a43137b2bb882c31e1fefc002554a",
+    "repository_id": 1432097120,
+    "sha": "9ef48d026cb4ce05f18c63886b466af0f805501a",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40061043359,
+    "ref_name": "agt/fix-dynamic-ssh",
+    "run_id": 40092869895,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

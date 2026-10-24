@@ -1,1 +1,1 @@
-fix(native): bound authentication and preserve saved session identity (#29)
+fix(ci): forward dynamic workflows using provisioned SSH credentials
