@@ -1,1 +1,1 @@
-feat: search Native stickers in scoped local history (#23)
+feat: adapt upstream Native groups, sync controls, quotes and recalls
