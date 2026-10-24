@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "dcf080906438d1adfb5b38838440aa52f1297814"
-  ref_type: "tag"
-  ref_name: "v0.1.1"
-  run_id: 40069346698
+  sha: "cd716aef3613ced031710f5c1c768c1b7c831c64"
+  ref_type: "branch"
+  ref_name: "agt/dyn-ci-release"
+  run_id: 40087695530
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep local state together under ~/.sellworld (#6)\n\n* Move validation to dynamic CI and publish tagged CLI release assets\n\n* Route dynamic CI to repotea-workflow\n\n* Keep local state together under ~/.sellworld"
+  message: "Keep proxy-controlled encoding headers out of S3 signatures"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-24T06:13:37Z"
+  created_at: "2026-10-24T10:53:35Z"
