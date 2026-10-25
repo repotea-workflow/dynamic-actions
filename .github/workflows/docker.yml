@@ -112,6 +112,24 @@ jobs:
         registry: ghcr.io
         username: ${{ github.actor }}
         password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Resolve pinned official desktop package
+      id: wechat
+      if: matrix.target == 'desktop-host'
+      env:
+        ARCH: ${{ matrix.arch }}
+      run: |-
+        python3 - <<'PYTHON'
+        import json, os, re
+        from pathlib import Path
+        release = json.loads(Path('containers/wechat-release.json').read_text())
+        package = release['architectures'][os.environ['ARCH']]
+        assert re.fullmatch(r'[0-9]+(?:\.[0-9]+){3}', release['version'])
+        assert re.fullmatch(r'[0-9a-f]{64}', package['sha256'])
+        assert package['url'].startswith('https://dldir1v6.qq.com/weixin/Universal/Linux/')
+        with open(os.environ['GITHUB_OUTPUT'], 'a') as output:
+            for key, value in {'url': package['url'], 'sha256': package['sha256'], 'version': release['version']}.items():
+                output.write(f'{key}={value}\n')
+        PYTHON
     - name: Build and push by digest
       id: build
       uses: docker/build-push-action@v6
@@ -119,6 +137,10 @@ jobs:
         context: .
         platforms: ${{ matrix.platform }}
         target: ${{ matrix.target }}
+        build-args: |
+          WECHAT_DEB_URL=${{ steps.wechat.outputs.url }}
+          WECHAT_DEB_SHA256=${{ steps.wechat.outputs.sha256 }}
+          WECHAT_DEB_VERSION=${{ steps.wechat.outputs.version }}
         no-cache: ${{ env.WEAUTO_NO_CACHE == 'true' }}
         outputs: type=image,name=ghcr.io/repotea-workflow/dynamic-actions/weauto-${{ matrix.target }},push-by-digest=true,name-canonical=true,push=true
         labels: |
@@ -138,6 +160,7 @@ jobs:
         VERSION: ${{ needs.source.outputs.version }}
         IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
         ARCH: ${{ matrix.arch }}
+        WECHAT_VERSION: ${{ steps.wechat.outputs.version }}
       run: |-
         set -euo pipefail
         image="ghcr.io/repotea-workflow/dynamic-actions/weauto-desktop-host@${IMAGE_DIGEST}"
@@ -164,8 +187,8 @@ jobs:
         test -n "$glibc_required"
         test "$(printf '%s\n' "$glibc_required" GLIBC_2.35 | sort -V | tail -1)" = GLIBC_2.35
         jq -n --arg source "$SOURCE_SHA" --arg arch "$ARCH" --arg image "$image" \
-          --arg glibcRequired "$glibc_required" --arg pythonBundled "CPython 3.11" \
-          '{source:$source,arch:$arch,image:$image,glibcRequired:$glibcRequired,pythonBundled:$pythonBundled}' > "$root/source.json"
+          --arg glibcRequired "$glibc_required" --arg pythonBundled "CPython 3.11" --arg wechatVersion "$WECHAT_VERSION" \
+          '{source:$source,arch:$arch,image:$image,glibcRequired:$glibcRequired,pythonBundled:$pythonBundled,wechatVersion:$wechatVersion}' > "$root/source.json"
         (cd "$root" && find bin tools runtime python source.json -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS)
         (cd "$root" && sha256sum -c SHA256SUMS)
         tar --numeric-owner --owner=0 --group=0 -C /tmp/attach -czf "/tmp/attach/$(basename "$root").tar.gz" "$(basename "$root")"
