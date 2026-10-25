@@ -1,1 +1,1 @@
-feat(desktop): prepare one-shot standalone session owners (#5)
+fix: wait safely for manual desktop login without relaunch
