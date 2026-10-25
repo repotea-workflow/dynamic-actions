@@ -1,1 +1,1 @@
-feat(desktop): prepare one-shot standalone session owners
+feat(desktop): prepare one-shot standalone session owners (#5)
