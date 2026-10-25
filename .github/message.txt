@@ -1,1 +1,1 @@
-feat: prepare audited Desktop source transitions
+fix: release archived chat ownership during source cutover
