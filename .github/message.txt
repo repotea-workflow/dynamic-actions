@@ -1,3 +1,1 @@
-Merge pull request #6 from 0xfe10/agt/extract-services
-
-feat: search and send Native local stickers
+feat: prepare audited Desktop source transitions
