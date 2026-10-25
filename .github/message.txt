@@ -1,1 +1,1 @@
-fix: wait safely for manual desktop login without relaunch
+fix: wait safely for manual desktop login without relaunch (#6)
