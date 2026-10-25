@@ -1,1 +1,5 @@
-fix(desktop): bundle isolated runtime for existing session images
+Prepare Desktop Host attachment without restarting WeChat (#4)
+
+* feat: prepare Desktop Host attachment without session restarts
+
+* fix(desktop): bundle isolated runtime for existing session images
