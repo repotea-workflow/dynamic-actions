@@ -13,6 +13,8 @@ jobs:
       sha: ${{ steps.source.outputs.sha }}
       branch: ${{ steps.source.outputs.branch }}
       build: ${{ steps.build.outputs.build }}
+      version: ${{ steps.build.outputs.version }}
+      targets: ${{ steps.build.outputs.targets }}
     steps:
     - uses: actions/checkout@v4
     - id: source
@@ -33,19 +35,60 @@ jobs:
     - id: build
       env:
         BUILD_VERSION: ${{ env.WEAUTO_BUILD_VERSION }}
+        BUILD_PROFILE: ${{ env.WEAUTO_BUILD_PROFILE }}
+        SOURCE_SHA: ${{ steps.source.outputs.sha }}
       run: |-
         set -euo pipefail
-        if [ -n "$BUILD_VERSION" ]; then
-         [[ "$BUILD_VERSION" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]
-         echo "build=true" >> "$GITHUB_OUTPUT"
-        else
-         echo "build=false" >> "$GITHUB_OUTPUT"
-        fi
+        case "$BUILD_PROFILE" in
+          desktop-prep)
+            BUILD_VERSION="desktop-prep-${SOURCE_SHA:0:12}"
+            TARGETS='["control","desktop-host","desktop-worker"]'
+            ;;
+          full)
+            test -n "$BUILD_VERSION"
+            TARGETS='["session","control","desktop-host","desktop-worker"]'
+            ;;
+          none)
+            echo "build=false" >> "$GITHUB_OUTPUT"
+            echo 'targets=[]' >> "$GITHUB_OUTPUT"
+            exit 0
+            ;;
+          *)
+            echo "Unsupported WEAUTO_BUILD_PROFILE" >&2
+            exit 1
+            ;;
+        esac
+        [[ "$BUILD_VERSION" =~ ^[A-Za-z0-9_][A-Za-z0-9_.-]{0,127}$ ]]
+        echo "build=true" >> "$GITHUB_OUTPUT"
+        echo "version=$BUILD_VERSION" >> "$GITHUB_OUTPUT"
+        echo "targets=$TARGETS" >> "$GITHUB_OUTPUT"
+  validate:
+    name: Validate Desktop preparation source
+    needs: source
+    if: needs.source.outputs.build == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+    - uses: actions/checkout@v4
+    - name: Check out immutable WeAuto source
+      uses: repotea-workspace/kangumi/github-actions/clone-dyn@b3d7f5fc3ec2c003cf061349d52f8c741da754db
+      with:
+        repository: 0xfe10/weauto
+        token: ${{ secrets.GH_TOKEN_0XFE10 }}
+        ref: ${{ needs.source.outputs.sha }}
+    - uses: dtolnay/rust-toolchain@1.93.1
+      with:
+        components: rustfmt
+    - run: cargo fmt --all -- --check
+    - run: cargo check -p weauto-desktop -p weauto-desktop-host -p weauto-desktop-worker -p weauto-control --locked
+    - run: cargo test -p weauto-desktop -p weauto-desktop-host -p weauto-desktop-worker --locked
+    - run: python3 -m py_compile tools/desktop/chat-select.py tools/desktop/extract-keys.py tests/processes/test_desktop_processes.py
+    - run: bash -n tools/desktop/chat-select tools/desktop/extract-keys tools/desktop/media-convert
   build:
     name: Build ${{ matrix.target }} (${{ matrix.arch }})
     strategy:
       matrix:
-        target: [session, control, desktop-host, desktop-worker]
+        target: ${{ fromJSON(needs.source.outputs.targets) }}
         arch: [amd64, arm64]
         include:
         - runner: ubuntu-latest
@@ -78,6 +121,9 @@ jobs:
         target: ${{ matrix.target }}
         no-cache: ${{ env.WEAUTO_NO_CACHE == 'true' }}
         outputs: type=image,name=ghcr.io/repotea-workflow/dynamic-actions/weauto-${{ matrix.target }},push-by-digest=true,name-canonical=true,push=true
+        labels: |
+          org.opencontainers.image.revision=${{ needs.source.outputs.sha }}
+          org.opencontainers.image.version=${{ needs.source.outputs.version }}
         cache-from: type=gha,scope=${{ matrix.target }}-${{ matrix.arch }}
         cache-to: type=gha,scope=${{ matrix.target }}-${{ matrix.arch }},mode=max
     - name: Export digest
@@ -85,20 +131,56 @@ jobs:
         mkdir -p /tmp/digests
         DIGEST="${{ steps.build.outputs.digest }}"
         touch "/tmp/digests/${DIGEST#sha256:}"
+    - name: Export attach-only Host bundle without running the image
+      if: matrix.target == 'desktop-host'
+      env:
+        SOURCE_SHA: ${{ needs.source.outputs.sha }}
+        VERSION: ${{ needs.source.outputs.version }}
+        IMAGE_DIGEST: ${{ steps.build.outputs.digest }}
+        ARCH: ${{ matrix.arch }}
+      run: |-
+        set -euo pipefail
+        image="ghcr.io/repotea-workflow/dynamic-actions/weauto-desktop-host@${IMAGE_DIGEST}"
+        root="/tmp/attach/weauto-desktop-host-${VERSION}-${ARCH}"
+        mkdir -p "$root/bin" "$root/tools" "$root/runtime" "$root/python"
+        docker pull "$image"
+        container="$(docker create "$image")"
+        trap 'docker rm "$container" >/dev/null' EXIT
+        docker cp "$container:/usr/local/bin/weauto-desktop-host" "$root/bin/weauto-desktop-host"
+        docker cp "$container:/opt/tools/." "$root/tools"
+        docker cp "$container:/opt/weauto-attach/." "$root/runtime"
+        docker cp "$container:/opt/weauto-python/." "$root/python"
+        docker rm "$container" >/dev/null
+        trap - EXIT
+        glibc_required="$(readelf --version-info "$root/bin/weauto-desktop-host" | grep -o 'GLIBC_[0-9.]*' | sort -Vu | tail -1)"
+        test -n "$glibc_required"
+        jq -n --arg source "$SOURCE_SHA" --arg arch "$ARCH" --arg image "$image" \
+          --arg glibcRequired "$glibc_required" --arg pythonRequired "CPython 3.11" \
+          '{source:$source,arch:$arch,image:$image,glibcRequired:$glibcRequired,pythonRequired:$pythonRequired}' > "$root/source.json"
+        (cd "$root" && find bin tools runtime python source.json -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS)
+        (cd "$root" && sha256sum -c SHA256SUMS)
+        tar --numeric-owner --owner=0 --group=0 -C /tmp/attach -czf "/tmp/attach/$(basename "$root").tar.gz" "$(basename "$root")"
+    - uses: actions/upload-artifact@v4
+      if: matrix.target == 'desktop-host'
+      with:
+        name: weauto-desktop-host-${{ needs.source.outputs.version }}-${{ matrix.arch }}
+        path: /tmp/attach/*.tar.gz
+        if-no-files-found: error
+        retention-days: 30
     - uses: actions/upload-artifact@v4
       with:
         name: digest-${{ matrix.target }}-${{ matrix.arch }}
         path: /tmp/digests/*
         if-no-files-found: error
         retention-days: 1
-    needs: source
+    needs: [source, validate]
     if: needs.source.outputs.build == 'true'
     timeout-minutes: 60
   manifest:
     name: Manifest ${{ matrix.target }}
     strategy:
       matrix:
-        target: [session, control, desktop-host, desktop-worker]
+        target: ${{ fromJSON(needs.source.outputs.targets) }}
     needs:
     - source
     - build
@@ -119,7 +201,7 @@ jobs:
       run: |
         IMAGE="ghcr.io/repotea-workflow/dynamic-actions/weauto-${{ matrix.target }}"
         docker buildx imagetools create \
-          -t "${IMAGE}:${{ env.WEAUTO_BUILD_VERSION }}" \
+          -t "${IMAGE}:${{ needs.source.outputs.version }}" \
           $(printf "${IMAGE}@sha256:%s " $(ls /tmp/digests/))
     timeout-minutes: 60
 'on':
@@ -127,6 +209,9 @@ jobs:
     branches:
     - 0xfe10/weauto
 env:
+  # desktop-prep publishes only independently replaceable services. Set full
+  # with an explicit version for a separately reviewed Native Session release.
+  WEAUTO_BUILD_PROFILE: desktop-prep
   WEAUTO_BUILD_VERSION: ''
   WEAUTO_NO_CACHE: 'false'
   IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/weauto

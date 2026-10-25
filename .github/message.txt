@@ -1,1 +1,1 @@
-feat(native): adapt upstream history snapshots and embedded quotes (#3)
+feat: prepare Desktop Host attachment without session restarts

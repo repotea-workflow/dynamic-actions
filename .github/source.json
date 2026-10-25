@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "37a00d8dfbf1d6c252ddfffd61b9b5c9caf3fb61",
+    "sha": "dbc7a6afda46610fb05a349993155c3ad84e278e",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40161897556,
+    "ref_name": "agt/desktop-attach-preparation",
+    "run_id": 40175044913,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
