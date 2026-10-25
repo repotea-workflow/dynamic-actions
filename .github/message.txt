@@ -1,1 +1,3 @@
-fix: pin available WeAuto contract source and verify resumed chats
+Merge pull request #7 from 0xfe10/agt/source-transition-prep
+
+Prepare audited WeAuto Desktop source transitions
