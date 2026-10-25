@@ -152,11 +152,20 @@ jobs:
         docker cp "$container:/opt/weauto-python/." "$root/python"
         docker rm "$container" >/dev/null
         trap - EXIT
-        glibc_required="$(readelf --version-info "$root/bin/weauto-desktop-host" | grep -o 'GLIBC_[0-9.]*' | sort -Vu | tail -1)"
+        if find "$root/bin" "$root/runtime" "$root/python" -type f -print0 | \
+          while IFS= read -r -d '' file; do readelf --version-info "$file" 2>/dev/null || true; done | \
+          grep GLIBC_PRIVATE >/dev/null; then
+          echo "Attach bundle contains a GLIBC_PRIVATE dependency" >&2
+          exit 1
+        fi
+        glibc_required="$(find "$root/bin" "$root/runtime" "$root/python" -type f -print0 | \
+          while IFS= read -r -d '' file; do readelf --version-info "$file" 2>/dev/null || true; done | \
+          grep -o 'GLIBC_[0-9.]*' | sort -Vu | tail -1)"
         test -n "$glibc_required"
+        test "$(printf '%s\n' "$glibc_required" GLIBC_2.35 | sort -V | tail -1)" = GLIBC_2.35
         jq -n --arg source "$SOURCE_SHA" --arg arch "$ARCH" --arg image "$image" \
-          --arg glibcRequired "$glibc_required" --arg pythonRequired "CPython 3.11" \
-          '{source:$source,arch:$arch,image:$image,glibcRequired:$glibcRequired,pythonRequired:$pythonRequired}' > "$root/source.json"
+          --arg glibcRequired "$glibc_required" --arg pythonBundled "CPython 3.11" \
+          '{source:$source,arch:$arch,image:$image,glibcRequired:$glibcRequired,pythonBundled:$pythonBundled}' > "$root/source.json"
         (cd "$root" && find bin tools runtime python source.json -type f -print0 | sort -z | xargs -0 sha256sum > SHA256SUMS)
         (cd "$root" && sha256sum -c SHA256SUMS)
         tar --numeric-owner --owner=0 --group=0 -C /tmp/attach -czf "/tmp/attach/$(basename "$root").tar.gz" "$(basename "$root")"
