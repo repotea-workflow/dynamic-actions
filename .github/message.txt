@@ -1,1 +1,1 @@
-fix(worker): expose api v1 route alias
+fix(worker): make api v1 the only public prefix
