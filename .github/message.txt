@@ -1,1 +1,1 @@
-fix(api): normalize management receipt paths
+fix(cli): use unified api v1 paths
