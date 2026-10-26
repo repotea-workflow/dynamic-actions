@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "d5daf3856f411581f1411db79550407631c9a160"
+  sha: "8157dc5f4c7ff56e12ee23e1178e523ffd321496"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 40374797530
+  ref_name: "agt/dyn-ci-release"
+  run_id: 40378242673
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Expand XY freight calculation with all workbook services\n\nReviewed against the supplied XY workbook formula page; all checks passed."
+  message: "Document XY freight calculation rules"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-26T18:06:47Z"
+  created_at: "2026-10-26T18:30:03Z"
