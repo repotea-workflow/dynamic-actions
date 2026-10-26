@@ -1,1 +1,1 @@
-fix(worker): make api v1 the only public prefix
+refactor(api): standardize all endpoints under api v1
