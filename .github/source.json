@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "38ea1dc961bf826ecdcf05a355506c2beba6aa04",
+    "sha": "29bc201fa72386f5f8077680f7b0dbfde4fca95a",
     "ref_type": "branch",
-    "ref_name": "agt/manual-login-session",
-    "run_id": 40278283098,
+    "ref_name": "main",
+    "run_id": 40280167657,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
