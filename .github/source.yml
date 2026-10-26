@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "3c8f12f0ba8655a93e6ae3c6b264ebf43fdff258"
-  ref_type: "tag"
-  ref_name: "v0.2.0"
-  run_id: 40116225676
+  sha: "8176c06a645724a68344a48369284a02bbb119ed"
+  ref_type: "branch"
+  ref_name: "agt/dyn-ci-release"
+  run_id: 40326478694
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add local shop product management and audited price updates (#9)\n\n* Move validation to dynamic CI and publish tagged CLI release assets\n\n* Route dynamic CI to repotea-workflow\n\n* Keep local state together under ~/.sellworld\n\n* Keep proxy-controlled encoding headers out of S3 signatures\n\n* Refresh Ozon contract and support current order and finance APIs\n\n* Add local shop product projections and explicit price updates"
+  message: "Add vendor freight calculation command"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-24T17:28:12Z"
+  created_at: "2026-10-26T12:57:12Z"
