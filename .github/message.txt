@@ -1,1 +1,3 @@
-Fix quoted message lookup using proven WeAuto behavior (#29)
+test: probe cluster denial with helixbox
+
+The empty allowlist still rejects the wrapper call.
