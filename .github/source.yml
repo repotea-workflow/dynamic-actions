@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "8176c06a645724a68344a48369284a02bbb119ed"
-  ref_type: "tag"
-  ref_name: "v0.3.0-sellworld"
-  run_id: 40326502125
+  sha: "dd19abb05407761d1e9653001fff9237c2418149"
+  ref_type: "branch"
+  ref_name: "agt/dyn-ci-release"
+  run_id: 40328358596
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Add vendor freight calculation command"
+  message: "Document vendor freight calculation"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-26T12:57:33Z"
+  created_at: "2026-10-26T13:11:05Z"
