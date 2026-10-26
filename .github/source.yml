@@ -3,9 +3,9 @@ source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
   sha: "1dbc8b4e53f501ef0b16f5c9388e733e798f9647"
-  ref_type: "branch"
-  ref_name: "agt/dyn-ci-release"
-  run_id: 40364606921
+  ref_type: "tag"
+  ref_name: "v0.3.1-sellworld"
+  run_id: 40364643482
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "Fix XY freight value boundaries"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-26T17:01:06Z"
+  created_at: "2026-10-26T17:01:25Z"
