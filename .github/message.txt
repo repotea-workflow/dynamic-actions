@@ -1,5 +1,1 @@
-fix(desktop): restore AYN credentials without relogin
-
-* fix: wait safely for manual desktop login without relaunch
-
-* fix(desktop): restore fenced credential import and api prefix
+fix(worker): expose api v1 route alias
