@@ -1,1 +1,3 @@
-fix(desktop): select isolated conversations through verified UI
+fix(desktop): verify UI conversation selection in isolated workers
+
+Merged after dynamic checks and image build passed.
