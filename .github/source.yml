@@ -3,9 +3,9 @@ source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
   sha: "7eda61817b2afbd94a4419cb93995cc40713c72c"
-  ref_type: "branch"
-  ref_name: "agt/dyn-ci-release"
-  run_id: 40408985707
+  ref_type: "tag"
+  ref_name: "v0.3.7-sellworld"
+  run_id: 40409007003
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "Fix XY premium small express freight rate"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-26T22:00:16Z"
+  created_at: "2026-10-26T22:00:33Z"
