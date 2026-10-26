@@ -1,1 +1,1 @@
-fix(sdk): use api v1 public prefix
+fix(api): normalize session resource routing under api v1
