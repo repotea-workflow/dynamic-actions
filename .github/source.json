@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "29bc201fa72386f5f8077680f7b0dbfde4fca95a",
+    "sha": "f2ee3a2ee00dde06baf5d5532ceea5c0180ae2e8",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40280167657,
+    "ref_name": "agt/desktop-ui-chat-selection",
+    "run_id": 40293312620,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
