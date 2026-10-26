@@ -1,1 +1,1 @@
-fix(api): route console streams under api v1
+fix(sdk): use api v1 public prefix
