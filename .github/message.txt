@@ -1,1 +1,1 @@
-refactor(api): standardize all endpoints under api v1
+fix(api): route console streams under api v1
