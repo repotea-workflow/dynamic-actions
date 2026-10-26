@@ -1,3 +1,1 @@
-Merge pull request #7 from 0xfe10/agt/source-transition-prep
-
-Prepare audited WeAuto Desktop source transitions
+fix(bridge): upgrade legacy WeAuto checkpoints to opaque anchors
