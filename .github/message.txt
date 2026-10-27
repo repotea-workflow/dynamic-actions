@@ -1,1 +1,1 @@
-fix(control): keep API reachable while accounts await login (#10)
+fix(worker): fail closed before desktop database initialization
