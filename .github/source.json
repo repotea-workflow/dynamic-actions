@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "1a40b23a0aff3518448a1647c911fc2d166f04e5",
+    "sha": "75dff963ccb2ca991d55a170ec765108abf5f25a",
     "ref_type": "branch",
-    "ref_name": "agt/control-login-readiness",
-    "run_id": 40437162701,
+    "ref_name": "main",
+    "run_id": 40437211916,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
