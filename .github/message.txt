@@ -1,1 +1,5 @@
-fix(worker): fail closed before desktop database initialization
+fix(worker): avoid database initialization panic (#11)
+
+* fix(control): keep API reachable while accounts await login
+
+* fix(worker): fail closed before desktop database initialization
