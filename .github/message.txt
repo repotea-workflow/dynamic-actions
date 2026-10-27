@@ -1,3 +1,1 @@
-Revert "fix(bridge): upgrade legacy WeAuto checkpoints to opaque anchors"
-
-This reverts commit 975f6cfd8425b65c0ea01ebb50953a046f957eab.
+fix(bridge): use canonical WeAuto API paths

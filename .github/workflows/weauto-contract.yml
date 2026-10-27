@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v7
         with:
           repository: 0xfe10/weauto
-          ref: 37a00d8dfbf1d6c252ddfffd61b9b5c9caf3fb61
+          ref: 75dff963ccb2ca991d55a170ec765108abf5f25a
           path: weauto-contract-source
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           persist-credentials: false

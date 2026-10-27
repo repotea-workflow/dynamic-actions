@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "524e213c642a8f5c5d6c095b864b6338d4b9d324",
+    "sha": "46406abcaec62f95b02c4bd791ea7a7dc7db2a64",
     "ref_type": "branch",
-    "ref_name": "agt/source-transition-prep",
-    "run_id": 40287415285,
+    "ref_name": "agt/canonical-weauto-api",
+    "run_id": 40437857113,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
