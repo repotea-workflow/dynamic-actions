@@ -1,1 +1,1 @@
-fix(bridge): use canonical WeAuto API paths (#8)
+chore: exclude Rust build artifacts

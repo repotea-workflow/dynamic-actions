@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "ec4eebbd76e0ba924b3417bc163df4c2b3e5580e",
+    "sha": "1bf4cf7bfdccdfbb834739256a45e3c61f993d1d",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40437929387,
+    "ref_name": "feat/workbot-weauto-bridge",
+    "run_id": 40548224603,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
