@@ -1,1 +1,1 @@
-chore: exclude Rust build artifacts
+feat: add weauto bridge workbot image
