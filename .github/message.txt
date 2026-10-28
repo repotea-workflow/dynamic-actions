@@ -1,1 +1,1 @@
-fix(desktop): restore scoped catalogs and reliable helper execution
+fix(desktop): retain pasted files through client handoff
