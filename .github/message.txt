@@ -1,1 +1,1 @@
-fix(desktop): read fully AES encrypted image caches
+fix(desktop): reject unknown image cache framing
