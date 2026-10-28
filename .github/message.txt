@@ -1,1 +1,1 @@
-fix(desktop): use verified image mask for WeChat 4.1.13.26
+fix(desktop): read fully AES encrypted image caches
