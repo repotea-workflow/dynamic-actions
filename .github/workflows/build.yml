@@ -1,0 +1,81 @@
+name: "[workbot] Workbot v2 image"
+
+on:
+  push:
+    branches: ["0xfe10/workbot"]
+    tags: ["v*-workbot"]
+
+concurrency:
+  group: workbot-v2-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+env:
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-v2
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v7
+      - name: Resolve immutable Workbot source
+        id: source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: |
+          set -euo pipefail
+          test "$(cat .github/repository.txt)" = "0xfe10/workbot"
+          source_ref=$(cat .github/commit.txt)
+          [[ "$source_ref" =~ ^[0-9a-f]{7,40}$ ]]
+          revision=$(gh api "repos/0xfe10/workbot/commits/$source_ref" --jq .sha)
+          [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+          echo "publish=false" >> "$GITHUB_OUTPUT"
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            source_tag=$(cat .github/tag.txt)
+            [[ "$source_tag" =~ ^v[A-Za-z0-9_.-]{0,127}$ ]]
+            test "$GITHUB_REF_NAME" = "${source_tag}-workbot"
+            tag_revision=$(gh api "repos/0xfe10/workbot/commits/$source_tag" --jq .sha)
+            test "$tag_revision" = "$revision"
+            echo "tag=$source_tag" >> "$GITHUB_OUTPUT"
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
+      - name: Check out Workbot source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/workbot
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ steps.source.outputs.revision }}
+      - uses: dtolnay/rust-toolchain@1.93.1
+      - uses: Swatinem/rust-cache@v2
+        with:
+          workspaces: crates/weauto-bridge
+      - name: Test weauto bridge
+        run: cargo test --locked --manifest-path crates/weauto-bridge/Cargo.toml
+      - uses: docker/setup-buildx-action@v4
+      - uses: docker/login-action@v4
+        if: steps.source.outputs.publish == 'true'
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+      - name: Build candidate or publish tagged image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          file: Dockerfile
+          platforms: linux/amd64
+          push: ${{ steps.source.outputs.publish == 'true' }}
+          tags: |
+            ${{ env.IMAGE_NAME }}:sha-${{ steps.source.outputs.revision }}
+            ${{ env.IMAGE_NAME }}:${{ steps.source.outputs.tag || 'candidate' }}
+          labels: |
+            org.opencontainers.image.source=https://github.com/0xfe10/workbot
+            org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
+          cache-from: type=gha,scope=workbot-v2
+          cache-to: type=gha,mode=max,scope=workbot-v2

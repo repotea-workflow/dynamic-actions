@@ -1,1 +1,1 @@
-feat: add weauto bridge workbot image
+ci: route workbot image builds through dyn-workflow
