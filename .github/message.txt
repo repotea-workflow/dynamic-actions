@@ -1,1 +1,1 @@
-fix(desktop): reject unknown image cache framing
+fix(desktop): calibrate accessibility coordinates to X11 pixels
