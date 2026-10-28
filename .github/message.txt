@@ -1,1 +1,1 @@
-fix(desktop): validate sticker layouts with logical control dimensions
+fix(desktop): refresh remote nodes after UI mutations
