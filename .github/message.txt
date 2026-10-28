@@ -1,1 +1,1 @@
-fix(desktop): retain pasted files through client handoff
+fix(desktop): separate image credentials from media database keys
