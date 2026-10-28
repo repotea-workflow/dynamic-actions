@@ -1,1 +1,1 @@
-fix(desktop): bundle SQLCipher runtime for credential validation
+fix(desktop): use verified image mask for WeChat 4.1.13.26
