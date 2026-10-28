@@ -1,1 +1,1 @@
-fix(desktop): calibrate accessibility coordinates to X11 pixels
+fix(desktop): preserve popup bounds in consistent accessibility snapshots
