@@ -244,6 +244,6 @@ env:
   # desktop-prep publishes only independently replaceable services. Set full
   # with an explicit version for a separately reviewed Native Session release.
   WEAUTO_BUILD_PROFILE: desktop-prep
-  WEAUTO_BUILD_VERSION: ''
-  WEAUTO_NO_CACHE: 'false'
+  WEAUTO_BUILD_VERSION: "desktop-tray-6cfa8fa"
+  WEAUTO_NO_CACHE: "false"
   IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/weauto
