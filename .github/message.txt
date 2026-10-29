@@ -1,1 +1,1 @@
-feat(bridge): schedule legacy script automations through the tools service
+fix(bridge): honor WeAuto sticker send capability flags
