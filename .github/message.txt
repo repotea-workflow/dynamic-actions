@@ -1,1 +1,1 @@
-fix(pi): trust workspace and install Pi model config at startup
+feat(bridge): add group-scoped wechat_members MCP tool
