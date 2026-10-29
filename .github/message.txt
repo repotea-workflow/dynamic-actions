@@ -1,1 +1,1 @@
-fix: build bridge with Rust 1.93 and ship pi with Node runtime
+feat: complete WeAuto CWIP media and durable delivery
