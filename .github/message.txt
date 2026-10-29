@@ -1,1 +1,1 @@
-fix(bridge): bound MCP request bodies
+fix(bridge): split SSE frames on CRLF delimiters
