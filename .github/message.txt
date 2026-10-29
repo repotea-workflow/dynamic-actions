@@ -1,1 +1,1 @@
-feat: render optional Pi project MCP configuration
+test: cover CWIP handshake and idempotent sends
