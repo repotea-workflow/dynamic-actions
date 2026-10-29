@@ -1,1 +1,7 @@
-fix(bridge): honor WeAuto sticker send capability flags
+fix(bridge): poll desktop WeAuto threads and match real message fields
+
+Desktop WeAuto emits no message.committed events, so inbound now polls
+/threads/{id}/messages per allowed chat with persisted anchors (INBOUND_MODE=sse
+keeps the stream path). Accept direction=inbound, detect @bot through
+mentions.userIds against the account wxid, and derive media MIME from the
+content response or file magic when the asset contentType is null.
