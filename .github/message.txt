@@ -1,1 +1,1 @@
-feat(bridge): add capability-gated sticker MCP tools
+feat(bridge): schedule legacy script automations through the tools service
