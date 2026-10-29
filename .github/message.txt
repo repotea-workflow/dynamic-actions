@@ -1,1 +1,1 @@
-test: cover CWIP handshake and idempotent sends
+test: cover SSE reconnect backoff policy
