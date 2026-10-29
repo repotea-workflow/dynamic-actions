@@ -1,1 +1,1 @@
-fix(desktop): preserve native mention targets and route window activation
+fix(desktop): recover minimized windows before coordinate inspection
