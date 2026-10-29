@@ -1,1 +1,1 @@
-Fix mention label uniqueness fallback
+Align mention labels with group display names
