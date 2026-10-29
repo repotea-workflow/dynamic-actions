@@ -1,1 +1,1 @@
-feat(bridge): add scoped WeChat MCP endpoint
+fix(bridge): bound MCP request bodies
