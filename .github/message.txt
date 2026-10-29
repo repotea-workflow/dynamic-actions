@@ -1,1 +1,1 @@
-Align mention labels with group display names
+fix(desktop): open native mention chooser with standalone at sign
