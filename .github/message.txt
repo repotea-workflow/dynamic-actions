@@ -1,1 +1,1 @@
-fix(pi): redact credentials before Hindsight retain
+feat(bridge): add scoped WeChat MCP endpoint
