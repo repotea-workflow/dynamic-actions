@@ -1,1 +1,1 @@
-fix: download pinned cc-connect release asset
+fix: consume WeAuto event stream schema
