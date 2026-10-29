@@ -1,1 +1,1 @@
-fix: use Rust toolchain for current dependencies
+fix: build bridge with Rust 1.93 and ship pi with Node runtime
