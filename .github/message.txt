@@ -1,1 +1,1 @@
-feat(pi): migrate Hindsight memory extension
+fix(pi): redact credentials before Hindsight retain
