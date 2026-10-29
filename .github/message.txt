@@ -1,1 +1,1 @@
-fix(desktop): restore main window before send observation
+fix(desktop): preserve native mention targets and route window activation
