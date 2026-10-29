@@ -1,1 +1,1 @@
-feat: preserve CWIP session targets for quote replies
+test: cover WeAuto media ingress and egress
