@@ -1,1 +1,1 @@
-fix: consume WeAuto event stream schema
+fix: use Rust toolchain for current dependencies
