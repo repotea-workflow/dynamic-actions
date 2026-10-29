@@ -1,1 +1,1 @@
-feat(image): package botstar and devops pi skills
+fix(image): load bot business context into Pi
