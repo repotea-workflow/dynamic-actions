@@ -1,1 +1,1 @@
-fix(image): load bot business context into Pi
+feat(image): include Pi SSH extension
