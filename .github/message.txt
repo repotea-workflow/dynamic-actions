@@ -1,1 +1,1 @@
-ci: route workbot image builds through dyn-workflow
+fix: download pinned cc-connect release asset
