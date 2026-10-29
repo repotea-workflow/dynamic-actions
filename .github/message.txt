@@ -1,1 +1,1 @@
-fix(desktop): isolate system OpenSSL image decryption
+fix(desktop): keep quote clicks inside bubbles and popup bounds
