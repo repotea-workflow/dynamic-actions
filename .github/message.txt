@@ -1,1 +1,1 @@
-test: cover WeAuto media ingress and egress
+feat(pi): migrate Hindsight memory extension
