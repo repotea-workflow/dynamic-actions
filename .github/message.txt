@@ -1,1 +1,1 @@
-fix(desktop): open native mention chooser with standalone at sign
+fix(desktop): restore main window before send observation
