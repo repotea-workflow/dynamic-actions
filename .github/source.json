@@ -7,7 +7,7 @@
     "ref_type": "branch",
     "ref_name": "fix/activate-history-window",
     "run_id": 41071493940,
-    "run_attempt": 2,
+    "run_attempt": 3,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
