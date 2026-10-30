@@ -1,1 +1,1 @@
-fix(desktop): focus auxiliary close controls before clicking
+test(desktop): keep close focus compatible with helper mocks
