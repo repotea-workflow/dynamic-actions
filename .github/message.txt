@@ -1,1 +1,1 @@
-fix(desktop): recover minimized windows before coordinate inspection
+Report safe desktop send observation diagnostics

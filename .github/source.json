@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "d7700316f8cf995903cb329e29114d9679d24959",
+    "sha": "fc8817231596a7d3c6c9f4fc11eff1a65b953048",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40859778035,
+    "ref_name": "fix/worker-send-diagnostics",
+    "run_id": 41040077107,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
