@@ -36,6 +36,13 @@ jobs:
           [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
           echo "revision=$revision" >> "$GITHUB_OUTPUT"
           echo "publish=false" >> "$GITHUB_OUTPUT"
+          # Branch-driven dyn builds resolve the immutable source branch from
+          # branch.txt. Publish verified main-source candidates by digest so
+          # deployment tests can pull the exact build; release tags retain the
+          # additional version tag below.
+          if grep -qx main .github/branch.txt; then
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
           if [[ "$GITHUB_REF" == refs/tags/* ]]; then
             source_tag=$(cat .github/tag.txt)
             [[ "$source_tag" =~ ^v[A-Za-z0-9_.-]{0,127}$ ]]

@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "8506e1322a88b7f0341c895bcca1b34501882a98",
+    "sha": "e9debb5254d00e61b35a3f0481599bc9d6dd6cdb",
     "ref_type": "branch",
-    "ref_name": "fix/sse-reconnect-observability",
-    "run_id": 41077675718,
+    "ref_name": "fix/dyn-publish-workbot-candidate",
+    "run_id": 41079249479,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
