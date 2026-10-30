@@ -1,7 +1,1 @@
-fix(desktop): close chat history without relying on window stacking (#13)
-
-* fix(desktop): close chat history without relying on window stacking
-
-* fix(desktop): focus auxiliary close controls before clicking
-
-* test(desktop): keep close focus compatible with helper mocks
+test(desktop): preserve helper mock compatibility
