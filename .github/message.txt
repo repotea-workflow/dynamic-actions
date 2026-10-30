@@ -1,1 +1,1 @@
-fix(desktop): close chat history without relying on window stacking
+fix(desktop): focus auxiliary close controls before clicking
