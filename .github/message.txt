@@ -1,1 +1,1 @@
-fix(bridge): log at info level unless RUST_LOG is set
+fix(bridge): log cloud-web outbound frame handling
