@@ -1,1 +1,1 @@
-fix(pi): document actual WeAuto tools and receipt semantics
+fix(bridge): quote only the first group reply fragment
