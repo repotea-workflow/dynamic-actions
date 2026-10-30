@@ -1,1 +1,1 @@
-fix(bridge): follow long reply files with a quoted summary
+fix(bridge): log at info level unless RUST_LOG is set
