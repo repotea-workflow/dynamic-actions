@@ -55,6 +55,8 @@ jobs:
       - uses: Swatinem/rust-cache@v2
         with:
           workspaces: crates/weauto-bridge
+      - name: Test Pi memory lifecycle
+        run: docker run --rm -v "$PWD:/src:ro" -w /src node:22-slim node --test integrations/pi/test_hindsight.mjs
       - name: Test weauto bridge
         run: cargo test --locked --manifest-path crates/weauto-bridge/Cargo.toml
       - uses: docker/setup-buildx-action@v4
