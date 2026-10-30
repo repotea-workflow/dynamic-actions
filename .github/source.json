@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "d720c5d33463ecfdc3c2fb0f7def1e83891053bb",
+    "sha": "d6410f2936c26caef04749fd0a5b3aa0ada3bcd6",
     "ref_type": "branch",
     "ref_name": "fix/activate-history-window",
-    "run_id": 41080683351,
+    "run_id": 41081037552,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
