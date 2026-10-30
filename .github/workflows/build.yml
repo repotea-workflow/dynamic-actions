@@ -36,11 +36,11 @@ jobs:
           [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
           echo "revision=$revision" >> "$GITHUB_OUTPUT"
           echo "publish=false" >> "$GITHUB_OUTPUT"
-          # Branch-driven dyn builds resolve the immutable source branch from
-          # branch.txt. Publish verified main-source candidates by digest so
-          # deployment tests can pull the exact build; release tags retain the
-          # additional version tag below.
-          if grep -qx main .github/branch.txt; then
+          # The existing repository-owned branch trigger forwards trusted source
+          # commits to this exact execution branch. Publish each verified build
+          # by source SHA so an unmerged PR can be tested without a release tag.
+          if [[ "$GITHUB_REF" == refs/heads/0xfe10/workbot ]]; then
+            test -s .github/branch.txt
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
           if [[ "$GITHUB_REF" == refs/tags/* ]]; then
@@ -74,6 +74,7 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - name: Build candidate or publish tagged image
+        id: image
         uses: docker/build-push-action@v7
         with:
           context: .
@@ -82,9 +83,17 @@ jobs:
           push: ${{ steps.source.outputs.publish == 'true' }}
           tags: |
             ${{ env.IMAGE_NAME }}:sha-${{ steps.source.outputs.revision }}
-            ${{ env.IMAGE_NAME }}:${{ steps.source.outputs.tag || 'candidate' }}
+            ${{ steps.source.outputs.tag && format('{0}:{1}', env.IMAGE_NAME, steps.source.outputs.tag) || '' }}
           labels: |
             org.opencontainers.image.source=https://github.com/0xfe10/workbot
             org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
           cache-from: type=gha,scope=workbot-v2
           cache-to: type=gha,mode=max,scope=workbot-v2
+      - name: Report immutable image
+        if: steps.source.outputs.publish == 'true'
+        env:
+          IMAGE_DIGEST: ${{ steps.image.outputs.digest }}
+          SOURCE_REVISION: ${{ steps.source.outputs.revision }}
+        run: |
+          test -n "$IMAGE_DIGEST"
+          printf 'Source: `%s`\n\nImage: `%s@%s`\n' "$SOURCE_REVISION" "$IMAGE_NAME" "$IMAGE_DIGEST" >> "$GITHUB_STEP_SUMMARY"

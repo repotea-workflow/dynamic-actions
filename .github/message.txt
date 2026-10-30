@@ -1,1 +1,1 @@
-fix(ci): publish verified main-source workbot candidates
+fix(ci): publish immutable feature-branch candidates for deployment tests
