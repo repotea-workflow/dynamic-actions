@@ -1,1 +1,1 @@
-fix(bridge): log cloud-web outbound frame handling
+fix(bridge): limit inferred quotes to group replies
