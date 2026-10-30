@@ -4,11 +4,11 @@
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
     "sha": "51d354e40d72e1fca9954c1c578e50fe6029bfdb",
-    "ref_type": "branch",
-    "ref_name": "feat/workbot-weauto-bridge",
-    "run_id": 41013944659,
+    "ref_type": "tag",
+    "ref_name": "v0.1.0-rc.8",
+    "run_id": 41014591982,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-branch.yml"
+    "workflow": ".github/workflows/trigger-tag.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
