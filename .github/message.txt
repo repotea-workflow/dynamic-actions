@@ -1,1 +1,1 @@
-fix(bridge): enforce separate fail-closed chat allowlists
+fix(bridge): bind automatic quotes to immutable inbound contexts
