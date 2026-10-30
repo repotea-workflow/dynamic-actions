@@ -1,1 +1,1 @@
-Report safe desktop send observation diagnostics
+fix(desktop): tolerate localized X11 frame titles
