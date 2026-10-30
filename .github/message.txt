@@ -1,1 +1,1 @@
-test(desktop): preserve helper mock compatibility
+fix(desktop): wire auxiliary window activation through host protocol

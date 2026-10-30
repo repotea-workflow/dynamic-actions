@@ -3,11 +3,11 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "4dcd668d938903c0c54cc00fabc7fb6880614e0a",
+    "sha": "d720c5d33463ecfdc3c2fb0f7def1e83891053bb",
     "ref_type": "branch",
     "ref_name": "fix/activate-history-window",
-    "run_id": 41071493940,
-    "run_attempt": 3,
+    "run_id": 41080683351,
+    "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
