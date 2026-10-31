@@ -1,1 +1,5 @@
-fix(desktop): close history on hosts without auxiliary activation
+fix(desktop): split chat list scrolling to the host step limit (#16)
+
+* fix(desktop): split chat list scrolling to the host step limit
+
+* fix(desktop): close history on hosts without auxiliary activation
