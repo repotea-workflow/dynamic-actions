@@ -1,1 +1,3 @@
-build: pin cc-connect steering release repotea.4
+Merge pull request #18 from 0xfe10/fix/cron-pause-survives-restart
+
+Preserve paused schedules and ship Pi steering release
