@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "7d60a0e2e4767928e5c2e333b52d00d143074920",
+    "sha": "ebf3d63a36c0170198618422af47f4475996ce94",
     "ref_type": "branch",
-    "ref_name": "fix/native-quote-history-close",
-    "run_id": 41235441119,
+    "ref_name": "main",
+    "run_id": 41237032548,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
