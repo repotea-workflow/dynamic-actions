@@ -1,1 +1,6 @@
-fix(bridge): log SSE reconnect scheduling (#10)
+feat: run script automations through cc-connect cron instead of the bridge
+
+Remove the bridge automation scheduler. cc-connect (repotea-open fork, with the
+cloud_web reply-context fallback and [SILENT] shell cron output) now executes
+the jobs from the chart's automations.json via workbot-automation, so they show
+in the cc-connect console and Pi can add jobs from chat.
