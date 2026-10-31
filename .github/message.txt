@@ -1,1 +1,1 @@
-fix(bridge): make group native quote reply opt-in via WEAUTO_AUTO_QUOTE
+fix(bridge): make group native quote reply opt-in via WEAUTO_AUTO_QUOTE (#17)
