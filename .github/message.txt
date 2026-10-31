@@ -1,1 +1,9 @@
-style(desktop): format auxiliary activation test
+fix(desktop): activate history frame before closing (#14)
+
+* fix(desktop): activate history frame before closing
+
+* test(desktop): preserve helper mock compatibility
+
+* fix(desktop): wire auxiliary window activation through host protocol
+
+* style(desktop): format auxiliary activation test
