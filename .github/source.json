@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "af90f4fa4b338aae63bfe74cd8a0fa35b8915010",
+    "sha": "97b4f0e372eede3fe07384c266bd2ffca50aa35e",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 41165676686,
+    "ref_name": "fix/console-reject-before-journal",
+    "run_id": 41184258553,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
