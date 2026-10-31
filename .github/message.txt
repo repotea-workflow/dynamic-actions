@@ -1,6 +1,3 @@
-Upload long-reply documents with ASCII file names
+Merge pull request #19 from 0xfe10/fix/ascii-upload-filename
 
-The desktop WeChat client fails to send files whose names contain non-ASCII
-characters (reproduced on the live account with Chinese and accented names,
-while an ASCII name of the same size is delivered). Keep the readable title in
-the follow-up text and use an ASCII file name for the attachment.
+Send long-reply documents with ASCII file names
