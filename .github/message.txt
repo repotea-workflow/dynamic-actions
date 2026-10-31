@@ -1,1 +1,1 @@
-fix(desktop): reject out-of-bounds input before journaling (#15)
+fix(desktop): split chat list scrolling to the host step limit
