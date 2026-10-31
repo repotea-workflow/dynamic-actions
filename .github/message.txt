@@ -1,4 +1,4 @@
-feat: run script automations through cc-connect cron instead of the bridge
+feat: run script automations through cc-connect cron instead of the bridge (#12)
 
 Remove the bridge automation scheduler. cc-connect (repotea-open fork, with the
 cloud_web reply-context fallback and [SILENT] shell cron output) now executes

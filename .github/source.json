@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "09616b2dcf1b88149f6c99b9d952fbe61cb8fed3",
+    "sha": "d361c341af0f184437037ae852b23a99f98dbe9d",
     "ref_type": "branch",
-    "ref_name": "feat/cc-connect-native-cron",
-    "run_id": 41175213537,
+    "ref_name": "main",
+    "run_id": 41175589542,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
