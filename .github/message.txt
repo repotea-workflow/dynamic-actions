@@ -1,3 +1,1 @@
-Merge pull request #20 from 0xfe10/fix/ascii-upload-filename
-
-Apply filename compatibility to agent attachments
+fix(bridge): do not report unconfirmed sends as accepted
