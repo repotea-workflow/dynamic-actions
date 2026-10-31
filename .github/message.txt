@@ -1,3 +1,6 @@
-Merge pull request #18 from 0xfe10/fix/cron-pause-survives-restart
+Upload long-reply documents with ASCII file names
 
-Preserve paused schedules and ship Pi steering release
+The desktop WeChat client fails to send files whose names contain non-ASCII
+characters (reproduced on the live account with Chinese and accented names,
+while an ASCII name of the same size is delivered). Keep the readable title in
+the follow-up text and use an ASCII file name for the attachment.
