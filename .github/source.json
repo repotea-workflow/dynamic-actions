@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "bb8cf83b057ebe4a262140c9b84201d011c69e8f",
+    "sha": "fbe924c545dd7f62c29d0882182c150d9706109f",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 41197179702,
+    "ref_name": "fix/quote-preparation-diagnostics",
+    "run_id": 41231809400,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
