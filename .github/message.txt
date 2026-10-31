@@ -1,4 +1,4 @@
-fix: seed cron jobs with the cloud_web session key and set CC_DATA_DIR
+fix: seed cron jobs with the cloud_web session key and set CC_DATA_DIR (#13)
 
 cc-connect resolves the platform from the first segment of the session key,
 which is the platform name (cloud_web), not the bot name. The cc-connect CLI

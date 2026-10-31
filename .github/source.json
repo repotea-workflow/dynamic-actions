@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "787492fba655449cfcf0de8567c33138002b903f",
+    "sha": "153e9d817e170ca4ce84803b0000be3a06e5f79c",
     "ref_type": "branch",
-    "ref_name": "fix/cron-session-key-prefix",
-    "run_id": 41177035517,
+    "ref_name": "main",
+    "run_id": 41178071831,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
