@@ -1,1 +1,1 @@
-fix(ci): scope portal runtime checks to portal modules
+build: pin cc-connect steering release repotea.4
