@@ -1,1 +1,5 @@
-fix(ci): publish immutable feature-branch candidates for deployment tests
+fix(ci): publish immutable Workbot PR candidates for deployment tests (#11)
+
+* fix(ci): publish verified main-source workbot candidates
+
+* fix(ci): publish immutable feature-branch candidates for deployment tests

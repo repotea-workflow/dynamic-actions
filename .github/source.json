@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "2b952332d45e2b8a68180584c505117b11aaf40e",
+    "sha": "d22bdb46735b2e1a078e95ec2c7099226cf72830",
     "ref_type": "branch",
-    "ref_name": "fix/dyn-publish-workbot-candidate",
-    "run_id": 41080754872,
+    "ref_name": "main",
+    "run_id": 41165666383,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
