@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "36a9ccdddede8f122c0df66b2b8058b47316d377",
+    "sha": "9abf9cd272d81acf4475a63459053e12cda2f97f",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 41180592111,
+    "ref_name": "fix/automation-silent-marker",
+    "run_id": 41185519686,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
