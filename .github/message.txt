@@ -1,5 +1,1 @@
-fix: seed cron jobs with the cloud_web session key and set CC_DATA_DIR (#13)
-
-cc-connect resolves the platform from the first segment of the session key,
-which is the platform name (cloud_web), not the bot name. The cc-connect CLI
-also needs CC_DATA_DIR to find the cron API socket under /data/cc-connect.
+fix: send cron alerts verbatim with cc-connect v1.5.0-repotea.3
