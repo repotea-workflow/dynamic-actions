@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "312cfa4b03baeaecae52f61a63c1e957381181fc",
+    "sha": "5eaa3b7c4546db7af4f5b2a932e40ec94f4e00d4",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 41187399645,
+    "ref_name": "fix/disable-auto-quote",
+    "run_id": 41192461645,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

@@ -1,1 +1,1 @@
-fix(cron): keep run history when reseeding managed jobs (#16)
+fix(bridge): make group native quote reply opt-in via WEAUTO_AUTO_QUOTE
