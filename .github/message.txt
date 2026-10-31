@@ -1,6 +1,5 @@
-feat: run script automations through cc-connect cron instead of the bridge (#12)
+fix: seed cron jobs with the cloud_web session key and set CC_DATA_DIR
 
-Remove the bridge automation scheduler. cc-connect (repotea-open fork, with the
-cloud_web reply-context fallback and [SILENT] shell cron output) now executes
-the jobs from the chart's automations.json via workbot-automation, so they show
-in the cc-connect console and Pi can add jobs from chat.
+cc-connect resolves the platform from the first segment of the session key,
+which is the platform name (cloud_web), not the bot name. The cc-connect CLI
+also needs CC_DATA_DIR to find the cron API socket under /data/cc-connect.
