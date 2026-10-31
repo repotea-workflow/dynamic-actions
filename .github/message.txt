@@ -1,1 +1,1 @@
-fix(automation): keep tools [SILENT] output silent
+fix(automation): keep tools [SILENT] output silent (#15)
