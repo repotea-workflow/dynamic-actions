@@ -1,1 +1,1 @@
-fix(automation): keep tools [SILENT] output silent (#15)
+fix(cron): keep run history when reseeding managed jobs
