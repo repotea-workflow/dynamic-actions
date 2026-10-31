@@ -1,3 +1,1 @@
-Merge pull request #19 from 0xfe10/fix/ascii-upload-filename
-
-Send long-reply documents with ASCII file names
+Apply desktop filename compatibility to all attachment uploads
