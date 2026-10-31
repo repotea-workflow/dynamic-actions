@@ -1,1 +1,1 @@
-fix: preserve paused cron jobs across restarts
+fix(ci): scope portal runtime checks to portal modules

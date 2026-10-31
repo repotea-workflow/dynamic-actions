@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "1a4e6b7a7fcec2cb1af98902c6629d71eff53df3",
+    "sha": "fdeeb027f4fcb4312df747c92ff5d0ea3ea62199",
     "ref_type": "branch",
     "ref_name": "fix/cron-pause-survives-restart",
-    "run_id": 41216274393,
+    "run_id": 41219393151,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

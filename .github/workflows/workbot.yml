@@ -56,8 +56,8 @@ jobs:
           tags: workbot-portal:candidate
       - name: Verify candidate runtime
         run: |
-          docker run --rm --entrypoint python -v "$PWD/integrations/workbot:/tests:ro" \
-            workbot-portal:candidate -m unittest discover -s /tests -v
+          docker run --rm --entrypoint python -v "$PWD/integrations/workbot:/tests:ro" -w /tests \
+            workbot-portal:candidate -m unittest -v test_auth_handoff test_portal
       - uses: docker/login-action@v4
         if: steps.source.outputs.publish == 'true'
         with:
