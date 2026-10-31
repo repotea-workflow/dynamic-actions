@@ -1,1 +1,1 @@
-fix(cron): keep run history when reseeding managed jobs
+fix(cron): keep run history when reseeding managed jobs (#16)

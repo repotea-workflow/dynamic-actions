@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "014189bb5be52181b398746d5457aac65eb56f43",
+    "sha": "312cfa4b03baeaecae52f61a63c1e957381181fc",
     "ref_type": "branch",
-    "ref_name": "fix/seed-cron-keep-history",
-    "run_id": 41187031932,
+    "ref_name": "main",
+    "run_id": 41187399645,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
