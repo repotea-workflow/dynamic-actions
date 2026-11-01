@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d2f80ceddd62d31c5d39e0410b845569ccb82741"
+  sha: "cc5eb5fb3c5a46b869b30dc6a0da061f2380dae4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41336902257
+  run_id: 41338218124
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept native layout controls and rotated overflow"
+  message: "test: verify native host shortcuts with input preparation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T18:29:57Z"
+  created_at: "2026-11-01T18:45:27Z"
