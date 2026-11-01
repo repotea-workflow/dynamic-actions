@@ -1,1 +1,3 @@
-Normalize legacy empty check results before agent execution
+Merge pull request #22 from 0xfe10/fix/unconfirmed-delivery-result
+
+Run managed scheduled tasks through Pi prompts
