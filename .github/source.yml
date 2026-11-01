@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "7e27ab7a095c00bd86e8ef98a56c9767e249d0a9"
+  sha: "7e1d9ddcf8f64d56d13def5075e4ade7e99e3fd7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41352299260
+  run_id: 41354255959
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: cover drawing dismissal after Done and repeated reentry"
+  message: "fix: synchronize wrapped text heights in batch value updates"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T21:30:06Z"
+  created_at: "2026-11-01T21:53:07Z"
