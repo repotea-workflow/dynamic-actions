@@ -1,1 +1,3 @@
-build: publish unified workbot image name
+Merge pull request #24 from 0xfe10/deploy/workbot-name
+
+Publish canonical workbot image
