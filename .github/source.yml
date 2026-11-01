@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e9781294735d21e83e9a23ae7013560870be819f"
+  sha: "fb8234edc8239bf00b84e1ae7a13e1f925ab2d1e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41340719463
+  run_id: 41345731614
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify native keyboard extremes and time dialogs"
+  message: "test: accept native time dialogs and constraint boundaries"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T19:14:38Z"
+  created_at: "2026-11-01T20:13:35Z"
