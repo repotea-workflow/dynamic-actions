@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f74bfdb3b4584310d88d1ce69c1b370a45d8c614"
+  sha: "9492af77637c628a077ac18280a9113784de7866"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41281388688
+  run_id: 41283638825
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve image opacity rendering and grouped inspector history"
+  message: "fix: preserve document paint order throughout shared interactions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T06:34:51Z"
+  created_at: "2026-11-01T07:09:37Z"
