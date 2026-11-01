@@ -1,1 +1,1 @@
-fix(desktop): support fresh manual login with isolated key validation
+fix(desktop): support fresh manual login with isolated key validation (#19)
