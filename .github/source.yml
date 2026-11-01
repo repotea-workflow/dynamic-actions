@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "30c361beb15aed3e1057838bd1ea0e7232a020f3"
+  sha: "6fca4aa85b7f96cf20e069e32b163ea0f565f9c8"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41327527879
+  run_id: 41328989600
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept native workshop table structure workflows"
+  message: "test: verify native workshop cell styles and empty fonts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T16:40:35Z"
+  created_at: "2026-11-01T16:58:03Z"
