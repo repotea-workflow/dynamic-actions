@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "109b338d6d2282cf2a23e51faf1fbb5724597253"
+  sha: "48cfc3bcb4be24e26613f4ccda9abe24c5d71971"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41291136585
+  run_id: 41292850154
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: recover shared SVG previews after decode failures"
+  message: "fix: add default keyboard history and recheck drawing dismissal"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T08:59:49Z"
+  created_at: "2026-11-01T09:22:29Z"
