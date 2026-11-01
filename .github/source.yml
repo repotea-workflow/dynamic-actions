@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "cb1c71749deb316cbb6e5e1cfced6fc0ffa4e16f"
+  sha: "f0f5894f6ebba516325b5e09efe51e8e09277113"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41323490308
+  run_id: 41324785147
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: replay drawing dismissal on the current example build"
+  message: "fix: retain embedded SVG resources throughout interactions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T15:53:40Z"
+  created_at: "2026-11-01T16:08:54Z"
