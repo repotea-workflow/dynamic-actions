@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "58a1fa13a4ce8986d53fdc617c77e66f17817def"
+  sha: "cb1c71749deb316cbb6e5e1cfced6fc0ffa4e16f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41322471824
+  run_id: 41323490308
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: recover large JSON exports and extend native catalog acceptance"
+  message: "test: replay drawing dismissal on the current example build"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T15:41:21Z"
+  created_at: "2026-11-01T15:53:40Z"
