@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "0f3f60d64309fb91774276a4db1f8816cda95067"
+  sha: "1717826c5c6ecbd4f7dd05150ca4aa921cf21ed4"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41318764443
+  ref_name: "fix/swan-online-debug"
+  run_id: 41331936046
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Replace Swan and executor build tooling with Dart (#343)\n\nReplace the Python build chain with locked Dart tooling and committed-source catalog data. Complete exact-head independent review, cross-repository contract tests and Android CI passed. API audit retains the existing main lockfile advisory failures; no audit suppression or rule override."
+  message: "Make Swan development builds consume Hawk Debug Specs by default"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T14:57:58Z"
+  created_at: "2026-11-01T17:32:03Z"
