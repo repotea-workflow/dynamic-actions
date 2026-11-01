@@ -1,1 +1,1 @@
-Deliver requested quotes on the final reply instead of a second send
+Keep formatting of unrelated files unchanged
