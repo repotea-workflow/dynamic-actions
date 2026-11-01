@@ -5,8 +5,8 @@
     "repository_id": 1432097120,
     "sha": "ebf3d63a36c0170198618422af47f4475996ce94",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 41237032548,
+    "ref_name": "fix/fresh-manual-login",
+    "run_id": 41324311345,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
