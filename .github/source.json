@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "ebf3d63a36c0170198618422af47f4475996ce94",
+    "sha": "ef503649a09ad9eb1ed13cc9780671d8377bb6c6",
     "ref_type": "branch",
     "ref_name": "fix/fresh-manual-login",
-    "run_id": 41324311345,
+    "run_id": 41324448114,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

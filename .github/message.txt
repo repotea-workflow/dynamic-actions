@@ -1,5 +1,1 @@
-fix(desktop): close quote history and target scaled incoming bubbles (#18)
-
-* fix(desktop): close quote history and target scaled incoming bubbles
-
-* fix(desktop): budget measured remote history preparation
+fix(desktop): support fresh manual login with isolated key validation
