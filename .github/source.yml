@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "83fd9c6b088f0b1a0ff5131f5dc07abceacd17b1"
+  sha: "16c166bbe44ae80f6da8eef362f4cb68d88a8fea"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41273949310
+  run_id: 41274985012
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record example property and failure recheck"
+  message: "docs: record shared table property recheck"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T04:39:52Z"
+  created_at: "2026-11-01T04:56:37Z"
