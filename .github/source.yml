@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3678d88a2126f9b5fa7d71e3b6d2b54e7c29c0f9"
+  sha: "fee06940cdc030a876d8fd120742952bb2a0e2eb"
   ref_type: "branch"
   ref_name: "feat/dart-build-tools"
-  run_id: 41316915833
+  run_id: 41317608434
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Pin CI and operator contract to merged Dart executor"
+  message: "Apply pinned Dart formatter to existing App files"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T14:35:15Z"
+  created_at: "2026-11-01T14:43:49Z"
