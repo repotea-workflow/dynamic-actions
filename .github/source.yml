@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "58d2bf40f6a0c0d6e0efbd3b11b1dc895a40413b"
+  sha: "d3708b26a9ec3d78ce284e7696ad452211dd6dbb"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41332208323
+  run_id: 41333531464
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: recheck drawing dismissal on current web and Android"
+  message: "test: verify workshop whole-table styles on browser and Android"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T17:35:11Z"
+  created_at: "2026-11-01T17:50:53Z"
