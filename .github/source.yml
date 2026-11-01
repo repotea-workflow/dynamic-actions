@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d7346f4bf3e3c5e859963601ea9566d1c97c53a9"
+  sha: "1418ff9b6470ce79dd499a72dfe4050868c5ed35"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41305480254
+  run_id: 41306151147
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep floating controls clear and preserve theme color bindings"
+  message: "test: verify native workshop border and symbol workflows"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T12:14:08Z"
+  created_at: "2026-11-01T12:22:18Z"
