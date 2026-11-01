@@ -1,4 +1,4 @@
-name: "[workbot] Workbot v2 image"
+name: "[workbot] Workbot image"
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
     tags: ["v*-workbot"]
 
 concurrency:
-  group: workbot-v2-${{ github.ref }}
+  group: workbot-${{ github.ref }}
   cancel-in-progress: false
 
 permissions:
@@ -14,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-v2
+  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot
 
 jobs:
   build:
@@ -89,8 +89,8 @@ jobs:
           labels: |
             org.opencontainers.image.source=https://github.com/0xfe10/workbot
             org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
-          cache-from: type=gha,scope=workbot-v2
-          cache-to: type=gha,mode=max,scope=workbot-v2
+          cache-from: type=gha,scope=workbot
+          cache-to: type=gha,mode=max,scope=workbot
       - name: Report immutable image
         if: steps.source.outputs.publish == 'true'
         env:
