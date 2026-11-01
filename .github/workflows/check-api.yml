@@ -89,9 +89,14 @@ jobs:
         with:
           repository: boxliy/buildbox
           token: ${{ secrets.GH_TOKEN_0X128BIT }}
-          ref: d3e7a61c6c2029d79f17759bffd4b66a595f8f11
+          ref: 528d2ab2673bd3d9410170bc1845ca69f58f7eb2
           path: .contract-buildbox
           persist-credentials: false
+
+      - name: Resolve Dart build tool contracts
+        run: |
+          (cd waterfowl/tools/swan_build && fvm dart pub get --enforce-lockfile)
+          (cd .contract-buildbox && dart pub get --enforce-lockfile)
 
       - name: Check Rust and build API binaries
         run: just check-rust
@@ -104,8 +109,7 @@ jobs:
 
       - name: Verify database migrations and API integration
         env:
-          BUILDBOX_CONTRACT_CONSUMER: ${{ github.workspace }}/.contract-buildbox/tests/consume_hawk_contract.py
-          PYTHONDONTWRITEBYTECODE: "1"
+          BUILDBOX_CONTRACT_CONSUMER: ${{ github.workspace }}/.contract-buildbox/test/consume_hawk_contract.dart
         run: |
           trap 'just db-down' EXIT
           just db-up

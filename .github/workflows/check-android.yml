@@ -55,9 +55,12 @@ jobs:
           GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: fvm flutter pub get --enforce-lockfile
       - name: Test app assembly and resource selection
-        env:
-          PYTHONDONTWRITEBYTECODE: "1"
-        run: python3 -m unittest discover -s waterfowl/tools/app_assembler
+        working-directory: waterfowl/tools/swan_build
+        run: |
+          fvm dart pub get --enforce-lockfile
+          fvm dart format --output=none --set-exit-if-changed bin lib test
+          fvm dart analyze
+          fvm dart test
       - name: Check Dart formatting
         working-directory: waterfowl
         run: just format-check
