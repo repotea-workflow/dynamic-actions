@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f74adaaa71d35af0d5963b728d3f6ade52471277"
+  sha: "16e099fc4a20ce57d3b3cfd0f3de18938d05fd21"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41258607340
+  run_id: 41260572926
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: share inspector input lifecycle across example hosts"
+  message: "fix: preserve exact viewport limits across zoom conversions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T00:52:15Z"
+  created_at: "2026-11-01T01:19:04Z"
