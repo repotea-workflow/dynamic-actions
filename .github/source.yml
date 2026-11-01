@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "fee06940cdc030a876d8fd120742952bb2a0e2eb"
+  sha: "969d4e053dff595d7a7c1d465525686f889408f4"
   ref_type: "branch"
   ref_name: "feat/dart-build-tools"
-  run_id: 41317608434
+  run_id: 41317775451
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Apply pinned Dart formatter to existing App files"
+  message: "Respect resolved workspace language version in formatting"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T14:43:49Z"
+  created_at: "2026-11-01T14:45:50Z"
