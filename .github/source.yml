@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e0fa0d898fc653c6ddb78914a2a2223186ac0fd9"
+  sha: "75ef05a38c922dcadf4a9af9077c0230683a030d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41285738812
+  run_id: 41286351372
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: fit emoji fallback labels within shared element geometry"
+  message: "test: recheck shared text geometry across current hosts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T07:40:49Z"
+  created_at: "2026-11-01T07:50:13Z"
