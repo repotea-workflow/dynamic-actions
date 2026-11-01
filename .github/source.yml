@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "1418ff9b6470ce79dd499a72dfe4050868c5ed35"
+  sha: "585766b64a14779755b84d4db40616a5505cfd2d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41306151147
+  run_id: 41308049873
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify native workshop border and symbol workflows"
+  message: "fix: keep crop handles clear of system navigation gestures"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T12:22:18Z"
+  created_at: "2026-11-01T12:46:24Z"
