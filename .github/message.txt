@@ -1,3 +1,1 @@
-Merge pull request #21 from 0xfe10/fix/unconfirmed-delivery-result
-
-fix(bridge): do not report unconfirmed sends as accepted
+Run managed cron tasks through the Pi agent
