@@ -1,1 +1,3 @@
-Keep formatting of unrelated files unchanged
+Merge pull request #23 from 0xfe10/fix/single-quoted-reply
+
+Send requested quotes as the final reply, not a second message
