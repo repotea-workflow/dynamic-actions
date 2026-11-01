@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4710a02bb9a2694e3a71019e88e229a197ea4051"
+  sha: "83fd9c6b088f0b1a0ff5131f5dc07abceacd17b1"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41273147252
+  run_id: 41273949310
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep plugin view overlay clear of shared toolbar"
+  message: "docs: record example property and failure recheck"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T04:27:18Z"
+  created_at: "2026-11-01T04:39:52Z"
