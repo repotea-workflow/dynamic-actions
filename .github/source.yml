@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "95220c90c69dc01485a4b3e73ebf993d20a5dcba"
+  sha: "0e88f9cb2926abee537bdb6eff98da2f4a70e696"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41298617053
+  run_id: 41299164431
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: reject malformed embedded SVG images before caching"
+  message: "test: revalidate drawing dismissal on current example artifacts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T10:42:02Z"
+  created_at: "2026-11-01T10:49:41Z"
