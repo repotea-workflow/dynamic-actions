@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "076108311ec2d3053f6b313d94345704858859a7"
+  sha: "ef5898e90d0d53f503c6a3e68fd26c6a04ad20dc"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41266708689
+  run_id: 41271669986
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve viewport when toggling outside-frame visibility"
+  message: "fix: anchor shared touch navigation before applying axis constraints"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T02:49:12Z"
+  created_at: "2026-11-01T04:05:15Z"
