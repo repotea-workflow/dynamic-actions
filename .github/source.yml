@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9cde662db9973ade24b5e0cb8153236c644ddaf0"
+  sha: "eaae0b9d716a5445770df1c6f69db749100efc30"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41287990372
+  run_id: 41290058785
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: own SVG preview failures and recovered image lifetime"
+  message: "fix: constrain live text resizing and retain dismissed drawing ink"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T08:14:24Z"
+  created_at: "2026-11-01T08:43:49Z"
