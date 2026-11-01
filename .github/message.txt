@@ -1,1 +1,1 @@
-Run managed cron tasks through the Pi agent
+Normalize legacy empty check results before agent execution
