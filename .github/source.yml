@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "67792d0c40c756efc92af1bec063f5e0ee489df3"
+  sha: "dd21df078b0ca5d484097d3b8bbffb94f7a265ee"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41406003886
+  run_id: 41410574607
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: confirm drawing dismissal retains ink across example routes"
+  message: "fix: validate parsed inspector drafts before committing"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T07:23:49Z"
+  created_at: "2026-11-02T08:06:06Z"
