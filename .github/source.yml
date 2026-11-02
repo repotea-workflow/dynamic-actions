@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bf577a940aac7bb2be2d30b4b21f6a020fbd427f"
+  sha: "00976966a27e1951b288a4ffb8d054cde263573f"
   ref_type: "branch"
-  ref_name: "feat/progressive-resource-lists"
-  run_id: 41462433816
+  ref_name: "main"
+  run_id: 41463403495
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep resource search available during loading and recovery"
+  message: "Keep resource search available during loading and recovery (#350)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T14:29:44Z"
+  created_at: "2026-11-02T14:35:57Z"
