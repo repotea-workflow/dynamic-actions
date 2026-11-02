@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b453bbf9ed247d022e80ad742f55beef44006992"
+  sha: "3b199a870e330c5087afd9ebce7fb8fd2c0cb423"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41511231678
+  run_id: 41513546872
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record unwrapped field overflow fix and seven-route replay"
+  message: "docs: record native text completion and unwrapped field verification"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T19:34:59Z"
+  created_at: "2026-11-02T19:49:57Z"
