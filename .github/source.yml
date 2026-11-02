@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5b2c36eb828755c1e4bdda025833e820011b6de7"
+  sha: "5ed3c18331f1c1cb98e710f4db7367f30687cabe"
   ref_type: "branch"
-  ref_name: "feat/progressive-release-refinement"
-  run_id: 41521223123
+  ref_name: "main"
+  run_id: 41521635029
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Simplify Release workflows and preserve editing recovery"
+  message: "Simplify Release workflows and preserve editing recovery (#359)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T20:39:44Z"
+  created_at: "2026-11-02T20:42:32Z"
