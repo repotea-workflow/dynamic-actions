@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "16c4f575d92c2a17d3005366419fe1da48636ccf"
+  sha: "7b457dc1e577a9bac4dcb178a1c1969559a994f0"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41366274913
+  run_id: 41367472214
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve image fit and loaded pixels during interaction"
+  message: "fix: keep catalog source labels compact after asset conversion"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T00:16:51Z"
+  created_at: "2026-11-02T00:30:13Z"
