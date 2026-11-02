@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4a2034228d46b56aa0e5cbde3cd2c0504a9ea23d"
+  sha: "4a9d4f71f950cd6e60ad17c0cf69b953cc07b807"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41396446424
+  run_id: 41398740925
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep canvas font payloads out of image interactions"
+  message: "test: verify native template image fits and workshop text styles"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T05:51:45Z"
+  created_at: "2026-11-02T06:15:22Z"
