@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "a12caa30a21d892a025d2efa26aa0e4ff7372ea4"
+  sha: "04fb3a665a13471d87f1a36150622fa0965c21ea"
   ref_type: "branch"
-  ref_name: "feat/compact-help-copy"
-  run_id: 41510484250
+  ref_name: "main"
+  run_id: 41511092860
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Move optional workspace explanations into shared help tips"
+  message: "Move optional workspace explanations into shared help tips (#357)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T19:30:12Z"
+  created_at: "2026-11-02T19:34:09Z"
