@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "af6a01685c1551aca8e0080ed331eb12426c6b34"
+  sha: "602a47ce6fd8150612ab5d7a53e3fc8fb6f0ceff"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41538815858
+  run_id: 41542839650
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record shared table draft validation across examples"
+  message: "fix: size template text before its first preview"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T22:37:32Z"
+  created_at: "2026-11-02T23:07:11Z"
