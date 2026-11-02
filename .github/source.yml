@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b54fe3321ad613fcdee05fbdd739c2775497e12c"
+  sha: "677c6910a177cad1238d47eb251b00805309cafc"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41490964344
+  run_id: 41492218076
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify font arrival history and scoped layout gestures"
+  message: "docs: record complete layout gesture and native font batches"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T17:25:14Z"
+  created_at: "2026-11-02T17:33:15Z"
