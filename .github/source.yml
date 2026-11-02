@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ab747a638c2d684962f238f1250a159c69bb520c"
+  sha: "ee4f3d7ba440e18cb305a6f535d80ac61a4a7d28"
   ref_type: "branch"
-  ref_name: "feat/progressive-role-policies"
-  run_id: 41527716924
+  ref_name: "main"
+  run_id: 41528236372
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Move role and tenant explanations into shared title help"
+  message: "Move role and tenant explanations into shared title help (#361)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T21:22:21Z"
+  created_at: "2026-11-02T21:25:50Z"
