@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8ecf06415129339da01d40b772c19fc5604b5158"
+  sha: "1aacb2a84e95cbada13f6029f7a843a7b8910b13"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41388503474
+  ref_name: "fix/online-debug-without-release-signing"
+  run_id: 41394644031
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Export trusted Swan source registration from one committed revision (#345)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Allow online Debug builds without Release signing assets"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T04:27:02Z"
+  created_at: "2026-11-02T05:32:55Z"
