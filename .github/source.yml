@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "c1f792a1de0d6206efce1f1d5d9819d4d9433fca"
+  sha: "da8031f8eff294d970e953f9e257250d89e20527"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-setup"
-  run_id: 41471962178
+  ref_name: "main"
+  run_id: 41472747632
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Preserve drafts and query context when leaving guided setup"
+  message: "Offer resumable App setup through existing settings (#351)\n\n* Add optional resumable App setup guidance\n\n* Preserve drafts and query context when leaving guided setup\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T15:29:02Z"
+  created_at: "2026-11-02T15:33:43Z"
