@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4970881f90487a1ad3dd28bb6b83dab41e8c52aa"
+  sha: "482ecc6dba0f965e68e99c1bcf4cdc65d60241f4"
   ref_type: "branch"
   ref_name: "feat/progressive-identities"
-  run_id: 41504621529
+  run_id: 41505700457
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Simplify identity management and preserve editing drafts"
+  message: "Keep identity drafts and leave confirmation after refetch failure"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T18:52:28Z"
+  created_at: "2026-11-02T18:59:29Z"
