@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "a681cd869e6ac951a123fe9da7b2af3a366298f7"
+  sha: "6236aeeda0c2437958cabcc94349be98fe2ce571"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41333515074
+  ref_name: "fix/dev-source-registration"
+  run_id: 41387297854
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Use Hawk Debug Specs for Swan development builds (#344)\n\n* Make Swan development builds consume Hawk Debug Specs by default\n\n* Preserve Flutter terminal interaction in online run mode\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Export trusted Swan source registration from one committed revision"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-01T17:50:39Z"
+  created_at: "2026-11-02T04:14:09Z"
