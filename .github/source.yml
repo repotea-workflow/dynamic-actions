@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d1d69ad1d0f53b9749dcb9b41aa61d9501175d46"
+  sha: "b5f4cf0313cf91a2c7a68e359e8ba3964f3d1ba3"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41546823797
+  run_id: 41547549305
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Protect App role policy and user workflows"
+  message: "Preserve role drafts when conflict reload fails"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T23:37:24Z"
+  created_at: "2026-11-02T23:43:15Z"
