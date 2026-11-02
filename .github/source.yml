@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e2cfbbcb7cce7a5ac3649e1c5d980433677f2b7b"
+  sha: "30f134bad4105408846cdcb86fb85ba308e82468"
   ref_type: "branch"
-  ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41423942416
+  ref_name: "main"
+  run_id: 41425996819
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Replace Swan developer shell and Python tooling with Dart"
+  message: "Replace Swan developer shell and Python tooling with Dart (#347)\n\nProvide a Dart developer entrypoint for Swan and migrate API generation, resource seeding and the Android storage fixture. Remove the obsolete Hawk smoke script and update CI and documentation. Android and Admin checks pass; the pre-existing Rust dependency audit failure is recorded in the PR review."
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T09:50:48Z"
+  created_at: "2026-11-02T10:06:06Z"
