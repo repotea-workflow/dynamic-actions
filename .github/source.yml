@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "da8031f8eff294d970e953f9e257250d89e20527"
+  sha: "0aad60ac9a691d54c71ca7337fb6f1da1e1b6097"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41472747632
+  ref_name: "feat/progressive-workspace-overviews"
+  run_id: 41474531291
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Offer resumable App setup through existing settings (#351)\n\n* Add optional resumable App setup guidance\n\n* Preserve drafts and query context when leaving guided setup\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Organize tenant and App overviews around scoped tasks"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T15:33:43Z"
+  created_at: "2026-11-02T15:44:35Z"
