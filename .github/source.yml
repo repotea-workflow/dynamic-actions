@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1aacb2a84e95cbada13f6029f7a843a7b8910b13"
+  sha: "56d4d64a2a5e173d27f8f947b20cb47c75648648"
   ref_type: "branch"
-  ref_name: "fix/online-debug-without-release-signing"
-  run_id: 41394644031
+  ref_name: "main"
+  run_id: 41395789821
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Allow online Debug builds without Release signing assets"
+  message: "Allow online Debug builds without Release signing assets (#346)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T05:32:55Z"
+  created_at: "2026-11-02T05:44:58Z"
