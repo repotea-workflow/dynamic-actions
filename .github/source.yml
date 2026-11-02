@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "51de750d751797d88e5f0ab654453e61ce145d78"
+  sha: "1e3821295490416be98c11d45456bbf942059686"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-list"
-  run_id: 41544636773
+  ref_name: "main"
+  run_id: 41545104947
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Document preview startup retry in browser check"
+  message: "Simplify App role creation and contextual help (#365)\n\n* Simplify App role creation and shared contextual help\n\n* Document preview startup retry in browser check\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T23:20:28Z"
+  created_at: "2026-11-02T23:24:01Z"
