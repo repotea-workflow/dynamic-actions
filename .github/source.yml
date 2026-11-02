@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3bc032944eca6cceedc76a06b6d0b518f6d67e4a"
+  sha: "4a2034228d46b56aa0e5cbde3cd2c0504a9ea23d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41389839289
+  run_id: 41396446424
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: bundle example fonts and honor table cell typefaces"
+  message: "fix: keep canvas font payloads out of image interactions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T04:41:22Z"
+  created_at: "2026-11-02T05:51:45Z"
