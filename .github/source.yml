@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "677c6910a177cad1238d47eb251b00805309cafc"
+  sha: "6f49dec1fe87eab856a87949d9557f446c2e0305"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41492218076
+  run_id: 41500400716
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record complete layout gesture and native font batches"
+  message: "fix: keep contextual HUD clear of selection handles"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T17:33:15Z"
+  created_at: "2026-11-02T18:25:30Z"
