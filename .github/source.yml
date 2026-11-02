@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "c926d5b159a21836c34408d6691ca89095c24622"
+  sha: "ae6885cea9a0af7826b8df308e55fe1407bee21b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41521643581
+  run_id: 41523916595
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify nonzero text bounds and native custom-template table controls"
+  message: "docs: verify nonzero text bounds across seven actual example pages"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T20:42:43Z"
+  created_at: "2026-11-02T20:57:40Z"
