@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "47d8494ad2bf7687370d297debb2691d480ca5ce"
+  sha: "caef57bb35873b15d9fc063bfdcd2f01e2cbc807"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41518258101
+  run_id: 41519688313
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record native table controls and fourteen layout QR gestures"
+  message: "docs: verify layout barcode gestures and native table route followup"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T20:20:16Z"
+  created_at: "2026-11-02T20:29:53Z"
