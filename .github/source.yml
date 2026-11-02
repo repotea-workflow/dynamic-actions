@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "0aad60ac9a691d54c71ca7337fb6f1da1e1b6097"
+  sha: "4693878be93e0b8c769bb1e19f18a42726358711"
   ref_type: "branch"
-  ref_name: "feat/progressive-workspace-overviews"
-  run_id: 41474531291
+  ref_name: "main"
+  run_id: 41475400457
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Organize tenant and App overviews around scoped tasks"
+  message: "Organize tenant and App overviews around scoped tasks (#352)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T15:44:35Z"
+  created_at: "2026-11-02T15:49:49Z"
