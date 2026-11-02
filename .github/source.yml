@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "fb9b41cc75e87a423c40cde918004565a49f76b5"
+  sha: "eed153ca4bd793a4c9dea5c42b21e862e3e75ac4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41381400625
+  run_id: 41383497086
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix shared Unicode emoji sizing and input history"
+  message: "Record catalog geometry and native missing-engine acceptance"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T03:08:29Z"
+  created_at: "2026-11-02T03:30:57Z"
