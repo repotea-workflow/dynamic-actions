@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "626bd8b135d41589a35f90b026a6f4d22fbecb68"
+  sha: "4dcf251b1bb7fd05d629dea32188531d65e338bc"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41459081901
+  run_id: 41469337695
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve table cell geometry when changing counts"
+  message: "fix: size vertical text selections for grapheme cells"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T14:08:38Z"
+  created_at: "2026-11-02T15:12:54Z"
