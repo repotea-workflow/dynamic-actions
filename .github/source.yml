@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4938c4a4dcd4b2b72fc5412f5a7174f33d0a1403"
+  sha: "eb8807a8b5416b7a3ecd42dd8ecddd648ac17820"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-settings"
-  run_id: 41536560134
+  ref_name: "main"
+  run_id: 41537014969
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Move optional form guidance into shared contextual help"
+  message: "Move optional form guidance into shared contextual help (#363)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T22:21:38Z"
+  created_at: "2026-11-02T22:24:45Z"
