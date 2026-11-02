@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2fab4947213add6fd1a741566cc1a6441dfc6858"
+  sha: "298c1c97e52ebe75838fd768721392131e9512d5"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41549261618
+  run_id: 41549547132
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record current Android text replay"
+  message: "docs: record current layout showcase replay"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T23:57:16Z"
+  created_at: "2026-11-02T23:59:43Z"
