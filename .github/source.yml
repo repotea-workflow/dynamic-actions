@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "eed153ca4bd793a4c9dea5c42b21e862e3e75ac4"
+  sha: "6472aa7331c42f9d02de874740c702ad909d9967"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41383497086
+  run_id: 41387699167
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Record catalog geometry and native missing-engine acceptance"
+  message: "test: verify drawing dismissal across browser and Android"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T03:30:57Z"
+  created_at: "2026-11-02T04:18:26Z"
