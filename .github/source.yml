@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b54a83e093560e0ded3efae0e99137ef8c0fa53d"
+  sha: "626bd8b135d41589a35f90b026a6f4d22fbecb68"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41448741311
+  run_id: 41459081901
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: preserve shape breakout style and atomic history"
+  message: "fix: preserve table cell geometry when changing counts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T12:56:35Z"
+  created_at: "2026-11-02T14:08:38Z"
