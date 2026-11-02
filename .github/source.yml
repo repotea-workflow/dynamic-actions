@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4693878be93e0b8c769bb1e19f18a42726358711"
+  sha: "eb02b94097378a466bbab0916c6abc5c5c3b96b6"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41475400457
+  ref_name: "feat/progressive-signing-assets"
+  run_id: 41481966581
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Organize tenant and App overviews around scoped tasks (#352)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Focus signing assets on selected material and validation state"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T15:49:49Z"
+  created_at: "2026-11-02T16:29:35Z"
