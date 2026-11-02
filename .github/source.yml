@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "39ff084dca751087a448c9bf8c89811e3d9a5556"
+  sha: "7758b61592efe7fbb1af6dd0ebae2877a086bd13"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41543390685
+  run_id: 41545954089
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record initial template sizing and native dynamic replay"
+  message: "docs: record pinned browser and layout acceptance"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T23:11:10Z"
+  created_at: "2026-11-02T23:30:43Z"
