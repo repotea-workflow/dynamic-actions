@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "de220153ae4ccda579a3bb6daef0eb748b82dd36"
+  sha: "52462389c77d820daa243b6d6a82abeaeac3bc6e"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-release"
-  run_id: 41524666862
+  ref_name: "main"
+  run_id: 41525231588
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Simplify App Release workflows and protect unfinished drafts"
+  message: "Simplify App Release workflows and protect unfinished drafts (#360)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T21:02:39Z"
+  created_at: "2026-11-02T21:06:16Z"
