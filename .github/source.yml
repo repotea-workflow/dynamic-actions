@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "69b9f8d7aef18ec50352ae383dac9803966f08cd"
+  sha: "2f7e7716e20e51839fd85fe8deed9bcaf346afc4"
   ref_type: "branch"
-  ref_name: "feat/progressive-style-themes"
-  run_id: 41499761140
+  ref_name: "main"
+  run_id: 41501058616
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Capture settled style editor states in browser verification"
+  message: "Simplify style catalogs and protect theme editing drafts (#355)\n\n* Simplify style catalogs and protect theme editing drafts\n\n* Capture settled style editor states in browser verification\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T18:21:26Z"
+  created_at: "2026-11-02T18:29:36Z"
