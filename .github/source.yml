@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7196021be11ea1dba97b1cd9e8aa20abe193f003"
+  sha: "38906ba6085bb9fb09cec5133098437751b63bce"
   ref_type: "branch"
-  ref_name: "feat/progressive-dashboard"
-  run_id: 41457059600
+  ref_name: "main"
+  run_id: 41457880309
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Focus App settings and Release actions with progressive disclosure"
+  message: "Focus App settings and Release actions with progressive disclosure (#348)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T13:54:53Z"
+  created_at: "2026-11-02T14:00:30Z"

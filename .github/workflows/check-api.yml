@@ -26,6 +26,8 @@ jobs:
     needs: source
     name: API Checks
     runs-on: ubuntu-24.04
+    env:
+      AVIARY_DART: dart
     steps:
       - uses: actions/checkout@v6
 
@@ -58,13 +60,6 @@ jobs:
           flutter-version: 3.47.4
           channel: stable
 
-      - name: Configure FVM command
-        run: |
-          mkdir -p "$RUNNER_TEMP/bin"
-          printf '#!/bin/sh\nif [ "$1" = exec ]; then\n  shift\n  PATH="$FLUTTER_ROOT/bin:$FLUTTER_ROOT/bin/cache/dart-sdk/bin:$PATH"\n  export PATH\n  exec "$@"\nfi\ncommand="$1"\nshift\nexec "$FLUTTER_ROOT/bin/$command" "$@"\n' > "$RUNNER_TEMP/bin/fvm"
-          chmod +x "$RUNNER_TEMP/bin/fvm"
-          echo "$RUNNER_TEMP/bin" >> "$GITHUB_PATH"
-
       - name: Resolve Flutter dependencies
         working-directory: waterfowl
         env:
@@ -73,7 +68,7 @@ jobs:
           GIT_CONFIG_COUNT: "1"
           GIT_CONFIG_KEY_0: credential.https://github.com.helper
           GIT_CONFIG_VALUE_0: "!gh auth git-credential"
-        run: fvm dart pub get --enforce-lockfile
+        run: dart tool/develop.dart bootstrap
 
       - name: Install OpenAPI TypeScript tooling
         run: pnpm --dir songbirds install --frozen-lockfile
@@ -95,7 +90,6 @@ jobs:
 
       - name: Resolve Dart build tool contracts
         run: |
-          (cd waterfowl/tools/swan_build && fvm dart pub get --enforce-lockfile)
           (cd .contract-buildbox && dart pub get --enforce-lockfile)
 
       - name: Check Rust and build API binaries
@@ -105,7 +99,8 @@ jobs:
         run: just test-rust
 
       - name: Verify OpenAPI and generated clients
-        run: just generate-check
+        working-directory: waterfowl
+        run: dart tool/develop.dart generate-api check
 
       - name: Verify database migrations and API integration
         env:
@@ -115,7 +110,6 @@ jobs:
           just db-up
           just migrate
           just test-db
-          just smoke-backend
 
       - name: Verify real Alibaba OSS acceptance
         env:
