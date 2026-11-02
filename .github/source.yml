@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "6236aeeda0c2437958cabcc94349be98fe2ce571"
+  sha: "8ecf06415129339da01d40b772c19fc5604b5158"
   ref_type: "branch"
-  ref_name: "fix/dev-source-registration"
-  run_id: 41387297854
+  ref_name: "main"
+  run_id: 41388503474
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Export trusted Swan source registration from one committed revision"
+  message: "Export trusted Swan source registration from one committed revision (#345)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T04:14:09Z"
+  created_at: "2026-11-02T04:27:02Z"
