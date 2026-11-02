@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4dcf251b1bb7fd05d629dea32188531d65e338bc"
+  sha: "33a56b05c1da0abed803b4c55b04c309e58a10e7"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41469337695
+  run_id: 41476724612
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: size vertical text selections for grapheme cells"
+  message: "test: verify template text fits before selection"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T15:12:54Z"
+  created_at: "2026-11-02T15:57:51Z"
