@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "56d4d64a2a5e173d27f8f947b20cb47c75648648"
+  sha: "e2cfbbcb7cce7a5ac3649e1c5d980433677f2b7b"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41395789821
+  ref_name: "fix/debug-build-spec-inputs"
+  run_id: 41423942416
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Allow online Debug builds without Release signing assets (#346)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Replace Swan developer shell and Python tooling with Dart"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T05:44:58Z"
+  created_at: "2026-11-02T09:50:48Z"
