@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "eb02b94097378a466bbab0916c6abc5c5c3b96b6"
+  sha: "0f5679d6503ca8cd58376a6743c3dd3fdefe9e30"
   ref_type: "branch"
   ref_name: "feat/progressive-signing-assets"
-  run_id: 41481966581
+  run_id: 41483768618
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Focus signing assets on selected material and validation state"
+  message: "Preserve signing selection focus on repeated choice"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T16:29:35Z"
+  created_at: "2026-11-02T16:40:32Z"
