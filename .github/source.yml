@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8f8f2ca181121f383597a47162d07d0d5cde880a"
+  sha: "26fe7a83d68aa84d35aee9cf44a81f35229e2317"
   ref_type: "branch"
-  ref_name: "feat/progressive-release-workflow"
-  run_id: 41460325380
+  ref_name: "main"
+  run_id: 41460894093
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Guide Release packaging through selection and readiness review"
+  message: "Guide Release packaging through selection and readiness review (#349)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T14:16:23Z"
+  created_at: "2026-11-02T14:20:00Z"
