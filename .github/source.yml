@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3dad115ee0466b976c7abb7badd4eae30288e113"
+  sha: "8994359c0e5edd83b110803624f19f77ae99c2b6"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41484103978
+  ref_name: "feat/platform-ai-chat"
+  run_id: 41485808705
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Focus signing assets on selected material and validation state (#353)\n\n* Focus signing assets on selected material and validation state\n\n* Preserve signing selection focus on repeated choice\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Replace platform overview with focused Astryx chat preview"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T16:43:02Z"
+  created_at: "2026-11-02T16:53:21Z"
