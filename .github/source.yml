@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f805bdf79995f0e6050e7877b2924b565c811088"
+  sha: "ffebf309465ad339de29d5a58f858e516509a820"
   ref_type: "branch"
-  ref_name: "feat/progressive-permissions"
-  run_id: 41516511373
+  ref_name: "main"
+  run_id: 41517064321
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Simplify permission pages and preserve editing drafts"
+  message: "Simplify permission pages and preserve editing drafts (#358)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T20:09:08Z"
+  created_at: "2026-11-02T20:12:34Z"
