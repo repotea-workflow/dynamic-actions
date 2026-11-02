@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8994359c0e5edd83b110803624f19f77ae99c2b6"
+  sha: "3b346d1e5099dc25a8834efe7c54a175b9d22cd8"
   ref_type: "branch"
   ref_name: "feat/platform-ai-chat"
-  run_id: 41485808705
+  run_id: 41491684563
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Replace platform overview with focused Astryx chat preview"
+  message: "Use official Astryx chat templates and shared contextual help"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-02T16:53:21Z"
+  created_at: "2026-11-02T17:29:51Z"
