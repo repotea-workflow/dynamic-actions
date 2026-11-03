@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2e3ed9e2c43e4f017f90e12d36a0b6407b549ad2"
+  sha: "5235558448bbff008243f9e31640e6588ee258a5"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41652424721
+  run_id: 41662959614
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(robin): complete icon workflow recovery and route acceptance"
+  message: "fix(robin): use official controls and serialize session restoration"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T14:18:51Z"
+  created_at: "2026-11-03T15:21:14Z"
