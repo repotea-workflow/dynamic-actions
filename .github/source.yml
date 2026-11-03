@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e67a574cf721048baf028f7ce472ff9d1fb68fe3"
+  sha: "0093b27a191079c6da22c988038776afd6fe5132"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41629890123
+  run_id: 41635235800
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: exercise snapped image previews in the foreground layer"
+  message: "docs: record workshop crop acceptance and sizing gap"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T11:44:13Z"
+  created_at: "2026-11-03T12:23:14Z"
