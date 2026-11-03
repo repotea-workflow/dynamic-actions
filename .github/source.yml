@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "78c3e3930251bac00195de34654e8870ee13160e"
+  sha: "30e784585c78f77f63cfe19eebecba0f92d7e6d0"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41585327977
+  run_id: 41591627559
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify dynamic numeric controls on remaining native examples"
+  message: "fix: group typed text color changes into one undo step"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T05:41:13Z"
+  created_at: "2026-11-03T06:43:11Z"
