@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3bcd89f71784dfe4b20a0d4ba616f53161d044b7"
+  sha: "8fe5f687c8ecaf150b0a2de626742a99e55fbf25"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41615804392
+  run_id: 41618489857
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): recover tutorial media uploads and protect drafts"
+  message: "fix(robin): make device model editing and list recovery reliable"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T10:01:52Z"
+  created_at: "2026-11-03T10:20:59Z"
