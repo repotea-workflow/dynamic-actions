@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "825fedd024c6d204bbec8291c4269be0f77c4b20"
+  sha: "73efa5369eb21fba9ec02e00019cd38c672c6372"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41697129123
+  run_id: 41698046124
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify workshop serial and time controls against actual UI"
+  message: "docs: complete seven-route native dash checks and workshop offsets"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T18:48:09Z"
+  created_at: "2026-11-03T18:53:43Z"
