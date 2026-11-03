@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5339bbf410269b6dbdf864f6c92c591fdfab9330"
+  sha: "1236ca8033793c779281b2af9aa36ca3b22f4150"
   ref_type: "branch"
-  ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41565424996
+  ref_name: "main"
+  run_id: 41565470889
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Redact phone identifiers from notices"
+  message: "Implement native PLUME pages and editing flows from Lanhu\n\nImplement Lanhu-aligned native PLUME flows. Android and Admin checks passed; API check reports pre-existing Rust dependency audit vulnerabilities (RUSTSEC-2026-0387 and RUSTSEC-2026-0385), unrelated to this waterfowl-only change."
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T02:20:00Z"
+  created_at: "2026-11-03T02:20:24Z"
