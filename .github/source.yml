@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9b631ba6ac78074c357635c9cd56f1dd3fe50941"
+  sha: "c34c2f257f9750aa00487ceea250687c1efb24df"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41631468236
+  run_id: 41633303496
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): preserve branding drafts and recover resource uploads"
+  message: "fix(robin): retain packaging edits through conflicts and refresh failures"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T11:55:56Z"
+  created_at: "2026-11-03T12:09:20Z"
