@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e4a2b2286cdb8f25c65154cb04ab7a5d0960ae9b"
+  sha: "75af32b9c8775cbcc680b45d129969c55f430d5f"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41573463129
+  ref_name: "fix/rustsec-crypto-dependencies"
+  run_id: 41573684378
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Record verified settings and resource help browser coverage"
+  message: "Upgrade P-256 dependencies to resolve RustSec advisories"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T03:39:10Z"
+  created_at: "2026-11-03T03:41:33Z"
