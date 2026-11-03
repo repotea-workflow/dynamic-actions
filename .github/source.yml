@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "b7b2c26d9f17d1924359641860e2b36a85b0d2e6"
+  sha: "d3e23a414605c0cad894e604366b23bfb82b7619"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41598743565
+  run_id: 41601416551
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Preserve resource property drafts across selection and save recovery"
+  message: "Protect schema editing and recover device lifecycle failures in dialogs"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T07:48:26Z"
+  created_at: "2026-11-03T08:11:22Z"
