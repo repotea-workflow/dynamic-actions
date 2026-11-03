@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "70106a566b8f8a055190cb8f06c2d5a5eff85b6b"
+  sha: "936c975ceae935d287ccc7cdacbcc6ea837392ed"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41724793705
+  run_id: 41725186683
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify catalog image retry flow"
+  message: "docs: verify catalog format retries"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T21:46:54Z"
+  created_at: "2026-11-03T21:49:58Z"
