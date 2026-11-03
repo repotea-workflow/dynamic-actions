@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "1ee30f1fc4ec73619d09ed3010a836ec9ccaea86"
+  sha: "5339bbf410269b6dbdf864f6c92c591fdfab9330"
   ref_type: "branch"
   ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41565047913
+  run_id: 41565424996
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge remote-tracking branch 'origin/main' into fix/debug-build-spec-inputs"
+  message: "Redact phone identifiers from notices"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T02:16:21Z"
+  created_at: "2026-11-03T02:20:00Z"
