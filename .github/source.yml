@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "3c4b0cf2032d3087389c37b8af67b960615e3af8"
+  sha: "7ae06191e92cf221eaeadff8b65cc86b0acaf54b"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41560424567
+  ref_name: "main"
+  run_id: 41561174958
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Make App user creation compact and recoverable"
+  message: "Make App user creation compact and recoverable (#370)\n\n* Protect App role policy and user workflows\n\n* Preserve role drafts when conflict reload fails\n\n* Harden scoped role drafts and assignment recovery\n\n* Improve App role list readability and interaction coverage\n\n* Make App user access management compact and recoverable\n\n* Move optional settings and locale guidance into shared help\n\n* Make App user creation compact and recoverable\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T01:33:01Z"
+  created_at: "2026-11-03T01:39:55Z"
