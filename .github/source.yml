@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "be6ea4ce0590491fae6f1af80674c307d2d1a203"
+  sha: "e3e41c4c8d4d88ec35d17da206ff356bc6189f8f"
   ref_type: "branch"
-  ref_name: "fix/rustsec-crypto-dependencies"
-  run_id: 41577425270
+  ref_name: "fix/debug-build-spec-inputs"
+  run_id: 41578309802
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Restore strict backend checks and consistent native catalog fallbacks"
+  message: "Log unified Swan notices through AppLogger"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:19:28Z"
+  created_at: "2026-11-03T04:28:26Z"
