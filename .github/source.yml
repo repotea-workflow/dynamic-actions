@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "a9511a2cf761064754dd493a90548dbb88a69460"
+  sha: "5dc0cca5c942e0f90a44e9c1e3c9e3dfd59d957e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41601084147
+  run_id: 41606550823
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: group element color input into one undo step"
+  message: "fix: group indexed table color inputs in shared bindings"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T08:08:40Z"
+  created_at: "2026-11-03T08:52:52Z"
