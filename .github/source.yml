@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "0e51bba85616510c09aee058a58ee45becd0ec6b"
+  sha: "ffffe26887243b74e25df16ad9ef7d5d638a6173"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41575963235
+  run_id: 41576709023
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Provide recoverable sign-out when no workspace is accessible"
+  message: "Refresh tenant access browser checks and record executed route evidence"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:05:10Z"
+  created_at: "2026-11-03T04:12:15Z"
