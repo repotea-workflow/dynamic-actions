@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b0dc59ef06ccb9adeb0f882c487cd7cb8f9ca90e"
+  sha: "ab7abfd22b086951db9e7ac6fc22a6dbe639592e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41713266521
+  run_id: 41714139505
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify workshop barcode font step buttons in browser"
+  message: "docs: reconcile completed per-route line dash checks with pending scope"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T20:31:40Z"
+  created_at: "2026-11-03T20:36:55Z"
