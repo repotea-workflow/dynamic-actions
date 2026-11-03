@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "1f5410f4e050b5effd5ffa25ca5cf05b8ab77017"
+  sha: "0c2c2ca5868a5f1fbf894670db30ab246b6f6321"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41674735889
+  run_id: 41678596524
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify dynamic fields and native shape numeric controls"
+  message: "docs: verify per-page calendar dialogs and native shape controls"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T16:29:47Z"
+  created_at: "2026-11-03T16:52:39Z"
