@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "7aa2ca7fd646313f863f2bd65d97fb1fb5fb5b78"
+  sha: "b0dc59ef06ccb9adeb0f882c487cd7cb8f9ca90e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41712344596
+  run_id: 41713266521
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify native workshop barcode input and error recovery"
+  message: "docs: verify workshop barcode font step buttons in browser"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T20:26:04Z"
+  created_at: "2026-11-03T20:31:40Z"
