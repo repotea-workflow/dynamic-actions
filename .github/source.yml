@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2db02a580daadb563d1f7e8773a8c6b712fbca12"
+  sha: "a9511a2cf761064754dd493a90548dbb88a69460"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41597346607
+  run_id: 41601084147
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify foreground colors on two more example routes"
+  message: "fix: group element color input into one undo step"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T07:35:50Z"
+  created_at: "2026-11-03T08:08:40Z"
