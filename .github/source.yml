@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "35650853e4d25c4a578bb5de5fd7308ce9bc353b"
+  sha: "e0c71974510a47cda8e7d647ef3b1170b1e564cb"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41566261268
+  ref_name: "fix/debug-build-spec-inputs"
+  run_id: 41566579103
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Simplify page guidance and cover app user flows"
+  message: "Merge latest main into Swan notices"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T02:28:03Z"
+  created_at: "2026-11-03T02:31:00Z"
