@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "244be36de9f730b83179e188eb8b989633f2a280"
+  sha: "0802495f54debb83d3bb8d8099d9904a51c5bb43"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41734766440
+  run_id: 41736227335
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record pixel template text geometry replay"
+  message: "docs: verify labeledit multiline text drag"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T22:54:34Z"
+  created_at: "2026-11-03T23:05:07Z"
