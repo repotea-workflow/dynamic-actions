@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e0c71974510a47cda8e7d647ef3b1170b1e564cb"
+  sha: "b5d35323639577e26da739c213ca8aa33ee3e0a3"
   ref_type: "branch"
-  ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41566579103
+  ref_name: "main"
+  run_id: 41568298055
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge latest main into Swan notices"
+  message: "Unify Swan notices and API error diagnostics (#372)\n\n* fix: resolve Debug build platform and response contracts\n\n* test: preserve API key setup after client authentication update\n\n* Replace Swan developer shell and Python tooling with Dart\n\n* Unify Swan notices and API error diagnostics\n\n* Redact phone identifiers from notices\n\n---------\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T02:31:00Z"
+  created_at: "2026-11-03T02:47:56Z"
