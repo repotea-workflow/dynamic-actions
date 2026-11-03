@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8179a04facd01a42df85480b966cd5198a7c2324"
+  sha: "2e3ed9e2c43e4f017f90e12d36a0b6407b549ad2"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41646942298
+  run_id: 41652424721
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: reduce API check debug artifacts within runner disk limits"
+  message: "feat(robin): complete icon workflow recovery and route acceptance"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T13:44:00Z"
+  created_at: "2026-11-03T14:18:51Z"
