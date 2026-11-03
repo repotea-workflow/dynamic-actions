@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bfdbd749602c9b3bdcbcb7c60ebe84b25795300b"
+  sha: "ff76cee6614ae5e88a7007d6d7bd42b957da6aea"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41595519833
+  run_id: 41596646992
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep feedback drafts and mutation targets isolated per ticket"
+  message: "Resume partially saved storage defaults without repeating bindings"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T07:19:19Z"
+  created_at: "2026-11-03T07:29:40Z"
