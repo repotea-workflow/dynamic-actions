@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "34013cdadd210b7fb3e83259009e7cf899f160a0"
+  sha: "19a62059d58df17dc575e5cf8b9dcb1b81c12da8"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41558391454
+  ref_name: "main"
+  run_id: 41558784526
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Move optional settings and locale guidance into shared help"
+  message: "Move optional admin guidance into shared help (#369)\n\n* Protect App role policy and user workflows\n\n* Preserve role drafts when conflict reload fails\n\n* Harden scoped role drafts and assignment recovery\n\n* Improve App role list readability and interaction coverage\n\n* Make App user access management compact and recoverable\n\n* Move optional settings and locale guidance into shared help\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T01:14:34Z"
+  created_at: "2026-11-03T01:17:54Z"
