@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bd7a5f5833080434ef76d33dcecdab6838f92937"
+  sha: "e86997d8d5cb51d31bb49c0bb056b61c5a3e5517"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41579876902
+  ref_name: "fix/rustsec-crypto-dependencies"
+  run_id: 41580258160
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Improve API key recovery and confirm revocation"
+  message: "Regenerate management client for current API contracts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:44:46Z"
+  created_at: "2026-11-03T04:48:54Z"
