@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7aac158f910485f4a7d0dde850d0f76e5163da94"
+  sha: "5484e6d9c2ce38ab6ac5cbd35ba992fc46e837f6"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41583955216
-  run_attempt: 1
+  ref_name: "fix/rustsec-crypto-dependencies"
+  run_id: 41582658735
+  run_attempt: 2
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Validate tenant member identifiers before creating accounts"
+  message: "Freeze required locale in signing contract fixture"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T05:26:55Z"
+  created_at: "2026-11-03T05:32:56Z"
