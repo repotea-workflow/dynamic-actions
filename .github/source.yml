@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9dadb49f9183f594c2a9db59145342553562610f"
+  sha: "57e1e51b3c52c43262949e2942f68a0ed0992b7e"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41714769448
+  run_id: 41715630448
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify native workshop barcode caption controls and histories"
+  message: "docs: verify Android barcode free and proportional resize histories"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T20:41:20Z"
+  created_at: "2026-11-03T20:46:50Z"
