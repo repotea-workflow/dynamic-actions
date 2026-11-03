@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7f036c7fec2a7966f980eb022e980d8b37e68c7a"
+  sha: "5d55bd735ed816442b52f0be4bfc8feafce6e9ad"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41639039972
+  run_id: 41644754558
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): preserve translation drafts and recover collection actions"
+  message: "feat(robin): harden font management interactions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T12:50:15Z"
+  created_at: "2026-11-03T13:29:31Z"
