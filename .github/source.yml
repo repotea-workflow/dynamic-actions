@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0ab1c2e257519fa9c4ce4960c238ab6cc8ee7c3e"
+  sha: "825db345e0611c3131cdb14f5fb9591f344600fd"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41571695883
+  run_id: 41573780254
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify dynamic font controls on remaining native examples"
+  message: "docs: verify native multiline numeric text controls on blank example"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T03:21:30Z"
+  created_at: "2026-11-03T03:42:29Z"
