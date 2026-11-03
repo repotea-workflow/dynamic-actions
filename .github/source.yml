@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bce090a734445e850562ff58c64d934bbbca269c"
+  sha: "309321af10af25aafedbd783bfdfabb15cab35fa"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41664376809
+  run_id: 41666030222
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(robin): preserve context on browser regression failures"
+  message: "fix(robin): restore focus after dismissing nested help"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T15:30:03Z"
+  created_at: "2026-11-03T15:39:00Z"
