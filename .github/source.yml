@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "4ff2ac7667928baacb538f83bc4caa3f5fe9fb0e"
+  sha: "b8419a1c36880832af898d84b307e35e4569eb9c"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41642610591
+  run_id: 41646007102
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify template text and default layout property workflows"
+  message: "docs: verify layout table controls and native dynamic text colors"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T13:14:53Z"
+  created_at: "2026-11-03T13:37:44Z"
