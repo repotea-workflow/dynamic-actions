@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "dbbd637783defd0982b725194ea58cee53530aad"
+  sha: "850e05d0438aeab9a80fc471d91db93cd39515a1"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 41550996447
+  ref_name: "feat/progressive-app-role-policy"
+  run_id: 41553022545
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Make App role permissions and assignments recoverable (#366)\n\n* Protect App role policy and user workflows\n\n* Preserve role drafts when conflict reload fails\n\n* Harden scoped role drafts and assignment recovery\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "Improve App role list readability and interaction coverage"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T00:11:16Z"
+  created_at: "2026-11-03T00:28:19Z"
