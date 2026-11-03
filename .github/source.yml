@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9d1157b6b3c4c062a6c9c50f08aa3e5a0104540b"
+  sha: "c98225b7ee383f1f82e0f7bb6a13b8b52f761f8d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41657278890
+  run_id: 41657318528
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify drawing toolbar recovery on browser and Android"
+  message: "docs: reconcile remaining layout acceptance work"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T14:48:21Z"
+  created_at: "2026-11-03T14:48:35Z"
