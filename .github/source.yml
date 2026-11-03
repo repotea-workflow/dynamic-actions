@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "90399fcc006bb0b3c43ba68e752c7ceeedf0296b"
+  sha: "f871c93b523cc400f2b9f730cdd4fe24e2761176"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41582797348
+  run_id: 41583344796
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Cover platform tenant App list recovery in browser"
+  message: "Explain empty language columns and verify editor recovery"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T05:15:19Z"
+  created_at: "2026-11-03T05:20:42Z"
