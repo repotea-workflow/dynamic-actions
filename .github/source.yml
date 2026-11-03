@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ddd3fbd44c9a0309c4e85ae9d2135c07308848c9"
+  sha: "80d0f5cf31a2b8186bf8a009e8e7973cff4d5f6f"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41581573167
+  run_id: 41582484895
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Preserve App region choices through save and conflict recovery"
+  message: "Make region catalog errors visible and retryable"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T05:03:05Z"
+  created_at: "2026-11-03T05:12:07Z"
