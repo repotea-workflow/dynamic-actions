@@ -28,6 +28,10 @@ jobs:
     runs-on: ubuntu-24.04
     env:
       AVIARY_DART: dart
+      # Keep the isolated OpenAPI build and test targets within hosted-runner disk capacity.
+      CARGO_PROFILE_DEV_DEBUG: "0"
+      CARGO_PROFILE_TEST_DEBUG: "0"
+      CARGO_INCREMENTAL: "0"
     steps:
       - uses: actions/checkout@v6
 
