@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "b1e65188685a3c2bd90ac112a65b3b15f08a9777"
+  sha: "768820270348965da40ae861a3ebd9928a9b6505"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41707993337
+  run_id: 41709480686
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify native workshop live offset controls and histories"
+  message: "docs: verify Android workshop date boundary picker histories"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T19:57:21Z"
+  created_at: "2026-11-03T20:06:43Z"
