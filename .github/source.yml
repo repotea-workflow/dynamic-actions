@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "72e0841df043d2f5cd1833454c81db52c60535ef"
+  sha: "1e80211afa6c15baacdf73a17eff5e83e4fad770"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41622152718
+  run_id: 41624582380
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): preserve device detail drafts and recover media and distribution writes"
+  message: "refactor(robin): use Astryx for shared disclosures"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T10:47:28Z"
+  created_at: "2026-11-03T11:05:19Z"
