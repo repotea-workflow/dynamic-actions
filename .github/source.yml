@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "5484e6d9c2ce38ab6ac5cbd35ba992fc46e837f6"
+  sha: "763ff73587676ecaad3aee7f6be697c084ffe343"
   ref_type: "branch"
-  ref_name: "fix/rustsec-crypto-dependencies"
-  run_id: 41582658735
-  run_attempt: 2
+  ref_name: "main"
+  run_id: 41587385762
+  run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Freeze required locale in signing contract fixture"
+  message: "Fix Rust dependency audit and backend CI blockers (#374)\n\n* Upgrade P-256 dependencies to resolve RustSec advisories\n\n* Restore strict backend checks and consistent native catalog fallbacks\n\n* Regenerate management client for current API contracts\n\n* Freeze required locale in signing contract fixture\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T05:32:56Z"
+  created_at: "2026-11-03T06:02:31Z"
