@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "59107075002a97597ca81aaa4db3380ed33a77ce"
+  sha: "244be36de9f730b83179e188eb8b989633f2a280"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41734481095
+  run_id: 41734766440
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: size pixel template text before first render"
+  message: "docs: record pixel template text geometry replay"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T22:52:28Z"
+  created_at: "2026-11-03T22:54:34Z"
