@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e3e41c4c8d4d88ec35d17da206ff356bc6189f8f"
+  sha: "43c987025040d701144e1dd9a2338e762618a6e8"
   ref_type: "branch"
-  ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41578309802
+  ref_name: "feat/progressive-app-role-policy"
+  run_id: 41578461646
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Log unified Swan notices through AppLogger"
+  message: "Verify current appearance and shell draft workflows in browser"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:28:26Z"
+  created_at: "2026-11-03T04:30:10Z"
