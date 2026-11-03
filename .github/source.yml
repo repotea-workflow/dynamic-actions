@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "bdaef438207ea466773b02efe192a8eab8616aa6"
+  sha: "3667ab340944e1fd4fbb1e9a5873efa53c268c66"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41667243595
+  ref_name: "main"
+  run_id: 41672942902
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): keep sequential help interactions from competing for focus"
+  message: "Refactor Robin management interactions across all rendered routes (#373)\n\n* Protect App role policy and user workflows\n\n* Preserve role drafts when conflict reload fails\n\n* Harden scoped role drafts and assignment recovery\n\n* Improve App role list readability and interaction coverage\n\n* Make App user access management compact and recoverable\n\n* Move optional settings and locale guidance into shared help\n\n* Make App user creation compact and recoverable\n\n* Simplify page guidance and cover app user flows\n\n* Record verified settings and resource help browser coverage\n\n* Keep account guidance compact and verify profile recovery\n\n* Prevent duplicate authentication submissions and verify recovery\n\n* Provide recoverable sign-out when no workspace is accessible\n\n* Refresh tenant access browser checks and record executed route evidence\n\n* Verify current appearance and shell draft workflows in browser\n\n* Improve API key recovery and confirm revocation\n\n* Verify audit list recovery and URL state in browser\n\n* Preserve App region choices through save and conflict recovery\n\n* Make region catalog errors visible and retryable\n\n* Cover platform tenant App list recovery in browser\n\n* Explain empty language columns and verify editor recovery\n\n* Validate tenant member identifiers before creating accounts\n\n* Preserve banner records across upload retries and recover conflicts\n\n* Verify platform App creation and tenant signing workflows\n\n* Preserve feature drafts and reconcile partial distribution retries\n\n* Keep feedback drafts and mutation targets isolated per ticket\n\n* Resume partially saved storage defaults without repeating bindings\n\n* Preserve resource property drafts across selection and save recovery\n\n* Protect schema editing and recover device lifecycle failures in dialogs\n\n* fix(robin): protect paper type editing and recovery\n\n* fix(robin): preserve consumable category drafts and recovery\n\n* fix(robin): recover consumable workflows and preserve editor drafts\n\n* fix(robin): preserve manual drafts and recover file saves\n\n* fix(robin): recover tutorial media uploads and protect drafts\n\n* fix(robin): make device model editing and list recovery reliable\n\n* fix(robin): preserve device detail drafts and recover media and distribution writes\n\n* refactor(robin): use Astryx for shared disclosures\n\n* refactor(robin): migrate remaining disclosures to Astryx\n\n* fix(robin): preserve capability drafts through recovery\n\n* fix(robin): preserve branding drafts and recover resource uploads\n\n* fix(robin): retain packaging edits through conflicts and refresh failures\n\n* fix(robin): preserve feature drafts until conflict reload succeeds\n\n* fix(robin): clarify unavailable governance and verify return navigation\n\n* fix(robin): preserve translation drafts and recover collection actions\n\n* feat(robin): harden font management interactions\n\n* ci: reduce API check debug artifacts within runner disk limits\n\n* feat(robin): complete icon workflow recovery and route acceptance\n\n* fix(fonts): align creation SQL columns and metadata bindings\n\n* fix(robin): use official controls and serialize session restoration\n\n* test(robin): preserve context on browser regression failures\n\n* fix(robin): restore focus after dismissing nested help\n\n* fix(robin): keep sequential help interactions from competing for focus\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T15:46:06Z"
+  created_at: "2026-11-03T16:19:15Z"
