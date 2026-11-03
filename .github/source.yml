@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "4799985d761bd7de45c94e134ae8e0553b01ecfd"
+  sha: "bd7a5f5833080434ef76d33dcecdab6838f92937"
   ref_type: "branch"
-  ref_name: "fix/debug-build-spec-inputs"
-  run_id: 41579836530
+  ref_name: "feat/progressive-app-role-policy"
+  run_id: 41579876902
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge main before publishing notice logging"
+  message: "Improve API key recovery and confirm revocation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:44:24Z"
+  created_at: "2026-11-03T04:44:46Z"
