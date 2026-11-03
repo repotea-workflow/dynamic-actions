@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f64b4571bfdc0d46ec58a22e665cb447d29e6016"
+  sha: "0e51bba85616510c09aee058a58ee45becd0ec6b"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41575286488
+  run_id: 41575963235
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Prevent duplicate authentication submissions and verify recovery"
+  message: "Provide recoverable sign-out when no workspace is accessible"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T03:58:08Z"
+  created_at: "2026-11-03T04:05:10Z"
