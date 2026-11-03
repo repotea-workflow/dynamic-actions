@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "beb456301a61c38482c08b4bbd8474cfd4a6bb17"
+  sha: "8a0ca8f1d83ed0db4beb57de6e7275a4c7d756d1"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41587656706
+  run_id: 41593743755
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify platform App creation and tenant signing workflows"
+  message: "Preserve feature drafts and reconcile partial distribution retries"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T06:05:13Z"
+  created_at: "2026-11-03T07:03:18Z"
