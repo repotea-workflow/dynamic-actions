@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0093b27a191079c6da22c988038776afd6fe5132"
+  sha: "70af8d9a1cf726b5df152f8f30d9a37896e0c563"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41635235800
+  run_id: 41637631649
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record workshop crop acceptance and sizing gap"
+  message: "docs: verify shared crop fitting on browser and Android"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T12:23:14Z"
+  created_at: "2026-11-03T12:40:18Z"
