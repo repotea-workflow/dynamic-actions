@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3aa14afa83783af7c0c33f44343f288cca4c708e"
+  sha: "759d9f1cb7a813ad69765afd0c030424aed7f8f2"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41612237131
+  run_id: 41613873007
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify blank text color workflows in browser and Android"
+  message: "docs: verify sample text color workflows in browser and Android"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T09:35:32Z"
+  created_at: "2026-11-03T09:47:36Z"
