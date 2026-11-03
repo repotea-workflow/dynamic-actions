@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ffffe26887243b74e25df16ad9ef7d5d638a6173"
+  sha: "be6ea4ce0590491fae6f1af80674c307d2d1a203"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41576709023
+  ref_name: "fix/rustsec-crypto-dependencies"
+  run_id: 41577425270
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Refresh tenant access browser checks and record executed route evidence"
+  message: "Restore strict backend checks and consistent native catalog fallbacks"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:12:15Z"
+  created_at: "2026-11-03T04:19:28Z"
