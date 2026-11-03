@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9f97436ec3f37caa1a5b99399bee4be015360054"
+  sha: "19fd79b9144a11a22226825ba6ddd4652d961d91"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41738124422
+  run_id: 41739089328
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify sample switch table resize visibility"
+  message: "docs: verify current rasterization exports"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T23:19:03Z"
+  created_at: "2026-11-03T23:26:11Z"
