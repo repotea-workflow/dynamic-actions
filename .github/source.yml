@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "898875a5b0a6f850bbc0a2ab84df0fbf9cabff7b"
+  sha: "65dbc77af3a6748692da55501bd185004633700e"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41604414898
+  run_id: 41611246156
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): preserve consumable category drafts and recovery"
+  message: "fix(robin): recover consumable workflows and preserve editor drafts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T08:35:44Z"
+  created_at: "2026-11-03T09:28:18Z"
