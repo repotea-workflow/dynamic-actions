@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "ef3c36209510ac8f9de94c0c104dd44fbdb85272"
+  sha: "b1e65188685a3c2bd90ac112a65b3b15f08a9777"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41704528183
+  run_id: 41707993337
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify native time formats and reconcile catalog resource scope"
+  message: "docs: verify native workshop live offset controls and histories"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T19:34:52Z"
+  created_at: "2026-11-03T19:57:21Z"
