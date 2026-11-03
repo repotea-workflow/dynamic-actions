@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "980a4d1a50aa035d529f80a2712b2b26bae2d836"
+  sha: "e6641878880d70d556cd43a670c86f2d126f83a0"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41620265749
+  run_id: 41623516398
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify layout drawing tools and native edit workflows"
+  message: "fix: preserve drawing data across view-only edit sessions"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T10:33:45Z"
+  created_at: "2026-11-03T10:57:27Z"
