@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2527c9cfc4d2e44ca05b65c1434e8d4326f1becb"
+  sha: "980a4d1a50aa035d529f80a2712b2b26bae2d836"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41617416338
+  run_id: 41620265749
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify drawing exit and gesture workflows across actual examples"
+  message: "docs: verify layout drawing tools and native edit workflows"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T10:13:22Z"
+  created_at: "2026-11-03T10:33:45Z"
