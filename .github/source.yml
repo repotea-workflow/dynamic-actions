@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "11903389a11f13372da0771c37e1841f11eb1470"
+  sha: "b34c2dd19f106acd1100861b7605a4ef174e4a11"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41634216721
+  run_id: 41634975509
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): preserve feature drafts until conflict reload succeeds"
+  message: "fix(robin): clarify unavailable governance and verify return navigation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T12:15:53Z"
+  created_at: "2026-11-03T12:21:20Z"
