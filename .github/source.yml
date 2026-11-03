@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "309321af10af25aafedbd783bfdfabb15cab35fa"
+  sha: "bdaef438207ea466773b02efe192a8eab8616aa6"
   ref_type: "branch"
   ref_name: "feat/progressive-app-role-policy"
-  run_id: 41666030222
+  run_id: 41667243595
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): restore focus after dismissing nested help"
+  message: "fix(robin): keep sequential help interactions from competing for focus"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T15:39:00Z"
+  created_at: "2026-11-03T15:46:06Z"
