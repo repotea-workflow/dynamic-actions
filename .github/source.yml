@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "43c987025040d701144e1dd9a2338e762618a6e8"
+  sha: "4799985d761bd7de45c94e134ae8e0553b01ecfd"
   ref_type: "branch"
-  ref_name: "feat/progressive-app-role-policy"
-  run_id: 41578461646
+  ref_name: "fix/debug-build-spec-inputs"
+  run_id: 41579836530
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify current appearance and shell draft workflows in browser"
+  message: "Merge main before publishing notice logging"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T04:30:10Z"
+  created_at: "2026-11-03T04:44:24Z"
