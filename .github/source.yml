@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "fc8339b4b54df5f157caa6faaf4997cf4c33cc08"
+  sha: "8e4826aa8a825b75e154b5df5b97ecf064a90431"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41684379562
+  run_id: 41691134246
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify line slider bounds and native shape steps"
+  message: "docs: verify native line controls and actual layout properties"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T17:27:28Z"
+  created_at: "2026-11-03T18:10:31Z"
