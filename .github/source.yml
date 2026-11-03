@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "a3f9dcd72de5cf2438b6aa8dc5129d9f422d9a0a"
+  sha: "e67a574cf721048baf028f7ce472ff9d1fb68fe3"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41628682776
+  run_id: 41629890123
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record actual catalog resource failure and recovery checks"
+  message: "test: exercise snapped image previews in the foreground layer"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T11:35:11Z"
+  created_at: "2026-11-03T11:44:13Z"
