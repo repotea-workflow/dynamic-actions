@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "feac7e52d0b6cc628242ab6116fdaa0eb0388d76"
+  sha: "ddec38478bd06cf3545b0a5075802ed3d903697f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41810210689
+  run_id: 41821497622
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: close native shape steps and reconcile table cell spacing"
+  message: "test: accept whole-table spacing steps on seven example routes"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T09:50:38Z"
+  created_at: "2026-11-04T11:31:10Z"
