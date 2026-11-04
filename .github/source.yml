@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "fb3baed2547476f2fd46d7f24b317b37e47d778d"
+  sha: "e3016ff95e0801cf59d2fc517d961b72332fddb6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41788264419
+  run_id: 41790456221
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify plugin serial colors and identify raster table coverage gap"
+  message: "test: verify sample native cell spacing with actual ink row bands"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T06:51:19Z"
+  created_at: "2026-11-04T07:10:56Z"
