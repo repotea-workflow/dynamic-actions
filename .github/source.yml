@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "42c4c0ee8113e65c498384895a6db1f324b1e14e"
+  sha: "7b27bebd82f300294a6df93efd2cca30504dc6e1"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41753868190
+  run_id: 41754165561
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: correct replay counts and preserve acceptance indexes"
+  message: "test: isolate canvas ink in free rotation replay"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T01:24:55Z"
+  created_at: "2026-11-04T01:27:33Z"
