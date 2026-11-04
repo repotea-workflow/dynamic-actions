@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "537aa65670e08fdb78b1b347b40898b60bacc230"
+  sha: "73d1d7020e13ddd02740b0caa17c05548dda35c4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41769893501
+  run_id: 41774477105
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: complete seven-route native table color acceptance"
+  message: "test: verify automatic table width on actual example pages"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T03:54:03Z"
+  created_at: "2026-11-04T04:39:11Z"
