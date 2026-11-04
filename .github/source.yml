@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "1140dc2f00ff6f4eb2d0b53f1ece5c1e30f5774b"
+  sha: "5effae717d9ec7cf6e0b0a420086b012f383efd9"
   ref_type: "branch"
   ref_name: "feat/store-offer-sequence"
-  run_id: 41779495776
+  run_id: 41780077287
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Reject incomplete catalog scans before sequence initialization"
+  message: "Cover complete multi-page sequence catalog scans"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-04T05:29:02Z"
+  created_at: "2026-11-04T05:34:38Z"
