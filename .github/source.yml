@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "7b05c52982f09ff693f5738ece459690b94fb807"
+  sha: "af9f05de2f345a1d0f3bebba4aa8e19adb67084b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41878349639
+  run_id: 41884042771
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify labeledit multiline editing on Android"
+  message: "fix: fit pending template text before selection"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T17:32:24Z"
+  created_at: "2026-11-04T18:08:22Z"
