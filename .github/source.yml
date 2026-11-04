@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e3016ff95e0801cf59d2fc517d961b72332fddb6"
+  sha: "8262c9d7fb8c59c7641e7e9b943bf843e6e37747"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41790456221
+  run_id: 41791534263
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify sample native cell spacing with actual ink row bands"
+  message: "test: accept template-switch cell spacing and workshop font navigation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T07:10:56Z"
+  created_at: "2026-11-04T07:20:17Z"
