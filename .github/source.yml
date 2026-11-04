@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "fc14f7ec5cca55efa9eedb06e2033a322688e070"
+  sha: "139a11cbb3aac0b078c9aa08e688fcb9030495f8"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41924757624
+  run_id: 41927669772
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: recheck custom template text width"
+  message: "test: recheck labeledit multiline geometry"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T22:23:05Z"
+  created_at: "2026-11-04T22:43:10Z"
