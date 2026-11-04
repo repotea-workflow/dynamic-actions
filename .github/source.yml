@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "74bc83d80f03d17cc261fbef50bd491071906c7d"
+  sha: "b317cc3c2d45a2a9557e04b16383fc95a02fde31"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41918794300
+  run_id: 41919224506
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify component visibility editing history"
+  message: "test: verify layout showcase remounts"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T21:44:04Z"
+  created_at: "2026-11-04T21:46:50Z"
