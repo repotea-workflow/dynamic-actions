@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "7df3a92995c5c3c76986a6aad2c6254af6b176fd"
+  sha: "9af0197e83a6f995cfc55d03a3a472bfb170a193"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41914399362
+  run_id: 41915409288
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: capture sample-switch Android table drag"
+  message: "test: verify text rasterization export flow"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T21:15:48Z"
+  created_at: "2026-11-04T21:22:10Z"
