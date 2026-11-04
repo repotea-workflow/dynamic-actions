@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "447b93a0798f7f561907cf11073c27dcdc6bedb4"
+  sha: "aa0e14b333275f202a5a6d66275ee92bc95116f6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41852363159
+  run_id: 41860081421
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record native table spacing acceptance"
+  message: "docs: verify native shape colors on seven example routes"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T14:55:20Z"
+  created_at: "2026-11-04T15:40:07Z"
