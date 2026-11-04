@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "a4579860eedaafc604ad62ea1bd3a46bca778e0b"
+  sha: "c3ebd50c9f676ee30c3b845f7b3824896e42dcda"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41916529087
+  run_id: 41917246317
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: capture Android raster export states"
+  message: "test: refresh all example route smoke baseline"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T21:29:30Z"
+  created_at: "2026-11-04T21:34:00Z"
