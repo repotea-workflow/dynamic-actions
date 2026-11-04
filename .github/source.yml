@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "780a34d7bdbd5ea0cf6ab3b6a80333bd2b38f4d1"
+  sha: "5539b2d8ece98ca8b881440772d088dcc4927c47"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41828878742
+  run_id: 41837971525
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: record layout drawing saves and native numeric sessions"
+  message: "test: record physical drawing histories and native key delivery boundary"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T12:23:53Z"
+  created_at: "2026-11-04T13:25:46Z"
