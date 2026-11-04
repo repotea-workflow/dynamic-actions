@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d53cb51059f487a2045b4e69d33b8916511e5ccf"
+  sha: "fe717dcd55a70276fc326b20e6c61284b7f8b06f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41806684621
+  run_id: 41807644671
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept template-switch native rectangle step controls"
+  message: "test: accept custom template shape steps and resolve font reopen locator"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T09:20:46Z"
+  created_at: "2026-11-04T09:27:38Z"
