@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3fb131be45bd244305a8c5a73aaa8a063dd56a68"
+  sha: "548cafe0953f95bab1357a8d600a6cbce2a10423"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41869184020
+  run_id: 41873611195
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept native layout table automatic width controls"
+  message: "test: verify native catalog table width and touch controls"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T16:37:43Z"
+  created_at: "2026-11-04T17:03:00Z"
