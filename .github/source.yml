@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "15a93ae76c2a478b1e7d6d68697f732c35a6b075"
+  sha: "e36f19518f867eb709687d2720d5e4b9fe73f4f9"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41751826095
+  run_id: 41752789891
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record rotated workshop QR"
+  message: "docs: record workshop image drag"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T01:07:37Z"
+  created_at: "2026-11-04T01:15:45Z"
