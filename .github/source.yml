@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "9be132857e6d618a15b540e82538bee9e359e68c"
+  sha: "f80b50d900695c1972749c622baddb8998d831e6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41742590465
+  run_id: 41744963921
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record current Android text geometry replay"
+  message: "test: verify plugin table structure and history"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-03T23:53:09Z"
+  created_at: "2026-11-04T00:11:46Z"
