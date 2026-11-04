@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "8af31019dce8beb0f04529694f52fc2cc5d05d52"
+  sha: "d2aff30f051b4693c48dc7dfb2b62ee1e64b29d8"
   ref_type: "branch"
-  ref_name: "fix/swan-notice-acceptance"
-  run_id: 41757477599
+  ref_name: "main"
+  run_id: 41760976444
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(plume): keep unsupported sharing counts unknown"
+  message: "Align Swan PLUME pages with Lanhu native flows (#376)\n\n* Align shared PLUME message fallbacks for native catalog registration\n\n* Enable development configuration for generated Debug apps\n\n* Avoid undeclared resource probes and preserve safe API diagnostics\n\n* Use native account icon on Clarity sign-in page\n\n* fix(swan): align Plume account and device flows with Lanhu\n\n* fix(swan): retain Plume artwork under managed themes\n\n* fix(swan): pin bundled source artwork resolution\n\n* test(swan): use fixed bundled artwork fixture digest\n\n* fix(swan): align Plume settings hierarchy and row values\n\n* fix(plume): align profile and support pages with Lanhu\n\n* fix(plume): preserve canvas headers and language row styling\n\n* fix(plume): retain ink color for language names\n\n* fix(plume): keep account identity on one row\n\n* fix(plume): align printer settings variants and device actions\n\n* fix(plume): refine firmware row and device action icon sizing\n\n* fix(swan): align Plume paper and label selection with Lanhu\n\n* fix(swan): match Plume account deletion layout and identity copy\n\n* fix(swan): align Plume onboarding and printer category spacing\n\n* fix(swan): match Plume empty and loading state artwork proportions\n\n* fix(swan): align Plume sign-in provider controls with Lanhu\n\n* fix(swan): align Plume scanner frame and connection switches\n\n* feat(swan): complete Plume quick sign-in and password confirmation UI\n\n* fix(swan): let Plume scanner mode labels wrap without overflow\n\n* fix(swan): align Plume home printer status and header proportions\n\n* feat(plume): add optional personal center grid\n\n* fix(plume): align grid membership action to trailing edge\n\n* feat(plume): separate brand and device home layouts\n\n* fix(plume): match home artwork scale and compact paper entry\n\n* fix(plume): show live preference values in personal center list\n\n* fix(plume): keep device management out of list menu\n\n* fix(plume): allow scrolling deletion confirmation at large text\n\n* fix(plume): match FAQ hierarchy and answer contrast\n\n* fix(plume): align account flow rows with lanhu\n\n* fix(plume): align device settings labels and firmware action\n\n* fix(plume): align label search and rainbow preview with lanhu\n\n* fix(plume): resolve shell icons from presentation defaults\n\n* fix(plume): keep wifi connection flows scrollable at large text\n\n* fix(plume): scroll Bluetooth discovery on compact displays\n\n* fix(plume): align Home2 feature typography with Lanhu\n\n* fix(plume): grow Home2 cards with accessible text sizes\n\n* feat(plume): render real runtime Banner carousel on Home2\n\n* fix(plume): allow Home2 shortcuts to grow with text scale\n\n* fix(plume): align list menu dividers and unit indicator with Lanhu\n\n* fix(plume): keep status and records controls usable in compact views\n\n* fix(plume): restore Home2 reference background texture through asset registry\n\n* feat(plume): show connected printer sharing controls\n\n* fix(plume): match Lanhu template catalog two-column layout\n\n* fix(plume): label template navigation entry\n\n* fix(plume): match Lanhu label search layout\n\n* test(plume): cover document print draft flow\n\n* fix(plume): hide empty document state after selection\n\n* fix(plume): keep unsupported sharing counts unknown\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T01:57:05Z"
+  created_at: "2026-11-04T02:28:44Z"
