@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "5539b2d8ece98ca8b881440772d088dcc4927c47"
+  sha: "d1ed5ecce50da332214d2c6a323101528a2555be"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41837971525
+  run_id: 41841524460
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: record physical drawing histories and native key delivery boundary"
+  message: "test: accept native whole-table steps and reconcile numeric coverage"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T13:25:46Z"
+  created_at: "2026-11-04T13:48:59Z"
