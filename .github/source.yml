@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "73d1d7020e13ddd02740b0caa17c05548dda35c4"
+  sha: "8ef51146bba314ccd3ff3f7e15e40752281753cf"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41774477105
+  run_id: 41778006286
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify automatic table width on actual example pages"
+  message: "test: verify table sizing workflows across actual example pages"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T04:39:11Z"
+  created_at: "2026-11-04T05:14:28Z"
