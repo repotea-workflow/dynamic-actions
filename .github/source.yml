@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "2ab945fb11b5275da701b620d435a44ec99a0e90"
+  sha: "bcd04c62b0eef987dfc795e82ad5f43389989d41"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41757341142
+  run_id: 41759446817
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify current native basic canvas multiline editing"
+  message: "fix: preserve authored widths during free text resize"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T01:55:52Z"
+  created_at: "2026-11-04T02:14:51Z"
