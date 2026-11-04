@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "d1ed5ecce50da332214d2c6a323101528a2555be"
+  sha: "a0cda54967d1c802f665fb774346c1ad7524a13f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41841524460
+  run_id: 41847153880
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept native whole-table steps and reconcile numeric coverage"
+  message: "fix: stabilize pending text intrinsic width"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T13:48:59Z"
+  created_at: "2026-11-04T14:24:11Z"
