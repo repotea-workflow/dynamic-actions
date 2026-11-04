@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "358be44cc593e185fd9e92c2c9c0de19c85dec2a"
+  sha: "8cee8f3bdfa0ecd68175d77b62d9ad349a37cd0d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41863535389
+  run_id: 41866184555
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify sample-switch table spacing through public zoom"
+  message: "test: verify native layout image replacement and recovery"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T16:02:10Z"
+  created_at: "2026-11-04T16:20:22Z"
