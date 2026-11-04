@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "af9f05de2f345a1d0f3bebba4aa8e19adb67084b"
+  sha: "1a4fbcdd75abaf4f04209e35e396874df6432ad4"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41884042771
+  run_id: 41885446462
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: fit pending template text before selection"
+  message: "test: record native sample template switching"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T18:08:22Z"
+  created_at: "2026-11-04T18:16:21Z"
