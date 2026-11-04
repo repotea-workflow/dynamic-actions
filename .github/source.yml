@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "bb531825f30b35ab5fdfc6d8d682fe33059c62f8"
+  sha: "446675963679521cdb061a0e1d27c92d2bfa9018"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41796962618
+  run_id: 41797828724
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept rotated table automatic width on seven browser examples"
+  message: "test: accept Workshop native multiline text style controls"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T08:06:38Z"
+  created_at: "2026-11-04T08:13:30Z"
