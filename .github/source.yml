@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3c11ef3841183379d78ad0c6b35af836a5aca436"
+  sha: "7b05c52982f09ff693f5738ece459690b94fb807"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41876366468
+  run_id: 41878349639
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: recheck labeledit multiline selection containment"
+  message: "test: verify labeledit multiline editing on Android"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T17:19:13Z"
+  created_at: "2026-11-04T17:32:24Z"
