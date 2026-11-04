@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "f95fa92e23669f735dd08561b3d8230d672c2c2c"
+  sha: "998eace1fc174c256f4e6467f723e7088aa2d28a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41750291889
+  run_id: 41750715526
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: record workshop QR interaction"
+  message: "docs: record workshop CODE128 interaction"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T00:54:43Z"
+  created_at: "2026-11-04T00:58:24Z"
