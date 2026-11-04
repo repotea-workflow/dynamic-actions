@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "168a582faaecc35af4a7ff6b1852b109e87e2f61"
+  sha: "8af31019dce8beb0f04529694f52fc2cc5d05d52"
   ref_type: "branch"
   ref_name: "fix/swan-notice-acceptance"
-  run_id: 41756993222
+  run_id: 41757477599
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Merge remote-tracking branch 'origin/main' into fix/swan-notice-acceptance"
+  message: "fix(plume): keep unsupported sharing counts unknown"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T01:52:43Z"
+  created_at: "2026-11-04T01:57:05Z"
