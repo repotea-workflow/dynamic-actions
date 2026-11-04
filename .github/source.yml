@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "50db7ab944d4ab64f7166cddf41d07cf07c2c9b9"
+  sha: "d14b570d0f0dbddd067d6b83d0e41c726c074798"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41747691892
+  run_id: 41748330899
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: verify plugin text transforms in canvas ROI"
+  message: "docs: record plugin inspector replay"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T00:33:33Z"
+  created_at: "2026-11-04T00:38:42Z"
