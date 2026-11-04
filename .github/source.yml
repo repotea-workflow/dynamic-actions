@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "e2c64689e220dd51fa92c7f0bd8e02d67035b4e0"
+  sha: "7b2443a0d714db179978c86caac38bfd8203946b"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41933677027
+  run_id: 41935058545
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Record custom template Android text geometry"
+  message: "Record sample Android code properties"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T23:26:20Z"
+  created_at: "2026-11-04T23:36:44Z"
