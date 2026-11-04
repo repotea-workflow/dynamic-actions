@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "aa0e14b333275f202a5a6d66275ee92bc95116f6"
+  sha: "ccf32377a58b8909a4344f13b5787900e1f6b20f"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41860081421
+  run_id: 41861942307
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs: verify native shape colors on seven example routes"
+  message: "fix: preserve saved geometry until managed fonts are ready"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T15:40:07Z"
+  created_at: "2026-11-04T15:50:57Z"
