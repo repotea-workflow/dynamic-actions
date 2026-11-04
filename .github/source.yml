@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "3f8c0e366fa69167d2df107298a8a8753a011bbe"
+  sha: "885f52960cb11c2aceb167020fbae6b474c5e159"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41804545359
+  run_id: 41805540411
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test: accept Workshop native physical font endpoints with export history"
+  message: "test: accept sample native shape steps and scoped Workshop font reopen"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-04T09:05:25Z"
+  created_at: "2026-11-04T09:12:36Z"
