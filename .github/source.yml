@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "f99298ebcf287a45bfd0f46ad3d78771b2d8e941"
+  sha: "41fe81dfedcd9fa60f9e408cd7d69bc8a23ca1bd"
   ref_type: "branch"
-  ref_name: "docs/local-resources-aviary-plan"
-  run_id: 41972882710
+  ref_name: "main"
+  run_id: 41973252254
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs(openwiki): \u5c07 Swan \u672c\u5730\u8cc7\u6e90\u8a08\u756b\u8b6f\u70ba\u7e41\u9ad4\u4e2d\u6587\n\n\u8b93 PR #381 \u8a08\u756b\u6587\u4ef6\u8207 development index \u9023\u7d50\u8aaa\u660e\u4e00\u81f4\u4f7f\u7528 zh-TW\uff0c\u4fdd\u7559\u6280\u8853\u5c08\u540d\u8207\u539f\u6709\u7d50\u69cb\u3002"
+  message: "docs: Swan local-resources plan (Cosmos Rigel parity) (#381)\n\n* Add Swan local-resources plan aligned with Cosmos Rigel.\n\nDocument Git-first bundled theme/icon strategy, phased rollout, and acceptance criteria for Waterfowl/Swan without changing runtime code yet.\n\n* docs(openwiki): \u5c07 Swan \u672c\u5730\u8cc7\u6e90\u8a08\u756b\u8b6f\u70ba\u7e41\u9ad4\u4e2d\u6587\n\n\u8b93 PR #381 \u8a08\u756b\u6587\u4ef6\u8207 development index \u9023\u7d50\u8aaa\u660e\u4e00\u81f4\u4f7f\u7528 zh-TW\uff0c\u4fdd\u7559\u6280\u8853\u5c08\u540d\u8207\u539f\u6709\u7d50\u69cb\u3002\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T05:15:56Z"
+  created_at: "2026-11-05T05:19:19Z"
