@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "562a2a2c2c51876bf3b19689ef0b44e6a3da8b13"
+  sha: "5f7cbc60e51402aa6e0fa6e214404d0a681eb76a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42060245399
+  run_id: 42061514649
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Record labeledit transform acceptance"
+  message: "Record workshop composition acceptance"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T15:57:54Z"
+  created_at: "2026-11-05T16:08:32Z"
