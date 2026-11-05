@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d8845a2b5d640f3b6f0474978417d4877ead9b5b"
+  sha: "9b03034a6b46e29c06566a4c0b529af91234ae57"
   ref_type: "branch"
-  ref_name: "feat/swan-local-resources-images"
-  run_id: 41978325329
+  ref_name: "main"
+  run_id: 41979045301
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(style_assets): assert plume shared fallback resolution order"
+  message: "feat(swan): bundle-only theme resources in release builds (#383)\n\n* feat(swan): bundle-only theme resources in release builds\n\nRelease and non-internal product builds stop calling runtime files for\nregistry theme/icon aliases and skip unpinned bundled background refresh,\nso shell artwork renders from bundled assets without Hawk HTTP fetches.\n\n* feat(swan): bundle plume shell icons for offline theme resolution\n\nAdd missing PLUME catalog SVGs (Koboyo slugs from resource_seed) and extend\nstyle asset lookup with plume/public fallbacks plus rootBundle-first loading.\n\n* feat(swan): add remaining plume catalog shell SVGs\n\nComplete PLUME icon catalog coverage using Koboyo slugs from resource_seed.\n\n* chore(swan): refresh bundled theme asset index\n\n* fix(robin): retire platform static resource drive UI\n\nStatic theme/icon bytes live in Git per local-resources; hide the Robin\nresource center from nav and return 404 for legacy /platform/resources\nand /platform/files routes while Hawk files APIs stay for CLI clients.\n\n* fix(robin): retire platform static resource drive UI\n\nHide the platform resource center from navigation and return 404 for\n/platform/resources and legacy /platform/files while Hawk files APIs\nremain for seed-resources and other non-UI clients.\n\n* chore(robin): remove platform-resources API client stub\n\nDrive UI is gone; Hawk management endpoints remain for CLI seed-resources.\n\n* fix(robin): restore platform-resources-api client\n\nRevert accidental deletion; Hawk management API client stays while UI retires.\n\n* test(style_assets): assert plume shared fallback resolution order\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T06:07:43Z"
+  created_at: "2026-11-05T06:14:14Z"
