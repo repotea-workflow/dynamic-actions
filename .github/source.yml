@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "89bffd75f44f0178c66f76347443e4352bb6e11c"
+  sha: "2ab80b39b4b4770942779cc779b1b525e82a8ae4"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42025146988
+  ref_name: "fix/language-pack-remote-i18n-391"
+  run_id: 42062152936
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs(swan): close local-resources \u00a710 and Av-F3 wiring (#393)\n\nSync acceptance checkboxes with verified main behavior, document Android\nverify as the bundle gate, and add a lightweight app_shell wiring test.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "docs(openwiki): split registry bundle-only from i18n refresh\n\nDocument that static assets are local-only in release while Fluent packs\nstill sync from the runtime i18n API with bundled assembly fallback."
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T12:12:26Z"
+  created_at: "2026-11-05T16:13:02Z"
