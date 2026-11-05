@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "1b9e669287dc93f5aa9a124238650f995fe826a8"
+  sha: "26c54af60f78a683250f505cadc4520d2c30ae08"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42000245473
+  run_id: 42004507927
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify imported remote PNG and SVG recovery on native catalog page"
+  message: "Verify native catalog text controls and exact histories"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:11:03Z"
+  created_at: "2026-11-05T09:42:08Z"
