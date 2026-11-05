@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "2438224bcc2a5063f987129d54e884994ffa23c5"
+  sha: "3bb951f8b53a45263d32ae69389749f594595daa"
   ref_type: "branch"
-  ref_name: "feat/swan-local-resources-closure-verify"
-  run_id: 42004506376
+  ref_name: "main"
+  run_id: 42005187516
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): add presentation closure verify for local resources\n\nDocument shared/family/app/presentation scope and verify only assembly-relevant assets via --closure/--presentation while keeping full check as the default for develop.dart check."
+  message: "feat(swan): add presentation closure verify for local resources (#387)\n\nDocument shared/family/app/presentation scope and verify only assembly-relevant assets via --closure/--presentation while keeping full check as the default for develop.dart check.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:42:07Z"
+  created_at: "2026-11-05T09:46:59Z"
