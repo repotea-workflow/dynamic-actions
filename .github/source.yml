@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d554f93b6ea2f6afb0f57da9e00290e7e6758b86"
+  sha: "e2fef529d28d37808e091e412bbd63e2c413a50d"
   ref_type: "branch"
-  ref_name: "feat/av-p2-runtime-lookup-order"
-  run_id: 42015073334
+  ref_name: "main"
+  run_id: 42022823143
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): Av-P2 scoped theme asset lookup order\n\nWire override \u2192 app \u2192 family \u2192 public \u2192 legacy resolution through style_assets and RegistryStyleAssetResolver, mirroring verify closure paths."
+  message: "feat(swan): Av-P2 scoped theme asset lookup order (#390)\n\nWire override \u2192 app \u2192 family \u2192 public \u2192 legacy resolution through style_assets and RegistryStyleAssetResolver, mirroring verify closure paths.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T10:58:30Z"
+  created_at: "2026-11-05T11:55:25Z"
