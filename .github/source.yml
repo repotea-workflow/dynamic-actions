@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "09550a7a1c6fe60a2aa86f7d58b12b4931d00024"
+  sha: "dfb10c7007a719b4f971d4af346998d292f74eaa"
   ref_type: "branch"
-  ref_name: "chore/robin-retire-resource-client"
-  run_id: 41979761657
+  ref_name: "feat/swan-local-resources-assets"
+  run_id: 41979812574
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(robin): remove unused platform-resources API client\n\nThe platform static resource drive UI is already retired; this module had no remaining imports."
+  message: "fix(swan): omit duplicate _default bytes from source registration\n\nPublic _default theme files ship in the Flutter asset bundle but should\nnot inflate builtinResources when their SHA-256 already appears under\nthemes/plume, keeping Hawk registration within the 256-entry limit."
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T06:20:47Z"
+  created_at: "2026-11-05T06:21:11Z"
