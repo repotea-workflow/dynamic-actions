@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "85e23eec4e854e01a23b727e0f30c7e66b8349ab"
+  sha: "d8845a2b5d640f3b6f0474978417d4877ead9b5b"
   ref_type: "branch"
   ref_name: "feat/swan-local-resources-images"
-  run_id: 41977416775
+  run_id: 41978325329
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(robin): restore platform-resources-api client\n\nRevert accidental deletion; Hawk management API client stays while UI retires."
+  message: "test(style_assets): assert plume shared fallback resolution order"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T05:59:25Z"
+  created_at: "2026-11-05T06:07:43Z"
