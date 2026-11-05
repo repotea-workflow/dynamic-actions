@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "6b38e617b8f959ee8827b910c7cefa78fac2f341"
+  sha: "e1acad3dbfd1f2ada2fd35be922c930376059874"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42017179604
+  run_id: 42021727009
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify native time barcode and QR plugin reactivation"
+  message: "Verify remaining native component element reactivations"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T11:13:32Z"
+  created_at: "2026-11-05T11:47:08Z"
