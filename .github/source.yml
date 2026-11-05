@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "ebd75b51e681090a2e4d22e96cf4c4b4ab6ed715"
+  sha: "94735dd375c78686a62059bc65ef169b00820842"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42000270495
+  run_id: 42000313643
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(robin): remove unused platform-resources API client (#385)\n\nThe platform static resource drive UI is already retired; this module had no remaining imports.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "feat(swan): commit public _default theme asset bytes (#386)\n\n* feat(swan): commit public _default theme icon bytes\n\nPopulate assets/public/themes/_default with shell and catalog icons\nthat were left untracked during #383 so bundle-only resolution can\nfall back to the shared _default namespace without runtime files API.\n\n* fix(swan): omit duplicate _default bytes from source registration\n\nPublic _default theme files ship in the Flutter asset bundle but should\nnot inflate builtinResources when their SHA-256 already appears under\nthemes/plume, keeping Hawk registration within the 256-entry limit.\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:11:08Z"
+  created_at: "2026-11-05T09:11:28Z"
