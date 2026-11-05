@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "9aea30d961bdabc06d5a2268b38c606f412608d1"
+  sha: "ebeedbf7cf854b395688d4211459906e05bebb28"
   ref_type: "branch"
-  ref_name: "feat/swan-local-resources-ci-docs"
-  run_id: 42005325832
+  ref_name: "main"
+  run_id: 42005555461
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs(ci): sync local-resources \u00a710 and Android verify (Av-E1/E5)\n\nAlign acceptance checklist with main after #387; run git lfs pull and\nverify_local_resources in Android Checks."
+  message: "docs(ci): sync local-resources \u00a710 and Android verify (Av-E1/E5) (#388)\n\nAlign acceptance checklist with main after #387; run git lfs pull and\nverify_local_resources in Android Checks.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:47:59Z"
+  created_at: "2026-11-05T09:49:35Z"
