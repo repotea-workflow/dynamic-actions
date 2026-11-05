@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "92fb5838f7eda2717a143eacee4d2c0bd48d85a9"
+  sha: "59e8b0b3d02bb7afbac08ecfe264651a030b5e5d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41978293343
+  run_id: 41979644550
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify image emoji and formula plugin reactivation"
+  message: "Record Unicode emoji rendering failure with font controls"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T06:07:29Z"
+  created_at: "2026-11-05T06:19:46Z"
