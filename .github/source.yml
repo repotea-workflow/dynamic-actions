@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "08a37a5eff9113f6a800f3e46fa9dc7b0605c037"
+  sha: "562a2a2c2c51876bf3b19689ef0b44e6a3da8b13"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42057842195
+  run_id: 42060245399
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Fix template text sizing before selection"
+  message: "Record labeledit transform acceptance"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T15:43:37Z"
+  created_at: "2026-11-05T15:57:54Z"
