@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "94735dd375c78686a62059bc65ef169b00820842"
+  sha: "2438224bcc2a5063f987129d54e884994ffa23c5"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42000313643
+  ref_name: "feat/swan-local-resources-closure-verify"
+  run_id: 42004506376
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): commit public _default theme asset bytes (#386)\n\n* feat(swan): commit public _default theme icon bytes\n\nPopulate assets/public/themes/_default with shell and catalog icons\nthat were left untracked during #383 so bundle-only resolution can\nfall back to the shared _default namespace without runtime files API.\n\n* fix(swan): omit duplicate _default bytes from source registration\n\nPublic _default theme files ship in the Flutter asset bundle but should\nnot inflate builtinResources when their SHA-256 already appears under\nthemes/plume, keeping Hawk registration within the 256-entry limit.\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "feat(swan): add presentation closure verify for local resources\n\nDocument shared/family/app/presentation scope and verify only assembly-relevant assets via --closure/--presentation while keeping full check as the default for develop.dart check."
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:11:28Z"
+  created_at: "2026-11-05T09:42:07Z"
