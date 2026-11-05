@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "7861e657c3f8ddb8091feead15cb8a5d6720d811"
+  sha: "4f3d95bf27361899414216a4200b14ab2366f2fa"
   ref_type: "branch"
-  ref_name: "feat/av-d1-language-pack-bundle-only"
-  run_id: 42023216928
+  ref_name: "main"
+  run_id: 42023416629
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): Av-D1 bundle-only LanguagePackRepository in product builds\n\nAlign Fluent i18n with registry bundle-only: release and non-internal builds skip runtime i18n ZIP fetch and rely on bundled assets plus optional verified cache."
+  message: "feat(swan): Av-D1 bundle-only LanguagePackRepository in product builds (#391)\n\nAlign Fluent i18n with registry bundle-only: release and non-internal builds skip runtime i18n ZIP fetch and rely on bundled assets plus optional verified cache.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T11:58:26Z"
+  created_at: "2026-11-05T11:59:58Z"
