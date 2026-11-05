@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "eb8a7ade07acb717f2eb7ece147d3c44bb224b3d"
+  sha: "58884b4615400fd659ef5e63a93fb7a247e86652"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42029992753
+  run_id: 42033015861
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Close inline editors when their plugin capability is removed"
+  message: "End managed external edits when their element capability is removed"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T12:46:45Z"
+  created_at: "2026-11-05T13:08:00Z"
