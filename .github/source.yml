@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "378c8be7159a43ab2ea7d89085e316400978ca57"
+  sha: "1e729e04a506d69924b739e26143c24f0c58bb56"
   ref_type: "branch"
-  ref_name: "feat/just-dotenv-load"
-  run_id: 41951311604
+  ref_name: "main"
+  run_id: 41951365849
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Auto-load .env in Just for Hawk and Swan debug workflows.\n\nMatch Cosmos dotenv-load on root and waterfowl Justfiles, delegate debug-build/run/seed to waterfowl, and merge waterfowl/.env into Debug and seed subprocesses from develop.dart."
+  message: "Auto-load .env in Just for Hawk and Swan debug workflows. (#379)\n\nMatch Cosmos dotenv-load on root and waterfowl Justfiles, delegate debug-build/run/seed to waterfowl, and merge waterfowl/.env into Debug and seed subprocesses from develop.dart.\n\nCo-authored-by: 0x128bit <306828631+0x128bit@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T01:51:32Z"
+  created_at: "2026-11-05T01:52:05Z"
