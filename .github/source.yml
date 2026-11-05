@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "093f6a9127ba0e63481c04e731259504211560bd"
+  sha: "dd451cf718749d5abddbb879f37ff8f07afd61c9"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42041426598
+  run_id: 42048769436
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify restored component inspector inputs on browser and Android"
+  message: "Keep inspector error input focused with stable semantic control groups"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T14:04:18Z"
+  created_at: "2026-11-05T14:49:51Z"
