@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "0e6a3e2cacb03721c349adcf92798c02866caa37"
+  sha: "3abfd0e618a21f006df3617cbedd2a650cf0c05a"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41960884191
+  run_id: 41961612979
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Record blank example export replay"
+  message: "Record blank PLZ roundtrip workflow"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T03:19:52Z"
+  created_at: "2026-11-05T03:26:43Z"
