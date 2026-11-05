@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "917353b1ad3847b6ee171688e8124f9fd1e2d489"
+  sha: "472009812534e5d9173f360e6f39369b0b12c2a3"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41975510934
+  run_id: 41976206716
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify component composition preserves complete documents"
+  message: "Verify text and table plugins retain documents across reactivation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T05:40:56Z"
+  created_at: "2026-11-05T05:47:37Z"
