@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "497da93abdc5dce1c1e9c48f58c9e3d03889e7bd"
+  sha: "ae72ae2026d5024f3b1ae553ff2e2e05207e41c6"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41964705976
+  run_id: 41965423793
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify actual bridge load and export workflow"
+  message: "Verify accessible recomposed layout text keyboard history"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T03:56:56Z"
+  created_at: "2026-11-05T04:04:00Z"
