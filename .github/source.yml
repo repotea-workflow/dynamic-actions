@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "d9fbb171558bd1dc50fd4a38d9ac23625c6f45ed"
+  sha: "36d2f04c35024a3762bb62c4902b06a12889d91e"
   ref_type: "branch"
-  ref_name: "feat/tenant-platform-workspace-ia-hardening"
-  run_id: 41947392361
+  ref_name: "main"
+  run_id: 41947490571
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Harden tenant vs platform workspace IA and entitlements\n\nSeparate tenant and platform navigation, branding, and layout scope in Robin while Hawk blocks tenant sessions from creating apps or managing entitlements, with migration and authorization coverage."
+  message: "Harden tenant vs platform workspace IA and entitlements (#378)\n\nSeparate tenant and platform navigation, branding, and layout scope in Robin while Hawk blocks tenant sessions from creating apps or managing entitlements, with migration and authorization coverage.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T01:16:45Z"
+  created_at: "2026-11-05T01:17:34Z"
