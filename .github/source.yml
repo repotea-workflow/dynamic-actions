@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "26c54af60f78a683250f505cadc4520d2c30ae08"
+  sha: "083b361ddaa3d96e9a52299890c094ceb9736513"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42004507927
+  run_id: 42011038725
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify native catalog text controls and exact histories"
+  message: "Verify native component text and table plugin reactivation"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:42:08Z"
+  created_at: "2026-11-05T10:29:04Z"
