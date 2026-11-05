@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "1f97dd630f3344063775e001bbfc4a6c345c6d4c"
+  sha: "eb8a7ade07acb717f2eb7ece147d3c44bb224b3d"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 42027939365
+  run_id: 42029992753
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Test intrinsic template text width before selection"
+  message: "Close inline editors when their plugin capability is removed"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T12:32:14Z"
+  created_at: "2026-11-05T12:46:45Z"
