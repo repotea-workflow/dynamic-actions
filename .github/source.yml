@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "fad976bd1a9cdec3a520e752089f7981dea3fc21"
+  sha: "e068d4eb3f6fb0f1eddd65b9fae0a776b0a1a234"
   ref_type: "branch"
-  ref_name: "feat/av-p1-plume-public-migrate"
-  run_id: 42005985898
+  ref_name: "main"
+  run_id: 42007433006
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(style_assets): dedupe public vs legacy theme path candidates"
+  message: "feat(swan): Av-P1 migrate plume theme to public/themes (#389)\n\n* feat(swan): move plume theme assets to public/themes\n\nRelocate PLUME bundled art under assets/public/themes/plume, prefer public\npaths in style theme resolution with legacy assets/themes fallback, and drop\nthe redundant pubspec themes/plume entry.\n\n* chore(assembler): point PLUME catalog resources at public/themes\n\n* chore(swan): regenerate bundled_theme_assets.json for public plume paths\n\n* fix(style_assets): dedupe public vs legacy theme path candidates\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T09:52:43Z"
+  created_at: "2026-11-05T10:03:15Z"
