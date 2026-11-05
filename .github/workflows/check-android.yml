@@ -51,6 +51,7 @@ jobs:
         run: |
           git lfs install
           git lfs pull
+      # Av-F3 / Av-E5: Git-pinned theme/icon bytes + bundled index (same as develop.dart check).
       - name: Verify local Swan resources
         working-directory: waterfowl
         run: dart run tools/swan_build/bin/verify_local_resources.dart --repo ..
