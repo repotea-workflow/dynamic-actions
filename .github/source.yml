@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "693ecc2c7c6d975ca1d244a09c52392cc4f55f72"
+  sha: "89bffd75f44f0178c66f76347443e4352bb6e11c"
   ref_type: "branch"
-  ref_name: "feat/local-resources-e1-f3-closure"
-  run_id: 42024742889
+  ref_name: "main"
+  run_id: 42025146988
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "docs(swan): close local-resources \u00a710 and Av-F3 wiring\n\nSync acceptance checkboxes with verified main behavior, document Android\nverify as the bundle gate, and add a lightweight app_shell wiring test."
+  message: "docs(swan): close local-resources \u00a710 and Av-F3 wiring (#393)\n\nSync acceptance checkboxes with verified main behavior, document Android\nverify as the bundle gate, and add a lightweight app_shell wiring test.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T12:09:35Z"
+  created_at: "2026-11-05T12:12:26Z"
