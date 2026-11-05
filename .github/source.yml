@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e01755b7012b94f00bd7b3ce63050585848a2a3f"
+  sha: "7470f938fcaced40f399506535cda41e8fbc0644"
   ref_type: "branch"
-  ref_name: "feat/local-resources-b2-c1-p3"
-  run_id: 42023931110
+  ref_name: "main"
+  run_id: 42024252930
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Document local-resources B2/C1/P3 and offline Debug Spec env.\n\nExtract releaseSwanPubspecAssetPaths for frozen assemble pubspec subset,\nadd SWAN_DEBUG_SPEC_FILE for offline debug-build, and record familyKey interim ADR."
+  message: "Document local-resources B2/C1/P3 and offline Debug Spec env. (#392)\n\nExtract releaseSwanPubspecAssetPaths for frozen assemble pubspec subset,\nadd SWAN_DEBUG_SPEC_FILE for offline debug-build, and record familyKey interim ADR.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T12:03:47Z"
+  created_at: "2026-11-05T12:05:58Z"
