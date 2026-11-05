@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "e5469b789ff1de5be5451226dd05a3fac3b1bc15"
+  sha: "a862ff18e2934e717a08fe5bc4ad2e941ca30415"
   ref_type: "branch"
-  ref_name: "feat/swan-local-resources-phase1"
-  run_id: 41974455865
+  ref_name: "main"
+  run_id: 41975898861
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(swan): add verify-local-resources Phase 1 gate\n\nWire verify_local_resources into develop.dart check, sync bundled index,\ndocument LFS patterns, and extend source registration paths for _default."
+  message: "feat(swan): local resources Phase 1 verify + asset layout (#382)\n\n* chore(swan): scaffold public/families/apps asset layout\n\nPlaceholder gitkeep files for incremental migration off flat themes/.\n\n* feat(swan): add verify-local-resources Phase 1 gate\n\nWire verify_local_resources into develop.dart check, sync bundled index,\ndocument LFS patterns, and extend source registration paths for _default.\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T05:30:52Z"
+  created_at: "2026-11-05T05:44:36Z"
