@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/plate"
   repository_id: 1306519625
-  sha: "223fabf831a5d217ba51e0676bf724d0f480ad01"
+  sha: "69f43a8ec6a58f96bf0b27b77c7b15276e082ea8"
   ref_type: "branch"
   ref_name: "agt/labeledit-feature-parity"
-  run_id: 41989750861
+  run_id: 41995031749
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Verify Android emoji touch transforms on blank and plugin examples"
+  message: "Verify native SVG replacement and failure recovery in layout example"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T07:48:09Z"
+  created_at: "2026-11-05T08:31:02Z"
