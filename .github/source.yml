@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/aviary"
   repository_id: 1329498206
-  sha: "da20ef23508a8c5cd2d60d9d23ff646fc15e0405"
+  sha: "4e536566a57b448922e1dc46860b1dd7e7d6ac1a"
   ref_type: "branch"
-  ref_name: "refactor/swan-platform-package"
-  run_id: 41971015198
+  ref_name: "main"
+  run_id: 41971071979
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Extract aviary_swan_platform from Swan host app.\n\nAlign Swan with the thin-host + platform-package layout used for Rigel: move native adapters and plugin dependencies into packages/swan_platform, generate stable package imports from swan_build, and trim plugins from the platform pubspec during assembly."
+  message: "Extract aviary_swan_platform from Swan host app. (#380)\n\nAlign Swan with the thin-host + platform-package layout used for Rigel: move native adapters and plugin dependencies into packages/swan_platform, generate stable package imports from swan_build, and trim plugins from the platform pubspec during assembly.\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-05T04:58:11Z"
+  created_at: "2026-11-05T04:58:50Z"
