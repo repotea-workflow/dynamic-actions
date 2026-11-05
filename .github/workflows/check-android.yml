@@ -47,6 +47,13 @@ jobs:
           GIT_CONFIG_KEY_0: credential.https://github.com.helper
           GIT_CONFIG_VALUE_0: "!gh auth git-credential"
         run: dart tool/develop.dart bootstrap
+      - name: Pull Git LFS (Swan assets)
+        run: |
+          git lfs install
+          git lfs pull
+      - name: Verify local Swan resources
+        working-directory: waterfowl
+        run: dart run tools/swan_build/bin/verify_local_resources.dart --repo ..
       - name: Check Dart formatting
         working-directory: waterfowl
         run: dart tool/develop.dart format-check
