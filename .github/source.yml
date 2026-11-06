@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "24d08780a04537017d77c95c7a47c7e581eaae15"
+  sha: "a306349aa6e998887a0e4395785e52a4980b43c7"
   ref_type: "branch"
-  ref_name: "fix/254-cold-start"
-  run_id: 42310359466
+  ref_name: "fix/286-handwriting-original-toggle"
+  run_id: 42310511429
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "perf(mobile): shorten splash overlay startup budget"
+  message: "fix(image-print): disable actions until the newest preview settles\n\nKeep the previous preview image while a replacement renders, but do not\nenable editor continue or organizer print until that render is current."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T23:13:11Z"
+  created_at: "2026-11-06T23:14:30Z"
