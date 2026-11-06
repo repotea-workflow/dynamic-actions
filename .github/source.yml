@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ecba56f29848f02f63579c2fd959dc72c9cbd76e"
+  sha: "5c02b0cc8a8d083fffafd45b80eeeab36199ac6d"
   ref_type: "branch"
-  ref_name: "fix/279-ocr-edited-print-regression"
-  run_id: 42297105695
+  ref_name: "fix/280-editor-text-defaults"
+  run_id: 42297518281
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(ocr): guard edited text through print handoff"
+  message: "test(editor): cover localized text defaults"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:29:25Z"
+  created_at: "2026-11-06T21:32:19Z"
