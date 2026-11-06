@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "95444c00b68dc66557b74c50f6efb187377a5cb9"
+  sha: "af0396a47dfb27dc80c1d0a8298b206744d82510"
   ref_type: "branch"
-  ref_name: "bet/issue-299-template-origin-delete-import"
-  run_id: 42294504521
+  ref_name: "fix/274-web-favourite-display-name"
+  run_id: 42294623834
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(mobile): distinguish public/personal templates and support personal import/delete (#299)"
+  message: "fix(web): persist favourite display names"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:10:33Z"
+  created_at: "2026-11-06T21:11:25Z"
