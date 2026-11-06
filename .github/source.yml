@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "2b49865a18b926e3c92cac87ce4ac4121f5bee01"
+  sha: "8e054611e6dce991281d678ae57503a2147c62bf"
   ref_type: "branch"
-  ref_name: "fix/261-recent-source"
-  run_id: 42309396766
+  ref_name: "bet/issue-313-template-region-ja-localization"
+  run_id: 42310072236
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): render preview sources in home recent use"
+  message: "fix(mobile): localize template catalog and UI into Japanese (#313)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T23:05:06Z"
+  created_at: "2026-11-06T23:10:54Z"
