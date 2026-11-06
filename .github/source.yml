@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "a3740bdfd97151ec003d844701968979467b53ad"
+  sha: "eef31632f4bc58ecfddb22221e7de60d71e505ca"
   ref_type: "branch"
-  ref_name: "fix/255-camera-permission-guidance"
-  run_id: 42269980317
+  ref_name: "fix/249-ocr-plain-text"
+  run_id: 42270118230
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): guide users after camera permission denial"
+  message: "fix: keep cloud OCR formula text plain and editable\n\nAliyun general and edu_paper results stay exact plain text, including x, \u00d7,\nnumbers, and LaTeX source. The OCR result can be edited, and print opens that\ntext in quick text instead of the source photo. ML Kit remains the default\nrecognizer, and this change does not add a formula renderer."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:21:48Z"
+  created_at: "2026-11-06T18:22:42Z"
