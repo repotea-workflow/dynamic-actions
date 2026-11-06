@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "18b5aee57ddf0d027456056984fb4e9245655b0c"
+  sha: "35e8f4f0eddab4ce3137281c2e55440bc14bb0dd"
   ref_type: "branch"
-  ref_name: "bet/issue-297-real-learning-exam-materials"
-  run_id: 42302065400
+  ref_name: "fix/303-print-record-metadata"
+  run_id: 42302545027
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(mobile): filter synthetic test materials and provide >=20 real learning items per category (#297)"
+  message: "fix(mobile): show draft save time in print records"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:06:20Z"
+  created_at: "2026-11-06T22:10:03Z"
