@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "518f3ba865c2170e60a6e9a99355b1c06fc49d70"
+  sha: "b452cf66d5d49585b415fa758c5e649ca3400107"
   ref_type: "branch"
-  ref_name: "fix/306-records-clear-confirmation"
-  run_id: 42304348040
+  ref_name: "bet/issue-307-account-isolated-print-records"
+  run_id: 42304568418
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): cover records clear confirmation scope"
+  message: "fix(mobile): isolate local print drafts and attempts by account scope (#307)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:23:42Z"
+  created_at: "2026-11-06T22:25:23Z"
