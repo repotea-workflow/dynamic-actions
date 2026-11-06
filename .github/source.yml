@@ -2,10 +2,10 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4bef4284fa527eea55833ceeed6ecc4423fcb8f6"
+  sha: "5c62a17c93957d4c5fb9893de97750e07318b996"
   ref_type: "branch"
   ref_name: "fix/272-document-loading-state"
-  run_id: 42292126528
+  run_id: 42292453733
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "test(document): cover PDF loading state"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:53:32Z"
+  created_at: "2026-11-06T20:55:56Z"
