@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "b452cf66d5d49585b415fa758c5e649ca3400107"
+  sha: "6cd164896d30a1c001e222632eba7d3bd1b44a39"
   ref_type: "branch"
-  ref_name: "bet/issue-307-account-isolated-print-records"
-  run_id: 42304568418
+  ref_name: "fix/309-login-mode-routing"
+  run_id: 42305008560
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): isolate local print drafts and attempts by account scope (#307)"
+  message: "test(mobile): cover dual sign-in entry modes"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:25:23Z"
+  created_at: "2026-11-06T22:28:57Z"
