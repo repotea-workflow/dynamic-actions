@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "b80c3f8dff8ec11af3f2d8666ffc2f7635d036c4"
+  sha: "133cb1655fe06861ec475c07c95bb05bb20201da"
   ref_type: "branch"
-  ref_name: "fix/314-home-logo"
-  run_id: 42295821503
+  ref_name: "fix/277-quick-text-format-exclusive"
+  run_id: 42296425233
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): restore the Gprinter lockup on Home\n\nThe home header still loaded assets/brand/logo.png after that file became\nthe square app icon. Show the Gprinter/\u4f73\u535a wordmark only there and leave\nthe connection pill unchanged."
+  message: "fix(quick-text): make format pills mutually exclusive"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:20:03Z"
+  created_at: "2026-11-06T21:24:21Z"
