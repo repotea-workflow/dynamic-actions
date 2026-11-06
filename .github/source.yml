@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "48222581718d958ec4ce49567bc0f754f908b6f3"
+  sha: "443aaa7c334b7817ccfe5225cc872268df73a8d1"
   ref_type: "branch"
-  ref_name: "fix/262-reorder-reopened-drafts"
-  run_id: 42280912758
+  ref_name: "fix/291-print-interrupted"
+  run_id: 42282020926
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(print): refresh draft recency when reopened"
+  message: "fix: record a power loss during printing as interrupted\n\nA link drop after bytes start, including during settle, is stored as interrupted instead of accepted. The record survives reload and is not resent when the printer returns."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T19:35:17Z"
+  created_at: "2026-11-06T19:42:52Z"
