@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "9f64d6f8522dc131c31d7aa9c8ad47471579ccba"
+  sha: "0d4f9bbf1c380c7910d6e2006b5f3036510efae3"
   ref_type: "branch"
-  ref_name: "fix/288-page-range"
-  run_id: 42273544220
+  ref_name: "fix/257-camera-permission-settings"
+  run_id: 42275031587
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: let print page range be edited before it is valid\n\nEmpty or out-of-order range text was rewritten to 1 or the last page, so\nthe start and end could not be changed freely."
+  message: "fix(mobile): refresh camera permission after settings"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:45:27Z"
+  created_at: "2026-11-06T18:55:26Z"
