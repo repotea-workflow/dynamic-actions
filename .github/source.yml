@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "659d03d223d1c88df4a99541ed376caff63dd7d8"
+  sha: "87d621f72ee29dcb8399efc34a183c59d8f6db20"
   ref_type: "branch"
-  ref_name: "bet/issue-300-editor-element-lock"
-  run_id: 42287839318
+  ref_name: "fix/268-document-enhancement-regression"
+  run_id: 42288563589
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(graphic-editor): support element lock badge, property guard, and unlock (#300)"
+  message: "fix(image): enhance document print previews"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:22:55Z"
+  created_at: "2026-11-06T20:28:01Z"
