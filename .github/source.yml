@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "8f1bfac0162566c9f9c11e42325b9e5b53ce1f8f"
+  sha: "51adffbfb3c0daca0ca040074d1641ebaf27bc89"
   ref_type: "branch"
-  ref_name: "bet/issue-302-sudoku-difficulty"
-  run_id: 42271346979
+  ref_name: "main"
+  run_id: 42271459865
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(sudoku): support 1/2/4 board layouts for easy/medium/hard (#302)"
+  message: "feat(sudoku): support 1/2/4 board layouts for easy/medium/hard (#302) (#320)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:30:49Z"
+  created_at: "2026-11-06T18:31:30Z"
