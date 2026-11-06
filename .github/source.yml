@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "d078fa40ab08ac652f843abad6c4b126e57bda4e"
+  sha: "8f5f555d802adc2cd52ee50742373f1a78b13a55"
   ref_type: "branch"
-  ref_name: "fix/231-acceptance-evidence"
-  run_id: 42290672836
+  ref_name: "fix/271-pdf-page-import"
+  run_id: 42291072477
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: reject hardware acceptance without measurements\n\nIssue 231 cannot treat simulator or missing lab data as a pass.\nThe matrix stays not measured until device, firmware, OS, commit,\ncorpus, measurement, and threshold are all recorded."
+  message: "test(document): cover 30-page PDF imports"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:43:08Z"
+  created_at: "2026-11-06T20:45:55Z"
