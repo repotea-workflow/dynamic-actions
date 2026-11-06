@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "af0396a47dfb27dc80c1d0a8298b206744d82510"
+  sha: "5ed29740b913628d28eb0351e31049e5ccd56961"
   ref_type: "branch"
-  ref_name: "fix/274-web-favourite-display-name"
-  run_id: 42294623834
+  ref_name: "fix/275-web-recommended-sites"
+  run_id: 42295005522
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(web): persist favourite display names"
+  message: "fix(web): expand recommended site catalog"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:11:25Z"
+  created_at: "2026-11-06T21:14:12Z"
