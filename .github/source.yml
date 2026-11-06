@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "2c8e3af65fca07400d486537af35c16b9122bb8b"
+  sha: "ac52747ae1dc0af304f9480d06c25701f02cb08a"
   ref_type: "branch"
-  ref_name: "fix/316-splash-background"
-  run_id: 42311493938
+  ref_name: "fix/254-cold-start"
+  run_id: 42312595835
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): make splash checks workspace-root safe"
+  message: "test(mobile): isolate splash timer regression from asset bundle"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T23:22:52Z"
+  created_at: "2026-11-06T23:32:44Z"
