@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "74303fca5cae63ddf182462e24ff7722d0130232"
+  sha: "8797695bd4cfadefd78cf427597f5be5d684cb56"
   ref_type: "branch"
   ref_name: "fix/261-recent-source"
-  run_id: 42308584636
+  run_id: 42308673629
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(learning): support mental_math and calligraphy entries end-to-end (#296) (#326)"
+  message: "fix(mobile): record print preview sources in recent use"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:58:25Z"
+  created_at: "2026-11-06T22:59:12Z"
