@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "b7e6f7964aca9d1d3cecb90e3aa6816c582fb550"
+  sha: "8ce4acaf4d8a74e0a058df6e5e8aaef4ac6981c3"
   ref_type: "branch"
-  ref_name: "bet/issue-298-wrong-question-compose-print"
-  run_id: 42299318273
+  ref_name: "fix/284-canvas-size"
+  run_id: 42300174490
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(mobile): add wrong-question compose summary, answer toggle, and sheet print (#298)"
+  message: "fix(mobile): clarify fixed graphic editor canvas size"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:45:36Z"
+  created_at: "2026-11-06T21:52:02Z"
