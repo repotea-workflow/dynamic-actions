@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "1456a880a729244d2e66589583f677e82ecb7c17"
+  sha: "0d526cc127708777650b63b1a69062bcb068b495"
   ref_type: "branch"
-  ref_name: "fix/286-handwriting-original-toggle"
-  run_id: 42308726088
+  ref_name: "bet/issue-312-template-region-zh-hant-localization"
+  run_id: 42308881271
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-print): toggle original and processed handwriting results\n\nKeep the derived handwriting bitmap when showing the original so the\norganizer can switch back without another remote call. Print persists\nthe selected edit, and the organizer test checks those saved pages\nbyte-for-byte against renderImageEdit."
+  message: "fix(mobile): localize template catalog and UI strings into Traditional Chinese (#312)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:59:41Z"
+  created_at: "2026-11-06T23:00:53Z"
