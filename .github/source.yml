@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "73b2077d338fd07b4aa34cccfbc5a5facfb482e4"
+  sha: "81831c04473803483c2a802bd29f78554429b85c"
   ref_type: "branch"
-  ref_name: "fix/ci-format-dynamic-dispatch"
-  run_id: 42306357196
-  run_attempt: 2
+  ref_name: "fix/316-splash-background"
+  run_id: 42314780269
+  run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "style(ci): format dynamic dispatch status workflow"
+  message: "chore(ci): refresh splash PR head"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T23:52:38Z"
+  created_at: "2026-11-06T23:53:29Z"
