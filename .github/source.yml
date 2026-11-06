@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "936f7d772242e07a59af1800ab8c02ce7b84e7f0"
+  sha: "d078fa40ab08ac652f843abad6c4b126e57bda4e"
   ref_type: "branch"
-  ref_name: "fix/270-office-login-prompt"
-  run_id: 42290627120
+  ref_name: "fix/231-acceptance-evidence"
+  run_id: 42290672836
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(document): cover unauthenticated Office prompt"
+  message: "fix: reject hardware acceptance without measurements\n\nIssue 231 cannot treat simulator or missing lab data as a pass.\nThe matrix stays not measured until device, firmware, OS, commit,\ncorpus, measurement, and threshold are all recorded."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:42:48Z"
+  created_at: "2026-11-06T20:43:08Z"
