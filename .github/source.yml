@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "9d87bde00f0bd8c3f835d4b5444eb29fc202dafa"
+  sha: "01a95615a6c880bab4a3f0c5efd782f4418eace8"
   ref_type: "branch"
-  ref_name: "fix/289-m821-paper"
-  run_id: 42278638198
+  ref_name: "fix/259-english-feature-titles"
+  run_id: 42278683134
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: give M821 selectable paper kinds and preview ratios\n\nM821 keeps paged, continuous, and black-mark choices plus A4 and a 210 mm roll even when an older catalog omits them. ESC black-mark stays selectable and feeds as a cut sheet; the real sensor is still manual hardware."
+  message: "test(mobile): cover English wrong-question title"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T19:19:54Z"
+  created_at: "2026-11-06T19:20:13Z"
