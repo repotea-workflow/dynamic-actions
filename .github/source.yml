@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "e849a9ba2e2e4e5d71dbee1914ceba15b5992e2b"
+  sha: "659d03d223d1c88df4a99541ed376caff63dd7d8"
   ref_type: "branch"
-  ref_name: "fix/267-provider-capability-guidance"
-  run_id: 42287657808
+  ref_name: "bet/issue-300-editor-element-lock"
+  run_id: 42287839318
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(image): cover provider unavailable fallback"
+  message: "feat(graphic-editor): support element lock badge, property guard, and unlock (#300)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:21:38Z"
+  created_at: "2026-11-06T20:22:55Z"
