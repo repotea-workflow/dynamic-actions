@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "21f12c640124557c02cfd5291cbdf0f1e81c33a7"
+  sha: "1478d05e686d004ef89817568ad1e3d6976e7527"
   ref_type: "branch"
-  ref_name: "fix/264-bounded-large-image"
-  run_id: 42283237476
+  ref_name: "bet/issue-311-template-region-en-localization"
+  run_id: 42283862560
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image): accept bounded large photo payloads"
+  message: "feat(templates): localize template catalog categories, cards, and details in English (#311)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T19:51:16Z"
+  created_at: "2026-11-06T19:55:36Z"
