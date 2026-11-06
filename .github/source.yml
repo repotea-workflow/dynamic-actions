@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0d4f9bbf1c380c7910d6e2006b5f3036510efae3"
+  sha: "1bbfcb79f9abe33c318dd7987ac79a486d0b4c46"
   ref_type: "branch"
   ref_name: "fix/257-camera-permission-settings"
-  run_id: 42275031587
+  run_id: 42275732940
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): refresh camera permission after settings"
+  message: "test(transport): cover camera permission refresh"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:55:26Z"
+  created_at: "2026-11-06T19:00:22Z"
