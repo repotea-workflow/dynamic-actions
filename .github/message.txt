@@ -1,1 +1,1 @@
-fix(media): bound FFmpeg worker stacks within the decoder memory budget
+test(media): reproduce oversized inherited decoder stacks
