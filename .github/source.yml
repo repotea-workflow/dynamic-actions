@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "7c60449972710dcb031007ceaadc7e7a1372a761"
+  sha: "0d431583f40dccd6e20ec467b30c4ea0bcf5c9b4"
   ref_type: "branch"
-  ref_name: "fix/304-attempt-status-metadata"
-  run_id: 42303290820
+  ref_name: "fix/305-draft-reedit"
+  run_id: 42303833559
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): show print attempt outcome metadata"
+  message: "test(mobile): cover draft re-edit action"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:15:36Z"
+  created_at: "2026-11-06T22:19:47Z"
