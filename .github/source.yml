@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0fb66be5d39ac86c89ac096a3e6ac079ea7429e4"
+  sha: "a3740bdfd97151ec003d844701968979467b53ad"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42268088064
+  ref_name: "fix/255-camera-permission-guidance"
+  run_id: 42269980317
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: gate production release on the execution ref (#317)\n\nTag forwarding updates the execution branch before pushing the forwarded tag.\nSource metadata alone made both runs pass Ensure production. Accept only a\nrelease tag executed as its -gprinter tag, or the retained production branch\nexecuted as a branch."
+  message: "fix(mobile): guide users after camera permission denial"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:09:26Z"
+  created_at: "2026-11-06T18:21:48Z"

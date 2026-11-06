@@ -45,26 +45,12 @@ jobs:
         env:
           SOURCE_REF_TYPE: ${{ steps.dynamic_source.outputs.ref_type }}
           SOURCE_REF_NAME: ${{ steps.dynamic_source.outputs.ref_name }}
-          EXEC_REF_TYPE: ${{ github.ref_type }}
-          EXEC_REF_NAME: ${{ github.ref_name }}
         run: |
-          release_ref='^v[0-9]+\.[0-9]+\.[0-9]+([.-][A-Za-z0-9.-]+)?$'
-          source_tag=false
-          source_branch=false
-          if [ "$SOURCE_REF_TYPE" = tag ] && printf '%s\n' "$SOURCE_REF_NAME" | grep -Eq "$release_ref"; then
-            source_tag=true
+          if { [ "$SOURCE_REF_TYPE" = tag ] && printf '%s\n' "$SOURCE_REF_NAME" | grep -Eq '^v[0-9]+\.[0-9]+\.[0-9]+([.-][A-Za-z0-9.-]+)?$'; } || { [ "$SOURCE_REF_TYPE" = branch ] && [ "$SOURCE_REF_NAME" = 'agt/gprinter-production' ]; }; then
+            echo "ENSURE_PRODUCTION=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ENSURE_PRODUCTION=false" >> "$GITHUB_OUTPUT"
           fi
-          if [ "$SOURCE_REF_TYPE" = branch ] && [ "$SOURCE_REF_NAME" = 'agt/gprinter-production' ]; then
-            source_branch=true
-          fi
-          accepted=false
-          if [ "$source_tag" = true ] && [ "$EXEC_REF_TYPE" = tag ] && [ "$EXEC_REF_NAME" = "${SOURCE_REF_NAME}-gprinter" ]; then
-            accepted=true
-          fi
-          if [ "$source_branch" = true ] && [ "$EXEC_REF_TYPE" = branch ]; then
-            accepted=true
-          fi
-          echo "ENSURE_PRODUCTION=$accepted" >> "$GITHUB_OUTPUT"
 
   build-office:
     name: Resolve verified Office converter
