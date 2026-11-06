@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "bcde28ddbc0874f13f4db87052af54e22859355c"
+  sha: "936f7d772242e07a59af1800ab8c02ce7b84e7f0"
   ref_type: "branch"
-  ref_name: "fix/269-document-edit-label"
-  run_id: 42289940225
+  ref_name: "fix/270-office-login-prompt"
+  run_id: 42290627120
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image): label document edit action explicitly"
+  message: "test(document): cover unauthenticated Office prompt"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:37:45Z"
+  created_at: "2026-11-06T20:42:48Z"
