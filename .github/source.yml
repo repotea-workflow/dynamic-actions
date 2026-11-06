@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "51adffbfb3c0daca0ca040074d1641ebaf27bc89"
+  sha: "6fb9f1ea8fadb569c1e22c4c417d7b7f012ecc9d"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42271459865
+  ref_name: "fix/format-dynamic-dispatch-status"
+  run_id: 42272273828
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(sudoku): support 1/2/4 board layouts for easy/medium/hard (#302) (#320)"
+  message: "style(ci): format dynamic dispatch workflow"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:31:30Z"
+  created_at: "2026-11-06T18:36:56Z"
