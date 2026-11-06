@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "bb8aac655e6fc5331d9183acfad4f658e2a729e9"
+  sha: "d6299463b96a3a6a249915581d428a0652f51e74"
   ref_type: "branch"
-  ref_name: "fix/260-japanese-feature-titles"
-  run_id: 42276723144
+  ref_name: "bet/issue-296-learning-mental-math-calligraphy"
+  run_id: 42278077990
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): keep Japanese home labels visible"
+  message: "fix(learning): support mental_math and calligraphy entries end-to-end (#296)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T19:06:48Z"
+  created_at: "2026-11-06T19:16:03Z"
