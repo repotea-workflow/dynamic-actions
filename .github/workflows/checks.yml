@@ -41,6 +41,18 @@ jobs:
       run: |
         ffmpeg -version
         ffprobe -version
+    - name: Verify bounded WXGF decoder
+      run: |
+        preview_dir=$(mktemp -d)
+        tail -c +24 crates/wechat-media/tests/fixtures/static.wxgf > "$preview_dir/frame.hevc"
+        prlimit --as=536870912 --cpu=8 --fsize=16777216 --nofile=32 -- \
+          ffmpeg -hide_banner -loglevel error -nostdin -y -xerror \
+          -max_alloc 67108864 -protocol_whitelist file,pipe -format_whitelist hevc \
+          -f hevc -threads 1 -err_detect explode -i "$preview_dir/frame.hevc" \
+          -map 0:v:0 -an -sn -dn -frames:v 1 -threads 1 -filter_threads 1 \
+          -c:v mjpeg -q:v 4 -pix_fmt yuvj420p -f image2 -update 1 \
+          -fs 16777216 "$preview_dir/preview.jpg"
+        test -s "$preview_dir/preview.jpg"
     - uses: Swatinem/rust-cache@v2
     - run: cargo fmt --all -- --check
     - run: cargo check --workspace --locked

@@ -1,1 +1,1 @@
-feat(native): integrate upstream runtime updates and direct voice calls
+test(native): verify the CI decoder within production resource limits
