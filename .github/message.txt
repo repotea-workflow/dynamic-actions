@@ -1,1 +1,1 @@
-test(native): verify the CI decoder within production resource limits
+test(native): measure FFmpeg worker stack requirements in CI
