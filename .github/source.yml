@@ -2,10 +2,10 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "9096022789298d4f40ec37f1ec64b207b50ddcfd"
+  sha: "aaa5d9af71d5be928cd3b14c3deacb7fdae3085c"
   ref_type: "branch"
-  ref_name: "bet/issue-313-template-region-ja-localization"
-  run_id: 42310686633
+  ref_name: "bet/issue-312-template-region-zh-hant-localization"
+  run_id: 42310698228
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "style(mobile): apply dart format for CI App check"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T23:16:02Z"
+  created_at: "2026-11-06T23:16:08Z"
