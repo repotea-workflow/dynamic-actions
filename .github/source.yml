@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "87d621f72ee29dcb8399efc34a183c59d8f6db20"
+  sha: "c15ccf727a82dee790d131a82f84e7228a9f879f"
   ref_type: "branch"
-  ref_name: "fix/268-document-enhancement-regression"
-  run_id: 42288563589
+  ref_name: "fix/295-a4-width"
+  run_id: 42289317856
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image): enhance document print previews"
+  message: "fix: list only 190-220 mm A4 printer models\n\nAcceptance requires printable widths of 190-220 mm. The spreadsheet's\n100-220 mm handling note conflicts with that and is not applied."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:28:01Z"
+  created_at: "2026-11-06T20:33:27Z"
