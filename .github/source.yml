@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "2f191eee1be5593e4617fffd4c3e23702b9e924b"
+  sha: "cdad01e0dbe3e88d239e9f700617cf41442ad336"
   ref_type: "branch"
-  ref_name: "fix/293-bluetooth-discovery"
-  run_id: 42284995804
+  ref_name: "fix/265-image-print-channel-title"
+  run_id: 42285310647
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep one bluetooth row per printer MAC\n\nRepeated advertisements with different ids no longer create duplicate\nsearch rows. A bare MAC is not shown as the printer name. Catalog name\nprefixes are unchanged."
+  message: "fix(image): use channel title in print preview"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:03:26Z"
+  created_at: "2026-11-06T20:05:35Z"
