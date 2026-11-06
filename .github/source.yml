@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c0f2e0cbc3ea48ecf643f6c606b9c7f534f32ab0"
+  sha: "2ea6184462c902b9caf36337f7db8ab74eab3f9f"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 39000821759
+  ref_name: "fix/248-production-execution-ref"
+  run_id: 42267969646
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Keep dynamic CI status icons under GitHub Actions (#253)\n\n* ci: migrate dynamic workflows to source metadata outputs\n\n* ci: include Windows source metadata compatibility fix\n\n* ci: track Kangumi actions on main\n\n* Enable source pending status and failed dispatch recovery\n\n* Report dynamic CI results with source GitHub Actions identity"
+  message: "fix: gate production release on the execution ref\n\nTag forwarding updates the execution branch before pushing the forwarded tag.\nSource metadata alone made both runs pass Ensure production. Accept only a\nrelease tag executed as its -gprinter tag, or the retained production branch\nexecuted as a branch."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-17T03:58:55Z"
+  created_at: "2026-11-06T18:08:40Z"
