@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0455c36b09cbee2d3847febd7b4e848dd247aeb4"
+  sha: "ecba56f29848f02f63579c2fd959dc72c9cbd76e"
   ref_type: "branch"
-  ref_name: "fix/278-ocr-default-chinese"
-  run_id: 42296769014
+  ref_name: "fix/279-ocr-edited-print-regression"
+  run_id: 42297105695
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ocr): default recognition language to Chinese"
+  message: "test(ocr): guard edited text through print handoff"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:26:52Z"
+  created_at: "2026-11-06T21:29:25Z"
