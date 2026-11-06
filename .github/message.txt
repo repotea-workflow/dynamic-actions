@@ -1,1 +1,1 @@
-test(native): measure FFmpeg worker stack requirements in CI
+fix(media): bound FFmpeg worker stacks within the decoder memory budget
