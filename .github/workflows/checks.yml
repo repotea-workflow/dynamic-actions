@@ -36,7 +36,7 @@ jobs:
     - name: Install media test prerequisites
       run: |
         sudo apt-get update
-        sudo apt-get install -y --no-install-recommends ffmpeg python3-yaml
+        sudo apt-get install -y --no-install-recommends ffmpeg python3-yaml cmake
     - name: Verify media test prerequisites
       run: |
         ffmpeg -version

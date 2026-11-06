@@ -1,1 +1,1 @@
-fix(desktop): support fresh manual login with isolated key validation (#19)
+feat(native): integrate upstream runtime updates and direct voice calls
