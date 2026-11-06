@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "eb94be88b16372ff96fcaf7f540d00f96ddb6ba3"
+  sha: "b7e6f7964aca9d1d3cecb90e3aa6816c582fb550"
   ref_type: "branch"
-  ref_name: "fix/283-editor-undo-icons"
-  run_id: 42299309106
+  ref_name: "bet/issue-298-wrong-question-compose-print"
+  run_id: 42299318273
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): label undo and redo actions semantically"
+  message: "feat(mobile): add wrong-question compose summary, answer toggle, and sheet print (#298)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:45:31Z"
+  created_at: "2026-11-06T21:45:36Z"
