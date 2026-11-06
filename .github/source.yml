@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "fda94b3c52ea83de50907bd1ca3f37471a39dd4a"
+  sha: "e849a9ba2e2e4e5d71dbee1914ceba15b5992e2b"
   ref_type: "branch"
-  ref_name: "fix/294-reconnect"
-  run_id: 42286814688
+  ref_name: "fix/267-provider-capability-guidance"
+  run_id: 42287657808
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: notice an unexpected printer drop and reconnect\n\nA printer that disconnects on its own shows a connection-lost notice and\nis retried for 30 seconds. Manual disconnect does not reconnect. The\ndropped session log is kept so its disconnect reason stays visible."
+  message: "test(image): cover provider unavailable fallback"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T20:15:47Z"
+  created_at: "2026-11-06T20:21:38Z"
