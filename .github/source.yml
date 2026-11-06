@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "76d30fabf0aa9a203c554adb7a3c39981cb51c6d"
+  sha: "48222581718d958ec4ce49567bc0f754f908b6f3"
   ref_type: "branch"
-  ref_name: "fix/290-custom-paper"
-  run_id: 42280503837
+  ref_name: "fix/262-reorder-reopened-drafts"
+  run_id: 42280912758
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: validate custom print paper from 10 to 500 mm\n\nThe print settings dialog owns its text controllers until the route is unmounted. Widths of 9 mm and 501 mm stay rejected with the standard range sentence, and 210\u00d7297 mm updates the preview profile."
+  message: "fix(print): refresh draft recency when reopened"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T19:32:32Z"
+  created_at: "2026-11-06T19:35:17Z"
