@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "8f9f759cdfff452c439cbe06528b578d6affe6f4"
+  sha: "5ee6dbb81389c097380545efcd547572808920b7"
   ref_type: "branch"
-  ref_name: "fix/314-home-logo"
-  run_id: 42297788396
+  ref_name: "fix/281-qrcode-label-regression"
+  run_id: 42298036762
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): check the home lockup file without precache\n\nCI could not resolve the new asset through the widget precache bundle.\nCompare the PNG on disk with the square icon and keep the connection\npill assertions."
+  message: "test(editor): cover QR payload labels"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T21:34:14Z"
+  created_at: "2026-11-06T21:36:02Z"
