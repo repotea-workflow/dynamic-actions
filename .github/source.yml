@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ba912e96071daff746b599b870a002a66b64726a"
+  sha: "a617f35afb58057998b71314ff17a64dcca69d57"
   ref_type: "branch"
-  ref_name: "bet/issue-297-real-learning-exam-materials"
-  run_id: 42305821372
+  ref_name: "fix/310-change-password-validation"
+  run_id: 42306170246
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): refine #297 test filter for English titles and clarify material source attribution"
+  message: "fix(mobile): sign out after password change"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T22:35:14Z"
+  created_at: "2026-11-06T22:38:03Z"
