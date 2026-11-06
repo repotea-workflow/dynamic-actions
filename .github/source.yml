@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "a4115a207400399c0f0d91ed88d23ada609ca1a9"
+  sha: "8f1bfac0162566c9f9c11e42325b9e5b53ce1f8f"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42270165470
+  ref_name: "bet/issue-302-sudoku-difficulty"
+  run_id: 42271346979
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep cloud OCR formula text plain and editable (#319)\n\nAliyun general and edu_paper results stay exact plain text, including x, \u00d7,\nnumbers, and LaTeX source. The OCR result can be edited, and print opens that\ntext in quick text instead of the source photo. ML Kit remains the default\nrecognizer, and this change does not add a formula renderer."
+  message: "feat(sudoku): support 1/2/4 board layouts for easy/medium/hard (#302)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-06T18:23:02Z"
+  created_at: "2026-11-06T18:30:49Z"
