@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4a4eb1181f4f002d46d70f359ad3152fc634d409"
+  sha: "09a28d2958708c25e814e2fcbe3b70d292d645b7"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326716619
+  run_id: 42326726970
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(document): cover PDF loading state (#349)"
+  message: "test(scan): verify scan print entry title (#350)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:57:09Z"
+  created_at: "2026-11-07T01:57:20Z"
