@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "434ef6646d76eb396bf6908e13d729a7e5d56efc"
+  sha: "f23f9c5f94e1c7b5dd2db2a5c1aef1edce181b37"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42360848291
+  run_id: 42365156612
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): resolve real-device acceptance issues (#254, #256, #271, #272, #289, #290, #293, #309)"
+  message: "style(mobile): format plate_rendering_and_payload_cases.dart"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T09:42:31Z"
+  created_at: "2026-11-07T10:43:42Z"
