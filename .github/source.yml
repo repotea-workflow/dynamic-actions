@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "1f097c8510166539a4434192a038375e26093dfd"
+  sha: "b3e8e86122cd34624e08c6efd924c475e3510f08"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326800422
+  run_id: 42326838446
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): show draft save time in print records (#368)"
+  message: "test(mobile): cover records clear confirmation scope (#371)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:58:11Z"
+  created_at: "2026-11-07T01:58:40Z"
