@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "29182cba75dacd62731e00de62eebf438d2266d3"
+  sha: "fceec2883413c7bc975aff1941d86a85ee1c67c7"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326089038
+  run_id: 42326108289
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: keep one bluetooth row per printer MAC (#336)\n\n* fix: keep one bluetooth row per printer MAC\n\nRepeated advertisements with different ids no longer create duplicate\nsearch rows. A bare MAC is not shown as the printer name. Catalog name\nprefixes are unchanged.\n\n* fix: reject bluetooth names when catalog prefixes are empty\n\nAn empty prefix list is no longer a wildcard. Discovery shows a device\nonly when its name starts with an explicit catalog prefix."
+  message: "fix: notice an unexpected printer drop and reconnect (#339)\n\nA printer that disconnects on its own shows a connection-lost notice and\nis retried for 30 seconds. Manual disconnect does not reconnect. The\ndropped session log is kept so its disconnect reason stays visible."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:49:35Z"
+  created_at: "2026-11-07T01:49:46Z"
