@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ffc9b7981315eddbcc5a8ada27ec317eee92f117"
+  sha: "4171692b85466495de24523cf50c35d7a24ef3e6"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326321610
+  run_id: 42326373468
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): guide users after camera permission denial (#318)"
+  message: "fix: validate custom print paper from 10 to 500 mm (#330)\n\nThe print settings dialog owns its text controllers until the route is unmounted. Widths of 9 mm and 501 mm stay rejected with the standard range sentence, and 210\u00d7297 mm updates the preview profile."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:52:19Z"
+  created_at: "2026-11-07T01:52:57Z"
