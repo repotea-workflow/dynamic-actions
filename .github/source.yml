@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "36c7f96dbd58cb39560c85bad5764e3103835a38"
+  sha: "43109d946f69332d50e1b96c178d4c6c53388715"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326743582
+  run_id: 42326753060
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ocr): default recognition language to Chinese (#357)"
+  message: "test(ocr): guard edited text through print handoff (#358)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:57:31Z"
+  created_at: "2026-11-07T01:57:39Z"
