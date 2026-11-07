@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ce61f511c14d54a1388e00db2057621b84922d60"
+  sha: "32b993c16c57fb76f446eba08efafbf3ae041df9"
   ref_type: "branch"
-  ref_name: "fix/304-attempt-status-metadata"
-  run_id: 42327448657
+  ref_name: "main"
+  run_id: 42327499865
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "merge: retain interrupted-attempt guard and saved draft metadata"
+  message: "fix(mobile): show print attempt outcome metadata (#369)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:05:36Z"
+  created_at: "2026-11-07T02:06:17Z"
