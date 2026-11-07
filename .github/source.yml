@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "df7055905dcb84d746ed748467e442b7497159ee"
+  sha: "aa97027e5bfd2ab34c178951ad86e2278db11dcd"
   ref_type: "branch"
   ref_name: "fix/305-draft-reedit"
-  run_id: 42327533111
+  run_id: 42327592120
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "merge: preserve re-edit and interrupted-print regressions"
+  message: "Merge remote-tracking branch 'origin/main' into fix/305-draft-reedit"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:06:35Z"
+  created_at: "2026-11-07T02:07:15Z"
