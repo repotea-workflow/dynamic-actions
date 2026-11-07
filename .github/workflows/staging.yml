@@ -143,6 +143,8 @@ jobs:
           push: true
           context: .
           file: docker/gprinter-api.Dockerfile
+          provenance: false
+          sbom: false
           platforms: linux/amd64
           tags: |
             ${{ steps.tags.outputs.ghcr_sha }}
@@ -269,6 +271,8 @@ jobs:
           push: true
           context: .
           file: docker/gprinter-admin.Dockerfile
+          provenance: false
+          sbom: false
           platforms: linux/amd64
           tags: |
             ${{ steps.tags.outputs.ghcr_sha }}

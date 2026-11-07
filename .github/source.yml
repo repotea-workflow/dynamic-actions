@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "2573bd38f898a68f201b57b2b42c0f48fb5f0e5d"
+  sha: "cc4f957373a53ebec16f390047697f0e51cdc3ed"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42352482775
+  run_id: 42355004974
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-processing): allow all dashscope oss-accelerate shards (#286)"
+  message: "fix(ci): disable OCI provenance/sbom attestations for Aliyun ACR push"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T07:43:59Z"
+  created_at: "2026-11-07T08:19:55Z"
