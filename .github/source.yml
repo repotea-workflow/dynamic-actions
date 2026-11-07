@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "7a10d665e8fc181ef0930eafa011a4d912cef276"
+  sha: "acd3b369168b74054ad7a8fd947912d989023744"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42326404177
+  ref_name: "bet/issue-312-template-region-zh-hant-localization"
+  run_id: 42326395165
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): localize template catalog and UI strings into Traditional Chinese (#312) (#380)\n\n* fix(mobile): localize template catalog and UI strings into Traditional Chinese (#312)\n\n* style(mobile): apply dart format for CI App check"
+  message: "chore: merge main into bet/issue-312-template-region-zh-hant-localization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:53:18Z"
+  created_at: "2026-11-07T01:53:20Z"
