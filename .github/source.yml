@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "754449ea17dbe5216c6e7a24420f552888606311"
+  sha: "3126b19ef9043601b7d2f0749284440794504eb6"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42327200097
+  ref_name: "fix/285-editor-save-naming"
+  run_id: 42327194454
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): support naming and save prompts in editor (#365)"
+  message: "merge: retain fixed-size and localized editor regressions"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:02:52Z"
+  created_at: "2026-11-07T02:02:55Z"
