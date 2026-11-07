@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "b44bb85438f91901ca539704291f9dce9dc67a36"
+  sha: "14699d9d18e8508cfd4d2fdb8644ce628e5b393b"
   ref_type: "branch"
-  ref_name: "bet/issue-313-template-region-ja-localization"
-  run_id: 42326481977
+  ref_name: "main"
+  run_id: 42326491696
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore: merge main into bet/issue-313-template-region-ja-localization"
+  message: "fix(mobile): localize template catalog and UI into Japanese (#313) (#382)\n\n* fix(mobile): localize template catalog and UI into Japanese (#313)\n\n* style(mobile): apply dart format for CI App check"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:54:19Z"
+  created_at: "2026-11-07T01:54:32Z"
