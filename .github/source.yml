@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "3126b19ef9043601b7d2f0749284440794504eb6"
+  sha: "3e5e1673275f6014af1e8c35f15c9baa2a234648"
   ref_type: "branch"
-  ref_name: "fix/285-editor-save-naming"
-  run_id: 42327194454
+  ref_name: "fix/259-english-feature-titles"
+  run_id: 42327314150
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "merge: retain fixed-size and localized editor regressions"
+  message: "merge: retain English title and current Home regressions"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:02:55Z"
+  created_at: "2026-11-07T02:04:04Z"
