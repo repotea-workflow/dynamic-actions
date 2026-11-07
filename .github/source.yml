@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "5af44b73a3e10a98e0582fcfe1617b9accc2c0bb"
+  sha: "ce61f511c14d54a1388e00db2057621b84922d60"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42327424209
+  ref_name: "fix/304-attempt-status-metadata"
+  run_id: 42327448657
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(device): ignore duplicate bluetooth discovery requests (#381)"
+  message: "merge: retain interrupted-attempt guard and saved draft metadata"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:05:20Z"
+  created_at: "2026-11-07T02:05:36Z"
