@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "036e78d1a672b8df6f33ce30ac31713f28dc6e8e"
+  sha: "94bc84cfdfaa8df79cbab262908f3d9d05cfc127"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42325909129
+  run_id: 42325943575
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(graphic-editor): support element lock badge, property guard, and unlock (#300) (#341)"
+  message: "fix(editor): label undo and redo actions semantically (#362)\n\n* fix(editor): label undo and redo actions semantically\n\n* fix(editor): use arrow glyphs for undo and redo\n\nThe circular history marks did not read as undo. Draw an open arrow\nfor each direction, and cover empty, undo, and redo from the app bar."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:47:29Z"
+  created_at: "2026-11-07T01:48:01Z"
