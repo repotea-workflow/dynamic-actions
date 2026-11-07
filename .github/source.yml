@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "41c19ff9581375e51d23e168d9e7fc42d68b1fc2"
+  sha: "8469ff0893ea1f5a9c404a3ff38da304a51639a2"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326769655
+  run_id: 42326771990
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(editor): cover QR payload labels (#360)"
+  message: "test(quick-text): cover long A4 text layout (#354)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:57:49Z"
+  created_at: "2026-11-07T01:57:50Z"
