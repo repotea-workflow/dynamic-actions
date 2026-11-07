@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "00306d3e0f835aa65d3aac3f99647266ae1516d7"
+  sha: "92f9f525f37094530565baa83f5314e47cfccdaa"
   ref_type: "branch"
-  ref_name: "fix/ci-format-dynamic-dispatch"
-  run_id: 42325744777
+  ref_name: "main"
+  run_id: 42325815849
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: provision isolated Gprinter release signing for validation"
+  message: "ci: repair dashboard format and provision CI release signing (#376)\n\n* style(ci): format dynamic dispatch status workflow\n\n* ci: provision isolated Gprinter release signing for validation"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:45:33Z"
+  created_at: "2026-11-07T01:46:23Z"
