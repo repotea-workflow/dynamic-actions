@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "92f9f525f37094530565baa83f5314e47cfccdaa"
+  sha: "414b2f206e35666540fa5b0797d1f05912f034fe"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42325815849
+  run_id: 42325884216
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci: repair dashboard format and provision CI release signing (#376)\n\n* style(ci): format dynamic dispatch status workflow\n\n* ci: provision isolated Gprinter release signing for validation"
+  message: "feat(mobile): add wrong-question compose summary, answer toggle, and sheet print (#298) (#363)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:46:23Z"
+  created_at: "2026-11-07T01:47:15Z"
