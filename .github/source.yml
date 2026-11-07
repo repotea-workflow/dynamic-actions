@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ba2a944c2fd7627a9e010a296e0f58f1b39016bb"
+  sha: "14c121f004cab536d604d5a2eed0285848ff07d5"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326064432
+  run_id: 42326075496
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: record a power loss during printing as interrupted (#332)\n\nA link drop after bytes start, including during settle, is stored as interrupted instead of accepted. The record survives reload and is not resent when the printer returns."
+  message: "fix: keep gray paper white when dithering print rasters (#335)\n\nContent rasters already pass the document luma cutoff. Dither now treats\nthat cutoff as a paper floor so gray paper and light glyph edges stay\nwhite, while midtones below it still use Floyd-Steinberg. Highlights at\nor above the floor are not dotted."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:49:18Z"
+  created_at: "2026-11-07T01:49:25Z"
