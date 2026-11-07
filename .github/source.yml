@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0ec383e36dcd2317f000bc751ec99288a95f94fc"
+  sha: "cb5b84a27d2d04b6ea37a7245b3fcf090dc910c6"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326863093
+  run_id: 42326872373
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): cover dual sign-in entry modes (#373)"
+  message: "fix(mobile): sign out after password change (#375)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:58:58Z"
+  created_at: "2026-11-07T01:59:06Z"
