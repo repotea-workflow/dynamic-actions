@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "11bea7ad138496139869476f79b7cdd06dcaf149"
+  sha: "02c930b8610c2623002058f1a7bb047c4959e644"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42325898542
+  run_id: 42325901435
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): use supplied full-page splash image (#377)\n\n* fix(mobile): use supplied full-page splash image\n\n* test(mobile): make splash checks workspace-root safe\n\n* test(mobile): dispose splash host in image regression\n\n* chore(ci): refresh splash PR head\n\n* fix(mobile): remove unused splash test import"
+  message: "fix(mobile): isolate local print drafts and attempts by account scope (#307) (#372)\n\n* fix(mobile): isolate local print drafts and attempts by account scope (#307)\n\n* style(mobile): apply dart format for CI App check"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:47:21Z"
+  created_at: "2026-11-07T01:47:23Z"
