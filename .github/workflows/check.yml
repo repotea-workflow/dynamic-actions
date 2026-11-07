@@ -159,9 +159,51 @@ jobs:
       - name: Test app
         run: just test-mobile
 
+      # This key is for CI validation, not a final app-store release identity.
+      - name: Configure Android CI release signing
+        env:
+          SIGNING_JSON: ${{ secrets.GPRINTER_CI_RELEASE_SIGNING_JSON }}
+        run: |
+          python3 - <<'PY'
+          import base64
+          import json
+          import os
+          from pathlib import Path
+
+          payload = json.loads(os.environ["SIGNING_JSON"])
+          keystore = Path(os.environ["RUNNER_TEMP"]) / "gprinter-ci-release.p12"
+          properties = Path("apps/mobile/android/key.properties")
+
+          def write_private(path, content):
+              with os.fdopen(os.open(path, os.O_WRONLY | os.O_CREAT | os.O_EXCL, 0o600), "wb") as output:
+                  output.write(content)
+
+          def property_value(value):
+              return (value.replace("\\", "\\\\").replace("\r", "\\r")
+                      .replace("\n", "\\n").replace("\t", "\\t")
+                      .replace(" ", "\\ "))
+
+          values = {
+              "storeFile": str(keystore.resolve()),
+              "storePassword": payload["storePassword"],
+              "keyAlias": payload["keyAlias"],
+              "keyPassword": payload["keyPassword"],
+          }
+          if not all(isinstance(value, str) and value for value in values.values()):
+              raise SystemExit("CI signing properties must be nonempty strings")
+          write_private(keystore, base64.b64decode(payload["keystoreBase64"], validate=True))
+          write_private(properties, "".join(
+              f"{key}={property_value(value)}\n" for key, value in values.items()
+          ).encode("ascii"))
+          PY
+
       - name: Build Android release APK
         working-directory: apps/mobile
         run: fvm flutter build apk --release --no-pub
+
+      - name: Remove Android CI release signing
+        if: always()
+        run: rm -f apps/mobile/android/key.properties "$RUNNER_TEMP/gprinter-ci-release.p12"
 
       - name: Remove private GitHub dependency credentials
         if: always()

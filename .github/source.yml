@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "7ada644703c7c36ea0a0ee33ba4bcf04bab00171"
+  sha: "00306d3e0f835aa65d3aac3f99647266ae1516d7"
   ref_type: "branch"
-  ref_name: "fix/316-splash-background"
-  run_id: 42315722731
+  ref_name: "fix/ci-format-dynamic-dispatch"
+  run_id: 42325744777
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): remove unused splash test import"
+  message: "ci: provision isolated Gprinter release signing for validation"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T00:02:32Z"
+  created_at: "2026-11-07T01:45:33Z"
