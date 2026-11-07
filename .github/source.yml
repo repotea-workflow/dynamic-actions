@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "9b4f59c510a251daa0d1f2764f1e37659cdca9ac"
+  sha: "5c9bf5106e3862ed208a0bc90bf513dea75d20e2"
   ref_type: "branch"
-  ref_name: "fix/254-cold-start"
-  run_id: 42326047920
+  ref_name: "main"
+  run_id: 42326058257
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "merge: retain full-page splash with verified 1200/1900ms timing"
+  message: "perf(mobile): shorten splash overlay startup budget (#383)\n\n* perf(mobile): shorten splash overlay startup budget\n\n* test(mobile): isolate splash timer regression from asset bundle"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:49:04Z"
+  created_at: "2026-11-07T01:49:10Z"
