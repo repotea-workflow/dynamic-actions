@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "6d541ccefa6c8d5c55c438f41e7ecd3b3241afb7"
+  sha: "0df0fb2d88676c8c4722795da396a0d612f7f461"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326128886
+  run_id: 42326136273
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: list only 190-220 mm A4 printer models (#343)\n\nAcceptance requires printable widths of 190-220 mm. The spreadsheet's\n100-220 mm handling note conflicts with that and is not applied."
+  message: "fix: reject hardware acceptance without measurements (#346)\n\nIssue 231 cannot treat simulator or missing lab data as a pass.\nThe matrix stays not measured until device, firmware, OS, commit,\ncorpus, measurement, and threshold are all recorded."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:50:04Z"
+  created_at: "2026-11-07T01:50:09Z"
