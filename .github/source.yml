@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "1dd08f6e124604d7c5b4d7738818f8dfa5b0adeb"
+  sha: "e446a43fdbb613d0bf03657d561ce8ad2862038f"
   ref_type: "branch"
-  ref_name: "fix/285-editor-save-naming"
-  run_id: 42327040822
+  ref_name: "fix/260-japanese-feature-titles"
+  run_id: 42327127978
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): preserve unsaved changes across system back and save errors"
+  message: "merge: preserve Home lockup and Japanese full-title regression"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:01:02Z"
+  created_at: "2026-11-07T02:02:07Z"
