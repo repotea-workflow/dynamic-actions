@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0d4588b2df633a50ceff2903065957cefccfa4d1"
+  sha: "76005ed06fcf3aea474f256b167011c448fcf31b"
   ref_type: "branch"
-  ref_name: "bet/issue-311-template-region-en-localization"
-  run_id: 42326284686
+  ref_name: "main"
+  run_id: 42326289995
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore: merge main into bet/issue-311-template-region-en-localization"
+  message: "feat(templates): localize template catalog categories, cards, and details in English (#311) (#334)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:51:54Z"
+  created_at: "2026-11-07T01:51:56Z"
