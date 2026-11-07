@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "02c930b8610c2623002058f1a7bb047c4959e644"
+  sha: "94296818b97d8e36cc5a5a23e18487971c9e0a5a"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42325901435
+  run_id: 42325904456
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): isolate local print drafts and attempts by account scope (#307) (#372)\n\n* fix(mobile): isolate local print drafts and attempts by account scope (#307)\n\n* style(mobile): apply dart format for CI App check"
+  message: "fix(mobile): restore the Gprinter lockup on Home (#355)\n\n* fix(mobile): restore the Gprinter lockup on Home\n\nThe home header still loaded assets/brand/logo.png after that file became\nthe square app icon. Show the Gprinter/\u4f73\u535a wordmark only there and leave\nthe connection pill unchanged.\n\n* test(mobile): check the home lockup file without precache\n\nCI could not resolve the new asset through the widget precache bundle.\nCompare the PNG on disk with the square icon and keep the connection\npill assertions."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:47:23Z"
+  created_at: "2026-11-07T01:47:28Z"
