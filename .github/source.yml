@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "acd3b369168b74054ad7a8fd947912d989023744"
+  sha: "b44bb85438f91901ca539704291f9dce9dc67a36"
   ref_type: "branch"
-  ref_name: "bet/issue-312-template-region-zh-hant-localization"
-  run_id: 42326395165
+  ref_name: "bet/issue-313-template-region-ja-localization"
+  run_id: 42326481977
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore: merge main into bet/issue-312-template-region-zh-hant-localization"
+  message: "chore: merge main into bet/issue-313-template-region-ja-localization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:53:20Z"
+  created_at: "2026-11-07T01:54:19Z"
