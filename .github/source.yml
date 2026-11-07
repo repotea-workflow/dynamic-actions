@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "94bc84cfdfaa8df79cbab262908f3d9d05cfc127"
+  sha: "d75238fd7834986e2220181a6fd2902b4faa649f"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42325943575
+  run_id: 42325959463
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(editor): label undo and redo actions semantically (#362)\n\n* fix(editor): label undo and redo actions semantically\n\n* fix(editor): use arrow glyphs for undo and redo\n\nThe circular history marks did not read as undo. Draw an open arrow\nfor each direction, and cover empty, undo, and redo from the app bar."
+  message: "fix(image-print): toggle original and processed handwriting results (#379)\n\n* fix(image-print): toggle original and processed handwriting results\n\nKeep the derived handwriting bitmap when showing the original so the\norganizer can switch back without another remote call. Print persists\nthe selected edit, and the organizer test checks those saved pages\nbyte-for-byte against renderImageEdit.\n\n* fix(image-print): disable actions until the newest preview settles\n\nKeep the previous preview image while a replacement renders, but do not\nenable editor continue or organizer print until that render is current."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:48:01Z"
+  created_at: "2026-11-07T01:48:05Z"
