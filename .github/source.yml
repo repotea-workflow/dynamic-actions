@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "cc4f957373a53ebec16f390047697f0e51cdc3ed"
+  sha: "434ef6646d76eb396bf6908e13d729a7e5d56efc"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42355004974
+  run_id: 42360848291
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): disable OCI provenance/sbom attestations for Aliyun ACR push"
+  message: "fix(mobile): resolve real-device acceptance issues (#254, #256, #271, #272, #289, #290, #293, #309)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T08:19:55Z"
+  created_at: "2026-11-07T09:42:31Z"
