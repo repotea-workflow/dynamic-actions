@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "e333facb5d6167299fdad0e0374a0be5cdc8e900"
+  sha: "d5cecae7d73425581273a0a29e4a2856a3d80c9f"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42327001569
+  run_id: 42327014680
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(quick-text): make format pills mutually exclusive (#356)"
+  message: "test(editor): cover localized text defaults (#359)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:00:46Z"
+  created_at: "2026-11-07T02:00:48Z"
