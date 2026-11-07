@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "3397c10ef0431a53168a32e4b1b8f1068963403b"
+  sha: "5af44b73a3e10a98e0582fcfe1617b9accc2c0bb"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42327413523
+  run_id: 42327424209
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): refresh camera permission after settings (#324)\n\n* fix(mobile): guide users after camera permission denial\n\n* fix(mobile): refresh camera permission after settings\n\n* test(transport): cover camera permission refresh"
+  message: "fix(device): ignore duplicate bluetooth discovery requests (#381)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T02:05:13Z"
+  created_at: "2026-11-07T02:05:20Z"
