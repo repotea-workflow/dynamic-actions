@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "54e28339bc1191d7d1a95a047807b236dd6d5cd9"
+  sha: "db7785c9026d8ee60e7ab4e4a82643feb260ca5e"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42325975308
+  ref_name: "bet/issue-299-template-origin-delete-import"
+  run_id: 42326016644
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): refresh personal templates and use vertical list layout (#301) (#348)"
+  message: "chore: merge main into bet/issue-299-template-origin-delete-import"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:48:19Z"
+  created_at: "2026-11-07T01:48:44Z"
