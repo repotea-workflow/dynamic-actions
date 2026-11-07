@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "e216889daa8e15d13f950c4add28b272390da86c"
+  sha: "03e33eb65265f2b8d070c8a7b53b86aeaf317ae3"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326021062
+  run_id: 42326033828
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: let print page range be edited before it is valid (#323)\n\nEmpty or out-of-order range text was rewritten to 1 or the last page, so\nthe start and end could not be changed freely."
+  message: "fix: give M821 selectable paper kinds and preview ratios (#327)\n\nM821 keeps paged, continuous, and black-mark choices plus A4 and a 210 mm roll even when an older catalog omits them. ESC black-mark stays selectable and feeds as a cut sheet; the real sensor is still manual hardware."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:48:47Z"
+  created_at: "2026-11-07T01:48:56Z"
