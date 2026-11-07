@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "414b2f206e35666540fa5b0797d1f05912f034fe"
+  sha: "653af90794f7f89a489aa545fbfb9fdd7d306cc0"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42325884216
+  ref_name: "fix/316-splash-background"
+  run_id: 42325892178
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(mobile): add wrong-question compose summary, answer toggle, and sheet print (#298) (#363)"
+  message: "Merge remote-tracking branch 'origin/main' into fix/316-splash-background"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:47:15Z"
+  created_at: "2026-11-07T01:47:18Z"
