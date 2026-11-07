@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "b3e8e86122cd34624e08c6efd924c475e3510f08"
+  sha: "0ec383e36dcd2317f000bc751ec99288a95f94fc"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326838446
+  run_id: 42326863093
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): cover records clear confirmation scope (#371)"
+  message: "test(mobile): cover dual sign-in entry modes (#373)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:58:40Z"
+  created_at: "2026-11-07T01:58:58Z"
