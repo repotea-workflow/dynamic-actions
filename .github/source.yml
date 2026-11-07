@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "6356cebc58082ab5d90e16fa3c761681362e9a69"
+  sha: "e216889daa8e15d13f950c4add28b272390da86c"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42326023254
+  run_id: 42326021062
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(mobile): distinguish public/personal templates and support personal import/delete (#299) (#352)\n\n* fix(mobile): refresh personal templates and use vertical list layout (#301)\n\n* feat(mobile): distinguish public/personal templates and support personal import/delete (#299)"
+  message: "fix: let print page range be edited before it is valid (#323)\n\nEmpty or out-of-order range text was rewritten to 1 or the last page, so\nthe start and end could not be changed freely."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:48:46Z"
+  created_at: "2026-11-07T01:48:47Z"
