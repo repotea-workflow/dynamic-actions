@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0df0fb2d88676c8c4722795da396a0d612f7f461"
+  sha: "0d4588b2df633a50ceff2903065957cefccfa4d1"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 42326136273
+  ref_name: "bet/issue-311-template-region-en-localization"
+  run_id: 42326284686
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: reject hardware acceptance without measurements (#346)\n\nIssue 231 cannot treat simulator or missing lab data as a pass.\nThe matrix stays not measured until device, firmware, OS, commit,\ncorpus, measurement, and threshold are all recorded."
+  message: "chore: merge main into bet/issue-311-template-region-en-localization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-07T01:50:09Z"
+  created_at: "2026-11-07T01:51:54Z"
