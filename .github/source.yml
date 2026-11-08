@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "d95514eed494db395b1914d1b95b1705d268f779"
+  sha: "f8bcc6198c628714ec1a17b4967763fb1dfb07c2"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 42497747633
+  run_id: 42499810578
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(dyn-workflows): push GHCR images to repotea-workspace/ztoms via GH_TOKEN_0XFE10 and ensure-main"
+  message: "ci(dyn-workflows): keep only production tag workflow for ztoms"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-08T16:01:42Z"
+  created_at: "2026-11-08T16:25:35Z"
