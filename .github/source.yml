@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "c21d9a2db261f0dbf94e881f7f369db5b6f707b0"
-  ref_type: "tag"
-  ref_name: "v0.0.137-ztoms"
-  run_id: 39954418163
+  sha: "f6368985378737ecc3a614b22fd27009aa0c38f7"
+  ref_type: "branch"
+  ref_name: "main"
+  run_id: 42491027762
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): normalize historical Datong urban district (#342)\n\n* fix(omsk): show cleanup preview progress and compress large JSON\n\n* fix(omsk): execute uploaded product cleanup as persistent tasks\n\n* fix(omsk): normalize historical Datong urban district"
+  message: "ci(dyn-workflows): adopt Kangumi source_context and Flux image automation"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-10-23T12:35:18Z"
+  created_at: "2026-11-08T14:41:30Z"

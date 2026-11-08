@@ -1,0 +1,327 @@
+name: "[ztoms] Staging"
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  DOCKER_REGISTRY: ghcr.io
+  DOCKER_REGISTRY_UHUB: uhub.service.ucloud.cn
+
+concurrency:
+  group: ztoms-staging-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  actions: write
+  contents: read
+  packages: write
+
+jobs:
+  build-backend:
+    name: "[omsk] Build Backend"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: ztoms-backend-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/omsk-v4-java.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:staging
+
+  build-web:
+    name: "[omsk] Build Cusco"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: ztoms-web-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/omsk-control-web.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:staging
+
+  build-omsj-api:
+    name: "[omsj] Build API"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: omsj-api-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/omsj-api-v4.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:staging
+
+  build-omsj-web:
+    name: "[omsj] Build Web"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: omsj-web-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/omsj-web-v4.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:staging
+
+  build-omsk-babylon:
+    name: "[omsk] Build Babylon"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: omsk-babylon-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/omsk-babylon-v4.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:staging
+
+  build-worker:
+    name: "[worker] Build Tasks"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+          source_context: "true"
+          image_name: ztoms-worker-v4
+
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+
+      - name: Docker login (UHub)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_UHUB_USERNAME_ZTOKR }}
+          password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
+          registry: ${{ env.DOCKER_REGISTRY_UHUB }}
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/ztoms-worker-v4.Dockerfile
+          platforms: linux/amd64
+          provenance: false
+          sbom: false
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
+            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:staging
