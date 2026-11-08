@@ -3,7 +3,7 @@ name: "[ztoms] Staging"
 on:
   push:
     branches:
-      - main
+      - "**"
   workflow_dispatch:
 
 env:
@@ -20,9 +20,27 @@ permissions:
   packages: write
 
 jobs:
+  ensure-main:
+    name: Ensure main
+    runs-on: ubuntu-latest
+    outputs:
+      ENSURE_MAIN: ${{ steps.ensure_main.outputs.matches }}
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Ensure main
+        id: ensure_main
+        uses: repotea-workspace/kangumi/github-actions/dyn-source@main
+        with:
+          repository: repotea-workspace/ztoms
+          branches: main
+
   build-backend:
     name: "[omsk] Build Backend"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -38,8 +56,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -64,16 +82,30 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:staging
 
   build-web:
     name: "[omsk] Build Cusco"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -89,8 +121,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -115,16 +147,30 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:staging
 
   build-omsj-api:
     name: "[omsj] Build API"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -140,8 +186,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -166,16 +212,30 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:staging
 
   build-omsj-web:
     name: "[omsj] Build Web"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -191,8 +251,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -217,16 +277,30 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:staging
 
   build-omsk-babylon:
     name: "[omsk] Build Babylon"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -242,8 +316,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -268,16 +342,30 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:staging
 
   build-worker:
     name: "[worker] Build Tasks"
     runs-on: ubuntu-latest
+    needs:
+      - ensure-main
+    if: needs.ensure-main.outputs.ENSURE_MAIN == 'true'
     steps:
       - uses: actions/checkout@v6
 
@@ -293,8 +381,8 @@ jobs:
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: '0xfe10'
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -319,9 +407,20 @@ jobs:
           platforms: linux/amd64
           provenance: false
           sbom: false
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
-          tags: |
-            ${{ steps.checkout.outputs.ghcr_tags }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
-            ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:staging
+
+      - name: Push to UHub (with retry)
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
+            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:staging
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}-${{ github.run_number }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
+            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:staging
