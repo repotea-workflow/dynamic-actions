@@ -1,1 +1,1 @@
-feat(native): sync upstream agent-wechat v2.0.0 conference calls and video limits
+feat(native): sync upstream agent-wechat v2.0.0 conference calls and video limits (#21)

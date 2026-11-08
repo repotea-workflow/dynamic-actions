@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "835fcc77dadab4ee1fe892f6457988baaf77d0e4",
+    "sha": "adfe6edd2a9dc327ba38785c331b6597dbf024d5",
     "ref_type": "branch",
-    "ref_name": "feat/upstream-native-v2-sync",
-    "run_id": 42467998999,
+    "ref_name": "main",
+    "run_id": 42468016881,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
