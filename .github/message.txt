@@ -1,5 +1,1 @@
-feat(native): integrate upstream updates and direct voice calls (#20)
-
-Adapt upstream Native login, messaging, media and storage while retaining WeAuto service ownership and Desktop behavior. Add scoped direct voice calls, caller-local audio, CLI and SDK support, and bounded FFmpeg worker stacks.
-
-Verified with 1,099 Rust tests, generated SDK checks, 50 SDK tests, 14 process isolation tests and Desktop regression suites. Live WeChat calls and deployments were not performed.
+feat(native): sync upstream agent-wechat v2.0.0 conference calls and video limits
