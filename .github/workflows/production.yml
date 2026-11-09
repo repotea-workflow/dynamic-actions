@@ -5,6 +5,14 @@ on:
     tags:
       - "v*-ztoms"
   workflow_dispatch:
+    inputs:
+      mode:
+        description: "Manual production workflow mode"
+        required: true
+        default: "build-only"
+        type: choice
+        options:
+          - "build-only"
 
 env:
   DOCKER_REGISTRY: ghcr.io
@@ -23,23 +31,27 @@ jobs:
   build-backend:
     name: "[omsk] Build Backend"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: ztoms-backend-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -49,6 +61,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-backend-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -56,52 +74,42 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsk-v4-java.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
-
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:latest
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
   build-web:
     name: "[omsk] Build Cusco"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: ztoms-web-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -111,6 +119,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -118,52 +132,42 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsk-control-web.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
-
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:latest
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsj-api:
     name: "[omsj] Build API"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: omsj-api-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -173,6 +177,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/omsj-api-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -180,52 +190,42 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsj-api-v4.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
-
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:latest
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsj-web:
     name: "[omsj] Build Web"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: omsj-web-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -235,6 +235,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/omsj-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -242,52 +248,42 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsj-web-v4.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
-
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:latest
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
   build-omsk-babylon:
     name: "[omsk] Build Babylon"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: omsk-babylon-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -297,6 +293,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/omsk-babylon-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -304,52 +306,42 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/omsk-babylon-v4.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
-
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
-        with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:latest
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
   build-worker:
     name: "[worker] Build Tasks"
     runs-on: ubuntu-latest
+    outputs:
+      ghcr_image: ${{ steps.tags.outputs.ghcr_sha }}
+      uhub_image: ${{ steps.tags.outputs.uhub_sha }}
+      digest: ${{ steps.build.outputs.digest }}
     steps:
       - uses: actions/checkout@v6
 
       - name: Checkout
-        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: repotea-workspace/ztoms
           token: "${{ secrets.GH_TOKEN_0XFE10 }}"
-          source_context: "true"
-          image_name: ztoms-worker-v4
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse --short=7 HEAD)" >> "$GITHUB_ENV"
 
       - name: Docker login (GHCR)
         uses: docker/login-action@v3
         with:
-          username: '0xfe10'
-          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
           registry: ${{ env.DOCKER_REGISTRY }}
 
       - name: Docker login (UHub)
@@ -359,6 +351,12 @@ jobs:
           password: ${{ secrets.CR_UHUB_PASSWORD_ZTOKR }}
           registry: ${{ env.DOCKER_REGISTRY_UHUB }}
 
+      - name: Set image tags
+        id: tags
+        run: |
+          echo "ghcr_sha=${{ env.DOCKER_REGISTRY }}/${{ github.repository }}/ztoms-worker-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+          echo "uhub_sha=${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SOURCE_SHA }}" >> $GITHUB_OUTPUT
+
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
 
@@ -366,28 +364,66 @@ jobs:
         uses: docker/setup-buildx-action@v3
 
       - name: Build and push docker image
+        id: build
         uses: docker/build-push-action@v6
         with:
           push: true
           context: .
           file: docker/ztoms-worker-v4.Dockerfile
           platforms: linux/amd64
-          provenance: false
-          sbom: false
-          tags: ${{ steps.checkout.outputs.ghcr_tags }}
-          labels: ${{ steps.checkout.outputs.oci_labels }}
+          provenance: true
+          tags: |
+            ${{ steps.tags.outputs.ghcr_sha }}
+            ${{ steps.tags.outputs.uhub_sha }}
 
-      - name: Push to UHub (with retry)
-        uses: nick-fields/retry@v3
+  deploy-app:
+    name: Deploy App
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && startsWith(github.ref, 'refs/tags/')
+    needs:
+      - build-backend
+      - build-web
+      - build-omsj-api
+      - build-omsj-web
+      - build-omsk-babylon
+      - build-worker
+    steps:
+      - uses: actions/checkout@v6
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
-          timeout_minutes: 10
-          max_attempts: 5
-          retry_wait_seconds: 30
-          command: |
-            docker pull ${{ steps.checkout.outputs.ghcr_sha }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:${{ env.SOURCE_TAG }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
-            docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:latest
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+
+      - name: Set source SHA
+        run: echo "SOURCE_SHA=$(git rev-parse HEAD)" >> "$GITHUB_ENV"
+
+      - name: Deploy
+        uses: repotea-workspace/kangumi/github-actions/gitops-deploy@main
+        with:
+          repository: repotea-workflow/gitops-fes
+          deploy_key: "${{ secrets.DEPLOY_KEY_GITOPS_FES }}"
+          argocd_server: ${{ secrets.ARGOCD_FES_SERVER }}
+          argocd_api_token: ${{ secrets.ARGOCD_FES_API_TOKEN }}
+          app_name: work-production-ztoms-ula
+          changes: |
+            {
+              "argocd/work/ztoms-ula/overlays/production/ztoms/values.yaml": {
+                "ztomsV4.images.backend": "${{ needs.build-backend.outputs.uhub_image }}",
+                "ztomsV4.images.web": "${{ needs.build-web.outputs.uhub_image }}",
+                "ztomsV4.images.omsjApi": "${{ needs.build-omsj-api.outputs.uhub_image }}",
+                "ztomsV4.images.omsjWeb": "${{ needs.build-omsj-web.outputs.uhub_image }}",
+                "ztomsV4.images.omskBabylon": "${{ needs.build-omsk-babylon.outputs.uhub_image }}",
+                "ztomsV4.images.worker": "${{ needs.build-worker.outputs.uhub_image }}",
+                "ztomsV4.migration.image": "${{ needs.build-backend.outputs.uhub_image }}"
+              }
+            }
+
+      - name: Production smoke
+        run: |
+          curl --fail --show-error --silent --max-time 20 https://omsk-cusco.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsk-roman.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsk-api.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsj.ztokr.com/ >/dev/null
+          curl --fail --show-error --silent --max-time 20 https://omsj-api.ztokr.com/ >/dev/null

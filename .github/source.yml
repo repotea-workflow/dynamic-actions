@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "f8bcc6198c628714ec1a17b4967763fb1dfb07c2"
-  ref_type: "tag"
-  ref_name: "v0.0.138"
-  run_id: 42499812388
+  sha: "cedad36eac54688b195f45fa1e42f196128a98aa"
+  ref_type: "branch"
+  ref_name: "chore/aspen-preserve-20261109-ztoms-0xfe10-ztoms-19497"
+  run_id: 42610171523
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ci(dyn-workflows): keep only production tag workflow for ztoms"
+  message: "fix(omsk): execute uploaded product cleanup as persistent tasks"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-08T16:25:35Z"
+  created_at: "2026-11-09T11:35:04Z"
