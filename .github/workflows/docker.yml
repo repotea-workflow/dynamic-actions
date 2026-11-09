@@ -110,8 +110,8 @@ jobs:
     - uses: docker/login-action@v4
       with:
         registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: 0xfe10
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
     - name: Resolve pinned official desktop package
       id: wechat
       if: matrix.target == 'desktop-host'
@@ -142,8 +142,9 @@ jobs:
           WECHAT_DEB_SHA256=${{ steps.wechat.outputs.sha256 }}
           WECHAT_DEB_VERSION=${{ steps.wechat.outputs.version }}
         no-cache: ${{ env.WEAUTO_NO_CACHE == 'true' }}
-        outputs: type=image,name=ghcr.io/repotea-workflow/dynamic-actions/weauto-${{ matrix.target }},push-by-digest=true,name-canonical=true,push=true
+        outputs: type=image,name=ghcr.io/0xfe10/weauto/weauto-${{ matrix.target }},push-by-digest=true,name-canonical=true,push=true
         labels: |
+          org.opencontainers.image.source=https://github.com/0xfe10/weauto
           org.opencontainers.image.revision=${{ needs.source.outputs.sha }}
           org.opencontainers.image.version=${{ needs.source.outputs.version }}
         cache-from: type=gha,scope=${{ matrix.target }}-${{ matrix.arch }}
@@ -163,7 +164,7 @@ jobs:
         WECHAT_VERSION: ${{ steps.wechat.outputs.version }}
       run: |-
         set -euo pipefail
-        image="ghcr.io/repotea-workflow/dynamic-actions/weauto-desktop-host@${IMAGE_DIGEST}"
+        image="ghcr.io/0xfe10/weauto/weauto-desktop-host@${IMAGE_DIGEST}"
         root="/tmp/attach/weauto-desktop-host-${VERSION}-${ARCH}"
         mkdir -p "$root/bin" "$root/tools" "$root/runtime" "$root/python"
         docker pull "$image"
@@ -227,11 +228,11 @@ jobs:
     - uses: docker/login-action@v4
       with:
         registry: ghcr.io
-        username: ${{ github.actor }}
-        password: ${{ secrets.GITHUB_TOKEN }}
+        username: 0xfe10
+        password: ${{ secrets.GH_TOKEN_0XFE10 }}
     - name: Create multi-arch manifest
       run: |
-        IMAGE="ghcr.io/repotea-workflow/dynamic-actions/weauto-${{ matrix.target }}"
+        IMAGE="ghcr.io/0xfe10/weauto/weauto-${{ matrix.target }}"
         docker buildx imagetools create \
           -t "${IMAGE}:${{ needs.source.outputs.version }}" \
           $(printf "${IMAGE}@sha256:%s " $(ls /tmp/digests/))
@@ -246,4 +247,4 @@ env:
   WEAUTO_BUILD_PROFILE: desktop-prep
   WEAUTO_BUILD_VERSION: ''
   WEAUTO_NO_CACHE: 'false'
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/weauto
+  IMAGE_NAME: ghcr.io/0xfe10/weauto/weauto
