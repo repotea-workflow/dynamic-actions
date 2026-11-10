@@ -79,11 +79,12 @@ jobs:
           push: true
           context: .
           file: docker/gprinter-api.Dockerfile
-          provenance: false
+          provenance: mode=min
           sbom: false
           platforms: linux/amd64
           tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
+          annotations: index:org.opencontainers.image.source=${{ steps.checkout.outputs.oci_source }}
       - name: Mirror source images to Aliyun
         uses: nick-fields/retry@v3
         with:
@@ -181,11 +182,12 @@ jobs:
           push: true
           context: .
           file: docker/gprinter-admin.Dockerfile
-          provenance: false
+          provenance: mode=min
           sbom: false
           platforms: linux/amd64
           tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
+          annotations: index:org.opencontainers.image.source=${{ steps.checkout.outputs.oci_source }}
       - name: Mirror source images to Aliyun
         uses: nick-fields/retry@v3
         with:
@@ -242,12 +244,13 @@ jobs:
         with:
           context: .
           file: docker/office-converter.Dockerfile
-          provenance: false
+          provenance: mode=min
           sbom: false
           platforms: linux/amd64
           push: true
           tags: ${{ steps.checkout.outputs.ghcr_tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
+          annotations: index:org.opencontainers.image.source=${{ steps.checkout.outputs.oci_source }}
       - name: Mirror source images to Aliyun
         uses: nick-fields/retry@v3
         with:
