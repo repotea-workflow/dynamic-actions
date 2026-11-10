@@ -3,6 +3,7 @@ name: "[workbot] External Workbot services"
 on:
   push:
     branches: ["**"]
+    tags: ["v*-workbot"]
 
 concurrency:
   group: workbot-external-${{ github.ref }}
@@ -36,12 +37,23 @@ jobs:
           if grep -qx main .github/branch.txt; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            source_tag=$(cat .github/tag.txt)
+            [[ "$source_tag" =~ ^v[A-Za-z0-9_.-]{0,127}$ ]]
+            test "$GITHUB_REF_NAME" = "${source_tag}-workbot"
+            tag_revision=$(gh api "repos/0xfe10/workbot/commits/$source_tag" --jq .sha)
+            test "$tag_revision" = "$revision"
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Check out Workbot source
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: ${{ steps.source.outputs.repository }}
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ steps.source.outputs.revision }}
+          source_context: "true"
+          image_name: workbot-${{ matrix.component }}
       - name: Test component
         env:
           COMPONENT: ${{ matrix.component }}
@@ -58,9 +70,7 @@ jobs:
           context: .
           file: docker/${{ matrix.component }}/Dockerfile
           load: true
-          labels: |
-            org.opencontainers.image.source=https://github.com/0xfe10/workbot
-            org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           tags: workbot-${{ matrix.component }}:candidate
           cache-from: type=gha,scope=workbot-${{ matrix.component }}
           cache-to: type=gha,mode=max,scope=workbot-${{ matrix.component }}
@@ -78,14 +88,16 @@ jobs:
         if: steps.source.outputs.publish == 'true'
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
       - name: Publish external service only
         if: steps.source.outputs.publish == 'true'
         env:
           COMPONENT: ${{ matrix.component }}
-          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          GHCR_TAGS: ${{ steps.checkout.outputs.ghcr_tags }}
         run: |
-          image="ghcr.io/repotea-workflow/dynamic-actions/workbot-$COMPONENT:sha-$SOURCE_SHA"
-          docker tag "workbot-$COMPONENT:candidate" "$image"
-          docker push "$image"
+          while IFS= read -r image; do
+            test -n "$image" || continue
+            docker tag "workbot-$COMPONENT:candidate" "$image"
+            docker push "$image"
+          done <<< "$GHCR_TAGS"

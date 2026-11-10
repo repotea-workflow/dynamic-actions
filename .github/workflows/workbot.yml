@@ -3,6 +3,7 @@ name: "[workbot] Workbot portal image"
 on:
   push:
     branches: ["**"]
+    tags: ["v*-workbot"]
 
 concurrency:
   group: workbot-portal-${{ github.ref }}
@@ -13,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-portal
+  IMAGE_NAME: ghcr.io/0xfe10/workbot/workbot-portal
 
 jobs:
   build:
@@ -35,12 +36,23 @@ jobs:
           if grep -qx main .github/branch.txt; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
+          if [[ "$GITHUB_REF" == refs/tags/* ]]; then
+            source_tag=$(cat .github/tag.txt)
+            [[ "$source_tag" =~ ^v[A-Za-z0-9_.-]{0,127}$ ]]
+            test "$GITHUB_REF_NAME" = "${source_tag}-workbot"
+            tag_revision=$(gh api "repos/0xfe10/workbot/commits/$source_tag" --jq .sha)
+            test "$tag_revision" = "$revision"
+            echo "publish=true" >> "$GITHUB_OUTPUT"
+          fi
       - name: Check out Workbot source
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: ${{ steps.source.outputs.repository }}
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ steps.source.outputs.revision }}
+          source_context: "true"
+          image_name: workbot-portal
       - name: Test authentication and directory isolation
         run: python3 -m unittest discover -s integrations/workbot -v
       - uses: docker/setup-buildx-action@v4
@@ -50,9 +62,7 @@ jobs:
           context: .
           file: docker/workbot/Dockerfile
           load: true
-          labels: |
-            org.opencontainers.image.source=https://github.com/0xfe10/workbot
-            org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           tags: workbot-portal:candidate
       - name: Verify candidate runtime
         run: |
@@ -62,12 +72,15 @@ jobs:
         if: steps.source.outputs.publish == 'true'
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
       - name: Publish verified image
         if: steps.source.outputs.publish == 'true'
         env:
-          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+          GHCR_TAGS: ${{ steps.checkout.outputs.ghcr_tags }}
         run: |
-          docker tag workbot-portal:candidate "${IMAGE_NAME}:sha-${SOURCE_SHA}"
-          docker push "${IMAGE_NAME}:sha-${SOURCE_SHA}"
+          while IFS= read -r image; do
+            test -n "$image" || continue
+            docker tag workbot-portal:candidate "$image"
+            docker push "$image"
+          done <<< "$GHCR_TAGS"

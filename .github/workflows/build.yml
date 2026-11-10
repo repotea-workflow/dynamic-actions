@@ -14,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot
+  IMAGE_NAME: ghcr.io/0xfe10/workbot/workbot
 
 jobs:
   build:
@@ -53,11 +53,14 @@ jobs:
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
       - name: Check out Workbot source
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/workbot
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ steps.source.outputs.revision }}
+          source_context: "true"
+          image_name: workbot
       - uses: dtolnay/rust-toolchain@1.93.1
       - uses: Swatinem/rust-cache@v2
         with:
@@ -73,8 +76,8 @@ jobs:
         if: steps.source.outputs.publish == 'true'
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
       - name: Build candidate or publish tagged image
         id: image
         uses: docker/build-push-action@v7
@@ -83,12 +86,8 @@ jobs:
           file: Dockerfile
           platforms: linux/amd64
           push: ${{ steps.source.outputs.publish == 'true' }}
-          tags: |
-            ${{ env.IMAGE_NAME }}:sha-${{ steps.source.outputs.revision }}
-            ${{ steps.source.outputs.tag && format('{0}:{1}', env.IMAGE_NAME, steps.source.outputs.tag) || '' }}
-          labels: |
-            org.opencontainers.image.source=https://github.com/0xfe10/workbot
-            org.opencontainers.image.revision=${{ steps.source.outputs.revision }}
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           cache-from: type=gha,scope=workbot
           cache-to: type=gha,mode=max,scope=workbot
       - name: Report immutable image
