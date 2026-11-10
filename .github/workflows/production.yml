@@ -103,7 +103,7 @@ jobs:
             for tag in "${tags[@]}"; do
               target="${{ steps.checkout.outputs.ali_image }}:$tag"
               docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-              docker push "$target"
+              docker push --platform linux/amd64 "$target"
             done
   build-admin:
     name: Build Admin image
@@ -206,7 +206,7 @@ jobs:
             for tag in "${tags[@]}"; do
               target="${{ steps.checkout.outputs.ali_image }}:$tag"
               docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-              docker push "$target"
+              docker push --platform linux/amd64 "$target"
             done
   build-office:
     name: Build Office converter image
@@ -269,5 +269,5 @@ jobs:
             for tag in "${tags[@]}"; do
               target="${{ steps.checkout.outputs.ali_image }}:$tag"
               docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-              docker push "$target"
+              docker push --platform linux/amd64 "$target"
             done
