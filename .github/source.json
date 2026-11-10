@@ -4,11 +4,11 @@
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
     "sha": "526faa4d05dd53137db8c21d1a32e874eb5d4f35",
-    "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 42794713173,
+    "ref_type": "tag",
+    "ref_name": "v0.1.0",
+    "run_id": 42797851079,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-branch.yml"
+    "workflow": ".github/workflows/trigger-tag.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
