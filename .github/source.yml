@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/centralis"
   repository_id: 1306519839
-  sha: "988a8062a01e9f55100c8cfde1d2db5d9140c850"
-  ref_type: "branch"
-  ref_name: "fix/platform-image-mirror"
-  run_id: 42804581304
+  sha: "ea3cd0506a67e1eeedf63965bfb69197ed40a7ca"
+  ref_type: "tag"
+  ref_name: "v0.0.3"
+  run_id: 42804828306
   run_attempt: 1
-  workflow: ".github/workflows/trigger-branch.yml"
+  workflow: ".github/workflows/trigger-tag.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): mirror only the application platform image"
+  message: "fix(ci): mirror only the application platform image (#6)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-10T11:05:42Z"
+  created_at: "2026-11-10T11:07:23Z"
