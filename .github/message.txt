@@ -1,3 +1,1 @@
-test: probe cluster denial with helixbox (#30)
-
-The empty allowlist still rejects the wrapper call.
+fix(ci): publish active Concord images under the source repository

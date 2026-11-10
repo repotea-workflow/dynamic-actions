@@ -16,7 +16,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/concord
+  IMAGE_NAME: ghcr.io/0xfe10/concord/concord
   WECHAT_DOWNLOAD_BASE: https://dldir1v6.qq.com/weixin/Universal/Linux
 
 jobs:
@@ -71,11 +71,14 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Check out source repository
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+          source_context: "true"
+          image_name: concord
 
       - name: Set up Go
         uses: actions/setup-go@v6
@@ -118,11 +121,14 @@ jobs:
       - uses: actions/checkout@v7
 
       - name: Check out source repository
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+          source_context: "true"
+          image_name: concord
 
       - name: Download bundled WeChat package
         run: |
@@ -145,14 +151,15 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
 
       - name: Build and publish image
         id: build
         uses: docker/build-push-action@v7
         with:
           context: .
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           build-args: SOURCE_VERSION=sha-${{ needs.prepare.outputs.sha }}
           platforms: ${{ matrix.platform }}
           outputs: ${{ needs.prepare.outputs.publish == 'true' && format('type=image,name={0},push-by-digest=true,name-canonical=true,push=true', env.IMAGE_NAME) || '' }}
@@ -184,6 +191,7 @@ jobs:
         with:
           context: .
           target: pilot-worker
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           build-args: SOURCE_VERSION=sha-${{ needs.prepare.outputs.sha }}
           platforms: ${{ matrix.platform }}
           outputs: ${{ needs.prepare.outputs.publish == 'true' && format('type=image,name={0}-pilot-worker,push-by-digest=true,name-canonical=true,push=true', env.IMAGE_NAME) || '' }}
@@ -232,8 +240,8 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
 
       - name: Create multi-platform manifest
         env:
@@ -276,8 +284,8 @@ jobs:
         uses: docker/login-action@v4
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
 
       - name: Create Pilot worker multi-platform manifest
         env:

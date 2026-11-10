@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/concord",
     "repository_id": 1391292435,
-    "sha": "4d7252982a2666bb9ef4f9b4510dbe790d14c3bd",
+    "sha": "7a02d92e7fced3d8a802f32c23fae41f98317073",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 40261214964,
+    "ref_name": "fix/source-repository-images",
+    "run_id": 42794616976,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
