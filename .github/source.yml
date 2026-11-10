@@ -4,8 +4,8 @@ source:
   repository_id: 1306519839
   sha: "e922907c1cbc8b6d38333e1adc9da9aeb309793b"
   ref_type: "branch"
-  ref_name: "feat/add-wechat-contact"
-  run_id: 42788623274
+  ref_name: "main"
+  run_id: 42788674988
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "feat(contact): add localized WeChat contact to homepage and docs"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-10T09:11:42Z"
+  created_at: "2026-11-10T09:12:03Z"
