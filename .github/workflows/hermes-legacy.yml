@@ -14,7 +14,7 @@ permissions:
   packages: write
 
 env:
-  IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes
+  IMAGE_NAME: ghcr.io/0xfe10/concord/workbot-hermes
 
 jobs:
   build:
@@ -26,7 +26,7 @@ jobs:
       matrix:
         profile: [repotea, ayn]
     env:
-      IMAGE_NAME: ghcr.io/repotea-workflow/dynamic-actions/workbot-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
+      IMAGE_NAME: ghcr.io/0xfe10/concord/workbot-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
     steps:
       - uses: actions/checkout@v7
       - name: Read source metadata
@@ -37,11 +37,14 @@ jobs:
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
       - name: Check out Concord source
+        id: checkout
         uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/concord
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref_file: .github/ref.txt
+          source_context: "true"
+          image_name: workbot-hermes${{ matrix.profile == 'ayn' && '-ayn' || '' }}
       - name: Stage pinned native WeAuto channels
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
@@ -60,6 +63,7 @@ jobs:
         with:
           context: .
           file: docker/hermes/Dockerfile
+          labels: ${{ steps.checkout.outputs.oci_labels }}
           load: true
           build-args: WORKBOT_CLI_PROFILE=${{ matrix.profile }}
           tags: workbot-hermes:candidate
@@ -81,8 +85,8 @@ jobs:
         if: steps.source.outputs.publish == 'true'
         with:
           registry: ghcr.io
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
+          username: 0xfe10
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
       - name: Publish verified image
         if: steps.source.outputs.publish == 'true'
         env:

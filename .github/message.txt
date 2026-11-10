@@ -1,1 +1,1 @@
-fix(ci): publish active Concord images under the source repository
+fix(ci): use source packages for manual legacy recovery builds
