@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "1891b9c98b8e202b37cb75c612f7c9d09560c6ad"
+  sha: "11ae626f6628c3444fa28f2d01c786cff3eb8d39"
   ref_type: "branch"
-  ref_name: "feat/managed-legal-documents"
-  run_id: 42575578464
+  ref_name: "fix/business-image-automation"
+  run_id: 42794599350
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(legal): manage app agreements and cached consent"
+  message: "fix(ci): publish source images and delegate deployments to Flux"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-09T06:51:06Z"
+  created_at: "2026-11-10T09:54:31Z"
