@@ -1,0 +1,17 @@
+schema_version: 2
+source:
+  repository: "boxliy/pangea"
+  repository_id: 1418391570
+  sha: "bf0f20957f162eda14b6d19f0ae9e615aa180553"
+  ref_type: "tag"
+  ref_name: "v0.1.1"
+  run_id: 42864079822
+  run_attempt: 1
+  workflow: ".github/workflows/trigger-tag.yml"
+execution_repository: "repotea-workflow/dynamic-actions"
+policy: null
+commit:
+  message: "chore(ci): add pangea-space-key-broker image and align OCI index source annotations (#92)"
+  authors: ["0x128b"]
+dispatch:
+  created_at: "2026-11-10T17:23:06Z"
