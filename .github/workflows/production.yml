@@ -1,8 +1,8 @@
-name: '[gprinter] Production release'
-'on':
+name: "[gprinter] Production release"
+"on":
   push:
     tags:
-    - v*-gprinter
+      - v*-gprinter
 concurrency:
   group: gprinter-production
   cancel-in-progress: false
@@ -24,247 +24,247 @@ jobs:
     outputs:
       source_sha: ${{ steps.source.outputs.sha }}
     steps:
-    - uses: actions/checkout@v6
-    - name: Checkout source repository
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-      with:
-        repository: repotea-workspace/gprinter
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-    - name: Record tested source revision
-      id: source
-      run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
-    - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
-      with:
-        toolchain: 1.96.1
-        components: clippy,rustfmt
-    - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
-    - name: Install backend dependencies
-      run: cargo fetch --locked
-    - name: Verify backend
-      run: just check-backend
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+      - name: Record tested source revision
+        id: source
+        run: echo "sha=$(git rev-parse HEAD)" >> "$GITHUB_OUTPUT"
+      - uses: dtolnay/rust-toolchain@e97e2d8cc328f1b50210efc529dca0028893a2d9
+        with:
+          toolchain: 1.96.1
+          components: clippy,rustfmt
+      - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
+      - name: Install backend dependencies
+        run: cargo fetch --locked
+      - name: Verify backend
+        run: just check-backend
   build-api:
     name: Build API image
     runs-on: ubuntu-latest
     needs:
-    - verify-backend
+      - verify-backend
     steps:
-    - uses: actions/checkout@v6
-    - name: Checkout source repository
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-      with:
-        repository: repotea-workspace/gprinter
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        source_context: 'true'
-        image_name: gprinter-api
-        acr_namespace: coohub
-        acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
-      id: checkout
-    - name: Docker login (GHCR)
-      uses: docker/login-action@v3
-      with:
-        username: '0xfe10'
-        password: ${{ secrets.GH_TOKEN_0XFE10 }}
-        registry: ${{ env.DOCKER_REGISTRY }}
-    - name: Docker login (Aliyun Shenzhen)
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
-        password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
-        registry: ${{ env.DOCKER_REGISTRY_ALI }}
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-    - name: Build and push docker image
-      uses: docker/build-push-action@v6
-      with:
-        push: true
-        context: .
-        file: docker/gprinter-api.Dockerfile
-        provenance: false
-        sbom: false
-        platforms: linux/amd64
-        tags: ${{ steps.checkout.outputs.ghcr_tags }}
-        labels: ${{ steps.checkout.outputs.oci_labels }}
-    - name: Mirror source images to Aliyun
-      uses: nick-fields/retry@v3
-      with:
-        timeout_minutes: 10
-        max_attempts: 5
-        retry_wait_seconds: 30
-        command: |
-          set -euo pipefail
-          docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
-          tags=("sha-$SHORT_SHA")
-          if [[ "$SOURCE_REF_TYPE" == tag ]]; then
-            tags+=("$SOURCE_TAG" latest)
-          else
-            tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
-          fi
-          for tag in "${tags[@]}"; do
-            target="${{ steps.checkout.outputs.ali_image }}:$tag"
-            docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-            docker push "$target"
-          done
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          source_context: "true"
+          image_name: gprinter-api
+          acr_namespace: coohub
+          acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
+        id: checkout
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: "0xfe10"
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+      - name: Docker login (Aliyun Shenzhen)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: ${{ env.DOCKER_REGISTRY_ALI }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/gprinter-api.Dockerfile
+          provenance: false
+          sbom: false
+          platforms: linux/amd64
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+      - name: Mirror source images to Aliyun
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            set -euo pipefail
+            docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
+            tags=("sha-$SHORT_SHA")
+            if [[ "$SOURCE_REF_TYPE" == tag ]]; then
+              tags+=("$SOURCE_TAG" latest)
+            else
+              tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
+            fi
+            for tag in "${tags[@]}"; do
+              target="${{ steps.checkout.outputs.ali_image }}:$tag"
+              docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
+              docker push "$target"
+            done
   build-admin:
     name: Build Admin image
     runs-on: ubuntu-latest
     needs:
-    - verify-backend
+      - verify-backend
     steps:
-    - uses: actions/checkout@v6
-    - name: Checkout source repository
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-      with:
-        repository: repotea-workspace/gprinter
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        source_context: 'true'
-        image_name: gprinter-admin
-        acr_namespace: coohub
-        acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
-      id: checkout
-    - name: Checkout Plate editor host
-      uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
-      with:
-        repository: ${{ env.PLATE_REPOSITORY }}
-        ref: ${{ env.PLATE_REF }}
-        path: vendor/plate
-        persist-credentials: false
-        token: ${{ secrets.GH_TOKEN_0X128BIT }}
-    - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
-      with:
-        flutter-version: 3.41.7
-        channel: stable
-        cache: true
-    - name: Build Gprinter Plate editor host
-      working-directory: apps/plate_editor_host
-      run: |
-        printf 'dependency_overrides:\n  plate_editor_support:\n    path: ../../vendor/plate/packages/plate_editor_support\n' > pubspec_overrides.yaml
-        flutter pub get --enforce-lockfile
-        flutter analyze --no-pub
-        flutter test --no-pub
-        flutter build web \
-          --no-pub \
-          --release \
-          --base-href /plate-editor/ \
-          --dart-define=PLATE_ALLOWED_PARENT_ORIGIN=${PLATE_ALLOWED_PARENT_ORIGIN}
-    - name: Install Plate editor host into admin static assets
-      run: |
-        mkdir -p "${PLATE_EDITOR_HOST_PATH}"
-        cp -R apps/plate_editor_host/build/web/. "${PLATE_EDITOR_HOST_PATH}/"
-    - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271
-      with:
-        version: 10.33.2
-    - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
-      with:
-        node-version: 22
-    - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
-    - name: Verify production dashboard
-      run: |
-        pnpm install --frozen-lockfile
-        just check-dashboard
-    - name: Docker login (GHCR)
-      uses: docker/login-action@v3
-      with:
-        username: '0xfe10'
-        password: ${{ secrets.GH_TOKEN_0XFE10 }}
-        registry: ${{ env.DOCKER_REGISTRY }}
-    - name: Docker login (Aliyun Shenzhen)
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
-        password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
-        registry: ${{ env.DOCKER_REGISTRY_ALI }}
-    - name: Set up Docker Buildx
-      uses: docker/setup-buildx-action@v3
-    - name: Build and push docker image
-      uses: docker/build-push-action@v6
-      with:
-        push: true
-        context: .
-        file: docker/gprinter-admin.Dockerfile
-        provenance: false
-        sbom: false
-        platforms: linux/amd64
-        tags: ${{ steps.checkout.outputs.ghcr_tags }}
-        labels: ${{ steps.checkout.outputs.oci_labels }}
-    - name: Mirror source images to Aliyun
-      uses: nick-fields/retry@v3
-      with:
-        timeout_minutes: 10
-        max_attempts: 5
-        retry_wait_seconds: 30
-        command: |
-          set -euo pipefail
-          docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
-          tags=("sha-$SHORT_SHA")
-          if [[ "$SOURCE_REF_TYPE" == tag ]]; then
-            tags+=("$SOURCE_TAG" latest)
-          else
-            tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
-          fi
-          for tag in "${tags[@]}"; do
-            target="${{ steps.checkout.outputs.ali_image }}:$tag"
-            docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-            docker push "$target"
-          done
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          source_context: "true"
+          image_name: gprinter-admin
+          acr_namespace: coohub
+          acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
+        id: checkout
+      - name: Checkout Plate editor host
+        uses: actions/checkout@d23441a48e516b6c34aea4fa41551a30e30af803
+        with:
+          repository: ${{ env.PLATE_REPOSITORY }}
+          ref: ${{ env.PLATE_REF }}
+          path: vendor/plate
+          persist-credentials: false
+          token: ${{ secrets.GH_TOKEN_0X128BIT }}
+      - uses: subosito/flutter-action@1a449444c387b1966244ae4d4f8c696479add0b2
+        with:
+          flutter-version: 3.41.7
+          channel: stable
+          cache: true
+      - name: Build Gprinter Plate editor host
+        working-directory: apps/plate_editor_host
+        run: |
+          printf 'dependency_overrides:\n  plate_editor_support:\n    path: ../../vendor/plate/packages/plate_editor_support\n' > pubspec_overrides.yaml
+          flutter pub get --enforce-lockfile
+          flutter analyze --no-pub
+          flutter test --no-pub
+          flutter build web \
+            --no-pub \
+            --release \
+            --base-href /plate-editor/ \
+            --dart-define=PLATE_ALLOWED_PARENT_ORIGIN=${PLATE_ALLOWED_PARENT_ORIGIN}
+      - name: Install Plate editor host into admin static assets
+        run: |
+          mkdir -p "${PLATE_EDITOR_HOST_PATH}"
+          cp -R apps/plate_editor_host/build/web/. "${PLATE_EDITOR_HOST_PATH}/"
+      - uses: pnpm/action-setup@0ebf47130e4866e96fce0953f49152a61190b271
+        with:
+          version: 10.33.2
+      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020
+        with:
+          node-version: 22
+      - uses: taiki-e/install-action@782607f383d1c9d72a26177e2594cd8dad0f3840
+      - name: Verify production dashboard
+        run: |
+          pnpm install --frozen-lockfile
+          just check-dashboard
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: "0xfe10"
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          registry: ${{ env.DOCKER_REGISTRY }}
+      - name: Docker login (Aliyun Shenzhen)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: ${{ env.DOCKER_REGISTRY_ALI }}
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: docker/gprinter-admin.Dockerfile
+          provenance: false
+          sbom: false
+          platforms: linux/amd64
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+      - name: Mirror source images to Aliyun
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            set -euo pipefail
+            docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
+            tags=("sha-$SHORT_SHA")
+            if [[ "$SOURCE_REF_TYPE" == tag ]]; then
+              tags+=("$SOURCE_TAG" latest)
+            else
+              tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
+            fi
+            for tag in "${tags[@]}"; do
+              target="${{ steps.checkout.outputs.ali_image }}:$tag"
+              docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
+              docker push "$target"
+            done
   build-office:
     name: Build Office converter image
     runs-on: ubuntu-latest
     needs:
-    - verify-backend
+      - verify-backend
     steps:
-    - uses: actions/checkout@v6
-    - name: Checkout source repository
-      uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
-      with:
-        repository: repotea-workspace/gprinter
-        token: ${{ secrets.GH_TOKEN_0XFE10 }}
-        source_context: 'true'
-        image_name: office-converter
-        acr_namespace: coohub
-        acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
-      id: checkout
-    - name: Docker login (GHCR)
-      uses: docker/login-action@v3
-      with:
-        registry: ghcr.io
-        username: '0xfe10'
-        password: ${{ secrets.GH_TOKEN_0XFE10 }}
-    - name: Docker login (Aliyun Shenzhen)
-      uses: docker/login-action@v3
-      with:
-        username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
-        password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
-        registry: ${{ env.DOCKER_REGISTRY_ALI }}
-    - uses: docker/setup-buildx-action@v3
-    - name: Publish pinned Office image
-      id: office
-      uses: docker/build-push-action@v6
-      with:
-        context: .
-        file: docker/office-converter.Dockerfile
-        provenance: false
-        sbom: false
-        platforms: linux/amd64
-        push: true
-        tags: ${{ steps.checkout.outputs.ghcr_tags }}
-        labels: ${{ steps.checkout.outputs.oci_labels }}
-    - name: Mirror source images to Aliyun
-      uses: nick-fields/retry@v3
-      with:
-        timeout_minutes: 10
-        max_attempts: 5
-        retry_wait_seconds: 30
-        command: |
-          set -euo pipefail
-          docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
-          tags=("sha-$SHORT_SHA")
-          if [[ "$SOURCE_REF_TYPE" == tag ]]; then
-            tags+=("$SOURCE_TAG" latest)
-          else
-            tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
-          fi
-          for tag in "${tags[@]}"; do
-            target="${{ steps.checkout.outputs.ali_image }}:$tag"
-            docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
-            docker push "$target"
-          done
+      - uses: actions/checkout@v6
+      - name: Checkout source repository
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/gprinter
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          source_context: "true"
+          image_name: office-converter
+          acr_namespace: coohub
+          acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
+        id: checkout
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: "0xfe10"
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+      - name: Docker login (Aliyun Shenzhen)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: ${{ env.DOCKER_REGISTRY_ALI }}
+      - uses: docker/setup-buildx-action@v3
+      - name: Publish pinned Office image
+        id: office
+        uses: docker/build-push-action@v6
+        with:
+          context: .
+          file: docker/office-converter.Dockerfile
+          provenance: false
+          sbom: false
+          platforms: linux/amd64
+          push: true
+          tags: ${{ steps.checkout.outputs.ghcr_tags }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+      - name: Mirror source images to Aliyun
+        uses: nick-fields/retry@v3
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            set -euo pipefail
+            docker pull "${{ steps.checkout.outputs.ghcr_sha }}"
+            tags=("sha-$SHORT_SHA")
+            if [[ "$SOURCE_REF_TYPE" == tag ]]; then
+              tags+=("$SOURCE_TAG" latest)
+            else
+              tags+=("sha-$SHORT_SHA-${{ github.run_number }}" staging)
+            fi
+            for tag in "${tags[@]}"; do
+              target="${{ steps.checkout.outputs.ali_image }}:$tag"
+              docker tag "${{ steps.checkout.outputs.ghcr_sha }}" "$target"
+              docker push "$target"
+            done
