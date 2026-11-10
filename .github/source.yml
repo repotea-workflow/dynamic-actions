@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/centralis"
   repository_id: 1306519839
-  sha: "5324a7064044029fdd86d53922410ae229c63ffc"
+  sha: "29eff45598a06e4cbfade2f47f608c6fc3c5895f"
   ref_type: "branch"
-  ref_name: "fix/linked-image-publication"
-  run_id: 42802996371
+  ref_name: "main"
+  run_id: 42803740718
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): link published container index to the source repository"
+  message: "fix(ci): link published container index to the source repository (#5)\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-10T10:54:08Z"
+  created_at: "2026-11-10T10:59:44Z"
