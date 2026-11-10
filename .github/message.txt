@@ -1,1 +1,5 @@
-fix(ci): use source packages for manual legacy recovery builds
+fix(ci): publish active images under the source repository (#31)
+
+* fix(ci): publish active Concord images under the source repository
+
+* fix(ci): use source packages for manual legacy recovery builds
