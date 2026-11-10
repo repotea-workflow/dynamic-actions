@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "boxliy/centralis"
   repository_id: 1306519839
-  sha: "e922907c1cbc8b6d38333e1adc9da9aeb309793b"
-  ref_type: "tag"
-  ref_name: "v0.0.1"
-  run_id: 42791071859
+  sha: "5324a7064044029fdd86d53922410ae229c63ffc"
+  ref_type: "branch"
+  ref_name: "fix/linked-image-publication"
+  run_id: 42802996371
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(contact): add localized WeChat contact to homepage and docs"
+  message: "fix(ci): link published container index to the source repository"
   authors: ["0x128b"]
 dispatch:
-  created_at: "2026-11-10T09:29:08Z"
+  created_at: "2026-11-10T10:54:08Z"
