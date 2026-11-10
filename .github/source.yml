@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4f6388578e189399d28c0c97cd024d781a660b47"
+  sha: "3db92ad51a371980a9f55e8e8ea7b942fca587da"
   ref_type: "branch"
-  ref_name: "fix/business-image-automation"
-  run_id: 42795686228
+  ref_name: "main"
+  run_id: 42795935164
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "style(ci): format Flux publishing workflows with repository Prettier"
+  message: "fix(ci): publish source images and use Flux deployment ownership (#385)\n\n* fix(ci): publish source images and delegate deployments to Flux\n\n* style(ci): format Flux publishing workflows with repository Prettier"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-10T10:02:20Z"
+  created_at: "2026-11-10T10:04:06Z"
