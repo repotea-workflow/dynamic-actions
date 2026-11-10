@@ -79,9 +79,9 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-backend-v4:latest
 
   build-web:
     name: "[omsk] Build Cusco"
@@ -142,9 +142,9 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-web-v4:latest
 
   build-omsj-api:
     name: "[omsj] Build API"
@@ -205,9 +205,9 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-api-v4:latest
 
   build-omsj-web:
     name: "[omsj] Build Web"
@@ -268,9 +268,9 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsj-web-v4:latest
 
   build-omsk-babylon:
     name: "[omsk] Build Babylon"
@@ -331,9 +331,9 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/omsk-babylon-v4:latest
 
   build-worker:
     name: "[worker] Build Tasks"
@@ -394,6 +394,6 @@ jobs:
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:${{ env.SOURCE_TAG }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
             docker tag ${{ steps.checkout.outputs.ghcr_sha }} ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:latest
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:${{ env.SOURCE_TAG }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
-            docker push ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:latest
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:${{ env.SOURCE_TAG }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:sha-${{ env.SHORT_SHA }}
+            docker push --platform linux/amd64 ${{ env.DOCKER_REGISTRY_UHUB }}/toohub/ztoms-worker-v4:latest
