@@ -1,1 +1,1 @@
-ci(workbot): publish repository-owned images with standard tags
+fix(ci): ignore tag dispatch metadata on the execution branch

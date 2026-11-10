@@ -39,8 +39,7 @@ jobs:
           # The existing repository-owned branch trigger forwards trusted source
           # commits to this exact execution branch. Publish each verified build
           # by source SHA so an unmerged PR can be tested without a release tag.
-          if [[ "$GITHUB_REF" == refs/heads/0xfe10/workbot ]]; then
-            test -s .github/branch.txt
+          if [[ "$GITHUB_REF" == refs/heads/0xfe10/workbot && -s .github/branch.txt ]]; then
             echo "publish=true" >> "$GITHUB_OUTPUT"
           fi
           if [[ "$GITHUB_REF" == refs/tags/* ]]; then
