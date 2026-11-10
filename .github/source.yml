@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "cedad36eac54688b195f45fa1e42f196128a98aa"
+  sha: "180d81d09496a795dca5d3f2f384d2f3d586645d"
   ref_type: "branch"
-  ref_name: "chore/aspen-preserve-20261109-ztoms-0xfe10-ztoms-19497"
-  run_id: 42610171523
+  ref_name: "fix/linked-image-publication"
+  run_id: 42804233191
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): execute uploaded product cleanup as persistent tasks"
+  message: "fix(ci): associate published images with the source repository"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-09T11:35:04Z"
+  created_at: "2026-11-10T11:03:17Z"
