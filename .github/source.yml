@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "14930b5fc969a5e6b55ff87d9076e3d92c8c7a2e"
+  sha: "7f79f92e130bf9264faae93f362af949b41e009e"
   ref_type: "branch"
-  ref_name: "fix/linked-image-publication"
-  run_id: 42804585457
+  ref_name: "main"
+  run_id: 42806786539
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): mirror only the application platform image"
+  message: "fix(ci): associate published images with the source repository (#386)\n\n* fix(ci): associate published images with the source repository\n\n* fix(ci): mirror only the application platform image"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-10T11:05:43Z"
+  created_at: "2026-11-10T11:21:30Z"
