@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c354e0a500617fd33884a8bc1338199cf38cd924"
+  sha: "d499cc2ce0d59aa47bc7ac2962b4cc9abf0a88f9"
   ref_type: "branch"
-  ref_name: "feat/account-closure"
-  run_id: 43066522753
+  ref_name: "main"
+  run_id: 43068981751
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): preserve compound MySQL migration statements"
+  message: "feat(accounts): add verified seven-day account archival (#389)\n\nAdd identity-verified and rate-limited self-service archival with a durable seven-day cancellation window, atomic finalization, session and resource isolation, protected-role safeguards, and append-only PostgreSQL/MySQL migrations. Gate both lifecycle and legal publication contracts in CI and preserve compound MySQL statements in CLI migration validation."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T17:16:31Z"
+  created_at: "2026-11-11T17:31:35Z"
