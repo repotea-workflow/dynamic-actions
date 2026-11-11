@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "2b9ed33134d5c1e208ee66e42efe8117f60cd540"
-  ref_type: "tag"
-  ref_name: "v0.0.139"
-  run_id: 42805703763
+  sha: "2245931741d24e87bf3949c5901649c346c34c6d"
+  ref_type: "branch"
+  ref_name: "fix/toolkit-multiline-paste"
+  run_id: 42985988068
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ci): associate published images with the source repository (#343)\n\n* fix(ci): associate published images with the source repository\n\n* fix(ci): mirror only the application platform image"
+  message: "fix(omsk): preserve multiline spreadsheet cells in order toolkit paste"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-10T11:13:41Z"
+  created_at: "2026-11-11T08:18:37Z"
