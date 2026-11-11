@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "a3bd5a88444d8c8b35999667512ea8913aa3caf7"
+  sha: "7f9389d60fc706d6994c350a4f8f53a34b7111aa"
   ref_type: "branch"
-  ref_name: "feat/account-closure"
-  run_id: 43062793636
+  ref_name: "ops/account-lifecycle-checks"
+  run_id: 43063775241
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(accounts): add verified seven-day account archival"
+  message: "test(accounts): gate legal publication and archival contracts"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T16:53:58Z"
+  created_at: "2026-11-11T17:00:03Z"
