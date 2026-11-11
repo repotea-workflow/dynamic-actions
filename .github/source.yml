@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "aff37d3fc3e2e95ef2611e202e5e3a17bb0303bd"
+  sha: "a3bd5a88444d8c8b35999667512ea8913aa3caf7"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43059180005
+  ref_name: "feat/account-closure"
+  run_id: 43062793636
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(legal): manage app agreements and cached consent (#384)\n\nManage localized App privacy policies, Terms of Service and SDK disclosures through versioned admin drafts and explicit publication. Persist immutable history and transactional audit, serve public ETag responses, and cache validated bundles in the App with renewed consent for updated policies and terms.\n\nPreserve deployed migration history and use PostgreSQL 87 / MySQL 92 for the new capability. Initial content remains the existing explanations; approved operator/legal wording still needs to be supplied through the console."
+  message: "feat(accounts): add verified seven-day account archival"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T16:31:44Z"
+  created_at: "2026-11-11T16:53:58Z"
