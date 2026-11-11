@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "a60a417a5c875b8eacf77a07fb08920aaeff33ce"
+  sha: "9565246c2030a7312b8ab205b52b524c6c3d6893"
   ref_type: "branch"
   ref_name: "feat/managed-legal-documents"
-  run_id: 43058450329
+  run_id: 43058679309
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(legal): merge origin/main and move MySQL legal migration to 92"
+  message: "Merge remote-tracking branch 'origin/main' into feat/managed-legal-documents"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T16:27:17Z"
+  created_at: "2026-11-11T16:28:41Z"
