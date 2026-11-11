@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "48a5e2c54a0f4799976198479bcb194fdda10ca7"
+  sha: "9e939afb88b3a201cfbf794cd44d56b803d3fed7"
   ref_type: "branch"
-  ref_name: "ops/account-legal-release"
-  run_id: 43056039183
+  ref_name: "main"
+  run_id: 43058363765
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(ocr): lock MySQL quota rows without shared lock upgrades"
+  message: "fix(ocr): prevent concurrent MySQL quota deadlocks (#388)\n\nAcquire exclusive MySQL quota row locks through a no-op upsert, preserving provider-before-account ordering. Synchronize concurrent regression requests across eight connections."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T16:12:56Z"
+  created_at: "2026-11-11T16:26:44Z"
