@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "a765b0c1739c0e7d9252aa335262f4cde135ee67"
-  ref_type: "tag"
-  ref_name: "v0.4.0"
-  run_id: 41780371359
+  sha: "6b8a3c6fc3db0a4eca207e3e45be5d4ecbf0fbb3"
+  ref_type: "branch"
+  ref_name: "feat/ozon-browser-market-support"
+  run_id: 43071938003
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "Manage permanent offer number sequences per store (#11)\n\n* Add durable store-specific offer number sequences\n\n* Reject incomplete catalog scans before sequence initialization\n\n* Cover complete multi-page sequence catalog scans"
+  message: "feat(pulsar): add browser VNC runtime, market inspection, and support hijack reporting"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-04T05:37:30Z"
+  created_at: "2026-11-11T17:50:11Z"
