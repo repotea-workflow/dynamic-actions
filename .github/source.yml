@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "2245931741d24e87bf3949c5901649c346c34c6d"
+  sha: "69d45d2ecec6ef1b25810607c926b6d3d317317d"
   ref_type: "branch"
-  ref_name: "fix/toolkit-multiline-paste"
-  run_id: 42985988068
+  ref_name: "main"
+  run_id: 42986843907
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): preserve multiline spreadsheet cells in order toolkit paste"
+  message: "fix(omsk): preserve multiline spreadsheet cells in order toolkit paste (#344)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T08:18:37Z"
+  created_at: "2026-11-11T08:25:07Z"
