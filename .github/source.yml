@@ -3,9 +3,9 @@ source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
   sha: "f2b48947baea1ad6b8e7869d15a57cb4c67186a1"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 43069079820
+  ref_type: "tag"
+  ref_name: "v1.0.13"
+  run_id: 43069301427
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "feat(mobile): add verified account closure flow (#390)\n\nExpose verified account archival and explicit cancellation in the App, show the server deadline and recoverable error states, isolate archived-session cleanup from later sign-ins, and update localized bundled privacy copy with a new consent fingerprint."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T17:32:12Z"
+  created_at: "2026-11-11T17:33:33Z"
