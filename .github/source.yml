@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "d499cc2ce0d59aa47bc7ac2962b4cc9abf0a88f9"
+  sha: "f2b48947baea1ad6b8e7869d15a57cb4c67186a1"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 43068981751
+  run_id: 43069079820
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(accounts): add verified seven-day account archival (#389)\n\nAdd identity-verified and rate-limited self-service archival with a durable seven-day cancellation window, atomic finalization, session and resource isolation, protected-role safeguards, and append-only PostgreSQL/MySQL migrations. Gate both lifecycle and legal publication contracts in CI and preserve compound MySQL statements in CLI migration validation."
+  message: "feat(mobile): add verified account closure flow (#390)\n\nExpose verified account archival and explicit cancellation in the App, show the server deadline and recoverable error states, isolate archived-session cleanup from later sign-ins, and update localized bundled privacy copy with a new consent fingerprint."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T17:31:35Z"
+  created_at: "2026-11-11T17:32:12Z"
