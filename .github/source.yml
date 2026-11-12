@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "3aa60ca5824387c6a6e4a2d2710c019020f45883"
+  sha: "9617842f8ea9430aa4c522aff6bee621c8170073"
   ref_type: "branch"
   ref_name: "fix/mobile-closure-lockout"
-  run_id: 43139542339
+  run_id: 43140234257
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): enforce immediate closure lockout and signed-out recovery"
+  message: "fix(mobile): preserve closure_pending redirect query across router auth refresh"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T02:10:38Z"
+  created_at: "2026-11-12T02:16:32Z"
