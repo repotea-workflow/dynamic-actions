@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "f454f2836fd1af4f6d0a0ce25fdfc7c719879874"
+  sha: "b4d17d7e21e041457e3b76c2b58f06b90cf21844"
   ref_type: "branch"
   ref_name: "fix/closure-pending-lockout"
-  run_id: 43140479976
+  run_id: 43142137535
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(accounts): lock pending closure accounts until verified recovery"
+  message: "fix(accounts): serialize pending checks after parent locking"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T02:18:41Z"
+  created_at: "2026-11-12T02:32:46Z"
