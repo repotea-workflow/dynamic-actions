@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "a901227174bfacb409068e6f181d9218915fa0a7"
+  sha: "97eba9b561ea2e9c9e7ea5b132b1035645b0e552"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43184268433
+  ref_name: "fix/portal-send-and-cookies"
+  run_id: 43226167302
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(browser): support Seller Portal cookie import and Xvfb headed runtime (#15)"
+  message: "fix(support): target rightmost Messenger send button and filter guest cookies"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T08:36:08Z"
+  created_at: "2026-11-12T13:19:28Z"
