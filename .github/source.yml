@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "c12ef8392eead3ca20b8622570434c38f2cf248d"
+  sha: "4c8ec1fc2913c685f0d1d990ee54a09a44ce91c8"
   ref_type: "branch"
-  ref_name: "feat/support-chat-send"
-  run_id: 43145717805
+  ref_name: "main"
+  run_id: 43146051474
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(pulsar): add support chat messaging, pagination, and device binding"
+  message: "feat(pulsar): add support chat messaging, pagination, and device binding (#14)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T03:04:48Z"
+  created_at: "2026-11-12T03:07:43Z"
