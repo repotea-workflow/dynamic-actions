@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "ea37c797bb72165ad04d22ca0bdae63a4633dc34"
+  sha: "96eb4aa7e469412b85c2b8210c7e559649c81e0f"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43072766533
+  ref_name: "fix/browser-live-network"
+  run_id: 43139537908
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(pulsar): add browser VNC runtime, market inspection, and support hijack reporting (#12)"
+  message: "fix(pulsar): harden browser network routing, stealth headers, and portal reporting"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-11T17:55:24Z"
+  created_at: "2026-11-12T02:10:35Z"
