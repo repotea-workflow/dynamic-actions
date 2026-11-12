@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "762a2a1c04b6f7a0a2e02aaea68dc1e518131d6a"
+  sha: "e241315ee32c495ed2e266ab70dee363f4a00dc8"
   ref_type: "branch"
-  ref_name: "chore/release-v050-prep"
-  run_id: 43247891839
+  ref_name: "main"
+  run_id: 43248337293
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(support): cover native InsertText flow and document --cookies-file"
+  message: "chore(support): cover native InsertText flow and document --cookies-file (#17)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T15:27:08Z"
+  created_at: "2026-11-12T15:29:42Z"
