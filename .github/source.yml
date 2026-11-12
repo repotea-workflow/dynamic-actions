@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "edaa94515ed16d211ebc1d975ed0ebda5a907e48"
+  sha: "c12ef8392eead3ca20b8622570434c38f2cf248d"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43139798531
+  ref_name: "feat/support-chat-send"
+  run_id: 43145717805
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(pulsar): harden browser network routing, stealth headers, and portal reporting (#13)"
+  message: "feat(pulsar): add support chat messaging, pagination, and device binding"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T02:12:50Z"
+  created_at: "2026-11-12T03:04:48Z"
