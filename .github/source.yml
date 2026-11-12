@@ -3,9 +3,9 @@ source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
   sha: "3564c20af7fb3788be3b5e12610a8236eae37092"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 43162465882
+  ref_type: "tag"
+  ref_name: "v1.0.15"
+  run_id: 43162538590
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "feat(admin): add a simple permission-aware console home\n\nOpening the management console without a hash currently falls back to a support page, and the sidebar has no Home entry. Add a simple Home page as the default destination and first navigation item, with a welcome message and permission-filtered shortcuts to common management pages. Preserve direct links to existing pages and return to Home after signing out.\n\nThe page uses existing Astryx components and supports English, Simplified Chinese and Traditional Chinese.\n\nValidation:\n- All 258 admin tests passed, including root routing, localization and restricted-account shortcut coverage.\n- Workspace format, lint, typecheck and production admin build passed.\n- Browser checks passed at 1440px and 390px, including dark mode, restricted permissions, shortcut navigation and no horizontal overflow or page errors."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T05:36:21Z"
+  created_at: "2026-11-12T05:36:54Z"
