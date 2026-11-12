@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0daaacadc3d735637bbecbc270149b4b00feda13"
+  sha: "50ab030eec8837602a1be234ffc40e766ab2b946"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 43144869208
+  run_id: 43144892509
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(accounts): lock pending closure accounts until verified recovery\n\nImmediately revoke every App and console session when account closure is requested, and deny normal access, refresh and login throughout the seven-day grace period. Allow explicit verified cancellation through sessionless recovery without restoring old sessions.\n\nAppend upgrade cleanup migrations and serialize authentication before ledger reads. Verified with real PostgreSQL/MySQL closure and SMS concurrency contracts, strict workspace Clippy and remote CI."
+  message: "fix(mobile): sign out immediately during account closure grace period\n\nExpire the sending session and clear account-owned caches immediately after requesting closure, including pending-closure API errors. Provide signed-out verified cancellation and preserve router notices across authentication redirects.\n\nVerified with mobile API tests, Flutter analysis, authentication/router regressions and complete remote App/Android/iOS CI."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T02:57:14Z"
+  created_at: "2026-11-12T02:57:31Z"
