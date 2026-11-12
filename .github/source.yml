@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "96eb4aa7e469412b85c2b8210c7e559649c81e0f"
+  sha: "edaa94515ed16d211ebc1d975ed0ebda5a907e48"
   ref_type: "branch"
-  ref_name: "fix/browser-live-network"
-  run_id: 43139537908
+  ref_name: "main"
+  run_id: 43139798531
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(pulsar): harden browser network routing, stealth headers, and portal reporting"
+  message: "fix(pulsar): harden browser network routing, stealth headers, and portal reporting (#13)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T02:10:35Z"
+  created_at: "2026-11-12T02:12:50Z"
