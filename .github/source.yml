@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "97eba9b561ea2e9c9e7ea5b132b1035645b0e552"
+  sha: "88839a4dd547d4fc67eb627f152f0d95dbea4f5b"
   ref_type: "branch"
-  ref_name: "fix/portal-send-and-cookies"
-  run_id: 43226167302
+  ref_name: "main"
+  run_id: 43226536462
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(support): target rightmost Messenger send button and filter guest cookies"
+  message: "fix(support): target rightmost Messenger send button and filter guest cookies (#16)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-12T13:19:28Z"
+  created_at: "2026-11-12T13:21:46Z"
