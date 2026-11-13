@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "519e6fac273a67da5316bf05a75d69c976420392"
+  sha: "d041c2e12470d7d37517d2dd8c6637646de51783"
   ref_type: "branch"
-  ref_name: "fix/dashboard-server-contract"
-  run_id: 43496176253
+  ref_name: "fix/server-dashboard-route"
+  run_id: 43496478594
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(dashboard): render server probe and job detail fields"
+  message: "fix(server): serve dashboard root with trailing slash"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:52:06Z"
+  created_at: "2026-11-13T19:53:59Z"
