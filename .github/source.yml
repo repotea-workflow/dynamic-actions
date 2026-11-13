@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "4efc2c4d11b964f93bf157c15490a77341398899"
+  sha: "e5128979854bd0ca86b4c8418d46b856e0ad6810"
   ref_type: "branch"
-  ref_name: "chore/prune-unused-deps"
-  run_id: 43397592087
+  ref_name: "main"
+  run_id: 43398136382
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(deps,ov): prune unused dependencies and stream-cap OPPO asset downloads"
+  message: "chore(deps,ov): prune unused dependencies and stream-cap OPPO asset downloads (#39)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T08:59:48Z"
+  created_at: "2026-11-13T09:03:36Z"
