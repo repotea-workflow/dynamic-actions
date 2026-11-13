@@ -237,16 +237,19 @@ jobs:
           command: |
             set -euo pipefail
             image="${{ steps.checkout.outputs.ghcr_sha }}"
-            acr_image="${{ steps.checkout.outputs.ali_image }}"
+            primary_acr_image="crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com/coohub/pubox"
+            metadata_acr_image="${{ steps.checkout.outputs.ali_image }}"
             short_sha="${SOURCE_SHA:0:7}"
             docker pull "$image"
-            for tag in "$SOURCE_TAG" "sha-$short_sha" latest; do
-              target="$acr_image:$tag"
-              docker tag "$image" "$target"
-              docker push --platform linux/amd64 "$target"
+            for acr_image in "$primary_acr_image" "$metadata_acr_image"; do
+              for tag in "$SOURCE_TAG" "sha-$short_sha" latest; do
+                target="$acr_image:$tag"
+                docker tag "$image" "$target"
+                docker push --platform linux/amd64 "$target"
+              done
             done
-            docker pull "$acr_image:$SOURCE_TAG"
-            digest=$(docker inspect --format='{{range .RepoDigests}}{{println .}}{{end}}' "$acr_image:$SOURCE_TAG" | sed -n "\|^$acr_image@|p" | head -n 1)
+            docker pull "$primary_acr_image:$SOURCE_TAG"
+            digest=$(docker inspect --format='{{range .RepoDigests}}{{println .}}{{end}}' "$primary_acr_image:$SOURCE_TAG" | sed -n "\|^$primary_acr_image@|p" | head -n 1)
             test -n "$digest"
             echo "Aliyun ACR: $digest" >> "$GITHUB_STEP_SUMMARY"
 

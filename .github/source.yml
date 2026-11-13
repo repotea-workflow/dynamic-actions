@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "51f8a67eeeb66626233a6ef4c282ac13b633f545"
+  sha: "9c9328aef28d7e18eb5c46c732a92bc14333e59c"
   ref_type: "branch"
   ref_name: "ci/docker-and-release"
-  run_id: 43492028500
+  run_id: 43492703878
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "ops(release): build dashboard assets and publish container images"
+  message: "ops(release): mirror image to deployment ACR repository"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:25:24Z"
+  created_at: "2026-11-13T19:29:47Z"
