@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "6d61c5ece020e695ec4a92cec4f67221e076deca"
+  sha: "7b564b5f172c20cb2fc9e0b809e09d615500d9aa"
   ref_type: "branch"
-  ref_name: "feat/cli"
-  run_id: 43372351613
+  ref_name: "main"
+  run_id: 43372480109
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: "checks-v1"
 commit:
-  message: "feat(cli): implement pubox CLI binary and wire all 13 store plugins"
+  message: "feat(cli): implement pubox CLI binary wiring all 13 stores (#27)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T05:29:40Z"
+  created_at: "2026-11-13T05:30:46Z"
