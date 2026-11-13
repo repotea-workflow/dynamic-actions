@@ -34,52 +34,115 @@ jobs:
           repository: 0xfe10/pubox
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ steps.source.outputs.sha }}
+      - name: Validate source tag identity
+        env:
+          SOURCE_TAG: ${{ steps.source.outputs.tag }}
+          SOURCE_SHA: ${{ steps.source.outputs.sha }}
+        run: python3 scripts/release.py identity
       - uses: dtolnay/rust-toolchain@stable
         with:
           components: rustfmt, clippy
       - uses: Swatinem/rust-cache@v2
       - run: cargo fmt --all -- --check
-      - run: cargo clippy --workspace --all-targets -- -D warnings
+      - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
 
   build:
     needs: verify
+    name: Build ${{ matrix.archive }}
     strategy:
       fail-fast: false
       matrix:
         include:
           - runner: ubuntu-latest
+            os: linux
+            musl: false
             target: x86_64-unknown-linux-gnu
             archive: pubox-linux-amd64.tar.gz
+          - runner: ubuntu-latest
+            os: linux
+            musl: true
+            target: x86_64-unknown-linux-musl
+            archive: pubox-linux-amd64-musl.tar.gz
           - runner: ubuntu-24.04-arm
+            os: linux
+            musl: false
             target: aarch64-unknown-linux-gnu
             archive: pubox-linux-arm64.tar.gz
+          - runner: ubuntu-24.04-arm
+            os: linux
+            musl: true
+            target: aarch64-unknown-linux-musl
+            archive: pubox-linux-arm64-musl.tar.gz
           - runner: macos-14
+            os: darwin
+            musl: false
             target: aarch64-apple-darwin
             archive: pubox-darwin-arm64.tar.gz
           - runner: macos-14
+            os: darwin
+            musl: false
             target: x86_64-apple-darwin
             archive: pubox-darwin-amd64.tar.gz
+          - runner: windows-latest
+            os: windows
+            musl: false
+            target: x86_64-pc-windows-msvc
+            archive: pubox-windows-amd64.zip
+          - runner: windows-latest
+            os: windows
+            musl: false
+            target: aarch64-pc-windows-msvc
+            archive: pubox-windows-arm64.zip
     runs-on: ${{ matrix.runner }}
-    timeout-minutes: 30
+    timeout-minutes: 35
     steps:
-      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
-      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+      - if: matrix.os != 'windows'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - if: matrix.os != 'windows'
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
         with:
           repository: 0xfe10/pubox
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ needs.verify.outputs.sha }}
+      - name: Check out immutable pubox source on Windows
+        if: matrix.os == 'windows'
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          repository: 0xfe10/pubox
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ needs.verify.outputs.sha }}
+          fetch-depth: 0
+      - name: Install musl toolchain
+        if: matrix.musl
+        shell: bash
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y --no-install-recommends musl-tools
+          arch=$(uname -m)
+          if ! command -v "${arch}-linux-musl-gcc" >/dev/null 2>&1; then
+            sudo ln -s /usr/bin/musl-gcc "/usr/local/bin/${arch}-linux-musl-gcc"
+          fi
       - uses: dtolnay/rust-toolchain@stable
         with:
           targets: ${{ matrix.target }}
       - uses: Swatinem/rust-cache@v2
         with:
           key: ${{ matrix.target }}
-      - name: Build release binary
+      - name: Package release binary
+        shell: bash
+        env:
+          SOURCE_TAG: ${{ needs.verify.outputs.tag }}
+          SOURCE_SHA: ${{ needs.verify.outputs.sha }}
+          RUST_TARGET: ${{ matrix.target }}
+          ARCHIVE_NAME: ${{ matrix.archive }}
         run: |
-          cargo build --release --locked --target "${{ matrix.target }}" -p pubox-cli
-          mkdir -p dist
-          tar -C "target/${{ matrix.target }}/release" -czf "dist/${{ matrix.archive }}" pubox
+          if python3 -c "import sys" >/dev/null 2>&1; then
+            PY=python3
+          else
+            PY=python
+          fi
+          "$PY" scripts/release.py package
       - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
         with:
           name: ${{ matrix.archive }}
@@ -94,21 +157,26 @@ jobs:
     timeout-minutes: 10
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/pubox
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ needs.verify.outputs.sha }}
       - uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
         with:
           pattern: pubox-*
           path: dist
           merge-multiple: true
-      - name: Generate SHA256SUMS and publish release
+      - name: Verify archives and generate SHA256SUMS
+        env:
+          SOURCE_TAG: ${{ needs.verify.outputs.tag }}
+          SOURCE_SHA: ${{ needs.verify.outputs.sha }}
+        run: |
+          python3 scripts/release.py identity
+          python3 scripts/release.py checksums
+      - name: Publish release assets to 0xfe10/pubox
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
           SOURCE_TAG: ${{ needs.verify.outputs.tag }}
           SOURCE_SHA: ${{ needs.verify.outputs.sha }}
-        run: |
-          cd dist
-          sha256sum pubox-*.tar.gz > SHA256SUMS
-          if gh release view "${SOURCE_TAG}" --repo 0xfe10/pubox >/dev/null 2>&1; then
-            gh release upload "${SOURCE_TAG}" --repo 0xfe10/pubox --clobber pubox-*.tar.gz SHA256SUMS
-          else
-            gh release create "${SOURCE_TAG}" --repo 0xfe10/pubox --target "${SOURCE_SHA}" --generate-notes pubox-*.tar.gz SHA256SUMS
-          fi
+        run: bash scripts/publish-release.sh
