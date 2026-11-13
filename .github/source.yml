@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "2c812a70769efb5eb05dd08e9e84ab9533bb1e3d"
+  sha: "e04e877e560f8da686e43aff0aa952755e9a3809"
   ref_type: "branch"
-  ref_name: "feat/dashboard-and-ov-tm-schemas"
-  run_id: 43489741176
+  ref_name: "main"
+  run_id: 43490461106
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(dashboard): add publishing console and store schema scopes"
+  message: "feat(dashboard): add publishing console and store schema scopes (#47)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:11:03Z"
+  created_at: "2026-11-13T19:15:34Z"
