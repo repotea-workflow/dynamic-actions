@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "e04e877e560f8da686e43aff0aa952755e9a3809"
+  sha: "1814d9fcea77f0bab6583fad843ef64839d3a547"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43490461106
+  ref_name: "feat/apple-and-intl-schemas"
+  run_id: 43490908954
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(dashboard): add publishing console and store schema scopes (#47)"
+  message: "feat(pak,apple,intl): add IPA parser, App Store Connect plugin, and credential field scopes"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:15:34Z"
+  created_at: "2026-11-13T19:18:23Z"
