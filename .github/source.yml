@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "f3eddd88b26651baef1d762ad1db85857def5d78"
+  sha: "579be1d3ece9b2a8c87ee07f38fd96cc5dcd291c"
   ref_type: "branch"
-  ref_name: "fix/core-engine-review"
-  run_id: 43394583123
+  ref_name: "main"
+  run_id: 43395025012
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(core-engine): address audit and listing review findings"
+  message: "fix(core-engine): address audit and listing review findings (#36)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T08:36:57Z"
+  created_at: "2026-11-13T08:40:22Z"
