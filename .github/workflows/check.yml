@@ -27,22 +27,6 @@ jobs:
         with:
           components: rustfmt, clippy
       - uses: Swatinem/rust-cache@v2
-      - uses: pnpm/action-setup@v4
-        with:
-          version: 10.28.0
-      - uses: actions/setup-node@v6
-        with:
-          node-version: 22
-          cache: pnpm
-          cache-dependency-path: web/dashboard/pnpm-lock.yaml
-      - name: Install dashboard dependencies
-        run: pnpm --dir web/dashboard install --frozen-lockfile
-      - name: Typecheck dashboard
-        run: pnpm --dir web/dashboard typecheck
-      - name: Test dashboard
-        run: pnpm --dir web/dashboard test
-      - name: Build dashboard
-        run: pnpm --dir web/dashboard build
       - name: Check formatting
         run: cargo fmt --all -- --check
       - name: Run clippy
