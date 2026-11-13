@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "0638c8af686fcf1304e5ec6d7102a32ae78651c4"
+  sha: "519e6fac273a67da5316bf05a75d69c976420392"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43495123783
+  ref_name: "fix/dashboard-server-contract"
+  run_id: 43496176253
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(server): add tenant publishing service and image adaptation (#50)"
+  message: "fix(dashboard): render server probe and job detail fields"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:45:25Z"
+  created_at: "2026-11-13T19:52:06Z"
