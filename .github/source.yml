@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "579be1d3ece9b2a8c87ee07f38fd96cc5dcd291c"
+  sha: "ced2e92a8500d0358b53d12b9fb1e23e814f5999"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43395025012
+  ref_name: "fix/stores-ov-tm-review"
+  run_id: 43395746635
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(core-engine): address audit and listing review findings (#36)"
+  message: "fix(stores): preserve categorized HTTP and API errors\n\nKeep CategorizedError chains in Oppo and vivo uploads, pass the offloader\nper request, and classify gateway and store API failures for Oppo, vivo,\nTencent, and Meizu."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T08:40:22Z"
+  created_at: "2026-11-13T08:45:45Z"
