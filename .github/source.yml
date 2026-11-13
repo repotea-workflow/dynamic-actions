@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "a9a2c5b3d3536204c293962e6a72fad84c749d46"
+  sha: "09188d8f5089d20619fa87bc52e5a4558c0cd95d"
   ref_type: "branch"
-  ref_name: "feat/cli-remote-and-serve"
-  run_id: 43501839235
+  ref_name: "main"
+  run_id: 43502611988
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(cli): add serve, openapi, and zero-secret remote client mode"
+  message: "feat(cli): add serve, openapi, and zero-secret remote client mode (#56)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T20:28:24Z"
+  created_at: "2026-11-13T20:33:24Z"
