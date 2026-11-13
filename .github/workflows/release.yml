@@ -97,12 +97,12 @@ jobs:
             musl: true
             target: aarch64-unknown-linux-musl
             archive: pubox-linux-arm64-musl.tar.gz
-          - runner: macos-14
+          - runner: macos-15
             os: darwin
             musl: false
             target: aarch64-apple-darwin
             archive: pubox-darwin-arm64.tar.gz
-          - runner: macos-14
+          - runner: macos-15
             os: darwin
             musl: false
             target: x86_64-apple-darwin
