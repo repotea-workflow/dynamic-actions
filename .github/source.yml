@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "1583a9a986ae3b15532cac7a02f16dab91752802"
+  sha: "0d4102e0ea048465e9f88c21937c08800e449293"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43506823816
+  ref_name: "fix/huawei-service-key"
+  run_id: 43507415383
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(release): use supported macOS runner (#58)"
+  message: "fix(huawei): accept exported keys and filtered app names"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T21:01:09Z"
+  created_at: "2026-11-13T21:04:59Z"
