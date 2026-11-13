@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "268e7252e2fcffc46e79e7b474b083a6dd249137"
+  sha: "2c812a70769efb5eb05dd08e9e84ab9533bb1e3d"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43483863742
+  ref_name: "feat/dashboard-and-ov-tm-schemas"
+  run_id: 43489741176
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(workspace,core): scaffold server/apple crates and core schema contracts (#46)"
+  message: "feat(dashboard): add publishing console and store schema scopes"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T18:34:09Z"
+  created_at: "2026-11-13T19:11:03Z"
