@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "b5028a689197a02d62aef4231e8b53fd2aa8fc5f"
+  sha: "c231197e66ae3d0f5428b9aefdaa02a17c094702"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43381433818
+  ref_name: "refactor/use-log-facade"
+  run_id: 43388648625
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(release): add multi-platform CI release pipeline and CLI parity refinements (#30)"
+  message: "refactor(logging): use log facade across crates and restrict tracing-subscriber to CLI init"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T06:50:14Z"
+  created_at: "2026-11-13T07:50:46Z"
