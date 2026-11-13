@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "007061591c2bd7719bda717b3dfc300f169f757b"
+  sha: "24ac240dc8c7457624fefd4cf1e1e409d7d4072e"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 43498419177
+  run_id: 43498434102
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(tencent): allow account-only credential diagnosis (#53)"
+  message: "fix(server): preserve Xiaomi opaque signing secrets (#54)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T20:06:30Z"
+  created_at: "2026-11-13T20:06:33Z"
