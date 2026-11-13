@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "e5128979854bd0ca86b4c8418d46b856e0ad6810"
+  sha: "57a8a3e9fe8651426ad932fcd4a76a20a1b0d81a"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43398136382
+  ref_name: "chore/server-apple-scaffold"
+  run_id: 43483183979
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(deps,ov): prune unused dependencies and stream-cap OPPO asset downloads (#39)"
+  message: "chore(workspace,core): scaffold server/apple crates and core schema contracts"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T09:03:36Z"
+  created_at: "2026-11-13T18:30:10Z"
