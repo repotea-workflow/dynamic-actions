@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "90f8731b3a0924a524280776e29a01702a61e5a7"
+  sha: "cc05e21eb7285bd4e24c5622bbabc9d937090513"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43497236706
+  ref_name: "fix/tencent-account-diagnose"
+  run_id: 43497951974
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(server): serve dashboard root with trailing slash (#52)"
+  message: "fix(tencent): allow account-only credential diagnosis"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:58:58Z"
+  created_at: "2026-11-13T20:03:32Z"
