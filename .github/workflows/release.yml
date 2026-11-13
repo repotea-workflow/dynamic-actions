@@ -6,6 +6,7 @@ on:
 
 permissions:
   contents: read
+  packages: write
 
 concurrency:
   group: pubox-release-${{ github.ref }}
@@ -43,6 +44,28 @@ jobs:
         with:
           components: rustfmt, clippy
       - uses: Swatinem/rust-cache@v2
+      - uses: pnpm/action-setup@v4
+        with:
+          version: 10.28.0
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 22
+          cache: pnpm
+          cache-dependency-path: web/dashboard/pnpm-lock.yaml
+      - name: Install dashboard dependencies
+        run: pnpm --dir web/dashboard install --frozen-lockfile
+      - name: Typecheck dashboard
+        run: pnpm --dir web/dashboard typecheck
+      - name: Test dashboard
+        run: pnpm --dir web/dashboard test
+      - name: Build dashboard
+        run: pnpm --dir web/dashboard build
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: dashboard-dist
+          path: web/dashboard/dist
+          if-no-files-found: error
+          retention-days: 3
       - run: cargo fmt --all -- --check
       - run: cargo clippy --workspace --all-targets --locked -- -D warnings
       - run: cargo test --workspace --locked
@@ -113,6 +136,11 @@ jobs:
           token: ${{ secrets.GH_TOKEN_0XFE10 }}
           ref: ${{ needs.verify.outputs.sha }}
           fetch-depth: 0
+      - name: Download dashboard bundle
+        uses: actions/download-artifact@d3f86a106a0bac45b974a628896c90dbdf5c8093 # v4
+        with:
+          name: dashboard-dist
+          path: web/dashboard/dist
       - name: Install musl toolchain
         if: matrix.musl
         shell: bash
@@ -150,6 +178,77 @@ jobs:
           if-no-files-found: error
           retention-days: 3
           compression-level: 0
+
+  docker:
+    needs: verify
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Check out immutable pubox source
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        id: checkout
+        with:
+          repository: 0xfe10/pubox
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ needs.verify.outputs.sha }}
+          source_context: "true"
+          image_name: pubox
+          acr_namespace: coohub
+          acr_registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
+      - name: Docker login (GHCR)
+        uses: docker/login-action@v3
+        with:
+          username: "0xfe10"
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+          registry: ghcr.io
+      - name: Docker login (Aliyun ACR)
+        uses: docker/login-action@v3
+        with:
+          username: ${{ secrets.CR_ALI_USERNAME_JOECHOW }}
+          password: ${{ secrets.CR_ALI_PASSWORD_JOECHOW }}
+          registry: crpi-uhy920dintikwpn3.cn-shenzhen.personal.cr.aliyuncs.com
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v6
+        with:
+          push: true
+          context: .
+          file: Dockerfile
+          provenance: mode=min
+          sbom: false
+          platforms: linux/amd64
+          tags: |
+            ${{ steps.checkout.outputs.ghcr_tags }}
+            ghcr.io/0xfe10/pubox:${{ needs.verify.outputs.tag }}
+            ghcr.io/0xfe10/pubox:latest
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+          annotations: index:org.opencontainers.image.source=${{ steps.checkout.outputs.oci_source }}
+      - name: Mirror image to Aliyun ACR
+        uses: nick-fields/retry@v3
+        env:
+          SOURCE_TAG: ${{ needs.verify.outputs.tag }}
+          SOURCE_SHA: ${{ needs.verify.outputs.sha }}
+        with:
+          timeout_minutes: 10
+          max_attempts: 5
+          retry_wait_seconds: 30
+          command: |
+            set -euo pipefail
+            image="${{ steps.checkout.outputs.ghcr_sha }}"
+            acr_image="${{ steps.checkout.outputs.ali_image }}"
+            short_sha="${SOURCE_SHA:0:7}"
+            docker pull "$image"
+            for tag in "$SOURCE_TAG" "sha-$short_sha" latest; do
+              target="$acr_image:$tag"
+              docker tag "$image" "$target"
+              docker push --platform linux/amd64 "$target"
+            done
+            docker pull "$acr_image:$SOURCE_TAG"
+            digest=$(docker inspect --format='{{range .RepoDigests}}{{println .}}{{end}}' "$acr_image:$SOURCE_TAG" | sed -n "\|^$acr_image@|p" | head -n 1)
+            test -n "$digest"
+            echo "Aliyun ACR: $digest" >> "$GITHUB_STEP_SUMMARY"
 
   publish:
     needs: [verify, build]

@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "f3872b9090e1d1f087c8c1e4b08b7cbb6ed183d8"
+  sha: "51f8a67eeeb66626233a6ef4c282ac13b633f545"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43491581459
+  ref_name: "ci/docker-and-release"
+  run_id: 43492028500
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(pak,apple,intl): add IPA parser, App Store Connect plugin, and credential field scopes (#48)"
+  message: "ops(release): build dashboard assets and publish container images"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T19:22:34Z"
+  created_at: "2026-11-13T19:25:24Z"
