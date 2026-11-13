@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "b1c66d150a13e964ff0dd79556373ccac4e4ee71"
+  sha: "f106d7f24b1fa50a26bab4cedb67920e2611b4a8"
   ref_type: "branch"
-  ref_name: "test/cli-e2e-workflows"
-  run_id: 43374512333
+  ref_name: "main"
+  run_id: 43374525229
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(cli): add end-to-end binary tests and enable automatic dynamic CI status reporting"
+  message: "test(cli): add end-to-end binary tests and enable automatic dynamic CI status reporting (#29)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T05:49:33Z"
+  created_at: "2026-11-13T05:49:36Z"
