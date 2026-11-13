@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "587d738cfe6a45432ef457539fd6c7d6a8367b5a"
+  sha: "30231f0c5312b0847ea890e53bfab54112e12b0f"
   ref_type: "branch"
-  ref_name: "fix/core-upload-content-length"
-  run_id: 43519553414
+  ref_name: "main"
+  run_id: 43520209654
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(core): deduplicate Content-Length header on streaming uploads and bump v0.2.2"
+  message: "fix(core): deduplicate Content-Length header on streaming uploads and bump v0.2.2 (#62)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T22:28:40Z"
+  created_at: "2026-11-13T22:33:21Z"
