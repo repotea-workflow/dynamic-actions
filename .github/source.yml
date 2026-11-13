@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "46c14c1f6eedd064f0a29f7b0c9f4af02d075bb4"
+  sha: "4efc2c4d11b964f93bf157c15490a77341398899"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43396403175
+  ref_name: "chore/prune-unused-deps"
+  run_id: 43397592087
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(stores): preserve categorized HTTP and API errors (#37)\n\nKeep CategorizedError chains in Oppo and vivo uploads, pass the offloader\nper request, and classify gateway and store API failures for Oppo, vivo,\nTencent, and Meizu."
+  message: "chore(deps,ov): prune unused dependencies and stream-cap OPPO asset downloads"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-13T08:50:45Z"
+  created_at: "2026-11-13T08:59:48Z"
