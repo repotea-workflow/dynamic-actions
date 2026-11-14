@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "1bc2e079f3e1f401615129c29c9dc9846426cc8b"
+  sha: "5fbb5b832f356310ba3d43f7a851d9c82f5f18d0"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43556510442
+  ref_name: "feat/dashboard-i18n-density-apps"
+  run_id: 43556512557
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(huawei): upload local packages for oversized download URLs (#68)"
+  message: "fix(dashboard): preserve job ID copy control on mobile"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T04:24:45Z"
+  created_at: "2026-11-14T04:24:50Z"
