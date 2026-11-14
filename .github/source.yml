@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "ca66d2bcf804a6c78a5cdb278d63de07ede1a822"
+  sha: "4e512d7f554cfa8bc85a98d7bd83b6dd5aa077b0"
   ref_type: "branch"
-  ref_name: "chore/preview-feature-version"
-  run_id: 43598859829
+  ref_name: "main"
+  run_id: 43599594745
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(version): prepare feature source candidate 0.2.7"
+  message: "chore(version): prepare feature source candidate 0.2.7 (#83)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T13:15:53Z"
+  created_at: "2026-11-14T13:24:33Z"
