@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "a933043e8c51306e85cde5e281d8ad1c3a94ce25"
+  sha: "9d0324269af55efd16590c91c09bb37cf8b0dbd9"
   ref_type: "branch"
-  ref_name: "fix/huawei-long-url-fallback"
-  run_id: 43556022094
+  ref_name: "feat/dashboard-i18n-density-apps"
+  run_id: 43556230963
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(huawei): upload local packages for oversized download URLs"
+  message: "fix(dashboard): track job navigation and resource state"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T04:19:04Z"
+  created_at: "2026-11-14T04:21:30Z"
