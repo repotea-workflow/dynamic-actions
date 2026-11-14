@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "437570f7e412124af92cf8e6b29cdf7f7824a3cd"
+  sha: "36f098a1832ec4d1c92c73f833667fc85225b2e1"
   ref_type: "branch"
-  ref_name: "feat/oppo-app-privacy"
-  run_id: 43609780761
+  ref_name: "main"
+  run_id: 43610839005
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(oppo): accept an explicit app-scoped privacy URL"
+  message: "feat(vivo): add protected publication preparation query (#85)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T15:22:01Z"
+  created_at: "2026-11-14T15:33:53Z"
