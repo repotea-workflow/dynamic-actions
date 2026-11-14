@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "cd666a079db293230ca5b86d9d713b0f0f966644"
+  sha: "dd4aaad466ffb4d65d7ccbcdcd52ec2bc8bfe569"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43588980706
+  ref_name: "ops/preview-schema-bridge-base"
+  run_id: 43592287211
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(vivo): add bounded saved-field shape observations (#79)"
+  message: "chore(release): prepare v0.2.5 (#75)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T11:13:23Z"
+  created_at: "2026-11-14T11:55:36Z"
