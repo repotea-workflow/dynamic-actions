@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "8da7c0c48b67a01cd10b28f063f42d38e0a8b235"
+  sha: "4b99a551b3cdaef020fbf63fcd98cc07258a51c9"
   ref_type: "branch"
-  ref_name: "chore/publishing-fixes-version"
-  run_id: 43611946590
+  ref_name: "main"
+  run_id: 43612637674
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(version): prepare publishing fixes source 0.2.8"
+  message: "chore(version): prepare publishing fixes source 0.2.8 (#87)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T15:46:22Z"
+  created_at: "2026-11-14T15:54:09Z"
