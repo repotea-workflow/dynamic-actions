@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "e94cfb54c8376cdbe9cfb009a46bb4ecb66c8687"
+  sha: "8d9983668fa337898c4a40fe0409507c85b36fd0"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43566809401
+  ref_name: "chore/release-v0.2.4"
+  run_id: 43567109294
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(server): add local-only saved credential checks (#71)"
+  message: "Merge remote-tracking branch 'origin/main' into chore/release-v0.2.4"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T06:32:14Z"
+  created_at: "2026-11-14T06:35:51Z"
