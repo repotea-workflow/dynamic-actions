@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "09b27eec4a1a5826fff835268e8eaf91f8d91d24"
+  sha: "6da31a1f6e9f4f84b1dfdaf72c47bf910164b90f"
   ref_type: "branch"
-  ref_name: "feat/server-observed-apps"
-  run_id: 43550656974
+  ref_name: "feat/dashboard-i18n-density-apps"
+  run_id: 43552448394
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(server): observe apps and retain store channel history"
+  message: "feat(dashboard): localize and streamline apps and jobs console"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T03:15:23Z"
+  created_at: "2026-11-14T03:35:57Z"
