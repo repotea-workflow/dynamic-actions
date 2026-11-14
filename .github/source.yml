@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "dd4aaad466ffb4d65d7ccbcdcd52ec2bc8bfe569"
-  ref_type: "tag"
-  ref_name: "v0.2.5"
-  run_id: 43575560892
+  sha: "0bd911ddd5edf2a4f7165c12d46478dfce93ff9d"
+  ref_type: "branch"
+  ref_name: "feat/native-adapted-previews"
+  run_id: 43584390654
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(release): prepare v0.2.5 (#75)"
+  message: "feat(listings): retain owned expiring validation previews"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T08:23:08Z"
+  created_at: "2026-11-14T10:15:27Z"
