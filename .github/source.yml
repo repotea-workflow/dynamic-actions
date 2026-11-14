@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "e3adbf710c7bf3d1cc19926403006833f5551880"
+  sha: "77efb57417e34b34e990fffd7946d4c43934ffa2"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43628198170
+  ref_name: "chore/vivo-diagnostics-version"
+  run_id: 43628712501
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(vivo): expose closed preparation parse gates (#88)\n\nAdd a nullable fixed diagnostic enum to publication preparation while preserving strict decoding and existing failure behavior."
+  message: "chore(release): prepare version 0.2.9"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T18:43:46Z"
+  created_at: "2026-11-14T18:49:27Z"
