@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "8e7ec33e26dbf9699503123a9bb3271dd690d535"
+  sha: "590651113558a48ef1cfa32ec50ae8033e73e422"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43557540914
+  ref_name: "chore/release-v0.2.3"
+  run_id: 43558292671
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(server): observe apps and retain store channel history (#65)\n\n* feat(server): observe apps and retain store channel history\n\n* fix(server): track observation clocks per field and expose job modes"
+  message: "Merge remote-tracking branch 'origin/main' into chore/release-v0.2.3"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T04:37:08Z"
+  created_at: "2026-11-14T04:46:36Z"
