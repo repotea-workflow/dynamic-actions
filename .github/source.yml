@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "6c73b159278306d302232b6e613476e9eccda819"
+  sha: "c4ea2eee3f516228c32e76cbfe0a153f6ff9c900"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43557015311
+  ref_name: "feat/server-observed-apps"
+  run_id: 43557027377
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(dashboard): localize and streamline apps and jobs console (#66)\n\n* feat(dashboard): localize and streamline apps and jobs console\n\n* fix(dashboard): localize store credential guidance\n\n* fix(dashboard): track job navigation and resource state\n\n* fix(dashboard): preserve job ID copy control on mobile"
+  message: "Merge remote-tracking branch 'origin/main' into feat/server-observed-apps"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T04:30:55Z"
+  created_at: "2026-11-14T04:31:04Z"
