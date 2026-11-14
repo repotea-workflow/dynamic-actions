@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "2817453fe876ffa3569dda319a7ac9c3898fe1d0"
+  sha: "8da7c0c48b67a01cd10b28f063f42d38e0a8b235"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 43611382774
+  ref_name: "chore/publishing-fixes-version"
+  run_id: 43611946590
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(oppo): accept an explicit app-scoped privacy URL (#86)"
+  message: "chore(version): prepare publishing fixes source 0.2.8"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T15:40:04Z"
+  created_at: "2026-11-14T15:46:22Z"
