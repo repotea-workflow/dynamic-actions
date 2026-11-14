@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "4e512d7f554cfa8bc85a98d7bd83b6dd5aa077b0"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 43599594745
+  sha: "a4a6b14629da9b6f56e12490252da80ce5d0259a"
+  ref_type: "tag"
+  ref_name: "v0.2.6"
+  run_id: 43605016616
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(version): prepare feature source candidate 0.2.7 (#83)"
+  message: "fix(server): bridge preview schema on legacy business source (#82)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-14T13:24:33Z"
+  created_at: "2026-11-14T14:28:21Z"
