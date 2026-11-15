@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "ca4c2ba96ece1c5924e134ac06717f71edd9e0d7"
+  sha: "501a37ecef3520524ef9350b327c603291bba82d"
   ref_type: "branch"
-  ref_name: "feat/honor-upload-save-only"
-  run_id: 43688935364
+  ref_name: "main"
+  run_id: 43689975834
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(honor): support upload-save and WebP listing readback"
+  message: "feat(honor): support upload-save and WebP listing readback (#91)\n\nAdd app-scoped skip_submit with strict configuration validation so Honor can upload and save without review submission. Support WebP listing image readback using the existing decoder."
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-15T07:13:02Z"
+  created_at: "2026-11-15T07:26:56Z"
