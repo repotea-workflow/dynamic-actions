@@ -44,6 +44,29 @@ jobs:
           platforms: linux/amd64
           provenance: false
 
+  omsj-api:
+    name: "[omsj] Check API"
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - name: Checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: repotea-workspace/ztoms
+          token: "${{ secrets.GH_TOKEN_0XFE10 }}"
+
+      - name: Set up Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: "[omsj] Test Order Lookup SQL"
+        run: cd backend/java/omsk-pompeii && ./mvnw -B -f ../omsj-api/pom.xml -Dtest=OrderInspectSqlTest test
+
   omsk-babylon-web:
     name: "[omsk] Check Babylon"
     runs-on: ubuntu-latest
