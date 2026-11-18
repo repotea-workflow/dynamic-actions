@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "1039d7c243059f999b7bda8a6796af9023203b6f"
-  ref_type: "tag"
-  ref_name: "v0.0.141"
-  run_id: 44036268789
+  sha: "d0bc2ade16a77c0f40d63000d8762fa80f74a66f"
+  ref_type: "branch"
+  ref_name: "fix/screenshot-audit-repotea-5-product-order-gaps"
+  run_id: 44237818017
   run_attempt: 1
-  workflow: ".github/workflows/trigger-tag.yml"
+  workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsj): separate order lookup parameters from SQL keywords (#345)"
+  message: "fix(omsk): enforce public product units and currency and reject duplicate partner items"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-17T07:07:37Z"
+  created_at: "2026-11-18T04:30:50Z"
