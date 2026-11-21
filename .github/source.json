@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/webox",
     "repository_id": 1377004304,
-    "sha": "b20fa748550bca8151a2179c41fa6af13736c29d",
+    "sha": "d33b9dd881bbb4510d7d06b325df6303107d26a1",
     "ref_type": "branch",
-    "ref_name": "chore/dyn-ubuntu-slim",
-    "run_id": 44880745827,
+    "ref_name": "main",
+    "run_id": 44881721343,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
