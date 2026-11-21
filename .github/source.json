@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/workbot",
     "repository_id": 1422856046,
-    "sha": "129ec7f3f08bcd62d3d44c4a8c812c1bc1d7c1c6",
+    "sha": "5d4dc7a839d54aaa2a656bd1e6d1ac40d799d1f8",
     "ref_type": "branch",
-    "ref_name": "chore/dyn-ubuntu-slim",
-    "run_id": 44880700011,
+    "ref_name": "main",
+    "run_id": 44881651746,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
