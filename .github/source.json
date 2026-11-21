@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/weauto",
     "repository_id": 1432097120,
-    "sha": "f3e2b7cbcb6eb845cdd7bfcf6819346cb11620e5",
+    "sha": "de216a6b9b8dd95e101e8d8f1f64a57303c6e625",
     "ref_type": "branch",
-    "ref_name": "main",
-    "run_id": 42602426759,
+    "ref_name": "chore/dyn-ubuntu-slim",
+    "run_id": 44880710975,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },

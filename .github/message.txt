@@ -1,1 +1,1 @@
-chore(ci): publish container images to 0xfe10/weauto GHCR packages
+chore(ci): switch dynamic CI source workflows to ubuntu-slim
