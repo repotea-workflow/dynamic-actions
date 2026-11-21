@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "6a1a415a31d0f6f25c176346db9f2920d144e7dd"
+  sha: "849e86709723a140def8c02b403433cd75b66ad3"
   ref_type: "branch"
-  ref_name: "fix/xiaomi-keywords-contract"
-  run_id: 43802015900
+  ref_name: "chore/dyn-ubuntu-slim"
+  run_id: 44880946342
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(xiaomi): send the documented keyWords field"
+  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-16T04:06:20Z"
+  created_at: "2026-11-21T07:35:32Z"
