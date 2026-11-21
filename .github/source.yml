@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "d0bc2ade16a77c0f40d63000d8762fa80f74a66f"
+  sha: "b2ff0523446973e7a1e4c8c1632b4e92f3426858"
   ref_type: "branch"
-  ref_name: "fix/screenshot-audit-repotea-5-product-order-gaps"
-  run_id: 44237818017
+  ref_name: "chore/dyn-ubuntu-slim"
+  run_id: 44880754637
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): enforce public product units and currency and reject duplicate partner items"
+  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-18T04:30:50Z"
+  created_at: "2026-11-21T07:33:09Z"
