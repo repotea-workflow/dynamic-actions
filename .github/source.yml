@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "849e86709723a140def8c02b403433cd75b66ad3"
+  sha: "b5677a25526056eda2db81ac5e3a7b87a0e423de"
   ref_type: "branch"
-  ref_name: "chore/dyn-ubuntu-slim"
-  run_id: 44880946342
+  ref_name: "main"
+  run_id: 44881711491
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim"
+  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim (#96)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-21T07:35:32Z"
+  created_at: "2026-11-21T07:45:38Z"
