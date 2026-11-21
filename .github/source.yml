@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "d8b59606731e9b5696fb591b8e7b9aadfadaca6e"
+  sha: "89d8048ca036d7aa83964c438eeeeecbad4b3f2b"
   ref_type: "branch"
-  ref_name: "chore/dyn-ubuntu-slim"
-  run_id: 44880770250
+  ref_name: "main"
+  run_id: 44882011183
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim"
+  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim (#395)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-21T07:33:18Z"
+  created_at: "2026-11-21T07:49:38Z"
