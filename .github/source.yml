@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/sellworld"
   repository_id: 1431156301
-  sha: "75e65d37c74a805e8b25686b8468ad08cc83b3a1"
+  sha: "dc32e00bb8fc7b2fcc88083894952533aa60016b"
   ref_type: "branch"
-  ref_name: "chore/dyn-ubuntu-slim"
-  run_id: 44881207643
+  ref_name: "main"
+  run_id: 44881866300
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(ci): bump actionlint to v1.7.12 for ubuntu-slim"
+  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim (#19)\n\n* chore(ci): switch dynamic CI source workflows to ubuntu-slim\n\n* chore(ci): bump actionlint to v1.7.12 for ubuntu-slim"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-21T07:39:04Z"
+  created_at: "2026-11-21T07:47:41Z"
