@@ -1,1 +1,1 @@
-chore(ci): switch dynamic CI source workflows to ubuntu-slim
+chore(ci): switch dynamic CI source workflows to ubuntu-slim (#23)
