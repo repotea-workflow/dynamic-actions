@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "0xfe10/webox",
+    "repository_id": 1377004304,
+    "sha": "b20fa748550bca8151a2179c41fa6af13736c29d",
+    "ref_type": "branch",
+    "ref_name": "chore/dyn-ubuntu-slim",
+    "run_id": 44880745827,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": null
+}

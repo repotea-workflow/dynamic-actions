@@ -1,3 +1,1 @@
-Merge pull request #1 from 0xfe10/agt/jsonrpc-core
-
-feat(api): replace legacy HTTP API with JSON-RPC
+chore(ci): switch dynamic CI trigger workflows to ubuntu-slim
