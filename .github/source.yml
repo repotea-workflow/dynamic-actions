@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "837266f948d479f6ace60b19b6ea4360f96d3e2d"
+  sha: "d6f123b74f36ea3b51d4ed71add37c5910b0d0e1"
   ref_type: "branch"
-  ref_name: "feat/multi-device-listing-media-slots"
-  run_id: 45019383868
+  ref_name: "main"
+  run_id: 45021628483
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "feat(listing): add multi-device media_slots and standalone capability matrix"
+  message: "feat(listing): add multi-device media_slots and standalone capability matrix (#98)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-22T11:52:03Z"
+  created_at: "2026-11-22T12:19:03Z"
