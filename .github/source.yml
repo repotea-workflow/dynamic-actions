@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "b5677a25526056eda2db81ac5e3a7b87a0e423de"
+  sha: "837266f948d479f6ace60b19b6ea4360f96d3e2d"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 44881711491
+  ref_name: "feat/multi-device-listing-media-slots"
+  run_id: 45019383868
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim (#96)"
+  message: "feat(listing): add multi-device media_slots and standalone capability matrix"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-21T07:45:38Z"
+  created_at: "2026-11-22T11:52:03Z"
