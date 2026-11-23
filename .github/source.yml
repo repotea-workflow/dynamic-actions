@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "970bae2ae7e06fde9a88679fe95931bf39ed5de1"
+  sha: "37aff87bffe29bb7286b8d20ad88ca54e44e49de"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 44881642487
+  ref_name: "fix/omsk-audited-product-import-export"
+  run_id: 45121141525
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "chore(ci): switch dynamic CI source workflows to ubuntu-slim (#348)"
+  message: "fix(omsk): unblock audited product import/export and surface row errors"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-21T07:44:46Z"
+  created_at: "2026-11-23T05:59:24Z"
