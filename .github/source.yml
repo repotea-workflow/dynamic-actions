@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "429e9366ffa129792ca3bd7d1e21ae1fc24bc52e"
+  sha: "88e6819472f5a785baff0780b0b0cd98f86ea9cf"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 45125718383
+  run_id: 45126294242
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): bundle download templates and remove retired legacy switch (#352)"
+  message: "fix(omsk): unblock audited product import/export and surface row errors (#350)\n\n* fix(omsk): unblock audited product import/export and surface row errors\n\n* fix(omsk): clear import filter conditions and map visual cell rows"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-23T06:40:56Z"
+  created_at: "2026-11-23T06:45:51Z"
