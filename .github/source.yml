@@ -6,7 +6,7 @@ source:
   ref_type: "branch"
   ref_name: "fix/omsk-audited-product-import-export"
   run_id: 45123083939
-  run_attempt: 1
+  run_attempt: 2
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
@@ -14,4 +14,4 @@ commit:
   message: "chore(omsk): merge main (#346) into fix/omsk-audited-product-import-export"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-23T06:17:26Z"
+  created_at: "2026-11-23T06:25:19Z"
