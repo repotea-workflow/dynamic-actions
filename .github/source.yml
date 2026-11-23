@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "b3a25c1141a64e0aff3558646345a0d14349a03d"
+  sha: "9015282926668de9c60c1d51dfaa8d3ad6ac20d7"
   ref_type: "branch"
-  ref_name: "fix/omsk-bundle-templates-remove-legacy-entry"
-  run_id: 45124225411
+  ref_name: "fix/omsk-audited-product-import-export"
+  run_id: 45125465039
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): bundle download templates and remove retired legacy switch"
+  message: "fix(omsk): clear import filter conditions and map visual cell rows"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-23T06:27:41Z"
+  created_at: "2026-11-23T06:38:41Z"
