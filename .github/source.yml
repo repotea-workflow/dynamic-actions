@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "37aff87bffe29bb7286b8d20ad88ca54e44e49de"
+  sha: "de4486b7ab4b39f2486ead32f428b8c3b05b7d0c"
   ref_type: "branch"
-  ref_name: "fix/omsk-audited-product-import-export"
-  run_id: 45121141525
+  ref_name: "main"
+  run_id: 45122690515
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): unblock audited product import/export and surface row errors"
+  message: "fix(omsk): enforce public product units and currency and reject duplicate partner items (#346)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-23T05:59:24Z"
+  created_at: "2026-11-23T06:14:00Z"
