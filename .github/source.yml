@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "2dc94e1b213af5d95fb168203291af54dc50b335"
+  sha: "818910fb50574fb70050427c6810e0258583806f"
   ref_type: "branch"
-  ref_name: "fix/listing-push-tempdir-lifetime"
-  run_id: 45341613530
+  ref_name: "main"
+  run_id: 45342989011
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(server): keep adapted listing TempDir alive during listing push"
+  message: "fix(server): keep adapted listing TempDir alive during listing push (#101)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-24T06:35:50Z"
+  created_at: "2026-11-24T06:46:55Z"
