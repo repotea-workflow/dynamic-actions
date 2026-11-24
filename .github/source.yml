@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "818910fb50574fb70050427c6810e0258583806f"
+  sha: "9dcb713bdcb028ff8e942a138bd0ea1ee44b2305"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45342989011
+  ref_name: "chore/release-v0.2.12"
+  run_id: 45343837150
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(server): keep adapted listing TempDir alive during listing push (#101)"
+  message: "chore(release): prepare version 0.2.12"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-24T06:46:55Z"
+  created_at: "2026-11-24T06:53:53Z"
