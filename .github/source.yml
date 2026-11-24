@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
-  sha: "9f2e7b516550f69bc3d096163bec86c44c361e47"
+  sha: "6b66b8056ff92d12301cd8b36d8f68e7a35c84c6"
   ref_type: "branch"
-  ref_name: "fix/large-apk-upload-timeouts"
-  run_id: 45383766797
+  ref_name: "main"
+  run_id: 45384622591
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix: align source download, vivo url-push budget, and remote SSE timeouts"
+  message: "fix: extend large-APK upload transfer and engine timeouts to 30m (#103)\n\n* fix: extend large-APK upload transfer and engine timeouts to 30m\n\n* fix: align source download, vivo url-push budget, and remote SSE timeouts"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-24T11:23:55Z"
+  created_at: "2026-11-24T11:29:35Z"
