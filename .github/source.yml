@@ -3,9 +3,9 @@ source:
   repository: "0xfe10/pubox"
   repository_id: 1456109276
   sha: "d3f5c708a274b0ce8ccfbbf912b49a5efb474dc2"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 45385953880
+  ref_type: "tag"
+  ref_name: "v0.2.13"
+  run_id: 45385980045
   run_attempt: 1
   workflow: ".github/workflows/trigger-ci.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
@@ -14,4 +14,4 @@ commit:
   message: "chore(release): prepare version 0.2.13 (#104)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-24T11:38:10Z"
+  created_at: "2026-11-24T11:38:29Z"
