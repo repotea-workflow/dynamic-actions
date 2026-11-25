@@ -64,8 +64,8 @@ jobs:
           distribution: temurin
           java-version: "17"
 
-      - name: "[omsj] Test Order Lookup SQL"
-        run: cd backend/java/omsk-pompeii && ./mvnw -B -f ../omsj-api/pom.xml -Dtest=OrderInspectSqlTest test
+      - name: "[omsj] Test Order Lookup and Third-Party Creation"
+        run: cd backend/java/omsk-pompeii && ./mvnw -B -f ../omsj-api/pom.xml -Dtest=OrderInspectSqlTest,ThirdOrderPayloadTest,ZtoIntlTransportTest test
 
   omsk-babylon-web:
     name: "[omsk] Check Babylon"
