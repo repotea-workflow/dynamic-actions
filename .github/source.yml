@@ -3,15 +3,15 @@ source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
   sha: "8826713f97e1b92919af0c58d62c31f157550135"
-  ref_type: "branch"
-  ref_name: "main"
-  run_id: 45670726509
+  ref_type: "tag"
+  ref_name: "v0.0.144"
+  run_id: 45672077834
   run_attempt: 1
-  workflow: ".github/workflows/trigger-branch.yml"
+  workflow: ".github/workflows/trigger-tag.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
   message: "Bound ZTO-INTL order reads and clarify invalid order JSON (#358)\n\n* fix(omsj): return third-party order failures\n\n* fix(omsj): bound carrier reads and validate third-party order JSON\n\n* fix(omsj): reject trailing third-party order JSON"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-25T18:01:06Z"
+  created_at: "2026-11-25T18:08:56Z"
