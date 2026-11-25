@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "581bf59230a3fe1b1a061358eeac6fa1c5b1b5aa"
+  sha: "43a376bcbb067de1f8826333c05446b04d366597"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45563278984
+  ref_name: "fix/omsj-third-order-errors"
+  run_id: 45663877476
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsk): move task download link copy button to actions column (#356)"
+  message: "fix(omsj): return third-party order failures"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-25T06:48:11Z"
+  created_at: "2026-11-25T17:21:36Z"
