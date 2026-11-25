@@ -6,7 +6,7 @@ source:
   ref_type: "branch"
   ref_name: "fix/omsk-task-copy-button-in-actions"
   run_id: 45558327235
-  run_attempt: 1
+  run_attempt: 2
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
@@ -14,4 +14,4 @@ commit:
   message: "fix(omsk): move task download link copy button to actions column"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-25T06:08:06Z"
+  created_at: "2026-11-25T06:22:09Z"
