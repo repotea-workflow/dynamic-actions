@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/ztoms"
   repository_id: 1220708612
-  sha: "21a1128c5792f4800e9c58f0ca59576c988156e4"
+  sha: "1b21820895fb3c2443ab8189564029653620fb18"
   ref_type: "branch"
   ref_name: "fix/omsj-third-order-errors"
-  run_id: 45665934435
+  run_id: 45669127972
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(omsj): bound carrier reads and validate third-party order JSON"
+  message: "fix(omsj): reject trailing third-party order JSON"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-25T17:33:17Z"
+  created_at: "2026-11-25T17:51:39Z"
