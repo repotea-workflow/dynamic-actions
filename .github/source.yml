@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "90c17d7561d06d81bdb05ad98870b4b7de97a035"
+  sha: "47e8053bf72399b63fee1eb49a74fc573a49442a"
   ref_type: "branch"
   ref_name: "fix/m4-image-load-edit-cache"
-  run_id: 45889748131
+  run_id: 45891999542
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-print): speed up large image loading, edit preview, and variant switching"
+  message: "fix(image-print): use content-addressed blobs and cancel pending adjust commit on reset"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T20:16:00Z"
+  created_at: "2026-11-26T20:34:27Z"
