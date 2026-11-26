@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0b0055fd905ba24e2b84de7d95fd1a843174bffe"
+  sha: "40c19be020fa7822c4b902c990cfd3c78e706544"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45895019042
+  ref_name: "fix/m4-handwriting-doc-enhance"
+  run_id: 45897068328
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-print): speed up large image loading, edit preview, and variant switching (#441)\n\n* fix(image-print): speed up large image loading, edit preview, and variant switching\n\n* fix(image-print): use content-addressed blobs and cancel pending adjust commit on reset"
+  message: "fix(image-print): improve handwriting removal fidelity and local document enhancement\n\nRefs #399, #400"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T21:00:27Z"
+  created_at: "2026-11-26T21:17:24Z"
