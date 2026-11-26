@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "0b5a12f5302cb8ca11b0660335c1928dada48272"
+  sha: "c8fd6df025da9547d4e348b53c145abc88aea0f5"
   ref_type: "branch"
-  ref_name: "fix/m4-scan-web-print"
-  run_id: 45911037819
+  ref_name: "test/mock-auth-signout-transport"
+  run_id: 45913911618
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(scan-print): dispose in-flight camera on background and map capture permission errors\n\nRefs #404"
+  message: "fix(mobile): mock sign-out transport in app_auth_state_test"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T23:27:44Z"
+  created_at: "2026-11-26T23:57:36Z"
