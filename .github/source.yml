@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "40c19be020fa7822c4b902c990cfd3c78e706544"
+  sha: "b945d4f0678c4301b8a0ff79f123218bdf18abb8"
   ref_type: "branch"
-  ref_name: "fix/m4-handwriting-doc-enhance"
-  run_id: 45897068328
+  ref_name: "test/e2e-acceptance-suite"
+  run_id: 45898475231
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-print): improve handwriting removal fidelity and local document enhancement\n\nRefs #399, #400"
+  message: "feat(test): add 4-tier e2e acceptance test suite for 45 qa issues"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T21:17:24Z"
+  created_at: "2026-11-26T21:29:41Z"
