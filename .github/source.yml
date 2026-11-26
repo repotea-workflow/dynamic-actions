@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c4d4fa4ac7957d2e86412b87cf3e34fb63010ceb"
+  sha: "b37f5b77a3a5caf9759cebe6883353f952f6dc5e"
   ref_type: "branch"
-  ref_name: "fix/m4-handwriting-doc-enhance"
-  run_id: 45900159913
+  ref_name: "main"
+  run_id: 45902793631
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(image-print): handle 1-channel grayscale PNGs and failed background fallback\n\nRefs #399, #400"
+  message: "fix(image-print): improve handwriting removal fidelity and local document enhancement (#442)\n\n* fix(image-print): improve handwriting removal fidelity and local document enhancement\n\nRefs #399, #400\n\n* fix(image-print): handle 1-channel grayscale PNGs and failed background fallback\n\nRefs #399, #400"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T21:44:24Z"
+  created_at: "2026-11-26T22:08:23Z"
