@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "585828a18652ed7ce59e0acb06dfb470cfd7b284"
+  sha: "309358083811b01acc47f12902949cf43ce79564"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45906816865
+  ref_name: "fix/m4-scan-web-print"
+  run_id: 45908553880
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(document-print): fix action button truncation, login prompt, and PDF progress/preview (#444)"
+  message: "fix(scan-web-print): add in-app scan capture screen and unify web print bookmark titles"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T22:45:56Z"
+  created_at: "2026-11-26T23:03:12Z"
