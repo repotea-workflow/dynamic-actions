@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "60d927ae7a2c75e03d570288face3a15dbcf9417"
+  sha: "3818eae8fbfb61272e04cf09a6088d5ea21d38c5"
   ref_type: "branch"
-  ref_name: "fix/m7-records"
-  run_id: 45935929451
+  ref_name: "main"
+  run_id: 45936257846
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(records): bound retry button width, guard status stream errors, and emit numeric asset IDs"
+  message: "fix(ocr,learning): preserve local OCR table structure and differentiate 12-grade copybooks (#448)\n\n* fix(ocr,learning): preserve OCR table structure and differentiate grade copybooks\n\n* fix(ocr): resolve pipe table sync and sparse column edge cases\n\n* test(learning): draw halftone ink bands as strokes on white paper"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T03:44:52Z"
+  created_at: "2026-11-27T03:48:32Z"
