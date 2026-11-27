@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c8fd6df025da9547d4e348b53c145abc88aea0f5"
+  sha: "586a6f54b99759e4d5cd827367888419c16bb4d9"
   ref_type: "branch"
-  ref_name: "test/mock-auth-signout-transport"
-  run_id: 45913911618
+  ref_name: "main"
+  run_id: 45915675157
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): mock sign-out transport in app_auth_state_test"
+  message: "fix(mobile): mock sign-out transport in app_auth_state_test (#446)"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-26T23:57:36Z"
+  created_at: "2026-11-27T00:15:45Z"
