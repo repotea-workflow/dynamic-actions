@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4bf8582f2342ebb18d45ee2fec587bb6d92647b6"
+  sha: "84f400a595441f931bd42c2f330734b234e2d412"
   ref_type: "branch"
-  ref_name: "fix/m5-wrong-question"
-  run_id: 45928403377
+  ref_name: "fix/m7-esc-zlib-halftone"
+  run_id: 45928874519
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(wrong-question): add scan-to-ocr workflow and non-black sheet renderer"
+  message: "fix(print): implement ESC zlib compression, density logging, and halftone quality"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T02:27:23Z"
+  created_at: "2026-11-27T02:32:17Z"
