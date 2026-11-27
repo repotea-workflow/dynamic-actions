@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c296640d5441d93fe7415fa6252dc758a23b245d"
+  sha: "a158cd5aeee87d036f8e1edfae9504355e93e181"
   ref_type: "branch"
-  ref_name: "fix/m5-wrong-question"
-  run_id: 45937502818
+  ref_name: "main"
+  run_id: 45937900378
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(wrong-question): whiten paper background in composed sheet helper"
+  message: "fix(mobile): localize editor dialogs, fix dirty tracking, and harden templates (#452)\n\n* fix(mobile): localize editor dialogs, fix dirty tracking, and harden templates\n\n* fix(mobile): harden personal JSON import, direct print errors, rune clamping, and back guard\n\n* test(e2e): align M6 Tier 3 E2E cases with skewX italic and scrollable tool belt"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:01:54Z"
+  created_at: "2026-11-27T04:05:55Z"
