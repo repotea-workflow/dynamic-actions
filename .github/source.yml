@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "e6389293a0894290d6d23aa4d9694964a63dcec3"
+  sha: "3a8242f2ddf80e1a247cffc76475c03883b0bdc8"
   ref_type: "branch"
-  ref_name: "fix/m4-scan-web-print"
-  run_id: 45918526643
+  ref_name: "main"
+  run_id: 45920112076
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(android): override WRITE_EXTERNAL_STORAGE maxSdkVersion in manifest merger"
+  message: "fix(scan-web-print): add in-app scan capture screen and unify web print bookmark titles (#445)\n\n* fix(scan-web-print): add in-app scan capture screen and unify web print bookmark titles\n\n* fix(scan-print): dispose in-flight camera on background and map capture permission errors\n\nRefs #404\n\n* fix(android): override WRITE_EXTERNAL_STORAGE maxSdkVersion in manifest merger"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T00:45:05Z"
+  created_at: "2026-11-27T01:01:22Z"
