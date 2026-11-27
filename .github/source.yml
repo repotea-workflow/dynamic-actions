@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "c8069294faffe843f1a238d5d6d541fc3aa31e82"
+  sha: "4947d119ab8f2a6c4aac609a55d8296f0f5d654b"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45952005683
+  ref_name: "fix/m3-global-l10n-sweep"
+  run_id: 45957110570
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(sync,isolation): sync local print records and isolate account workspaces (#458)\n\n* feat(sync,isolation): sync local print records and isolate account workspaces\n\n* fix(sync,isolation): fix workspace preference hydration, draft title cap, and async load races"
+  message: "fix(l10n): sweep English, Traditional Chinese, and Japanese mobile localization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T06:28:04Z"
+  created_at: "2026-11-27T07:15:07Z"
