@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "a158cd5aeee87d036f8e1edfae9504355e93e181"
+  sha: "b407a3aa000ab19a45b15fae15cea2c177838d29"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 45937900378
+  run_id: 45938023047
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): localize editor dialogs, fix dirty tracking, and harden templates (#452)\n\n* fix(mobile): localize editor dialogs, fix dirty tracking, and harden templates\n\n* fix(mobile): harden personal JSON import, direct print errors, rune clamping, and back guard\n\n* test(e2e): align M6 Tier 3 E2E cases with skewX italic and scrollable tool belt"
+  message: "fix(bluetooth): harden scan filtering, first-connect, disconnect banner and auto-reconnect (#453)\n\nRefs #419, Refs #420"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:05:55Z"
+  created_at: "2026-11-27T04:07:07Z"
