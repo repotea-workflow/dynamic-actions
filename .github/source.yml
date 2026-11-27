@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "5a5bcc6a5d9d8ba85ac2b0b76e0a18948802454b"
+  sha: "a9d64233214b90ab3553b987e8d3843d6188d821"
   ref_type: "branch"
-  ref_name: "fix/m5-quick-text"
-  run_id: 45927246984
+  ref_name: "fix/m5-ocr-learning"
+  run_id: 45927325610
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(quick-text): fix continuous landscape raster scaling (#407)\n\n- Apply the 2x continuous feed multiplier along the banner feed axis instead of the cross-printhead axis in PrintController._updateQuickTextConfiguration\n\n- Align PrintController._supportsPaper feed-width and feed-height axes with landscape and portrait orientation\n\n- Scale QuickTextNibRasterizer landscape raster width across positive aspect ratios without clamping narrower-width layouts above full DPI\n\n- Add regression tests for A4 continuous landscape, 58mm continuous landscape, and narrow-width landscape rasterization"
+  message: "fix(ocr,learning): preserve OCR table structure and differentiate grade copybooks"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T02:15:39Z"
+  created_at: "2026-11-27T02:16:22Z"
