@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "164efac3f877e68d594de39f10704bdf817f202f"
+  sha: "d1022e1ac486298f2ea1c1e0f5a52563db9b94b2"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45942091857
+  ref_name: "fix/m7-width-ui"
+  run_id: 45942698889
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(wrong-question): add scan-to-ocr workflow and non-black sheet renderer (#449)\n\n* fix(wrong-question): add scan-to-ocr workflow and non-black sheet renderer\n\n* fix(wrong-question): preserve slice text styles, prevent footer overlap, and guard detail save\n\n* fix(wrong-question): whiten paper background in composed sheet helper"
+  message: "fix(device,print): tighten GP model fallback tokens and gate continuous catalog synthesis"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:48:51Z"
+  created_at: "2026-11-27T04:55:20Z"
