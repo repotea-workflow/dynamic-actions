@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "cdbac6a61d1efda2e3fc81e2980bdc4133287b7d"
+  sha: "8181529a95891eb29dc333d1c3f72789073bd4e0"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45999189346
+  ref_name: "fix/m8-liveqa-7-issues"
+  run_id: 46008950392
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): resolve sticker file:// SVG rendering, large JPEG load latency, and instant dihedral rotation (#461)\n\n* fix(mobile): resolve sticker file:// SVG rendering and large JPEG preview/rotation latency\n\n* fix(mobile): harden batch persistence ordering and local file data URL caps\n\n* fix(mobile): flush edits before print, retry failed batch flushes, and enforce atomic batch capacity\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  message: "fix(mobile): resolve 7 Live QA reopened issues across records, sync, auth, and exam grade l10n"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T12:30:33Z"
+  created_at: "2026-11-27T13:39:24Z"
