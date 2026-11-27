@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "3a8242f2ddf80e1a247cffc76475c03883b0bdc8"
+  sha: "73c514afc721d5e06b4e6d6fcd434b6670f0052d"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45920112076
+  ref_name: "fix/m5-quick-text"
+  run_id: 45924249077
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(scan-web-print): add in-app scan capture screen and unify web print bookmark titles (#445)\n\n* fix(scan-web-print): add in-app scan capture screen and unify web print bookmark titles\n\n* fix(scan-print): dispose in-flight camera on background and map capture permission errors\n\nRefs #404\n\n* fix(android): override WRITE_EXTERNAL_STORAGE maxSdkVersion in manifest merger"
+  message: "fix(quick-text): fix Fleather formatting, A4 paper sizing, and print transition\n\n- Resolve FleatherThemeData context inside Scaffold and enforce explicit paragraph/bold/inlineCode styles to eliminate red/w900/double-underline fallback styling (#406)\n- Support collapsed-caret Large and Normal formatting while preserving partial-selection snapshots, underline, and single-select format pills (#406)\n- Add A4/A5/A6/58mm/Custom paper presets, fixed/continuous feed mode sheet, and PrintScreen preset chips with reflow on custom/catalog paper selection (#407)\n- Relax Quick Text paper width/continuous/landscape checks for 1600/1664-dot A4 printers and scale landscape rasterization proportionally (#407)\n- Defer PrintScreen raster preview across Navigator.push transitions, eliminate duplicate frame-1 setDevice, merge adjacent same-alignment TextPainters, move PNG encoding to Isolate.run, and remove redundant JSON encoding on keystrokes (#408)\n- Add localization keys across all five ARB files and regenerate localizations"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T01:01:22Z"
+  created_at: "2026-11-27T01:44:14Z"
