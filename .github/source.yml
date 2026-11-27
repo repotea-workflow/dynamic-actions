@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4947d119ab8f2a6c4aac609a55d8296f0f5d654b"
+  sha: "e2248958016a6151c0391c3308916f3ddf02cdd9"
   ref_type: "branch"
   ref_name: "fix/m3-global-l10n-sweep"
-  run_id: 45957110570
+  run_id: 45962082476
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(l10n): sweep English, Traditional Chinese, and Japanese mobile localization"
+  message: "fix(l10n): fix learning zh-Hant leaks, custom CJK draft titles, and zh-TW locale check"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T07:15:07Z"
+  created_at: "2026-11-27T07:58:05Z"
