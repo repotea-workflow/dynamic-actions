@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "f7d0a5a0107fe10f095b804c8b3759b66ed81f8d"
+  sha: "51ec9a5a74494308ccd20acea859a2e5bd81a11e"
   ref_type: "branch"
-  ref_name: "fix/m8-e2e-reconcile"
-  run_id: 45987729877
+  ref_name: "main"
+  run_id: 45991379085
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile,e2e): clear auth SnackBar queues and remove organizer dead-wait"
-  authors: ["0x128b","0xfe10"]
+  message: "fix(mobile,e2e): clear auth SnackBar queues and reconcile M3-M7 E2E suite (#460)\n\n* fix(mobile,e2e): clear queued SMS SnackBar and reconcile M3-M7 E2E suite\n\n* fix(mobile,e2e): clear auth SnackBar queues and remove organizer dead-wait\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T11:07:07Z"
+  created_at: "2026-11-27T11:33:25Z"
