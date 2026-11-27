@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4907024717d02426907482107386a2b57ef5c093"
+  sha: "86a55fc14d19adce9c8f149060e1e3c0ec89a921"
   ref_type: "branch"
-  ref_name: "fix/m3-cold-start-splash"
-  run_id: 45939999596
+  ref_name: "main"
+  run_id: 45940056044
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(startup): replace white launch backdrop with brand splash gradient"
+  message: "fix(records): improve print draft titles, attempt status checks, plate re-edit, and clear scope (#454)\n\n* fix(records): normalize draft titles, attempt statuses, plate re-edit, and clear scope\n\n* fix(records): bound retry button width, guard status stream errors, and emit numeric asset IDs"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:27:13Z"
+  created_at: "2026-11-27T04:28:25Z"
