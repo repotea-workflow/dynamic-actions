@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "224aaf6c2b261e7d4d1cfadd183b743f2302bda6"
+  sha: "c8069294faffe843f1a238d5d6d541fc3aa31e82"
   ref_type: "branch"
-  ref_name: "fix/m3-print-sync-isolation"
-  run_id: 45949977382
+  ref_name: "main"
+  run_id: 45952005683
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(sync,isolation): fix workspace preference hydration, draft title cap, and async load races"
+  message: "fix(sync,isolation): sync local print records and isolate account workspaces (#458)\n\n* feat(sync,isolation): sync local print records and isolate account workspaces\n\n* fix(sync,isolation): fix workspace preference hydration, draft title cap, and async load races"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T06:08:53Z"
+  created_at: "2026-11-27T06:28:04Z"
