@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "bcb73423cc48eb1181467c87ef750e0b9fc38b92"
+  sha: "fa43339056be04d9fdf29406956ed51ffee7c47e"
   ref_type: "branch"
   ref_name: "main"
-  run_id: 45943605801
+  run_id: 45944190525
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(startup): eliminate cold-start white screen across Android, iOS, and Flutter (#456)\n\n* fix(startup): replace white launch backdrop with brand splash gradient\n\n* fix(startup): add Android 12+ dark splash theme and polish splash/retry edge cases"
+  message: "fix(print,device): add A4 width controls, multi-device switching, and UI/halftone wiring (#455)\n\n* fix(print): add A4 width controls, multi-device switching, and UI/halftone wiring\n\n* fix(device,print): tighten GP model fallback tokens and gate continuous catalog synthesis"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T05:04:49Z"
+  created_at: "2026-11-27T05:10:39Z"
