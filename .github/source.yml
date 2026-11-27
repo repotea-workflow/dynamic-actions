@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "51ec9a5a74494308ccd20acea859a2e5bd81a11e"
+  sha: "40fe94f4912c94f6f6f6f7da1ea8b807a5e06684"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45991379085
+  ref_name: "fix/m8-reopened-397-398-412"
+  run_id: 45993761156
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile,e2e): clear auth SnackBar queues and reconcile M3-M7 E2E suite (#460)\n\n* fix(mobile,e2e): clear queued SMS SnackBar and reconcile M3-M7 E2E suite\n\n* fix(mobile,e2e): clear auth SnackBar queues and remove organizer dead-wait\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
-  authors: ["0xfe10"]
+  message: "fix(mobile): flush edits before print, retry failed batch flushes, and enforce atomic batch capacity"
+  authors: ["0x128b","0xfe10"]
 dispatch:
-  created_at: "2026-11-27T11:33:25Z"
+  created_at: "2026-11-27T11:50:55Z"
