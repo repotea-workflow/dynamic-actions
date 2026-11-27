@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "73c514afc721d5e06b4e6d6fcd434b6670f0052d"
+  sha: "5a5bcc6a5d9d8ba85ac2b0b76e0a18948802454b"
   ref_type: "branch"
   ref_name: "fix/m5-quick-text"
-  run_id: 45924249077
+  run_id: 45927246984
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(quick-text): fix Fleather formatting, A4 paper sizing, and print transition\n\n- Resolve FleatherThemeData context inside Scaffold and enforce explicit paragraph/bold/inlineCode styles to eliminate red/w900/double-underline fallback styling (#406)\n- Support collapsed-caret Large and Normal formatting while preserving partial-selection snapshots, underline, and single-select format pills (#406)\n- Add A4/A5/A6/58mm/Custom paper presets, fixed/continuous feed mode sheet, and PrintScreen preset chips with reflow on custom/catalog paper selection (#407)\n- Relax Quick Text paper width/continuous/landscape checks for 1600/1664-dot A4 printers and scale landscape rasterization proportionally (#407)\n- Defer PrintScreen raster preview across Navigator.push transitions, eliminate duplicate frame-1 setDevice, merge adjacent same-alignment TextPainters, move PNG encoding to Isolate.run, and remove redundant JSON encoding on keystrokes (#408)\n- Add localization keys across all five ARB files and regenerate localizations"
+  message: "fix(quick-text): fix continuous landscape raster scaling (#407)\n\n- Apply the 2x continuous feed multiplier along the banner feed axis instead of the cross-printhead axis in PrintController._updateQuickTextConfiguration\n\n- Align PrintController._supportsPaper feed-width and feed-height axes with landscape and portrait orientation\n\n- Scale QuickTextNibRasterizer landscape raster width across positive aspect ratios without clamping narrower-width layouts above full DPI\n\n- Add regression tests for A4 continuous landscape, 58mm continuous landscape, and narrow-width landscape rasterization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T01:44:14Z"
+  created_at: "2026-11-27T02:15:39Z"
