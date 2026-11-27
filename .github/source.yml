@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ed567bebd36023d9e40d598cbe939faa540fb8e2"
+  sha: "1109402692fc0fb794dc8a5a21a7f271b03a84f7"
   ref_type: "branch"
-  ref_name: "fix/m7-width-ui"
-  run_id: 45940881912
+  ref_name: "fix/m3-auth-login-password"
+  run_id: 45941095844
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(device,print): tighten GP model fallback tokens and gate continuous catalog synthesis"
+  message: "fix(auth): fix login redirect, password change guard, and auth error localization"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:36:09Z"
+  created_at: "2026-11-27T04:38:20Z"
