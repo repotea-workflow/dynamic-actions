@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "fa43339056be04d9fdf29406956ed51ffee7c47e"
+  sha: "7862ab8af2c071e7cfd503a5c9e8415f3843d8d6"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 45944190525
+  ref_name: "fix/m3-auth-login-password"
+  run_id: 45945124066
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(print,device): add A4 width controls, multi-device switching, and UI/halftone wiring (#455)\n\n* fix(print): add A4 width controls, multi-device switching, and UI/halftone wiring\n\n* fix(device,print): tighten GP model fallback tokens and gate continuous catalog synthesis"
+  message: "fix(auth): normalize auth route case and reject encoded slashes in nextPath"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T05:10:39Z"
+  created_at: "2026-11-27T05:19:46Z"
