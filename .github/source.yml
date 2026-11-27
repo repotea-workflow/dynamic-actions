@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "561f18a5f51e10031eaad2b221c7ab699e1eda48"
+  sha: "8291b9996571637fdc75f5b90df9d85fbca57bd2"
   ref_type: "branch"
-  ref_name: "fix/m6-templates-dialogs"
-  run_id: 45929789737
+  ref_name: "fix/m5-ocr-learning"
+  run_id: 45930236195
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): localize editor dialogs, fix dirty tracking, and harden templates"
+  message: "fix(ocr): resolve pipe table sync and sparse column edge cases"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T02:41:26Z"
+  created_at: "2026-11-27T02:46:03Z"
