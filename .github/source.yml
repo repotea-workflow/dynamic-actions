@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "1109402692fc0fb794dc8a5a21a7f271b03a84f7"
+  sha: "36a29d85fa0962de4fd44ed233cb2a67c3f5ff08"
   ref_type: "branch"
-  ref_name: "fix/m3-auth-login-password"
-  run_id: 45941095844
+  ref_name: "fix/m3-cold-start-splash"
+  run_id: 45941646547
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(auth): fix login redirect, password change guard, and auth error localization"
+  message: "fix(startup): add Android 12+ dark splash theme and polish splash/retry edge cases"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T04:38:20Z"
+  created_at: "2026-11-27T04:44:15Z"
