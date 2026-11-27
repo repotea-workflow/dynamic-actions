@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "45ebdcd0a9a657c568dd7d56e47c0e003457e144"
+  sha: "865e11a33cf7d421b2ef831fe2d55ad78058289c"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 46012789309
+  ref_name: "fix/m8-tier5-hardening"
+  run_id: 46034761680
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): resolve 7 Live QA reopened issues across records, sync, auth, and exam grade l10n (#462)"
+  message: "fix(mobile): close M8 Tier 5 iter 2 l10n, data URL, and file cache quantum findings"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T14:05:54Z"
+  created_at: "2026-11-27T16:34:44Z"
