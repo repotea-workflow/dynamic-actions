@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "40fe94f4912c94f6f6f6f7da1ea8b807a5e06684"
+  sha: "cdbac6a61d1efda2e3fc81e2980bdc4133287b7d"
   ref_type: "branch"
-  ref_name: "fix/m8-reopened-397-398-412"
-  run_id: 45993761156
+  ref_name: "main"
+  run_id: 45999189346
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): flush edits before print, retry failed batch flushes, and enforce atomic batch capacity"
-  authors: ["0x128b","0xfe10"]
+  message: "fix(mobile): resolve sticker file:// SVG rendering, large JPEG load latency, and instant dihedral rotation (#461)\n\n* fix(mobile): resolve sticker file:// SVG rendering and large JPEG preview/rotation latency\n\n* fix(mobile): harden batch persistence ordering and local file data URL caps\n\n* fix(mobile): flush edits before print, retry failed batch flushes, and enforce atomic batch capacity\n\n---------\n\nCo-authored-by: 0x128b <306828631+0x128b@users.noreply.github.com>"
+  authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T11:50:55Z"
+  created_at: "2026-11-27T12:30:33Z"
