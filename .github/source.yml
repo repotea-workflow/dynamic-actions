@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "ce0f9edae23b2f64d06a3c8945476da3edb0381b"
+  sha: "85afbd5a71fd091a089a79ec3e748dea333b4a04"
   ref_type: "branch"
-  ref_name: "fix/m6-editor-tools"
-  run_id: 45933591492
+  ref_name: "fix/m5-ocr-learning"
+  run_id: 45933793158
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(graphic-editor): address root sheet insets, table italic parity, and icon guards\n\n- Mount canvas size modal on root Navigator so compact 360x640 layouts keep actions reachable and preserve keyboard viewInsets (Refs #413).\n- Wrap table element plugin in gprinterPlatePlugins to normalize legacy italic styles on the live canvas while retaining table config capability (Refs #410).\n- Fold fullwidth ASCII and zero-width/whitespace separators in editor icon IP filtering and replace unhydrated remote gprinterIcon entries with a placeholder shape in headless SVG rendering (Refs #412)."
+  message: "test(learning): draw halftone ink bands as strokes on white paper"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T03:20:43Z"
+  created_at: "2026-11-27T03:22:41Z"
