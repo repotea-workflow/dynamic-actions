@@ -1,1 +1,1 @@
-test(gateway): use portable multipart review fixtures
+fix(gateway): retain upload identity and retire unsafe sandboxes

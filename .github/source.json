@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "51806baf62a10997a6552bf4c819a2a843af3cb7",
+    "sha": "cea47f4d435d04b52509e315f0ac884c94e49c19",
     "ref_type": "branch",
     "ref_name": "ao/gateway-attachments-and-errors/feat/thread-attachments",
-    "run_id": 46171405043,
+    "run_id": 46173148640,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
