@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "0998285f8bb08c80e9a60b3668d767169d0f351e",
+    "sha": "52de49164b8959851fc23e7d2f5ba2e13e3942f7",
     "ref_type": "branch",
-    "ref_name": "fix/pi-models-apikey",
-    "run_id": 46111172166,
+    "ref_name": "main",
+    "run_id": 46111462621,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
