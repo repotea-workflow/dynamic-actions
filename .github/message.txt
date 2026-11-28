@@ -1,1 +1,1 @@
-fix(runtime): use $OPENAI_API_KEY env interpolation and quietStartup in pi config (#5)
+fix(contract): strip duplicate base prefix once in target()
