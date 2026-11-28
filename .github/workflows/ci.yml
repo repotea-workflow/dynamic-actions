@@ -193,6 +193,8 @@ jobs:
           context: .
           platforms: linux/amd64
           push: true
+          provenance: false
+          sbom: false
           tags: ${{ steps.image.outputs.tags }}
           labels: ${{ steps.checkout.outputs.oci_labels }}
 
