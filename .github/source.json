@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "85fc0783fafcec0811d50578ef262f7222e71c74",
-    "ref_type": "tag",
-    "ref_name": "v0.1.1",
-    "run_id": 46101443099,
+    "sha": "8b090907fec8e0daa162f9f71fb78e110e176b3b",
+    "ref_type": "branch",
+    "ref_name": "fix/e2b-network-policy-and-turn-diagnostics",
+    "run_id": 46103665419,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-tag.yml"
+    "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
