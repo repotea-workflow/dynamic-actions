@@ -1,1 +1,11 @@
-fix(gateway): retain upload identity and retire unsafe sandboxes
+feat(gateway): add thread attachments and surface failed turns (#9)
+
+* feat(gateway): support thread attachments and report failed turns
+
+* fix(gateway): harden attachment staging and model stream completion
+
+* test(gateway): compare large staged images by bytes
+
+* test(gateway): use portable multipart review fixtures
+
+* fix(gateway): retain upload identity and retire unsafe sandboxes
