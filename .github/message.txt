@@ -1,1 +1,1 @@
-feat(e2b): add explicit E2B_NETWORK_POLICY mode and safe turn error diagnostics (#3)
+fix(workspace): percent-encode colons in owner segments for STS policy ARNs
