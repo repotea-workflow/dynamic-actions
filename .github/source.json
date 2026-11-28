@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "2673146b4abe1686d3fe32f6d7e67935bde27fd7",
-    "ref_type": "branch",
-    "ref_name": "fix/ci-acr-provenance",
-    "run_id": 46101057985,
+    "sha": "85fc0783fafcec0811d50578ef262f7222e71c74",
+    "ref_type": "tag",
+    "ref_name": "v0.1.1",
+    "run_id": 46101443099,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-branch.yml"
+    "workflow": ".github/workflows/trigger-tag.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
