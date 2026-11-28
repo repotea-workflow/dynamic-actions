@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "231a4922a42b9de618b3d2bc26731c097d4ccf48",
-    "ref_type": "tag",
-    "ref_name": "v0.1.6",
-    "run_id": 46118966247,
+    "sha": "4ff41c85cdbb659a662b4facc23957f850e9b74a",
+    "ref_type": "branch",
+    "ref_name": "ao/gateway-openapi-opt/fix/openapi-cache",
+    "run_id": 46162674992,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-tag.yml"
+    "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
