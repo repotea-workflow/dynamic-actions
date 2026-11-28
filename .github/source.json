@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "source": {
+    "repository": "0xfe10/agent-gateway",
+    "repository_id": 1474853486,
+    "sha": "919b6101d6e186ae3df516a7dfa11deb613f5aec",
+    "ref_type": "branch",
+    "ref_name": "feat/ai-1-gateway-core",
+    "run_id": 46098643074,
+    "run_attempt": 1,
+    "workflow": ".github/workflows/trigger-branch.yml"
+  },
+  "execution_repository": "repotea-workflow/dynamic-actions",
+  "policy": null
+}

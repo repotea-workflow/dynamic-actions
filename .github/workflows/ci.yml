@@ -1,0 +1,159 @@
+name: "[agent-gateway] CI"
+
+on:
+  push:
+    branches: ["0xfe10/agent-gateway"]
+    tags: ["v*-agent-gateway"]
+
+concurrency:
+  group: agent-gateway-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+  packages: write
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    services:
+      postgres:
+        image: postgres:17-alpine
+        env:
+          POSTGRES_DB: gateway_test
+          POSTGRES_HOST_AUTH_METHOD: trust
+        ports: ["5432:5432"]
+        options: --health-cmd pg_isready --health-interval 5s --health-timeout 3s --health-retries 10
+    env:
+      TEST_DATABASE_URL: postgresql://postgres@127.0.0.1:5432/gateway_test
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Resolve source revision and publication target
+        id: source
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+        run: |
+          set -euo pipefail
+          repository=$(cat .github/repository.txt)
+          [[ "$repository" == "0xfe10/agent-gateway" ]]
+          ref=$(cat .github/commit.txt)
+          [[ "$ref" =~ ^[0-9a-f]{7,40}$ ]]
+          revision=$(gh api "repos/$repository/commits/$ref" --jq .sha)
+          [[ "$revision" =~ ^[0-9a-f]{40}$ ]]
+          echo "revision=$revision" >> "$GITHUB_OUTPUT"
+
+          publish=false
+          version=
+          if [[ "$GITHUB_REF" == refs/heads/0xfe10/agent-gateway && -f .github/branch.txt ]]; then
+            if [[ "$(cat .github/branch.txt)" == main ]]; then
+              publish=true
+            fi
+          elif [[ "$GITHUB_REF" == refs/tags/* && -f .github/tag.txt ]]; then
+            tag=$(cat .github/tag.txt)
+            if [[ "$tag" =~ ^v[0-9]+\.[0-9]+\.[0-9]+$ && "$GITHUB_REF_NAME" == "${tag}-agent-gateway" ]]; then
+              if tag_rev=$(gh api "repos/$repository/commits/$tag" --jq .sha) && [[ "$tag_rev" == "$revision" ]]; then
+                publish=true
+                version=$tag
+              fi
+            fi
+          fi
+          echo "publish=$publish" >> "$GITHUB_OUTPUT"
+          echo "version=$version" >> "$GITHUB_OUTPUT"
+
+      - name: Check out gateway source
+        id: checkout
+        uses: repotea-workspace/kangumi/github-actions/clone-dyn@main
+        with:
+          repository: 0xfe10/agent-gateway
+          token: ${{ secrets.GH_TOKEN_0XFE10 }}
+          ref: ${{ steps.source.outputs.revision }}
+          source_context: "true"
+          image_name: agent-gateway
+          acr_registry: registry.cn-hongkong.aliyuncs.com
+          acr_namespace: xoohub
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+      - run: npm ci --ignore-scripts
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test
+      - run: npm run test:integration
+
+      - uses: docker/setup-buildx-action@v4
+      - name: Log in to GHCR
+        if: steps.source.outputs.publish == 'true'
+        uses: docker/login-action@v4
+        with:
+          registry: ghcr.io
+          username: "0xfe10"
+          password: ${{ secrets.GH_TOKEN_0XFE10 }}
+      - name: Log in to ACR
+        if: steps.source.outputs.publish == 'true'
+        uses: docker/login-action@v4
+        with:
+          registry: registry.cn-hongkong.aliyuncs.com
+          username: ${{ secrets.CR_ALI_USERNAME_PUNCHX }}
+          password: ${{ secrets.CR_ALI_PASSWORD_PUNCHX }}
+
+      - name: Select image tags
+        id: image
+        shell: bash
+        env:
+          GHCR_IMAGE: ${{ steps.checkout.outputs.ghcr_image }}
+          ACR_IMAGE: ${{ steps.checkout.outputs.ali_image }}
+          REVISION: ${{ steps.source.outputs.revision }}
+          PUBLISH: ${{ steps.source.outputs.publish }}
+          VERSION: ${{ steps.source.outputs.version }}
+        run: |
+          set -euo pipefail
+          tags=("sha-${REVISION:0:7}")
+          if [[ "$PUBLISH" == true ]]; then
+            if [[ -n "$VERSION" ]]; then
+              tags=("$VERSION" "${tags[@]}" latest)
+            else
+              tags+=(staging)
+            fi
+          fi
+          {
+            echo 'tags<<EOF'
+            for image in "${GHCR_IMAGE:?}" "${ACR_IMAGE:?}"; do
+              for tag in "${tags[@]}"; do
+                echo "$image:$tag"
+              done
+            done
+            echo EOF
+          } >> "$GITHUB_OUTPUT"
+
+      - name: Build gateway image
+        uses: docker/build-push-action@v7
+        with:
+          context: .
+          platforms: linux/amd64
+          push: ${{ steps.source.outputs.publish == 'true' }}
+          tags: ${{ steps.image.outputs.tags }}
+          labels: ${{ steps.checkout.outputs.oci_labels }}
+
+      - name: Report source commit status
+        if: always() && steps.source.outputs.revision != ''
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GH_TOKEN_0XFE10 }}
+          REVISION: ${{ steps.source.outputs.revision }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          set -euo pipefail
+          case "$JOB_STATUS" in
+            success|failure) state=$JOB_STATUS ;;
+            *) state=error ;;
+          esac
+          gh api --method POST "repos/0xfe10/agent-gateway/statuses/$REVISION" \
+            -f "state=$state" \
+            -f 'context=dynamic / [agent-gateway] CI' \
+            -f "target_url=$GITHUB_SERVER_URL/$GITHUB_REPOSITORY/actions/runs/$GITHUB_RUN_ID" \
+            -f "description=Gateway CI: $JOB_STATUS" --silent

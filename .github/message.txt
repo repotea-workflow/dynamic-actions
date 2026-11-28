@@ -1,0 +1,1 @@
+ci(gateway): forward verification and image publishing to dynamic actions
