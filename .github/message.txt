@@ -1,1 +1,1 @@
-fix(contract): strip duplicate base prefix once in target()
+fix(contract): strip duplicate base prefix once in target() (#6)
