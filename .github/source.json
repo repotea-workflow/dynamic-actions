@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "8b090907fec8e0daa162f9f71fb78e110e176b3b",
+    "sha": "a7498277a166efe8c71e948db8401b7f6db5c9a3",
     "ref_type": "branch",
-    "ref_name": "fix/e2b-network-policy-and-turn-diagnostics",
-    "run_id": 46103665419,
+    "ref_name": "main",
+    "run_id": 46104036439,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
