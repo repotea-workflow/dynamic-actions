@@ -1,1 +1,1 @@
-fix(contract): strip duplicate base prefix once in target() (#6)
+fix(runtime): abort stalled agent sessions and bound shutdown waits

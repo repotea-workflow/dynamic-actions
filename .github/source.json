@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "5fba91527e56ea0f9156f03ab43dd996af2a0bd6",
-    "ref_type": "tag",
-    "ref_name": "v0.1.5",
-    "run_id": 46112748912,
+    "sha": "0c90726d8f3bd4bbdce9bdd06a265a7b485166d7",
+    "ref_type": "branch",
+    "ref_name": "fix/runtime-abort-and-acp-timeout",
+    "run_id": 46117988267,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-tag.yml"
+    "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
