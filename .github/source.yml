@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "4879d92e192d93255a40d72b18c9371cc37d42f0"
+  sha: "53feae325baad0ba3527524df4087cc17dacd0b3"
   ref_type: "branch"
-  ref_name: "fix/m8-tier5-overflows"
-  run_id: 46113412894
+  ref_name: "main"
+  run_id: 46114526891
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "test(mobile): scroll compact dialog buttons into view before tapping"
+  message: "fix(mobile): harden Tier 5 compact-viewport layouts, dialogs, and hit-test regressions (#464)\n\n* fix(mobile): resolve M8 Tier 5 layout overflows in wrong question, templates, device, and learning screens\n\n* fix(mobile): resolve U1-U3 overflows, 280px G1 edge case, and add T5-M8-08..10 tests\n\n* fix(mobile): resolve P1/P2 overflows, guard WrongQuestionReviewScreen SafeArea, and add T5-M8-11..12\n\n* fix(mobile): wrap canvas size sheet actions for tight viewports and expand T5-M8-12\n\n* fix(mobile): make WebPrintScreen and load error view scrollable on tight 2.0x viewports and add T5-M8-13\n\n* fix(mobile): resolve secondary screen overflows across tight viewports and add T5-M8-14..17\n\n* fix(mobile): resolve remaining screen overflows across tight viewports and add T5-M8-18..21\n\n* fix(mobile): resolve remaining 5 screen overflows across tight viewports and add T5-M8-22..26\n\n* fix(mobile): resolve 6 remaining deep sub-screen overflows across tight viewports and add T5-M8-27..30\n\n* fix(mobile): make DoodleMaterialPlazaScreen sign-in AlertDialog scrollable\n\n* fix(mobile): make TemplatesScreen tight-height scrollable and remaining AlertDialogs scrollable\n\n* fix(mobile): resolve AccountTemplatesPanel pagination crash, Mine tab overflows, and QuickText leave dialog overflow\n\n* fix(mobile): resolve remaining compact AlertDialog, AboutRow, and AccountTemplatesPanel 3.0x overflows\n\n* fix(mobile): resolve remaining tight-viewport overflow clusters and add T5-M8-36..40 regressions\n\n* test(mobile): scroll compact dialog buttons into view before tapping"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-28T05:44:04Z"
+  created_at: "2026-11-28T05:59:45Z"
