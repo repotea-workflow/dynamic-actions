@@ -1,1 +1,1 @@
-feat(gateway): support thread attachments and report failed turns
+fix(gateway): harden attachment staging and model stream completion
