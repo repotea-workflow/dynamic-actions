@@ -1,1 +1,45 @@
-fix(ci): isolate image publishing and clear checkout credentials
+Add a multi-namespace agent gateway with durable streaming and approvals (#1)
+
+* feat(gateway): add isolated sandbox threads and approval-gated API access
+
+* fix(relay): isolate upstream credentials behind per-turn capabilities
+
+* fix(gateway): recover interrupted operations and scrub streamed credentials
+
+* fix(gateway): reconcile approvals and preserve workspace and stream integrity
+
+* fix(gateway): bound event buffering and preserve redaction through replay
+
+* fix(gateway): sanitize untyped responses and preserve event boundaries
+
+* fix(gateway): isolate tool identifiers and validate untyped response previews
+
+* fix(relay): withhold unsafe JSON responses and approval previews
+
+* fix(relay): scrub embedded credentials throughout untyped responses
+
+* fix(relay): protect diagnostic assignments and drain safe output before errors
+
+* fix(relay): scrub complete diagnostic values and stream embedded JSON
+
+* fix(relay): protect complete headers and stream long JSON members
+
+* fix(relay): release masked event fields without scrubbing them twice
+
+* fix(relay): isolate model event metadata from text fragments
+
+* fix(relay): bind event fragments to their upstream protocol
+
+* fix(relay): redact generic JSON and isolate model event streams
+
+* fix(relay): preserve JSON download boundaries and numeric stream identity
+
+* fix(relay): carry redaction state and settle streamed approvals at EOF
+
+* fix(relay): preserve padded JSON and checkpoint oversized receipts
+
+* fix(relay): scrub serialized downloads and drain safe assignment prefixes
+
+* ci(gateway): forward verification and image publishing to dynamic actions
+
+* fix(ci): isolate image publishing and clear checkout credentials

@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "e0f5684a923bdc73fed045fd11344c4506c2e867",
-    "ref_type": "branch",
-    "ref_name": "feat/ai-1-gateway-core",
-    "run_id": 46100031938,
+    "sha": "79b24d9b564f2b685e9a49456393013a22005089",
+    "ref_type": "tag",
+    "ref_name": "v0.1.0",
+    "run_id": 46100527096,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-branch.yml"
+    "workflow": ".github/workflows/trigger-tag.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
