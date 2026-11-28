@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "be2886f1e084fcfa0b633130fd96f4100c434bf3"
+  sha: "4879d92e192d93255a40d72b18c9371cc37d42f0"
   ref_type: "branch"
-  ref_name: "main"
-  run_id: 46037241658
+  ref_name: "fix/m8-tier5-overflows"
+  run_id: 46113412894
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): harden M8 Tier 5 layout scaling, plate asset security, file cache, and l10n (#463)\n\nHarden M8 Tier 5 mobile layout scaling, plate asset rendering security, local file data-URL cache validation, print draft localization, office conversion zh-Hant fallback, and Tier 5 E2E coverage:\n\n- Harden PrintRecordsScreen _RecordCard layout under 1.5x-2.0x text scaling while preserving separate Semantics nodes (further hardening #429).\n- Register the tier5 test tag and add Tier 5 E2E coverage for the inline paper-width adjuster (#455) and high-scale _RecordCard rendering.\n- Constrain PrintPreviewSettingRow title width via LayoutBuilder (42% cap) to prevent label/control overflow.\n- Track verifiedOutsideQuantum in plate_local_file_data_url_io and remove .abs() from _isWithinStatQuantum to prevent stale cache hits across 2s stat quantum boundaries.\n- Enforce _safeImageDataUrlPattern and normalized URI scheme checks in GprinterCatalogEmojiPlugin and renderGprinterPlateEditorFrame.\n- Complete print_draft_localization alias coverage across en, ja, zh, zh_Hans, and zh_Hant ARBs.\n- Map zh-TW, zh-HK, and zh-MO locale variants to zh-Hant in office_document_conversion."
+  message: "test(mobile): scroll compact dialog buttons into view before tapping"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-27T16:52:42Z"
+  created_at: "2026-11-28T05:44:04Z"
