@@ -1,1 +1,3 @@
-fix(openapi): validate and order cached spec refreshes
+fix(openapi): reduce sandbox discovery latency (#8)
+
+Inline bridge syntax and cache validated OpenAPI specs for sandbox discovery.
