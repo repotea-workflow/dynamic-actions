@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "d5a4b9989e54037c1dff41a0fcad1388e0d6a9ec",
+    "sha": "3d24a2186f15a354a4a08f46973587db27149655",
     "ref_type": "branch",
-    "ref_name": "fix/workspace-prefix-colon-encoding",
-    "run_id": 46107742341,
+    "ref_name": "main",
+    "run_id": 46107991812,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
