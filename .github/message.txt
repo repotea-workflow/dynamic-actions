@@ -1,1 +1,1 @@
-fix(openapi): cache sandbox discovery and inline bridge usage
+fix(openapi): validate and order cached spec refreshes

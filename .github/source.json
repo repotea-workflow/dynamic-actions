@@ -3,10 +3,10 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "4ff41c85cdbb659a662b4facc23957f850e9b74a",
+    "sha": "e499bdf9ed402657b1751f66ac35b5f1eda957eb",
     "ref_type": "branch",
     "ref_name": "ao/gateway-openapi-opt/fix/openapi-cache",
-    "run_id": 46162674992,
+    "run_id": 46164730268,
     "run_attempt": 1,
     "workflow": ".github/workflows/trigger-branch.yml"
   },
