@@ -1,3 +1,1 @@
-fix(openapi): reduce sandbox discovery latency (#8)
-
-Inline bridge syntax and cache validated OpenAPI specs for sandbox discovery.
+feat(gateway): support thread attachments and report failed turns
