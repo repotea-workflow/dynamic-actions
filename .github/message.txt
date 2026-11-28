@@ -1,1 +1,1 @@
-fix(workspace): percent-encode colons in owner segments for STS policy ARNs (#4)
+fix(runtime): use $OPENAI_API_KEY env interpolation and quietStartup in pi config

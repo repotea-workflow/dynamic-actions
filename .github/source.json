@@ -3,12 +3,12 @@
   "source": {
     "repository": "0xfe10/agent-gateway",
     "repository_id": 1474853486,
-    "sha": "3d24a2186f15a354a4a08f46973587db27149655",
-    "ref_type": "tag",
-    "ref_name": "v0.1.3",
-    "run_id": 46108001848,
+    "sha": "0998285f8bb08c80e9a60b3668d767169d0f351e",
+    "ref_type": "branch",
+    "ref_name": "fix/pi-models-apikey",
+    "run_id": 46111172166,
     "run_attempt": 1,
-    "workflow": ".github/workflows/trigger-tag.yml"
+    "workflow": ".github/workflows/trigger-branch.yml"
   },
   "execution_repository": "repotea-workflow/dynamic-actions",
   "policy": null
