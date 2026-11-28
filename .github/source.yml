@@ -2,16 +2,16 @@ schema_version: 2
 source:
   repository: "repotea-workspace/gprinter"
   repository_id: 1285168798
-  sha: "f8a796b7378bbffbac60efb9fbad4c9d185d9ff6"
+  sha: "04710410f4bd300986076acaec231fb2fa13e583"
   ref_type: "branch"
-  ref_name: "fix/m8-tier5-postmerge"
-  run_id: 46123037982
+  ref_name: "main"
+  run_id: 46124636251
   run_attempt: 1
   workflow: ".github/workflows/trigger-branch.yaml"
 execution_repository: "repotea-workflow/dynamic-actions"
 policy: null
 commit:
-  message: "fix(mobile): make centered loading, error, and empty views scrollable on compact viewports"
+  message: "fix(mobile): fix Tier 5 post-merge scrollable containers and compact-viewport overflows (#465)\n\n* fix(mobile): fix nested ListView failure, offline plaza overflow, and entry card header overflow\n\n* fix(mobile): make centered loading, error, and empty views scrollable on compact viewports"
   authors: ["0xfe10"]
 dispatch:
-  created_at: "2026-11-28T07:50:41Z"
+  created_at: "2026-11-28T08:11:40Z"
